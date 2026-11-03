@@ -1,0 +1,73 @@
+name: generate-daily
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'How many articles to generate'
+        required: false
+        default: '3'
+      mode:
+        description: 'auto (AI + offline fallback) | ai | template'
+        required: false
+        default: 'auto'
+  push:
+    paths:
+      - 'data/**'
+      - 'config.json'
+      - 'content/seed/**'
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate articles
+        env:
+          GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
+          MISTRAL_API_KEY:     ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY:  ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
+          AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
+          DAILY_POSTS:         ${{ vars.DAILY_POSTS }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '3' }}"
+          MODE="${{ github.event.inputs.mode || 'auto' }}"
+          python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+
+      - name: Commit queue + state
+        run: |
+          git config user.name  "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add content/queue state.json .cache data 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "content: $(date -u +'%Y-%m-%d') queue refresh [skip ci]"
+            git push
+          fi
+
+      - name: Upload summary
+        if: always()
+        run: |
+          echo "### Generated articles" >> $GITHUB_STEP_SUMMARY
+          ls -1 content/queue/*.html 2>/dev/null | wc -l | xargs -I{} echo "Queue size: **{}** posts" >> $GITHUB_STEP_SUMMARY
