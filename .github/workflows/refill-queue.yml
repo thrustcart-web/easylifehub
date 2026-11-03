@@ -1,12 +1,15 @@
 name: refill-queue
 
+# Manual top-up button. Use it when the queue gets low (status() in Apps Script
+# tells you how many days of content are left).
+
 on:
   workflow_dispatch:
     inputs:
       count:
-        description: 'Number of articles to generate'
-        required: true
-        default: '10'
+        description: 'Articles to generate (max 6 per run - the safety cap)'
+        required: false
+        default: '6'
       mode:
         description: 'auto | ai | template'
         required: false
@@ -20,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -33,11 +36,18 @@ jobs:
           GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG:      ${{ secrets.AFFILIATE_TAG }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: python3 main.py --count "${{ github.event.inputs.count }}" --mode "${{ github.event.inputs.mode }}" --verbose
+        run: |
+          COUNT="${{ github.event.inputs.count }}"
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -n "$COUNT" ]; then
+            python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+          else
+            python3 main.py --mode "$MODE" --verbose
+          fi
 
       - name: Commit
         run: |
           git config user.name  "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
-          git add content/queue state.json .cache data 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "content: manual refill [skip ci]" && git push
+          git add content/queue content/categories state.json .cache data 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "content: manual refill ${{ github.event.inputs.count }} [skip ci]" && git push

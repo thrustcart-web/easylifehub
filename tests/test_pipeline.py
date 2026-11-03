@@ -289,6 +289,21 @@ class TestQualityGate(unittest.TestCase):
         self.assertTrue(ok, reasons)
 
 
+class TestAffiliateTagGuard(unittest.TestCase):
+    def test_placeholder_tag_is_detected(self):
+        cfg = fresh_cfg()
+        cfg["affiliate"]["tag"] = "YOURTAG-20"
+        from generate import affiliate_tag_ready
+        self.assertFalse(affiliate_tag_ready(cfg))
+
+    def test_real_tag_passes(self):
+        cfg = fresh_cfg()
+        from generate import affiliate_tag_ready
+        self.assertTrue(affiliate_tag_ready(cfg))
+        cfg["affiliate"]["tag"] = ""
+        self.assertFalse(affiliate_tag_ready(cfg))
+
+
 class TestEndToEnd(unittest.TestCase):
     def test_offline_pipeline_produces_publishable_html(self):
         cfg = fresh_cfg()

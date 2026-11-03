@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.pem
+service-account*.json
+.cache/images.json

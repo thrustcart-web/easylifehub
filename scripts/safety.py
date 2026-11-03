@@ -90,6 +90,10 @@ def quality_gate(html: str, article: dict, cfg: dict) -> tuple[bool, list[str]]:
     if "<h2" not in html:
         reasons.append("no h2 headings - poor structure")
 
+    if "tag=YOURTAG" in html:
+        # warning only: a fresh install must still be able to generate
+        log.warning("  placeholder affiliate tag detected - these links earn nothing")
+
     if ALLCAPS_WORDS.search(re.sub(r"<[^>]+>", " ", html)):
         log.debug("all-caps words present (allowed, logged only)")
 

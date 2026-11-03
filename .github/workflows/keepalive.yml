@@ -1,5 +1,9 @@
 name: keepalive
 
+# GitHub disables scheduled workflows in repositories with no commit activity
+# for 60 days. This touches a file every 5 days so the daily generator can never
+# silently switch itself off - a classic "set up and forget" failure mode.
+
 on:
   schedule:
     - cron: '30 4 */5 * *'
@@ -12,7 +16,7 @@ jobs:
   keepalive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Touch heartbeat file
         run: |
@@ -22,3 +26,9 @@ jobs:
           git config user.email "autoblog-bot@users.noreply.github.com"
           git add .cache/heartbeat.txt
           git diff --cached --quiet || git commit -m "chore: keepalive [skip ci]" && git push
+
+      - name: Warn if scheduled workflows were disabled
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "If the daily generator ever stops, open the Actions tab and click Enable workflow."

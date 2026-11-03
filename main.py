@@ -49,12 +49,17 @@ def verify() -> int:
 
 
 def main(argv: list[str]) -> int:
-    if "--verify" in argv:
-        return verify()
+    from util import ConfigError
 
-    from generate import main as generate_main
+    try:
+        if "--verify" in argv:
+            return verify()
+        from generate import main as generate_main
 
-    return generate_main([a for a in argv if a != "--verify"])
+        return generate_main([a for a in argv if a != "--verify"])
+    except ConfigError as exc:
+        print(exc, file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

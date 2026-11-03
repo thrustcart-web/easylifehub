@@ -18,6 +18,8 @@ from pathlib import Path
 from affiliate import Affiliate, inline_affiliate_links
 from util import QUEUE_DIR, log, slugify, word_count
 
+import categories as cat_mod
+
 POST_CSS = """
 <style>
 .post-body{--ink:#1c1f23;--mut:#5b6472;--line:#e6e8ec;--acc:#146c43;--warn:#b42318;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.72;font-size:17px}
@@ -73,6 +75,8 @@ POST_CSS = """
 @media(max-width:600px){.post-body{font-size:16px}.post-body h2{font-size:1.3rem}}
 </style>
 """
+
+POST_CSS += cat_mod.CHIP_CSS
 
 
 def _esc(text: str) -> str:
@@ -217,6 +221,9 @@ def _jsonld(article: dict, topic: dict, aff: Affiliate, cfg: dict) -> str:
 def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str) -> str:
     items = topic.get("items", [])
     parts: list[str] = [POST_CSS, hero, aff.disclosure_block(), _jsonld(article, topic, aff, cfg)]
+    chip = cat_mod.chip_html(topic.get("niche", ""), cfg)
+    if chip:
+        parts.append(chip)
 
     intro = article.get("intro") or []
     if intro:
@@ -266,6 +273,7 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     if items:
         parts.append(aff.cta_button(items[0].get("asin", ""), items[0].get("search_term") or items[0].get("name", ""), "See the current Amazon price"))
 
+    parts.append(cat_mod.related_placeholder())
     parts.append(aff.footer_note())
 
     html = "\n".join(parts)
@@ -302,7 +310,10 @@ def render_markdown(article: dict, topic: dict, aff: Affiliate) -> str:
         for item in article["faq"]:
             lines += [f"**{item['q']}**", "", item["a"], ""]
     lines += ["## Conclusion", ""] + list(article.get("conclusion", [])) + [""]
-    lines += ["---", "", "### Links", ""]
+    lines += ["---", "", "### Category", "",
+              f"- More in {cat_mod.label_of(topic.get('niche', ''))}: {cat_mod.label_url(topic.get('niche', ''))}",
+              "- All categories: /p/categories.html", "",
+              "### Links", ""]
     for item in topic.get("items", []):
         lines.append(f"- {item.get('display_name') or item.get('name')}: {aff.url_for(item)}")
     lines += ["", aff.disclosure, ""]
@@ -337,6 +348,9 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             for i in topic.get("items", [])
         ],
         "html_file": f"{slug}.html",
+        "category_label": cat_mod.label_of(topic.get("niche", "")),
+        "category_url": cat_mod.label_url(topic.get("niche", "")),
+        "hub_page": "/p/categories.html",
         "draft": False,
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")

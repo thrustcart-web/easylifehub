@@ -1,14 +1,18 @@
 name: generate-daily
 
+# Writes new articles into content/queue/ and commits them.
+# The Apps Script publisher picks them up on the next posting hour.
+# Nothing here touches Blogger, so a failure can never damage your account.
+
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * *'          # 03:00 UTC  (= 05:00 Cairo, 06:00 Riyadh)
   workflow_dispatch:
     inputs:
       count:
-        description: 'How many articles to generate'
+        description: 'Leave EMPTY to use the automatic growth ramp (3->6)'
         required: false
-        default: '3'
+        default: ''
       mode:
         description: 'auto (AI + offline fallback) | ai | template'
         required: false
@@ -32,33 +36,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
       - name: Generate articles
         env:
+          # Free AI keys - add whichever you have. The pipeline works with ZERO keys
+          # (offline template engine), so a missing secret never breaks the run.
           GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
           MISTRAL_API_KEY:     ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY:  ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
-          DAILY_POSTS:         ${{ vars.DAILY_POSTS }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
-          COUNT="${{ github.event.inputs.count || '3' }}"
+          # NOTE: no DAILY_POSTS here on purpose. The growth ramp in config.json
+          # decides the daily count from the age of the blog (3 -> 4 -> 5 -> 6).
+          # Passing a fixed number would freeze it at that value forever.
           MODE="${{ github.event.inputs.mode || 'auto' }}"
-          python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+          COUNT="${{ github.event.inputs.count }}"
+          if [ -n "$COUNT" ]; then
+            python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+          else
+            python3 main.py --mode "$MODE" --verbose
+          fi
 
       - name: Commit queue + state
         run: |
           git config user.name  "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
-          git add content/queue state.json .cache data 2>/dev/null || true
+          git add content/queue content/categories state.json .cache data 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Nothing new to commit."
           else
@@ -71,3 +83,6 @@ jobs:
         run: |
           echo "### Generated articles" >> $GITHUB_STEP_SUMMARY
           ls -1 content/queue/*.html 2>/dev/null | wc -l | xargs -I{} echo "Queue size: **{}** posts" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          python3 main.py --ramp >> $GITHUB_STEP_SUMMARY 2>/dev/null || true
+          echo '```' >> $GITHUB_STEP_SUMMARY

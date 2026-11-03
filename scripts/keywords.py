@@ -19,6 +19,17 @@ import re
 
 # order matters: longer / more specific patterns first
 STRIP_LEADING = [
+    # question / informational shapes (added with the expanded keyword pool)
+    r"^what\s+nobody\s+tells\s+you\s+about\s+(?:an?\s+)?",
+    r"^most\s+overrated\s+",
+    r"^what\s+.+?\s+really\s+means\s+in\s+(?:an?\s+)?",
+    r"^signs\s+it\s+is\s+time\s+to\s+replace\s+your\s+",
+    r"^how\s+often\s+should\s+you\s+replace\s+(?:an?\s+)?",
+    r"^how\s+long\s+does\s+(?:an?\s+)?",
+    r"^do\s+you\s+really\s+need\s+(?:an?\s+)?",
+    r"^how\s+to\s+clean\s+(?:an?\s+)?",
+    r"^what\s+to\s+check\s+before\s+buying\s+(?:an?\s+)?",
+    r"^common\s+",
     r"^is\s+(?:an?)\s+",
     r"^is\s+",
     r"^are\s+",
@@ -34,6 +45,36 @@ STRIP_LEADING = [
 ]
 
 STRIP_TRAILING = [
+    # review-angle shapes: keep the product, drop the clause after the colon
+    r"\s+review:.*$",
+    r":\s+.+rated against real use$",
+    r":\s+honest verdict$",
+    r":\s+the honest verdict.*$",
+    r":\s+.+explained$",
+    r"\s+pros and cons.*$",
+    r"\s+that actually solve .+$",
+    r"\s+that does not feel cheap$",
+    r"\s+still worth buying in \d{4}$",
+    r"\s+myths that cost people money$",
+    r"\s+specs that matter.*$",
+    r"\s+for .+ on a budget$",
+    # these must run BEFORE the generic "\s+for\s+(.+)$" rule
+    r"\s+or\s+.+:\s+which\s+should\s+you\s+buy$",
+    r":\s+which\s+one\s+is\s+right\s+for\s+.+$",
+    r"^which\s+",
+    r"\s+specs\s+that\s+matter\s+and\s+specs\s+that\s+do\s+not$",
+    r"\s+myths\s+that\s+cost\s+people\s+money$",
+    r"\s+that\s+does\s+not\s+feel\s+cheap$",
+    r"\s+that\s+actually\s+lasts?$",
+    r"\s+that\s+solve\s+.+$",
+    r"\s+mistakes\s+and\s+how\s+to\s+avoid\s+them$",
+    r"\s+in\s+\d+\s+minutes$",
+    r"\s+on\s+a\s+budget$",
+    r"\s+under\s+\d+\s+dollars\s+worth\s+checking$",
+    r"\s+properly$",
+    r"\s+features$",
+    r"\s+should\s+you\s+buy$",
+    r"\s+last$",
     r"\s+vs\s+traditional\s+alternatives$",
     r"\s+vs\.?\s+(.+)$",
     r"\s+alternatives\s+that\s+cost\s+less$",
@@ -52,9 +93,22 @@ STRIP_TRAILING = [
 ]
 
 BUDGET_RE = re.compile(r"\bunder\s+(\d{2,4})\s*(?:dollars?|bucks|\$)?\b", re.I)
-COMPARISON_RE = re.compile(r"^(.+?)\s+vs\.?\s+(.+)$", re.I)
+# "X vs Y" and the longhand "X or Y: which should you buy" are the same intent
+COMPARISON_RE = re.compile(
+    r"^(?:\s*(.+?)\s+vs\.?\s+(.+?)\s*|\s*(.+?)\s+or\s+(.+?):\s+which\s+should\s+you\s+buy\s*)$",
+    re.I,
+)
 
 GUIDE_HINTS = (
+    "specs that matter",
+    "what nobody tells you",
+    "myths that cost people money",
+    "how long does",
+    "how often should you replace",
+    "signs it is time to replace",
+    "do you really need",
+    "how to clean",
+    "most overrated",
     "what to check before buying",
     "buying guide",
     "how to choose",
@@ -78,10 +132,33 @@ def extract_budget(text: str) -> str:
     return f"under ${match.group(1)}"
 
 
+def _comparison_split(text: str) -> tuple[str, str] | None:
+    """(left, right) when the keyword is a two-product comparison, else None."""
+    match = COMPARISON_RE.match(normalise(text))
+    if not match:
+        return None
+    a, b, c, d = match.groups()
+    if a and b:
+        return a.strip(), b.strip()
+    if c and d:
+        return c.strip(), d.strip()
+    return None
+
+
+# A trailing token is only treated as a strippable model number when it has
+# enough digits to be one. "Core 300" is part of the product name and must
+# survive; "guide 2027" and "v3" are decoration and must not.
+_MODEL_TAIL = re.compile(r"\s+\d{1,3}[a-z]?\d*$")
+
+
 def extract_base(text: str) -> str:
     """The product noun phrase, cleaned of intent decoration."""
     base = normalise(text)
-    base = re.sub(r"\s+vs\.?\s+.*$", "", base)
+    pair = _comparison_split(base)
+    if pair:
+        base = pair[0]
+    else:
+        base = re.sub(r"\s+vs\.?\s+.*$", "", base)
     for pattern in STRIP_TRAILING:
         base = re.sub(pattern, "", base).strip()
     for pattern in STRIP_LEADING:
@@ -89,9 +166,11 @@ def extract_base(text: str) -> str:
     for pattern in STRIP_TRAILING:
         base = re.sub(pattern, "", base).strip()
     base = re.sub(
-        r"\b(?:review|reviews|guide|best|top|cheap|affordable|budget|options|option|picks|deals|vs)\b",
+        r"\b(?:review|reviews|guide|best|top|cheap|affordable|budget|options|option|picks|deals|vs|which)\b",
         "", base)
     base = re.sub(r"\s{2,}", " ", base).strip(" -:")
+    # never let the intent-word cleanup eat a product model number
+    base = _MODEL_TAIL.sub("", base).strip(" -:") if re.search(r"\s+\d{4}[a-z]?\d*$", base) else base
     return base or normalise(text)
 
 
@@ -112,9 +191,50 @@ def detect_intent(text: str) -> str:
         return "comparison"
     if any(hint in base for hint in GUIDE_HINTS):
         return "guide"
-    if base.startswith(("best ", "top ", "affordable ", "budget ")) or "under" in base:
+    if base.startswith(("best ", "top ", "affordable ", "budget ", "which ")) or "under" in base:
         return "bestof"
     return "review"
+
+
+# Sentence debris that must never reach an Amazon search URL.
+_JUNK_IN_SEARCH = re.compile(r"^(what|which|how|why|is|are|do|does|should|can|will)\b", re.I)
+
+
+def _stem(word: str) -> str:
+    """Very light plural stripper - enough to spot "documents" == "document"."""
+    w = str(word or "").lower().strip()
+    if len(w) > 3 and w.endswith("ies"):
+        return w[:-3] + "y"
+    if len(w) > 3 and w.endswith("es") and not w.endswith(("ss", "us", "sh", "ch")):
+        return w[:-1]
+    if len(w) > 2 and w.endswith("s") and not w.endswith(("ss", "us")):
+        return w[:-1]
+    return w
+
+
+def clean_search_term(base: str, audience: str = "") -> str:
+    """A clean, Amazon-searchable query built from the product base.
+
+    Public alias: topic_planner calls this for every product entry.
+    """
+    term = " ".join(str(base or "").split()).strip(" -:,.")
+    term = re.sub(r"\s{2,}", " ", term)
+    # drop a leftover leading question word ("what even heating means" style)
+    if _JUNK_IN_SEARCH.match(term):
+        parts = term.split()
+        while parts and _JUNK_IN_SEARCH.match(parts[0]):
+            parts.pop(0)
+        term = " ".join(parts)
+    if not term:
+        return ""
+    aud = " ".join(str(audience or "").split()).strip()
+    # Keep the audience only when it narrows the search. "yoga mat for hot yoga"
+    # helps; "document safe for documents" is pure repetition, so it goes.
+    if aud and len(aud.split()) <= 4 and not _JUNK_IN_SEARCH.match(aud):
+        base_stems = {_stem(w) for w in term.lower().split()}
+        if not all(_stem(w) in base_stems for w in aud.lower().split()):
+            term = f"{term} for {aud}"
+    return term
 
 
 def parse(keyword: str, niche: str = "", row: dict | None = None) -> dict:
@@ -125,10 +245,10 @@ def parse(keyword: str, niche: str = "", row: dict | None = None) -> dict:
     base = extract_base(text)
 
     comparison_with = ""
-    match = COMPARISON_RE.match(text)
-    if intent == "comparison" and match:
-        base = extract_base(match.group(1))
-        comparison_with = extract_base(match.group(2))
+    pair = _comparison_split(text)
+    if intent == "comparison" and pair:
+        base = extract_base(pair[0])
+        comparison_with = extract_base(pair[1])
 
     return {
         "keyword": keyword,
@@ -141,10 +261,13 @@ def parse(keyword: str, niche: str = "", row: dict | None = None) -> dict:
         "feature": row.get("feature", ""),
         "asin": row.get("asin", ""),
         # what a human would call this product in a headline
-        "display_name": base.title(),
-        # what the affiliate link should point at (the full keyword converts better
-        # on a search link than the bare product noun)
-        "search_term": keyword,
+        "display_name": title_base(base),
+        # The affiliate link must point at the PRODUCT, not at the sentence the
+        # keyword was written in. "fabric glue: the honest verdict for fabric
+        # work" sent to amazon.com/s?k= returns nothing and earns nothing; the
+        # stripped base ("fabric glue") is what Amazon's search can match. The
+        # audience stays attached because it narrows results usefully.
+        "search_term": clean_search_term(base, row.get("audience") or extract_audience(text)),
     }
 
 

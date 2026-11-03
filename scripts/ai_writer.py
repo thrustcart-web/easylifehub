@@ -218,15 +218,7 @@ def _strip_markdown(text: str) -> str:
     return text.strip()
 
 
-def normalise(raw: dict | list, topic: dict) -> dict:
-    # إذا كانت النتيجة قائمة، خذ العنصر الأول (إذا لم تكن فارغة)
-    if isinstance(raw, list):
-        raw = raw[0] if raw else {}
-    
-    # التأكد من أن raw قاموس قبل البدء
-    if not isinstance(raw, dict):
-        raw = {}
-
+def normalise(raw: dict, topic: dict) -> dict:
     keyword = topic.get("keyword", "")
     planned = (topic.get("title") or "").strip()
 

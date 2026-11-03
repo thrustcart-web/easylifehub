@@ -45,9 +45,38 @@ def _strip_comment_keys(obj):
     return obj
 
 
+class ConfigError(RuntimeError):
+    """Raised when config.json cannot be parsed - with a fix hint."""
+
+
 def load_config(path: Path | str = CONFIG_PATH) -> dict:
-    with open(path, encoding="utf-8") as fh:
-        cfg = json.load(fh)
+    path = Path(path)
+    raw = path.read_text(encoding="utf-8")
+    try:
+        cfg = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        lines = raw.splitlines()
+        start = max(0, exc.lineno - 3)
+        end = min(len(lines), exc.lineno + 2)
+        context = "\n".join(
+            f"    {'>>' if i + 1 == exc.lineno else '  '} {i + 1:4} | {lines[i]}"
+            for i in range(start, end)
+        )
+        bar = "=" * 74
+        raise ConfigError(
+            "\n\n" + bar + "\n"
+            "  config.json is not valid JSON - the pipeline cannot start.\n"
+            + bar + "\n\n"
+            "  Line %d, column %d: %s\n\n%s\n\n"
+            "  The 90%% causes, in order:\n"
+            "    1. A deleted or duplicated comma\n"
+            "    2. An opening { or [ that was deleted while its closing brace stayed\n"
+            "       (this is what happens when you replace a whole section by hand)\n"
+            "    3. A missing double-quote around a key or a value\n\n"
+            "  Fix: paste the file into https://jsonlint.com to see the exact spot,\n"
+            "  or restore config.json from the project ZIP and re-apply only your values.\n"
+            "%s\n" % (exc.lineno, exc.colno, exc.msg, context, bar)
+        ) from exc
     # environment overrides (used by CI secrets so config.json can stay public)
     env_map = {
         "BLOG_ID": ("blog", "id"),

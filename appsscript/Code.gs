@@ -36,7 +36,13 @@ var DEFAULTS = {
   JITTER_MAX:    '1200',             // random 0-20 min delay inside the hour
   NOTIFY_EMAIL:  '',                 // blank = your Google account email
   TZ:            'Africa/Cairo',
-  MIN_GAP_HOURS: '2'
+  MIN_GAP_HOURS: '2',
+  // ---- category hub + related posts (topical authority plumbing) ----
+  BLOG_URL:        '',                    // blank = auto-detected once from the API
+  CATEGORY_HUB:    'content/categories/index.html',
+  CATEGORY_PAGE:   'Browse All Categories',
+  RELATED_LIMIT:   '4',
+  RELATED_ENABLED: 'true'
 };
 
 var P = PropertiesService.getScriptProperties();
@@ -133,6 +139,137 @@ function bloggerCall_(method, path, payload, params) {
 function insertPost_(title, html, labels) {
   return bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
     { title: title, content: html, labels: labels || [] });
+}
+
+function updatePost_(postId, title, html, labels) {
+  return bloggerCall_('PUT', '/blogs/' + cfg('BLOG_ID') + '/posts/' + postId,
+    { title: title, content: html, labels: labels || [] });
+}
+
+// ------------------------------------------------- links, related, hub page --
+/** The blog's own address. Detected once from the API, then cached. */
+function blogUrl_() {
+  var url = String(cfg('BLOG_URL') || '').replace(/\/+$/, '');
+  if (url) return url;
+  try {
+    var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
+    url = String(blog.url || '').replace(/\/+$/, '');
+    if (url) P.setProperty('BLOG_URL', url);
+  } catch (e) {
+    Logger.log('blogUrl_: ' + e);
+  }
+  return url;
+}
+
+/**
+ * The Python side writes relative links (/search/label/Kitchen, /p/categories.html)
+ * because it cannot know the final blog address. This makes them absolute.
+ * Blogger resolves relative hrefs against the dashboard, not the blog, so
+ * skipping this step would produce dead links in every post.
+ */
+function absolutizeLinks_(html) {
+  var base = blogUrl_();
+  if (!base) return html;
+  return String(html)
+    .replace(/href="\/search\/label\//g, 'href="' + base + '/search/label/')
+    .replace(/href="\/p\/categories\.html"/g, 'href="' + base + '/p/categories.html"');
+}
+
+/**
+ * Fill the empty <div class="related"> placeholder with live posts that share
+ * this article's label. Done after insert (not before) so the article never
+ * links to itself, and via PUT so the published body carries the links Google
+ * needs to see the internal-link graph.
+ */
+function appendRelated_(post, meta, labels) {
+  if (String(cfg('RELATED_ENABLED') || 'true') !== 'true') return null;
+  var html = String(post.content || '');
+  if (html.indexOf('data-related="1"') === -1) return null;
+
+  var limit = Math.min(8, Math.max(1, Number(cfg('RELATED_LIMIT') || 4)));
+  var nicheLabel = '';
+  (labels || []).forEach(function (l) { if (!nicheLabel && l !== 'Reviews') nicheLabel = l; });
+  if (!nicheLabel) return null;
+
+  var found = [];
+  try {
+    var res = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID') + '/posts',
+      { labels: nicheLabel, 'maxResults': limit + 3, orderBy: 'published' });
+    (res.items || []).forEach(function (it) {
+      if (found.length >= limit) return;
+      if (!it || !it.id || it.id === post.id) return;
+      found.push(it);
+    });
+  } catch (e) {
+    Logger.log('related fetch failed: ' + e);
+    return null;
+  }
+  if (!found.length) return null;
+
+  var links = found.map(function (it) {
+    var title = String(it.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    return '<li><a href="' + it.url + '">' + title + '</a></li>';
+  }).join('');
+  var block = '<h3>Related reading</h3><ul>' + links + '</ul>';
+  var updated = html.replace('<div class="related" data-related="1"></div>',
+                             '<div class="related">' + block + '</div>');
+  if (updated === html) return null;
+
+  try {
+    return updatePost_(post.id, post.title, updated, labels || []);
+  } catch (e) {
+    Logger.log('related update failed: ' + e);
+    return null;
+  }
+}
+
+/**
+ * Publish (or refresh) the "Browse all categories" page.
+ * It is a Blogger PAGE, not a post: pages never count toward the posting rate,
+ * so this cannot contribute to a spam-pattern signal.
+ */
+function syncCategoryPage() {
+  var hubPath = String(cfg('CATEGORY_HUB') || '');
+  if (!hubPath) return null;
+  var html;
+  try {
+    html = fetchText_(cfg('RAW_BASE') + '/' + hubPath);
+  } catch (e) {
+    Logger.log('category hub not published yet (' + e + ')');
+    return null;
+  }
+  if (!html || html.indexOf('404') === 0) { Logger.log('category hub: file not found'); return null; }
+  html = absolutizeLinks_(html);
+
+  var title = String(cfg('CATEGORY_PAGE') || 'Browse All Categories');
+  var blogId = cfg('BLOG_ID');
+  var pages = [];
+  try {
+    pages = (bloggerCall_('GET', '/blogs/' + blogId + '/pages', { 'maxResults': 150 }).items) || [];
+  } catch (e) {
+    Logger.log('page list failed: ' + e);
+    return null;
+  }
+  var existing = null;
+  pages.forEach(function (pg) {
+    if (!existing && String(pg.title || '').toLowerCase() === title.toLowerCase()) existing = pg;
+  });
+  try {
+    if (existing) {
+      var out = bloggerCall_('PUT', '/blogs/' + blogId + '/pages/' + existing.id,
+                             { title: title, content: html });
+      Logger.log('Category page updated: ' + out.url);
+      return out;
+    }
+    var created = bloggerCall_('POST', '/blogs/' + blogId + '/pages',
+                               { title: title, content: html });
+    Logger.log('Category page created: ' + created.url);
+    Logger.log('Add it to your menu: Blogger -> Layout -> Pages gadget -> ' + title);
+    return created;
+  } catch (e) {
+    Logger.log('category page failed: ' + e);
+    return null;
+  }
 }
 
 // ------------------------------------------------------------- queue state --
@@ -262,13 +399,20 @@ function publishNext_(howMany) {
     var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
     var labels = (meta.labels || []).filter(Boolean);
 
+    html = absolutizeLinks_(html);
     var post = insertPost_(meta.title, html, labels);
+    // bonuses - never allowed to break the publish itself
+    try { appendRelated_(post, meta, labels); } catch (e) { Logger.log('related: ' + e); }
+    try { syncCategoryPage(); } catch (e) { Logger.log('hub: ' + e); }
+
     var published = getPublished_();
     published.push({
       slug: meta.slug,
       post_id: post.id,
       url: post.url,
       title: meta.title,
+      niche: meta.niche || '',
+      category: meta.category_label || '',
       ts: Utilities.formatDate(new Date(), cfg('TZ'), 'yyyy-MM-dd HH:mm:ss'),
       words: meta.words || 0,
       source: meta.source || ''
@@ -314,6 +458,8 @@ function testConnection() {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     Logger.log('OK  queue     : ' + (index.count || 0) + ' articles waiting');
     Logger.log('OK  published : ' + getPublished_().length + ' so far');
+    Logger.log('OK  blog url  : ' + (blogUrl_() || '(unknown)'));
+    try { syncCategoryPage(); } catch (e) { Logger.log('WARN category page: ' + e); }
     Logger.log('');
     Logger.log('Everything works. Run installTrigger() if you have not, then forget about it.');
   } catch (err) {

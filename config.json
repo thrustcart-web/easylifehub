@@ -9,15 +9,45 @@
   "schedule": {
     "daily_posts": 3,
     "max_queue_size": 60,
-    "publish_hours_local": [9, 13, 18],
+    "publish_hours_local": [
+      9,
+      13,
+      18
+    ],
     "jitter_minutes": 25,
     "timezone": "Africa/Cairo"
+  },
+  "ramp": {
+    "_comment": "خطة النمو التدريجي: النظام بيزود عدد المقالات لوحده حسب عمر المدونة. day الرقم من أول يوم اشتغال.",
+    "enabled": true,
+    "stages": [
+      {
+        "day": 0,
+        "posts_per_day": 3
+      },
+      {
+        "day": 10,
+        "posts_per_day": 4
+      },
+      {
+        "day": 30,
+        "posts_per_day": 5
+      },
+      {
+        "day": 60,
+        "posts_per_day": 6
+      }
+    ]
   },
   "content": {
     "language": "en",
     "min_words": 1150,
     "target_words": 1500,
-    "template_weights": { "review": 46, "bestof": 30, "comparison": 24 },
+    "template_weights": {
+      "review": 46,
+      "bestof": 30,
+      "comparison": 24
+    },
     "ai_mode": "ai_first",
     "fallback_to_template": true,
     "label": "Reviews",
@@ -41,7 +71,11 @@
   },
   "ai": {
     "primary": "groq",
-    "fallbacks": ["mistral", "openrouter", "gemini"],
+    "fallbacks": [
+      "mistral",
+      "openrouter",
+      "gemini"
+    ],
     "temperature": 0.85,
     "max_output_tokens": 6000,
     "retries": 2,
@@ -49,7 +83,10 @@
       "groq": {
         "env_key": "GROQ_API_KEY",
         "model": "openai/gpt-oss-120b",
-        "fallback_models": ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"],
+        "fallback_models": [
+          "qwen/qwen3.8-27b",
+          "openai/gpt-oss-20b"
+        ],
         "base_url": "https://api.groq.com/openai/v1"
       },
       "mistral": {
@@ -81,5 +118,13 @@
     "cooldown_hours": 24,
     "min_seconds_between_posts": 7200,
     "max_posts_per_day_hard_cap": 6
+  },
+  "categories": {
+    "_comment": "صفحة الأقسام (Categories hub) بتتبنى تلقائيًا في كل تشغيل، و Apps Script بينشرها كـ Page على بلوجر.",
+    "enabled": true,
+    "hub_path": "content/categories/index.html",
+    "page_title": "Browse All Categories",
+    "related_limit": 4,
+    "show_chips_in_posts": true
   }
 }
