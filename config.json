@@ -85,6 +85,7 @@
     }
   },
       "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main"
+  }
   "notify": {
     "email": "",
     "only_on_failure": true
