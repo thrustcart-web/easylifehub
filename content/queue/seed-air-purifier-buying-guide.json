@@ -1,0 +1,25 @@
+{
+  "slug": "seed-air-purifier-buying-guide",
+  "title": "Choosing An Air Purifier: Six Things That Actually Matter",
+  "meta_description": "Air purifier listings are full of numbers that mean nothing. These six are the ones that decide whether the machine does anything at all.",
+  "template": "review",
+  "niche": "air quality",
+  "keyword": "air purifier buying guide",
+  "labels": [
+    "Reviews",
+    "Air Quality"
+  ],
+  "source": "seed",
+  "provider": "",
+  "words": 2314,
+  "items": [
+    {
+      "name": "LEVOIT Air Purifier Core 300",
+      "asin": "B08C1KN5J2",
+      "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
+      "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=YOURTAG-20"
+    }
+  ],
+  "html_file": "seed-air-purifier-buying-guide.html",
+  "draft": false
+}

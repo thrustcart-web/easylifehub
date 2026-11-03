@@ -1,0 +1,25 @@
+{
+  "slug": "seed-anker-737-power-bank-review",
+  "title": "Anker 737 Power Bank 24K Review: What I Would Check Before Buying",
+  "meta_description": "A 24,000mAh bank with 140W output is not for everyone. Here is who actually needs it, what the real compromises are, and what to verify first.",
+  "template": "review",
+  "niche": "portable power",
+  "keyword": "Anker 737 Power Bank 24K",
+  "labels": [
+    "Reviews",
+    "Portable Power"
+  ],
+  "source": "seed",
+  "provider": "",
+  "words": 2091,
+  "items": [
+    {
+      "name": "Anker 737 Power Bank 24K",
+      "asin": "B0CHX1W1XY",
+      "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
+      "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=YOURTAG-20"
+    }
+  ],
+  "html_file": "seed-anker-737-power-bank-review.html",
+  "draft": false
+}

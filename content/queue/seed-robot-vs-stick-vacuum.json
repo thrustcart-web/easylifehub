@@ -1,0 +1,31 @@
+{
+  "slug": "seed-robot-vs-stick-vacuum",
+  "title": "Robot Vacuum or Stick Vacuum? The Honest Comparison",
+  "meta_description": "They look like competing versions of the same thing and they are not. Here is which one fits your floor plan, your patience, and your pet.",
+  "template": "comparison",
+  "niche": "home cleaning",
+  "keyword": "Robot Vacuum vs Stick Vacuum",
+  "labels": [
+    "Reviews",
+    "Home Cleaning"
+  ],
+  "source": "seed",
+  "provider": "",
+  "words": 2207,
+  "items": [
+    {
+      "name": "Robot Vacuum",
+      "asin": "",
+      "search_term": "robot vacuum for pet hair hardwood floors",
+      "url": "https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=YOURTAG-20"
+    },
+    {
+      "name": "Stick Vacuum",
+      "asin": "",
+      "search_term": "cordless stick vacuum for hardwood and carpet",
+      "url": "https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=YOURTAG-20"
+    }
+  ],
+  "html_file": "seed-robot-vs-stick-vacuum.html",
+  "draft": false
+}

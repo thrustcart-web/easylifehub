@@ -1,0 +1,25 @@
+{
+  "slug": "seed-standing-desk-guide",
+  "title": "Before You Buy A Standing Desk: The Honest Version",
+  "meta_description": "Standing desks fail in three predictable ways: wobble, a dead controller, and a height that never quite suits you. Here is how to avoid all three.",
+  "template": "review",
+  "niche": "home office",
+  "keyword": "standing desk buying guide",
+  "labels": [
+    "Reviews",
+    "Home Office"
+  ],
+  "source": "seed",
+  "provider": "",
+  "words": 2155,
+  "items": [
+    {
+      "name": "Standing Desk",
+      "asin": "",
+      "search_term": "electric height adjustable standing desk dual motor",
+      "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=YOURTAG-20"
+    }
+  ],
+  "html_file": "seed-standing-desk-guide.html",
+  "draft": false
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "seed-espresso-vs-pourover",
+  "title": "Espresso Machine or Pour Over Kit? Choosing Between Two Good Options",
+  "meta_description": "These produce genuinely different drinks and suit genuinely different mornings. Here is the decision, made on maintenance, cost and taste rather than specs.",
+  "template": "comparison",
+  "niche": "coffee & espresso",
+  "keyword": "espresso machine vs pour over",
+  "labels": [
+    "Reviews",
+    "Coffee & Espresso"
+  ],
+  "source": "seed",
+  "provider": "",
+  "words": 2390,
+  "items": [
+    {
+      "name": "Espresso Machine",
+      "asin": "",
+      "search_term": "home espresso machine with milk frother for beginners",
+      "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=YOURTAG-20"
+    },
+    {
+      "name": "Pour Over Kit",
+      "asin": "",
+      "search_term": "pour over coffee kit with gooseneck kettle and scale",
+      "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=YOURTAG-20"
+    }
+  ],
+  "html_file": "seed-espresso-vs-pourover.html",
+  "draft": false
+}

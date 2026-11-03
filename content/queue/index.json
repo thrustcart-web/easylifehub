@@ -1,0 +1,192 @@
+{
+  "repo_raw_base": "https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main",
+  "count": 6,
+  "posts": [
+    {
+      "slug": "seed-air-purifier-buying-guide",
+      "title": "Choosing An Air Purifier: Six Things That Actually Matter",
+      "meta_description": "Air purifier listings are full of numbers that mean nothing. These six are the ones that decide whether the machine does anything at all.",
+      "template": "review",
+      "niche": "air quality",
+      "keyword": "air purifier buying guide",
+      "labels": [
+        "Reviews",
+        "Air Quality"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2314,
+      "items": [
+        {
+          "name": "LEVOIT Air Purifier Core 300",
+          "asin": "B08C1KN5J2",
+          "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
+          "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-air-purifier-buying-guide.html",
+      "draft": false
+    },
+    {
+      "slug": "seed-anker-737-power-bank-review",
+      "title": "Anker 737 Power Bank 24K Review: What I Would Check Before Buying",
+      "meta_description": "A 24,000mAh bank with 140W output is not for everyone. Here is who actually needs it, what the real compromises are, and what to verify first.",
+      "template": "review",
+      "niche": "portable power",
+      "keyword": "Anker 737 Power Bank 24K",
+      "labels": [
+        "Reviews",
+        "Portable Power"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2091,
+      "items": [
+        {
+          "name": "Anker 737 Power Bank 24K",
+          "asin": "B0CHX1W1XY",
+          "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
+          "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-anker-737-power-bank-review.html",
+      "draft": false
+    },
+    {
+      "slug": "seed-best-home-fitness-gear",
+      "title": "Best Home Fitness Gear: 5 Picks Compared by Real Criteria",
+      "meta_description": "Five pieces of equipment that cover strength, conditioning and mobility in a small space - with the weakness of each stated up front.",
+      "template": "bestof",
+      "niche": "fitness",
+      "keyword": "Best Home Fitness Gear",
+      "labels": [
+        "Reviews",
+        "Fitness"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2478,
+      "items": [
+        {
+          "name": "Adjustable Dumbbells",
+          "asin": "",
+          "search_term": "adjustable dumbbells for home gym small space",
+          "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=YOURTAG-20"
+        },
+        {
+          "name": "Resistance Bands Set",
+          "asin": "",
+          "search_term": "resistance bands set with handles and door anchor",
+          "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=YOURTAG-20"
+        },
+        {
+          "name": "Kettlebell",
+          "asin": "",
+          "search_term": "cast iron kettlebell for swings and carries",
+          "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=YOURTAG-20"
+        },
+        {
+          "name": "Yoga Mat",
+          "asin": "",
+          "search_term": "non slip yoga mat thick for knees",
+          "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=YOURTAG-20"
+        },
+        {
+          "name": "Jump Rope",
+          "asin": "",
+          "search_term": "speed jump rope adjustable bearings",
+          "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-best-home-fitness-gear.html",
+      "draft": false
+    },
+    {
+      "slug": "seed-espresso-vs-pourover",
+      "title": "Espresso Machine or Pour Over Kit? Choosing Between Two Good Options",
+      "meta_description": "These produce genuinely different drinks and suit genuinely different mornings. Here is the decision, made on maintenance, cost and taste rather than specs.",
+      "template": "comparison",
+      "niche": "coffee & espresso",
+      "keyword": "espresso machine vs pour over",
+      "labels": [
+        "Reviews",
+        "Coffee & Espresso"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2390,
+      "items": [
+        {
+          "name": "Espresso Machine",
+          "asin": "",
+          "search_term": "home espresso machine with milk frother for beginners",
+          "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=YOURTAG-20"
+        },
+        {
+          "name": "Pour Over Kit",
+          "asin": "",
+          "search_term": "pour over coffee kit with gooseneck kettle and scale",
+          "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-espresso-vs-pourover.html",
+      "draft": false
+    },
+    {
+      "slug": "seed-robot-vs-stick-vacuum",
+      "title": "Robot Vacuum or Stick Vacuum? The Honest Comparison",
+      "meta_description": "They look like competing versions of the same thing and they are not. Here is which one fits your floor plan, your patience, and your pet.",
+      "template": "comparison",
+      "niche": "home cleaning",
+      "keyword": "Robot Vacuum vs Stick Vacuum",
+      "labels": [
+        "Reviews",
+        "Home Cleaning"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2207,
+      "items": [
+        {
+          "name": "Robot Vacuum",
+          "asin": "",
+          "search_term": "robot vacuum for pet hair hardwood floors",
+          "url": "https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=YOURTAG-20"
+        },
+        {
+          "name": "Stick Vacuum",
+          "asin": "",
+          "search_term": "cordless stick vacuum for hardwood and carpet",
+          "url": "https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-robot-vs-stick-vacuum.html",
+      "draft": false
+    },
+    {
+      "slug": "seed-standing-desk-guide",
+      "title": "Before You Buy A Standing Desk: The Honest Version",
+      "meta_description": "Standing desks fail in three predictable ways: wobble, a dead controller, and a height that never quite suits you. Here is how to avoid all three.",
+      "template": "review",
+      "niche": "home office",
+      "keyword": "standing desk buying guide",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "seed",
+      "provider": "",
+      "words": 2155,
+      "items": [
+        {
+          "name": "Standing Desk",
+          "asin": "",
+          "search_term": "electric height adjustable standing desk dual motor",
+          "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=YOURTAG-20"
+        }
+      ],
+      "html_file": "seed-standing-desk-guide.html",
+      "draft": false
+    }
+  ]
+}
