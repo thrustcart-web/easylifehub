@@ -1,0 +1,205 @@
+{
+  "page_title": "Browse All Categories",
+  "hub_file": "content/categories/index.html",
+  "categories": [
+    {
+      "niche": "kitchen",
+      "label": "Kitchen",
+      "url": "/search/label/Kitchen",
+      "topics": 542,
+      "live": 0
+    },
+    {
+      "niche": "fitness",
+      "label": "Fitness",
+      "url": "/search/label/Fitness",
+      "topics": 387,
+      "live": 0
+    },
+    {
+      "niche": "electronics",
+      "label": "Electronics",
+      "url": "/search/label/Electronics",
+      "topics": 408,
+      "live": 0
+    },
+    {
+      "niche": "outdoor",
+      "label": "Outdoor",
+      "url": "/search/label/Outdoor",
+      "topics": 378,
+      "live": 0
+    },
+    {
+      "niche": "home office",
+      "label": "Home Office",
+      "url": "/search/label/Home%20Office",
+      "topics": 327,
+      "live": 0
+    },
+    {
+      "niche": "garden",
+      "label": "Garden",
+      "url": "/search/label/Garden",
+      "topics": 294,
+      "live": 0
+    },
+    {
+      "niche": "baby & kids",
+      "label": "Baby & Kids",
+      "url": "/search/label/Baby%20%26%20Kids",
+      "topics": 297,
+      "live": 0
+    },
+    {
+      "niche": "pets",
+      "label": "Pets",
+      "url": "/search/label/Pets",
+      "topics": 294,
+      "live": 0
+    },
+    {
+      "niche": "home cleaning",
+      "label": "Home Cleaning",
+      "url": "/search/label/Home%20Cleaning",
+      "topics": 298,
+      "live": 0
+    },
+    {
+      "niche": "car",
+      "label": "Car",
+      "url": "/search/label/Car",
+      "topics": 280,
+      "live": 0
+    },
+    {
+      "niche": "coffee & espresso",
+      "label": "Coffee & Espresso",
+      "url": "/search/label/Coffee%20%26%20Espresso",
+      "topics": 256,
+      "live": 0
+    },
+    {
+      "niche": "budget tech",
+      "label": "Budget Tech",
+      "url": "/search/label/Budget%20Tech",
+      "topics": 215,
+      "live": 0
+    },
+    {
+      "niche": "tools",
+      "label": "Tools",
+      "url": "/search/label/Tools",
+      "topics": 313,
+      "live": 0
+    },
+    {
+      "niche": "travel",
+      "label": "Travel",
+      "url": "/search/label/Travel",
+      "topics": 277,
+      "live": 0
+    },
+    {
+      "niche": "sleep",
+      "label": "Sleep",
+      "url": "/search/label/Sleep",
+      "topics": 247,
+      "live": 0
+    },
+    {
+      "niche": "personal care",
+      "label": "Personal Care",
+      "url": "/search/label/Personal%20Care",
+      "topics": 266,
+      "live": 0
+    },
+    {
+      "niche": "smart home",
+      "label": "Smart Home",
+      "url": "/search/label/Smart%20Home",
+      "topics": 261,
+      "live": 0
+    },
+    {
+      "niche": "audio",
+      "label": "Audio",
+      "url": "/search/label/Audio",
+      "topics": 207,
+      "live": 0
+    },
+    {
+      "niche": "health & wellness",
+      "label": "Health & Wellness",
+      "url": "/search/label/Health%20%26%20Wellness",
+      "topics": 149,
+      "live": 0
+    },
+    {
+      "niche": "office & school supplies",
+      "label": "Office & School Supplies",
+      "url": "/search/label/Office%20%26%20School%20Supplies",
+      "topics": 156,
+      "live": 0
+    },
+    {
+      "niche": "fashion & accessories",
+      "label": "Fashion & Accessories",
+      "url": "/search/label/Fashion%20%26%20Accessories",
+      "topics": 174,
+      "live": 0
+    },
+    {
+      "niche": "photography & video",
+      "label": "Photography & Video",
+      "url": "/search/label/Photography%20%26%20Video",
+      "topics": 145,
+      "live": 0
+    },
+    {
+      "niche": "gaming",
+      "label": "Gaming",
+      "url": "/search/label/Gaming",
+      "topics": 157,
+      "live": 0
+    },
+    {
+      "niche": "food & pantry",
+      "label": "Food & Pantry",
+      "url": "/search/label/Food%20%26%20Pantry",
+      "topics": 148,
+      "live": 0
+    },
+    {
+      "niche": "home decor",
+      "label": "Home Decor",
+      "url": "/search/label/Home%20Decor",
+      "topics": 143,
+      "live": 0
+    },
+    {
+      "niche": "security & safety",
+      "label": "Security & Safety",
+      "url": "/search/label/Security%20%26%20Safety",
+      "topics": 177,
+      "live": 0
+    },
+    {
+      "niche": "crafts & hobbies",
+      "label": "Crafts & Hobbies",
+      "url": "/search/label/Crafts%20%26%20Hobbies",
+      "topics": 171,
+      "live": 0
+    },
+    {
+      "niche": "laundry & storage",
+      "label": "Laundry & Storage",
+      "url": "/search/label/Laundry%20%26%20Storage",
+      "topics": 168,
+      "live": 0
+    }
+  ],
+  "total_topics": 7135,
+  "total_live": 0,
+  "updated": "03 November 2026"
+}

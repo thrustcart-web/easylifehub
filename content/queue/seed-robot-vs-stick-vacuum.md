@@ -100,9 +100,14 @@ If you have stairs, that settles it before anything else - the stick comes first
 
 ---
 
+### Category
+
+- More in Home Cleaning: /search/label/Home%20Cleaning
+- All categories: /p/categories.html
+
 ### Links
 
-- Robot Vacuum: https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=YOURTAG-20
-- Stick Vacuum: https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=YOURTAG-20
+- Robot Vacuum: https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=qalok0c-20
+- Stick Vacuum: https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

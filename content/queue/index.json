@@ -189,16 +189,19 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2314,
+      "words": 2351,
       "items": [
         {
           "name": "LEVOIT Air Purifier Core 300",
           "asin": "B08C1KN5J2",
           "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
-          "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=YOURTAG-20"
+          "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
+      "category_label": "Air Quality",
+      "category_url": "/search/label/Air%20Quality",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {
@@ -214,16 +217,19 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2091,
+      "words": 2128,
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
           "asin": "B0CHX1W1XY",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-          "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=YOURTAG-20"
+          "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=qalok0c-20"
         }
       ],
       "html_file": "seed-anker-737-power-bank-review.html",
+      "category_label": "Portable Power",
+      "category_url": "/search/label/Portable%20Power",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {
@@ -319,22 +325,25 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2207,
+      "words": 2244,
       "items": [
         {
           "name": "Robot Vacuum",
           "asin": "",
           "search_term": "robot vacuum for pet hair hardwood floors",
-          "url": "https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=qalok0c-20"
         },
         {
           "name": "Stick Vacuum",
           "asin": "",
           "search_term": "cordless stick vacuum for hardwood and carpet",
-          "url": "https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=qalok0c-20"
         }
       ],
       "html_file": "seed-robot-vs-stick-vacuum.html",
+      "category_label": "Home Cleaning",
+      "category_url": "/search/label/Home%20Cleaning",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {

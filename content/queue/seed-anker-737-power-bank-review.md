@@ -92,8 +92,13 @@ For everyone else it is over-specified. Match the output to your actual devices 
 
 ---
 
+### Category
+
+- More in Portable Power: /search/label/Portable%20Power
+- All categories: /p/categories.html
+
 ### Links
 
-- Anker 737 Power Bank 24K: https://www.amazon.com/dp/B0CHX1W1XY?tag=YOURTAG-20
+- Anker 737 Power Bank 24K: https://www.amazon.com/dp/B0CHX1W1XY?tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

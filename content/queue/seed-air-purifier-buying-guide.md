@@ -97,8 +97,13 @@ Then buy slightly more capacity than your room needs. The margin is what lets yo
 
 ---
 
+### Category
+
+- More in Air Quality: /search/label/Air%20Quality
+- All categories: /p/categories.html
+
 ### Links
 
-- LEVOIT Air Purifier Core 300: https://www.amazon.com/dp/B08C1KN5J2?tag=YOURTAG-20
+- LEVOIT Air Purifier Core 300: https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

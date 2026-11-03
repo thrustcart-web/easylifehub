@@ -11,15 +11,18 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2091,
+  "words": 2128,
   "items": [
     {
       "name": "Anker 737 Power Bank 24K",
       "asin": "B0CHX1W1XY",
       "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-      "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=YOURTAG-20"
+      "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-anker-737-power-bank-review.html",
+  "category_label": "Portable Power",
+  "category_url": "/search/label/Portable%20Power",
+  "hub_page": "/p/categories.html",
   "draft": false
 }

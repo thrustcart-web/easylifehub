@@ -11,15 +11,18 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2314,
+  "words": 2351,
   "items": [
     {
       "name": "LEVOIT Air Purifier Core 300",
       "asin": "B08C1KN5J2",
       "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
-      "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=YOURTAG-20"
+      "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-air-purifier-buying-guide.html",
+  "category_label": "Air Quality",
+  "category_url": "/search/label/Air%20Quality",
+  "hub_page": "/p/categories.html",
   "draft": false
 }
