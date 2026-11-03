@@ -53,6 +53,33 @@
       "ts": "2026-11-03T01:44:19Z",
       "source": "seed",
       "words": 2390
+    },
+    {
+      "slug": "review-levoit-air-purifier-core-300-853749094376",
+      "title": "LEVOIT Air Purifier Core 300 Review: What I Would Check Before Buying",
+      "template": "review",
+      "keyword": "LEVOIT Air Purifier Core 300",
+      "ts": "2026-11-03T02:21:36Z",
+      "source": "ai:groq",
+      "words": 2794
+    },
+    {
+      "slug": "review-anker-737-power-bank-24k-b79629541495",
+      "title": "Before You Buy Anker 737 Power Bank 24K: The Honest Version",
+      "template": "review",
+      "keyword": "Anker 737 Power Bank 24K",
+      "ts": "2026-11-03T02:23:27Z",
+      "source": "ai:groq",
+      "words": 1839
+    },
+    {
+      "slug": "review-ninja-creami-nc301-afd5d45b40e8",
+      "title": "Choosing Ninja Creami NC301: Six Things That Actually Matter",
+      "template": "review",
+      "keyword": "Ninja Creami NC301",
+      "ts": "2026-11-03T02:26:34Z",
+      "source": "template",
+      "words": 1684
     }
   ],
   "published": [],
@@ -62,10 +89,21 @@
     "seed-air-purifier-buying-guide",
     "seed-standing-desk-guide",
     "seed-best-home-fitness-gear",
-    "seed-espresso-vs-pourover"
+    "seed-espresso-vs-pourover",
+    "review-levoit-air-purifier-core-300-853749094376",
+    "review-anker-737-power-bank-24k-b79629541495",
+    "review-ninja-creami-nc301-afd5d45b40e8"
   ],
-  "keywords_used": {},
-  "titles_used": [],
+  "keywords_used": {
+    "LEVOIT Air Purifier Core 300": "2026-11-03",
+    "Anker 737 Power Bank 24K": "2026-11-03",
+    "Ninja Creami NC301": "2026-11-03"
+  },
+  "titles_used": [
+    "{P} Review: What I Would Check Before Buying",
+    "Before You Buy {A} {P}: The Honest Version",
+    "Choosing {A} {P}: Six Things That Actually Matter"
+  ],
   "last_publish_ts": null,
   "failures": {
     "count": 0,
@@ -73,7 +111,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 6,
+    "total_generated": 9,
     "total_published": 0
   }
 }
