@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+    paths: ['scripts/**', 'tests/**', 'config.json', 'data/**', 'main.py']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run pipeline tests
+        run: python3 tests/test_pipeline.py
+      - name: Smoke test - generate 3 articles offline
+        run: |
+          python3 main.py --count 3 --mode template
+          python3 main.py --stats
