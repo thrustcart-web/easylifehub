@@ -1,0 +1,43 @@
+name: refill-queue
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of articles to generate'
+        required: true
+        default: '10'
+      mode:
+        description: 'auto | ai | template'
+        required: false
+        default: 'auto'
+
+permissions:
+  contents: write
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate
+        env:
+          GROQ_API_KEY:       ${{ secrets.GROQ_API_KEY }}
+          MISTRAL_API_KEY:    ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
+          AFFILIATE_TAG:      ${{ secrets.AFFILIATE_TAG }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: python3 main.py --count "${{ github.event.inputs.count }}" --mode "${{ github.event.inputs.mode }}" --verbose
+
+      - name: Commit
+        run: |
+          git config user.name  "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add content/queue state.json .cache data 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "content: manual refill [skip ci]" && git push
