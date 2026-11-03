@@ -1,10 +1,10 @@
 {
   "_comment": "كل إعدادات النظام في الملف ده. عدّل القيم اللي بينها [ ] بس. باقي الحقول متسيبها زي ما هي.",
   "blog": {
-    "id": "PUT_YOUR_BLOGGER_BLOG_ID_HERE",
+    "id": "6831073772272108266",
     "locale": "en-US",
-    "url": "https://YOUR-BLOG.blogspot.com",
-    "name": "Your Blog Name"
+    "url": "hhttps://easylifehub7083.blogspot.com/",
+    "name": "Easy Life Hub"
   },
   "schedule": {
     "daily_posts": 3,
@@ -32,7 +32,7 @@
     "keyword_cooldown_days": 45
   },
   "affiliate": {
-    "tag": "YOURTAG-20",
+    "tag": "qalok0c-20",
     "marketplace": "com",
     "country": "US",
     "currency": "USD",
@@ -84,9 +84,7 @@
       }
     }
   },
-  "github": {
-    "repo_raw_base": "https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main"
-  },
+      "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main"
   "notify": {
     "email": "",
     "only_on_failure": true
