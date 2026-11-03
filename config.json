@@ -1,0 +1,100 @@
+{
+  "_comment": "كل إعدادات النظام في الملف ده. عدّل القيم اللي بينها [ ] بس. باقي الحقول متسيبها زي ما هي.",
+  "blog": {
+    "id": "PUT_YOUR_BLOGGER_BLOG_ID_HERE",
+    "locale": "en-US",
+    "url": "https://YOUR-BLOG.blogspot.com",
+    "name": "Your Blog Name"
+  },
+  "schedule": {
+    "daily_posts": 3,
+    "max_queue_size": 60,
+    "publish_hours_local": [
+      9,
+      13,
+      18
+    ],
+    "jitter_minutes": 25,
+    "timezone": "Africa/Cairo"
+  },
+  "content": {
+    "language": "en",
+    "min_words": 1150,
+    "target_words": 1500,
+    "template_weights": {
+      "review": 46,
+      "bestof": 30,
+      "comparison": 24
+    },
+    "ai_mode": "ai_first",
+    "fallback_to_template": true,
+    "label": "Reviews",
+    "keyword_cooldown_days": 45
+  },
+  "affiliate": {
+    "tag": "YOURTAG-20",
+    "marketplace": "com",
+    "country": "US",
+    "currency": "USD",
+    "use_search_links_when_no_asin": true,
+    "link_rel": "nofollow sponsored noopener",
+    "disclosure": "Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying."
+  },
+  "images": {
+    "provider": "unsplash",
+    "access_key": "PUT_YOUR_UNSPLASH_ACCESS_KEY_HERE_OPTIONAL",
+    "fallback_svg": true,
+    "cache_file": ".cache/images.json",
+    "attribution": true
+  },
+  "ai": {
+    "primary": "groq",
+    "fallbacks": [
+      "mistral",
+      "openrouter",
+      "gemini"
+    ],
+    "temperature": 0.85,
+    "max_output_tokens": 6000,
+    "retries": 2,
+    "providers": {
+      "groq": {
+        "env_key": "GROQ_API_KEY",
+        "model": "openai/gpt-oss-120b",
+        "fallback_models": [
+          "qwen/qwen3.8-27b",
+          "openai/gpt-oss-20b"
+        ],
+        "base_url": "https://api.groq.com/openai/v1"
+      },
+      "mistral": {
+        "env_key": "MISTRAL_API_KEY",
+        "model": "mistral-large-latest",
+        "base_url": "https://api.mistral.ai/v1"
+      },
+      "openrouter": {
+        "env_key": "OPENROUTER_API_KEY",
+        "model": "openrouter/free",
+        "base_url": "https://openrouter.ai/api/v1"
+      },
+      "gemini": {
+        "env_key": "GEMINI_API_KEY",
+        "model": "gemini-2.5-flash",
+        "base_url": "https://generativelanguage.googleapis.com/v1beta"
+      }
+    }
+  },
+  "github": {
+    "repo_raw_base": "https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main"
+  },
+  "notify": {
+    "email": "",
+    "only_on_failure": true
+  },
+  "safety": {
+    "max_consecutive_failures": 3,
+    "cooldown_hours": 24,
+    "min_seconds_between_posts": 7200,
+    "max_posts_per_day_hard_cap": 6
+  }
+}

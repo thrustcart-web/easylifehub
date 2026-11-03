@@ -1,0 +1,10 @@
+{
+  "generated": [],
+  "published": [],
+  "queued_slugs": [],
+  "keywords_used": {},
+  "titles_used": [],
+  "last_publish_ts": null,
+  "failures": { "count": 0, "until": null, "last_error": null },
+  "counters": { "total_generated": 0, "total_published": 0 }
+}

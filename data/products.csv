@@ -1,0 +1,14 @@
+asin,name,niche,feature,audience,price,rating,notes
+B0CHX1W1XY,Anker 737 Power Bank 24K,portable power,24000mAh 140W two-way fast charging,frequent travellers and laptop users,149,4.6,EXAMPLE ROW - verify the ASIN before you trust it
+B08C1KN5J2,LEVOIT Air Purifier Core 300,air quality,True HEPA H13 quiet sleep mode,bedrooms up to 219 sq ft and allergy sufferers,99,4.7,EXAMPLE ROW - verify the ASIN before you trust it
+B09B8VHGLD,Ninja Creami NC301,kitchen,ice cream and sorbet from frozen bases,households that eat dessert often,199,4.5,EXAMPLE ROW - verify the ASIN before you trust it
+,,,,,,,
+,,,,,,,
+# HOW TO USE THIS FILE,,,,,,,,
+# 1) Delete the EXAMPLE rows and the comment lines when you add real products.,,,,,,,,
+# 2) asin = the code in the Amazon URL after /dp/ (e.g. amazon.com/dp/B0CHX1W1XY).,,,,,,,,
+# 3) Only `name` is required. Everything else improves the article quality.,,,,,,,,
+# 4) price/rating are used ONLY in the comparison table - never inside the prose,,,,,,,,
+#    (fabricated numbers are rejected by the quality gate).,,,,,,,,
+# 5) You can leave this file empty. The system then uses data/keywords.csv and,,,,,,,,
+#    Amazon search links (amazon.com/s?k=...&tag=) which also earn commission.,,,,,,,,

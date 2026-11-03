@@ -1,0 +1,353 @@
+"""AI writer: prompts, validation and normalisation of model output.
+
+The prompt is engineered for one thing above all: output that is *publishable
+without a human reading it*. That means:
+
+  * strict JSON schema (so parsing never fails silently)
+  * the headline is assigned by the planner, not invented by the model - that is
+    what stops 300 posts from sharing one title formula
+  * explicit bans on fabricated prices, ratings, fake lab data and hype words
+  * mandatory trade-offs (a review with no negatives reads as an advert, and
+    both Google's classifiers and human readers punish that)
+"""
+from __future__ import annotations
+
+import json
+import random
+import re
+
+from providers import AIError, generate_json
+from util import log
+
+REQUIRED_FIELDS = ("title", "intro", "sections", "pros", "cons", "faq", "conclusion")
+
+BANNED_PHRASES = [
+    "in today's fast-paced world",
+    "in the world of",
+    "look no further",
+    "game-changer",
+    "game changer",
+    "revolutionize",
+    "revolutionise",
+    "unlock the power",
+    "dive into",
+    "delve into",
+    "tapestry",
+    "elevate your",
+    "seamless",
+    "robust solution",
+    "it's important to note",
+    "in conclusion",
+    "when it comes to",
+    "a testament to",
+    "navigating the",
+    "embark on",
+]
+
+HYPE_RE = re.compile(r"\b(best ever|world's #1|guaranteed|miracle|perfect for everyone|100% risk-free)\b", re.I)
+PRICE_RE = re.compile(r"(?<![\w])(?:\$|USD\s?|£|€)\s?\d+(?:\.\d{2})?")
+RATING_RE = re.compile(r"\b\d(?:\.\d)?\s?(?:/|out of)\s?5\b", re.I)
+FAKE_TEST_RE = re.compile(
+    r"\b(?:we (?:tested|measured|ran|used) it for|in our (?:lab|tests)|after \d+ (?:hours|days|weeks) of testing)\b", re.I
+)
+
+
+# ----------------------------------------------------------------- prompts --
+def _template_brief(template: str, items: list[dict]) -> str:
+    names = ", ".join((i.get("display_name") or i.get("name", "")) for i in items)
+    if template == "comparison":
+        a, b = items[0], items[1]
+        return (
+            f"ARTICLE TYPE: head-to-head comparison.\n"
+            f"Compare exactly these two product types: (A) {a.get('display_name')} and (B) {b.get('display_name')}.\n"
+            f"Structure: the short answer first (who should buy which, and why), then a section on what A does better, "
+            f"then what B does better, then the deciding factors for different types of buyer, then a verdict.\n"
+            f"Be decisive. Fence-sitting comparisons are worthless. Give a recommendation for at least three distinct buyer profiles.\n"
+            f"Fill \"comparison_rows\" with 5-8 criteria where the two genuinely differ.\n"
+            f"Available context: {names}"
+        )
+    if template == "bestof":
+        return (
+            f"ARTICLE TYPE: curated best-of roundup.\n"
+            f"Cover these options, one section each, in this order: {names}\n"
+            f"Structure: a short 'quick answer' naming the best overall and the best value pick, then one section per option "
+            f"with a clear 'best for...' angle, then a buying-criteria section, then a final recommendation.\n"
+            f"Every option must have a stated weakness. A roundup where everything is wonderful is not a roundup, it is an advert."
+        )
+    return (
+        f"ARTICLE TYPE: single-product review.\n"
+        f"Subject: {items[0].get('display_name') if items else ''}\n"
+        f"Structure: what it is and who it is for, where it earns its price, where it falls short, "
+        f"how it sits against the obvious alternatives in the category, who should skip it, and a verdict.\n"
+        f"Available context: {names}"
+    )
+
+
+def _voice_variation(seed: int) -> str:
+    voices = [
+        "Voice: a blunt, experienced buyer who has owned too many of these and is tired of marketing copy. Dry humour allowed, once.",
+        "Voice: a practical specialist writing for a smart friend. Concrete, unsentimental, zero hype.",
+        "Voice: a methodical reviewer who leads with trade-offs and refuses to declare a winner without stating caveats.",
+        "Voice: a sceptical consumer advocate. Assumes the listing is optimistic until proven otherwise.",
+        "Voice: an enthusiast who loves the category but is honest about where money gets wasted.",
+        "Voice: a former retail buyer who knows how these products get sourced and priced.",
+    ]
+    styles = [
+        "Sentence rhythm: mostly short. One long sentence per section, maximum.",
+        "Sentence rhythm: mixed. Open several sections with a single blunt statement.",
+        "Sentence rhythm: conversational, as if explaining across a table. No rhetorical questions.",
+        "Sentence rhythm: clipped and declarative. Prefer specifics over adjectives.",
+        "Openings: never restate the title. Start mid-thought, with the most useful fact.",
+    ]
+    rng = random.Random(seed)
+    return rng.choice(voices) + " " + rng.choice(styles)
+
+
+SYSTEM_PROMPT = """You are a senior product reviewer for an independent buyer's-guide blog.
+You write for readers who are about to spend their own money and are tired of sponsored fluff.
+
+HARD RULES - violating any of these makes the article unusable and it will be rejected automatically:
+1. Output ONLY one valid JSON object. No markdown fences, no text before or after.
+2. NEVER invent prices, star ratings, sales ranks, measurements, battery numbers, decibel readings,
+   or "we tested it for X hours" claims. You have no lab. Write about what a buyer can verify and
+   about design/trade-off reasoning instead.
+3. Never use these words or phrases: {banned}.
+4. Every article must contain genuine negatives. No downsides = advertising = rejected.
+5. No hype, no exclamation marks, no flattery of the reader.
+6. Specific beats generic: name the mechanism ("the hinge is a single moulded plastic pin") not the
+   feeling ("it feels well made").
+7. Address the reader as "you" at most once per section.
+8. Do not write an introduction that restates the title.
+9. Body copy: {min_words}-{target_words} words. Substance, not padding.
+10. Vary paragraph length. Some sections get two sentences, some get five.
+11. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
+
+JSON SCHEMA (exact keys):
+{{
+  "title": "the REQUIRED TITLE, verbatim",
+  "meta_description": "string, 145-160 chars, states the verdict honestly",
+  "intro": ["paragraph", "paragraph"],
+  "sections": [
+    {{"heading": "string, 4-9 words",
+      "paragraphs": ["string", "string"],
+      "bullets": ["optional: 3-6 complete thoughts, <strong> tags allowed"]}}
+  ],
+  "specs": [{{"label": "string", "value": "string"}}],
+  "pros": ["4-6 short concrete strings"],
+  "cons": ["3-5 short concrete strings"],
+  "comparison_rows": [{{"criterion": "string", "a": "string", "b": "string"}}],
+  "faq": [{{"q": "a question a real shopper would type", "a": "40-80 words"}}],
+  "conclusion": ["paragraph", "paragraph"]
+}}
+
+Notes:
+- "specs" must contain only criteria/checklist items (e.g. "Warranty", "Consumables", "Fit"),
+  never fabricated numeric specifications.
+- "comparison_rows" is required for comparison articles; return [] for other types.
+- 5 sections minimum, 8 maximum. At least two sections must include "bullets".
+- 4-6 FAQ items.
+- Everything in {language}.
+"""
+
+
+def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
+    content_cfg = cfg.get("content", {})
+    language = content_cfg.get("language", "en")
+    lang_name = {"en": "English", "ar": "Arabic", "es": "Spanish", "fr": "French", "de": "German"}.get(language, "English")
+    items = topic.get("items", [])
+    seed = abs(hash(topic["slug"])) % 10_000
+
+    system = SYSTEM_PROMPT.format(
+        banned=", ".join(f'"{b}"' for b in BANNED_PHRASES),
+        language=lang_name,
+        min_words=content_cfg.get("min_words", 1150),
+        target_words=content_cfg.get("target_words", 1500),
+    )
+
+    fields = []
+    for item in items:
+        bits = [f"product: {item.get('display_name') or item.get('name')}"]
+        for key in ("search_term", "asin", "niche", "feature", "audience", "budget", "price", "rating", "notes"):
+            value = item.get(key)
+            if value:
+                bits.append(f"{key}: {value}")
+        fields.append(" | ".join(bits))
+
+    planned_title = topic.get("title", "")
+    user = f"""{_template_brief(topic['template'], items)}
+
+REQUIRED TITLE (use verbatim as the "title" value): "{planned_title}"
+
+{_voice_variation(seed)}
+
+TOPIC DATA - this is everything I know. Do not invent beyond it; reason from general category
+knowledge instead:
+{chr(10).join(fields)}
+
+Niche: {topic.get('niche', 'general')}
+
+Return the JSON object now."""
+    return system, user
+
+
+# ------------------------------------------------------------ normalisation --
+def _as_list(value) -> list:
+    if value is None:
+        return []
+    if isinstance(value, (list, tuple)):
+        return [str(v) for v in value if v is not None and str(v).strip()]
+    if isinstance(value, str) and value.strip():
+        return [value]
+    return []
+
+
+def _clean_text(text: str) -> str:
+    text = str(text or "").strip()
+    text = re.sub(r"!\s*", ". ", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text
+
+
+def _strip_markdown(text: str) -> str:
+    """Models sneak markdown into JSON strings. Convert the useful bits to HTML."""
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"(?<!\*)\*([^*\n]+)\*(?!\*)", r"<em>\1</em>", text)
+    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+    text = re.sub(r"^#{1,6}\s*", "", text)
+    text = re.sub(r"^\s*[-*]\s+", "", text)
+    return text.strip()
+
+
+def normalise(raw: dict, topic: dict) -> dict:
+    keyword = topic.get("keyword", "")
+    planned = (topic.get("title") or "").strip()
+
+    title = _clean_text(raw.get("title") or "").strip('"')
+    if planned:
+        title = planned                      # the planner owns the headline
+    if not title:
+        title = f"{keyword.title()} Review: Worth Buying?"
+    title = title[:95]
+
+    sections = []
+    for sec in raw.get("sections") or []:
+        if not isinstance(sec, dict):
+            continue
+        heading = _strip_markdown(_clean_text(sec.get("heading")))
+        paragraphs = [_strip_markdown(_clean_text(p)) for p in _as_list(sec.get("paragraphs"))]
+        bullets = [_strip_markdown(_clean_text(b)) for b in _as_list(sec.get("bullets"))]
+        if not heading or not (paragraphs or bullets):
+            continue
+        sections.append({"heading": heading[:110], "paragraphs": paragraphs, "bullets": bullets})
+
+    faq = []
+    for entry in raw.get("faq") or []:
+        if not isinstance(entry, dict):
+            continue
+        q = _strip_markdown(_clean_text(entry.get("q") or entry.get("question")))
+        a = _strip_markdown(_clean_text(entry.get("a") or entry.get("answer")))
+        if q and a:
+            faq.append({"q": q[:180], "a": a})
+
+    specs = []
+    for entry in raw.get("specs") or []:
+        if isinstance(entry, dict) and entry.get("label"):
+            specs.append(
+                {
+                    "label": _clean_text(entry["label"])[:60],
+                    "value": _clean_text(entry.get("value", ""))[:220],
+                }
+            )
+
+    comparison_rows = []
+    for row in raw.get("comparison_rows") or []:
+        if isinstance(row, dict) and row.get("criterion"):
+            comparison_rows.append(
+                {
+                    "criterion": _clean_text(row["criterion"])[:80],
+                    "a": _clean_text(row.get("a", ""))[:300],
+                    "b": _clean_text(row.get("b", ""))[:300],
+                }
+            )
+
+    return {
+        "title": title,
+        "meta_description": _clean_text(raw.get("meta_description"))[:320],
+        "intro": [_strip_markdown(_clean_text(p)) for p in _as_list(raw.get("intro"))],
+        "sections": sections,
+        "specs": specs[:8],
+        "pros": [_strip_markdown(_clean_text(p))[:160] for p in _as_list(raw.get("pros"))][:8],
+        "cons": [_strip_markdown(_clean_text(p))[:160] for p in _as_list(raw.get("cons"))][:8],
+        "comparison_rows": comparison_rows[:10],
+        "faq": faq[:8],
+        "conclusion": [_strip_markdown(_clean_text(p)) for p in _as_list(raw.get("conclusion"))],
+        "_source": "ai",
+    }
+
+
+# ---------------------------------------------------------------- validation --
+def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
+    """(ok, problems). ok=False blocks publishing."""
+    problems: list[str] = []
+    content_cfg = cfg.get("content", {})
+    min_words = int(content_cfg.get("min_words", 1100))
+
+    for field in REQUIRED_FIELDS:
+        if not article.get(field):
+            problems.append(f"missing field: {field}")
+
+    blob = json.dumps(article, ensure_ascii=False).lower()
+    for phrase in BANNED_PHRASES:
+        if phrase in blob:
+            problems.append(f"banned phrase: {phrase}")
+    if HYPE_RE.search(blob):
+        problems.append("hype language detected")
+    if PRICE_RE.search(blob):
+        problems.append("fabricated price detected")
+    if RATING_RE.search(blob):
+        problems.append("fabricated rating detected")
+    if FAKE_TEST_RE.search(blob):
+        problems.append("fabricated test claim detected")
+
+    words = len(re.findall(r"[\w'-]+", re.sub(r"<[^>]+>", " ", blob)))
+    if words < min_words:
+        problems.append(f"too short: {words} words < {min_words}")
+    if len(article.get("sections", [])) < 4:
+        problems.append(f"only {len(article.get('sections', []))} sections")
+    if not article.get("cons"):
+        problems.append("no cons - reads as advertising")
+    if len(article.get("faq", [])) < 3:
+        problems.append("fewer than 3 FAQ items")
+    if not article.get("title") or len(article["title"]) < 15:
+        problems.append("title missing or too short")
+
+    return (not problems), problems
+
+
+def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
+    """AI-first writing with validation retries. Raises AIError if unusable."""
+    ai_cfg = cfg.get("ai", {})
+    system, user = build_prompts(topic, cfg)
+    attempts = int(ai_cfg.get("retries", 2)) + 1
+    last_problems: list[str] = []
+
+    for attempt in range(1, attempts + 1):
+        try:
+            raw, provider = generate_json(ai_cfg, system, user, timeout_note=f"(attempt {attempt}/{attempts})")
+        except AIError:
+            if attempt == attempts:
+                raise
+            continue
+        article = normalise(raw, topic)
+        ok, problems = validate(article, cfg)
+        if ok:
+            article["_provider"] = provider
+            return article, provider
+        last_problems = problems
+        log.warning("  validation failed (attempt %d): %s", attempt, "; ".join(problems[:5]))
+        user += (
+            "\n\nYour previous attempt was rejected for: "
+            + "; ".join(problems[:8])
+            + "\nFix every one of those and return the corrected JSON object only."
+        )
+    raise AIError("AI output failed validation: " + "; ".join(last_problems[:6]))
