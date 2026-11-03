@@ -3,17 +3,13 @@
   "blog": {
     "id": "6831073772272108266",
     "locale": "en-US",
-    "url": "hhttps://easylifehub7083.blogspot.com/",
+    "url": "https://easylifehub7083.blogspot.com",
     "name": "Easy Life Hub"
   },
   "schedule": {
     "daily_posts": 3,
     "max_queue_size": 60,
-    "publish_hours_local": [
-      9,
-      13,
-      18
-    ],
+    "publish_hours_local": [9, 13, 18],
     "jitter_minutes": 25,
     "timezone": "Africa/Cairo"
   },
@@ -21,11 +17,7 @@
     "language": "en",
     "min_words": 1150,
     "target_words": 1500,
-    "template_weights": {
-      "review": 46,
-      "bestof": 30,
-      "comparison": 24
-    },
+    "template_weights": { "review": 46, "bestof": 30, "comparison": 24 },
     "ai_mode": "ai_first",
     "fallback_to_template": true,
     "label": "Reviews",
@@ -49,11 +41,7 @@
   },
   "ai": {
     "primary": "groq",
-    "fallbacks": [
-      "mistral",
-      "openrouter",
-      "gemini"
-    ],
+    "fallbacks": ["mistral", "openrouter", "gemini"],
     "temperature": 0.85,
     "max_output_tokens": 6000,
     "retries": 2,
@@ -61,10 +49,7 @@
       "groq": {
         "env_key": "GROQ_API_KEY",
         "model": "openai/gpt-oss-120b",
-        "fallback_models": [
-          "qwen/qwen3.8-27b",
-          "openai/gpt-oss-20b"
-        ],
+        "fallback_models": ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"],
         "base_url": "https://api.groq.com/openai/v1"
       },
       "mistral": {
@@ -84,10 +69,11 @@
       }
     }
   },
-      "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main"
-  }
+  "github": {
+    "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main"
+  },
   "notify": {
-    "email": "",
+    "email": "thrustcart@gmail.com",
     "only_on_failure": true
   },
   "safety": {
