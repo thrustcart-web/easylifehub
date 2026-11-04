@@ -426,7 +426,7 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "category_label": cat_mod.label_of(topic.get("niche", "")),
         "category_url": cat_mod.label_url(topic.get("niche", "")),
         "hub_page": "/p/browse-all-categories.html",
-        "layout_version": 2,
+        "layout_version": 3,
         "draft": False,
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
