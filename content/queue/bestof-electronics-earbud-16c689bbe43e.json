@@ -1,0 +1,46 @@
+{
+  "slug": "bestof-electronics-earbud-16c689bbe43e",
+  "title": "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
+  "meta_description": "We rank portable power stations, earbuds, surge protectors and lightning cables, naming the best overall and best value picks while flagging real drawbacks you should consider.",
+  "template": "bestof",
+  "niche": "electronics",
+  "keyword": "Electronics",
+  "labels": [
+    "Reviews",
+    "Electronics"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 1994,
+  "items": [
+    {
+      "name": "Portable Power Station",
+      "asin": "",
+      "search_term": "portable power station for frequent travellers",
+      "url": "https://www.amazon.com/s?k=portable+power+station+for+frequent+travellers&tag=qalok0c-20"
+    },
+    {
+      "name": "Wireless Earbuds",
+      "asin": "",
+      "search_term": "wireless earbuds for students",
+      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+students&tag=qalok0c-20"
+    },
+    {
+      "name": "Surge Protector",
+      "asin": "",
+      "search_term": "surge protector for storm areas",
+      "url": "https://www.amazon.com/s?k=surge+protector+for+storm+areas&tag=qalok0c-20"
+    },
+    {
+      "name": "Braided Lightning Cable",
+      "asin": "",
+      "search_term": "braided lightning cable for home theatre",
+      "url": "https://www.amazon.com/s?k=braided+lightning+cable+for+home+theatre&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
+  "category_label": "Electronics",
+  "category_url": "/search/label/Electronics",
+  "hub_page": "/p/categories.html",
+  "draft": false
+}

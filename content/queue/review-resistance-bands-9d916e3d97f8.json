@@ -1,0 +1,28 @@
+{
+  "slug": "review-resistance-bands-9d916e3d97f8",
+  "title": "Resistance Bands Explained: What You Are Really Paying For",
+  "meta_description": "Resistance bands for runners cost more than cheap loops but less than gym gear; they offer real compression, limited durability, and mixed value for runners.",
+  "template": "review",
+  "niche": "health & wellness",
+  "keyword": "resistance bands for runners",
+  "labels": [
+    "Reviews",
+    "Health & Wellness"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 1920,
+  "items": [
+    {
+      "name": "Resistance Bands",
+      "asin": "",
+      "search_term": "resistance bands for runners",
+      "url": "https://www.amazon.com/s?k=resistance+bands+for+runners&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "review-resistance-bands-9d916e3d97f8.html",
+  "category_label": "Health & Wellness",
+  "category_url": "/search/label/Health%20%26%20Wellness",
+  "hub_page": "/p/categories.html",
+  "draft": false
+}

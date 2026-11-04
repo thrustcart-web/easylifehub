@@ -1,7 +1,53 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 12,
+  "count": 15,
   "posts": [
+    {
+      "slug": "bestof-electronics-earbud-16c689bbe43e",
+      "title": "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
+      "meta_description": "We rank portable power stations, earbuds, surge protectors and lightning cables, naming the best overall and best value picks while flagging real drawbacks you should consider.",
+      "template": "bestof",
+      "niche": "electronics",
+      "keyword": "Electronics",
+      "labels": [
+        "Reviews",
+        "Electronics"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 1994,
+      "items": [
+        {
+          "name": "Portable Power Station",
+          "asin": "",
+          "search_term": "portable power station for frequent travellers",
+          "url": "https://www.amazon.com/s?k=portable+power+station+for+frequent+travellers&tag=qalok0c-20"
+        },
+        {
+          "name": "Wireless Earbuds",
+          "asin": "",
+          "search_term": "wireless earbuds for students",
+          "url": "https://www.amazon.com/s?k=wireless+earbuds+for+students&tag=qalok0c-20"
+        },
+        {
+          "name": "Surge Protector",
+          "asin": "",
+          "search_term": "surge protector for storm areas",
+          "url": "https://www.amazon.com/s?k=surge+protector+for+storm+areas&tag=qalok0c-20"
+        },
+        {
+          "name": "Braided Lightning Cable",
+          "asin": "",
+          "search_term": "braided lightning cable for home theatre",
+          "url": "https://www.amazon.com/s?k=braided+lightning+cable+for+home+theatre&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
+      "category_label": "Electronics",
+      "category_url": "/search/label/Electronics",
+      "hub_page": "/p/categories.html",
+      "draft": false
+    },
     {
       "slug": "bestof-garden-blower-335192546968",
       "title": "5 Garden Tools Options Worth Your Money (and the Ones to Skip)",
@@ -77,6 +123,34 @@
       "draft": false
     },
     {
+      "slug": "review-foldable-daypack-d32205113585",
+      "title": "Choosing A Foldable Daypack: Six Things That Actually Matter",
+      "meta_description": "A frank review of a foldable daypack for wedding trips, weighing its price, crease control, and real-world compromises to help you decide if it earns a spot in your luggage.",
+      "template": "review",
+      "niche": "travel",
+      "keyword": "foldable daypack for wedding trips",
+      "labels": [
+        "Reviews",
+        "Travel"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 1991,
+      "items": [
+        {
+          "name": "Foldable Daypack",
+          "asin": "",
+          "search_term": "foldable daypack for wedding trips",
+          "url": "https://www.amazon.com/s?k=foldable+daypack+for+wedding+trips&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-foldable-daypack-d32205113585.html",
+      "category_label": "Travel",
+      "category_url": "/search/label/Travel",
+      "hub_page": "/p/categories.html",
+      "draft": false
+    },
+    {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
       "title": "LEVOIT Air Purifier Core 300 Review: What I Would Check Before Buying",
       "meta_description": "The Core 300 is a compact, quiet HEPA unit for small rooms. It lacks smart features and has a modest filter size, but it delivers solid air cleaning on a tight budget.",
@@ -149,6 +223,34 @@
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
+      "draft": false
+    },
+    {
+      "slug": "review-resistance-bands-9d916e3d97f8",
+      "title": "Resistance Bands Explained: What You Are Really Paying For",
+      "meta_description": "Resistance bands for runners cost more than cheap loops but less than gym gear; they offer real compression, limited durability, and mixed value for runners.",
+      "template": "review",
+      "niche": "health & wellness",
+      "keyword": "resistance bands for runners",
+      "labels": [
+        "Reviews",
+        "Health & Wellness"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 1920,
+      "items": [
+        {
+          "name": "Resistance Bands",
+          "asin": "",
+          "search_term": "resistance bands for runners",
+          "url": "https://www.amazon.com/s?k=resistance+bands+for+runners&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-resistance-bands-9d916e3d97f8.html",
+      "category_label": "Health & Wellness",
+      "category_url": "/search/label/Health%20%26%20Wellness",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {

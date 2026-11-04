@@ -161,6 +161,33 @@
       "ts": "2026-11-04T03:38:27Z",
       "source": "seed",
       "words": 2427
+    },
+    {
+      "slug": "review-resistance-bands-9d916e3d97f8",
+      "title": "Resistance Bands Explained: What You Are Really Paying For",
+      "template": "review",
+      "keyword": "resistance bands for runners",
+      "ts": "2026-11-04T06:25:57Z",
+      "source": "ai:groq",
+      "words": 1920
+    },
+    {
+      "slug": "bestof-electronics-earbud-16c689bbe43e",
+      "title": "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
+      "template": "bestof",
+      "keyword": "Electronics",
+      "ts": "2026-11-04T06:27:21Z",
+      "source": "ai:groq",
+      "words": 1994
+    },
+    {
+      "slug": "review-foldable-daypack-d32205113585",
+      "title": "Choosing A Foldable Daypack: Six Things That Actually Matter",
+      "template": "review",
+      "keyword": "foldable daypack for wedding trips",
+      "ts": "2026-11-04T06:27:27Z",
+      "source": "ai:groq",
+      "words": 1991
     }
   ],
   "published": [],
@@ -182,7 +209,10 @@
     "seed-air-purifier-buying-guide",
     "seed-standing-desk-guide",
     "seed-best-home-fitness-gear",
-    "seed-espresso-vs-pourover"
+    "seed-espresso-vs-pourover",
+    "review-resistance-bands-9d916e3d97f8",
+    "bestof-electronics-earbud-16c689bbe43e",
+    "review-foldable-daypack-d32205113585"
   ],
   "keywords_used": {
     "LEVOIT Air Purifier Core 300": "2026-11-03",
@@ -243,7 +273,22 @@
     "cabinet locks for renters": "2026-11-03",
     "tweezers": "2026-11-03",
     "Tweezers": "2026-11-03",
-    "tweezers for travellers": "2026-11-03"
+    "tweezers for travellers": "2026-11-03",
+    "resistance bands": "2026-11-04",
+    "Resistance Bands": "2026-11-04",
+    "resistance bands for runners": "2026-11-04",
+    "electronics:braided lightning cable|portable power station|surge protector|wireless earbuds": "2026-11-04",
+    "Portable Power Station": "2026-11-04",
+    "portable power station for frequent travellers": "2026-11-04",
+    "Wireless Earbuds": "2026-11-04",
+    "wireless earbuds for students": "2026-11-04",
+    "Surge Protector": "2026-11-04",
+    "surge protector for storm areas": "2026-11-04",
+    "Braided Lightning Cable": "2026-11-04",
+    "braided lightning cable for home theatre": "2026-11-04",
+    "foldable daypack": "2026-11-04",
+    "Foldable Daypack": "2026-11-04",
+    "foldable daypack for wedding trips": "2026-11-04"
   },
   "last_publish_ts": null,
   "failures": {
@@ -252,7 +297,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 18,
+    "total_generated": 21,
     "total_published": 0
   },
   "titles_used": [
@@ -267,6 +312,9 @@
     "Choosing Between {A} and {B}: A Practical Comparison",
     "Best {P} for {AUD}: What Actually Matters",
     "{N} {F} Tested Against the Same Checklist",
-    "{P} for {AUD}: Which Specs Actually Change Anything"
+    "{P} for {AUD}: Which Specs Actually Change Anything",
+    "{P} Explained: What You Are Really Paying For",
+    "The {N} {F} Worth Your Money (and {N2} to Avoid)",
+    "Choosing {A} {P}: Six Things That Actually Matter"
   ]
 }
