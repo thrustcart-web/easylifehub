@@ -428,6 +428,9 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "hub_page": "/p/browse-all-categories.html",
         "layout_version": 3,
         "draft": False,
+        # Offline fallback copy is useful as a starting point, but it has not
+        # been independently fact-checked; keep it out of automatic publishing.
+        "review_required": str(article.get("_source") or "").lower() == "template",
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 

@@ -45,10 +45,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate articles
+      - name: Migrate legacy queue or generate articles
         env:
-          # Free AI keys - add whichever you have. The pipeline works with ZERO keys
-          # (offline template engine), so a missing secret never breaks the run.
           GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
           MISTRAL_API_KEY:     ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY:  ${{ secrets.OPENROUTER_API_KEY }}
@@ -56,15 +54,18 @@ jobs:
           AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
-          # NOTE: no DAILY_POSTS here on purpose. The growth ramp in config.json
-          # decides the daily count from the age of the blog (3 -> 4 -> 5 -> 6).
-          # Passing a fixed number would freeze it at that value forever.
-          MODE="${{ github.event.inputs.mode || 'auto' }}"
-          COUNT="${{ github.event.inputs.count }}"
-          if [ -n "$COUNT" ]; then
-            python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+          if [ -f content/queue/MIGRATE_LAYOUT_V3 ]; then
+            echo "One-time migration: rebuilding legacy queue HTML with the fixed v3 layout."
+            python3 scripts/migrate_legacy_layout.py
+            rm content/queue/MIGRATE_LAYOUT_V3
           else
-            python3 main.py --mode "$MODE" --verbose
+            MODE="${{ github.event.inputs.mode || 'auto' }}"
+            COUNT="${{ github.event.inputs.count }}"
+            if [ -n "$COUNT" ]; then
+              python3 main.py --count "$COUNT" --mode "$MODE" --verbose
+            else
+              python3 main.py --mode "$MODE" --verbose
+            fi
           fi
 
       - name: Commit queue + state

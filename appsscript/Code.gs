@@ -67,40 +67,14 @@ function cfg(key, fallback) {
 
 // --------------------------------------------------------- service account --
 function getAccessToken_() {
-  var cached = P.getProperty('TOKEN');
-  var exp = Number(P.getProperty('TOKEN_EXP') || 0);
-  if (cached && exp > new Date().getTime() + 60000) return cached;
-
-  var sa = JSON.parse(cfg('SA_JSON'));
-  if (!sa.client_email || !sa.private_key) throw new Error('SA_JSON is not a valid service account key');
-
-  var now = Math.floor(new Date().getTime() / 1000);
-  var header = { alg: 'RS256', typ: 'JWT' };
-  var claim = {
-    iss: sa.client_email,
-    scope: 'https://www.googleapis.com/auth/blogger',
-    aud: 'https://oauth2.googleapis.com/token',
-    iat: now,
-    exp: now + 3600
-  };
-  var unsigned = b64url_(JSON.stringify(header)) + '.' + b64url_(JSON.stringify(claim));
-  var signature = Utilities.computeRsaSha256Signature(unsigned, sa.private_key);
-  var jwt = unsigned + '.' + b64urlBytes_(signature);
-
-  var res = UrlFetchApp.fetch('https://oauth2.googleapis.com/token', {
-    method: 'post',
-    payload: {
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: jwt
-    },
-    muteHttpExceptions: true
-  });
-  var body = JSON.parse(res.getContentText());
-  if (!body.access_token) throw new Error('Token request failed: ' + res.getContentText().slice(0, 300));
-
-  P.setProperty('TOKEN', body.access_token);
-  P.setProperty('TOKEN_EXP', String(new Date().getTime() + (body.expires_in - 60) * 1000));
-  return body.access_token;
+  // Use the Google account that owns/runs this Apps Script project.
+  // Blogger write access is tied to the signed-in account, not a public
+  // service-account identity. The manifest must include the Blogger scope.
+  var token = ScriptApp.getOAuthToken();
+  if (!token) {
+    throw new Error('No Apps Script OAuth token. Run createQueuePreviewDraft() and approve the requested Blogger permissions.');
+  }
+  return token;
 }
 
 function b64url_(str) {
@@ -132,7 +106,17 @@ function bloggerCall_(method, path, payload, params) {
   var res = UrlFetchApp.fetch(url, options);
   var code = res.getResponseCode();
   var text = res.getContentText();
-  if (code < 200 || code >= 300) throw new Error('Blogger API ' + code + ': ' + text.slice(0, 400));
+  if (code < 200 || code >= 300) {
+    if (code === 403) {
+      throw new Error(
+        'Blogger API 403: the Google account executing this Apps Script does not have permission to create or edit posts. ' +
+        'This version uses the signed-in Apps Script account (not the old service account). ' +
+        'Confirm that this same Google account owns the blog or is invited as an Author/Admin, accept the Blogger invitation, ' +
+        'then run createQueuePreviewDraft() again. Google response: ' + text.slice(0, 300)
+      );
+    }
+    throw new Error('Blogger API ' + code + ': ' + text.slice(0, 400));
+  }
   return text ? JSON.parse(text) : {};
 }
 
@@ -401,6 +385,10 @@ function publishNext_(howMany) {
   for (var i = 0; i < posts.length && done < howMany; i++) {
     var meta = posts[i];
     if (!meta || !meta.slug || isPublished_(meta.slug)) continue;
+    if (meta.review_required === true) {
+      Logger.log('Skipping article pending editorial review: ' + meta.slug);
+      continue;
+    }
     if (Number(meta.layout_version || 0) < 3) {
       Logger.log('Skipping legacy article layout: ' + meta.slug);
       continue;
@@ -464,7 +452,7 @@ function testConnection() {
     var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
     Logger.log('OK  blog name : ' + blog.name);
     Logger.log('OK  blog url  : ' + blog.url);
-    Logger.log('OK  account   : ' + JSON.parse(cfg('SA_JSON')).client_email);
+    Logger.log('OK  account   : using the Google account currently running this Apps Script');
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     Logger.log('OK  queue     : ' + (index.count || 0) + ' articles waiting');
     Logger.log('OK  published : ' + getPublished_().length + ' so far');
@@ -476,10 +464,9 @@ function testConnection() {
     Logger.log('FAILED: ' + err);
     Logger.log('');
     Logger.log('Checklist:');
-    Logger.log(' 1. SA_JSON contains the FULL service-account JSON (including private_key)');
+    Logger.log(' 1. The Google account currently running Apps Script must own the blog or be invited as Author/Admin');
     Logger.log(' 2. Blogger API v3 is enabled in that Google Cloud project');
-    Logger.log(' 3. The service-account email was added as an AUTHOR on the blog:');
-    Logger.log('    Blogger -> Settings -> Permissions -> Invite more users');
+    Logger.log(' 3. Accept any Blogger invitation sent to that Google account');
     Logger.log(' 4. BLOG_ID is correct (from the blog URL: blogger.com/blog/posts/1234567890)');
     Logger.log(' 5. RAW_BASE points at a PUBLIC repo raw URL, branch included');
   }
@@ -543,7 +530,10 @@ function status() {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     var allPosts = index.posts || [];
     var pending = allPosts.filter(function (p) {
-      return p && p.slug && Number(p.layout_version || 0) >= 3 && !isPublished_(p.slug);
+      return p && p.slug && Number(p.layout_version || 0) >= 3 && p.review_required !== true && !isPublished_(p.slug);
+    }).length;
+    var needsReview = allPosts.filter(function (p) {
+      return p && p.slug && p.review_required === true && !isPublished_(p.slug);
     }).length;
     var legacy = allPosts.filter(function (p) {
       return p && Number(p.layout_version || 0) < 3 && !isPublished_(p.slug);

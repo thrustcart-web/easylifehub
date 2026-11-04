@@ -82,12 +82,12 @@ def _template_brief(template: str, items: list[dict]) -> str:
 
 def _voice_variation(seed: int) -> str:
     voices = [
-        "Voice: a blunt, experienced buyer who has owned too many of these and is tired of marketing copy. Dry humour allowed, once.",
-        "Voice: a practical specialist writing for a smart friend. Concrete, unsentimental, zero hype.",
-        "Voice: a methodical reviewer who leads with trade-offs and refuses to declare a winner without stating caveats.",
-        "Voice: a sceptical consumer advocate. Assumes the listing is optimistic until proven otherwise.",
-        "Voice: an enthusiast who loves the category but is honest about where money gets wasted.",
-        "Voice: a former retail buyer who knows how these products get sourced and priced.",
+        "Voice: a practical buyer-guide editor. Concrete, measured and useful; never claims personal ownership or testing.",
+        "Voice: a careful product researcher who separates known facts from points buyers should verify.",
+        "Voice: a methodical reviewer who explains who each option suits without inventing test results.",
+        "Voice: a consumer guide writer who is precise about evidence and avoids marketing language.",
+        "Voice: a category specialist explaining product-selection criteria in plain English.",
+        "Voice: an independent editorial analyst who states uncertainty instead of guessing.",
     ]
     styles = [
         "Sentence rhythm: mostly short. One long sentence per section, maximum.",
@@ -105,19 +105,25 @@ You write for readers who are about to spend their own money and are tired of sp
 
 HARD RULES - violating any of these makes the article unusable and it will be rejected automatically:
 1. Output ONLY one valid JSON object. No markdown fences, no text before or after.
-2. NEVER invent prices, star ratings, sales ranks, measurements, battery numbers, decibel readings,
-   or "we tested it for X hours" claims. You have no lab. Write about what a buyer can verify and
-   about design/trade-off reasoning instead.
-3. Never use these words or phrases: {banned}.
-4. Explain meaningful limitations only when supported by available product information. Never invent defects or pretend to have personally tested a product.
-5. No hype, no exclamation marks, no flattery of the reader.
-6. Specific beats generic: name the mechanism ("the hinge is a single moulded plastic pin") not the
-   feeling ("it feels well made").
+2. NEVER invent product facts: prices, ratings, sales ranks, measurements, battery numbers, materials,
+   included components, ports, compatibility, warranty terms, defects, performance or test results.
+   A product-specific fact may be stated only when it appears in supplied topic data or verified source notes.
+3. If the supplied context does not confirm a feature, do not guess from the product category or model name.
+   Turn the unknown into a practical buyer check ("verify the supported ports on the current manufacturer listing").
+4. Never imply personal ownership, hands-on testing, lab work, or first-hand experience.
+5. Never use these words or phrases: {banned}.
+6. No hype, no exclamation marks, no flattery of the reader.
+7. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
 7. Address the reader as "you" at most once per section.
 8. Do not write an introduction that restates the title.
-9. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
-10. Vary paragraph length. Some sections get two sentences, some get five.
-11. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
+10. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
+11. Vary paragraph length. Some sections get two sentences, some get five.
+12. The first introduction paragraph must directly answer the reader's central buying question in plain language (about 35-60 words), before adding context.
+13. Each main section's first paragraph must answer or resolve the question implied by its heading; use natural question-led headings when helpful.
+14. Cover the real intent behind the topic, including who the product suits, what to compare, compatibility checks and ownership considerations. Do not repeat the same keyword unnaturally.
+15. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
+16. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
+17. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
 JSON SCHEMA (exact keys):
 {
@@ -176,8 +182,9 @@ REQUIRED TITLE (use verbatim as the "title" value): "{planned_title}"
 
 {_voice_variation(seed)}
 
-TOPIC DATA - this is everything I know. Do not invent beyond it; reason from general category
-knowledge instead:
+TOPIC DATA - this is the evidence currently available. Do not invent beyond it. You may explain general
+category-selection principles, but clearly distinguish those principles from facts about the named product.
+If verified source notes are supplied, rely only on those notes for product-specific claims:
 {chr(10).join(fields)}
 
 Niche: {topic.get('niche', 'general')}
@@ -304,6 +311,9 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
     for field in REQUIRED_FIELDS:
         if not article.get(field):
             problems.append(f"missing field: {field}")
+    description = str(article.get("meta_description") or "").strip()
+    if len(description) < 120 or len(description) > 170:
+        problems.append(f"meta description length must be 120-170 characters (got {len(description)})")
 
     blob = json.dumps(article, ensure_ascii=False).lower()
     for phrase in BANNED_PHRASES:
