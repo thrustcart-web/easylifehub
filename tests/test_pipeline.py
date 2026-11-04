@@ -185,7 +185,7 @@ class TestTemplateEngine(unittest.TestCase):
             article = template_engine.build_topic_data(topic, cfg)
             self.assertTrue(article["title"])
             self.assertGreaterEqual(len(article["sections"]), 4)
-            self.assertTrue(article["cons"], "no cons = advertising")
+            self.assertGreaterEqual(len(article.get("audience_fit", [])), 2)
             self.assertGreaterEqual(len(article["faq"]), 3)
         self.assertEqual(seen, set(topic_planner.TEMPLATES))
 
@@ -196,7 +196,8 @@ class TestAIPath(unittest.TestCase):
     GOOD = {
         "title": "Test Product Review: What I Would Check Before Buying",
         "meta_description": "A meta description that is definitely long enough to be useful here.",
-        "intro": ["First intro paragraph with enough words to be meaningful.", "Second intro paragraph."],
+        "intro": ["First intro paragraph with enough words to be meaningful.", "Second intro paragraph.", "Third intro paragraph."],
+        "audience_fit": ["This suits a buyer who needs the described features.", "It may not suit a buyer with different requirements."],
         "sections": [
             {"heading": f"Section {i}", "paragraphs": [" ".join(["word"] * 60)], "bullets": ["a", "b", "c"] if i % 2 else []}
             for i in range(1, 7)
@@ -398,10 +399,15 @@ class TestEndToEnd(unittest.TestCase):
 
         # every rendered post must carry the things Blogger/Amazon/Google need
         for topic, html, path in made:
-            self.assertIn("application/ld+json", html)
+            self.assertNotIn("<style", html.lower())
+            self.assertNotIn("application/ld+json", html)
+            self.assertEqual(html.count("View At Amazon"), 2)
             self.assertIn("tag=testtag-20", html)
             self.assertIn("nofollow sponsored noopener", html)
-            self.assertIn("Affiliate disclosure", html)
+            self.assertIn("As an Amazon Associate", html)
+            self.assertIn("Who May Find It Useful?", html)
+            self.assertIn("Final Thoughts", html)
+            self.assertIn('<h2 style="background-color: #f1f3f4;', html)
             self.assertIn("<h2", html)
             self.assertTrue(path.exists())
             self.assertTrue(path.with_suffix(".md").exists())
