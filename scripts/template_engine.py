@@ -225,6 +225,8 @@ def build_topic_data(topic: dict, cfg: dict) -> dict:
         intro = [
             f"There is no single \"best {keyword.lower()}\" - there is the best one for how you will actually use it. "
             f"So instead of a ranked list pretending objectivity, here are {len(items)} strong options with the trade-offs stated plainly.",
+            f"The sections below compare the details that matter in everyday use, rather than relying on a headline claim or a specification alone.",
+            f"Each option is considered in the context of its intended job, setup requirements and the type of buyer it is designed to serve.",
         ]
         openers = [
             "The case for this one is narrow and honest: {focus}. Outside that lane it is merely adequate, which is fine - adequate is not why you are here.",
