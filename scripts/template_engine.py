@@ -174,6 +174,8 @@ def build_topic_data(topic: dict, cfg: dict) -> dict:
         intro = [
             f"Searching for \"{a['name']} vs {b['name']}\" usually lands you on two product descriptions stitched together. "
             f"This is the practical version: what each one is genuinely good at, where each one falls over, and which one fits your situation.",
+            f"The comparison focuses on the features, setup choices, day-to-day use and ownership considerations that separate the two options.",
+            f"Use the sections below to match the product design and operating approach to the requirements of your own home or project.",
         ]
         sections = [
             {
@@ -290,6 +292,8 @@ def build_topic_data(topic: dict, cfg: dict) -> dict:
         intro = [
             f"Every listing for {keyword.lower()} reads like it was written by the same enthusiastic intern. "
             f"This review takes the opposite approach: what it is genuinely good at, what it is not, and who should skip it entirely.",
+            f"The focus is on the product features, controls, construction and ownership details that shape the experience after installation.",
+            f"Rather than repeating broad marketing claims, the review explains how the design choices relate to practical residential use.",
         ]
         sections = [
             {
@@ -349,6 +353,10 @@ def build_topic_data(topic: dict, cfg: dict) -> dict:
         "meta_description": f"{title.split(':')[0]} - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
         "intro": intro,
         "sections": sections,
+        "audience_fit": [
+            f"This guide may be useful for buyers whose priorities match the product's main features and intended use in the {niche} category.",
+            "It may be less relevant when your requirements call for a specialised feature, installation arrangement or operating method that this product does not provide."
+        ],
         "specs": [
             {"label": c[0], "value": c[1]} for c in criteria[:5]
         ],
