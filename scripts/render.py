@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import json
 import re
-from html import unescape
+from html import unescape, escape as html_escape
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -89,34 +89,55 @@ def _anchor(heading: str, idx: int) -> str:
 
 
 def _keep_amazon_links_only(html: str) -> str:
-    """Keep clickable links only when they point to Amazon.com.
-
-    Every other anchor (internal, external, table-of-contents, category,
-    related-post, or AI-generated link) is unwrapped while preserving text.
-    """
-    anchor_re = re.compile(r"<a\\b([^>]*)>(.*?)</a\\s*>", re.IGNORECASE | re.DOTALL)
-    href_re = re.compile(r"""\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))""", re.IGNORECASE | re.DOTALL)
+    """Keep only links hosted on Amazon.com; unwrap all other anchors."""
+    anchor_re = re.compile(r"<a\b([^>]*)>(.*?)</a\s*>", re.IGNORECASE | re.DOTALL)
+    href_re = re.compile(
+        r"""\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""",
+        re.IGNORECASE | re.DOTALL,
+    )
 
     def replace_anchor(match: re.Match[str]) -> str:
-        attrs = match.group(1) or ""
-        inner = match.group(2) or ""
-        href_match = href_re.search(attrs)
+        href_match = href_re.search(match.group(1) or "")
         if not href_match:
-            return inner
-
-        href = unescape(next((part for part in href_match.groups() if part is not None), "")).strip()
+            return match.group(2) or ""
+        href = unescape(
+            next((part for part in href_match.groups() if part is not None), "")
+        ).strip()
         try:
             host = (urlsplit(href).hostname or "").lower()
         except ValueError:
             host = ""
-
         if host == "amazon.com" or host.endswith(".amazon.com"):
             return match.group(0)
-
-        return inner
+        return match.group(2) or ""
 
     return anchor_re.sub(replace_anchor, str(html or ""))
 
+
+def _amazon_button(url: str) -> str:
+    """The same green Amazon CTA used in every EasyLifeHub article."""
+    try:
+        host = (urlsplit(unescape(str(url or ""))).hostname or "").lower()
+    except ValueError:
+        host = ""
+    if host != "amazon.com" and not host.endswith(".amazon.com"):
+        return ""
+    safe_url = html_escape(str(url), quote=True)
+    return (
+        '<div style="text-align: center; margin: 30px 0;">'
+        f'<a href="{safe_url}" target="_blank" rel="nofollow sponsored noopener" '
+        'style="display: inline-block; background-color: #2e7d32; color: #ffffff; '
+        'padding: 14px 32px; font-size: 16px; font-weight: bold; '
+        'text-decoration: none; border-radius: 6px;">View At Amazon</a>'
+        '</div>'
+    )
+
+
+def _clean_post_fragment(value: str) -> str:
+    """Never allow style/script blocks from model output into Blogger post body."""
+    text = str(value or "").strip()
+    text = re.sub(r"<(style|script)\b[^>]*>[\s\S]*?</\1\s*>", "", text, flags=re.I)
+    return text
 
 def _toc(sections: list[dict]) -> str:
     if len(sections) < 3:
@@ -250,97 +271,91 @@ def _jsonld(article: dict, topic: dict, aff: Affiliate, cfg: dict) -> str:
 
 
 def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str) -> str:
-    """Render one post. Only Amazon.com anchors are retained."""
+    """Render every article with the fixed EasyLifeHub green review layout.
+
+    The layout is deliberately independent of topic: only article copy,
+    section headings and the affiliate destination change from post to post.
+    """
     items = topic.get("items", [])
-    body_parts: list[str] = []
+    if not items:
+        raise ValueError("Cannot render an affiliate article without a product item.")
 
-    intro = article.get("intro") or []
-    if intro:
-        body_parts.append(
-            f'<div class="keybox"><div class="kb-title">The short version</div><p>{intro[0]}</p></div>'
-        )
-        for para in intro[1:]:
-            body_parts.append(f"<p>{para}</p>")
+    affiliate_url = aff.url_for(items[0])
+    parts: list[str] = []
 
-    # TOC entries are plain text, not internal page links.
-    body_parts.append(_toc(article.get("sections", [])))
+    intro = [_clean_post_fragment(p) for p in (article.get("intro") or [])[:3]]
+    intro = [p for p in intro if p]
+    if len(intro) != 3:
+        raise ValueError("The fixed article layout requires exactly three introduction paragraphs.")
 
-    if items:
-        body_parts.append(
-            aff.product_box(items[0], "Check the live price on Amazon")
-        )
+    for paragraph in intro:
+        parts.append(f"<p>{paragraph}</p>")
 
-    for idx, section in enumerate(article.get("sections", []), start=1):
-        body_parts.append(
-            f'<h2 id="{_anchor(section["heading"], idx)}">{_esc(section["heading"])}</h2>'
-        )
+    disclosure = (
+        "As an Amazon Associate I earn from qualifying purchases. "
+        + str(aff.disclosure or "This post contains affiliate links.")
+    )
+    parts.append(f"<p><em>{html_escape(disclosure)}</em></p>")
+    parts.append(_amazon_button(affiliate_url))
 
-        for para in section.get("paragraphs", []):
-            if para:
-                body_parts.append(f"<p>{para}</p>")
+    for section in article.get("sections", []):
+        heading = str(section.get("heading") or "").strip()
+        if not heading:
+            continue
+        # The final audience and verdict sections use fixed headings below.
+        if re.search(r"\b(who should buy|who may find|who might|final thoughts|the verdict|bottom line|so which one should you get|conclusion)\b", heading, re.I):
+            continue
 
-        bullets = section.get("bullets") or []
-        if bullets:
-            body_parts.append(
-                "<ul>" + "".join(f"<li>{bullet}</li>" for bullet in bullets) + "</ul>"
-            )
-
-        # A CTA every ~3 sections keeps conversion without link stuffing.
-        if idx % 3 == 0 and items:
-            body_parts.append(
-                aff.cta_button(
-                    items[0].get("asin", ""),
-                    items[0].get("search_term") or items[0].get("name", "")
-                )
-            )
-
-    cmp_rows = article.get("comparison_rows") or []
-    if cmp_rows:
-        body_parts.append(_comparison_table(cmp_rows, items))
-
-    specs_html = _specs_table(article)
-    if specs_html:
-        body_parts.append(specs_html)
-
-    if len(items) > 1:
-        body_parts.append("<h2>Every option in this guide</h2>")
-        for item in items[:6]:
-            body_parts.append(aff.product_box(item))
-
-    body_parts.append(_pros_cons(article))
-    body_parts.append(_faq_html(article))
-
-    conclusion = article.get("conclusion") or []
-    if conclusion:
-        body_parts.append('<div class="verdict"><h2>The bottom line</h2>')
-        body_parts.extend(f"<p>{para}</p>" for para in conclusion)
-        body_parts.append("</div>")
-
-    if items:
-        body_parts.append(
-            aff.cta_button(
-                items[0].get("asin", ""),
-                items[0].get("search_term") or items[0].get("name", ""),
-                "See the current Amazon price"
-            )
+        parts.append(
+            '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
+            'border-left: 5px solid #2e7d32; font-size: 20px; color: #202124; '
+            'margin-top: 30px; margin-bottom: 15px;">'
+            f'{html_escape(heading)}</h2>'
         )
 
-    # Inline product mentions first, then remove every non-Amazon anchor.
-    body_html = "\\n".join(part for part in body_parts if part)
-    body_html = inline_affiliate_links(body_html, aff, items)
-    body_html = _keep_amazon_links_only(body_html)
+        for paragraph in section.get("paragraphs", []):
+            fragment = _clean_post_fragment(paragraph)
+            if fragment:
+                parts.append(f"<p>{fragment}</p>")
 
-    # JSON-LD is added AFTER affiliate-link insertion so links are never
-    # injected into JSON strings and the structured data remains valid JSON.
-    return "\\n".join([
-        POST_CSS,
-        hero,
-        aff.disclosure_block(),
-        _jsonld(article, topic, aff, cfg),
-        body_html,
-        aff.footer_note(),
-    ])
+        # Keep the same paragraph-led design even when the source writer
+        # returned concise bullet points instead of paragraphs.
+        for bullet in section.get("bullets", []):
+            fragment = _clean_post_fragment(bullet)
+            if fragment:
+                parts.append(f"<p>{fragment}</p>")
 
+    parts.append(
+        '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
+        'border-left: 5px solid #2e7d32; font-size: 20px; color: #202124; '
+        'margin-top: 30px; margin-bottom: 15px;">Who May Find It Useful?</h2>'
+    )
+    audience_fit = [_clean_post_fragment(p) for p in (article.get("audience_fit") or [])]
+    audience_fit = [p for p in audience_fit if p]
+    if not audience_fit:
+        audience_fit = [
+            "This product may suit buyers whose needs match the use cases and features described above.",
+            "Before choosing it, compare those priorities with the way you plan to use the product.",
+        ]
+    for paragraph in audience_fit[:2]:
+        parts.append(f"<p>{paragraph}</p>")
+
+    parts.append(_amazon_button(affiliate_url))
+    parts.append(
+        '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
+        'border-left: 5px solid #2e7d32; font-size: 20px; color: #202124; '
+        'margin-top: 30px; margin-bottom: 15px;">Final Thoughts</h2>'
+    )
+    conclusion = [_clean_post_fragment(p) for p in (article.get("conclusion") or [])]
+    conclusion = [p for p in conclusion if p]
+    if not conclusion:
+        raise ValueError("The fixed article layout requires Final Thoughts copy.")
+    for paragraph in conclusion[:2]:
+        parts.append(f"<p>{paragraph}</p>")
+
+    # No <style>, <script>, JSON-LD block, TOC, internal links, related links,
+    # product cards, tables or auto-generated image banner in the post body.
+    return _keep_amazon_links_only("\n".join(parts))
 def render_markdown(article: dict, topic: dict, aff: Affiliate) -> str:
     """Human-readable archive copy (also what you would review if you wanted to)."""
     lines = [
@@ -411,6 +426,7 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "category_label": cat_mod.label_of(topic.get("niche", "")),
         "category_url": cat_mod.label_url(topic.get("niche", "")),
         "hub_page": "/p/browse-all-categories.html",
+        "layout_version": 2,
         "draft": False,
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
