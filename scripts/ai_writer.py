@@ -61,7 +61,7 @@ def _template_brief(template: str, items: list[dict]) -> str:
             f"ARTICLE TYPE: head-to-head comparison.\n"
             f"Compare exactly these two product types: (A) {a.get('display_name')} and (B) {b.get('display_name')}.\n"
             f"Structure: the short answer first (who should buy which, and why), then a section on what A does better, "
-            f"then what B does better, then the deciding factors for different types of buyer, then a verdict.\n"
+            f"then what B does better, then the deciding factors for different types of buyer, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
             f"Be decisive. Fence-sitting comparisons are worthless. Give a recommendation for at least three distinct buyer profiles.\n"
             f"Fill \"comparison_rows\" with 5-8 criteria where the two genuinely differ.\n"
             f"Available context: {names}"
@@ -71,14 +71,14 @@ def _template_brief(template: str, items: list[dict]) -> str:
             f"ARTICLE TYPE: curated best-of roundup.\n"
             f"Cover these options, one section each, in this order: {names}\n"
             f"Structure: a short 'quick answer' naming the best overall and the best value pick, then one section per option "
-            f"with a clear 'best for...' angle, then a buying-criteria section, then a final recommendation.\n"
+            f"with a clear 'best for...' angle, then a buying-criteria section, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
             f"Every option must have a stated weakness. A roundup where everything is wonderful is not a roundup, it is an advert."
         )
     return (
         f"ARTICLE TYPE: single-product review.\n"
         f"Subject: {items[0].get('display_name') if items else ''}\n"
         f"Structure: what it is and who it is for, where it earns its price, where it falls short, "
-        f"how it sits against the obvious alternatives in the category, who should skip it, and a verdict.\n"
+        f"how it sits against the obvious alternatives in the category, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
         f"Available context: {names}"
     )
 
@@ -112,13 +112,13 @@ HARD RULES - violating any of these makes the article unusable and it will be re
    or "we tested it for X hours" claims. You have no lab. Write about what a buyer can verify and
    about design/trade-off reasoning instead.
 3. Never use these words or phrases: {banned}.
-4. Every article must contain genuine negatives. No downsides = advertising = rejected.
+4. Explain meaningful limitations only when supported by available product information. Never invent defects or pretend to have personally tested a product.
 5. No hype, no exclamation marks, no flattery of the reader.
 6. Specific beats generic: name the mechanism ("the hinge is a single moulded plastic pin") not the
    feeling ("it feels well made").
 7. Address the reader as "you" at most once per section.
 8. Do not write an introduction that restates the title.
-9. Body copy: {min_words}-{target_words} words. Substance, not padding.
+9. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
 10. Vary paragraph length. Some sections get two sentences, some get five.
 11. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
