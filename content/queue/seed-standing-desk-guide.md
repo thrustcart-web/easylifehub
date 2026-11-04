@@ -93,8 +93,13 @@ Then buy the memory-preset handset. It is the difference between a desk you adju
 
 ---
 
+### Category
+
+- More in Home Office: /search/label/Home%20Office
+- All categories: /p/categories.html
+
 ### Links
 
-- Standing Desk: https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=YOURTAG-20
+- Standing Desk: https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

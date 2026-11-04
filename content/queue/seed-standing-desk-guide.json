@@ -11,15 +11,18 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2155,
+  "words": 2193,
   "items": [
     {
       "name": "Standing Desk",
       "asin": "",
       "search_term": "electric height adjustable standing desk dual motor",
-      "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=qalok0c-20"
     }
   ],
   "html_file": "seed-standing-desk-guide.html",
+  "category_label": "Home Office",
+  "category_url": "/search/label/Home%20Office",
+  "hub_page": "/p/categories.html",
   "draft": false
 }

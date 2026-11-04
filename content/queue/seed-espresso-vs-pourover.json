@@ -11,21 +11,24 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2390,
+  "words": 2427,
   "items": [
     {
       "name": "Espresso Machine",
       "asin": "",
       "search_term": "home espresso machine with milk frother for beginners",
-      "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=qalok0c-20"
     },
     {
       "name": "Pour Over Kit",
       "asin": "",
       "search_term": "pour over coffee kit with gooseneck kettle and scale",
-      "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=qalok0c-20"
     }
   ],
   "html_file": "seed-espresso-vs-pourover.html",
+  "category_label": "Coffee & Espresso",
+  "category_url": "/search/label/Coffee%20%26%20Espresso",
+  "hub_page": "/p/categories.html",
   "draft": false
 }

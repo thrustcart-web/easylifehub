@@ -134,6 +134,33 @@
       "ts": "2026-11-03T05:28:52Z",
       "source": "seed",
       "words": 2351
+    },
+    {
+      "slug": "seed-standing-desk-guide",
+      "title": "Before You Buy A Standing Desk: The Honest Version",
+      "template": "review",
+      "keyword": "standing desk buying guide",
+      "ts": "2026-11-04T03:38:27Z",
+      "source": "seed",
+      "words": 2193
+    },
+    {
+      "slug": "seed-best-home-fitness-gear",
+      "title": "Best Home Fitness Gear: 5 Picks Compared by Real Criteria",
+      "template": "bestof",
+      "keyword": "Best Home Fitness Gear",
+      "ts": "2026-11-04T03:38:27Z",
+      "source": "seed",
+      "words": 2514
+    },
+    {
+      "slug": "seed-espresso-vs-pourover",
+      "title": "Espresso Machine or Pour Over Kit? Choosing Between Two Good Options",
+      "template": "comparison",
+      "keyword": "espresso machine vs pour over",
+      "ts": "2026-11-04T03:38:27Z",
+      "source": "seed",
+      "words": 2427
     }
   ],
   "published": [],
@@ -152,7 +179,10 @@
     "review-tweezers-13c8209b6a7e",
     "seed-anker-737-power-bank-review",
     "seed-robot-vs-stick-vacuum",
-    "seed-air-purifier-buying-guide"
+    "seed-air-purifier-buying-guide",
+    "seed-standing-desk-guide",
+    "seed-best-home-fitness-gear",
+    "seed-espresso-vs-pourover"
   ],
   "keywords_used": {
     "LEVOIT Air Purifier Core 300": "2026-11-03",
@@ -222,7 +252,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 15,
+    "total_generated": 18,
     "total_published": 0
   },
   "titles_used": [

@@ -11,39 +11,42 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2478,
+  "words": 2514,
   "items": [
     {
       "name": "Adjustable Dumbbells",
       "asin": "",
       "search_term": "adjustable dumbbells for home gym small space",
-      "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=qalok0c-20"
     },
     {
       "name": "Resistance Bands Set",
       "asin": "",
       "search_term": "resistance bands set with handles and door anchor",
-      "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=qalok0c-20"
     },
     {
       "name": "Kettlebell",
       "asin": "",
       "search_term": "cast iron kettlebell for swings and carries",
-      "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=qalok0c-20"
     },
     {
       "name": "Yoga Mat",
       "asin": "",
       "search_term": "non slip yoga mat thick for knees",
-      "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=qalok0c-20"
     },
     {
       "name": "Jump Rope",
       "asin": "",
       "search_term": "speed jump rope adjustable bearings",
-      "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=YOURTAG-20"
+      "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=qalok0c-20"
     }
   ],
   "html_file": "seed-best-home-fitness-gear.html",
+  "category_label": "Fitness",
+  "category_url": "/search/label/Fitness",
+  "hub_page": "/p/categories.html",
   "draft": false
 }

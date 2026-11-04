@@ -113,12 +113,17 @@ Buy the two cheapest first. Use them for six weeks. Let the third purchase be a 
 
 ---
 
+### Category
+
+- More in Fitness: /search/label/Fitness
+- All categories: /p/categories.html
+
 ### Links
 
-- Adjustable Dumbbells: https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=YOURTAG-20
-- Resistance Bands Set: https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=YOURTAG-20
-- Kettlebell: https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=YOURTAG-20
-- Yoga Mat: https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=YOURTAG-20
-- Jump Rope: https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=YOURTAG-20
+- Adjustable Dumbbells: https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=qalok0c-20
+- Resistance Bands Set: https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=qalok0c-20
+- Kettlebell: https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=qalok0c-20
+- Yoga Mat: https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=qalok0c-20
+- Jump Rope: https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

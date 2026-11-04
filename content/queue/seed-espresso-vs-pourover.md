@@ -98,9 +98,14 @@ Whichever you choose, put the money into the grinder first. That single decision
 
 ---
 
+### Category
+
+- More in Coffee & Espresso: /search/label/Coffee%20%26%20Espresso
+- All categories: /p/categories.html
+
 ### Links
 
-- Espresso Machine: https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=YOURTAG-20
-- Pour Over Kit: https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=YOURTAG-20
+- Espresso Machine: https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=qalok0c-20
+- Pour Over Kit: https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=qalok0c-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

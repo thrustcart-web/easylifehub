@@ -245,40 +245,43 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2478,
+      "words": 2514,
       "items": [
         {
           "name": "Adjustable Dumbbells",
           "asin": "",
           "search_term": "adjustable dumbbells for home gym small space",
-          "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=qalok0c-20"
         },
         {
           "name": "Resistance Bands Set",
           "asin": "",
           "search_term": "resistance bands set with handles and door anchor",
-          "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=qalok0c-20"
         },
         {
           "name": "Kettlebell",
           "asin": "",
           "search_term": "cast iron kettlebell for swings and carries",
-          "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=qalok0c-20"
         },
         {
           "name": "Yoga Mat",
           "asin": "",
           "search_term": "non slip yoga mat thick for knees",
-          "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=qalok0c-20"
         },
         {
           "name": "Jump Rope",
           "asin": "",
           "search_term": "speed jump rope adjustable bearings",
-          "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=qalok0c-20"
         }
       ],
       "html_file": "seed-best-home-fitness-gear.html",
+      "category_label": "Fitness",
+      "category_url": "/search/label/Fitness",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {
@@ -294,22 +297,25 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2390,
+      "words": 2427,
       "items": [
         {
           "name": "Espresso Machine",
           "asin": "",
           "search_term": "home espresso machine with milk frother for beginners",
-          "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=qalok0c-20"
         },
         {
           "name": "Pour Over Kit",
           "asin": "",
           "search_term": "pour over coffee kit with gooseneck kettle and scale",
-          "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=qalok0c-20"
         }
       ],
       "html_file": "seed-espresso-vs-pourover.html",
+      "category_label": "Coffee & Espresso",
+      "category_url": "/search/label/Coffee%20%26%20Espresso",
+      "hub_page": "/p/categories.html",
       "draft": false
     },
     {
@@ -359,16 +365,19 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2155,
+      "words": 2193,
       "items": [
         {
           "name": "Standing Desk",
           "asin": "",
           "search_term": "electric height adjustable standing desk dual motor",
-          "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=YOURTAG-20"
+          "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=qalok0c-20"
         }
       ],
       "html_file": "seed-standing-desk-guide.html",
+      "category_label": "Home Office",
+      "category_url": "/search/label/Home%20Office",
+      "hub_page": "/p/categories.html",
       "draft": false
     }
   ]
