@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """One-time migration of legacy queue entries to the EasyLifeHub v3 post layout.
+This migration is idempotent and leaves every legacy post marked for review.
 
 The migration changes presentation, not claims. Legacy posts are marked
 review_required=true because the old copy may contain unsupported product facts.

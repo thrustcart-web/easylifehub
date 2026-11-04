@@ -23,6 +23,7 @@ on:
       - 'config.json'
       - 'content/seed/**'
       - 'scripts/**'
+      - '.github/workflows/**'
     branches: [ main ]
 
 permissions:
