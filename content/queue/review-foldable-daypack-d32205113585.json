@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 1991,
+  "words": 1188,
   "items": [
     {
       "name": "Foldable Daypack",
@@ -24,5 +24,8 @@
   "category_label": "Travel",
   "category_url": "/search/label/Travel",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

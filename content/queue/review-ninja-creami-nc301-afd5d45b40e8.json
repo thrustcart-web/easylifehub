@@ -11,7 +11,7 @@
   ],
   "source": "template",
   "provider": "",
-  "words": 1684,
+  "words": 551,
   "items": [
     {
       "name": "Ninja Creami NC301",
@@ -21,5 +21,8 @@
     }
   ],
   "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 2794,
+  "words": 1532,
   "items": [
     {
       "name": "LEVOIT Air Purifier Core 300",
@@ -21,5 +21,8 @@
     }
   ],
   "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

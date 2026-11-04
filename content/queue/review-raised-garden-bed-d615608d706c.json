@@ -11,7 +11,7 @@
   ],
   "source": "template",
   "provider": "",
-  "words": 1725,
+  "words": 548,
   "items": [
     {
       "name": "Raised Garden Bed",
@@ -21,5 +21,8 @@
     }
   ],
   "html_file": "review-raised-garden-bed-d615608d706c.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

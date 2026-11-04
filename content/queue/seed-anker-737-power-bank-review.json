@@ -11,7 +11,7 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2128,
+  "words": 835,
   "items": [
     {
       "name": "Anker 737 Power Bank 24K",
@@ -24,5 +24,8 @@
   "category_label": "Portable Power",
   "category_url": "/search/label/Portable%20Power",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

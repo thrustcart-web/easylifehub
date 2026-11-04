@@ -11,7 +11,7 @@
   ],
   "source": "template",
   "provider": "",
-  "words": 1872,
+  "words": 746,
   "items": [
     {
       "name": "Compost Bin",
@@ -45,5 +45,8 @@
     }
   ],
   "html_file": "bestof-garden-blower-335192546968.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

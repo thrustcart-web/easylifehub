@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 1839,
+  "words": 823,
   "items": [
     {
       "name": "Anker 737 Power Bank 24K",
@@ -21,5 +21,8 @@
     }
   ],
   "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

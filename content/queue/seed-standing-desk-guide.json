@@ -11,7 +11,7 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2193,
+  "words": 908,
   "items": [
     {
       "name": "Standing Desk",
@@ -24,5 +24,8 @@
   "category_label": "Home Office",
   "category_url": "/search/label/Home%20Office",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

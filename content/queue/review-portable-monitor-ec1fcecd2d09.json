@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 2392,
+  "words": 1253,
   "items": [
     {
       "name": "Portable Monitor",
@@ -24,5 +24,8 @@
   "category_label": "Gaming",
   "category_url": "/search/label/Gaming",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

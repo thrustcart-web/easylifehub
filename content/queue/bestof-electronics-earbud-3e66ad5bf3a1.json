@@ -11,7 +11,7 @@
   ],
   "source": "template",
   "provider": "",
-  "words": 1943,
+  "words": 773,
   "items": [
     {
       "name": "Webcam",
@@ -54,5 +54,8 @@
   "category_label": "Electronics",
   "category_url": "/search/label/Electronics",
   "hub_page": "/p/browse-all-categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

@@ -11,7 +11,7 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2514,
+  "words": 1149,
   "items": [
     {
       "name": "Adjustable Dumbbells",
@@ -48,5 +48,8 @@
   "category_label": "Fitness",
   "category_url": "/search/label/Fitness",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

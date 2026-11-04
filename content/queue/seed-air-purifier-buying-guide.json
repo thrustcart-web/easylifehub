@@ -11,7 +11,7 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2351,
+  "words": 956,
   "items": [
     {
       "name": "LEVOIT Air Purifier Core 300",
@@ -24,5 +24,8 @@
   "category_label": "Air Quality",
   "category_url": "/search/label/Air%20Quality",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

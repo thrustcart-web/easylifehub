@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 2297,
+  "words": 1248,
   "items": [
     {
       "name": "Streaming Camera",
@@ -42,5 +42,8 @@
   "category_label": "Electronics",
   "category_url": "/search/label/Electronics",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

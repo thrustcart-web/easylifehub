@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 1844,
+  "words": 669,
   "items": [
     {
       "name": "Runner Rug",
@@ -30,5 +30,8 @@
   "category_label": "Home Decor",
   "category_url": "/search/label/Home%20Decor",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

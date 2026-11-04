@@ -11,7 +11,7 @@
   ],
   "source": "seed",
   "provider": "",
-  "words": 2244,
+  "words": 928,
   "items": [
     {
       "name": "Robot Vacuum",
@@ -30,5 +30,8 @@
   "category_label": "Home Cleaning",
   "category_url": "/search/label/Home%20Cleaning",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

@@ -11,7 +11,7 @@
   ],
   "source": "ai:groq",
   "provider": "groq",
-  "words": 1920,
+  "words": 738,
   "items": [
     {
       "name": "Resistance Bands",
@@ -24,5 +24,8 @@
   "category_label": "Health & Wellness",
   "category_url": "/search/label/Health%20%26%20Wellness",
   "hub_page": "/p/categories.html",
-  "draft": false
+  "draft": false,
+  "layout_version": 3,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }

@@ -15,7 +15,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 1994,
+      "words": 872,
       "items": [
         {
           "name": "Portable Power Station",
@@ -46,7 +46,10 @@
       "category_label": "Electronics",
       "category_url": "/search/label/Electronics",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
@@ -61,7 +64,7 @@
       ],
       "source": "template",
       "provider": "",
-      "words": 1943,
+      "words": 773,
       "items": [
         {
           "name": "Webcam",
@@ -104,7 +107,10 @@
       "category_label": "Electronics",
       "category_url": "/search/label/Electronics",
       "hub_page": "/p/browse-all-categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "bestof-electronics-webcam-ba6c1df58b2c",
@@ -119,7 +125,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 2297,
+      "words": 1248,
       "items": [
         {
           "name": "Streaming Camera",
@@ -150,7 +156,10 @@
       "category_label": "Electronics",
       "category_url": "/search/label/Electronics",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "bestof-garden-blower-335192546968",
@@ -165,7 +174,7 @@
       ],
       "source": "template",
       "provider": "",
-      "words": 1872,
+      "words": 746,
       "items": [
         {
           "name": "Compost Bin",
@@ -199,7 +208,10 @@
         }
       ],
       "html_file": "bestof-garden-blower-335192546968.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "bestof-home-office-organiser-525dc4fb9a20",
@@ -267,7 +279,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 1844,
+      "words": 669,
       "items": [
         {
           "name": "Runner Rug",
@@ -286,7 +298,10 @@
       "category_label": "Home Decor",
       "category_url": "/search/label/Home%20Decor",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
@@ -301,7 +316,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 1839,
+      "words": 823,
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
@@ -311,7 +326,10 @@
         }
       ],
       "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-foldable-daypack-2da57045820c",
@@ -326,7 +344,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 2107,
+      "words": 1011,
       "items": [
         {
           "name": "Foldable Daypack",
@@ -339,7 +357,10 @@
       "category_label": "Travel",
       "category_url": "/search/label/Travel",
       "hub_page": "/p/browse-all-categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
@@ -354,7 +375,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 1991,
+      "words": 1188,
       "items": [
         {
           "name": "Foldable Daypack",
@@ -367,7 +388,10 @@
       "category_label": "Travel",
       "category_url": "/search/label/Travel",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
@@ -382,7 +406,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 2794,
+      "words": 1532,
       "items": [
         {
           "name": "LEVOIT Air Purifier Core 300",
@@ -392,7 +416,10 @@
         }
       ],
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-ninja-creami-nc301-afd5d45b40e8",
@@ -407,7 +434,7 @@
       ],
       "source": "template",
       "provider": "",
-      "words": 1684,
+      "words": 551,
       "items": [
         {
           "name": "Ninja Creami NC301",
@@ -417,7 +444,10 @@
         }
       ],
       "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-portable-monitor-ec1fcecd2d09",
@@ -432,7 +462,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 2392,
+      "words": 1253,
       "items": [
         {
           "name": "Portable Monitor",
@@ -445,7 +475,10 @@
       "category_label": "Gaming",
       "category_url": "/search/label/Gaming",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-raised-garden-bed-d615608d706c",
@@ -460,7 +493,7 @@
       ],
       "source": "template",
       "provider": "",
-      "words": 1725,
+      "words": 548,
       "items": [
         {
           "name": "Raised Garden Bed",
@@ -470,7 +503,10 @@
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",
@@ -485,7 +521,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 2000,
+      "words": 902,
       "items": [
         {
           "name": "Resistance Bands",
@@ -498,7 +534,10 @@
       "category_label": "Health & Wellness",
       "category_url": "/search/label/Health%20%26%20Wellness",
       "hub_page": "/p/browse-all-categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-resistance-bands-9d916e3d97f8",
@@ -513,7 +552,7 @@
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 1920,
+      "words": 738,
       "items": [
         {
           "name": "Resistance Bands",
@@ -526,7 +565,10 @@
       "category_label": "Health & Wellness",
       "category_url": "/search/label/Health%20%26%20Wellness",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "review-video-doorbell-1b56e37dfa94",
@@ -541,7 +583,7 @@
       ],
       "source": "template",
       "provider": "",
-      "words": 1728,
+      "words": 570,
       "items": [
         {
           "name": "Video Doorbell",
@@ -551,7 +593,10 @@
         }
       ],
       "html_file": "review-video-doorbell-1b56e37dfa94.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-air-purifier-buying-guide",
@@ -566,7 +611,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2351,
+      "words": 956,
       "items": [
         {
           "name": "LEVOIT Air Purifier Core 300",
@@ -579,7 +624,10 @@
       "category_label": "Air Quality",
       "category_url": "/search/label/Air%20Quality",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-anker-737-power-bank-review",
@@ -594,7 +642,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2128,
+      "words": 835,
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
@@ -607,7 +655,10 @@
       "category_label": "Portable Power",
       "category_url": "/search/label/Portable%20Power",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-best-home-fitness-gear",
@@ -622,7 +673,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2514,
+      "words": 1149,
       "items": [
         {
           "name": "Adjustable Dumbbells",
@@ -659,7 +710,10 @@
       "category_label": "Fitness",
       "category_url": "/search/label/Fitness",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-espresso-vs-pourover",
@@ -674,7 +728,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2427,
+      "words": 1012,
       "items": [
         {
           "name": "Espresso Machine",
@@ -693,7 +747,10 @@
       "category_label": "Coffee & Espresso",
       "category_url": "/search/label/Coffee%20%26%20Espresso",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-robot-vs-stick-vacuum",
@@ -708,7 +765,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2244,
+      "words": 928,
       "items": [
         {
           "name": "Robot Vacuum",
@@ -727,7 +784,10 @@
       "category_label": "Home Cleaning",
       "category_url": "/search/label/Home%20Cleaning",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     },
     {
       "slug": "seed-standing-desk-guide",
@@ -742,7 +802,7 @@
       ],
       "source": "seed",
       "provider": "",
-      "words": 2193,
+      "words": 908,
       "items": [
         {
           "name": "Standing Desk",
@@ -755,7 +815,10 @@
       "category_label": "Home Office",
       "category_url": "/search/label/Home%20Office",
       "hub_page": "/p/categories.html",
-      "draft": false
+      "draft": false,
+      "layout_version": 3,
+      "review_required": true,
+      "migration_status": "layout_v3_needs_fact_check"
     }
   ]
 }
