@@ -19,7 +19,7 @@ import re
 from providers import AIError, generate_json
 from util import log
 
-REQUIRED_FIELDS = ("title", "intro", "sections", "pros", "cons", "faq", "conclusion")
+REQUIRED_FIELDS = ("title", "intro", "sections", "audience_fit", "conclusion")
 
 BANNED_PHRASES = [
     "in today's fast-paced world",
@@ -123,29 +123,28 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 11. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
 JSON SCHEMA (exact keys):
-{{
+{
   "title": "the REQUIRED TITLE, verbatim",
-  "meta_description": "string, 145-160 chars, states the verdict honestly",
-  "intro": ["paragraph", "paragraph"],
+  "meta_description": "string, 145-160 chars",
+  "intro": ["opening paragraph 1", "opening paragraph 2", "opening paragraph 3"],
   "sections": [
-    {{"heading": "string, 4-9 words",
-      "paragraphs": ["string", "string"],
-      "bullets": ["optional: 3-6 complete thoughts, <strong> tags allowed"]}}
+    {"heading": "product-specific heading, 4-12 words",
+     "paragraphs": ["two or three detailed paragraphs"],
+     "bullets": []}
   ],
-  "specs": [{{"label": "string", "value": "string"}}],
-  "pros": ["4-6 short concrete strings"],
-  "cons": ["3-5 short concrete strings"],
-  "comparison_rows": [{{"criterion": "string", "a": "string", "b": "string"}}],
-  "faq": [{{"q": "a question a real shopper would type", "a": "40-80 words"}}],
-  "conclusion": ["paragraph", "paragraph"]
-}}
+  "audience_fit": ["paragraph about who may find this useful", "second practical audience-fit paragraph"],
+  "conclusion": ["Final Thoughts paragraph 1", "Final Thoughts paragraph 2"]
+}
 
 Notes:
-- "specs" must contain only criteria/checklist items (e.g. "Warranty", "Consumables", "Fit"),
-  never fabricated numeric specifications.
-- "comparison_rows" is required for comparison articles; return [] for other types.
-- 5 sections minimum, 8 maximum. At least two sections must include "bullets".
-- 4-6 FAQ items.
+- The renderer always applies the same visual template to every article.
+- Return exactly 3 introduction paragraphs.
+- Return 4-6 main feature, operation, design, setup or maintenance sections.
+- Do not add an audience section or verdict inside "sections".
+- Return exactly 2 paragraphs in "audience_fit" and 2 in "conclusion".
+- Keep claims factual and product-specific. Do not invent specifications, prices,
+  ratings, customer-review counts or personal testing experience.
+- No links, HTML anchors, CSS, scripts, markdown headings or markdown fences.
 - Everything in {language}.
 """
 
@@ -250,6 +249,8 @@ def normalise(raw, topic: dict) -> dict:
             continue
         sections.append({"heading": heading[:110], "paragraphs": paragraphs, "bullets": bullets})
 
+    audience_fit = [_strip_markdown(_clean_text(p)) for p in _as_list(raw.get("audience_fit"))]
+
     faq = []
     for entry in raw.get("faq") or []:
         if not isinstance(entry, dict):
@@ -285,6 +286,7 @@ def normalise(raw, topic: dict) -> dict:
         "meta_description": _clean_text(raw.get("meta_description"))[:320],
         "intro": [_strip_markdown(_clean_text(p)) for p in _as_list(raw.get("intro"))],
         "sections": sections,
+        "audience_fit": audience_fit[:2],
         "specs": specs[:8],
         "pros": [_strip_markdown(_clean_text(p))[:160] for p in _as_list(raw.get("pros"))][:8],
         "cons": [_strip_markdown(_clean_text(p))[:160] for p in _as_list(raw.get("cons"))][:8],
@@ -322,12 +324,14 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
     words = len(re.findall(r"[\w'-]+", re.sub(r"<[^>]+>", " ", blob)))
     if words < min_words:
         problems.append(f"too short: {words} words < {min_words}")
+    if len(article.get("intro", [])) != 3:
+        problems.append("intro must contain exactly 3 paragraphs")
     if len(article.get("sections", [])) < 4:
-        problems.append(f"only {len(article.get('sections', []))} sections")
-    if not article.get("cons"):
-        problems.append("no cons - reads as advertising")
-    if len(article.get("faq", [])) < 3:
-        problems.append("fewer than 3 FAQ items")
+        problems.append(f"only {len(article.get('sections', []))} main sections")
+    if len(article.get("audience_fit", [])) < 2:
+        problems.append("audience_fit must contain 2 paragraphs")
+    if len(article.get("conclusion", [])) < 2:
+        problems.append("Final Thoughts must contain 2 paragraphs")
     if not article.get("title") or len(article["title"]) < 15:
         problems.append("title missing or too short")
 
