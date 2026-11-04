@@ -487,7 +487,7 @@ function createQueuePreviewDraft() {
 
   for (var i = 0; i < posts.length; i++) {
     var item = posts[i];
-    if (item && item.slug && !isPublished_(item.slug) && Number(item.layout_version || 0) >= 2) {
+    if (item && item.slug && !isPublished_(item.slug) && Number(item.layout_version || 0) >= 3) {
       candidate = item;
       break;
     }
