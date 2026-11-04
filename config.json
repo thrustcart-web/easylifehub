@@ -3,7 +3,7 @@
   "blog": {
     "id": "6831073772272108266",
     "locale": "en-US",
-    "url": "https://easylifehub7083.blogspot.com",
+    "url": "https://www.easylifehub.top",
     "name": "Easy Life Hub"
   },
   "schedule": {
@@ -125,6 +125,6 @@
     "hub_path": "content/categories/index.html",
     "page_title": "Browse All Categories",
     "related_limit": 4,
-    "show_chips_in_posts": true
+    "show_chips_in_posts": false
   }
 }
