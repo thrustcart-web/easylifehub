@@ -188,6 +188,15 @@
       "ts": "2026-11-04T23:02:15Z",
       "source": "ai:groq",
       "words": 2107
+    },
+    {
+      "slug": "bestof-home-office-organiser-525dc4fb9a20",
+      "title": "5 Home Office Gear Compared: Where Each One Wins and Loses",
+      "template": "bestof",
+      "keyword": "Home Office",
+      "ts": "2026-11-04T23:17:30Z",
+      "source": "template",
+      "words": 836
     }
   ],
   "published": [],
@@ -212,7 +221,8 @@
     "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
     "review-resistance-bands-820d61a673d2",
     "bestof-electronics-earbud-3e66ad5bf3a1",
-    "review-foldable-daypack-2da57045820c"
+    "review-foldable-daypack-2da57045820c",
+    "bestof-home-office-organiser-525dc4fb9a20"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -312,7 +322,18 @@
     "action camera for budget buyers": "2026-11-04",
     "Ultrawide Monitor": "2026-11-04",
     "ultrawide monitor for photo editing": "2026-11-04",
-    "foldable daypack": "2026-11-04"
+    "foldable daypack": "2026-11-04",
+    "home office:cable management tray|desk lamp|lap desk|ring light|small humidifier": "2026-11-04",
+    "Cable Management Tray": "2026-11-04",
+    "cable management tray for back pain sufferers": "2026-11-04",
+    "Lap Desk": "2026-11-04",
+    "lap desk for back pain sufferers": "2026-11-04",
+    "Ring Light": "2026-11-04",
+    "ring light for video calls": "2026-11-04",
+    "Desk Lamp": "2026-11-04",
+    "desk lamp for dual monitor setups": "2026-11-04",
+    "Small Humidifier": "2026-11-04",
+    "small humidifier for stuffy rooms": "2026-11-04"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -335,7 +356,10 @@
     "{A} vs {B}: Which One Should You Actually Buy?",
     "Choosing {A} {P}: Six Things That Actually Matter",
     "{N} {F}{AUD}: Honest Comparisons, No Sponsored Picks",
-    "{P} for {AUD}: Five Things Listings Skip"
+    "{P} for {AUD}: Five Things Listings Skip",
+    "{P} Explained: What You Are Really Paying For",
+    "{N} {F} Compared: Where Each One Wins and Loses",
+    "Best {P} for {AUD}: What Actually Matters"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -344,7 +368,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 21,
+    "total_generated": 22,
     "total_published": 0
   }
 }
