@@ -42,7 +42,7 @@ var DEFAULTS = {
   CATEGORY_HUB:    'content/categories/index.html',
   CATEGORY_PAGE:   'Browse All Categories',
   RELATED_LIMIT:   '4',
-  RELATED_ENABLED: 'true'
+  RELATED_ENABLED: 'false'
 };
 
 var P = PropertiesService.getScriptProperties();
@@ -175,6 +175,43 @@ function absolutizeLinks_(html) {
     .replace(/href="\/p\/categories\.html"/g, 'href="' + base + '/p/categories.html"');
 }
 
+
+/**
+ * Final content guard for every Blogger post.
+ * Remove embedded CSS/JS and unwrap all non-Amazon links.
+ */
+function sanitizePostHtml_(html) {
+  var value = String(html || '');
+  value = value.replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi, '');
+  value = value.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '');
+
+  var firstTag = value.search(/<[a-z!/][^>]*>/i);
+  if (firstTag > 0) {
+    var prefix = value.slice(0, firstTag);
+    if (/[{}]/.test(prefix) && /(?:^|})\s*[.#@][a-z_-]/i.test(prefix)) {
+      value = value.slice(firstTag);
+    }
+  }
+
+  value = value.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function(full, attrs, inner) {
+    var match = String(attrs || '').match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    if (!match) return inner || '';
+
+    var href = String(match[1] || match[2] || match[3] || '')
+      .replace(/&amp;/gi, '&')
+      .replace(/&#0*38;/gi, '&')
+      .replace(/&quot;/gi, '"')
+      .trim();
+
+    var hostMatch = href.match(/^https?:\/\/([^\/?#:]+)(?::\d+)?/i);
+    var host = hostMatch ? hostMatch[1].toLowerCase() : '';
+    if (host === 'amazon.com' || /\.amazon\.com$/.test(host)) return full;
+    return inner || '';
+  });
+
+  return value.trim();
+}
+
 /**
  * Fill the empty <div class="related"> placeholder with live posts that share
  * this article's label. Done after insert (not before) so the article never
@@ -182,45 +219,8 @@ function absolutizeLinks_(html) {
  * needs to see the internal-link graph.
  */
 function appendRelated_(post, meta, labels) {
-  if (String(cfg('RELATED_ENABLED') || 'true') !== 'true') return null;
-  var html = String(post.content || '');
-  if (html.indexOf('data-related="1"') === -1) return null;
-
-  var limit = Math.min(8, Math.max(1, Number(cfg('RELATED_LIMIT') || 4)));
-  var nicheLabel = '';
-  (labels || []).forEach(function (l) { if (!nicheLabel && l !== 'Reviews') nicheLabel = l; });
-  if (!nicheLabel) return null;
-
-  var found = [];
-  try {
-    var res = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID') + '/posts',
-      { labels: nicheLabel, 'maxResults': limit + 3, orderBy: 'published' });
-    (res.items || []).forEach(function (it) {
-      if (found.length >= limit) return;
-      if (!it || !it.id || it.id === post.id) return;
-      found.push(it);
-    });
-  } catch (e) {
-    Logger.log('related fetch failed: ' + e);
-    return null;
-  }
-  if (!found.length) return null;
-
-  var links = found.map(function (it) {
-    var title = String(it.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
-    return '<li><a href="' + it.url + '">' + title + '</a></li>';
-  }).join('');
-  var block = '<h3>Related reading</h3><ul>' + links + '</ul>';
-  var updated = html.replace('<div class="related" data-related="1"></div>',
-                             '<div class="related">' + block + '</div>');
-  if (updated === html) return null;
-
-  try {
-    return updatePost_(post.id, post.title, updated, labels || []);
-  } catch (e) {
-    Logger.log('related update failed: ' + e);
-    return null;
-  }
+  Logger.log('Related-post links are disabled by the fixed article layout.');
+  return null;
 }
 
 /**
@@ -399,10 +399,9 @@ function publishNext_(howMany) {
     var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
     var labels = (meta.labels || []).filter(Boolean);
 
-    html = absolutizeLinks_(html);
+    html = sanitizePostHtml_(html);
     var post = insertPost_(meta.title, html, labels);
     // bonuses - never allowed to break the publish itself
-    try { appendRelated_(post, meta, labels); } catch (e) { Logger.log('related: ' + e); }
     try { syncCategoryPage(); } catch (e) { Logger.log('hub: ' + e); }
 
     var published = getPublished_();
@@ -475,6 +474,43 @@ function testConnection() {
   }
 }
 
+
+
+/**
+ * Create a Blogger draft from the next pending article with layout_version 2.
+ * Does not mark the item published, modify the queue or publish live.
+ */
+function createQueuePreviewDraft() {
+  var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+  var posts = index.posts || [];
+  var candidate = null;
+
+  for (var i = 0; i < posts.length; i++) {
+    var item = posts[i];
+    if (item && item.slug && !isPublished_(item.slug) && Number(item.layout_version || 0) >= 2) {
+      candidate = item;
+      break;
+    }
+  }
+
+  if (!candidate) {
+    throw new Error('No pending layout-v2 article found. Run the GitHub generation workflow after the update, then run this function again.');
+  }
+
+  var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + candidate.html_file);
+  html = sanitizePostHtml_(html);
+
+  var draft = bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
+    { title: candidate.title, content: html, labels: (candidate.labels || []).filter(Boolean) },
+    { isDraft: true });
+
+  if (!draft || !draft.id) throw new Error('Blogger did not return a draft ID.');
+  Logger.log('DRAFT CREATED: ' + candidate.title);
+  Logger.log('DRAFT ID: ' + draft.id);
+  Logger.log('DRAFT URL: ' + (draft.url || 'Open Blogger > Posts > Drafts'));
+  Logger.log('This preview did not mark the queue item as published.');
+  return { title: candidate.title, slug: candidate.slug, draftId: String(draft.id), url: draft.url || '' };
+}
 /** Publish immediately regardless of the hour (for testing). */
 function publishNow() {
   if (breakerOpen_()) return;
