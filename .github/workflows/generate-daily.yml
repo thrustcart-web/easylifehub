@@ -72,7 +72,15 @@ jobs:
         run: |
           git config user.name  "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
-          git add content/queue content/categories state.json .cache data 2>/dev/null || true
+          # Queue files are the source of truth for the Blogger publisher.
+          # Stage them explicitly so the one-time migration cannot be silently lost.
+          git add -A -- content/queue
+          if [ -d content/categories ]; then git add -A -- content/categories; fi
+          if [ -f state.json ]; then git add -- state.json; fi
+          if [ -d .cache ]; then git add -A -- .cache; fi
+          if [ -d data ]; then git add -A -- data; fi
+          echo "Staged changes:"
+          git status --short
           if git diff --cached --quiet; then
             echo "Nothing new to commit."
           else
