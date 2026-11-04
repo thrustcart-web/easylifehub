@@ -161,6 +161,33 @@
       "ts": "2026-11-04T06:48:44Z",
       "source": "ai:groq",
       "words": 1844
+    },
+    {
+      "slug": "review-resistance-bands-820d61a673d2",
+      "title": "Choosing Resistance Bands: Six Things That Actually Matter",
+      "template": "review",
+      "keyword": "resistance bands for runners",
+      "ts": "2026-11-04T23:00:41Z",
+      "source": "ai:groq",
+      "words": 2000
+    },
+    {
+      "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
+      "title": "6 Everyday Electronics for Home Offices: Honest Comparisons, No Sponsored Picks",
+      "template": "bestof",
+      "keyword": "Electronics",
+      "ts": "2026-11-04T23:01:40Z",
+      "source": "template",
+      "words": 1943
+    },
+    {
+      "slug": "review-foldable-daypack-2da57045820c",
+      "title": "Foldable Daypack for Wedding Trips: Five Things Listings Skip",
+      "template": "review",
+      "keyword": "foldable daypack for wedding trips",
+      "ts": "2026-11-04T23:02:15Z",
+      "source": "ai:groq",
+      "words": 2107
     }
   ],
   "published": [],
@@ -182,7 +209,10 @@
     "seed-standing-desk-guide",
     "review-portable-monitor-ec1fcecd2d09",
     "bestof-electronics-webcam-ba6c1df58b2c",
-    "comparison-runner-rug-vs-area-rug-d04329b0c6d2"
+    "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
+    "review-resistance-bands-820d61a673d2",
+    "bestof-electronics-earbud-3e66ad5bf3a1",
+    "review-foldable-daypack-2da57045820c"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -268,7 +298,21 @@
     "e-reader for students": "2026-11-04",
     "runner rug|area rug": "2026-11-04",
     "Runner Rug": "2026-11-04",
-    "Area Rug": "2026-11-04"
+    "Area Rug": "2026-11-04",
+    "resistance bands": "2026-11-04",
+    "electronics:action camera|e-reader|portable ssd|ultrawide monitor|usb c cable|webcam": "2026-11-04",
+    "Webcam": "2026-11-04",
+    "webcam for home offices": "2026-11-04",
+    "e-reader for commuters": "2026-11-04",
+    "USB C Cable": "2026-11-04",
+    "usb c cable for desk setups": "2026-11-04",
+    "Portable SSD": "2026-11-04",
+    "portable ssd for frequent travellers": "2026-11-04",
+    "Action Camera": "2026-11-04",
+    "action camera for budget buyers": "2026-11-04",
+    "Ultrawide Monitor": "2026-11-04",
+    "ultrawide monitor for photo editing": "2026-11-04",
+    "foldable daypack": "2026-11-04"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -288,7 +332,10 @@
     "Before You Buy A Standing Desk: The Honest Version",
     "Is {A} {P} Worth It? A Buyer's Assessment",
     "{N} {F} Picks Reviewed Against the Criteria That Matter",
-    "{A} vs {B}: Which One Should You Actually Buy?"
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "Choosing {A} {P}: Six Things That Actually Matter",
+    "{N} {F}{AUD}: Honest Comparisons, No Sponsored Picks",
+    "{P} for {AUD}: Five Things Listings Skip"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -297,7 +344,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 18,
+    "total_generated": 21,
     "total_published": 0
   }
 }

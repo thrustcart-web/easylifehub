@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 18,
+  "count": 21,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -46,6 +46,64 @@
       "category_label": "Electronics",
       "category_url": "/search/label/Electronics",
       "hub_page": "/p/categories.html",
+      "draft": false
+    },
+    {
+      "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
+      "title": "6 Everyday Electronics for Home Offices: Honest Comparisons, No Sponsored Picks",
+      "meta_description": "6 Everyday Electronics for Home Offices - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+      "template": "bestof",
+      "niche": "electronics",
+      "keyword": "Electronics",
+      "labels": [
+        "Reviews",
+        "Electronics"
+      ],
+      "source": "template",
+      "provider": "",
+      "words": 1943,
+      "items": [
+        {
+          "name": "Webcam",
+          "asin": "",
+          "search_term": "webcam for home offices",
+          "url": "https://www.amazon.com/s?k=webcam+for+home+offices&tag=qalok0c-20"
+        },
+        {
+          "name": "E-reader",
+          "asin": "",
+          "search_term": "e-reader for commuters",
+          "url": "https://www.amazon.com/s?k=e-reader+for+commuters&tag=qalok0c-20"
+        },
+        {
+          "name": "USB C Cable",
+          "asin": "",
+          "search_term": "usb c cable for desk setups",
+          "url": "https://www.amazon.com/s?k=usb+c+cable+for+desk+setups&tag=qalok0c-20"
+        },
+        {
+          "name": "Portable SSD",
+          "asin": "",
+          "search_term": "portable ssd for frequent travellers",
+          "url": "https://www.amazon.com/s?k=portable+ssd+for+frequent+travellers&tag=qalok0c-20"
+        },
+        {
+          "name": "Action Camera",
+          "asin": "",
+          "search_term": "action camera for budget buyers",
+          "url": "https://www.amazon.com/s?k=action+camera+for+budget+buyers&tag=qalok0c-20"
+        },
+        {
+          "name": "Ultrawide Monitor",
+          "asin": "",
+          "search_term": "ultrawide monitor for photo editing",
+          "url": "https://www.amazon.com/s?k=ultrawide+monitor+for+photo+editing&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "bestof-electronics-earbud-3e66ad5bf3a1.html",
+      "category_label": "Electronics",
+      "category_url": "/search/label/Electronics",
+      "hub_page": "/p/browse-all-categories.html",
       "draft": false
     },
     {
@@ -203,6 +261,34 @@
       "draft": false
     },
     {
+      "slug": "review-foldable-daypack-2da57045820c",
+      "title": "Foldable Daypack for Wedding Trips: Five Things Listings Skip",
+      "meta_description": "A no‑fluff review of a foldable daypack aimed at wedding travelers, covering size, price, drawbacks, competition and who should avoid it.",
+      "template": "review",
+      "niche": "travel",
+      "keyword": "foldable daypack for wedding trips",
+      "labels": [
+        "Reviews",
+        "Travel"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 2107,
+      "items": [
+        {
+          "name": "Foldable Daypack",
+          "asin": "",
+          "search_term": "foldable daypack for wedding trips",
+          "url": "https://www.amazon.com/s?k=foldable+daypack+for+wedding+trips&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-foldable-daypack-2da57045820c.html",
+      "category_label": "Travel",
+      "category_url": "/search/label/Travel",
+      "hub_page": "/p/browse-all-categories.html",
+      "draft": false
+    },
+    {
       "slug": "review-foldable-daypack-d32205113585",
       "title": "Choosing A Foldable Daypack: Six Things That Actually Matter",
       "meta_description": "A frank review of a foldable daypack for wedding trips, weighing its price, crease control, and real-world compromises to help you decide if it earns a spot in your luggage.",
@@ -331,6 +417,34 @@
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
+      "draft": false
+    },
+    {
+      "slug": "review-resistance-bands-820d61a673d2",
+      "title": "Choosing Resistance Bands: Six Things That Actually Matter",
+      "meta_description": "A no‑fluff review of resistance bands for runners, weighing price, compression feel, durability, and alternatives to decide if they belong in your training kit.",
+      "template": "review",
+      "niche": "health & wellness",
+      "keyword": "resistance bands for runners",
+      "labels": [
+        "Reviews",
+        "Health & Wellness"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 2000,
+      "items": [
+        {
+          "name": "Resistance Bands",
+          "asin": "",
+          "search_term": "resistance bands for runners",
+          "url": "https://www.amazon.com/s?k=resistance+bands+for+runners&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-resistance-bands-820d61a673d2.html",
+      "category_label": "Health & Wellness",
+      "category_url": "/search/label/Health%20%26%20Wellness",
+      "hub_page": "/p/browse-all-categories.html",
       "draft": false
     },
     {
