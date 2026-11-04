@@ -142,6 +142,11 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
             log.warning("  AI unavailable (%s)", str(exc)[:160])
             if mode == "ai":
                 raise
+        except Exception as exc:  # noqa: BLE001 - one bad article must never kill the batch
+            log.error("  AI writer crashed (%s: %s) - falling back to the template engine",
+                      type(exc).__name__, str(exc)[:160])
+            if mode == "ai":
+                raise AIError(f"{type(exc).__name__}: {exc}") from exc
     if article is None:
         if not cfg.get("content", {}).get("fallback_to_template", True):
             raise AIError("AI failed and template fallback is disabled")
@@ -240,9 +245,9 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
                 result = generate_one(cfg, state, topic, mode=mode)
                 if result:
                     made.append(result)
-            except (AIError, RuntimeError) as exc:
-                log.error("  failed %s: %s", topic["slug"], str(exc)[:200])
-                safety.record_failure(cfg, str(exc))
+            except Exception as exc:  # noqa: BLE001 - any failure skips this topic only
+                log.error("  failed %s (%s): %s", topic["slug"], type(exc).__name__, str(exc)[:200])
+                safety.record_failure(cfg, f"{type(exc).__name__}: {exc}")
                 continue
             save_state(state)
     else:

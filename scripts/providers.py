@@ -57,6 +57,25 @@ def _post_json(url: str, payload: dict, headers: dict, timeout: int = 180) -> di
     raise AIError(last or "unknown error")
 
 
+def _as_object(value) -> dict:
+    """Coerce a parsed JSON value into the dict the pipeline expects.
+
+    Models sometimes answer with a one-element array (``[{...}]``) or a bare
+    string, and ``json.loads`` returns exactly that type. Letting it through is
+    what produced the "Process completed with exit code 1" job failures:
+    normalise() then raises AttributeError, which is NOT a RuntimeError, so the
+    catch-all in generate.run() missed it and the whole run died mid-batch.
+    """
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, list):
+        for item in value:
+            if isinstance(item, dict):
+                return item
+        raise AIError(f"model returned a JSON array with no object in it ({len(value)} items)")
+    raise AIError(f"model returned {type(value).__name__}, expected a JSON object")
+
+
 def extract_json(text: str) -> dict:
     """LLMs wrap JSON in prose/fences. Pull the first balanced object out."""
     if not text:
@@ -65,7 +84,7 @@ def extract_json(text: str) -> dict:
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
     try:
-        return json.loads(text)
+        return _as_object(json.loads(text))
     except json.JSONDecodeError:
         pass
     start = text.find("{")
@@ -91,7 +110,7 @@ def extract_json(text: str) -> dict:
                     candidate = text[start : i + 1]
                     candidate = re.sub(r",\s*([}\]])", r"\1", candidate)  # trailing commas
                     try:
-                        return json.loads(candidate)
+                        return _as_object(json.loads(candidate))
                     except json.JSONDecodeError:
                         break
         start = text.find("{", start + 1)

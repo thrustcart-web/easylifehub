@@ -1,215 +1,304 @@
-# تحديث الريبو — خطوة بخطوة (أكتوبر/نوفمبر 2026)
+# تحديث الريبو — الطريقة الصح (بعد ما طريقة الـ ZIP فشلت)
 
-> التحديث ده بيضيف: **خطة النمو المتدرج (3→6)** + **7,135 موضوع في 28 قسم**
-> + **صفحة أقسام** + **روابط داخلية حية** + إصلاحات جودة مهمة.
+> **⚠️ مهم:** رفع ملف ZIP على GitHub عن طريق `Add file → Upload files`
+> **مبيفكّش الضغط**. GitHub بيخزّنه **كملف واحد** جوه الريبو.
+> ده حصل فعلًا — الملف `easylifehub-GitHub-Upload.zip` بقى جوه الريبو نفسه (252 KB)
+> ومفيش ولا ملف من جوه وصل.
 >
-> الوقت المطلوب: **~10 دقايق**. الصعوبة: **سهل** (رفع ملفات بس).
+> الملف ده بيشرح الطريقة اللي **بتشتغل فعلًا**.
 
 ---
 
-## ⚠️ الأول: حاجة واحدة لازم تعملها في الإعدادات
+## 🥇 الطريقة الأولى: `github.dev` (الأسهل والأضمن) — 5 دقايق
 
-> **Settings → Secrets and variables → Actions → Variables**
-> **احذف `DAILY_POSTS`**
+`github.dev` ده **محرر VS Code كامل جوه المتصفح**. بيفتح بضغطة حرف واحد،
+وبتقدر تسحب مجلدات كاملة جواه وهو بيحافظ على الهيكل (بما فيه `.github` المخفي).
 
-ليه؟ لأن وجودها **بيجمّد العدد على 3 للأبد** ويلغي خطة النمو المتدرج.
-الـ ramp هو اللي لازم يقرر العدد حسب عمر المدونة.
+### 1) افتح المحرر
 
----
-
-## الطريقة (أ) — الأسهل: رفع ZIP كامل ✅ (أنصح بيها)
-
-### 1) افتح الريبو
-
+روح على:
 ```
 https://github.com/thrustcart-web/easylifehub
 ```
 
-### 2) ارفع الملف
+ودوس حرف **`.`** (النقطة) في الكيبورد — **حرف واحد بس**.
 
-- اضغط **Add file** (فوق، على اليمين من قائمة الملفات)
-- اختار **Upload files**
-- اسحب الملف ده جوه المنطقة المخططة:
+> أو يدوي: غيّر الرابط لـ `https://github.dev/thrustcart-web/easylifehub`
 
-```
-easylifehub-GitHub-Upload.zip
-```
+هيفتح محرر شكله زي VS Code، وعلى الشمال **EXPLORER** فيه كل ملفات الريبو.
 
-> **مهم:** الـ ZIP ده محتوياته **في جذر الملف المضغوط مباشرة** (مفيش مجلد لفّ حوالين الملفات).
-> عشان كده GitHub هيفكّه ويحط الملفات في مكانها الصح.
-> لو شوفت مجلد `affiliate-blog/` ظهر في الريبو → إنت رفعت الـ ZIP الغلط.
-> الملف الصح اسمه **`easylifehub-GitHub-Upload.zip`**.
+### 2) فكّ الضغط على جهازك
 
-### 3) استنى
+فكّ `easylifehub-GitHub-Upload.zip` على جهازك.
 
-هياخد **دقيقة أو اتنين** عشان `data/keywords.csv` حجمها 615 KB.
-شريط تقدّم هيظهر تحت كل ملف.
+> **Windows:** كليك يمين على الـ ZIP → **Extract All** → Extract
+> **Mac:** دبل كليك على الـ ZIP
 
-### 4) اعمل Commit
-
-في خانة **Commit changes** (تحت):
-- اكتب في السطر الأول: `update: growth ramp + 28 categories + 7135 topics`
-- اختار **Commit directly to the `main` branch**
-- اضغط **Commit changes** (الأخضر)
-
-### 5) تأكد إن الملفات وصلت
-
-افتح الروابط دي واحد واحد — **لازم كلها تفتح من غير 404**:
-
-| الرابط | المفروض تشوف |
-|---|---|
-| [`config.json`](https://github.com/thrustcart-web/easylifehub/blob/main/config.json) | فيه قسم `"ramp"` وقسم `"categories"` |
-| [`data/keywords.csv`](https://github.com/thrustcart-web/easylifehub/blob/main/data/keywords.csv) | **7136 سطر** (الصف الأول عناوين) |
-| [`scripts/categories.py`](https://github.com/thrustcart-web/easylifehub/blob/main/scripts/categories.py) | ملف جديد |
-| [`tools/expand_keywords.py`](https://github.com/thrustcart-web/easylifehub/blob/main/tools/expand_keywords.py) | ملف جديد |
-| [`data/ramp.json`](https://github.com/thrustcart-web/easylifehub/blob/main/data/ramp.json) | فيه `"day0"` |
-| [`.github/workflows/generate-daily.yml`](https://github.com/thrustcart-web/easylifehub/blob/main/.github/workflows/generate-daily.yml) | `default: ''` تحت `count` |
-| [`appsscript/Code.gs`](https://github.com/thrustcart-web/easylifehub/blob/main/appsscript/Code.gs) | فيه `syncCategoryPage` |
-
-### 6) ⚠️ ارجّع قيمك في `config.json`
-
-الـ ZIP فيه **قيمك بالظبط** (blog id / url / tag / repo) — فمفروض متحتاجش تعمل حاجة.
-بس **اتأكد** إن السطور دي موجودة صح:
-
-```json
-"blog": {
-  "id": "6831073772272108266",
-  "url": "https://easylifehub7083.blogspot.com",
-  "name": "Easy Life Hub"
-},
-"affiliate": { "tag": "qalok0c-20", ... },
-"github": { "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main" },
-"notify": { "email": "thrustcart@gmail.com", ... }
-```
-
-> لو حبيت تتأكد إن الـ JSON سليم: انسخه كله في **https://jsonlint.com** واضغط Validate.
-
----
-
-## الطريقة (ب) — لو الـ ZIP مش راضي يرفع
-
-ارفع الملفات **واحد واحد** من نفس الصفحة:
-
-`Add file → Upload files` واختار الملفات دي (من الـ ZIP بعد فكّه):
+هيوصلك **مجلد** اسمه `easylifehub-GitHub-Upload` (أو شبهه) — **ادخل جواه**.
+اللي جوه المفروض يكون كده:
 
 ```
-config.json
+00-اقرا-ده-اول.md
+.gitignore
+README_AR.md
+WORKFLOWS-FALLBACK_AR.md
 main.py
-state.json
-data/keywords.csv          ← الأهم (615 KB)
-data/ramp.json
-scripts/categories.py      ← جديد
-scripts/keywords.py
-scripts/topic_planner.py
-scripts/generate.py
-scripts/render.py
-appsscript/Code.gs
-.github/workflows/generate-daily.yml
-.github/workflows/refill-queue.yml
-docs/GROWTH_AR.md          ← جديد
+requirements.txt
+config.json
+appsscript/
+content/
+data/
+docs/
+scripts/
+tests/
+tools/
+.github/          ← مخفي!
 ```
 
-> **تنبيه:** مجلد `.github` مخفي. لو مش شايفه بعد فك الـ ZIP:
-> - **Windows:** في File Explorer → View → Show → **Hidden items** ✅
+> **لو مش شايف `.github` و `.gitignore`:**
+> - **Windows:** File Explorer → **View** → **Show** → ✅ **Hidden items**
 > - **Mac:** في Finder → **Cmd + Shift + .** (نقطة)
 
----
+### 3) اسحب المجلدات والملفات جوه المحرر
 
-## الطريقة (ج) — من غير GitHub خالص: الـ Installer
-
-لو الطرق دي مزعجاك، فيه ملف واحد بيعمل كل حاجة لوحده:
+من الـ File Explorer على جهازك، **اسحب** الحاجات دي وسيبها في منطقة **EXPLORER** في `github.dev`:
 
 ```
-AutoBlog-Installer.gs
+.github          appsscript       content          data
+docs             scripts          tests            tools
+.gitignore       00-اقرا-ده-اول.md   README_AR.md    WORKFLOWS-FALLBACK_AR.md
+config.json      main.py          requirements.txt
 ```
 
-1. افتح **https://script.google.com** → **New project**
-2. امسح اللي في الملف والصق `AutoBlog-Installer.gs` كله → **Save**
-3. في `CONFIG` فوق: حط **`GITHUB_TOKEN`** بس (كل القيم التانية معبّاة جاهزة باسمك)
-   - التوكن من: `github.com/settings/tokens` → **Generate new token (classic)** → صلاحية **repo**
-4. شغّل **`install()`** → هيرفع كل الملفات للريبو لوحده
-5. شغّل **`verifyInstall()`** → لازم يقول `OK - all 42 files verified`
-6. شغّل **`setupPublisher()`** → يكتب الـ Script Properties
-7. حط **`SA_JSON`** في Project Settings → Script Properties
-8. شغّل **`testConnection()`** → لازم يطبع `OK` في كل السطور
-9. شغّل **`installTrigger()`** → **خلصنا، النظام شغال لوحده**
+> **اسحبها من جوه المجلد المفكوك** — مش المجلد نفسه.
+> لو سحبت المجلد كله هيعمل `easylifehub-GitHub-Upload/...` وده غلط.
 
-> ⚠️ الملف حجمه **1.4 MB**. لو Apps Script اتلعثم في اللصق، استنى شوية أو استخدم الطريقة (أ).
+لما يسألك **"Replace / Overwrite?"** → اضغط **Replace** (أو Yes to all).
+
+### 4) ⚠️ حاجتين لازم تعملهم يدوي
+
+**(أ) احذف الـ ZIP من الريبو**
+
+في EXPLORER: كليك يمين على `easylifehub-GitHub-Upload.zip` → **Delete**
+
+**(ب) متلمسش `state.json`**
+
+`state.json` فيه **تقدم مدونتك الحقيقي** (إيه اللي اتولّد وإيه اللي اتنشر).
+الـ ZIP **مفيهوش** `state.json` بالظبط عشان كده — فمش هيحصل تعارض.
+بس **لو شوفته في قائمة الملفات اللي بتسحبها، شيله منها.**
+
+### 5) تأكد من الهيكل
+
+في EXPLORER لازم تشوف:
+
+```
+✅ .github/workflows/generate-daily.yml
+✅ .github/workflows/refill-queue.yml
+✅ .github/workflows/keepalive.yml
+✅ .github/workflows/tests.yml
+✅ scripts/categories.py          ← جديد
+✅ tools/expand_keywords.py       ← جديد
+✅ data/ramp.json                 ← جديد
+✅ data/keywords.csv              ← حجمه يكبر لـ 615 KB
+✅ docs/GROWTH_AR.md              ← جديد
+❌ easylifehub-GitHub-Upload.zip  ← لازم يكون اتحذف
+```
+
+### 6) اعمل Commit
+
+- على الشمال، اضغط أيقونة **Source Control** (شكلها تفريعة، تحت EXPLORER)
+- هتشوف قائمة بكل التغييرات (حوالي 28 ملف)
+- في خانة **Message** اكتب:
+  ```
+  update: growth ramp + 28 categories + 7135 topics
+  ```
+- اضغط **✓ Commit & Push** (أو `Commit` بعدين `Push`)
+
+### 7) تأكد
+
+افتح:
+```
+https://github.com/thrustcart-web/easylifehub
+```
+
+لازم تشوف في القائمة: `.github` · `appsscript` · `content` · `data` · `docs` · `scripts` · `tests` · `tools`
+
+**ومش لازم تشوف:** `easylifehub-GitHub-Upload.zip`
 
 ---
 
-## بعد ما ترفع: اختبر
+## 🥈 الطريقة التانية: الـ Installer (من غير ما ترفع ملف واحد)
 
-### 1) شغّل الـ tests
+لو `github.dev` مزعجك، فيه ملف واحد بيرفع **كل حاجة لوحده** عن طريق GitHub API.
+
+### 1) اعمل GitHub Token
+
+1. افتح: `https://github.com/settings/tokens`
+2. اضغط **Generate new token** → **Generate new token (classic)**
+3. **Note:** اكتب `autoblog`
+4. **Expiration:** اختار `90 days` (كفاية)
+5. **Select scopes:** علّم على ✅ **repo** (أول مربع — علّم عليه هو بس، كل اللي تحته بيتعلّم تلقائي)
+6. انزل لتحت → **Generate token**
+7. **انسخ التوكن فورًا** (هيظهر مرة واحدة بس!) — شكله `ghp_xxxxxxxxxxxx...`
+
+### 2) افتح Apps Script
+
+1. `https://script.google.com` → **New project**
+2. امسح اللي في الملف كله
+3. افتح `AutoBlog-Installer.gs` → **Ctrl+A** → **Ctrl+C** → الصق في Apps Script
+4. **Ctrl+S** (Save)
+
+> الملف حجمه 1.8 MB. اللصق ممكن ياخد **10–20 ثانية**. استنى لحد ما يخلص.
+
+### 3) حط التوكن
+
+في أول الملف فيه `CONFIG`:
+
+```javascript
+var CONFIG = {
+  GITHUB_TOKEN:  'PUT_YOUR_GITHUB_PAT_HERE',   ← غيّر ده بس
+  GITHUB_USER:   'thrustcart-web',              ← معبّى جاهز
+  REPO_NAME:     'easylifehub',                 ← معبّى جاهز
+  BLOG_ID:       '6831073772272108266',         ← معبّى جاهز
+  BLOG_URL:      'https://easylifehub7083.blogspot.com',
+  AFFILIATE_TAG: 'qalok0c-20',
+  NOTIFY_EMAIL:  'thrustcart@gmail.com',
+  ...
+};
+```
+
+**اللي محتاج تعدّله: `GITHUB_TOKEN` بس.** كل الباقي معبّى بقيمك.
+
+### 4) شغّل
+
+من فوق: اختار الدالة من القائمة المنسدلة → اضغط **Run**
+
+| بالترتيب | الدالة | تعمل إيه |
+|---|---|---|
+| 1 | `install()` | يرفع 44 ملف للريبو (بياخد ~3 دقايق) |
+| 2 | `verifyInstall()` | يتأكد إن كل الملفات وصلت → `OK - all 44 files verified` |
+| 3 | `setupPublisher()` | يكتب الـ Script Properties |
+
+> **مهم:** `install()` **مش بيكتب `state.json`** — عشان يحافظ على تقدم مدونتك.
+
+### 5) امسح الـ ZIP يدوي
+
+الـ Installer مش بيحذف ملفات. فامسح `easylifehub-GitHub-Upload.zip` من الريبو:
+```
+https://github.com/thrustcart-web/easylifehub/blob/main/easylifehub-GitHub-Upload.zip
+```
+→ 🗑️ (أيقونة السلة) → **Commit changes**
+
+---
+
+## 🥉 الطريقة التالتة: ملف ملف (لو الاتنين فوق مش راضيين)
+
+`github.com/thrustcart-web/easylifehub` → **Add file** → **Create new file**
+
+في خانة الاسم اكتب المسار كامل بالشرطة المائلة، وGitHub هيعمل المجلد لوحده:
+
+```
+scripts/categories.py
+```
+
+الصق المحتوى → **Commit changes**. كرّر لكل ملف.
+
+**الملفات المطلوبة (28 ملف):**
+
+```
+.gitignore
+config.json
+main.py
+appsscript/Code.gs
+data/keywords.csv            ← 615 KB، ممكن ياخد وقت
+data/ramp.json
+scripts/affiliate.py
+scripts/ai_writer.py
+scripts/blogger.py
+scripts/categories.py
+scripts/generate.py
+scripts/images.py
+scripts/keywords.py
+scripts/providers.py
+scripts/render.py
+scripts/safety.py
+scripts/template_engine.py
+scripts/topic_planner.py     ← 50 KB
+scripts/util.py
+tests/test_pipeline.py
+tools/expand_keywords.py
+docs/GITHUB_AR.md
+docs/GROWTH_AR.md
+docs/UPDATE-REPO_AR.md
+.github/workflows/generate-daily.yml
+.github/workflows/refill-queue.yml
+.github/workflows/keepalive.yml
+.github/workflows/tests.yml
+```
+
+> ⚠️ **متعملش ده لـ `state.json`** — سيبه زي ما هو.
+
+---
+
+## بعد ما تحدّث: اختبر
+
+### 1) الـ tests
 
 ```
 https://github.com/thrustcart-web/easylifehub/actions/workflows/tests.yml
 ```
 → **Run workflow** → **Run workflow**
-→ لازم يخلص أخضر ✅ (33 اختبار)
+→ لازم يخلص أخضر ✅ (**37 اختبار**)
 
-### 2) شغّل توليد مقالات
+### 2) توليد مقالات
 
 ```
 https://github.com/thrustcart-web/easylifehub/actions/workflows/generate-daily.yml
 ```
 → **Run workflow**
-→ **count: سيبه فاضي** (عشان الـ ramp يشتغل)
-→ **mode: `auto`**
+→ **`count`: سيبه فاضي** ← مهم! عشان الـ ramp يشتغل
+→ **`mode`: `auto`**
 → **Run workflow**
 
-### 3) شوف النتيجة في اللوج
-
-لازم تشوف السطر ده:
+لازم تشوف في اللوج:
 
 ```
 Ramp: day 0 -> 3 post(s)/day (hard cap 6)
+categories: 28 niches, 7,135 planned topics
 ```
 
-ولو `day 0` → العدد 3. بعد 10 أيام هيبقى 4 لوحده. بعد 30 → 5. بعد 60 → 6.
-
-### 4) تأكد إن صفحة الأقسام اتبنت
+### 3) صفحة الأقسام اتبنت؟
 
 ```
 https://github.com/thrustcart-web/easylifehub/tree/main/content/categories
 ```
-→ المفروض تلاقي `index.html` و `index.json`
+→ المفروض `index.html` و `index.json`
+
+---
+
+## 🔴 وفي الإعدادات
+
+> **Settings → Secrets and variables → Actions → Variables → احذف `DAILY_POSTS`**
+
+وجودها **بيجمّد العدد على 3 للأبد** ويلغي خطة النمو المتدرج.
 
 ---
 
 ## الأسئلة المتوقعة
 
-**س: الـ refill-queue اللي كان شغال وقع بـ timeout. مشكلة؟**
-ج: لأ. الملفات بتتحفظ في **آخر خطوة** بس، فالطابور فضل زي ما هو.
-ومش محتاج refill أصلاً — الـ cron اليومي بيولّد لوحده.
-ولو حبيت refill، استخدم `count = 6` (مش 20) عشان يخلّص في ~12 دقيقة.
+**س: الـ 9 مقالات اللي في `content/queue` هتتحذف؟**
+ج: **لأ.** محدش هيلمسها. هتتنشر عادي. المقالات الجديدة هتتحط جنبهم.
 
-**س: المقالات الـ 6 القديمة (seed-*) في الطابور؟**
-ج: هتتنشر الأول وبعدين المقالات الجديدة. تقدر تسيبها أو تمسحها، مفيش فرق كبير.
+**س: `state.json` هيتأثر؟**
+ج: **لأ.** مقصودًا مستثنينه من الـ ZIP ومن الـ Installer.
 
-**س: محتاج أعمل refill كل شوية؟**
-ج: **لأ.** الـ `generate-daily` بيشتغل كل يوم لوحده وبيضيف مقالات.
-الـ refill اختياري تمامًا — بس لو عايز مخزون أكبر مقدمًا.
+**س: `.cache/images.json`؟**
+ج: سيبه. ده كاش الصور، مفيش مشكلة.
 
-**س: إزاي أعرف إنت في أنهي مرحلة من الـ ramp؟**
-ج: في ملخص أي run في Actions هيظهر لك الـ JSON بتاع `--ramp`.
-أو افتح `data/ramp.json` وشوف `day0`.
+**س: ليه الـ ZIP لسه موجود في الملف اللي نزلته؟**
+ج: لأنه الطريقة الوحيدة تنقل بيها 43 ملف مرة واحدة. بس **مترفعوش على GitHub** —
+فكّه على جهازك واستخدم `github.dev`. واحذف النسخة اللي في الريبو.
 
----
-
-## اللي اتغير بالظبط (للمرجع)
-
-| الملف | التغيير |
-|---|---|
-| `config.json` | + قسم `ramp` (المراحل) + قسم `categories` |
-| `data/keywords.csv` | 2,561 → **7,135** صف، 18 → **28** قسم |
-| `data/ramp.json` | **جديد** — تاريخ بداية العد |
-| `scripts/categories.py` | **جديد** — صفحة الأقسام + شارات الأقسام |
-| `scripts/keywords.py` | أنماط جديدة + `clean_search_term()` + حماية أرقام الموديلات |
-| `scripts/topic_planner.py` | محرك عناوين جديد + `_article()` متظبط + اختيار variants حسب النوع |
-| `scripts/generate.py` | الـ ramp + بناء صفحة الأقسام + `--ramp` |
-| `scripts/render.py` | شارة القسم + مكان الروابط ذات الصلة + metadata |
-| `tools/expand_keywords.py` | **جديد** — مولّد المواضيع |
-| `appsscript/Code.gs` | `syncCategoryPage()` + `appendRelated_()` + `absolutizeLinks_()` |
-| `.github/workflows/*.yml` | مبقاش يبعت `--count` ثابت + بيضم `content/categories` |
-| `docs/GROWTH_AR.md` | **جديد** — شرح خطة النمو كلها |
+**س: ممكن أرفع الملفات واحدة واحدة بـ `Add file → Upload files`؟**
+ج: **لأ** — الطريقة دي بترفع كل الملفات **في جذر الريبو**، فمش هتعمل مجلدات.
+لازم تستخدم `github.dev` أو `Create new file` بالمسار الكامل.

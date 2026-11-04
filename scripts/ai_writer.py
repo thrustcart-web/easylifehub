@@ -218,7 +218,17 @@ def _strip_markdown(text: str) -> str:
     return text.strip()
 
 
-def normalise(raw: dict, topic: dict) -> dict:
+def normalise(raw, topic: dict) -> dict:
+    """Coerce whatever the model returned into the article schema.
+
+    Defensive on purpose: `raw` should already be a dict (providers.extract_json
+    guarantees it), but a crash here kills the whole batch instead of one
+    article, and AttributeError is not caught by the RuntimeError handlers.
+    """
+    if isinstance(raw, list):
+        raw = next((x for x in raw if isinstance(x, dict)), {})
+    if not isinstance(raw, dict):
+        raw = {}
     keyword = topic.get("keyword", "")
     planned = (topic.get("title") or "").strip()
 
@@ -338,8 +348,27 @@ def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
             if attempt == attempts:
                 raise
             continue
-        article = normalise(raw, topic)
-        ok, problems = validate(article, cfg)
+        except Exception as exc:  # noqa: BLE001
+            # Any unexpected crash has to leave here as an AIError. Something
+            # else (AttributeError, TypeError, KeyError...) is not caught by the
+            # `except (AIError, RuntimeError)` handlers upstream, so it would
+            # travel all the way out of main.py and fail the whole Actions job
+            # instead of costing one article.
+            log.warning("  provider crashed (attempt %d): %s: %s",
+                        attempt, type(exc).__name__, str(exc)[:160])
+            if attempt == attempts:
+                raise AIError(f"{type(exc).__name__}: {exc}") from exc
+            continue
+
+        try:
+            article = normalise(raw, topic)
+            ok, problems = validate(article, cfg)
+        except Exception as exc:  # noqa: BLE001 - a malformed model reply is not fatal
+            log.warning("  could not read the model's reply (attempt %d): %s: %s",
+                        attempt, type(exc).__name__, str(exc)[:160])
+            if attempt == attempts:
+                raise AIError(f"unusable model reply: {type(exc).__name__}: {exc}") from exc
+            continue
         if ok:
             article["_provider"] = provider
             return article, provider
