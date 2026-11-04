@@ -59,29 +59,26 @@ def _template_brief(template: str, items: list[dict]) -> str:
         a, b = items[0], items[1]
         return (
             f"ARTICLE TYPE: head-to-head comparison.\n"
-            f"Compare exactly these two product types: (A) {a.get('display_name')} and (B) {b.get('display_name')}.\n"
-            f"Structure: the short answer first (who should buy which, and why), then a section on what A does better, "
-            f"then what B does better, then the deciding factors for different types of buyer, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
-            f"Be decisive. Fence-sitting comparisons are worthless. Give a recommendation for at least three distinct buyer profiles.\n"
-            f"Fill \"comparison_rows\" with 5-8 criteria where the two genuinely differ.\n"
+            f"Compare exactly these two products: (A) {a.get('display_name')} and (B) {b.get('display_name')}.\n"
+            f"Use 4-6 main sections comparing product-specific features, controls, setup, maintenance and everyday use.\n"
+            f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
             f"Available context: {names}"
         )
     if template == "bestof":
         return (
-            f"ARTICLE TYPE: curated best-of roundup.\n"
-            f"Cover these options, one section each, in this order: {names}\n"
-            f"Structure: a short 'quick answer' naming the best overall and the best value pick, then one section per option "
-            f"with a clear 'best for...' angle, then a buying-criteria section, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
-            f"Every option must have a stated weakness. A roundup where everything is wonderful is not a roundup, it is an advert."
+            f"ARTICLE TYPE: curated product roundup.\n"
+            f"Cover these options, one focused section each, in this order: {names}.\n"
+            f"Use 4-6 main sections covering product-specific features, setup, use and ownership considerations.\n"
+            f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
+            f"Do not invent product weaknesses or unsupported comparisons."
         )
     return (
         f"ARTICLE TYPE: single-product review.\n"
-        f"Subject: {items[0].get('display_name') if items else ''}\n"
-        f"Structure: what it is and who it is for, where it earns its price, where it falls short, "
-        f"how it sits against the obvious alternatives in the category, Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
+        f"Subject: {items[0].get('display_name') if items else ''}.\n"
+        f"Use 4-6 main sections covering product features, design, operation, installation/setup and maintenance.\n"
+        f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
         f"Available context: {names}"
     )
-
 
 def _voice_variation(seed: int) -> str:
     voices = [
