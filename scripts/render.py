@@ -13,7 +13,9 @@ from __future__ import annotations
 
 import json
 import re
+from html import unescape
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from affiliate import Affiliate, inline_affiliate_links
 from util import QUEUE_DIR, log, slugify, word_count
@@ -76,7 +78,6 @@ POST_CSS = """
 </style>
 """
 
-POST_CSS += cat_mod.CHIP_CSS
 
 
 def _esc(text: str) -> str:
@@ -87,12 +88,42 @@ def _anchor(heading: str, idx: int) -> str:
     return f"sec-{idx}-{slugify(heading, 40)}"
 
 
+def _keep_amazon_links_only(html: str) -> str:
+    """Keep clickable links only when they point to Amazon.com.
+
+    Every other anchor (internal, external, table-of-contents, category,
+    related-post, or AI-generated link) is unwrapped while preserving text.
+    """
+    anchor_re = re.compile(r"<a\\b([^>]*)>(.*?)</a\\s*>", re.IGNORECASE | re.DOTALL)
+    href_re = re.compile(r"""\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))""", re.IGNORECASE | re.DOTALL)
+
+    def replace_anchor(match: re.Match[str]) -> str:
+        attrs = match.group(1) or ""
+        inner = match.group(2) or ""
+        href_match = href_re.search(attrs)
+        if not href_match:
+            return inner
+
+        href = unescape(next((part for part in href_match.groups() if part is not None), "")).strip()
+        try:
+            host = (urlsplit(href).hostname or "").lower()
+        except ValueError:
+            host = ""
+
+        if host == "amazon.com" or host.endswith(".amazon.com"):
+            return match.group(0)
+
+        return inner
+
+    return anchor_re.sub(replace_anchor, str(html or ""))
+
+
 def _toc(sections: list[dict]) -> str:
     if len(sections) < 3:
         return ""
     items = "".join(
-        f'<li><a href="#{_anchor(s["heading"], i)}">{_esc(s["heading"])}</a></li>'
-        for i, s in enumerate(sections, start=1)
+        f'<li>{_esc(s["heading"])}</li>'
+        for s in sections
     )
     return f'<nav class="toc" aria-label="Table of contents"><div class="toc-title">In this guide</div><ol>{items}</ol></nav>'
 
@@ -219,67 +250,96 @@ def _jsonld(article: dict, topic: dict, aff: Affiliate, cfg: dict) -> str:
 
 
 def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str) -> str:
+    """Render one post. Only Amazon.com anchors are retained."""
     items = topic.get("items", [])
-    parts: list[str] = [POST_CSS, hero, aff.disclosure_block(), _jsonld(article, topic, aff, cfg)]
-    chip = cat_mod.chip_html(topic.get("niche", ""), cfg)
-    if chip:
-        parts.append(chip)
+    body_parts: list[str] = []
 
     intro = article.get("intro") or []
     if intro:
-        parts.append(f'<div class="keybox"><div class="kb-title">The short version</div><p>{intro[0]}</p></div>')
+        body_parts.append(
+            f'<div class="keybox"><div class="kb-title">The short version</div><p>{intro[0]}</p></div>'
+        )
         for para in intro[1:]:
-            parts.append(f"<p>{para}</p>")
+            body_parts.append(f"<p>{para}</p>")
 
-    parts.append(_toc(article.get("sections", [])))
+    # TOC entries are plain text, not internal page links.
+    body_parts.append(_toc(article.get("sections", [])))
 
     if items:
-        parts.append(aff.product_box(items[0], "Check the live price on Amazon"))
+        body_parts.append(
+            aff.product_box(items[0], "Check the live price on Amazon")
+        )
 
     for idx, section in enumerate(article.get("sections", []), start=1):
-        parts.append(f'<h2 id="{_anchor(section["heading"], idx)}">{_esc(section["heading"])}</h2>')
+        body_parts.append(
+            f'<h2 id="{_anchor(section["heading"], idx)}">{_esc(section["heading"])}</h2>'
+        )
+
         for para in section.get("paragraphs", []):
             if para:
-                parts.append(f"<p>{para}</p>")
+                body_parts.append(f"<p>{para}</p>")
+
         bullets = section.get("bullets") or []
         if bullets:
-            parts.append("<ul>" + "".join(f"<li>{b}</li>" for b in bullets) + "</ul>")
-        # a CTA every ~3 sections keeps conversion without looking spammy
+            body_parts.append(
+                "<ul>" + "".join(f"<li>{bullet}</li>" for bullet in bullets) + "</ul>"
+            )
+
+        # A CTA every ~3 sections keeps conversion without link stuffing.
         if idx % 3 == 0 and items:
-            parts.append(aff.cta_button(items[0].get("asin", ""), items[0].get("search_term") or items[0].get("name", "")))
+            body_parts.append(
+                aff.cta_button(
+                    items[0].get("asin", ""),
+                    items[0].get("search_term") or items[0].get("name", "")
+                )
+            )
 
     cmp_rows = article.get("comparison_rows") or []
     if cmp_rows:
-        parts.append(_comparison_table(cmp_rows, items))
+        body_parts.append(_comparison_table(cmp_rows, items))
 
     specs_html = _specs_table(article)
     if specs_html:
-        parts.append(specs_html)
+        body_parts.append(specs_html)
 
     if len(items) > 1:
-        parts.append('<h2>Every option in this guide</h2>')
+        body_parts.append("<h2>Every option in this guide</h2>")
         for item in items[:6]:
-            parts.append(aff.product_box(item))
+            body_parts.append(aff.product_box(item))
 
-    parts.append(_pros_cons(article))
-    parts.append(_faq_html(article))
+    body_parts.append(_pros_cons(article))
+    body_parts.append(_faq_html(article))
 
     conclusion = article.get("conclusion") or []
     if conclusion:
-        parts.append('<div class="verdict"><h2>The bottom line</h2>')
-        parts.extend(f"<p>{p}</p>" for p in conclusion)
-        parts.append("</div>")
+        body_parts.append('<div class="verdict"><h2>The bottom line</h2>')
+        body_parts.extend(f"<p>{para}</p>" for para in conclusion)
+        body_parts.append("</div>")
 
     if items:
-        parts.append(aff.cta_button(items[0].get("asin", ""), items[0].get("search_term") or items[0].get("name", ""), "See the current Amazon price"))
+        body_parts.append(
+            aff.cta_button(
+                items[0].get("asin", ""),
+                items[0].get("search_term") or items[0].get("name", ""),
+                "See the current Amazon price"
+            )
+        )
 
-    parts.append(cat_mod.related_placeholder())
-    parts.append(aff.footer_note())
+    # Inline product mentions first, then remove every non-Amazon anchor.
+    body_html = "\\n".join(part for part in body_parts if part)
+    body_html = inline_affiliate_links(body_html, aff, items)
+    body_html = _keep_amazon_links_only(body_html)
 
-    html = "\n".join(parts)
-    html = inline_affiliate_links(html, aff, items)
-    return html
-
+    # JSON-LD is added AFTER affiliate-link insertion so links are never
+    # injected into JSON strings and the structured data remains valid JSON.
+    return "\\n".join([
+        POST_CSS,
+        hero,
+        aff.disclosure_block(),
+        _jsonld(article, topic, aff, cfg),
+        body_html,
+        aff.footer_note(),
+    ])
 
 def render_markdown(article: dict, topic: dict, aff: Affiliate) -> str:
     """Human-readable archive copy (also what you would review if you wanted to)."""
@@ -350,7 +410,7 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "html_file": f"{slug}.html",
         "category_label": cat_mod.label_of(topic.get("niche", "")),
         "category_url": cat_mod.label_url(topic.get("niche", "")),
-        "hub_page": "/p/categories.html",
+        "hub_page": "/p/browse-all-categories.html",
         "draft": False,
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
