@@ -328,9 +328,16 @@ function resetBreaker() {
 
 // ------------------------------------------------------------------- notify --
 function notify_(subject, body) {
-  var to = cfg('NOTIFY_EMAIL') || Session.getActiveUser().getEmail();
-  if (!to) return;
-  try { MailApp.sendEmail(to, '[AutoBlog] ' + subject, body); } catch (e) { Logger.log('notify failed: ' + e); }
+  var to = String(cfg('NOTIFY_EMAIL') || '').trim();
+  if (!to) {
+    Logger.log('Notification skipped: set NOTIFY_EMAIL in Script Properties to enable email alerts.');
+    return;
+  }
+  try {
+    MailApp.sendEmail(to, '[AutoBlog] ' + subject, body);
+  } catch (e) {
+    Logger.log('notify failed: ' + e);
+  }
 }
 
 // ------------------------------------------------------------------ fetching --
@@ -394,6 +401,10 @@ function publishNext_(howMany) {
   for (var i = 0; i < posts.length && done < howMany; i++) {
     var meta = posts[i];
     if (!meta || !meta.slug || isPublished_(meta.slug)) continue;
+    if (Number(meta.layout_version || 0) < 3) {
+      Logger.log('Skipping legacy article layout: ' + meta.slug);
+      continue;
+    }
     if (countPublishedToday_() >= maxPerDay) break;
 
     var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
@@ -477,7 +488,7 @@ function testConnection() {
 
 
 /**
- * Create a Blogger draft from the next pending article with layout_version 2.
+ * Create a Blogger draft from the next pending article with layout_version 3.
  * Does not mark the item published, modify the queue or publish live.
  */
 function createQueuePreviewDraft() {
@@ -494,7 +505,7 @@ function createQueuePreviewDraft() {
   }
 
   if (!candidate) {
-    throw new Error('No pending layout-v2 article found. Run the GitHub generation workflow after the update, then run this function again.');
+    throw new Error('No pending layout-v3 article found. Run the GitHub generation workflow after the update, then run this function again.');
   }
 
   var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + candidate.html_file);
@@ -530,9 +541,16 @@ function status() {
   Logger.log('Triggers        : ' + ScriptApp.getProjectTriggers().length);
   try {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
-    var pending = (index.posts || []).filter(function (p) { return !isPublished_(p.slug); }).length;
+    var allPosts = index.posts || [];
+    var pending = allPosts.filter(function (p) {
+      return p && p.slug && Number(p.layout_version || 0) >= 3 && !isPublished_(p.slug);
+    }).length;
+    var legacy = allPosts.filter(function (p) {
+      return p && Number(p.layout_version || 0) < 3 && !isPublished_(p.slug);
+    }).length;
     Logger.log('Queue total     : ' + (index.count || 0));
-    Logger.log('Queue pending   : ' + pending);
+    Logger.log('Queue pending v3: ' + pending);
+    Logger.log('Legacy skipped  : ' + legacy);
     var days = Math.floor(pending / Math.max(1, Number(cfg('MAX_PER_DAY'))));
     Logger.log('Days of content : ~' + days);
   } catch (e) { Logger.log('Queue           : unreachable (' + e + ')'); }
