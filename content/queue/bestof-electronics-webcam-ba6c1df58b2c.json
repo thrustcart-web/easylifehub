@@ -1,0 +1,46 @@
+{
+  "slug": "bestof-electronics-webcam-ba6c1df58b2c",
+  "title": "4 Everyday Electronics Picks Reviewed Against the Criteria That Matter",
+  "meta_description": "A no‑fluff review of a streaming camera, earbuds, USB charger and e‑reader, highlighting real strengths, clear drawbacks and the best overall and best‑value choices for home‑office and student use.",
+  "template": "bestof",
+  "niche": "electronics",
+  "keyword": "Electronics",
+  "labels": [
+    "Reviews",
+    "Electronics"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 2297,
+  "items": [
+    {
+      "name": "Streaming Camera",
+      "asin": "",
+      "search_term": "streaming camera for home offices",
+      "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20"
+    },
+    {
+      "name": "Wireless Earbuds",
+      "asin": "",
+      "search_term": "wireless earbuds for home offices",
+      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20"
+    },
+    {
+      "name": "USB Charger",
+      "asin": "",
+      "search_term": "usb charger for home offices",
+      "url": "https://www.amazon.com/s?k=usb+charger+for+home+offices&tag=qalok0c-20"
+    },
+    {
+      "name": "E-reader",
+      "asin": "",
+      "search_term": "e-reader for students",
+      "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
+  "category_label": "Electronics",
+  "category_url": "/search/label/Electronics",
+  "hub_page": "/p/categories.html",
+  "draft": false
+}

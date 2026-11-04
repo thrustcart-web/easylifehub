@@ -1,0 +1,28 @@
+{
+  "slug": "review-portable-monitor-ec1fcecd2d09",
+  "title": "Is A Portable Monitor Worth It? A Buyer's Assessment",
+  "meta_description": "Portable monitors for console gaming are a niche tool. They solve desk-space issues but add friction. Here is the honest cost-benefit analysis.",
+  "template": "review",
+  "niche": "gaming",
+  "keyword": "portable monitor for console players",
+  "labels": [
+    "Reviews",
+    "Gaming"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 2392,
+  "items": [
+    {
+      "name": "Portable Monitor",
+      "asin": "",
+      "search_term": "portable monitor for console players",
+      "url": "https://www.amazon.com/s?k=portable+monitor+for+console+players&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "review-portable-monitor-ec1fcecd2d09.html",
+  "category_label": "Gaming",
+  "category_url": "/search/label/Gaming",
+  "hub_page": "/p/categories.html",
+  "draft": false
+}

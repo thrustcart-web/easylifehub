@@ -134,6 +134,33 @@
       "ts": "2026-11-04T06:30:00Z",
       "source": "seed",
       "words": 2193
+    },
+    {
+      "slug": "review-portable-monitor-ec1fcecd2d09",
+      "title": "Is A Portable Monitor Worth It? A Buyer's Assessment",
+      "template": "review",
+      "keyword": "portable monitor for console players",
+      "ts": "2026-11-04T06:47:09Z",
+      "source": "ai:groq",
+      "words": 2392
+    },
+    {
+      "slug": "bestof-electronics-webcam-ba6c1df58b2c",
+      "title": "4 Everyday Electronics Picks Reviewed Against the Criteria That Matter",
+      "template": "bestof",
+      "keyword": "Electronics",
+      "ts": "2026-11-04T06:48:08Z",
+      "source": "ai:groq",
+      "words": 2297
+    },
+    {
+      "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
+      "title": "Runner Rug vs Area Rug: Which One Should You Actually Buy?",
+      "template": "comparison",
+      "keyword": "Runner Rug vs Area Rug",
+      "ts": "2026-11-04T06:48:44Z",
+      "source": "ai:groq",
+      "words": 1844
     }
   ],
   "published": [],
@@ -152,7 +179,10 @@
     "seed-best-home-fitness-gear",
     "seed-espresso-vs-pourover",
     "seed-robot-vs-stick-vacuum",
-    "seed-standing-desk-guide"
+    "seed-standing-desk-guide",
+    "review-portable-monitor-ec1fcecd2d09",
+    "bestof-electronics-webcam-ba6c1df58b2c",
+    "comparison-runner-rug-vs-area-rug-d04329b0c6d2"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -224,7 +254,21 @@
     "standing desk buying guide": "2026-11-04",
     "home office": "2026-11-04",
     "Standing Desk": "2026-11-04",
-    "electric height adjustable standing desk dual motor": "2026-11-04"
+    "electric height adjustable standing desk dual motor": "2026-11-04",
+    "portable monitor": "2026-11-04",
+    "Portable Monitor": "2026-11-04",
+    "portable monitor for console players": "2026-11-04",
+    "electronics:e-reader|streaming camera|usb charger|wireless earbuds": "2026-11-04",
+    "Streaming Camera": "2026-11-04",
+    "streaming camera for home offices": "2026-11-04",
+    "wireless earbuds for home offices": "2026-11-04",
+    "USB Charger": "2026-11-04",
+    "usb charger for home offices": "2026-11-04",
+    "E-reader": "2026-11-04",
+    "e-reader for students": "2026-11-04",
+    "runner rug|area rug": "2026-11-04",
+    "Runner Rug": "2026-11-04",
+    "Area Rug": "2026-11-04"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -241,7 +285,10 @@
     "Best Home Fitness Gear: 5 Picks Compared by Real Criteria",
     "Espresso Machine or Pour Over Kit? Choosing Between Two Good Options",
     "Robot Vacuum or Stick Vacuum? The Honest Comparison",
-    "Before You Buy A Standing Desk: The Honest Version"
+    "Before You Buy A Standing Desk: The Honest Version",
+    "Is {A} {P} Worth It? A Buyer's Assessment",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "{A} vs {B}: Which One Should You Actually Buy?"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -250,7 +297,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 15,
+    "total_generated": 18,
     "total_published": 0
   }
 }
