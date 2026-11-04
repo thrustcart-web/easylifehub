@@ -41,8 +41,8 @@
   },
   "content": {
     "language": "en",
-    "min_words": 1150,
-    "target_words": 1500,
+    "min_words": 600,
+    "target_words": 1100,
     "template_weights": {
       "review": 46,
       "bestof": 30,
