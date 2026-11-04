@@ -49,5 +49,7 @@
   "category_url": "/search/label/Home%20Office",
   "hub_page": "/p/browse-all-categories.html",
   "layout_version": 3,
-  "draft": false
+  "draft": false,
+  "review_required": true,
+  "migration_status": "layout_v3_needs_fact_check"
 }
