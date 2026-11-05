@@ -197,6 +197,15 @@
       "ts": "2026-11-04T23:17:30Z",
       "source": "template",
       "words": 836
+    },
+    {
+      "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
+      "title": "Monitor Arm vs Monitor Stand: Which One Should You Actually Buy?",
+      "template": "comparison",
+      "keyword": "Monitor Arm vs Monitor Stand",
+      "ts": "2026-11-05T00:49:42Z",
+      "source": "ai:groq",
+      "words": 660
     }
   ],
   "published": [],
@@ -222,7 +231,8 @@
     "review-resistance-bands-820d61a673d2",
     "bestof-electronics-earbud-3e66ad5bf3a1",
     "review-foldable-daypack-2da57045820c",
-    "bestof-home-office-organiser-525dc4fb9a20"
+    "bestof-home-office-organiser-525dc4fb9a20",
+    "comparison-monitor-arm-vs-monitor-stand-829fac306647"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -333,7 +343,10 @@
     "Desk Lamp": "2026-11-04",
     "desk lamp for dual monitor setups": "2026-11-04",
     "Small Humidifier": "2026-11-04",
-    "small humidifier for stuffy rooms": "2026-11-04"
+    "small humidifier for stuffy rooms": "2026-11-04",
+    "monitor arm|monitor stand": "2026-11-05",
+    "Monitor Arm": "2026-11-05",
+    "Monitor Stand": "2026-11-05"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -368,7 +381,10 @@
     "{A} or {B}? The Honest Comparison",
     "Is {A} {P} Worth It? A Buyer's Assessment",
     "Which {F} Should You Buy? {N} Candidates Compared",
-    "Choosing Between {A} and {B}: A Practical Comparison"
+    "Choosing Between {A} and {B}: A Practical Comparison",
+    "{P} with {FEAT}: Does It Matter or Is It Marketing?",
+    "{N} {F} Compared: Where Each One Wins and Loses",
+    "{A} vs {B}: Which One Should You Actually Buy?"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -377,7 +393,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 22,
+    "total_generated": 23,
     "total_published": 0
   }
 }

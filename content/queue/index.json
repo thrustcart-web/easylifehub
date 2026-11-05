@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 22,
+  "count": 23,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -267,6 +267,42 @@
       "draft": false,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check"
+    },
+    {
+      "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
+      "title": "Monitor Arm vs Monitor Stand: Which One Should You Actually Buy?",
+      "meta_description": "Compare monitor arms and stands for home offices, covering assembly, ergonomics, desk space, maintenance, and daily use to help you decide which fits your setup today.",
+      "template": "comparison",
+      "niche": "home office",
+      "keyword": "Monitor Arm vs Monitor Stand",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 660,
+      "items": [
+        {
+          "name": "Monitor Arm",
+          "asin": "",
+          "search_term": "Monitor Arm",
+          "url": "https://www.amazon.com/s?k=Monitor+Arm&tag=qalok0c-20"
+        },
+        {
+          "name": "Monitor Stand",
+          "asin": "",
+          "search_term": "Monitor Stand",
+          "url": "https://www.amazon.com/s?k=Monitor+Stand&tag=qalok0c-20"
+        }
+      ],
+      "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
+      "category_label": "Home Office",
+      "category_url": "/search/label/Home%20Office",
+      "hub_page": "/p/browse-all-categories.html",
+      "layout_version": 3,
+      "draft": false,
+      "review_required": false
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
