@@ -7,7 +7,6 @@ name: generate-daily
 on:
   schedule:
     - cron: '0 3 * * *'          # 03:00 UTC  (= 05:00 Cairo)
-    - cron: '30 16 * * *'       # 16:30 UTC (= 18:30 Cairo) - daily queue top-up
   workflow_dispatch:
     inputs:
       count:
