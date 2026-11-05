@@ -1,0 +1,45 @@
+name: backfill-product-links
+
+# One-time/manual maintenance. Resolves each queued item to a verified Amazon ASIN,
+# rewrites queued HTML/metadata, and commits the updated queue for Blogger sync.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Resolve product pages and rewrite queue links
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+        run: python3 scripts/backfill_product_links.py
+
+      - name: Commit updated product URLs
+        run: |
+          git config user.name "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add -A -- content/queue .cache
+          if git diff --cached --quiet; then
+            echo "No product-link changes."
+          else
+            git commit -m "affiliate: replace Amazon search links with product pages [skip ci]"
+            git push
+          fi
