@@ -1,0 +1,54 @@
+{
+  "slug": "bestof-fitness-handle-3d07849b4753",
+  "title": "5 Home Fitness Gear Picks Reviewed Against the Criteria That Matter",
+  "meta_description": "Compare folding treadmills, jump ropes, rowing machines, weight benches, and exercise bikes based on noise, stability, space, and portability for home use.",
+  "template": "bestof",
+  "niche": "fitness",
+  "keyword": "Fitness",
+  "labels": [
+    "Reviews",
+    "Fitness"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 832,
+  "items": [
+    {
+      "name": "Folding Treadmill",
+      "asin": "",
+      "search_term": "folding treadmill for walkers",
+      "url": "https://www.amazon.com/s?k=folding+treadmill+for+walkers&tag=qalok0c-20"
+    },
+    {
+      "name": "Jump Rope",
+      "asin": "",
+      "search_term": "jump rope for travellers",
+      "url": "https://www.amazon.com/s?k=jump+rope+for+travellers&tag=qalok0c-20"
+    },
+    {
+      "name": "Rowing Machine",
+      "asin": "",
+      "search_term": "rowing machine for people over 40",
+      "url": "https://www.amazon.com/s?k=rowing+machine+for+people+over+40&tag=qalok0c-20"
+    },
+    {
+      "name": "Weight Bench",
+      "asin": "",
+      "search_term": "weight bench for small spaces",
+      "url": "https://www.amazon.com/s?k=weight+bench+for+small+spaces&tag=qalok0c-20"
+    },
+    {
+      "name": "Exercise Bike",
+      "asin": "",
+      "search_term": "exercise bike for travellers",
+      "url": "https://www.amazon.com/s?k=exercise+bike+for+travellers&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "bestof-fitness-handle-3d07849b4753.html",
+  "category_label": "Fitness",
+  "category_url": "/search/label/Fitness",
+  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 3,
+  "draft": false,
+  "review_required": false
+}

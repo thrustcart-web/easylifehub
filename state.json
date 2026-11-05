@@ -224,6 +224,24 @@
       "ts": "2026-11-05T03:44:48Z",
       "source": "ai:groq",
       "words": 655
+    },
+    {
+      "slug": "review-stud-finder-cf86b7128d04",
+      "title": "Stud Finder for DIY Beginners: Which Specs Actually Change Anything",
+      "template": "review",
+      "keyword": "stud finder for diy beginners",
+      "ts": "2026-11-05T12:59:25Z",
+      "source": "ai:groq",
+      "words": 691
+    },
+    {
+      "slug": "bestof-fitness-handle-3d07849b4753",
+      "title": "5 Home Fitness Gear Picks Reviewed Against the Criteria That Matter",
+      "template": "bestof",
+      "keyword": "Fitness",
+      "ts": "2026-11-05T13:01:00Z",
+      "source": "ai:groq",
+      "words": 832
     }
   ],
   "published": [],
@@ -252,7 +270,9 @@
     "bestof-home-office-organiser-525dc4fb9a20",
     "comparison-monitor-arm-vs-monitor-stand-829fac306647",
     "review-car-dash-mat-0dee1955dee4",
-    "comparison-fabric-glue-vs-fabric-scissors-002e06973243"
+    "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
+    "review-stud-finder-cf86b7128d04",
+    "bestof-fitness-handle-3d07849b4753"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -307,7 +327,7 @@
     "cast iron kettlebell for swings and carries": "2026-11-04",
     "Yoga Mat": "2026-11-04",
     "non slip yoga mat thick for knees": "2026-11-04",
-    "Jump Rope": "2026-11-04",
+    "Jump Rope": "2026-11-05",
     "speed jump rope adjustable bearings": "2026-11-04",
     "espresso machine vs pour over": "2026-11-04",
     "coffee & espresso": "2026-11-04",
@@ -372,7 +392,20 @@
     "car dash mat for city driving": "2026-11-05",
     "fabric glue|fabric scissors": "2026-11-05",
     "Fabric Glue": "2026-11-05",
-    "Fabric Scissors": "2026-11-05"
+    "Fabric Scissors": "2026-11-05",
+    "stud finder": "2026-11-05",
+    "Stud Finder": "2026-11-05",
+    "stud finder for diy beginners": "2026-11-05",
+    "fitness:exercise bike|folding treadmill|jump rope|rowing machine|weight bench": "2026-11-05",
+    "Folding Treadmill": "2026-11-05",
+    "folding treadmill for walkers": "2026-11-05",
+    "jump rope for travellers": "2026-11-05",
+    "Rowing Machine": "2026-11-05",
+    "rowing machine for people over 40": "2026-11-05",
+    "Weight Bench": "2026-11-05",
+    "weight bench for small spaces": "2026-11-05",
+    "Exercise Bike": "2026-11-05",
+    "exercise bike for travellers": "2026-11-05"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -413,7 +446,10 @@
     "{A} vs {B}: Which One Should You Actually Buy?",
     "{P} for {AUD}: Judging {FEAT} Honestly",
     "{F}: {N} Candidates Judged on the Same Criteria",
-    "{A} vs {B}: Deciding Between Two Good Options"
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "{P} for {AUD}: Which Specs Actually Change Anything",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "Before You Buy {A} {P} for {AUD}: Read This"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -422,7 +458,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 25,
+    "total_generated": 27,
     "total_published": 0
   }
 }
