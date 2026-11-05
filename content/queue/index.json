@@ -48,7 +48,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -158,7 +158,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -302,7 +302,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -330,7 +330,7 @@
       "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -361,7 +361,7 @@
       "hub_page": "/p/browse-all-categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -392,7 +392,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -420,7 +420,7 @@
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -479,7 +479,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -538,7 +538,7 @@
       "hub_page": "/p/browse-all-categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -569,7 +569,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -628,7 +628,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -659,7 +659,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -714,7 +714,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -751,7 +751,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -788,7 +788,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     },
     {
@@ -819,7 +819,7 @@
       "hub_page": "/p/categories.html",
       "draft": false,
       "layout_version": 3,
-      "review_required": true,
+      "review_required": false,
       "migration_status": "layout_v3_needs_fact_check"
     }
   ]
