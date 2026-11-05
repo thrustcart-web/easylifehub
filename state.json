@@ -359,7 +359,10 @@
     "{P} for {AUD}: Five Things Listings Skip",
     "{P} Explained: What You Are Really Paying For",
     "{N} {F} Compared: Where Each One Wins and Loses",
-    "Best {P} for {AUD}: What Actually Matters"
+    "Best {P} for {AUD}: What Actually Matters",
+    "{P} Review: What I Would Check Before Buying",
+    "Best {F}{AUD}: {N} Picks Compared by Real Criteria",
+    "{A} vs {B}: Deciding Between Two Good Options"
   ],
   "last_publish_ts": null,
   "failures": {
