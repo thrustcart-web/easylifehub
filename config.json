@@ -49,7 +49,7 @@
       "comparison": 24
     },
     "ai_mode": "ai_first",
-    "fallback_to_template": true,
+    "fallback_to_template": false,
     "label": "Reviews",
     "keyword_cooldown_days": 45
   },
