@@ -493,6 +493,7 @@ function refillQueueIfLow() {
       return p && p.slug &&
         Number(p.layout_version || 0) >= 3 &&
         p.review_required !== true &&
+        productLinksReady_(p) &&
         !isPublished_(p.slug);
     }).length;
 
