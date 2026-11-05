@@ -300,7 +300,12 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     product_cards = []
     for item in items:
         product_url = aff.url_for(item)
-        if not re.fullmatch(r"https://www\\.amazon\\.com/dp/[A-Z0-9]{10}\\?tag=[^&\\s]+", product_url):
+        parsed_product_url = urlsplit(product_url)
+        if (
+            parsed_product_url.netloc.lower() != "www.amazon.com"
+            or not re.fullmatch(r"/dp/[A-Z0-9]{10}", parsed_product_url.path)
+            or ("tag=" + aff.tag) not in parsed_product_url.query
+        ):
             raise ValueError(f"Product has no verified Amazon detail-page URL: {item.get('name', '')}")
         product_cards.append(aff.product_box(item, label="View Product on Amazon"))
     parts.append(
