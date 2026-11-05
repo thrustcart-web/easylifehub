@@ -18,6 +18,11 @@ on:
 permissions:
   contents: write
 
+# Serialize with generate-daily because both workflows update the same queue/state files.
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
 jobs:
   refill:
     runs-on: ubuntu-latest
