@@ -365,7 +365,10 @@
     "{A} vs {B}: Deciding Between Two Good Options",
     "{P}: An Honest Look at the Trade-Offs",
     "{F} Shortlist: {N} Options, Trade-Offs Included",
-    "{A} or {B}? The Honest Comparison"
+    "{A} or {B}? The Honest Comparison",
+    "Is {A} {P} Worth It? A Buyer's Assessment",
+    "Which {F} Should You Buy? {N} Candidates Compared",
+    "Choosing Between {A} and {B}: A Practical Comparison"
   ],
   "last_publish_ts": null,
   "failures": {
