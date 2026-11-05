@@ -50,7 +50,7 @@ def _prose_only(html: str) -> str:
 
 
 # ------------------------------------------------------------ quality gate ---
-def quality_gate(html: str, article: dict, cfg: dict) -> tuple[bool, list[str]]:
+def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: int | None = None) -> tuple[bool, list[str]]:
     """Final pre-publish check on the rendered HTML. (ok, reasons)."""
     reasons: list[str] = []
     min_words = int(cfg.get("content", {}).get("min_words", 1100))
@@ -74,6 +74,7 @@ def quality_gate(html: str, article: dict, cfg: dict) -> tuple[bool, list[str]]:
     expected_tag = str(cfg.get("affiliate", {}).get("tag") or "").strip()
     anchors = re.findall(r"<a\b([^>]*)>", html, re.I | re.S)
     link_count = 0
+    linked_asins: set[str] = set()
     for attrs in anchors:
         href_match = re.search(r""" \bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)) """.strip(), attrs, re.I | re.S)
         if not href_match:
@@ -90,9 +91,18 @@ def quality_gate(html: str, article: dict, cfg: dict) -> tuple[bool, list[str]]:
             reasons.append("non-Amazon hyperlink found")
             continue
         link_count += 1
+        path_match = re.fullmatch(r"/dp/([A-Z0-9]{10})/?", parsed.path, re.I) if parsed else None
+        if not path_match:
+            reasons.append("Amazon search or non-product URL found; direct /dp/ASIN links are required")
+        else:
+            linked_asins.add(path_match.group(1).upper())
         tags = parse_qs(parsed.query).get("tag", []) if parsed else []
         if not expected_tag or expected_tag not in tags:
             reasons.append("Amazon link missing the configured Associates tracking tag")
+    if expected_product_count is not None and len(linked_asins) < int(expected_product_count):
+        reasons.append(
+            f"missing direct product links: {len(linked_asins)} of {int(expected_product_count)} products"
+        )
     if link_count > LINK_SPAM_THRESHOLD:
         reasons.append(f"link stuffing: {link_count} affiliate links")
 
