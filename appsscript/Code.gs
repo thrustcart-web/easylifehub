@@ -271,6 +271,19 @@ function setPublished_(arr) {
 function isPublished_(slug) {
   return getPublished_().some(function (p) { return p.slug === slug; });
 }
+
+/** True only when every item has a verified, tracked Amazon product detail page. */
+function productLinksReady_(meta) {
+  if (!meta || meta.product_links_verified !== true) return false;
+  var items = meta.items || [];
+  if (!items.length) return false;
+  return items.every(function (item) {
+    return item &&
+      item.asin_verified === true &&
+      /^[A-Z0-9]{10}$/.test(String(item.asin || '')) &&
+      String(item.url || '').indexOf('https://www.amazon.com/dp/' + item.asin + '?tag=') === 0;
+  });
+}
 function countPublishedToday_() {
   var today = Utilities.formatDate(new Date(), cfg('TZ'), 'yyyy-MM-dd');
   return getPublished_().filter(function (p) { return (p.ts || '').indexOf(today) === 0; }).length;
@@ -391,6 +404,10 @@ function publishNext_(howMany) {
     if (!meta || !meta.slug || isPublished_(meta.slug)) continue;
     if (meta.review_required === true) {
       Logger.log('Skipping article pending editorial review: ' + meta.slug);
+      continue;
+    }
+    if (!productLinksReady_(meta)) {
+      Logger.log('Skipping article: direct Amazon product pages are not verified yet: ' + meta.slug);
       continue;
     }
     if (Number(meta.layout_version || 0) < 3) {
@@ -575,7 +592,7 @@ function createQueuePreviewDraft() {
 
   for (var i = 0; i < posts.length; i++) {
     var item = posts[i];
-    if (item && item.slug && !isPublished_(item.slug) && Number(item.layout_version || 0) >= 3) {
+    if (item && item.slug && !isPublished_(item.slug) && productLinksReady_(item) && Number(item.layout_version || 0) >= 3) {
       candidate = item;
       break;
     }
@@ -680,7 +697,7 @@ function status() {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     var allPosts = index.posts || [];
     var pending = allPosts.filter(function (p) {
-      return p && p.slug && Number(p.layout_version || 0) >= 3 && p.review_required !== true && !isPublished_(p.slug);
+      return p && p.slug && Number(p.layout_version || 0) >= 3 && p.review_required !== true && productLinksReady_(p) && !isPublished_(p.slug);
     }).length;
     var needsReview = allPosts.filter(function (p) {
       return p && p.slug && p.review_required === true && !isPublished_(p.slug);
