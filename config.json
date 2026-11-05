@@ -58,9 +58,10 @@
     "marketplace": "com",
     "country": "US",
     "currency": "USD",
-    "use_search_links_when_no_asin": true,
+    "use_search_links_when_no_asin": false,
     "link_rel": "nofollow sponsored noopener",
-    "disclosure": "Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying."
+    "disclosure": "Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.",
+    "require_verified_product_pages": true
   },
   "images": {
     "provider": "unsplash",
@@ -126,5 +127,11 @@
     "page_title": "Browse All Categories",
     "related_limit": 4,
     "show_chips_in_posts": false
+  },
+  "product_discovery": {
+    "provider": "serpapi",
+    "amazon_domain": "amazon.com",
+    "require_exact_title_tokens": true,
+    "cache_file": ".cache/amazon_asins.json"
   }
 }
