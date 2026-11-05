@@ -126,7 +126,7 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 17. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
 JSON SCHEMA (exact keys):
-{
+{{
   "title": "the REQUIRED TITLE, verbatim",
   "meta_description": "string, 145-160 chars",
   "intro": ["opening paragraph 1", "opening paragraph 2", "opening paragraph 3"],
@@ -137,7 +137,7 @@ JSON SCHEMA (exact keys):
   ],
   "audience_fit": ["paragraph about who may find this useful", "second practical audience-fit paragraph"],
   "conclusion": ["Final Thoughts paragraph 1", "Final Thoughts paragraph 2"]
-}
+}}
 
 Notes:
 - The renderer always applies the same visual template to every article.
