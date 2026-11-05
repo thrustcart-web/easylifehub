@@ -68,6 +68,7 @@ import template_engine
 from affiliate import Affiliate
 from ai_writer import AIError, write_article
 from images import hero_html
+from product_resolver import ProductResolutionError, resolve_topic_items
 from topic_planner import mark_used, next_topics
 from util import (QUEUE_DIR, SEED_DIR, load_config, load_state, log, save_state,
                   setup_logging, utcnow_iso)
@@ -124,6 +125,9 @@ def load_seed_articles() -> list[dict]:
 
 
 def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dict | None:
+    # A post cannot enter the automatic publishing queue until every named
+    # product has a verified Amazon ASIN and a direct detail-page URL.
+    resolve_topic_items(topic)
     aff = Affiliate(cfg)
     keyword = topic["keyword"]
     niche = topic.get("niche", "")
@@ -158,7 +162,7 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
 
     # ---- render + gate
     html = render_mod.render_html(article, topic, cfg, aff, hero)
-    ok, reasons = safety.quality_gate(html, article, cfg)
+    ok, reasons = safety.quality_gate(html, article, cfg, expected_product_count=len(topic.get("items", [])))
     if not ok:
         log.error("  QUALITY GATE REJECTED %s: %s", topic["slug"], "; ".join(reasons[:4]))
         raise AIError("quality gate: " + "; ".join(reasons[:4]))
@@ -216,12 +220,17 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
             if not topic.get("slug") or topic["slug"] in existing:
                 continue
             article = dict(seed["article"])
+            try:
+                resolve_topic_items(topic)
+            except ProductResolutionError as exc:
+                log.warning("seed %s skipped: %s", topic.get("slug"), exc)
+                continue
             article["_source"] = "seed"
             article["_provider"] = "bundled"
             aff = Affiliate(cfg)
             hero = hero_html(topic.get("keyword", ""), article["title"], cfg.get("images", {}), topic.get("niche", ""))
             html = render_mod.render_html(article, topic, cfg, aff, hero)
-            ok, reasons = safety.quality_gate(html, article, cfg)
+            ok, reasons = safety.quality_gate(html, article, cfg, expected_product_count=len(topic.get("items", [])))
             if not ok:
                 log.warning("seed %s rejected: %s", topic["slug"], "; ".join(reasons[:3]))
                 continue
@@ -247,6 +256,9 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
                 result = generate_one(cfg, state, topic, mode=mode)
                 if result:
                     made.append(result)
+            except ProductResolutionError as exc:
+                log.warning("  product resolution skipped %s: %s", topic["slug"], str(exc)[:200])
+                continue
             except Exception as exc:  # noqa: BLE001 - any failure skips this topic only
                 log.error("  failed %s (%s): %s", topic["slug"], type(exc).__name__, str(exc)[:200])
                 safety.record_failure(cfg, f"{type(exc).__name__}: {exc}")
