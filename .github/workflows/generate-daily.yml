@@ -54,6 +54,7 @@ jobs:
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          SERPAPI_API_KEY:     ${{ secrets.SERPAPI_API_KEY }}
         run: |
           if [ -f content/queue/MIGRATE_LAYOUT_V3 ]; then
             echo "One-time migration: rebuilding legacy queue HTML with the fixed v3 layout."
