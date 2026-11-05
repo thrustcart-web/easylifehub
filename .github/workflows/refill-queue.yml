@@ -41,6 +41,7 @@ jobs:
           GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG:      ${{ secrets.AFFILIATE_TAG }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          SERPAPI_API_KEY:     ${{ secrets.SERPAPI_API_KEY }}
         run: |
           COUNT="${{ github.event.inputs.count }}"
           MODE="${{ github.event.inputs.mode }}"
