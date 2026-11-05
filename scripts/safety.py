@@ -12,6 +12,8 @@ when posting looks machine-made. Three defences:
 from __future__ import annotations
 
 import re
+from html import unescape
+from urllib.parse import parse_qs, urlsplit
 from datetime import datetime, timedelta, timezone
 
 from ai_writer import BANNED_PHRASES, HYPE_RE, PRICE_RE
@@ -67,7 +69,30 @@ def quality_gate(html: str, article: dict, cfg: dict) -> tuple[bool, list[str]]:
     if PRICE_RE.search(prose):
         reasons.append("fabricated price in body copy (numbers belong in the spec table only)")
 
-    link_count = len(re.findall(r"amazon\.[a-z.]+/[^\"']*[?&]tag=", html))
+    # Every hyperlink in a post must point to Amazon and carry the configured
+    # Associates tracking tag. Images and plain text are not treated as links.
+    expected_tag = str(cfg.get("affiliate", {}).get("tag") or "").strip()
+    anchors = re.findall(r"<a\b([^>]*)>", html, re.I | re.S)
+    link_count = 0
+    for attrs in anchors:
+        href_match = re.search(r""" \bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)) """.strip(), attrs, re.I | re.S)
+        if not href_match:
+            reasons.append("anchor without href")
+            continue
+        href = unescape(next((part for part in href_match.groups() if part is not None), "")).strip()
+        try:
+            parsed = urlsplit(href)
+            host = (parsed.hostname or "").lower()
+        except ValueError:
+            parsed = None
+            host = ""
+        if host != "amazon.com" and not host.endswith(".amazon.com"):
+            reasons.append("non-Amazon hyperlink found")
+            continue
+        link_count += 1
+        tags = parse_qs(parsed.query).get("tag", []) if parsed else []
+        if not expected_tag or expected_tag not in tags:
+            reasons.append("Amazon link missing the configured Associates tracking tag")
     if link_count > LINK_SPAM_THRESHOLD:
         reasons.append(f"link stuffing: {link_count} affiliate links")
 
