@@ -430,7 +430,7 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "draft": False,
         # Offline fallback copy is useful as a starting point, but it has not
         # been independently fact-checked; keep it out of automatic publishing.
-        "review_required": str(article.get("_source") or "").lower() == "template",
+        "review_required": not (str(article.get("_source") or "").lower().startswith("ai:") or str(article.get("_source") or "").lower() == "seed"),
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 
