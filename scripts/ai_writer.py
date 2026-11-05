@@ -131,9 +131,9 @@ JSON SCHEMA (exact keys):
   "meta_description": "string, 145-160 chars",
   "intro": ["opening paragraph 1", "opening paragraph 2", "opening paragraph 3"],
   "sections": [
-    {"heading": "product-specific heading, 4-12 words",
+    {{"heading": "product-specific heading, 4-12 words",
      "paragraphs": ["two or three detailed paragraphs"],
-     "bullets": []}
+     "bullets": []}}
   ],
   "audience_fit": ["paragraph about who may find this useful", "second practical audience-fit paragraph"],
   "conclusion": ["Final Thoughts paragraph 1", "Final Thoughts paragraph 2"]
