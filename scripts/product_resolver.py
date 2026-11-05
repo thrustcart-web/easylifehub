@@ -181,6 +181,8 @@ def backfill_queue() -> dict:
 
     cfg = load_config()
     aff = Affiliate(cfg)
+    if not os.environ.get("SERPAPI_API_KEY", "").strip():
+        raise ProductResolutionError("SERPAPI_API_KEY is missing. Add it to GitHub Actions secrets before running the backfill.")
     cache = _load_cache()
     updated = 0
     unresolved = 0
