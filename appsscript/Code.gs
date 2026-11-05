@@ -606,6 +606,66 @@ function publishNow() {
   catch (err) { recordFailure_(err); Logger.log('FAILED: ' + err); }
 }
 
+/**
+ * After the GitHub product-link backfill succeeds, patch already-published
+ * Blogger posts so their old Amazon search URLs become direct /dp/ASIN pages.
+ * This only touches posts whose every product has a verified ASIN.
+ */
+function syncPublishedProductLinks() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Product-link sync skipped: another execution is running.');
+    return;
+  }
+
+  try {
+    var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+    var bySlug = {};
+    (index.posts || []).forEach(function (meta) {
+      if (meta && meta.slug) bySlug[meta.slug] = meta;
+    });
+
+    var published = getPublished_();
+    var updated = 0;
+    var skipped = 0;
+
+    published.forEach(function (post) {
+      var meta = bySlug[post.slug];
+      if (!meta || meta.product_links_verified !== true || !meta.html_file) {
+        skipped++;
+        return;
+      }
+
+      var items = meta.items || [];
+      var valid = items.length > 0 && items.every(function (item) {
+        return item &&
+          item.asin_verified === true &&
+          /^[A-Z0-9]{10}$/.test(String(item.asin || '')) &&
+          /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}\?tag=[^&\s]+$/.test(String(item.url || ''));
+      });
+      if (!valid || !post.post_id) {
+        skipped++;
+        return;
+      }
+
+      var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
+      html = sanitizePostHtml_(html);
+      bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.post_id, {
+        title: meta.title || post.title,
+        content: html,
+        labels: (meta.labels || []).filter(Boolean)
+      });
+      updated++;
+      Logger.log('UPDATED PRODUCT LINKS: ' + (meta.title || post.title));
+      Utilities.sleep(1000);
+    });
+
+    Logger.log('Product-link sync complete. Updated=' + updated + ', skipped=' + skipped);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
 /** Full status report. */
 function status() {
   var pub = getPublished_();
