@@ -97,6 +97,10 @@ def resolve_item(item: dict, api_key: str | None = None, cache: dict | None = No
 
     cache = cache if cache is not None else _load_cache()
     key = " ".join(name.lower().split())
+    supplied_asin = str(item.get("asin") or "").strip().upper()
+    supplied_title = str(item.get("verified_product_title") or "")
+    if item.get("asin_verified") is True and ASIN_RE.fullmatch(supplied_asin) and title_matches(name, supplied_title):
+        return dict(item)
     cached = cache.get(key)
     if isinstance(cached, dict) and ASIN_RE.fullmatch(str(cached.get("asin", ""))) and title_matches(name, cached.get("title", "")):
         result = dict(item)
