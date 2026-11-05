@@ -1,0 +1,36 @@
+{
+  "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
+  "title": "Fabric Glue vs Fabric Scissors: Deciding Between Two Good Options",
+  "meta_description": "Compare fabric glue and fabric scissors on readiness, precision, maintenance, fabric impact, and value to help you choose the right tool for your craft projects.",
+  "template": "comparison",
+  "niche": "crafts & hobbies",
+  "keyword": "Fabric Glue vs Fabric Scissors",
+  "labels": [
+    "Reviews",
+    "Crafts & Hobbies"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 655,
+  "items": [
+    {
+      "name": "Fabric Glue",
+      "asin": "",
+      "search_term": "Fabric Glue",
+      "url": "https://www.amazon.com/s?k=Fabric+Glue&tag=qalok0c-20"
+    },
+    {
+      "name": "Fabric Scissors",
+      "asin": "",
+      "search_term": "Fabric Scissors",
+      "url": "https://www.amazon.com/s?k=Fabric+Scissors&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
+  "category_label": "Crafts & Hobbies",
+  "category_url": "/search/label/Crafts%20%26%20Hobbies",
+  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 3,
+  "draft": false,
+  "review_required": false
+}

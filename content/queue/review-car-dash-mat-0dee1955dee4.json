@@ -1,0 +1,30 @@
+{
+  "slug": "review-car-dash-mat-0dee1955dee4",
+  "title": "Car Dash Mat for City Driving: Judging Power Source Honestly",
+  "meta_description": "Review of the Car Dash Mat for city driving, checking power source, fit, operation, installation and care so you can decide if it suits urban commuters.",
+  "template": "review",
+  "niche": "car",
+  "keyword": "car dash mat for city driving",
+  "labels": [
+    "Reviews",
+    "Car"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 704,
+  "items": [
+    {
+      "name": "Car Dash Mat",
+      "asin": "",
+      "search_term": "car dash mat for city driving",
+      "url": "https://www.amazon.com/s?k=car+dash+mat+for+city+driving&tag=qalok0c-20"
+    }
+  ],
+  "html_file": "review-car-dash-mat-0dee1955dee4.html",
+  "category_label": "Car",
+  "category_url": "/search/label/Car",
+  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 3,
+  "draft": false,
+  "review_required": false
+}

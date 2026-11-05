@@ -206,6 +206,24 @@
       "ts": "2026-11-05T00:49:42Z",
       "source": "ai:groq",
       "words": 660
+    },
+    {
+      "slug": "review-car-dash-mat-0dee1955dee4",
+      "title": "Car Dash Mat for City Driving: Judging Power Source Honestly",
+      "template": "review",
+      "keyword": "car dash mat for city driving",
+      "ts": "2026-11-05T03:42:37Z",
+      "source": "ai:groq",
+      "words": 704
+    },
+    {
+      "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
+      "title": "Fabric Glue vs Fabric Scissors: Deciding Between Two Good Options",
+      "template": "comparison",
+      "keyword": "Fabric Glue vs Fabric Scissors",
+      "ts": "2026-11-05T03:44:48Z",
+      "source": "ai:groq",
+      "words": 655
     }
   ],
   "published": [],
@@ -232,7 +250,9 @@
     "bestof-electronics-earbud-3e66ad5bf3a1",
     "review-foldable-daypack-2da57045820c",
     "bestof-home-office-organiser-525dc4fb9a20",
-    "comparison-monitor-arm-vs-monitor-stand-829fac306647"
+    "comparison-monitor-arm-vs-monitor-stand-829fac306647",
+    "review-car-dash-mat-0dee1955dee4",
+    "comparison-fabric-glue-vs-fabric-scissors-002e06973243"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -346,7 +366,13 @@
     "small humidifier for stuffy rooms": "2026-11-04",
     "monitor arm|monitor stand": "2026-11-05",
     "Monitor Arm": "2026-11-05",
-    "Monitor Stand": "2026-11-05"
+    "Monitor Stand": "2026-11-05",
+    "car dash mat": "2026-11-05",
+    "Car Dash Mat": "2026-11-05",
+    "car dash mat for city driving": "2026-11-05",
+    "fabric glue|fabric scissors": "2026-11-05",
+    "Fabric Glue": "2026-11-05",
+    "Fabric Scissors": "2026-11-05"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -384,7 +410,10 @@
     "Choosing Between {A} and {B}: A Practical Comparison",
     "{P} with {FEAT}: Does It Matter or Is It Marketing?",
     "{N} {F} Compared: Where Each One Wins and Loses",
-    "{A} vs {B}: Which One Should You Actually Buy?"
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "{P} for {AUD}: Judging {FEAT} Honestly",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{A} vs {B}: Deciding Between Two Good Options"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -393,7 +422,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 23,
+    "total_generated": 25,
     "total_published": 0
   }
 }
