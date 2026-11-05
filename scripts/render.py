@@ -280,7 +280,6 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     if not items:
         raise ValueError("Cannot render an affiliate article without a product item.")
 
-    affiliate_url = aff.url_for(items[0])
     parts: list[str] = []
 
     intro = [_clean_post_fragment(p) for p in (article.get("intro") or [])[:3]]
@@ -296,7 +295,20 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
         + str(aff.disclosure or "This post contains affiliate links.")
     )
     parts.append(f"<p><em>{html_escape(disclosure)}</em></p>")
-    parts.append(_amazon_button(affiliate_url))
+
+    # Every named product gets its own direct, verified Amazon detail-page link.
+    product_cards = []
+    for item in items:
+        product_url = aff.url_for(item)
+        if not re.fullmatch(r"https://www\\.amazon\\.com/dp/[A-Z0-9]{10}\\?tag=[^&\\s]+", product_url):
+            raise ValueError(f"Product has no verified Amazon detail-page URL: {item.get('name', '')}")
+        product_cards.append(aff.product_box(item, label="View Product on Amazon"))
+    parts.append(
+        '<section class="product-links">'
+        '<h2 style="background-color:#f1f3f4;padding:10px 15px;border-left:5px solid #2e7d32;'
+        'font-size:20px;color:#202124;margin-top:30px;margin-bottom:15px;">Products in This Guide</h2>'
+        + "".join(product_cards) + "</section>"
+    )
 
     for section in article.get("sections", []):
         heading = str(section.get("heading") or "").strip()
@@ -340,7 +352,6 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     for paragraph in audience_fit[:2]:
         parts.append(f"<p>{paragraph}</p>")
 
-    parts.append(_amazon_button(affiliate_url))
     parts.append(
         '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
         'border-left: 5px solid #2e7d32; font-size: 20px; color: #202124; '
@@ -430,7 +441,14 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         "draft": False,
         # Offline fallback copy is useful as a starting point, but it has not
         # been independently fact-checked; keep it out of automatic publishing.
-        "review_required": not (str(article.get("_source") or "").lower().startswith("ai:") or str(article.get("_source") or "").lower() == "seed"),
+        "product_links_verified": bool(topic.get("items")) and all(
+            bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", [])
+        ),
+        "review_required": not (
+            (str(article.get("_source") or "").lower().startswith("ai:") or str(article.get("_source") or "").lower() == "seed")
+            and bool(topic.get("items"))
+            and all(bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", []))
+        ),
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 
