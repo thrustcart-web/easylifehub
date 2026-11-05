@@ -37,6 +37,10 @@ var DEFAULTS = {
   NOTIFY_EMAIL:  '',                 // blank = your Google account email
   TZ:            'Africa/Cairo',
   MIN_GAP_HOURS: '2',
+  GITHUB_REPO: 'thrustcart-web/easylifehub',
+  REFILL_MIN_PENDING: '6',
+  REFILL_COUNT: '6',
+  REFILL_COOLDOWN_HOURS: '12',
   // ---- category hub + related posts (topical authority plumbing) ----
   BLOG_URL:        '',                    // blank = auto-detected once from the API
   CATEGORY_HUB:    'content/categories/index.html',
@@ -436,14 +440,100 @@ function notifyOnSuccess_(meta, post) {
 }
 
 // ---------------------------------------------------------------- utilities --
-/** Creates the hourly trigger (run once). */
+/** Installs the publishing trigger and the automatic queue-refill checker. */
 function installTrigger() {
   var existing = ScriptApp.getProjectTriggers();
   existing.forEach(function (t) {
-    if (t.getHandlerFunction() === 'publishScheduled') ScriptApp.deleteTrigger(t);
+    var handler = t.getHandlerFunction();
+    if (handler === 'publishScheduled' || handler === 'refillQueueIfLow') {
+      ScriptApp.deleteTrigger(t);
+    }
   });
   ScriptApp.newTrigger('publishScheduled').timeBased().everyHours(1).create();
-  Logger.log('Hourly trigger installed. Posting hours: ' + cfg('POST_HOURS') + ' (' + cfg('TZ') + ')');
+  ScriptApp.newTrigger('refillQueueIfLow').timeBased().everyHours(4).create();
+  Logger.log('Hourly publishing trigger installed. Posting hours: ' + cfg('POST_HOURS') + ' (' + cfg('TZ') + ')');
+  Logger.log('Automatic queue-refill checker installed. It checks every 4 hours.');
+}
+
+/**
+ * Automatically dispatches the GitHub refill workflow when fewer than
+ * REFILL_MIN_PENDING unpublished, approved v3 articles remain.
+ *
+ * Requires Script Property GITHUB_TOKEN with a fine-grained GitHub token
+ * that has Actions: Read and write on the EasyLifeHub repository.
+ */
+function refillQueueIfLow() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Refill check skipped: another script execution holds the lock.');
+    return;
+  }
+
+  try {
+    var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+    var posts = index.posts || [];
+    var pending = posts.filter(function (p) {
+      return p && p.slug &&
+        Number(p.layout_version || 0) >= 3 &&
+        p.review_required !== true &&
+        !isPublished_(p.slug);
+    }).length;
+
+    var threshold = Math.max(1, Number(cfg('REFILL_MIN_PENDING', '6')));
+    var refillCount = Math.max(1, Math.min(6, Number(cfg('REFILL_COUNT', '6'))));
+    Logger.log('Automatic refill check: pending=' + pending + ', threshold=' + threshold);
+
+    if (pending >= threshold) {
+      Logger.log('Queue is healthy. No refill needed.');
+      return;
+    }
+
+    var cooldownMs = Math.max(1, Number(cfg('REFILL_COOLDOWN_HOURS', '12'))) * 3600 * 1000;
+    var lastDispatch = Number(P.getProperty('REFILL_LAST_DISPATCH_MS') || 0);
+    var remainingMs = cooldownMs - (Date.now() - lastDispatch);
+    if (lastDispatch && remainingMs > 0) {
+      Logger.log('Refill cooldown active for another ' + Math.ceil(remainingMs / 60000) + ' minutes.');
+      return;
+    }
+
+    var token = String(P.getProperty('GITHUB_TOKEN') || '').trim();
+    if (!token) {
+      Logger.log('GITHUB_TOKEN is missing. Add it under Project Settings > Script Properties.');
+      return;
+    }
+
+    var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+    var url = 'https://api.github.com/repos/' + repo +
+      '/actions/workflows/refill-queue.yml/dispatches';
+    var response = UrlFetchApp.fetch(url, {
+      method: 'post',
+      contentType: 'application/json',
+      headers: {
+        Authorization: 'Bearer ' + token,
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      },
+      payload: JSON.stringify({
+        ref: 'main',
+        inputs: { count: String(refillCount), mode: 'auto' }
+      }),
+      muteHttpExceptions: true
+    });
+
+    var status = response.getResponseCode();
+    if (status !== 204) {
+      throw new Error('GitHub workflow dispatch failed (' + status + '): ' +
+        response.getContentText().slice(0, 500));
+    }
+
+    P.setProperty('REFILL_LAST_DISPATCH_MS', String(Date.now()));
+    Logger.log('REFILL DISPATCHED: GitHub will generate up to ' + refillCount + ' new articles.');
+  } catch (err) {
+    Logger.log('AUTOMATIC REFILL ERROR: ' + err);
+    notify_('EasyLifeHub automatic refill failed', String(err).slice(0, 800));
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 /** Connectivity + permission check (run once after setup). */
