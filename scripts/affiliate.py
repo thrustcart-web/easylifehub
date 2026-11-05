@@ -33,7 +33,7 @@ MARKETPLACES = {
     "in": ("https://www.amazon.in", "IN", "INR"),
 }
 
-ASIN_RE = re.compile(r"^B0[A-Z0-9]{8}$")
+ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 
 
 class Affiliate:
@@ -57,13 +57,15 @@ class Affiliate:
 
     def product_url(self, asin: str = "", keyword: str = "") -> str:
         asin = (asin or "").strip().upper()
-        if ASIN_RE.match(asin):
+        if ASIN_RE.fullmatch(asin):
             return self._tagged(f"{self.base}/dp/{asin}")
-        if asin:  # malformed ASIN -> fall back to search rather than 404
-            log.debug("ASIN '%s' looks invalid, using search link", asin)
-        if keyword and self.use_search:
-            return self._tagged(f"{self.base}/s?k={quote_plus(keyword)}")
-        return self.base
+        # Search-result pages are deliberately disabled: an affiliate CTA must
+        # resolve to a specific, verified product detail page, never a search.
+        if asin:
+            log.warning("Invalid ASIN '%s' - product URL suppressed", asin)
+        elif keyword:
+            log.debug("No verified ASIN for '%s' - product URL suppressed", keyword)
+        return ""
 
     def url_for(self, item: dict) -> str:
         """Prefer an explicit search_term (converts better than the bare noun)."""
