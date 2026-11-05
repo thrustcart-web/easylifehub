@@ -215,7 +215,9 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
             topic = seed.get("topic") or {}
             if not topic.get("slug") or topic["slug"] in existing:
                 continue
-            article = seed["article"]
+            article = dict(seed["article"])
+            article["_source"] = "seed"
+            article["_provider"] = "bundled"
             aff = Affiliate(cfg)
             hero = hero_html(topic.get("keyword", ""), article["title"], cfg.get("images", {}), topic.get("niche", ""))
             html = render_mod.render_html(article, topic, cfg, aff, hero)
