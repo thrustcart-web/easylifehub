@@ -155,17 +155,18 @@ class TestAffiliateLinks(unittest.TestCase):
         url = self.aff.product_url("B0CHX1W1XY", "power bank")
         self.assertEqual(url, "https://www.amazon.com/dp/B0CHX1W1XY?tag=testtag-20")
 
-    def test_invalid_asin_falls_back_to_search(self):
-        url = self.aff.product_url("12345", "yoga mat")
-        self.assertIn("/s?k=yoga+mat", url)
-        self.assertIn("tag=testtag-20", url)
+    def test_invalid_asin_does_not_fall_back_to_search(self):
+        self.assertEqual(self.aff.product_url("12345", "yoga mat"), "")
 
-    def test_search_link_uses_search_term(self):
-        url = self.aff.url_for({"name": "Yoga Mat", "search_term": "best yoga mat for beginners"})
-        self.assertIn("k=best+yoga+mat+for+beginners", url)
+    def test_missing_asin_does_not_create_search_link(self):
+        self.assertEqual(
+            self.aff.url_for({"name": "Yoga Mat", "search_term": "best yoga mat for beginners"}),
+            "",
+        )
 
-    def test_rel_attributes_present(self):
-        html = self.aff.product_box({"name": "Yoga Mat", "search_term": "yoga mat"})
+    def test_rel_attributes_present_on_direct_product_link(self):
+        html = self.aff.product_box({"name": "Yoga Mat", "asin": "B0ABCDEFG1"})
+        self.assertIn('href="https://www.amazon.com/dp/B0ABCDEFG1?tag=testtag-20"', html)
         self.assertIn('rel="nofollow sponsored noopener"', html)
         self.assertIn('target="_blank"', html)
 
