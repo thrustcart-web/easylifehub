@@ -257,7 +257,8 @@ class TestAIPath(unittest.TestCase):
             topic = {"keyword": "test widget", "title": "Test Widget Review",
                      "slug": "crash-test", "template": "review", "niche": "kitchen",
                      "items": [{"name": "Test Widget", "display_name": "Test Widget",
-                                "search_term": "test widget", "asin": ""}]}
+                                "search_term": "test widget", "asin": "B0TEST0001",
+                                "asin_verified": True, "verified_product_title": "Test Widget"}]}
             try:
                 ai_writer.write_article(topic, cfg)
             except providers.AIError:
@@ -389,11 +390,16 @@ class TestEndToEnd(unittest.TestCase):
         self.assertTrue(topics)
         aff = affiliate_mod.Affiliate(cfg)
         made = []
-        for topic in topics:
+        for topic_index, topic in enumerate(topics, start=1):
+            for item_index, item in enumerate(topic["items"], start=1):
+                asin = f"B0TEST{topic_index:02d}{item_index:02d}"
+                item["asin"] = asin
+                item["asin_verified"] = True
+                item["verified_product_title"] = item.get("display_name") or item.get("name")
             article = template_engine.build_topic_data(topic, cfg)
             hero = "<figure class='hero hero-svg'><svg></svg></figure>"
             html = render_mod.render_html(article, topic, cfg, aff, hero)
-            ok, reasons = safety.quality_gate(html, article, cfg)
+            ok, reasons = safety.quality_gate(html, article, cfg, expected_product_count=len(topic["items"]))
             self.assertTrue(ok, f"{topic['slug']}: {reasons}")
             path = render_mod.save_article(article, topic, cfg, aff, hero)
             made.append((topic, html, path))
@@ -402,7 +408,8 @@ class TestEndToEnd(unittest.TestCase):
         for topic, html, path in made:
             self.assertNotIn("<style", html.lower())
             self.assertNotIn("application/ld+json", html)
-            self.assertEqual(html.count("View At Amazon"), 2)
+            self.assertEqual(html.count("View Product on Amazon"), len(topic["items"]))
+            self.assertNotIn("/s?k=", html)
             self.assertIn("tag=testtag-20", html)
             self.assertIn("nofollow sponsored noopener", html)
             self.assertIn("As an Amazon Associate", html)
