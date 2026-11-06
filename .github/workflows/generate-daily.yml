@@ -23,7 +23,6 @@ on:
       - 'config.json'
       - 'content/seed/**'
       - 'scripts/**'
-      - '.github/workflows/**'
     branches: [ main ]
 
 permissions:
@@ -57,8 +56,8 @@ jobs:
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          APIFY_SPEND_ENABLED: ${{ vars.APIFY_SPEND_ENABLED }}
-          SERPAPI_SPEND_ENABLED: ${{ vars.SERPAPI_SPEND_ENABLED }}
+          APIFY_SPEND_ENABLED: ${{ vars.PRODUCT_DISCOVERY_PROVIDER == 'apify' && vars.APIFY_SPEND_ENABLED == 'true' }}
+          SERPAPI_SPEND_ENABLED: ${{ vars.PRODUCT_DISCOVERY_PROVIDER == 'serpapi' && vars.SERPAPI_SPEND_ENABLED == 'true' }}
         run: |
           if [ -f content/queue/MIGRATE_LAYOUT_V3 ]; then
             echo "One-time migration: rebuilding legacy queue HTML with the fixed v3 layout."
