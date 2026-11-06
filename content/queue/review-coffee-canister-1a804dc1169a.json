@@ -1,0 +1,30 @@
+{
+  "slug": "review-coffee-canister-1a804dc1169a",
+  "title": "Does Capacity Matter in A Coffee Canister? An Honest Look",
+  "meta_description": "Explore if capacity matters for coffee canisters in humid climates. Get design checks and maintenance tips to choose the right size, keeping beans fresh.",
+  "template": "review",
+  "niche": "coffee & espresso",
+  "keyword": "coffee canister for humid climates",
+  "labels": [
+    "Reviews",
+    "Coffee & Espresso"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 749,
+  "items": [
+    {
+      "name": "Coffee Canister",
+      "asin": "B0DZ2MMFMJ",
+      "asin_verified": true,
+      "verified_product_title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container",
+      "search_term": "coffee canister for humid climates",
+      "url": "https://www.amazon.com/dp/B0DZ2MMFMJ?tag=qalok0c-20"
+    }
+  ],
+  "html_file": "review-coffee-canister-1a804dc1169a.html",
+  "layout_version": 3,
+  "draft": false,
+  "product_links_verified": true,
+  "review_required": false
+}
