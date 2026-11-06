@@ -9,9 +9,9 @@ permissions:
 jobs:
   test-gemini:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 4
     steps:
-      - name: Make one tiny Gemini response test (no article or product lookup)
+      - name: Make a tiny Gemini response test with transient-error retries
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -20,18 +20,41 @@ jobs:
             exit 1
           fi
 
-          HTTP_STATUS=$(curl --silent --show-error \
-            --output /tmp/gemini-response.json \
-            --write-out "%{http_code}" \
-            --header "x-goog-api-key: $GEMINI_API_KEY" \
-            --header "Content-Type: application/json" \
-            --request POST \
-            --data-binary '{"contents":[{"parts":[{"text":"Reply with exactly GEMINI_OK"}]}],"generationConfig":{"maxOutputTokens":16}}' \
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent")
+          HTTP_STATUS=""
+          for attempt in 1 2 3; do
+            echo "Gemini test request attempt $attempt/3"
+            HTTP_STATUS=$(curl --silent --show-error \
+              --output /tmp/gemini-response.json \
+              --write-out "%{http_code}" \
+              --header "x-goog-api-key: $GEMINI_API_KEY" \
+              --header "Content-Type: application/json" \
+              --request POST \
+              --data-binary '{"contents":[{"parts":[{"text":"Reply with exactly GEMINI_OK"}]}],"generationConfig":{"maxOutputTokens":16}}' \
+              "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent")
+
+            if [ "$HTTP_STATUS" = "200" ]; then
+              break
+            fi
+
+            case "$HTTP_STATUS" in
+              500|502|503|504)
+                if [ "$attempt" -lt 3 ]; then
+                  WAIT_SECONDS=$((4 * (2 ** (attempt - 1))))
+                  echo "Gemini temporarily unavailable (HTTP $HTTP_STATUS); retrying in ${WAIT_SECONDS}s."
+                  sleep "$WAIT_SECONDS"
+                fi
+                ;;
+              *)
+                echo "ERROR: Gemini returned HTTP $HTTP_STATUS; not retrying this error."
+                echo "Response content hidden; API key was not printed."
+                exit 1
+                ;;
+            esac
+          done
 
           if [ "$HTTP_STATUS" != "200" ]; then
-            echo "ERROR: Gemini generation test returned HTTP $HTTP_STATUS."
-            echo "Response content hidden; API key was not printed."
+            echo "ERROR: Gemini remained unavailable after 3 attempts (HTTP $HTTP_STATUS)."
+            echo "No article or product lookup was run."
             exit 1
           fi
 
@@ -41,13 +64,13 @@ jobs:
 
           data = json.loads(Path("/tmp/gemini-response.json").read_text(encoding="utf-8"))
           try:
-              text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+              response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
           except (KeyError, IndexError, TypeError):
               raise SystemExit("ERROR: Gemini returned an unexpected response structure.")
 
-          if text == "GEMINI_OK":
+          if response_text == "GEMINI_OK":
               print("SUCCESS: Gemini 3.8 Flash generated the expected test response.")
-              print("Exactly one tiny model request was made; no article or product lookup was run.")
+              print("No article or product lookup was run.")
           else:
               print("ERROR: Gemini responded, but the output did not match the expected test token.")
               raise SystemExit(1)
