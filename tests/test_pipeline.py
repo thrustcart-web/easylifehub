@@ -774,6 +774,39 @@ class TestAIPath(unittest.TestCase):
             else:
                 os.environ["OPENROUTER_API_KEY"] = old_key
 
+    def test_verified_queue_rebuild_retries_gemini_with_longer_target(self):
+        import rebuild_verified_queue as rebuild_mod
+
+        original = rebuild_mod.write_article
+        seen = []
+
+        def fake_write_article(topic, cfg):
+            seen.append({
+                "target_words": cfg["content"]["target_words"],
+                "primary": cfg["ai"]["primary"],
+                "fallbacks": list(cfg["ai"]["fallbacks"]),
+            })
+            if len(seen) == 1:
+                raise providers.AIError("too short: 597 words < 600")
+            return dict(self.GOOD), "gemini"
+
+        rebuild_mod.write_article = fake_write_article
+        try:
+            cfg = fresh_cfg()
+            cfg["content"]["target_words"] = 1100
+            cfg["ai"]["primary"] = "groq"
+            cfg["ai"]["fallbacks"] = ["openrouter"]
+            article, provider = rebuild_mod.write_repair_article(
+                {"slug": "retry-test"}, cfg
+            )
+            self.assertEqual(provider, "gemini")
+            self.assertEqual(article["title"], self.GOOD["title"])
+            self.assertEqual([x["target_words"] for x in seen], [1400, 1600])
+            self.assertTrue(all(x["primary"] == "gemini" for x in seen))
+            self.assertTrue(all(x["fallbacks"] == [] for x in seen))
+        finally:
+            rebuild_mod.write_article = original
+
     def test_provider_fallback_chain(self):
         calls = []
 
