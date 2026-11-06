@@ -498,6 +498,22 @@ class TestAIPath(unittest.TestCase):
         self.assertIn("only confirmed product-specific listing evidence", user)
         self.assertIn("NEVER invent product facts", system)
 
+    def test_repair_scrubber_removes_customer_opinions_but_preserves_product_facts(self):
+        import rebuild_verified_queue as rebuild_mod
+
+        text = (
+            "The purifier has a replaceable filter compartment. "
+            "Customer reviews mention that the device is quiet. "
+            "Check the replacement filter model before ordering. "
+            "Some users report that the controls are easy to reach."
+        )
+        cleaned = rebuild_mod._remove_customer_opinion_sentences(text)
+        self.assertIn("replaceable filter compartment", cleaned)
+        self.assertIn("Check the replacement filter model", cleaned)
+        self.assertNotIn("Customer reviews", cleaned)
+        self.assertNotIn("users report", cleaned)
+        self.assertNotRegex(cleaned, ai_writer.CUSTOMER_REVIEW_RE)
+
     def test_verified_queue_rebuilder_uses_only_existing_queue_or_cache_data(self):
         import inspect
         import rebuild_verified_queue as rebuild_mod
