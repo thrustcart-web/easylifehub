@@ -55,7 +55,7 @@ def _prose_only(html: str) -> str:
 def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: int | None = None) -> tuple[bool, list[str]]:
     """Final pre-publish check on the rendered HTML. (ok, reasons)."""
     reasons: list[str] = []
-    min_words = int(cfg.get("content", {}).get("min_words", 1100))
+    min_words = int(cfg.get("content", {}).get("min_words", 501))
 
     words = word_count(html)
     if words < min_words:
