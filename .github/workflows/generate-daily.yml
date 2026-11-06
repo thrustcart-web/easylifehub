@@ -55,6 +55,7 @@ jobs:
           AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
+          APIFY_SPEND_ENABLED: ${{ vars.APIFY_SPEND_ENABLED }}
         run: |
           if [ -f content/queue/MIGRATE_LAYOUT_V3 ]; then
             echo "One-time migration: rebuilding legacy queue HTML with the fixed v3 layout."
