@@ -2,6 +2,12 @@ name: test-serpapi-single-product
 
 on:
   workflow_dispatch:
+    inputs:
+      allow_paid_lookup:
+        description: 'Set true only to authorize one SerpApi product lookup'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
