@@ -41,8 +41,8 @@
   },
   "content": {
     "language": "en",
-    "min_words": 900,
-    "target_words": 1000,
+    "min_words": 501,
+    "target_words": 700,
     "template_weights": {
       "review": 46,
       "bestof": 30,
@@ -73,7 +73,6 @@
   "ai": {
     "primary": "groq",
     "fallbacks": [
-      "mistral",
       "openrouter",
       "gemini"
     ],
@@ -102,12 +101,11 @@
       },
       "gemini": {
         "env_key": "GEMINI_API_KEY",
-        "model": "gemini-3.5-flash-lite",
+        "model": "gemini-3.6-flash",
         "base_url": "https://generativelanguage.googleapis.com/v1beta",
         "fallback_models": [
-          "gemini-3.6-flash",
-          "gemini-3.1-flash-lite",
-          "gemini-3.8-flash"
+          "gemini-3.5-flash-lite",
+          "gemini-3.1-flash-lite"
         ]
       }
     }
@@ -134,21 +132,22 @@
     "show_chips_in_posts": false
   },
   "product_discovery": {
-    "provider": "apify",
+    "provider": "serpapi",
     "amazon_domain": "amazon.com",
     "require_exact_title_tokens": true,
     "cache_file": ".cache/amazon_asins.json",
     "actor": "junglee/amazon-crawler",
-    "api_env": "TEST_API",
-    "max_results_per_search": 5,
+    "api_env": "SERPAPI_API_KEY",
+    "max_results_per_search": 3,
     "search_pages": 1,
     "scrape_product_details": false,
     "available_providers": [
-      "apify",
-      "serpapi"
+      "serpapi",
+      "apify"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
     "serpapi_api_env": "SERPAPI_API_KEY",
-    "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED"
+    "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
+    "fallback_note": "SerpApi is primary. Apify remains an optional separately selected provider; it is not automatically called after a SerpApi failure."
   }
 }
