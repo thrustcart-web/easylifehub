@@ -57,7 +57,10 @@ jobs:
 
           config = json.loads(Path('config.json').read_text(encoding='utf-8'))
           url = Affiliate(config).url_for(resolved)
-          if not re.fullmatch(r'https://www\\.amazon\\.com/dp/[A-Z0-9]{10}\\?tag=qalok0c-20', url):
+          from urllib.parse import urlsplit, parse_qs
+          parsed = urlsplit(url)
+          if parsed.hostname != 'www.amazon.com' or not re.fullmatch(r'/dp/[A-Z0-9]{10}', parsed.path) or parse_qs(parsed.query).get('tag') != ['qalok0c-20']:
+              raise SystemExit('LINK CHECK FAILED: expected a tagged direct Amazon product URL')
               raise SystemExit('LINK CHECK FAILED: expected a tagged direct Amazon product URL')
 
           print('SERPAPI TEST: SUCCESS')
@@ -68,9 +71,9 @@ jobs:
           print('Apify requests: 0')
           print('Blogger changes: none')
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
-              summary.write('## SerpApi one-product test: SUCCESS\\n')
-              summary.write(f"- Product: {resolved['verified_product_title']}\\n")
-              summary.write(f"- ASIN: {resolved['asin']}\\n")
-              summary.write(f'- Direct affiliate link: {url}\\n')
-              summary.write('- SerpApi requests: 1; Apify requests: 0; Blogger changes: none\\n')
+              summary.write('## SerpApi one-product test: SUCCESS\n')
+              summary.write(f"- Product: {resolved['verified_product_title']}\n")
+              summary.write(f"- ASIN: {resolved['asin']}\n")
+              summary.write(f'- Direct affiliate link: {url}\n')
+              summary.write('- SerpApi requests: 1; Apify requests: 0; Blogger changes: none\n')
           PY
