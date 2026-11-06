@@ -783,6 +783,7 @@ class TestAIPath(unittest.TestCase):
         def fake_write_article(topic, cfg):
             seen.append({
                 "target_words": cfg["content"]["target_words"],
+                "min_words": cfg["content"]["min_words"],
                 "primary": cfg["ai"]["primary"],
                 "fallbacks": list(cfg["ai"]["fallbacks"]),
             })
@@ -802,6 +803,7 @@ class TestAIPath(unittest.TestCase):
             self.assertEqual(provider, "gemini")
             self.assertEqual(article["title"], self.GOOD["title"])
             self.assertEqual([x["target_words"] for x in seen], [1400, 1600])
+            self.assertEqual([x["min_words"] for x in seen], [950, 950])
             self.assertTrue(all(x["primary"] == "gemini" for x in seen))
             self.assertTrue(all(x["fallbacks"] == [] for x in seen))
         finally:
