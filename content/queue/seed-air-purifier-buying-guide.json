@@ -1,7 +1,7 @@
 {
   "slug": "seed-air-purifier-buying-guide",
   "title": "Choosing An Air Purifier: Six Things That Actually Matter",
-  "meta_description": "Air purifier listings are full of numbers that mean nothing. These six are the ones that decide whether the machine does anything at all.",
+  "meta_description": "Learn how to choose an air purifier like the Levoit Core 300-P by focusing on actual listing facts, pet hair needs, bedroom noise levels, and maintenance.",
   "template": "review",
   "niche": "air quality",
   "keyword": "air purifier buying guide",
@@ -9,26 +9,22 @@
     "Reviews",
     "Air Quality"
   ],
-  "source": "seed",
-  "provider": "",
-  "words": 956,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 724,
   "items": [
     {
       "name": "LEVOIT Core 300-P Air Purifier",
       "asin": "B07VVK39F7",
-      "search_term": "LEVOIT Core 300-P Air Purifier",
-      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
+      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+      "search_term": "LEVOIT Core 300-P Air Purifier",
+      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-air-purifier-buying-guide.html",
-  "category_label": "Air Quality",
-  "category_url": "/search/label/Air%20Quality",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

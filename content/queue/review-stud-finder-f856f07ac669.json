@@ -1,7 +1,7 @@
 {
   "slug": "review-stud-finder-f856f07ac669",
   "title": "Stud Finder for DIY Beginners: Judging Warranty Honestly",
-  "meta_description": "A straightforward review of a stud finder aimed at DIY beginners, covering its core features, design, ease of use, setup, maintenance, and the honesty of its warranty.",
+  "meta_description": "Learn how to evaluate a stud finder like the Upgranded Wood and Metal Stud Detector with live wire detection, warranty facts, and essential DIY checks.",
   "template": "review",
   "niche": "tools",
   "keyword": "stud finder for diy beginners",
@@ -9,9 +9,9 @@
     "Reviews",
     "Tools"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 772,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 683,
   "items": [
     {
       "name": "Stud Finder",
@@ -23,7 +23,7 @@
     }
   ],
   "html_file": "review-stud-finder-f856f07ac669.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false

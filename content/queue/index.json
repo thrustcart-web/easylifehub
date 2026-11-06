@@ -983,7 +983,7 @@
     {
       "slug": "review-portable-monitor-ec1fcecd2d09",
       "title": "Is A Portable Monitor Worth It? A Buyer's Assessment",
-      "meta_description": "Portable monitors for console gaming are a niche tool. They solve desk-space issues but add friction. Here is the honest cost-benefit analysis.",
+      "meta_description": "Evaluate the MNN 15.6 inch portable monitor with this comprehensive buyer assessment covering physical specs, connectivity options, and practical use cases.",
       "template": "review",
       "niche": "gaming",
       "keyword": "portable monitor for console players",
@@ -991,33 +991,29 @@
         "Reviews",
         "Gaming"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 1253,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 617,
       "items": [
         {
           "name": "MNN Portable Monitor",
           "asin": "B0B9NNWXVP",
-          "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-          "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game"
+          "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game",
+          "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
+          "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20"
         }
       ],
       "html_file": "review-portable-monitor-ec1fcecd2d09.html",
-      "category_label": "Gaming",
-      "category_url": "/search/label/Gaming",
-      "hub_page": "/p/categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-raised-garden-bed-d615608d706c",
       "title": "Raised Garden Bed Explained: What You Are Really Paying For",
-      "meta_description": "Raised Garden Bed Explained - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+      "meta_description": "Discover what to evaluate before buying the Land Guard Galvanized Raised Garden Bed Kit, including dimensions, setup steps, and material checks.",
       "template": "review",
       "niche": "garden",
       "keyword": "raised garden bed vs traditional alternatives",
@@ -1025,30 +1021,29 @@
         "Reviews",
         "Garden"
       ],
-      "source": "template",
-      "provider": "",
-      "words": 548,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 844,
       "items": [
         {
           "name": "Land Guard Raised Garden Bed",
           "asin": "B09C8HR4Z9",
-          "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-          "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver"
+          "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+          "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
+          "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20"
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",
       "title": "Choosing Resistance Bands: Six Things That Actually Matter",
-      "meta_description": "A no‑fluff review of resistance bands for runners, weighing price, compression feel, durability, and alternatives to decide if they belong in your training kit.",
+      "meta_description": "Learn how to choose resistance bands with this practical guide. Focus on confirmed listing facts, loop design, included accessories, and proper care.",
       "template": "review",
       "niche": "health & wellness",
       "keyword": "resistance bands for runners",
@@ -1056,33 +1051,29 @@
         "Reviews",
         "Health & Wellness"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 902,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 719,
       "items": [
         {
           "name": "Fit Simplify Resistance Bands",
           "asin": "B01AVDVHTI",
-          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
+          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
         }
       ],
       "html_file": "review-resistance-bands-820d61a673d2.html",
-      "category_label": "Health & Wellness",
-      "category_url": "/search/label/Health%20%26%20Wellness",
-      "hub_page": "/p/browse-all-categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-resistance-bands-9d916e3d97f8",
       "title": "Resistance Bands Explained: What You Are Really Paying For",
-      "meta_description": "Resistance bands for runners cost more than cheap loops but less than gym gear; they offer real compression, limited durability, and mixed value for runners.",
+      "meta_description": "Discover what Fit Simplify Resistance Bands include and how to evaluate loop exercise band sets for your workout needs without sales hype.",
       "template": "review",
       "niche": "health & wellness",
       "keyword": "resistance bands for runners",
@@ -1090,33 +1081,29 @@
         "Reviews",
         "Health & Wellness"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 738,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 746,
       "items": [
         {
           "name": "Fit Simplify Resistance Bands",
           "asin": "B01AVDVHTI",
-          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
+          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
         }
       ],
       "html_file": "review-resistance-bands-9d916e3d97f8.html",
-      "category_label": "Health & Wellness",
-      "category_url": "/search/label/Health%20%26%20Wellness",
-      "hub_page": "/p/categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",
       "title": "Stud Finder for DIY Beginners: Which Specs Actually Change Anything",
-      "meta_description": "Discover which stud finder specs matter for DIY beginners, from accuracy to design, and get practical checks to pick a tool that works for your projects.",
+      "meta_description": "Discover which stud finder specifications matter for beginners. Learn how to verify wood, metal, and live wire detection features before buying.",
       "template": "review",
       "niche": "tools",
       "keyword": "stud finder for diy beginners",
@@ -1124,30 +1111,29 @@
         "Reviews",
         "Tools"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 691,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 734,
       "items": [
         {
           "name": "Stud Finder",
-          "asin": "",
+          "asin": "B0GYP8QX4F",
+          "asin_verified": true,
+          "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
           "search_term": "stud finder for diy beginners",
-          "url": "https://www.amazon.com/s?k=stud+finder+for+diy+beginners&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0GYP8QX4F?tag=qalok0c-20"
         }
       ],
       "html_file": "review-stud-finder-cf86b7128d04.html",
-      "category_label": "Tools",
-      "category_url": "/search/label/Tools",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
-      "review_required": true,
-      "product_links_verified": false
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-stud-finder-f856f07ac669",
       "title": "Stud Finder for DIY Beginners: Judging Warranty Honestly",
-      "meta_description": "A straightforward review of a stud finder aimed at DIY beginners, covering its core features, design, ease of use, setup, maintenance, and the honesty of its warranty.",
+      "meta_description": "Learn how to evaluate a stud finder like the Upgranded Wood and Metal Stud Detector with live wire detection, warranty facts, and essential DIY checks.",
       "template": "review",
       "niche": "tools",
       "keyword": "stud finder for diy beginners",
@@ -1155,9 +1141,9 @@
         "Reviews",
         "Tools"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 772,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 683,
       "items": [
         {
           "name": "Stud Finder",
@@ -1169,7 +1155,7 @@
         }
       ],
       "html_file": "review-stud-finder-f856f07ac669.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -1177,7 +1163,7 @@
     {
       "slug": "review-video-doorbell-1b56e37dfa94",
       "title": "Video Doorbell Buying Guide: The Details Listings Leave Out",
-      "meta_description": "Video Doorbell Buying Guide - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+      "meta_description": "Learn what to check before buying the Ring Battery Doorbell 2K. This guide covers verified features, mounting requirements, and practical setup checks.",
       "template": "review",
       "niche": "smart home",
       "keyword": "video doorbell buying guide 2027",
@@ -1185,30 +1171,29 @@
         "Reviews",
         "Smart Home"
       ],
-      "source": "template",
-      "provider": "",
-      "words": 570,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 881,
       "items": [
         {
           "name": "Ring Battery Doorbell 2K",
           "asin": "B0FHJ7TKZM",
-          "search_term": "Ring Battery Doorbell 2K 2nd Generation",
-          "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray"
+          "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray",
+          "search_term": "Ring Battery Doorbell 2K 2nd Generation",
+          "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=qalok0c-20"
         }
       ],
       "html_file": "review-video-doorbell-1b56e37dfa94.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "seed-air-purifier-buying-guide",
       "title": "Choosing An Air Purifier: Six Things That Actually Matter",
-      "meta_description": "Air purifier listings are full of numbers that mean nothing. These six are the ones that decide whether the machine does anything at all.",
+      "meta_description": "Learn how to choose an air purifier like the Levoit Core 300-P by focusing on actual listing facts, pet hair needs, bedroom noise levels, and maintenance.",
       "template": "review",
       "niche": "air quality",
       "keyword": "air purifier buying guide",
@@ -1216,28 +1201,24 @@
         "Reviews",
         "Air Quality"
       ],
-      "source": "seed",
-      "provider": "",
-      "words": 956,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 724,
       "items": [
         {
           "name": "LEVOIT Core 300-P Air Purifier",
           "asin": "B07VVK39F7",
-          "search_term": "LEVOIT Core 300-P Air Purifier",
-          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
+          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+          "search_term": "LEVOIT Core 300-P Air Purifier",
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
-      "category_label": "Air Quality",
-      "category_url": "/search/label/Air%20Quality",
-      "hub_page": "/p/categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "seed-anker-737-power-bank-review",

@@ -1,7 +1,7 @@
 {
   "slug": "review-resistance-bands-9d916e3d97f8",
   "title": "Resistance Bands Explained: What You Are Really Paying For",
-  "meta_description": "Resistance bands for runners cost more than cheap loops but less than gym gear; they offer real compression, limited durability, and mixed value for runners.",
+  "meta_description": "Discover what Fit Simplify Resistance Bands include and how to evaluate loop exercise band sets for your workout needs without sales hype.",
   "template": "review",
   "niche": "health & wellness",
   "keyword": "resistance bands for runners",
@@ -9,26 +9,22 @@
     "Reviews",
     "Health & Wellness"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 738,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 746,
   "items": [
     {
       "name": "Fit Simplify Resistance Bands",
       "asin": "B01AVDVHTI",
-      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
     }
   ],
   "html_file": "review-resistance-bands-9d916e3d97f8.html",
-  "category_label": "Health & Wellness",
-  "category_url": "/search/label/Health%20%26%20Wellness",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

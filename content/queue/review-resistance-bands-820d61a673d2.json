@@ -1,7 +1,7 @@
 {
   "slug": "review-resistance-bands-820d61a673d2",
   "title": "Choosing Resistance Bands: Six Things That Actually Matter",
-  "meta_description": "A no‑fluff review of resistance bands for runners, weighing price, compression feel, durability, and alternatives to decide if they belong in your training kit.",
+  "meta_description": "Learn how to choose resistance bands with this practical guide. Focus on confirmed listing facts, loop design, included accessories, and proper care.",
   "template": "review",
   "niche": "health & wellness",
   "keyword": "resistance bands for runners",
@@ -9,26 +9,22 @@
     "Reviews",
     "Health & Wellness"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 902,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 719,
   "items": [
     {
       "name": "Fit Simplify Resistance Bands",
       "asin": "B01AVDVHTI",
-      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
     }
   ],
   "html_file": "review-resistance-bands-820d61a673d2.html",
-  "category_label": "Health & Wellness",
-  "category_url": "/search/label/Health%20%26%20Wellness",
-  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

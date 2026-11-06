@@ -1,7 +1,7 @@
 {
   "slug": "review-stud-finder-cf86b7128d04",
   "title": "Stud Finder for DIY Beginners: Which Specs Actually Change Anything",
-  "meta_description": "Discover which stud finder specs matter for DIY beginners, from accuracy to design, and get practical checks to pick a tool that works for your projects.",
+  "meta_description": "Discover which stud finder specifications matter for beginners. Learn how to verify wood, metal, and live wire detection features before buying.",
   "template": "review",
   "niche": "tools",
   "keyword": "stud finder for diy beginners",
@@ -9,23 +9,22 @@
     "Reviews",
     "Tools"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 691,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 734,
   "items": [
     {
       "name": "Stud Finder",
-      "asin": "",
+      "asin": "B0GYP8QX4F",
+      "asin_verified": true,
+      "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
       "search_term": "stud finder for diy beginners",
-      "url": "https://www.amazon.com/s?k=stud+finder+for+diy+beginners&tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B0GYP8QX4F?tag=qalok0c-20"
     }
   ],
   "html_file": "review-stud-finder-cf86b7128d04.html",
-  "category_label": "Tools",
-  "category_url": "/search/label/Tools",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
-  "review_required": true,
-  "product_links_verified": false
+  "product_links_verified": true,
+  "review_required": false
 }

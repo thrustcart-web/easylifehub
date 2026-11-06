@@ -1,7 +1,7 @@
 {
   "slug": "review-portable-monitor-ec1fcecd2d09",
   "title": "Is A Portable Monitor Worth It? A Buyer's Assessment",
-  "meta_description": "Portable monitors for console gaming are a niche tool. They solve desk-space issues but add friction. Here is the honest cost-benefit analysis.",
+  "meta_description": "Evaluate the MNN 15.6 inch portable monitor with this comprehensive buyer assessment covering physical specs, connectivity options, and practical use cases.",
   "template": "review",
   "niche": "gaming",
   "keyword": "portable monitor for console players",
@@ -9,26 +9,22 @@
     "Reviews",
     "Gaming"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 1253,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 617,
   "items": [
     {
       "name": "MNN Portable Monitor",
       "asin": "B0B9NNWXVP",
-      "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-      "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game"
+      "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game",
+      "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
+      "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20"
     }
   ],
   "html_file": "review-portable-monitor-ec1fcecd2d09.html",
-  "category_label": "Gaming",
-  "category_url": "/search/label/Gaming",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }
