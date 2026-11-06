@@ -14,10 +14,12 @@
   "words": 548,
   "items": [
     {
-      "name": "Raised Garden Bed",
-      "asin": "",
-      "search_term": "raised garden bed vs traditional alternatives",
-      "url": "https://www.amazon.com/s?k=raised+garden+bed+vs+traditional+alternatives&tag=qalok0c-20"
+      "name": "Land Guard Raised Garden Bed",
+      "asin": "B09C8HR4Z9",
+      "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
+      "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver"
     }
   ],
   "html_file": "review-raised-garden-bed-d615608d706c.html",
@@ -25,5 +27,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
