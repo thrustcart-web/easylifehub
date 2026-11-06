@@ -135,7 +135,7 @@ def _message_text(data: dict) -> str:
             for part in content
             if isinstance(part, dict) and isinstance(part.get("text"), str) and part.get("text").strip()
         ]
-        return "\\n".join(parts).strip()
+        return "\n".join(parts).strip()
     return ""
 
 
