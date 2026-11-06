@@ -635,9 +635,11 @@
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
-          "asin": "B0CHX1W1XY",
+          "asin": "B09VPHVT2Z",
+          "asin_verified": true,
+          "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K",
-          "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20"
         }
       ],
       "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
@@ -645,7 +647,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-car-dash-mat-0dee1955dee4",
@@ -818,10 +820,12 @@
       "words": 1532,
       "items": [
         {
-          "name": "LEVOIT Air Purifier Core 300",
-          "asin": "B08C1KN5J2",
-          "search_term": "LEVOIT Air Purifier Core 300",
-          "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20"
+          "name": "LEVOIT Core 300-P Air Purifier",
+          "asin": "B07VVK39F7",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+          "search_term": "LEVOIT Core 300-P Air Purifier",
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
         }
       ],
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
@@ -829,7 +833,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-litter-scoop-a162ab1d8392",
@@ -944,9 +948,11 @@
       "items": [
         {
           "name": "Ninja Creami NC301",
-          "asin": "B09B8VHGLD",
+          "asin": "B08QXB9BH5",
+          "asin_verified": true,
+          "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver",
           "search_term": "Ninja Creami NC301",
-          "url": "https://www.amazon.com/dp/B09B8VHGLD?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=qalok0c-20"
         }
       ],
       "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
@@ -954,7 +960,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-plant-pots-ecc22dbb4c63",
@@ -1218,10 +1224,12 @@
       "words": 956,
       "items": [
         {
-          "name": "LEVOIT Air Purifier Core 300",
-          "asin": "B08C1KN5J2",
-          "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
-          "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20"
+          "name": "LEVOIT Core 300-P Air Purifier",
+          "asin": "B07VVK39F7",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+          "search_term": "LEVOIT Core 300-P Air Purifier",
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
@@ -1232,7 +1240,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "seed-anker-737-power-bank-review",
@@ -1251,9 +1259,11 @@
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
-          "asin": "B0CHX1W1XY",
+          "asin": "B09VPHVT2Z",
+          "asin_verified": true,
+          "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-          "url": "https://www.amazon.com/dp/B0CHX1W1XY?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20"
         }
       ],
       "html_file": "seed-anker-737-power-bank-review.html",
@@ -1264,7 +1274,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "seed-best-home-fitness-gear",
