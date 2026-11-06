@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - 'scripts/rebuild_verified_queue.py'
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
