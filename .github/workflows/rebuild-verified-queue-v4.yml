@@ -4,6 +4,13 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/rebuild_verified_queue.py'
+      - 'scripts/providers.py'
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
@@ -17,12 +24,12 @@ permissions:
 
 concurrency:
   group: generate
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   rebuild:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
         with:
