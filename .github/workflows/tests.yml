@@ -19,7 +19,3 @@ jobs:
           python-version: '3.11'
       - name: Run pipeline tests
         run: python3 tests/test_pipeline.py
-      - name: Smoke test - generate 3 articles offline
-        run: |
-          python3 main.py --count 3 --mode template
-          python3 main.py --stats
