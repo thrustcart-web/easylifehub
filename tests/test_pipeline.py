@@ -345,6 +345,7 @@ class TestAIPath(unittest.TestCase):
         gen.resolve_topic_items = attach_verified_test_asins
         try:
             cfg = fresh_cfg()
+            cfg["content"]["fallback_to_template"] = True
             os.environ["GROQ_API_KEY"] = "fake"
             state = {"generated": [], "published": [], "queued_slugs": [], "keywords_used": {},
                      "last_publish_ts": None, "failures": {"count": 0, "until": None, "last_error": None},
