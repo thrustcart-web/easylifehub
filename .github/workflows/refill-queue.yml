@@ -60,4 +60,25 @@ jobs:
           git config user.name  "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
           git add content/queue content/categories state.json .cache data 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "content: manual refill ${{ github.event.inputs.count }} [skip ci]" && git push
+          if ! git diff --cached --quiet; then
+            git commit -m "content: manual refill ${{ github.event.inputs.count }} [skip ci]"
+            # Avoid losing a prepared queue when main changes during a refill.
+            for attempt in 1 2 3; do
+              echo "Push attempt $attempt/3: fetching and rebasing on latest main..."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "::error::Rebase conflict while saving refilled queue."
+                git rebase --abort || true
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                echo "Refilled queue successfully saved to main."
+                exit 0
+              fi
+              echo "Push was rejected; retrying with the latest main."
+            done
+            echo "::error::Could not save refilled queue after three attempts."
+            exit 1
+          else
+            echo "No queue changes to commit."
+          fi
