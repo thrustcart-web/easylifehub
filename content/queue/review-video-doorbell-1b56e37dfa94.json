@@ -14,10 +14,12 @@
   "words": 570,
   "items": [
     {
-      "name": "Video Doorbell",
-      "asin": "",
-      "search_term": "video doorbell buying guide 2027",
-      "url": "https://www.amazon.com/s?k=video+doorbell+buying+guide+2027&tag=qalok0c-20"
+      "name": "Ring Battery Doorbell 2K",
+      "asin": "B0FHJ7TKZM",
+      "search_term": "Ring Battery Doorbell 2K 2nd Generation",
+      "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray"
     }
   ],
   "html_file": "review-video-doorbell-1b56e37dfa94.html",
@@ -25,5 +27,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
