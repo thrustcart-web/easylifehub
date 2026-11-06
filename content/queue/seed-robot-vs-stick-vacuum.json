@@ -1,10 +1,10 @@
 {
   "slug": "seed-robot-vs-stick-vacuum",
-  "title": "Robot Vacuum or Stick Vacuum? The Honest Comparison",
-  "meta_description": "They look like competing versions of the same thing and they are not. Here is which one fits your floor plan, your patience, and your pet.",
+  "title": "Robot Vacuum vs Cordless Stick Vacuum: Choosing for Your Floors",
+  "meta_description": "Compare a robot vacuum with a cordless stick vacuum by cleaning routine, floor layout, storage, and the level of control you want over each session.",
   "template": "comparison",
   "niche": "home cleaning",
-  "keyword": "Robot Vacuum vs Stick Vacuum",
+  "keyword": "Robot Vacuum vs Cordless Stick Vacuum",
   "labels": [
     "Reviews",
     "Home Cleaning"
@@ -14,16 +14,20 @@
   "words": 928,
   "items": [
     {
-      "name": "Robot Vacuum",
-      "asin": "",
-      "search_term": "robot vacuum for pet hair hardwood floors",
-      "url": "https://www.amazon.com/s?k=robot+vacuum+for+pet+hair+hardwood+floors&tag=qalok0c-20"
+      "name": "Roborock Q5 Pro Robot Vacuum",
+      "asin": "B0C7VLHMQR",
+      "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
+      "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0C7VLHMQR?tag=qalok0c-20"
     },
     {
-      "name": "Stick Vacuum",
-      "asin": "",
-      "search_term": "cordless stick vacuum for hardwood and carpet",
-      "url": "https://www.amazon.com/s?k=cordless+stick+vacuum+for+hardwood+and+carpet&tag=qalok0c-20"
+      "name": "Shark PowerDetect Stick Vacuum",
+      "asin": "B0DBVW1RFW",
+      "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
+      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-robot-vs-stick-vacuum.html",
@@ -34,5 +38,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
