@@ -612,22 +612,22 @@ class TestAIPath(unittest.TestCase):
             return json.dumps(self.GOOD)
 
         providers.PROVIDERS["groq"] = boom
-        providers.PROVIDERS["mistral"] = works
-        for name, key in [("groq", "GROQ_API_KEY"), ("mistral", "MISTRAL_API_KEY")]:
+        providers.PROVIDERS["openrouter"] = works
+        for name, key in [("groq", "GROQ_API_KEY"), ("openrouter", "OPENROUTER_API_KEY")]:
             os.environ[key] = "fake"
         ai_cfg = fresh_cfg()["ai"]
         parsed, used = providers.generate_json(ai_cfg, "sys", "usr")
-        self.assertEqual(used, "mistral")
-        self.assertEqual(calls, ["openai/gpt-oss-120b", "mistral-large-latest"])
+        self.assertEqual(used, "openrouter")
+        self.assertEqual(calls, ["openai/gpt-oss-120b", "openrouter/free"])
         self.assertEqual(parsed["title"], self.GOOD["title"])
         isolated_fallback_cfg = dict(ai_cfg)
-        isolated_fallback_cfg["fallbacks"] = ["mistral"]
+        isolated_fallback_cfg["fallbacks"] = ["openrouter"]
         parsed_again, used_again, attempted = providers.generate_json(
             isolated_fallback_cfg, "sys", "usr",
             exclude_providers={"groq"}, return_attempted=True
         )
-        self.assertEqual(used_again, "mistral")
-        self.assertEqual(attempted, ["mistral"])
+        self.assertEqual(used_again, "openrouter")
+        self.assertEqual(attempted, ["openrouter"])
         self.assertEqual(parsed_again["title"], self.GOOD["title"])
 
 
