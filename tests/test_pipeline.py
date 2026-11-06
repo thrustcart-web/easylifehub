@@ -802,8 +802,8 @@ class TestAIPath(unittest.TestCase):
             )
             self.assertEqual(provider, "gemini")
             self.assertEqual(article["title"], self.GOOD["title"])
-            self.assertEqual([x["target_words"] for x in seen], [1400, 1600])
-            self.assertEqual([x["min_words"] for x in seen], [950, 950])
+            self.assertEqual([x["target_words"] for x in seen], [1100, 1250])
+            self.assertEqual([x["min_words"] for x in seen], [600, 600])
             self.assertTrue(all(x["primary"] == "gemini" for x in seen))
             self.assertTrue(all(x["fallbacks"] == [] for x in seen))
         finally:
