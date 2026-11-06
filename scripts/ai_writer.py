@@ -51,6 +51,8 @@ CUSTOMER_REVIEW_RE = re.compile(r"\b(?:customer|buyer|user)\s+(?:reviews?|rating
 FAKE_TEST_RE = re.compile(
     r"\b(?:we (?:tested|measured|ran|used) it for|in our (?:lab|tests)|after \d+ (?:hours|days|weeks) of testing)\b", re.I
 )
+URL_RE = re.compile(r"\b(?:https?://|www\.)\S+", re.I)
+MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(https?://[^)]+\)", re.I)
 
 
 # ----------------------------------------------------------------- prompts --
@@ -126,6 +128,7 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 17. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
 18. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
 19. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
+20. Never include hyperlinks, internal links, external links, bare URLs, Markdown links, HTML anchors, or a Table of Contents. Amazon links are inserted later by the renderer as green buttons; do not write any link yourself.
 
 JSON SCHEMA (exact keys):
 {{
@@ -149,7 +152,7 @@ Notes:
 - Return exactly 2 paragraphs in "audience_fit" and 2 in "conclusion".
 - Keep claims factual and product-specific. Do not invent specifications, prices,
   ratings, customer-review counts or personal testing experience.
-- No links, HTML anchors, CSS, scripts, markdown headings or markdown fences.
+- No links, URLs, HTML anchors, CSS, scripts, markdown headings, markdown link syntax, or Table of Contents.
 - Everything in {language}.
 """
 
@@ -329,6 +332,10 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
         problems.append("fabricated rating detected")
     if FAKE_TEST_RE.search(blob):
         problems.append("fabricated test claim detected")
+    if CUSTOMER_REVIEW_RE.search(blob):
+        problems.append("customer review or rating claims are not allowed")
+    if URL_RE.search(blob) or MARKDOWN_LINK_RE.search(blob) or re.search(r"<a\b", blob, re.I):
+        problems.append("links or URLs are not allowed in article copy")
 
     words = len(re.findall(r"[\w'-]+", re.sub(r"<[^>]+>", " ", blob)))
     if words < min_words:
