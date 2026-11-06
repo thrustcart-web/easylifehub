@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 34,
+  "count": 36,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -438,6 +438,44 @@
       "review_required": false
     },
     {
+      "slug": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
+      "title": "Choosing Between Electrostatic Duster and Duster with Extension: A Practical Comparison",
+      "meta_description": "Compare an electrostatic duster and a duster with extension for high‑ceiling cleaning. Learn reach, dust capture, handling, and upkeep to choose the right tool.",
+      "template": "comparison",
+      "niche": "home cleaning",
+      "keyword": "Electrostatic Duster vs Duster with Extension",
+      "labels": [
+        "Reviews",
+        "Home Cleaning"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 704,
+      "items": [
+        {
+          "name": "Electrostatic Duster",
+          "asin": "B07GL4JVNJ",
+          "asin_verified": true,
+          "verified_product_title": "Kitchen + Home 23” inch Rainbow Static Duster - Electrostatic Feather Duster Attracts dust Like a Magnet!",
+          "search_term": "Electrostatic Duster",
+          "url": "https://www.amazon.com/dp/B07GL4JVNJ?tag=qalok0c-20"
+        },
+        {
+          "name": "Duster with Extension",
+          "asin": "B0B6G147W6",
+          "asin_verified": true,
+          "verified_product_title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
+          "search_term": "Duster with Extension",
+          "url": "https://www.amazon.com/dp/B0B6G147W6?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
+    },
+    {
       "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
       "title": "Fabric Glue vs Fabric Scissors: Deciding Between Two Good Options",
       "meta_description": "Compare fabric glue and fabric scissors on readiness, precision, maintenance, fabric impact, and value to help you choose the right tool for your craft projects.",
@@ -608,6 +646,36 @@
       "draft": false,
       "review_required": true,
       "product_links_verified": false
+    },
+    {
+      "slug": "review-decorative-bowl-1370bfcfc215",
+      "title": "Decorative Bowl for Dried Flowers: Five Things Listings Skip",
+      "meta_description": "Explore five often‑overlooked factors when choosing a decorative bowl for dried flowers, from glaze quality to maintenance, to ensure a lasting, stylish display.",
+      "template": "review",
+      "niche": "home decor",
+      "keyword": "decorative bowl for dried flowers",
+      "labels": [
+        "Reviews",
+        "Home Decor"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 732,
+      "items": [
+        {
+          "name": "Decorative Bowl",
+          "asin": "B092XFK5MG",
+          "asin_verified": true,
+          "verified_product_title": "Large Decorative Balls Bowl Filler Decor Orbs White & Cream (Natural White)",
+          "search_term": "decorative bowl for dried flowers",
+          "url": "https://www.amazon.com/dp/B092XFK5MG?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-decorative-bowl-1370bfcfc215.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-foldable-daypack-2da57045820c",
