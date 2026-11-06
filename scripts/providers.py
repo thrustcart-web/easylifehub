@@ -220,23 +220,49 @@ def _gemini(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> 
                 payload,
                 {"User-Agent": USER_AGENT, "x-goog-api-key": key},
             )
-            try:
-                return data["candidates"][0]["content"]["parts"][0]["text"]
-            except (KeyError, IndexError, TypeError) as exc:
-                raise AIError(f"gemini blocked/empty for {model}: {json.dumps(data)[:200]}") from exc
+            candidates = data.get("candidates") or []
+            for candidate in candidates:
+                content = candidate.get("content") or {}
+                parts = content.get("parts") or []
+                text_parts = [
+                    part.get("text")
+                    for part in parts
+                    if isinstance(part, dict) and isinstance(part.get("text"), str)
+                ]
+                if text_parts:
+                    return "\n".join(text_parts).strip()
+
+            # Log response structure only. Never include generated text or prompts.
+            diagnostics = {
+                "top_keys": sorted(data.keys()) if isinstance(data, dict) else [],
+                "candidate_count": len(candidates),
+                "prompt_block_reason": (data.get("promptFeedback") or {}).get("blockReason"),
+                "candidate_shapes": [
+                    {
+                        "finish_reason": candidate.get("finishReason"),
+                        "part_keys": [
+                            sorted(part.keys())
+                            for part in ((candidate.get("content") or {}).get("parts") or [])
+                            if isinstance(part, dict)
+                        ],
+                    }
+                    for candidate in candidates[:2]
+                ],
+            }
+            raise AIError(f"Gemini returned no text candidate for {model}: {json.dumps(diagnostics)}")
         except AIError as exc:
             last_error = f"{model}: {exc}"
-            log.warning("  gemini/%s failed (%s)", model, str(exc)[:120])
-            # Model-level overload/quota or a model-specific endpoint failure:
-            # try the next configured stable model. Auth and malformed-request
-            # errors are project/request-wide and should return to provider fallback.
+            log.warning("  gemini/%s failed (%s)", model, str(exc)[:180])
+            # Retry model-specific availability/output failures with the next
+            # configured model. Auth and malformed-request errors are project-wide.
             retryable = any(
                 marker in str(exc)
                 for marker in (
                     "HTTP 404:", "HTTP 429:", "HTTP 500:",
                     "HTTP 502:", "HTTP 503:", "HTTP 504:",
+                    "Gemini returned no text candidate",
                 )
-            ) or "gemini blocked/empty" in str(exc)
+            )
             if not retryable:
                 raise
     raise AIError("all configured Gemini models failed -> " + last_error)
