@@ -44,7 +44,9 @@ class ProductResolutionError(RuntimeError):
 def _normal_tokens(value: str) -> set[str]:
     stop = {"a", "an", "and", "the", "for", "with", "of", "to", "from", "best", "buying", "guide"}
     out = set()
-    for token in TOKEN_RE.findall(str(value or "").lower()):
+    # Apify sometimes concatenates a brand and the next word (e.g. "MarbrassePen").
+    normalized = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", str(value or ""))
+    for token in TOKEN_RE.findall(normalized.lower()):
         if token in stop:
             continue
         if len(token) > 4 and token.endswith("ies"):
