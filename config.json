@@ -137,6 +137,13 @@
     "api_env": "TEST_API",
     "max_results_per_search": 5,
     "search_pages": 1,
-    "scrape_product_details": false
+    "scrape_product_details": false,
+    "available_providers": [
+      "apify",
+      "serpapi"
+    ],
+    "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
+    "serpapi_api_env": "SERPAPI_API_KEY",
+    "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED"
   }
 }
