@@ -14,10 +14,12 @@
   "words": 956,
   "items": [
     {
-      "name": "LEVOIT Air Purifier Core 300",
-      "asin": "B08C1KN5J2",
-      "search_term": "LEVOIT Core 300 air purifier True HEPA bedroom",
-      "url": "https://www.amazon.com/dp/B08C1KN5J2?tag=qalok0c-20"
+      "name": "LEVOIT Core 300-P Air Purifier",
+      "asin": "B07VVK39F7",
+      "search_term": "LEVOIT Core 300-P Air Purifier",
+      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
     }
   ],
   "html_file": "seed-air-purifier-buying-guide.html",
@@ -28,5 +30,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
