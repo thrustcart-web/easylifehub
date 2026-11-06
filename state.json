@@ -242,6 +242,24 @@
       "ts": "2026-11-05T13:01:00Z",
       "source": "ai:groq",
       "words": 832
+    },
+    {
+      "slug": "review-mattress-protector-7baedfdfd6e4",
+      "title": "Choosing A Mattress Protector for Back Sleepers: Trade-Offs Included",
+      "template": "review",
+      "keyword": "mattress protector for back sleepers",
+      "ts": "2026-11-06T01:15:44Z",
+      "source": "ai:groq",
+      "words": 813
+    },
+    {
+      "slug": "review-mortar-and-pestle-3fbfd223937b",
+      "title": "Mortar and Pestle for Spice Grinding: An Honest Buying Guide",
+      "template": "review",
+      "keyword": "mortar and pestle for spice grinding",
+      "ts": "2026-11-06T01:17:34Z",
+      "source": "ai:groq",
+      "words": 788
     }
   ],
   "published": [],
@@ -272,7 +290,9 @@
     "review-car-dash-mat-0dee1955dee4",
     "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
     "review-stud-finder-cf86b7128d04",
-    "bestof-fitness-handle-3d07849b4753"
+    "bestof-fitness-handle-3d07849b4753",
+    "review-mattress-protector-7baedfdfd6e4",
+    "review-mortar-and-pestle-3fbfd223937b"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -405,7 +425,13 @@
     "Weight Bench": "2026-11-05",
     "weight bench for small spaces": "2026-11-05",
     "Exercise Bike": "2026-11-05",
-    "exercise bike for travellers": "2026-11-05"
+    "exercise bike for travellers": "2026-11-05",
+    "mattress protector": "2026-11-06",
+    "Mattress Protector": "2026-11-06",
+    "mattress protector for back sleepers": "2026-11-06",
+    "mortar and pestle": "2026-11-06",
+    "Mortar and Pestle": "2026-11-06",
+    "mortar and pestle for spice grinding": "2026-11-06"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -455,7 +481,10 @@
     "Choosing Between {A} and {B}: A Practical Comparison",
     "{P} Under {BUD}: Honest Expectations",
     "Best {F}{AUD}: {N} Picks Compared by Real Criteria",
-    "{A} vs {B}: Deciding Between Two Good Options"
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included",
+    "Which {F}{AUD} Is Right for You? {N} Compared",
+    "{P} for {AUD}: An Honest Buying Guide"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -464,7 +493,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 27,
+    "total_generated": 29,
     "total_published": 0
   }
 }

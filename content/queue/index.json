@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 27,
+  "count": 29,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -578,6 +578,68 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check"
+    },
+    {
+      "slug": "review-mattress-protector-7baedfdfd6e4",
+      "title": "Choosing A Mattress Protector for Back Sleepers: Trade-Offs Included",
+      "meta_description": "Explore how a mattress protector can affect back‑sleeping comfort, what support, fit and maintenance factors matter, and which trade‑offs you should verify before buying.",
+      "template": "review",
+      "niche": "sleep",
+      "keyword": "mattress protector for back sleepers",
+      "labels": [
+        "Reviews",
+        "Sleep"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 813,
+      "items": [
+        {
+          "name": "Mattress Protector",
+          "asin": "B07HC2WHS1",
+          "search_term": "mattress protector for back sleepers",
+          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-mattress-protector-7baedfdfd6e4.html",
+      "category_label": "Sleep",
+      "category_url": "/search/label/Sleep",
+      "hub_page": "/p/browse-all-categories.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
+    },
+    {
+      "slug": "review-mortar-and-pestle-3fbfd223937b",
+      "title": "Mortar and Pestle for Spice Grinding: An Honest Buying Guide",
+      "meta_description": "Discover how to choose a mortar and pestle for spice grinding, covering material, size, ergonomics, setup, and care to ensure reliable performance.",
+      "template": "review",
+      "niche": "food & pantry",
+      "keyword": "mortar and pestle for spice grinding",
+      "labels": [
+        "Reviews",
+        "Food & Pantry"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 788,
+      "items": [
+        {
+          "name": "Mortar and Pestle",
+          "asin": "B0D9CP3BPS",
+          "search_term": "mortar and pestle for spice grinding",
+          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
+      "category_label": "Food & Pantry",
+      "category_url": "/search/label/Food%20%26%20Pantry",
+      "hub_page": "/p/browse-all-categories.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-ninja-creami-nc301-afd5d45b40e8",
