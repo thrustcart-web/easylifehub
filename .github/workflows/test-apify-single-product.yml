@@ -3,6 +3,12 @@ name: test-apify-single-product
 
 on:
   workflow_dispatch:
+    inputs:
+      allow_paid_lookup:
+        description: 'Set true only to authorize this one Apify test (maximum charge $0.015)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -17,7 +23,7 @@ jobs:
         env:
           TEST_API: ${{ secrets.TEST_API }}
           ALLOW_PAID_LOOKUP: ${{ inputs.allow_paid_lookup }}
-           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
           python - <<'PY'
           import json
@@ -30,7 +36,7 @@ jobs:
               raise SystemExit(0)
 
           token = os.environ.get("TEST_API", "").strip()
-           if not token:
+          if not token:
               raise SystemExit("ERROR: TEST_API secret is missing")
 
           params = parse.urlencode({
