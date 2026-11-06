@@ -271,7 +271,6 @@ def build_levoit_official_specs_article() -> dict:
         "pros": [],
         "cons": [],
         "faq": [],
-        "conclusion": [],
         "_source": "manual:official_specs",
         "_provider": "levoit_official_product_information",
         "_editorial_approved": True
@@ -344,6 +343,10 @@ def rebuild(limit: int = 8) -> dict:
                 article["_source"] = f"ai:{provider}"
             if not article.get("_provider"):
                 article["_provider"] = provider
+
+            article_ok, article_problems = validate(article, cfg)
+            if not article_ok:
+                raise AIError("article validation: " + "; ".join(article_problems[:8]))
 
             # The fixed renderer creates only green, tracked Amazon product buttons.
             # No images or product facts are fetched during this repair.
