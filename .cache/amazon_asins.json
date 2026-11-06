@@ -52,7 +52,7 @@
   "webcam": {
     "asin": "B085TFF7M1",
     "title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
-    "verified_at": "2026-11-06T01:36:19Z"
+    "verified_at": "2026-11-06"
   },
   "e-reader": {
     "asin": "B0GSZX5MWR",
@@ -67,7 +67,7 @@
   "portable ssd": {
     "asin": "B0874XN4D8",
     "title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
-    "verified_at": "2026-11-06T01:36:56Z"
+    "verified_at": "2026-11-06"
   },
   "action camera": {
     "asin": "B01HGM33HG",
@@ -147,7 +147,7 @@
   "desk planner": {
     "asin": "B0CZNZHTYZ",
     "title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
-    "verified_at": "2026-11-06T03:15:43Z"
+    "verified_at": "2026-11-06"
   },
   "decorative bowl": {
     "asin": "B092XFK5MG",
@@ -157,17 +157,17 @@
   "smart scale": {
     "asin": "B0BFZVBGYH",
     "title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
-    "verified_at": "2026-11-06T03:44:22Z"
+    "verified_at": "2026-11-06"
   },
   "gym bag": {
     "asin": "B0C5SPSRNG",
     "title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
-    "verified_at": "2026-11-06T03:44:22Z"
+    "verified_at": "2026-11-06"
   },
   "heart rate monitor": {
     "asin": "B09SKZBZF8",
     "title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
-    "verified_at": "2026-11-06T03:44:22Z"
+    "verified_at": "2026-11-06"
   },
   "electrostatic duster": {
     "asin": "B07GL4JVNJ",
@@ -207,7 +207,7 @@
   "l shaped desk": {
     "asin": "B0FVXMDM4L",
     "title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
-    "verified_at": "2026-11-06T04:25:37Z"
+    "verified_at": "2026-11-06"
   },
   "white noise machine": {
     "asin": "B07RWRJ4XW",
@@ -217,7 +217,7 @@
   "mesh office chair": {
     "asin": "B0DPHLWNBG",
     "title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
-    "verified_at": "2026-11-06T04:25:46Z"
+    "verified_at": "2026-11-06"
   },
   "tote bag": {
     "asin": "B0FKH85DPY",
@@ -372,6 +372,56 @@
   "opnice 2-tier computer monitor stand riser with drawer": {
     "asin": "B0DB8F7GDN",
     "title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
+    "verified_at": "2026-11-06"
+  },
+  "sports drawstring backpack gym bag": {
+    "asin": "B0C5SPSRNG",
+    "title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+    "verified_at": "2026-11-06"
+  },
+  "renpho elis go travel smart scale": {
+    "asin": "B0BFZVBGYH",
+    "title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
+    "verified_at": "2026-11-06"
+  },
+  "hs500 heart rate monitor chest strap": {
+    "asin": "B09SKZBZF8",
+    "title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
+    "verified_at": "2026-11-06"
+  },
+  "adjustable weight bench": {
+    "asin": "B07DNYSJ8W",
+    "title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+    "verified_at": "2026-11-06"
+  },
+  "flybird adjustable weight bench": {
+    "asin": "B07DNYSJ8W",
+    "title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+    "verified_at": "2026-11-06"
+  },
+  "weekly desk planner 8.5x11": {
+    "asin": "B0CZNZHTYZ",
+    "title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+    "verified_at": "2026-11-06"
+  },
+  "pamray 40 inch l shaped computer desk": {
+    "asin": "B0FVXMDM4L",
+    "title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+    "verified_at": "2026-11-06"
+  },
+  "elabest x100 ergonomic mesh office chair": {
+    "asin": "B0DPHLWNBG",
+    "title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
+    "verified_at": "2026-11-06"
+  },
+  "logitech c920x hd pro webcam": {
+    "asin": "B085TFF7M1",
+    "title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+    "verified_at": "2026-11-06"
+  },
+  "samsung t7 portable ssd 1tb": {
+    "asin": "B0874XN4D8",
+    "title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
     "verified_at": "2026-11-06"
   }
 }

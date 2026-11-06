@@ -1,10 +1,10 @@
 {
   "slug": "bestof-home-office-organiser-525dc4fb9a20",
-  "title": "5 Home Office Gear Compared: Where Each One Wins and Loses",
-  "meta_description": "5 Home Office Gear Compared - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+  "title": "5 Home Office Essentials for a More Functional Workspace",
+  "meta_description": "Explore five useful home office essentials for organizing a desk, supporting comfortable work, keeping devices connected, and managing digital files.",
   "template": "bestof",
   "niche": "home office",
-  "keyword": "Home Office",
+  "keyword": "Home Office Essentials",
   "labels": [
     "Reviews",
     "Home Office"
@@ -14,34 +14,44 @@
   "words": 836,
   "items": [
     {
-      "name": "Cable Management Tray",
-      "asin": "",
-      "search_term": "cable management tray for back pain sufferers",
-      "url": "https://www.amazon.com/s?k=cable+management+tray+for+back+pain+sufferers&tag=qalok0c-20"
+      "name": "Desk Planner",
+      "asin": "B0CZNZHTYZ",
+      "search_term": "Weekly Desk Planner 8.5x11",
+      "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0CZNZHTYZ?tag=qalok0c-20"
     },
     {
-      "name": "Lap Desk",
-      "asin": "",
-      "search_term": "lap desk for back pain sufferers",
-      "url": "https://www.amazon.com/s?k=lap+desk+for+back+pain+sufferers&tag=qalok0c-20"
+      "name": "L Shaped Desk",
+      "asin": "B0FVXMDM4L",
+      "search_term": "Pamray 40 Inch L Shaped Computer Desk",
+      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20"
     },
     {
-      "name": "Ring Light",
-      "asin": "",
-      "search_term": "ring light for video calls",
-      "url": "https://www.amazon.com/s?k=ring+light+for+video+calls&tag=qalok0c-20"
+      "name": "Mesh Office Chair",
+      "asin": "B0DPHLWNBG",
+      "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
+      "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0DPHLWNBG?tag=qalok0c-20"
     },
     {
-      "name": "Desk Lamp",
-      "asin": "",
-      "search_term": "desk lamp for dual monitor setups",
-      "url": "https://www.amazon.com/s?k=desk+lamp+for+dual+monitor+setups&tag=qalok0c-20"
+      "name": "Webcam",
+      "asin": "B085TFF7M1",
+      "search_term": "Logitech C920x HD Pro Webcam",
+      "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B085TFF7M1?tag=qalok0c-20"
     },
     {
-      "name": "Small Humidifier",
-      "asin": "",
-      "search_term": "small humidifier for stuffy rooms",
-      "url": "https://www.amazon.com/s?k=small+humidifier+for+stuffy+rooms&tag=qalok0c-20"
+      "name": "Portable SSD",
+      "asin": "B0874XN4D8",
+      "search_term": "Samsung T7 Portable SSD 1TB",
+      "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0874XN4D8?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-home-office-organiser-525dc4fb9a20.html",
@@ -52,5 +62,5 @@
   "draft": false,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }

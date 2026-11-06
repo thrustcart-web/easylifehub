@@ -1,10 +1,10 @@
 {
   "slug": "bestof-fitness-handle-3d07849b4753",
-  "title": "5 Home Fitness Gear Picks Reviewed Against the Criteria That Matter",
-  "meta_description": "Compare folding treadmills, jump ropes, rowing machines, weight benches, and exercise bikes based on noise, stability, space, and portability for home use.",
+  "title": "5 Home Fitness Gear Picks for Strength, Cardio, and Progress Tracking",
+  "meta_description": "Compare practical home fitness gear for strength work, cardio routines, workout organization, and tracking progress in one convenient space.",
   "template": "bestof",
   "niche": "fitness",
-  "keyword": "Fitness",
+  "keyword": "Home Fitness Gear",
   "labels": [
     "Reviews",
     "Fitness"
@@ -14,34 +14,44 @@
   "words": 832,
   "items": [
     {
-      "name": "Folding Treadmill",
-      "asin": "",
-      "search_term": "folding treadmill for walkers",
-      "url": "https://www.amazon.com/s?k=folding+treadmill+for+walkers&tag=qalok0c-20"
+      "name": "Fit Simplify Resistance Bands",
+      "asin": "B01AVDVHTI",
+      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
     },
     {
-      "name": "Jump Rope",
-      "asin": "",
-      "search_term": "jump rope for travellers",
-      "url": "https://www.amazon.com/s?k=jump+rope+for+travellers&tag=qalok0c-20"
+      "name": "Gym Bag",
+      "asin": "B0C5SPSRNG",
+      "search_term": "Sports Drawstring Backpack Gym Bag",
+      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=qalok0c-20"
     },
     {
-      "name": "Rowing Machine",
-      "asin": "",
-      "search_term": "rowing machine for people over 40",
-      "url": "https://www.amazon.com/s?k=rowing+machine+for+people+over+40&tag=qalok0c-20"
+      "name": "Smart Scale",
+      "asin": "B0BFZVBGYH",
+      "search_term": "RENPHO Elis Go Travel Smart Scale",
+      "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=qalok0c-20"
     },
     {
-      "name": "Weight Bench",
-      "asin": "",
-      "search_term": "weight bench for small spaces",
-      "url": "https://www.amazon.com/s?k=weight+bench+for+small+spaces&tag=qalok0c-20"
+      "name": "Heart Rate Monitor",
+      "asin": "B09SKZBZF8",
+      "search_term": "HS500 Heart Rate Monitor Chest Strap",
+      "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=qalok0c-20"
     },
     {
-      "name": "Exercise Bike",
-      "asin": "",
-      "search_term": "exercise bike for travellers",
-      "url": "https://www.amazon.com/s?k=exercise+bike+for+travellers&tag=qalok0c-20"
+      "name": "Adjustable Weight Bench",
+      "asin": "B07DNYSJ8W",
+      "search_term": "FLYBIRD Adjustable Weight Bench",
+      "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-fitness-handle-3d07849b4753.html",
@@ -51,5 +61,5 @@
   "layout_version": 3,
   "draft": false,
   "review_required": true,
-  "product_links_verified": false
+  "product_links_verified": true
 }

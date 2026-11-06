@@ -182,11 +182,11 @@
     },
     {
       "slug": "bestof-fitness-handle-3d07849b4753",
-      "title": "5 Home Fitness Gear Picks Reviewed Against the Criteria That Matter",
-      "meta_description": "Compare folding treadmills, jump ropes, rowing machines, weight benches, and exercise bikes based on noise, stability, space, and portability for home use.",
+      "title": "5 Home Fitness Gear Picks for Strength, Cardio, and Progress Tracking",
+      "meta_description": "Compare practical home fitness gear for strength work, cardio routines, workout organization, and tracking progress in one convenient space.",
       "template": "bestof",
       "niche": "fitness",
-      "keyword": "Fitness",
+      "keyword": "Home Fitness Gear",
       "labels": [
         "Reviews",
         "Fitness"
@@ -196,34 +196,44 @@
       "words": 832,
       "items": [
         {
-          "name": "Folding Treadmill",
-          "asin": "",
-          "search_term": "folding treadmill for walkers",
-          "url": "https://www.amazon.com/s?k=folding+treadmill+for+walkers&tag=qalok0c-20"
+          "name": "Fit Simplify Resistance Bands",
+          "asin": "B01AVDVHTI",
+          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
         },
         {
-          "name": "Jump Rope",
-          "asin": "",
-          "search_term": "jump rope for travellers",
-          "url": "https://www.amazon.com/s?k=jump+rope+for+travellers&tag=qalok0c-20"
+          "name": "Gym Bag",
+          "asin": "B0C5SPSRNG",
+          "search_term": "Sports Drawstring Backpack Gym Bag",
+          "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=qalok0c-20"
         },
         {
-          "name": "Rowing Machine",
-          "asin": "",
-          "search_term": "rowing machine for people over 40",
-          "url": "https://www.amazon.com/s?k=rowing+machine+for+people+over+40&tag=qalok0c-20"
+          "name": "Smart Scale",
+          "asin": "B0BFZVBGYH",
+          "search_term": "RENPHO Elis Go Travel Smart Scale",
+          "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=qalok0c-20"
         },
         {
-          "name": "Weight Bench",
-          "asin": "",
-          "search_term": "weight bench for small spaces",
-          "url": "https://www.amazon.com/s?k=weight+bench+for+small+spaces&tag=qalok0c-20"
+          "name": "Heart Rate Monitor",
+          "asin": "B09SKZBZF8",
+          "search_term": "HS500 Heart Rate Monitor Chest Strap",
+          "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=qalok0c-20"
         },
         {
-          "name": "Exercise Bike",
-          "asin": "",
-          "search_term": "exercise bike for travellers",
-          "url": "https://www.amazon.com/s?k=exercise+bike+for+travellers&tag=qalok0c-20"
+          "name": "Adjustable Weight Bench",
+          "asin": "B07DNYSJ8W",
+          "search_term": "FLYBIRD Adjustable Weight Bench",
+          "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=qalok0c-20"
         }
       ],
       "html_file": "bestof-fitness-handle-3d07849b4753.html",
@@ -233,7 +243,7 @@
       "layout_version": 3,
       "draft": false,
       "review_required": true,
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "bestof-garden-blower-335192546968",
@@ -290,11 +300,11 @@
     },
     {
       "slug": "bestof-home-office-organiser-525dc4fb9a20",
-      "title": "5 Home Office Gear Compared: Where Each One Wins and Loses",
-      "meta_description": "5 Home Office Gear Compared - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+      "title": "5 Home Office Essentials for a More Functional Workspace",
+      "meta_description": "Explore five useful home office essentials for organizing a desk, supporting comfortable work, keeping devices connected, and managing digital files.",
       "template": "bestof",
       "niche": "home office",
-      "keyword": "Home Office",
+      "keyword": "Home Office Essentials",
       "labels": [
         "Reviews",
         "Home Office"
@@ -304,34 +314,44 @@
       "words": 836,
       "items": [
         {
-          "name": "Cable Management Tray",
-          "asin": "",
-          "search_term": "cable management tray for back pain sufferers",
-          "url": "https://www.amazon.com/s?k=cable+management+tray+for+back+pain+sufferers&tag=qalok0c-20"
+          "name": "Desk Planner",
+          "asin": "B0CZNZHTYZ",
+          "search_term": "Weekly Desk Planner 8.5x11",
+          "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0CZNZHTYZ?tag=qalok0c-20"
         },
         {
-          "name": "Lap Desk",
-          "asin": "",
-          "search_term": "lap desk for back pain sufferers",
-          "url": "https://www.amazon.com/s?k=lap+desk+for+back+pain+sufferers&tag=qalok0c-20"
+          "name": "L Shaped Desk",
+          "asin": "B0FVXMDM4L",
+          "search_term": "Pamray 40 Inch L Shaped Computer Desk",
+          "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20"
         },
         {
-          "name": "Ring Light",
-          "asin": "",
-          "search_term": "ring light for video calls",
-          "url": "https://www.amazon.com/s?k=ring+light+for+video+calls&tag=qalok0c-20"
+          "name": "Mesh Office Chair",
+          "asin": "B0DPHLWNBG",
+          "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
+          "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0DPHLWNBG?tag=qalok0c-20"
         },
         {
-          "name": "Desk Lamp",
-          "asin": "",
-          "search_term": "desk lamp for dual monitor setups",
-          "url": "https://www.amazon.com/s?k=desk+lamp+for+dual+monitor+setups&tag=qalok0c-20"
+          "name": "Webcam",
+          "asin": "B085TFF7M1",
+          "search_term": "Logitech C920x HD Pro Webcam",
+          "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B085TFF7M1?tag=qalok0c-20"
         },
         {
-          "name": "Small Humidifier",
-          "asin": "",
-          "search_term": "small humidifier for stuffy rooms",
-          "url": "https://www.amazon.com/s?k=small+humidifier+for+stuffy+rooms&tag=qalok0c-20"
+          "name": "Portable SSD",
+          "asin": "B0874XN4D8",
+          "search_term": "Samsung T7 Portable SSD 1TB",
+          "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0874XN4D8?tag=qalok0c-20"
         }
       ],
       "html_file": "bestof-home-office-organiser-525dc4fb9a20.html",
@@ -342,7 +362,7 @@
       "draft": false,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
