@@ -106,7 +106,10 @@ def _remove_customer_opinion_sentences(value):
     if isinstance(value, list):
         return [_remove_customer_opinion_sentences(item) for item in value]
     if isinstance(value, dict):
-        return {key: _remove_customer_opinion_sentences(item) for key, item in value.items()}
+        return {
+            key: (item if key == "title" else _remove_customer_opinion_sentences(item))
+            for key, item in value.items()
+        }
     return value
 
 
