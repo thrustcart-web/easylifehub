@@ -278,28 +278,28 @@ function amazonButtonLayoutReady_(html, meta) {
   var value = String(html || '');
   var items = (meta && meta.items) || [];
   if (!items.length) return false;
-  if (/table\\s+of\\s+contents|class=["'][^"']*\\btoc\\b|aria-label=["']table of contents/i.test(value)) return false;
+  if (/table\s+of\s+contents|class=["'][^"']*\btoc\b|aria-label=["']table of contents/i.test(value)) return false;
 
-  var withoutAnchors = value.replace(/<a\\b[^>]*>[\\s\\S]*?<\\/a\\s*>/gi, '');
-  if (/(?:https?:\\/\\/|www\\.)\\S+/i.test(withoutAnchors)) return false;
+  var withoutAnchors = value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, '');
+  if (/(?:https?:\/\/|www\.)\S+/i.test(withoutAnchors)) return false;
 
   var expected = {};
   items.forEach(function (item) {
     var url = String(item && item.url || '').replace(/&amp;/gi, '&').trim();
-    if (!url || !/^https:\\/\\/www\\.amazon\\.com\\/dp\\/[A-Z0-9]{10}\\?tag=[^&\\s]+$/i.test(url)) return;
+    if (!url || !/^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}\?tag=[^&\s]+$/i.test(url)) return;
     expected[url] = 0;
   });
   if (Object.keys(expected).length !== items.length) return false;
 
-  var anchors = value.match(/<a\\b[^>]*>/gi) || [];
+  var anchors = value.match(/<a\b[^>]*>/gi) || [];
   if (anchors.length !== items.length * 2) return false;
   for (var i = 0; i < anchors.length; i++) {
     var attrs = anchors[i];
-    var hrefMatch = attrs.match(/\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))/i);
-    var classMatch = attrs.match(/\\bclass\\s*=\\s*["']([^"']*)["']/i);
-    var ownerMatch = attrs.match(/\\bdata-owner\\s*=\\s*["']renderer["']/i);
+    var hrefMatch = attrs.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    var classMatch = attrs.match(/\bclass\s*=\s*["']([^"']*)["']/i);
+    var ownerMatch = attrs.match(/\bdata-owner\s*=\s*["']renderer["']/i);
     if (!hrefMatch || !classMatch || !ownerMatch) return false;
-    var classes = String(classMatch[1] || '').split(/\\s+/);
+    var classes = String(classMatch[1] || '').split(/\s+/);
     if (classes.indexOf('amazon-cta') === -1) return false;
     var href = String(hrefMatch[1] || hrefMatch[2] || hrefMatch[3] || '')
       .replace(/&amp;/gi, '&').trim();
@@ -749,7 +749,7 @@ function status() {
       return p && p.slug && p.review_required === true && !isPublished_(p.slug);
     }).length;
     var legacy = allPosts.filter(function (p) {
-      return p && Number(p.layout_version || 0) < 3 && !isPublished_(p.slug);
+      return p && Number(p.layout_version || 0) < 4 && !isPublished_(p.slug);
     }).length;
     Logger.log('Queue total     : ' + (index.count || 0));
     Logger.log('Queue pending v4: ' + pending);
