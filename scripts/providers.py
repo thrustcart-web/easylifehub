@@ -273,7 +273,9 @@ def generate_json(ai_cfg: dict, system: str, user: str, timeout_note: str = "",
             log.warning("  provider %s crashed: %s", name, str(exc)[:200])
     if not order:
         errors.append("all providers are temporarily excluded after previous validation failures")
-    raise AIError("all providers failed -> " + " | ".join(errors))
+    failure = AIError("all providers failed -> " + " | ".join(errors))
+    failure.attempted_providers = attempted
+    raise failure
 
 
 
