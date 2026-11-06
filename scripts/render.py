@@ -137,7 +137,7 @@ def _amazon_button(url: str, label: str = "View on Amazon", expected_tag: str = 
         '<div class="amazon-cta-wrap" style="text-align:center;margin:28px 0;">'
         f'<a class="amazon-cta" data-owner="renderer" href="{safe_url}" target="_blank" '
         'rel="nofollow sponsored noopener" '
-        'style="display:inline-block;background-color:#2e7d32;color:#ffffff;'
+        'style="display:inline-block;background-color:#2e8b27;color:#ffffff;'
         'padding:14px 32px;font-size:16px;font-weight:bold;text-decoration:none;'
         'border-radius:6px;">'
         f'{safe_label}</a></div>'
