@@ -1,7 +1,7 @@
 {
   "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
   "title": "Runner Rug vs Area Rug: Choosing the Right Shape for Your Space",
-  "meta_description": "Compare a hallway runner rug with a larger area rug, focusing on proportions, placement, materials, and how each format fits a room.",
+  "meta_description": "Compare the Rugshop Traditional Medallion Runner Rug and Trademoon Jute and Cotton Area Rug to find the right floor covering shape for your home layout.",
   "template": "comparison",
   "niche": "home decor",
   "keyword": "Runner Rug vs Area Rug",
@@ -9,9 +9,9 @@
     "Reviews",
     "Home Decor"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 669,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 722,
   "items": [
     {
       "name": "Rugshop Traditional Medallion Runner Rug",
@@ -31,12 +31,8 @@
     }
   ],
   "html_file": "comparison-runner-rug-vs-area-rug-d04329b0c6d2.html",
-  "category_label": "Home Decor",
-  "category_url": "/search/label/Home%20Decor",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

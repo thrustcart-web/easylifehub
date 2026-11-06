@@ -1,7 +1,7 @@
 {
   "slug": "bestof-home-office-organiser-525dc4fb9a20",
   "title": "5 Home Office Essentials for a More Functional Workspace",
-  "meta_description": "Explore five useful home office essentials for organizing a desk, supporting comfortable work, keeping devices connected, and managing digital files.",
+  "meta_description": "Discover five core items for a functional workspace, including a weekly planner, l-shaped desk, ergonomic chair, webcam, and external storage.",
   "template": "bestof",
   "niche": "home office",
   "keyword": "Home Office Essentials",
@@ -9,58 +9,54 @@
     "Reviews",
     "Home Office"
   ],
-  "source": "template",
-  "provider": "",
-  "words": 836,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 883,
   "items": [
     {
       "name": "Desk Planner",
       "asin": "B0CZNZHTYZ",
-      "search_term": "Weekly Desk Planner 8.5x11",
-      "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
       "asin_verified": true,
+      "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+      "search_term": "Weekly Desk Planner 8.5x11",
       "url": "https://www.amazon.com/dp/B0CZNZHTYZ?tag=qalok0c-20"
     },
     {
       "name": "L Shaped Desk",
       "asin": "B0FVXMDM4L",
-      "search_term": "Pamray 40 Inch L Shaped Computer Desk",
-      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
       "asin_verified": true,
+      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+      "search_term": "Pamray 40 Inch L Shaped Computer Desk",
       "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20"
     },
     {
       "name": "Mesh Office Chair",
       "asin": "B0DPHLWNBG",
-      "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
-      "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
       "asin_verified": true,
+      "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
+      "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
       "url": "https://www.amazon.com/dp/B0DPHLWNBG?tag=qalok0c-20"
     },
     {
       "name": "Webcam",
       "asin": "B085TFF7M1",
-      "search_term": "Logitech C920x HD Pro Webcam",
-      "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
       "asin_verified": true,
+      "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+      "search_term": "Logitech C920x HD Pro Webcam",
       "url": "https://www.amazon.com/dp/B085TFF7M1?tag=qalok0c-20"
     },
     {
       "name": "Portable SSD",
       "asin": "B0874XN4D8",
-      "search_term": "Samsung T7 Portable SSD 1TB",
-      "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
       "asin_verified": true,
+      "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+      "search_term": "Samsung T7 Portable SSD 1TB",
       "url": "https://www.amazon.com/dp/B0874XN4D8?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-home-office-organiser-525dc4fb9a20.html",
-  "category_label": "Home Office",
-  "category_url": "/search/label/Home%20Office",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

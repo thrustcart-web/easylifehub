@@ -1,7 +1,7 @@
 {
   "slug": "review-car-dash-mat-0dee1955dee4",
   "title": "Dashboard Cover for Chevy Cavalier 1995–2005: Fit and Material Checks",
-  "meta_description": "Review the dashboard cover listed for the 1995–2005 Chevy Cavalier, focusing on vehicle fit, dashboard coverage, material checks, and installation details.",
+  "meta_description": "Evaluate the Chevy Cavalier dashboard cover designed for 1995-2005 models. Review fit specifications, carpet material facts, and installation steps.",
   "template": "review",
   "niche": "car",
   "keyword": "Chevy Cavalier Dashboard Cover",
@@ -9,25 +9,22 @@
     "Reviews",
     "Car"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 704,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 687,
   "items": [
     {
       "name": "Chevy Cavalier Dashboard Cover",
       "asin": "B07V68DRDV",
-      "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
-      "verified_product_title": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46",
       "asin_verified": true,
+      "verified_product_title": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46",
+      "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
       "url": "https://www.amazon.com/dp/B07V68DRDV?tag=qalok0c-20"
     }
   ],
   "html_file": "review-car-dash-mat-0dee1955dee4.html",
-  "category_label": "Car",
-  "category_url": "/search/label/Car",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
-  "review_required": true,
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

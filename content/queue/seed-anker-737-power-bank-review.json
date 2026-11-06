@@ -1,7 +1,7 @@
 {
   "slug": "seed-anker-737-power-bank-review",
   "title": "Anker 737 Power Bank 24K Review: What I Would Check Before Buying",
-  "meta_description": "A 24,000mAh bank with 140W output is not for everyone. Here is who actually needs it, what the real compromises are, and what to verify first.",
+  "meta_description": "Read our independent buyer guide for the Anker 737 Power Bank 24K. Verify capacity, 140W output, 3-port setup, and digital display specs before purchasing.",
   "template": "review",
   "niche": "portable power",
   "keyword": "Anker 737 Power Bank 24K",
@@ -9,26 +9,22 @@
     "Reviews",
     "Portable Power"
   ],
-  "source": "seed",
-  "provider": "",
-  "words": 835,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 660,
   "items": [
     {
       "name": "Anker 737 Power Bank 24K",
       "asin": "B09VPHVT2Z",
-      "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-      "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display"
+      "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
+      "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
+      "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-anker-737-power-bank-review.html",
-  "category_label": "Portable Power",
-  "category_url": "/search/label/Portable%20Power",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

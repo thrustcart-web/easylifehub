@@ -1,7 +1,7 @@
 {
   "slug": "seed-espresso-vs-pourover",
   "title": "Espresso Machine vs Pour Over Coffee Maker: Choosing a Brewing Method",
-  "meta_description": "Compare a compact espresso machine with a manual pour over coffee maker by workflow, counter space, equipment, and the style of coffee you prefer.",
+  "meta_description": "Compare the Breville Bambino Espresso Machine and Maestri House Pour Over Coffee Maker to decide which brewing method fits your daily routine.",
   "template": "comparison",
   "niche": "coffee & espresso",
   "keyword": "Espresso Machine vs Pour Over Coffee Maker",
@@ -9,34 +9,30 @@
     "Reviews",
     "Coffee & Espresso"
   ],
-  "source": "seed",
-  "provider": "",
-  "words": 1012,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 625,
   "items": [
     {
       "name": "Breville Bambino Espresso Machine",
       "asin": "B0B1JPPG2L",
-      "search_term": "Breville BES450BSS Bambino Espresso Machine",
-      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
       "asin_verified": true,
+      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
+      "search_term": "Breville BES450BSS Bambino Espresso Machine",
       "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=qalok0c-20"
     },
     {
       "name": "Maestri House Pour Over Coffee Maker",
       "asin": "B0BZP1PRNK",
-      "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
-      "verified_product_title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
       "asin_verified": true,
+      "verified_product_title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
+      "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
       "url": "https://www.amazon.com/dp/B0BZP1PRNK?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-espresso-vs-pourover.html",
-  "category_label": "Coffee & Espresso",
-  "category_url": "/search/label/Coffee%20%26%20Espresso",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

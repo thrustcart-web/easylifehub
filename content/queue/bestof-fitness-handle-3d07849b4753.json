@@ -1,7 +1,7 @@
 {
   "slug": "bestof-fitness-handle-3d07849b4753",
   "title": "5 Home Fitness Gear Picks for Strength, Cardio, and Progress Tracking",
-  "meta_description": "Compare practical home fitness gear for strength work, cardio routines, workout organization, and tracking progress in one convenient space.",
+  "meta_description": "Explore five essential home fitness gear picks, including resistance bands, gym bags, smart scales, heart rate monitors, and adjustable benches.",
   "template": "bestof",
   "niche": "fitness",
   "keyword": "Home Fitness Gear",
@@ -9,57 +9,54 @@
     "Reviews",
     "Fitness"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 832,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 803,
   "items": [
     {
       "name": "Fit Simplify Resistance Bands",
       "asin": "B01AVDVHTI",
-      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
       "asin_verified": true,
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
       "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
     },
     {
       "name": "Gym Bag",
       "asin": "B0C5SPSRNG",
-      "search_term": "Sports Drawstring Backpack Gym Bag",
-      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
       "asin_verified": true,
+      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+      "search_term": "Sports Drawstring Backpack Gym Bag",
       "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=qalok0c-20"
     },
     {
       "name": "Smart Scale",
       "asin": "B0BFZVBGYH",
-      "search_term": "RENPHO Elis Go Travel Smart Scale",
-      "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
       "asin_verified": true,
+      "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
+      "search_term": "RENPHO Elis Go Travel Smart Scale",
       "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=qalok0c-20"
     },
     {
       "name": "Heart Rate Monitor",
       "asin": "B09SKZBZF8",
-      "search_term": "HS500 Heart Rate Monitor Chest Strap",
-      "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
       "asin_verified": true,
+      "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
+      "search_term": "HS500 Heart Rate Monitor Chest Strap",
       "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=qalok0c-20"
     },
     {
       "name": "Adjustable Weight Bench",
       "asin": "B07DNYSJ8W",
-      "search_term": "FLYBIRD Adjustable Weight Bench",
-      "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
       "asin_verified": true,
+      "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+      "search_term": "FLYBIRD Adjustable Weight Bench",
       "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-fitness-handle-3d07849b4753.html",
-  "category_label": "Fitness",
-  "category_url": "/search/label/Fitness",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
-  "review_required": true,
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

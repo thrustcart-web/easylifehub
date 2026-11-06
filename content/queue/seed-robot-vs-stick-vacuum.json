@@ -1,7 +1,7 @@
 {
   "slug": "seed-robot-vs-stick-vacuum",
   "title": "Robot Vacuum vs Cordless Stick Vacuum: Choosing for Your Floors",
-  "meta_description": "Compare a robot vacuum with a cordless stick vacuum by cleaning routine, floor layout, storage, and the level of control you want over each session.",
+  "meta_description": "Compare the Roborock Q5 Pro Robot Vacuum and Shark PowerDetect Stick Vacuum to find the right cleaning tool for your home layout and flooring types.",
   "template": "comparison",
   "niche": "home cleaning",
   "keyword": "Robot Vacuum vs Cordless Stick Vacuum",
@@ -9,34 +9,30 @@
     "Reviews",
     "Home Cleaning"
   ],
-  "source": "seed",
-  "provider": "",
-  "words": 928,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 774,
   "items": [
     {
       "name": "Roborock Q5 Pro Robot Vacuum",
       "asin": "B0C7VLHMQR",
-      "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-      "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
       "asin_verified": true,
+      "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
+      "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
       "url": "https://www.amazon.com/dp/B0C7VLHMQR?tag=qalok0c-20"
     },
     {
       "name": "Shark PowerDetect Stick Vacuum",
       "asin": "B0DBVW1RFW",
-      "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
-      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
       "asin_verified": true,
+      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
+      "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
       "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-robot-vs-stick-vacuum.html",
-  "category_label": "Home Cleaning",
-  "category_url": "/search/label/Home%20Cleaning",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

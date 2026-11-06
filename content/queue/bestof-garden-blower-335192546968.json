@@ -1,7 +1,7 @@
 {
   "slug": "bestof-garden-blower-335192546968",
   "title": "5 Garden Tools for Watering, Pruning, and Moving Supplies",
-  "meta_description": "Compare five practical garden tools for watering, pruning, planting, and moving supplies, with the key fit and setup checks to make before buying.",
+  "meta_description": "Explore five reliable garden tools for your outdoor space, including pruning shears, drip irrigation kits, hose reels, wheelbarrows, and raised beds.",
   "template": "bestof",
   "niche": "garden",
   "keyword": "Garden Tools",
@@ -9,55 +9,54 @@
     "Reviews",
     "Garden"
   ],
-  "source": "template",
-  "provider": "",
-  "words": 746,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 831,
   "items": [
     {
       "name": "Fiskars Pruning Shears",
       "asin": "B00002N66H",
-      "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
-      "verified_product_title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
       "asin_verified": true,
+      "verified_product_title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
+      "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
       "url": "https://www.amazon.com/dp/B00002N66H?tag=qalok0c-20"
     },
     {
       "name": "Rain Bird Drip Irrigation Kit",
       "asin": "B07QNM7575",
-      "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
-      "verified_product_title": "Rain Bird LNDDRIPKIT Drip Irrigation Landscape/Garden Watering Kit with Drippers, Micro-Bubblers, Micro-Sprays Standard Kit Landscape/Garden Kit",
       "asin_verified": true,
+      "verified_product_title": "Rain Bird LNDDRIPKIT Drip Irrigation Landscape/Garden Watering Kit with Drippers, Micro-Bubblers, Micro-Sprays Standard Kit Landscape/Garden Kit",
+      "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
       "url": "https://www.amazon.com/dp/B07QNM7575?tag=qalok0c-20"
     },
     {
       "name": "Liberty Garden Hose Reel",
       "asin": "B01I727FQO",
-      "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
-      "verified_product_title": "Liberty Garden 712 Single Arm Navigator Multi-Directional Garden Hose Reel",
       "asin_verified": true,
+      "verified_product_title": "Liberty Garden 712 Single Arm Navigator Multi-Directional Garden Hose Reel",
+      "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
       "url": "https://www.amazon.com/dp/B01I727FQO?tag=qalok0c-20"
     },
     {
       "name": "Marathon Yard Rover Wheelbarrow",
       "asin": "B0721CX298",
-      "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
-      "verified_product_title": "Marathon Yard Rover – 2 Tire Wheelbarrow Garden Cart - Green/Black",
       "asin_verified": true,
+      "verified_product_title": "Marathon Yard Rover – 2 Tire Wheelbarrow Garden Cart - Green/Black",
+      "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
       "url": "https://www.amazon.com/dp/B0721CX298?tag=qalok0c-20"
     },
     {
       "name": "Land Guard Raised Garden Bed",
       "asin": "B09C8HR4Z9",
-      "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-      "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
       "asin_verified": true,
+      "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+      "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
       "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-garden-blower-335192546968.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

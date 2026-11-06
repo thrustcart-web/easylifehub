@@ -1,7 +1,7 @@
 {
   "slug": "seed-standing-desk-guide",
   "title": "Pamray L-Shaped Desk Review: Fit and Workspace Planning",
-  "meta_description": "A practical look at the Pamray L-shaped desk, including room measurements, reversible storage layout, monitor placement, and setup checks.",
+  "meta_description": "Explore the Pamray L Shaped Computer Desk with Reversible Side Storage Shelves. Learn practical layout steps and fit checks for compact home offices.",
   "template": "review",
   "niche": "home office",
   "keyword": "Pamray L Shaped Desk",
@@ -9,26 +9,22 @@
     "Reviews",
     "Home Office"
   ],
-  "source": "seed",
-  "provider": "",
-  "words": 908,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 749,
   "items": [
     {
       "name": "Pamray L Shaped Desk",
       "asin": "B0FVXMDM4L",
-      "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
-      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
       "asin_verified": true,
+      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+      "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
       "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-standing-desk-guide.html",
-  "category_label": "Home Office",
-  "category_url": "/search/label/Home%20Office",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }
