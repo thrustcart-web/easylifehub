@@ -1,0 +1,75 @@
+name: test-openrouter-generation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-openrouter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Make one tiny request to the free OpenRouter router
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "ERROR: OPENROUTER_API_KEY is missing or empty."
+            exit 1
+          fi
+
+          HTTP_STATUS=$(curl --silent --show-error \
+            --max-time 45 \
+            --output /tmp/openrouter-response.json \
+            --write-out "%{http_code}" \
+            --header "Authorization: Bearer $OPENROUTER_API_KEY" \
+            --header "HTTP-Referer: https://www.easylifehub.top" \
+            --header "X-Title: Easy Life Hub" \
+            --header "Content-Type: application/json" \
+            --request POST \
+            --data-binary '{"model":"openrouter/free","messages":[{"role":"user","content":"Reply with exactly OPENROUTER_OK"}],"max_tokens":32}' \
+            "https://openrouter.ai/api/v1/chat/completions")
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "ERROR: OpenRouter free-model test returned HTTP $HTTP_STATUS."
+            echo "Response body hidden; API key and account details are not printed."
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("/tmp/openrouter-response.json").read_text(encoding="utf-8"))
+          choices = data.get("choices") or []
+          message = (choices[0].get("message") or {}) if choices else {}
+          content = message.get("content")
+          if isinstance(content, str):
+              response_text = content
+          elif isinstance(content, list):
+              response_text = "\\n".join(
+                  part.get("text", "")
+                  for part in content
+                  if isinstance(part, dict) and isinstance(part.get("text"), str)
+              )
+          else:
+              response_text = ""
+
+          if "OPENROUTER_OK" in response_text:
+              print("SUCCESS: OpenRouter generated the expected tiny test response.")
+              print("Selected model: " + str(data.get("model") or "not reported"))
+              print("Exactly one request was made. No article or product lookup was run.")
+              raise SystemExit(0)
+
+          print("ERROR: HTTP 200 was returned, but the expected text was missing.")
+          print("Safe response shape: " + json.dumps({
+              "topKeys": sorted(data.keys()),
+              "choiceCount": len(choices),
+              "messageKeys": sorted(message.keys()),
+              "contentType": type(content).__name__,
+              "finishReason": choices[0].get("finish_reason") if choices else None,
+          }))
+          raise SystemExit(1)
+          PY
