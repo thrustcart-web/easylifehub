@@ -16,30 +16,32 @@
     {
       "name": "Streaming Camera",
       "asin": "B0CZ6XY78Y",
-      "search_term": "streaming camera for home offices",
-      "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20",
+      "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
+      "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20",
       "asin_verified": true,
       "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
     },
     {
       "name": "Wireless Earbuds",
       "asin": "B09FT58QQP",
-      "search_term": "wireless earbuds for home offices",
-      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20",
+      "search_term": "TOZO A1 Wireless Earbuds",
+      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20",
       "asin_verified": true,
       "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
     },
     {
-      "name": "USB Charger",
-      "asin": "",
-      "search_term": "usb charger for home offices",
-      "url": "https://www.amazon.com/s?k=usb+charger+for+home+offices&tag=qalok0c-20"
+      "name": "Anker Charger",
+      "asin": "B08T5QN2TR",
+      "search_term": "Anker 715 Charger Nano II 65W",
+      "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger"
     },
     {
       "name": "E-reader",
       "asin": "B0GSZX5MWR",
-      "search_term": "e-reader for students",
-      "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20",
+      "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
+      "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20",
       "asin_verified": true,
       "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
     }
@@ -52,5 +54,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
