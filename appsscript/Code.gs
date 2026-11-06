@@ -217,47 +217,31 @@ function appendRelated_(post, meta, labels) {
  * so this cannot contribute to a spam-pattern signal.
  */
 function syncCategoryPage() {
-  var hubPath = String(cfg('CATEGORY_HUB') || '');
-  if (!hubPath) return null;
-  var html;
-  try {
-    html = fetchText_(cfg('RAW_BASE') + '/' + hubPath);
-  } catch (e) {
-    Logger.log('category hub not published yet (' + e + ')');
-    return null;
-  }
-  if (!html || html.indexOf('404') === 0) { Logger.log('category hub: file not found'); return null; }
-  html = absolutizeLinks_(html);
+  Logger.log('Category hub page creation is disabled.');
+  return null;
+}
 
-  var title = String(cfg('CATEGORY_PAGE') || 'Browse All Categories');
+/**
+ * One-time cleanup for legacy pages created by the old category-hub workflow.
+ * Deletes only the exact generated title and completely empty untitled pages.
+ */
+function cleanupGeneratedCategoryPages() {
   var blogId = cfg('BLOG_ID');
-  var pages = [];
-  try {
-    pages = (bloggerCall_('GET', '/blogs/' + blogId + '/pages', { 'maxResults': 150 }).items) || [];
-  } catch (e) {
-    Logger.log('page list failed: ' + e);
-    return null;
-  }
-  var existing = null;
-  pages.forEach(function (pg) {
-    if (!existing && String(pg.title || '').toLowerCase() === title.toLowerCase()) existing = pg;
+  var pages = (bloggerCall_('GET', '/blogs/' + blogId + '/pages',
+    { maxResults: 150 }).items) || [];
+  var deleted = 0;
+  pages.forEach(function(page) {
+    var title = String(page.title || '').trim().toLowerCase();
+    var content = String(page.content || '').replace(/<[^>]*>/g, '').trim();
+    var isGeneratedHub = title === 'browse all categories';
+    var isEmptyUntitled = !title && !content;
+    if (!page.id || (!isGeneratedHub && !isEmptyUntitled)) return;
+    bloggerCall_('DELETE', '/blogs/' + blogId + '/pages/' + page.id);
+    deleted++;
+    Logger.log('Deleted legacy generated page: ' + (page.title || '(empty page)'));
   });
-  try {
-    if (existing) {
-      var out = bloggerCall_('PUT', '/blogs/' + blogId + '/pages/' + existing.id,
-                             { title: title, content: html });
-      Logger.log('Category page updated: ' + out.url);
-      return out;
-    }
-    var created = bloggerCall_('POST', '/blogs/' + blogId + '/pages',
-                               { title: title, content: html });
-    Logger.log('Category page created: ' + created.url);
-    Logger.log('Add it to your menu: Blogger -> Layout -> Pages gadget -> ' + title);
-    return created;
-  } catch (e) {
-    Logger.log('category page failed: ' + e);
-    return null;
-  }
+  Logger.log('Legacy category/empty page cleanup complete. Deleted=' + deleted);
+  return deleted;
 }
 
 // ------------------------------------------------------------- queue state --
@@ -422,7 +406,6 @@ function publishNext_(howMany) {
     html = sanitizePostHtml_(html);
     var post = insertPost_(meta.title, html, labels);
     // bonuses - never allowed to break the publish itself
-    try { syncCategoryPage(); } catch (e) { Logger.log('hub: ' + e); }
 
     var published = getPublished_();
     published.push({
@@ -565,7 +548,6 @@ function testConnection() {
     Logger.log('OK  queue     : ' + (index.count || 0) + ' articles waiting');
     Logger.log('OK  published : ' + getPublished_().length + ' so far');
     Logger.log('OK  blog url  : ' + (blogUrl_() || '(unknown)'));
-    try { syncCategoryPage(); } catch (e) { Logger.log('WARN category page: ' + e); }
     Logger.log('');
     Logger.log('Everything works. Run installTrigger() if you have not, then forget about it.');
   } catch (err) {

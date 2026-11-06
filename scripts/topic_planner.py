@@ -855,7 +855,7 @@ def next_topics(state: dict | None = None, count: int = 3) -> list[dict]:
 
         elif template == "bestof":
             rng.shuffle(niche_bases)
-            picks = niche_bases[: rng.randint(4, 6)]
+            picks = niche_bases[:3]
             flat = by_niche[niche]
             items = [_item(_variants_for(flat[b], "bestof"), b, niche, rng) for b in picks]
             audience = next((i["audience"] for i in items if i.get("audience")), "")

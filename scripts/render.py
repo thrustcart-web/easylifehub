@@ -20,7 +20,6 @@ from urllib.parse import urlsplit
 from affiliate import Affiliate, inline_affiliate_links
 from util import QUEUE_DIR, log, slugify, word_count
 
-import categories as cat_mod
 
 POST_CSS = """
 <style>
@@ -401,10 +400,7 @@ def render_markdown(article: dict, topic: dict, aff: Affiliate) -> str:
         for item in article["faq"]:
             lines += [f"**{item['q']}**", "", item["a"], ""]
     lines += ["## Conclusion", ""] + list(article.get("conclusion", [])) + [""]
-    lines += ["---", "", "### Category", "",
-              f"- More in {cat_mod.label_of(topic.get('niche', ''))}: {cat_mod.label_url(topic.get('niche', ''))}",
-              "- All categories: /p/categories.html", "",
-              "### Links", ""]
+    lines += ["---", "", "### Product Links", ""]
     for item in topic.get("items", []):
         lines.append(f"- {item.get('display_name') or item.get('name')}: {aff.url_for(item)}")
     lines += ["", aff.disclosure, ""]
@@ -433,15 +429,14 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             {
             "name": i.get("display_name") or i.get("name"),
             "asin": i.get("asin", ""),
+            "asin_verified": i.get("asin_verified") is True,
+            "verified_product_title": i.get("verified_product_title", ""),
             "search_term": i.get("search_term", ""),
             "url": aff.url_for(i),
         }
             for i in topic.get("items", [])
         ],
         "html_file": f"{slug}.html",
-        "category_label": cat_mod.label_of(topic.get("niche", "")),
-        "category_url": cat_mod.label_url(topic.get("niche", "")),
-        "hub_page": "/p/browse-all-categories.html",
         "layout_version": 3,
         "draft": False,
         # Offline fallback copy is useful as a starting point, but it has not

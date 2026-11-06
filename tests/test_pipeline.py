@@ -180,6 +180,8 @@ class TestProductResolution(unittest.TestCase):
 
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
+        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             items = [{
                 "display_name": "Marbrasse Pen Organizer",
@@ -193,14 +195,32 @@ class TestProductResolution(unittest.TestCase):
         finally:
             product_resolver._search_amazon = original_search
             product_resolver._save_cache = original_save
+            if old_spend is None:
+                os.environ.pop("APIFY_SPEND_ENABLED", None)
+            else:
+                os.environ["APIFY_SPEND_ENABLED"] = old_spend
 
     def test_missing_apify_token_blocks_unverified_products(self):
-        with self.assertRaisesRegex(product_resolver.ProductResolutionError, "APIFY_API_TOKEN"):
+        with self.assertRaisesRegex(product_resolver.ProductResolutionError, "TEST_API"):
             product_resolver.resolve_items(
                 [{"display_name": "A Product", "name": "A Product"}],
                 api_token="",
                 cache={},
             )
+
+    def test_spend_is_disabled_without_explicit_opt_in(self):
+        old = os.environ.get("APIFY_SPEND_ENABLED")
+        os.environ.pop("APIFY_SPEND_ENABLED", None)
+        try:
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "spending is disabled"):
+                product_resolver.resolve_items(
+                    [{"display_name": "A Product", "name": "A Product"}],
+                    api_token="fake-token",
+                    cache={},
+                )
+        finally:
+            if old is not None:
+                os.environ["APIFY_SPEND_ENABLED"] = old
 
     def test_apify_search_omits_delivery_location_and_caps_cost(self):
         class FakeResponse:
@@ -228,10 +248,10 @@ class TestProductResolution(unittest.TestCase):
         finally:
             product_resolver.request.urlopen = original_urlopen
 
-        self.assertIn("maxTotalChargeUsd=0.05", captured["url"])
+        self.assertIn("maxTotalChargeUsd=0.015", captured["url"])
         self.assertNotIn("countryCode", captured["payload"])
         self.assertNotIn("zipCode", captured["payload"])
-        self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 5)
+        self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 3)
         self.assertFalse(captured["payload"]["scrapeProductDetails"])
 
     def test_apify_account_limit_error_stops_remaining_product_searches(self):
@@ -245,6 +265,8 @@ class TestProductResolution(unittest.TestCase):
             )
 
         product_resolver._search_amazon = blocked_search
+        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "403"):
                 product_resolver.resolve_items(
@@ -258,6 +280,10 @@ class TestProductResolution(unittest.TestCase):
                 )
         finally:
             product_resolver._search_amazon = original_search
+            if old_spend is None:
+                os.environ.pop("APIFY_SPEND_ENABLED", None)
+            else:
+                os.environ["APIFY_SPEND_ENABLED"] = old_spend
 
         self.assertEqual(calls, ["desk organizer"])
 
@@ -508,6 +534,18 @@ class TestAffiliateTagGuard(unittest.TestCase):
         cfg["affiliate"]["tag"] = ""
         self.assertFalse(affiliate_tag_ready(cfg))
 
+
+    def test_queue_metadata_records_asin_verification(self):
+        import inspect
+        source = inspect.getsource(render_mod.save_article)
+        self.assertIn('"asin_verified": i.get("asin_verified") is True', source)
+        self.assertIn('"verified_product_title": i.get("verified_product_title", "")', source)
+
+    def test_article_archive_has_no_category_hub_links(self):
+        import inspect
+        source = inspect.getsource(render_mod.render_markdown)
+        self.assertNotIn("Browse All Categories", source)
+        self.assertNotIn("/p/categories.html", source)
 
 class TestEndToEnd(unittest.TestCase):
     def test_offline_pipeline_produces_publishable_html(self):

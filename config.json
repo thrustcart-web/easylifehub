@@ -121,8 +121,8 @@
     "max_posts_per_day_hard_cap": 6
   },
   "categories": {
-    "_comment": "صفحة الأقسام (Categories hub) بتتبنى تلقائيًا في كل تشغيل، و Apps Script بينشرها كـ Page على بلوجر.",
-    "enabled": true,
+    "_comment": "Category hub page generation and publishing are disabled.",
+    "enabled": false,
     "hub_path": "content/categories/index.html",
     "page_title": "Browse All Categories",
     "related_limit": 4,
