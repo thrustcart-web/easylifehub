@@ -1,0 +1,63 @@
+name: test-groq-generation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-groq:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Make one tiny Groq generation request
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "ERROR: GROQ_API_KEY is missing or empty."
+            exit 1
+          fi
+
+          HTTP_STATUS=$(curl --silent --show-error \
+            --max-time 45 \
+            --output /tmp/groq-response.json \
+            --write-out "%{http_code}" \
+            --header "Authorization: Bearer $GROQ_API_KEY" \
+            --header "Content-Type: application/json" \
+            --request POST \
+            --data-binary '{"model":"openai/gpt-oss-120b","messages":[{"role":"user","content":"Reply with exactly GROQ_OK"}],"max_tokens":32}' \
+            "https://api.groq.com/openai/v1/chat/completions")
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "ERROR: Groq tiny generation returned HTTP $HTTP_STATUS."
+            echo "Response body hidden; API key and account details are not printed."
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("/tmp/groq-response.json").read_text(encoding="utf-8"))
+          choices = data.get("choices") or []
+          message = (choices[0].get("message") or {}) if choices else {}
+          content = message.get("content")
+          if isinstance(content, str) and "GROQ_OK" in content:
+              print("SUCCESS: Groq generated the expected tiny test response.")
+              print("Selected model: " + str(data.get("model") or "not reported"))
+              print("Exactly one request was made. No article or product lookup was run.")
+              raise SystemExit(0)
+
+          print("ERROR: Groq returned HTTP 200 without the expected test token.")
+          print("Safe response shape: " + json.dumps({
+              "topKeys": sorted(data.keys()),
+              "choiceCount": len(choices),
+              "messageKeys": sorted(message.keys()),
+              "contentType": type(content).__name__,
+              "finishReason": choices[0].get("finish_reason") if choices else None,
+              "model": data.get("model"),
+          }))
+          raise SystemExit(1)
+          PY
