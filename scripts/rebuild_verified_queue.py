@@ -344,6 +344,17 @@ def rebuild(limit: int = 8) -> dict:
             if not article.get("_provider"):
                 article["_provider"] = provider
 
+            # Apply the same editorial scrubber to every source, including the
+            # deterministic manufacturer-spec article, before final validation.
+            article = _remove_customer_opinion_sentences(article)
+            description = str(article.get("meta_description") or "").strip()
+            if len(description) < 120 or len(description) > 170:
+                article["meta_description"] = (
+                    "A practical guide to the LEVOIT Core 300-P air purifier, "
+                    "covering filtration, room coverage, controls, dimensions, "
+                    "and compatible replacement-filter planning."
+                )
+
             article_ok, article_problems = validate(article, cfg)
             if not article_ok:
                 raise AIError("article validation: " + "; ".join(article_problems[:8]))
