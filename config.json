@@ -74,8 +74,7 @@
     "primary": "groq",
     "fallbacks": [
       "openrouter",
-      "gemini",
-      "mistral"
+      "gemini"
     ],
     "temperature": 0.85,
     "max_output_tokens": 6000,
