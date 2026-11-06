@@ -7,8 +7,7 @@ without a human reading it*. That means:
   * the headline is assigned by the planner, not invented by the model - that is
     what stops 300 posts from sharing one title formula
   * explicit bans on fabricated prices, ratings, fake lab data and hype words
-  * mandatory trade-offs (a review with no negatives reads as an advert, and
-    both Google's classifiers and human readers punish that)
+  * practical, evidence-based buyer guidance without fabricated product claims
 """
 from __future__ import annotations
 
@@ -355,11 +354,11 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
 
 
 def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
-    """AI-first writing with provider rotation and validation retries."""
+    """AI-first writing with one pass through independent providers."""
     ai_cfg = cfg.get("ai", {})
     system, user = build_prompts(topic, cfg)
     active_providers = available_providers(ai_cfg)
-    attempts = max(int(ai_cfg.get("retries", 2)) + 1, len(active_providers), 1)
+    attempts = max(len(active_providers), 1)
     tried_providers: set[str] = set()
     last_problems: list[str] = []
 
@@ -372,36 +371,25 @@ def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
         try:
             raw, provider, attempted = generate_json(
                 ai_cfg, system, user,
-                timeout_note=f"(attempt {attempt}/{attempts})",
+                timeout_note=f"(provider pass {attempt}/{attempts})",
                 exclude_providers=tried_providers,
                 return_attempted=True,
             )
             tried_providers.update(attempted)
         except AIError as exc:
             tried_providers.update(getattr(exc, "attempted_providers", []))
-            log.warning("  AI provider chain failed (attempt %d): %s", attempt, str(exc)[:220])
-            if active_providers and all(p in tried_providers for p in active_providers):
-                tried_providers.clear()
-            if attempt == attempts:
-                raise
-            continue
-        except Exception as exc:  # noqa: BLE001
-            log.warning("  provider crashed (attempt %d): %s: %s",
-                        attempt, type(exc).__name__, str(exc)[:160])
-            if attempt == attempts:
-                raise AIError(f"{type(exc).__name__}: {exc}") from exc
-            continue
+            # generate_json has already tried every remaining configured source.
+            # _post_json handles short transient retries; do not repeat a quota-
+            # exhausted provider chain for the same article.
+            raise
 
         try:
             article = normalise(raw, topic)
             ok, problems = validate(article, cfg)
         except Exception as exc:  # noqa: BLE001 - malformed output is one provider's failure
-            log.warning("  could not read model reply (attempt %d): %s: %s",
-                        attempt, type(exc).__name__, str(exc)[:160])
-            if attempt == attempts:
-                raise AIError(f"unusable model reply: {type(exc).__name__}: {exc}") from exc
-            if active_providers and all(p in tried_providers for p in active_providers):
-                tried_providers.clear()
+            log.warning("  could not read model reply from %s: %s: %s",
+                        provider, type(exc).__name__, str(exc)[:160])
+            last_problems = [f"unusable model reply: {type(exc).__name__}: {exc}"]
             continue
 
         if ok:
@@ -409,17 +397,13 @@ def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
             return article, provider
 
         last_problems = problems
-        log.warning("  validation failed from %s (attempt %d): %s",
-                    provider, attempt, "; ".join(problems[:5]))
+        log.warning("  validation failed from %s: %s",
+                    provider, "; ".join(problems[:5]))
         user += (
             "\n\nYour previous attempt was rejected for: "
             + "; ".join(problems[:8])
             + "\nFix every one of those and return the corrected JSON object only."
         )
-        # Move to a different API source before spending another retry on the
-        # same provider. If all configured sources have been tried, start a
-        # fresh round so a single-provider setup can still retry.
-        if active_providers and all(p in tried_providers for p in active_providers):
-            tried_providers.clear()
+        # Next iteration excludes the provider that returned invalid content.
 
     raise AIError("AI output failed validation: " + "; ".join(last_problems[:6]))
