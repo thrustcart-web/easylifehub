@@ -1,10 +1,10 @@
 {
   "slug": "seed-espresso-vs-pourover",
-  "title": "Espresso Machine or Pour Over Kit? Choosing Between Two Good Options",
-  "meta_description": "These produce genuinely different drinks and suit genuinely different mornings. Here is the decision, made on maintenance, cost and taste rather than specs.",
+  "title": "Espresso Machine vs Pour Over Coffee Maker: Choosing a Brewing Method",
+  "meta_description": "Compare a compact espresso machine with a manual pour over coffee maker by workflow, counter space, equipment, and the style of coffee you prefer.",
   "template": "comparison",
   "niche": "coffee & espresso",
-  "keyword": "espresso machine vs pour over",
+  "keyword": "Espresso Machine vs Pour Over Coffee Maker",
   "labels": [
     "Reviews",
     "Coffee & Espresso"
@@ -14,16 +14,20 @@
   "words": 1012,
   "items": [
     {
-      "name": "Espresso Machine",
-      "asin": "",
-      "search_term": "home espresso machine with milk frother for beginners",
-      "url": "https://www.amazon.com/s?k=home+espresso+machine+with+milk+frother+for+beginners&tag=qalok0c-20"
+      "name": "Breville Bambino Espresso Machine",
+      "asin": "B0B1JPPG2L",
+      "search_term": "Breville BES450BSS Bambino Espresso Machine",
+      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=qalok0c-20"
     },
     {
-      "name": "Pour Over Kit",
-      "asin": "",
-      "search_term": "pour over coffee kit with gooseneck kettle and scale",
-      "url": "https://www.amazon.com/s?k=pour+over+coffee+kit+with+gooseneck+kettle+and+scale&tag=qalok0c-20"
+      "name": "Maestri House Pour Over Coffee Maker",
+      "asin": "B0BZP1PRNK",
+      "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
+      "verified_product_title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0BZP1PRNK?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-espresso-vs-pourover.html",
@@ -34,5 +38,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
