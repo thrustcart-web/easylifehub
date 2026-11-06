@@ -173,6 +173,9 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
     fields = []
     for item in items:
         bits = [f"product: {item.get('display_name') or item.get('name')}"]
+        verified_title = item.get("verified_product_title")
+        if verified_title:
+            bits.append(f"verified Amazon listing title (confirmed listing wording only): {verified_title}")
         for key in ("search_term", "asin", "niche", "feature", "audience", "notes"):
             value = item.get(key)
             if value:
@@ -188,7 +191,7 @@ REQUIRED TITLE (use verbatim as the "title" value): "{planned_title}"
 
 TOPIC DATA - this is the evidence currently available. Do not invent beyond it. You may explain general
 category-selection principles, but clearly distinguish those principles from facts about the named product.
-If verified source notes are supplied, rely only on those notes for product-specific claims:
+If a verified Amazon listing title is supplied, treat its wording as the only confirmed product-specific listing evidence; do not infer materials, dimensions, compatibility, performance, warranty, included accessories, safety, or test results from a name or category. If verified source notes are supplied, rely only on those notes for product-specific claims:
 {chr(10).join(fields)}
 
 Niche: {topic.get('niche', 'general')}
