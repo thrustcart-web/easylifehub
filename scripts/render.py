@@ -474,7 +474,7 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             for i in topic.get("items", [])
         ],
         "html_file": f"{slug}.html",
-        "layout_version": 3,
+        "layout_version": 4,
         "draft": False,
         # Offline fallback copy is useful as a starting point, but it has not
         # been independently fact-checked; keep it out of automatic publishing.
