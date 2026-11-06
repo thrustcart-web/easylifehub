@@ -54,7 +54,7 @@
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
-      "review_required": false
+      "review_required": true
     },
     {
       "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
@@ -758,7 +758,7 @@
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
-      "review_required": false
+      "review_required": true
     },
     {
       "slug": "review-foldable-daypack-2da57045820c",
@@ -788,7 +788,7 @@
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
-      "review_required": false
+      "review_required": true
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
