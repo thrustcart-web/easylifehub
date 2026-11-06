@@ -600,6 +600,42 @@ class TestAIPath(unittest.TestCase):
         self.assertFalse(ok)
         self.assertTrue(any("short" in p or "sections" in p for p in problems), problems)
 
+    def test_gemini_tries_stable_model_fallback_after_503(self):
+        calls = []
+        original_post_json = providers._post_json
+        old_key = os.environ.get("GEMINI_API_KEY")
+        os.environ["GEMINI_API_KEY"] = "fake"
+
+        def fake_post_json(url, payload, headers, timeout=180):
+            calls.append((url, payload, headers))
+            if "gemini-3.8-flash" in url:
+                raise providers.AIError("HTTP 503: temporarily overloaded")
+            return {
+                "candidates": [{
+                    "content": {"parts": [{"text": json.dumps(self.GOOD)}]}
+                }]
+            }
+
+        providers._post_json = fake_post_json
+        try:
+            ai_cfg = fresh_cfg()["ai"]
+            ai_cfg["primary"] = "gemini"
+            ai_cfg["fallbacks"] = []
+            parsed, used = providers.generate_json(ai_cfg, "system", "user")
+            self.assertEqual(used, "gemini")
+            self.assertEqual(parsed["title"], self.GOOD["title"])
+            self.assertEqual(len(calls), 2)
+            self.assertIn("gemini-3.8-flash", calls[0][0])
+            self.assertIn("gemini-3.7-flash", calls[1][0])
+            self.assertEqual(calls[1][2]["x-goog-api-key"], "fake")
+            self.assertNotIn("temperature", calls[1][1]["generationConfig"])
+        finally:
+            providers._post_json = original_post_json
+            if old_key is None:
+                os.environ.pop("GEMINI_API_KEY", None)
+            else:
+                os.environ["GEMINI_API_KEY"] = old_key
+
     def test_provider_fallback_chain(self):
         calls = []
 
