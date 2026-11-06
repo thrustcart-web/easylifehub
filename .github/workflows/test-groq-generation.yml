@@ -27,7 +27,7 @@ jobs:
             --header "Authorization: Bearer $GROQ_API_KEY" \
             --header "Content-Type: application/json" \
             --request POST \
-            --data-binary '{"model":"openai/gpt-oss-120b","messages":[{"role":"user","content":"Reply with exactly GROQ_OK"}],"max_tokens":32}' \
+            --data-binary '{"model":"openai/gpt-oss-120b","messages":[{"role":"user","content":"Reply with exactly GROQ_OK"}],"max_tokens":512}' \
             "https://api.groq.com/openai/v1/chat/completions")
 
           if [ "$HTTP_STATUS" != "200" ]; then
