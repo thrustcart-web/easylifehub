@@ -79,13 +79,13 @@ class Affiliate:
         klass = f' class="{cls}"' if cls else ""
         return f'<a href="{url}"{klass} rel="{self.rel}" target="_blank">{text}</a>'
 
-    def cta_button(self, asin: str = "", keyword: str = "", label: str = "Check Price on Amazon") -> str:
+    def cta_button(self, asin: str = "", keyword: str = "", label: str = "View Product on Amazon") -> str:
         url = self.product_url(asin, keyword)
         return (
             '<div class="cta-wrap">'
             f'<a class="cta-btn" href="{url}" rel="{self.rel}" target="_blank">'
             f'<span>{label}</span><span class="cta-arrow">&#8594;</span></a>'
-            '<small class="cta-note">Price and availability change often - the live price on Amazon is the one that counts.</small>'
+            '<small class="cta-note">See the current product details on Amazon.</small>'
             "</div>"
         )
 
