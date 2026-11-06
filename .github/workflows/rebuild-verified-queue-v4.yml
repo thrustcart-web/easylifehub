@@ -4,20 +4,26 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/rebuild_verified_queue.py'
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
-        description: 'Maximum existing articles to rebuild (hard cap: 8)'
+        description: 'Maximum existing articles to rebuild (hard cap: 16)'
         required: false
         type: number
-        default: 8
+        default: 16
 
 permissions:
   contents: write
 
 concurrency:
   group: generate
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   rebuild:
