@@ -14,16 +14,20 @@
   "words": 655,
   "items": [
     {
-      "name": "Fabric Glue",
-      "asin": "",
-      "search_term": "Fabric Glue",
-      "url": "https://www.amazon.com/s?k=Fabric+Glue&tag=qalok0c-20"
+      "name": "Aleene's Fabric Glue",
+      "asin": "B00178QSE6",
+      "search_term": "Aleene's Fabric Fusion Glue 4 oz",
+      "url": "https://www.amazon.com/dp/B00178QSE6?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible"
     },
     {
       "name": "Fabric Scissors",
-      "asin": "",
-      "search_term": "Fabric Scissors",
-      "url": "https://www.amazon.com/s?k=Fabric+Scissors&tag=qalok0c-20"
+      "asin": "B082LY2W2G",
+      "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
+      "url": "https://www.amazon.com/dp/B082LY2W2G?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft"
     }
   ],
   "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
@@ -33,5 +37,5 @@
   "layout_version": 3,
   "draft": false,
   "review_required": true,
-  "product_links_verified": false
+  "product_links_verified": true
 }
