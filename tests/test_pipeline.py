@@ -620,8 +620,11 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(used, "mistral")
         self.assertEqual(calls, ["openai/gpt-oss-120b", "mistral-large-latest"])
         self.assertEqual(parsed["title"], self.GOOD["title"])
+        isolated_fallback_cfg = dict(ai_cfg)
+        isolated_fallback_cfg["fallbacks"] = ["mistral"]
         parsed_again, used_again, attempted = providers.generate_json(
-            ai_cfg, "sys", "usr", exclude_providers={"groq"}, return_attempted=True
+            isolated_fallback_cfg, "sys", "usr",
+            exclude_providers={"groq"}, return_attempted=True
         )
         self.assertEqual(used_again, "mistral")
         self.assertEqual(attempted, ["mistral"])
