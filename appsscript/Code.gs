@@ -221,6 +221,29 @@ function syncCategoryPage() {
   return null;
 }
 
+/**
+ * One-time cleanup for legacy pages created by the old category-hub workflow.
+ * Deletes only the exact generated title and completely empty untitled pages.
+ */
+function cleanupGeneratedCategoryPages() {
+  var blogId = cfg('BLOG_ID');
+  var pages = (bloggerCall_('GET', '/blogs/' + blogId + '/pages',
+    { maxResults: 150 }).items) || [];
+  var deleted = 0;
+  pages.forEach(function(page) {
+    var title = String(page.title || '').trim().toLowerCase();
+    var content = String(page.content || '').replace(/<[^>]*>/g, '').trim();
+    var isGeneratedHub = title === 'browse all categories';
+    var isEmptyUntitled = !title && !content;
+    if (!page.id || (!isGeneratedHub && !isEmptyUntitled)) return;
+    bloggerCall_('DELETE', '/blogs/' + blogId + '/pages/' + page.id);
+    deleted++;
+    Logger.log('Deleted legacy generated page: ' + (page.title || '(empty page)'));
+  });
+  Logger.log('Legacy category/empty page cleanup complete. Deleted=' + deleted);
+  return deleted;
+}
+
 // ------------------------------------------------------------- queue state --
 function getPublished_() {
   var raw = P.getProperty('PUBLISHED') || '[]';
