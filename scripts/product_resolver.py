@@ -210,6 +210,11 @@ def resolve_items(
         try:
             rows = _search_amazon(search_term, api_token)
         except ProductResolutionError as exc:
+            # Authentication, exhausted usage, and rate-limit responses apply
+            # to the whole Apify account/run. Stop immediately instead of
+            # issuing one doomed request for every remaining product.
+            if re.search(r"Apify Actor HTTP (?:401|403|429)", str(exc)):
+                raise
             errors.append(str(exc))
             log.warning("Apify search failed | %s | %s", search_term, exc)
             continue
