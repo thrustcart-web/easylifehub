@@ -94,11 +94,11 @@ def resolved_items_for_meta(meta: dict, cache: dict, aff: Affiliate) -> list[dic
 def _remove_customer_opinion_sentences(value):
     """Remove complete sentences that refer to reviews, ratings, or buyer opinion."""
     if isinstance(value, str):
-        parts = re.split(r"(?<=[.!?])\\s+", value.strip())
+        parts = re.split(r"(?<=[.!?])\s+", value.strip())
         forbidden = re.compile(
-            r"\\b(?:customer|buyer|user|review|reviews|reviewer|reviewers|"
+            r"\b(?:customer|buyer|user|review|reviews|reviewer|reviewers|"
             r"rating|ratings|star|stars|testimonial|testimonials|feedback|"
-            r"popularity|popular|best-selling)\\b",
+            r"popularity|popular|best-selling)\b",
             re.I,
         )
         kept = [part.strip() for part in parts if part.strip() and not forbidden.search(part)]
