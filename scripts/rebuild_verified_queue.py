@@ -1,9 +1,8 @@
-"""Rebuild eligible legacy queue articles as current V4 without product discovery.
+"""Rebuild legacy queue articles as current V4 from existing verified products only.
 
-This workflow reuses only already verified ASINs and direct Amazon URLs from
-the queue. It never calls Apify, SerpApi, or any product-search endpoint.
-The AI writer uses the configured provider fallback chain and the current
-quality gate before an article replaces its existing queue files.
+No Apify, SerpApi, or product discovery endpoint is called. Products are
+accepted only when their exact ASIN/title pair is already verified in queue
+metadata or can be matched against the local Amazon ASIN cache.
 """
 from __future__ import annotations
 
@@ -19,57 +18,80 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from affiliate import Affiliate
 from ai_writer import AIError, write_article
-from product_resolver import _trusted_item
+from product_resolver import _load_cache, _normal_name, _trusted_item, title_matches
 from render import rebuild_index, render_html, save_article
 from safety import quality_gate
 from util import QUEUE_DIR, load_config, setup_logging, log
 
 
-def is_verified_item(item: dict, tag: str) -> bool:
-    """Accept only an existing verified ASIN and its exact tagged /dp/ URL."""
-    if not isinstance(item, dict) or not _trusted_item(item):
-        return False
-    asin = str(item.get("asin") or "").strip().upper()
-    url = str(item.get("url") or "").strip()
+def resolve_from_existing_data(item: dict, cache: dict, aff: Affiliate) -> dict | None:
+    """Return a verified item using queue data or the local cache; never searches."""
+    if not isinstance(item, dict):
+        return None
+    resolved = dict(item)
+    name = str(resolved.get("display_name") or resolved.get("name") or "").strip()
+    if not name:
+        return None
+    resolved["name"] = name
+    resolved["display_name"] = name
+
+    if not _trusted_item(resolved):
+        cache_keys = [_normal_name(name)]
+        search_term = str(resolved.get("search_term") or "").strip()
+        if search_term:
+            cache_keys.append(_normal_name(search_term))
+        cached = next(
+            (
+                cache.get(key)
+                for key in cache_keys
+                if isinstance(cache.get(key), dict)
+                and re.fullmatch(r"[A-Z0-9]{10}", str(cache[key].get("asin") or "").upper())
+                and title_matches(name, str(cache[key].get("title") or ""))
+            ),
+            None,
+        )
+        if cached is None:
+            return None
+        resolved["asin"] = str(cached["asin"]).upper()
+        resolved["asin_verified"] = True
+        resolved["verified_product_title"] = str(cached["title"])
+
+    if not _trusted_item(resolved):
+        return None
+
+    # Rebuild the tagged /dp/ URL from the verified ASIN and configured tag.
+    url = aff.url_for(resolved)
     try:
         parsed = urlsplit(url)
     except ValueError:
-        return False
+        return None
+    asin = str(resolved.get("asin") or "").upper()
     tags = parse_qs(parsed.query).get("tag", [])
-    return (
-        bool(re.fullmatch(r"[A-Z0-9]{10}", asin))
-        and parsed.scheme == "https"
+    if not (
+        parsed.scheme == "https"
         and parsed.hostname == "www.amazon.com"
         and parsed.path == f"/dp/{asin}"
-        and tags == [tag]
+        and tags == [aff.tag]
         and not parsed.fragment
-    )
+    ):
+        return None
+    resolved["url"] = url
+    return resolved
 
 
-def is_rebuild_candidate(meta: dict, tag: str) -> bool:
-    """Only rebuild old AI articles that already passed editorial and link gates."""
-    if not isinstance(meta, dict):
-        return False
-    if int(meta.get("layout_version") or 0) >= 4:
-        return False
-    if meta.get("review_required") is not False:
-        return False
-    if meta.get("product_links_verified") is not True:
-        return False
-    if not str(meta.get("source") or "").startswith("ai:"):
-        return False
+def resolved_items_for_meta(meta: dict, cache: dict, aff: Affiliate) -> list[dict] | None:
+    """Return all queue products only when every one is verified from local data."""
     items = meta.get("items") or []
-    return bool(items) and all(is_verified_item(item, tag) for item in items)
+    if not items:
+        return None
+    resolved = [resolve_from_existing_data(item, cache, aff) for item in items]
+    if any(item is None for item in resolved):
+        return None
+    return resolved
 
 
-def topic_from_meta(meta: dict) -> dict:
-    """Build a writer topic from the exact queue metadata, without discovery."""
-    items = []
-    for raw in meta["items"]:
-        item = dict(raw)
-        item["display_name"] = str(item.get("name") or "").strip()
-        item["name"] = item["display_name"]
-        items.append(item)
+def topic_from_meta(meta: dict, resolved_items: list[dict]) -> dict:
+    """Build a writer topic from queued metadata and verified local product data."""
     return {
         "slug": meta["slug"],
         "title": meta["title"],
@@ -78,13 +100,14 @@ def topic_from_meta(meta: dict) -> dict:
         "niche": meta.get("niche", "general"),
         "keyword": meta.get("keyword") or meta["title"],
         "labels": list(meta.get("labels") or []),
-        "items": items,
+        "items": resolved_items,
     }
 
 
 def rebuild(limit: int = 8) -> dict:
     cfg = load_config()
     aff = Affiliate(cfg)
+    cache = _load_cache()
     index_path = QUEUE_DIR / "index.json"
     if not index_path.exists():
         raise SystemExit("Queue index not found; nothing was changed.")
@@ -100,24 +123,27 @@ def rebuild(limit: int = 8) -> dict:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        if is_rebuild_candidate(meta, aff.tag):
-            candidates.append(meta)
+        if int(meta.get("layout_version") or 0) >= 4:
+            continue
+        resolved_items = resolved_items_for_meta(meta, cache, aff)
+        if resolved_items:
+            candidates.append((meta, resolved_items))
 
-    candidates = sorted(candidates, key=lambda row: str(row.get("slug")))[:max(1, min(int(limit), 8))]
+    candidates = sorted(candidates, key=lambda pair: str(pair[0].get("slug")))[:max(1, min(int(limit), 8))]
     if not candidates:
-        raise SystemExit("No eligible verified legacy AI articles were found.")
+        raise SystemExit("No legacy articles with fully verified existing product data were found.")
 
     results = []
-    for meta in candidates:
+    for meta, resolved_items in candidates:
         slug = meta["slug"]
         try:
-            topic = topic_from_meta(meta)
+            topic = topic_from_meta(meta, resolved_items)
             article, provider = write_article(topic, cfg)
             article["_source"] = f"ai:{provider}"
             article["_provider"] = provider
 
-            # render_html inserts only the two required green Amazon CTA buttons
-            # per verified item. It does not fetch images or product data.
+            # The fixed renderer creates only green, tracked Amazon product buttons.
+            # No images or product facts are fetched during this repair.
             html = render_html(article, topic, cfg, aff, hero="")
             ok, reasons = quality_gate(
                 html, article, cfg, expected_product_count=len(topic["items"])
@@ -142,7 +168,7 @@ def rebuild(limit: int = 8) -> dict:
                 "status": "rebuilt_v4",
             })
             log.info("V4 REBUILT | %s | %s | %s words", slug, provider, saved.get("words", 0))
-        except Exception as exc:  # one model or article failure must not discard the other upgrades
+        except Exception as exc:  # one provider or article failure must not discard the other upgrades
             results.append({"slug": slug, "status": "skipped", "reason": str(exc)[:240]})
             log.warning("V4 REBUILD SKIPPED | %s | %s", slug, str(exc)[:240])
 
