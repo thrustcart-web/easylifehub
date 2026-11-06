@@ -15,15 +15,19 @@
   "items": [
     {
       "name": "Streaming Camera",
-      "asin": "",
+      "asin": "B0CZ6XY78Y",
       "search_term": "streaming camera for home offices",
-      "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20"
+      "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
     },
     {
       "name": "Wireless Earbuds",
-      "asin": "",
+      "asin": "B09FT58QQP",
       "search_term": "wireless earbuds for home offices",
-      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20"
+      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
     },
     {
       "name": "USB Charger",
@@ -33,9 +37,11 @@
     },
     {
       "name": "E-reader",
-      "asin": "",
+      "asin": "B0GSZX5MWR",
       "search_term": "e-reader for students",
-      "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20"
+      "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
     }
   ],
   "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
@@ -45,5 +51,6 @@
   "draft": false,
   "layout_version": 3,
   "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check"
+  "migration_status": "layout_v3_needs_fact_check",
+  "product_links_verified": false
 }

@@ -15,27 +15,35 @@
   "items": [
     {
       "name": "Portable Power Station",
-      "asin": "",
+      "asin": "B082TMBYR6",
       "search_term": "portable power station for frequent travellers",
-      "url": "https://www.amazon.com/s?k=portable+power+station+for+frequent+travellers&tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B082TMBYR6?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh"
     },
     {
       "name": "Wireless Earbuds",
-      "asin": "",
+      "asin": "B09FT58QQP",
       "search_term": "wireless earbuds for students",
-      "url": "https://www.amazon.com/s?k=wireless+earbuds+for+students&tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
     },
     {
       "name": "Surge Protector",
-      "asin": "",
+      "asin": "B0GYZ9K5Q1",
       "search_term": "surge protector for storm areas",
-      "url": "https://www.amazon.com/s?k=surge+protector+for+storm+areas&tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B0GYZ9K5Q1?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft"
     },
     {
       "name": "Braided Lightning Cable",
-      "asin": "",
+      "asin": "B084N1BM9L",
       "search_term": "braided lightning cable for home theatre",
-      "url": "https://www.amazon.com/s?k=braided+lightning+cable+for+home+theatre&tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B084N1BM9L?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord"
     }
   ],
   "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
@@ -45,5 +53,6 @@
   "draft": false,
   "layout_version": 3,
   "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check"
+  "migration_status": "layout_v3_needs_fact_check",
+  "product_links_verified": true
 }

@@ -32,5 +32,6 @@
   "hub_page": "/p/browse-all-categories.html",
   "layout_version": 3,
   "draft": false,
-  "review_required": false
+  "review_required": true,
+  "product_links_verified": false
 }

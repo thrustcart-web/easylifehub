@@ -24,5 +24,6 @@
   "draft": false,
   "layout_version": 3,
   "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check"
+  "migration_status": "layout_v3_needs_fact_check",
+  "product_links_verified": false
 }

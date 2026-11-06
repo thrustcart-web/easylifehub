@@ -19,27 +19,35 @@
       "items": [
         {
           "name": "Portable Power Station",
-          "asin": "",
+          "asin": "B082TMBYR6",
           "search_term": "portable power station for frequent travellers",
-          "url": "https://www.amazon.com/s?k=portable+power+station+for+frequent+travellers&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B082TMBYR6?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh"
         },
         {
           "name": "Wireless Earbuds",
-          "asin": "",
+          "asin": "B09FT58QQP",
           "search_term": "wireless earbuds for students",
-          "url": "https://www.amazon.com/s?k=wireless+earbuds+for+students&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
         },
         {
           "name": "Surge Protector",
-          "asin": "",
+          "asin": "B0GYZ9K5Q1",
           "search_term": "surge protector for storm areas",
-          "url": "https://www.amazon.com/s?k=surge+protector+for+storm+areas&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0GYZ9K5Q1?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft"
         },
         {
           "name": "Braided Lightning Cable",
-          "asin": "",
+          "asin": "B084N1BM9L",
           "search_term": "braided lightning cable for home theatre",
-          "url": "https://www.amazon.com/s?k=braided+lightning+cable+for+home+theatre&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B084N1BM9L?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord"
         }
       ],
       "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
@@ -49,7 +57,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": true
     },
     {
       "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
@@ -68,39 +77,51 @@
       "items": [
         {
           "name": "Webcam",
-          "asin": "",
+          "asin": "B085TFF7M1",
           "search_term": "webcam for home offices",
-          "url": "https://www.amazon.com/s?k=webcam+for+home+offices&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B085TFF7M1?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video"
         },
         {
           "name": "E-reader",
-          "asin": "",
+          "asin": "B0GSZX5MWR",
           "search_term": "e-reader for commuters",
-          "url": "https://www.amazon.com/s?k=e-reader+for+commuters&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
         },
         {
           "name": "USB C Cable",
-          "asin": "",
+          "asin": "B0CCJRWKC5",
           "search_term": "usb c cable for desk setups",
-          "url": "https://www.amazon.com/s?k=usb+c+cable+for+desk+setups&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0CCJRWKC5?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "DbillionDa USB C to USB C Cable, 60W PD Fast Charging, 90 Degree (10 ft)"
         },
         {
           "name": "Portable SSD",
-          "asin": "",
+          "asin": "B0874XN4D8",
           "search_term": "portable ssd for frequent travellers",
-          "url": "https://www.amazon.com/s?k=portable+ssd+for+frequent+travellers&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0874XN4D8?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s"
         },
         {
           "name": "Action Camera",
-          "asin": "",
+          "asin": "B01HGM33HG",
           "search_term": "action camera for budget buyers",
-          "url": "https://www.amazon.com/s?k=action+camera+for+budget+buyers&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B01HGM33HG?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "AKASO EK7000 4K30FPS 20MP WiFi Action Camera with EIS Ultra HD 131FT Waterproof Underwater Camera Remote Control 4X Zoom Support External Microphone Black"
         },
         {
           "name": "Ultrawide Monitor",
-          "asin": "",
+          "asin": "B0CC85MCC6",
           "search_term": "ultrawide monitor for photo editing",
-          "url": "https://www.amazon.com/s?k=ultrawide+monitor+for+photo+editing&tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0CC85MCC6?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "ASUS ProArt PA34VCNV 34 Inch 1440p Ultrawide Professional Monitor for Mac"
         }
       ],
       "html_file": "bestof-electronics-earbud-3e66ad5bf3a1.html",
@@ -110,7 +131,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": true
     },
     {
       "slug": "bestof-electronics-webcam-ba6c1df58b2c",
@@ -129,15 +151,19 @@
       "items": [
         {
           "name": "Streaming Camera",
-          "asin": "",
+          "asin": "B0CZ6XY78Y",
           "search_term": "streaming camera for home offices",
-          "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20"
+          "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
         },
         {
           "name": "Wireless Earbuds",
-          "asin": "",
+          "asin": "B09FT58QQP",
           "search_term": "wireless earbuds for home offices",
-          "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20"
+          "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
         },
         {
           "name": "USB Charger",
@@ -147,9 +173,11 @@
         },
         {
           "name": "E-reader",
-          "asin": "",
+          "asin": "B0GSZX5MWR",
           "search_term": "e-reader for students",
-          "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20"
+          "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
         }
       ],
       "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
@@ -159,7 +187,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "bestof-fitness-handle-3d07849b4753",
@@ -213,7 +242,8 @@
       "hub_page": "/p/browse-all-categories.html",
       "layout_version": 3,
       "draft": false,
-      "review_required": false
+      "review_required": true,
+      "product_links_verified": false
     },
     {
       "slug": "bestof-garden-blower-335192546968",
@@ -265,7 +295,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "bestof-home-office-organiser-525dc4fb9a20",
@@ -320,7 +351,8 @@
       "layout_version": 3,
       "draft": false,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
@@ -356,7 +388,8 @@
       "hub_page": "/p/browse-all-categories.html",
       "layout_version": 3,
       "draft": false,
-      "review_required": false
+      "review_required": true,
+      "product_links_verified": false
     },
     {
       "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
@@ -392,7 +425,8 @@
       "hub_page": "/p/browse-all-categories.html",
       "layout_version": 3,
       "draft": false,
-      "review_required": false
+      "review_required": true,
+      "product_links_verified": false
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
@@ -429,7 +463,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
@@ -457,7 +492,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-car-dash-mat-0dee1955dee4",
@@ -487,7 +523,8 @@
       "hub_page": "/p/browse-all-categories.html",
       "layout_version": 3,
       "draft": false,
-      "review_required": false
+      "review_required": true,
+      "product_links_verified": false
     },
     {
       "slug": "review-foldable-daypack-2da57045820c",
@@ -518,7 +555,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
@@ -549,7 +587,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
@@ -577,7 +616,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-mattress-protector-7baedfdfd6e4",
@@ -598,7 +638,9 @@
           "name": "Mattress Protector",
           "asin": "B07HC2WHS1",
           "search_term": "mattress protector for back sleepers",
-          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft"
         }
       ],
       "html_file": "review-mattress-protector-7baedfdfd6e4.html",
@@ -629,7 +671,9 @@
           "name": "Mortar and Pestle",
           "asin": "B0D9CP3BPS",
           "search_term": "mortar and pestle for spice grinding",
-          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving"
         }
       ],
       "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
@@ -667,7 +711,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-portable-monitor-ec1fcecd2d09",
@@ -698,7 +743,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-raised-garden-bed-d615608d706c",
@@ -726,7 +772,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",
@@ -757,7 +804,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-resistance-bands-9d916e3d97f8",
@@ -788,7 +836,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",
@@ -818,7 +867,8 @@
       "hub_page": "/p/browse-all-categories.html",
       "layout_version": 3,
       "draft": false,
-      "review_required": false
+      "review_required": true,
+      "product_links_verified": false
     },
     {
       "slug": "review-video-doorbell-1b56e37dfa94",
@@ -846,7 +896,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-air-purifier-buying-guide",
@@ -877,7 +928,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-anker-737-power-bank-review",
@@ -908,7 +960,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-best-home-fitness-gear",
@@ -963,7 +1016,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-espresso-vs-pourover",
@@ -1000,7 +1054,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-robot-vs-stick-vacuum",
@@ -1037,7 +1092,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     },
     {
       "slug": "seed-standing-desk-guide",
@@ -1068,7 +1124,8 @@
       "draft": false,
       "layout_version": 3,
       "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check"
+      "migration_status": "layout_v3_needs_fact_check",
+      "product_links_verified": false
     }
   ]
 }
