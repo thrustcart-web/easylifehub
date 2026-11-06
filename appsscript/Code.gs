@@ -33,7 +33,7 @@ var DEFAULTS = {
   SA_JSON:       '',                 // full contents of the service-account .json
   POST_HOURS:    '9,13,18',          // local hours, comma separated
   MAX_PER_DAY:   '3',
-  JITTER_MAX:    '1200',             // random 0-20 min delay inside the hour
+  JITTER_MAX:    '240',              // random 0-4 min delay; Utilities.sleep is capped at 5 min
   NOTIFY_EMAIL:  '',                 // blank = your Google account email
   TZ:            'Africa/Cairo',
   MIN_GAP_HOURS: '2',
@@ -403,7 +403,7 @@ function publishScheduled() {
   if (breakerOpen_()) return;
 
   // random delay inside the hour -> no machine-perfect timestamps
-  var jitterMax = Math.min(Number(cfg('JITTER_MAX') || 1200), 1500);
+  var jitterMax = Math.min(Number(cfg('JITTER_MAX') || 240), 240);
   var jitter = Math.floor(Math.random() * jitterMax);
   Logger.log('Humanising delay: sleeping ' + jitter + 's');
   Utilities.sleep(jitter * 1000);
