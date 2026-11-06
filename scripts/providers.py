@@ -31,11 +31,11 @@ class AIError(RuntimeError):
 
 
 # --------------------------------------------------------------- plumbing ---
-def _post_json(url: str, payload: dict, headers: dict, timeout: int = 60) -> dict:
+def _post_json(url: str, payload: dict, headers: dict, timeout: int = 45) -> dict:
     data = json.dumps(payload).encode("utf-8")
     req = urlrequest.Request(url, data=data, headers={"Content-Type": "application/json", **headers}, method="POST")
     last = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             with urlrequest.urlopen(req, timeout=timeout) as resp:
                 return json.loads(resp.read().decode("utf-8"))
@@ -46,7 +46,7 @@ def _post_json(url: str, payload: dict, headers: dict, timeout: int = 60) -> dic
             # of waiting and retrying the same exhausted account/model.
             if exc.code == 429:
                 raise AIError(last) from exc
-            if exc.code in (500, 502, 503, 504) and attempt < 2:
+            if exc.code in (500, 502, 503, 504) and attempt < 1:
                 wait = (2 ** attempt) * 4
                 log.warning("  %s -> %s, retrying in %ss", url.split("/")[2], exc.code, wait)
                 time.sleep(wait)
