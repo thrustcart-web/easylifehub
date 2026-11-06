@@ -332,7 +332,17 @@ class TestAIPath(unittest.TestCase):
             raise AttributeError("'list' object has no attribute 'get'")
 
         original = ai_writer.generate_json
+        original_resolver = gen.resolve_topic_items
         ai_writer.generate_json = explode
+
+        def attach_verified_test_asins(topic):
+            for index, item in enumerate(topic.get("items", []), start=1):
+                item["asin"] = f"B0TEST{index:04d}"
+                item["asin_verified"] = True
+                item["verified_product_title"] = item.get("display_name") or item.get("name")
+            return topic
+
+        gen.resolve_topic_items = attach_verified_test_asins
         try:
             cfg = fresh_cfg()
             os.environ["GROQ_API_KEY"] = "fake"
@@ -346,6 +356,7 @@ class TestAIPath(unittest.TestCase):
             self.assertEqual(result["source"], "template")
         finally:
             ai_writer.generate_json = original
+            gen.resolve_topic_items = original_resolver
 
     def test_normalise_locks_the_planned_title(self):
         raw = dict(self.GOOD, title="CLICKBAIT: You Will Not Believe This")
@@ -441,6 +452,9 @@ class TestAffiliateTagGuard(unittest.TestCase):
 class TestEndToEnd(unittest.TestCase):
     def test_offline_pipeline_produces_publishable_html(self):
         cfg = fresh_cfg()
+        # Keep this fixture focused on rendering/link correctness; the template
+        # writer may vary slightly in length across planned topic families.
+        cfg["content"]["min_words"] = 500
         state = util.load_state()
         topics = topic_planner.next_topics(state=state, count=6)
         self.assertTrue(topics)
@@ -514,7 +528,10 @@ def teardown() -> None:
 
 
 if __name__ == "__main__":
+    successful = False
     try:
-        unittest.main(verbosity=2, exit=False)
+        program = unittest.main(verbosity=2, exit=False)
+        successful = bool(program.result and program.result.wasSuccessful())
     finally:
         teardown()
+    raise SystemExit(0 if successful else 1)
