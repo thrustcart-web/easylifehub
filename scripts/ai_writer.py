@@ -114,16 +114,16 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 5. Do not include product prices, price ranges, discounts, star ratings, review counts, customer opinions, customer-review summaries, or claims about what buyers say. These details are not needed.\n6. Do not invent weaknesses, defects, drawbacks, or negative experiences. Explain practical fit and what a buyer should verify instead.\n7. Never use these words or phrases: {banned}.
 8. No hype, no exclamation marks, no flattery of the reader.
 7. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
-9. Address the reader as "you" at most twice per section.
-10. Do not write an introduction that restates the title.
-11. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
-12. Vary paragraph length. Some sections get two sentences, some get five.
-13. The first introduction paragraph must directly answer the reader's central buying question in plain language (about 35-60 words), before adding context.
-14. Each main section's first paragraph must answer or resolve the question implied by its heading; use natural question-led headings when helpful.
-15. Cover the real intent behind the topic, including who the product suits, what to compare, compatibility checks and ownership considerations. Do not repeat the same keyword unnaturally.
-16. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
-17. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
-18. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
+10. Address the reader as "you" at most twice per section.
+11. Do not write an introduction that restates the title.
+12. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
+13. Vary paragraph length. Some sections get two sentences, some get five.
+14. The first introduction paragraph must directly answer the reader's central buying question in plain language (about 35-60 words), before adding context.
+15. Each main section's first paragraph must answer or resolve the question implied by its heading; use natural question-led headings when helpful.
+16. Cover the real intent behind the topic, including who the product suits, what to compare, compatibility checks and ownership considerations. Do not repeat the same keyword unnaturally.
+17. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
+18. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
+19. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
 JSON SCHEMA (exact keys):
 {{
