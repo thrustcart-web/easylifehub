@@ -1,7 +1,7 @@
 {
   "slug": "review-decorative-bowl-1370bfcfc215",
   "title": "Decorative Bowl for Dried Flowers: Five Things Listings Skip",
-  "meta_description": "Explore five often‑overlooked factors when choosing a decorative bowl for dried flowers, from glaze quality to maintenance, to ensure a lasting, stylish display.",
+  "meta_description": "Learn what verified listings omit about the Decorative Bowl for Dried Flowers. Compare specs, materials, and placement needs for your home interior setup.",
   "template": "review",
   "niche": "home decor",
   "keyword": "decorative bowl for dried flowers",
@@ -9,9 +9,9 @@
     "Reviews",
     "Home Decor"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 732,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 652,
   "items": [
     {
       "name": "Decorative Bowl",
@@ -23,7 +23,7 @@
     }
   ],
   "html_file": "review-decorative-bowl-1370bfcfc215.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false

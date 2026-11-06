@@ -1,7 +1,7 @@
 {
   "slug": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
   "title": "Choosing Between Electrostatic Duster and Duster with Extension: A Practical Comparison",
-  "meta_description": "Compare an electrostatic duster and a duster with extension for high‑ceiling cleaning. Learn reach, dust capture, handling, and upkeep to choose the right tool.",
+  "meta_description": "Compare the Kitchen + Home Rainbow Static Duster and Tiumso Microfiber Feather Duster kit to choose the right cleaning tool for your home.",
   "template": "comparison",
   "niche": "home cleaning",
   "keyword": "Electrostatic Duster vs Duster with Extension",
@@ -9,9 +9,9 @@
     "Reviews",
     "Home Cleaning"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 704,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 615,
   "items": [
     {
       "name": "Electrostatic Duster",
@@ -31,7 +31,7 @@
     }
   ],
   "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false
