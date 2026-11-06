@@ -1,6 +1,11 @@
 name: test-openrouter-generation
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/one-time-openrouter-test.trigger'
   workflow_dispatch:
 
 permissions:
