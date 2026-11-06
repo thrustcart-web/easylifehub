@@ -73,6 +73,7 @@
   "ai": {
     "primary": "groq",
     "fallbacks": [
+      "mistral",
       "openrouter",
       "gemini"
     ],
