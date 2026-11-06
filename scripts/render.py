@@ -15,7 +15,7 @@ import json
 import re
 from html import unescape, escape as html_escape
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 from affiliate import Affiliate, inline_affiliate_links
 from util import QUEUE_DIR, log, slugify, word_count
@@ -87,8 +87,8 @@ def _anchor(heading: str, idx: int) -> str:
     return f"sec-{idx}-{slugify(heading, 40)}"
 
 
-def _keep_amazon_links_only(html: str) -> str:
-    """Keep only links hosted on Amazon.com; unwrap all other anchors."""
+def _keep_amazon_links_only(html: str, expected_tag: str = "") -> str:
+    """Allow only renderer-created Amazon CTA buttons; unwrap every other link."""
     anchor_re = re.compile(r"<a\b([^>]*)>(.*?)</a\s*>", re.IGNORECASE | re.DOTALL)
     href_re = re.compile(
         r"""\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""",
@@ -96,47 +96,77 @@ def _keep_amazon_links_only(html: str) -> str:
     )
 
     def replace_anchor(match: re.Match[str]) -> str:
-        href_match = href_re.search(match.group(1) or "")
-        if not href_match:
-            return match.group(2) or ""
-        href = unescape(
-            next((part for part in href_match.groups() if part is not None), "")
-        ).strip()
+        attrs = match.group(1) or ""
+        inner = match.group(2) or ""
+        class_match = re.search(r"""\bclass\s*=\s*["']([^"']*)["']""", attrs, re.I)
+        owner_match = re.search(r"""\bdata-owner\s*=\s*["']renderer["']""", attrs, re.I)
+        classes = set((class_match.group(1) if class_match else "").split())
+        href_match = href_re.search(attrs)
+        if "amazon-cta" not in classes or not owner_match or not href_match:
+            return inner
+        href = unescape(next((part for part in href_match.groups() if part is not None), "")).strip()
         try:
-            host = (urlsplit(href).hostname or "").lower()
+            parsed = urlsplit(href)
+            host = (parsed.hostname or "").lower()
         except ValueError:
-            host = ""
-        if host == "amazon.com" or host.endswith(".amazon.com"):
-            return match.group(0)
-        return match.group(2) or ""
+            return inner
+        valid_host = host == "amazon.com" or host.endswith(".amazon.com")
+        valid_path = bool(re.fullmatch(r"/dp/[A-Z0-9]{10}/?", parsed.path, re.I))
+        tags = parse_qs(parsed.query).get("tag", [])
+        if not (valid_host and valid_path and expected_tag and expected_tag in tags):
+            return inner
+        return match.group(0)
 
     return anchor_re.sub(replace_anchor, str(html or ""))
 
-
-def _amazon_button(url: str) -> str:
-    """The same green Amazon CTA used in every EasyLifeHub article."""
+def _amazon_button(url: str, label: str = "View on Amazon", expected_tag: str = "") -> str:
+    """Build a green, renderer-owned CTA for one verified Amazon product."""
     try:
-        host = (urlsplit(unescape(str(url or ""))).hostname or "").lower()
+        parsed = urlsplit(unescape(str(url or "")))
+        host = (parsed.hostname or "").lower()
     except ValueError:
-        host = ""
-    if host != "amazon.com" and not host.endswith(".amazon.com"):
+        return ""
+    valid_host = host == "amazon.com" or host.endswith(".amazon.com")
+    valid_path = bool(re.fullmatch(r"/dp/[A-Z0-9]{10}/?", parsed.path, re.I))
+    tags = parse_qs(parsed.query).get("tag", [])
+    if not (valid_host and valid_path and expected_tag and expected_tag in tags):
         return ""
     safe_url = html_escape(str(url), quote=True)
+    safe_label = html_escape(str(label), quote=True)
     return (
-        '<div style="text-align: center; margin: 30px 0;">'
-        f'<a href="{safe_url}" target="_blank" rel="nofollow sponsored noopener" '
-        'style="display: inline-block; background-color: #2e7d32; color: #ffffff; '
-        'padding: 14px 32px; font-size: 16px; font-weight: bold; '
-        'text-decoration: none; border-radius: 6px;">View At Amazon</a>'
-        '</div>'
+        '<div class="amazon-cta-wrap" style="text-align:center;margin:28px 0;">'
+        f'<a class="amazon-cta" data-owner="renderer" href="{safe_url}" target="_blank" '
+        'rel="nofollow sponsored noopener" '
+        'style="display:inline-block;background-color:#2e7d32;color:#ffffff;'
+        'padding:14px 32px;font-size:16px;font-weight:bold;text-decoration:none;'
+        'border-radius:6px;">'
+        f'{safe_label}</a></div>'
     )
 
 
+def _amazon_buttons(items: list[dict], aff: Affiliate) -> str:
+    """Render one CTA per verified product; reused mid-article and at the end."""
+    buttons = []
+    multiple = len(items) > 1
+    for item in items:
+        name = (item.get("display_name") or item.get("name") or "Product").strip()
+        label = f"View {name} on Amazon" if multiple else "View on Amazon"
+        button = _amazon_button(aff.url_for(item), label, aff.tag)
+        if not button:
+            raise ValueError(f"Cannot create Amazon CTA for {name}: invalid direct product URL.")
+        buttons.append(button)
+    return '<div class="amazon-cta-group">' + "".join(buttons) + "</div>"
+
 def _clean_post_fragment(value: str) -> str:
-    """Never allow style/script blocks from model output into Blogger post body."""
+    """Clean model fragments: no anchors, Markdown links, URLs, style or scripts."""
     text = str(value or "").strip()
     text = re.sub(r"<(style|script)\b[^>]*>[\s\S]*?</\1\s*>", "", text, flags=re.I)
-    return text
+    text = re.sub(r"<a\b[^>]*>(.*?)</a\s*>", r"\1", text, flags=re.I | re.S)
+    text = re.sub(r"</?a\b[^>]*>", "", text, flags=re.I)
+    text = re.sub(r"\[([^\]]+)\]\(https?://[^)]+\)", r"\1", text, flags=re.I)
+    text = re.sub(r"\b(?:https?://|www\.)\S+", "", text, flags=re.I)
+    return text.strip()
+
 
 def _toc(sections: list[dict]) -> str:
     if len(sections) < 3:
@@ -295,33 +325,33 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     )
     parts.append(f"<p><em>{html_escape(disclosure)}</em></p>")
 
-    # Every named product gets its own direct, verified Amazon detail-page link.
-    product_cards = []
+    # Verify every product URL before writing any CTA into the post.
     for item in items:
         product_url = aff.url_for(item)
         parsed_product_url = urlsplit(product_url)
+        tags = parse_qs(parsed_product_url.query).get("tag", [])
         if (
-            parsed_product_url.netloc.lower() != "www.amazon.com"
+            (parsed_product_url.hostname or "").lower() not in ("amazon.com", "www.amazon.com")
             or not re.fullmatch(r"/dp/[A-Z0-9]{10}", parsed_product_url.path)
-            or ("tag=" + aff.tag) not in parsed_product_url.query
+            or not aff.tag
+            or aff.tag not in tags
         ):
             raise ValueError(f"Product has no verified Amazon detail-page URL: {item.get('name', '')}")
-        product_cards.append(aff.product_box(item, label="View Product on Amazon"))
-    parts.append(
-        '<section class="product-links">'
-        '<h2 style="background-color:#f1f3f4;padding:10px 15px;border-left:5px solid #2e7d32;'
-        'font-size:20px;color:#202124;margin-top:30px;margin-bottom:15px;">Products in This Guide</h2>'
-        + "".join(product_cards) + "</section>"
-    )
 
+    renderable_sections = []
     for section in article.get("sections", []):
         heading = str(section.get("heading") or "").strip()
         if not heading:
             continue
-        # The final audience and verdict sections use fixed headings below.
         if re.search(r"\b(who should buy|who may find|who might|final thoughts|the verdict|bottom line|so which one should you get|conclusion)\b", heading, re.I):
             continue
+        renderable_sections.append(section)
 
+    # Place the first green CTA around the middle of the article, not at the top.
+    middle_after = max(1, (len(renderable_sections) + 1) // 2) if renderable_sections else 0
+    middle_cta_added = False
+    for section_index, section in enumerate(renderable_sections, start=1):
+        heading = str(section.get("heading") or "").strip()
         parts.append(
             '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
             'border-left: 5px solid #2e7d32; font-size: 20px; color: #202124; '
@@ -334,12 +364,17 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
             if fragment:
                 parts.append(f"<p>{fragment}</p>")
 
-        # Keep the same paragraph-led design even when the source writer
-        # returned concise bullet points instead of paragraphs.
         for bullet in section.get("bullets", []):
             fragment = _clean_post_fragment(bullet)
             if fragment:
                 parts.append(f"<p>{fragment}</p>")
+
+        if section_index == middle_after:
+            parts.append(_amazon_buttons(items, aff))
+            middle_cta_added = True
+
+    if not middle_cta_added:
+        parts.append(_amazon_buttons(items, aff))
 
     parts.append(
         '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
@@ -368,9 +403,11 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     for paragraph in conclusion[:2]:
         parts.append(f"<p>{paragraph}</p>")
 
-    # No <style>, <script>, JSON-LD block, TOC, internal links, related links,
-    # product cards, tables or auto-generated image banner in the post body.
-    return _keep_amazon_links_only("\n".join(parts))
+    # The second CTA placement is always the final element in the article body.
+    parts.append(_amazon_buttons(items, aff))
+
+    # Only renderer-generated green Amazon buttons may remain clickable.
+    return _keep_amazon_links_only("\n".join(parts), aff.tag)
 def render_markdown(article: dict, topic: dict, aff: Affiliate) -> str:
     """Human-readable archive copy (also what you would review if you wanted to)."""
     lines = [
