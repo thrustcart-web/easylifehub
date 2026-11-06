@@ -90,6 +90,28 @@ def resolved_items_for_meta(meta: dict, cache: dict, aff: Affiliate) -> list[dic
     return resolved
 
 
+def write_repair_article(topic: dict, cfg: dict) -> tuple[dict, str]:
+    """Use only Gemini for this repair, with one longer-content retry."""
+    cfg.setdefault("ai", {})["primary"] = "gemini"
+    cfg["ai"]["fallbacks"] = []
+    content_cfg = cfg.setdefault("content", {})
+    original_target = int(content_cfg.get("target_words") or 1100)
+    last_error = None
+
+    for target in (max(original_target, 1400), max(original_target, 1600)):
+        content_cfg["target_words"] = target
+        try:
+            return write_article(topic, cfg)
+        except AIError as exc:
+            last_error = exc
+            log.warning(
+                "Gemini repair attempt at %d words failed | %s | %s",
+                target, topic.get("slug", ""), str(exc)[:180]
+            )
+
+    raise AIError(f"Gemini did not produce a valid repair after two attempts: {last_error}")
+
+
 def topic_from_meta(meta: dict, resolved_items: list[dict]) -> dict:
     """Build a writer topic from queued metadata and verified local product data."""
     return {
@@ -109,7 +131,7 @@ def rebuild(limit: int = 8) -> dict:
     # For this queue-repair batch, lead with the Gemini Lite model that passed
     # the live smoke test; retain OpenRouter as the independent fallback.
     cfg.setdefault("ai", {})["primary"] = "gemini"
-    cfg["ai"]["fallbacks"] = ["openrouter"]
+    cfg["ai"]["fallbacks"] = []
     aff = Affiliate(cfg)
     cache = _load_cache()
     index_path = QUEUE_DIR / "index.json"
@@ -142,7 +164,7 @@ def rebuild(limit: int = 8) -> dict:
         slug = meta["slug"]
         try:
             topic = topic_from_meta(meta, resolved_items)
-            article, provider = write_article(topic, cfg)
+            article, provider = write_repair_article(topic, cfg)
             article["_source"] = f"ai:{provider}"
             article["_provider"] = provider
 
