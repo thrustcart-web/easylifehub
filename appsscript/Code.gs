@@ -570,19 +570,32 @@ function testConnection() {
  */
 function createQueuePreviewDraft() {
   var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+  var state = fetchJson_(cfg('RAW_BASE') + '/state.json');
   var posts = index.posts || [];
+  var generated = (state.generated || []).slice().sort(function (a, b) {
+    return String(b.ts || '').localeCompare(String(a.ts || ''));
+  });
   var candidate = null;
 
-  for (var i = 0; i < posts.length; i++) {
-    var item = posts[i];
-    if (item && item.slug && !isPublished_(item.slug) && productLinksReady_(item) && Number(item.layout_version || 0) >= 3) {
+  // Preview the newest generated article first. Do not accidentally create a
+  // Blogger draft from older queue entries that still need editorial review.
+  for (var i = 0; i < generated.length; i++) {
+    var slug = generated[i] && generated[i].slug;
+    if (!slug || isPublished_(slug)) continue;
+    var item = posts.filter(function (p) { return p && p.slug === slug; })[0];
+    if (
+      item &&
+      item.review_required !== true &&
+      productLinksReady_(item) &&
+      Number(item.layout_version || 0) >= 3
+    ) {
       candidate = item;
       break;
     }
   }
 
   if (!candidate) {
-    throw new Error('No pending layout-v3 article found. Run the GitHub generation workflow after the update, then run this function again.');
+    throw new Error('No newly generated, editorially approved article with verified direct Amazon links is available for preview.');
   }
 
   var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + candidate.html_file);
@@ -594,12 +607,12 @@ function createQueuePreviewDraft() {
 
   if (!draft || !draft.id) throw new Error('Blogger did not return a draft ID.');
   Logger.log('DRAFT CREATED: ' + candidate.title);
+  Logger.log('DRAFT SLUG: ' + candidate.slug);
   Logger.log('DRAFT ID: ' + draft.id);
   Logger.log('DRAFT URL: ' + (draft.url || 'Open Blogger > Posts > Drafts'));
   Logger.log('This preview did not mark the queue item as published.');
   return { title: candidate.title, slug: candidate.slug, draftId: String(draft.id), url: draft.url || '' };
-}
-/** Publish immediately regardless of the hour (for testing). */
+}/** Publish immediately regardless of the hour (for testing). */
 function publishNow() {
   if (breakerOpen_()) return;
   try { publishNext_(1); }
