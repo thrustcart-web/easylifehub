@@ -61,7 +61,6 @@ jobs:
           parsed = urlsplit(url)
           if parsed.hostname != 'www.amazon.com' or not re.fullmatch(r'/dp/[A-Z0-9]{10}', parsed.path) or parse_qs(parsed.query).get('tag') != ['qalok0c-20']:
               raise SystemExit('LINK CHECK FAILED: expected a tagged direct Amazon product URL')
-              raise SystemExit('LINK CHECK FAILED: expected a tagged direct Amazon product URL')
 
           print('SERPAPI TEST: SUCCESS')
           print('Title:', resolved['verified_product_title'])
