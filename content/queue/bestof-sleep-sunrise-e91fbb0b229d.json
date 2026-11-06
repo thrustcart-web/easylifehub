@@ -1,7 +1,7 @@
 {
   "slug": "bestof-sleep-sunrise-e91fbb0b229d",
   "title": "Sleep Gear Buying Guide: 3 Picks Ranked by Real Criteria",
-  "meta_description": "A methodical guide ranks cotton sheets, a weighted blanket, and a duvet, highlighting thread count, weight range, and climate fit to help you choose the right sleep gear.",
+  "meta_description": "Explore our evidence-based sleep gear buying guide featuring cotton sheets, a weighted blanket, and a cooling duvet insert. Compare real specifications now.",
   "template": "bestof",
   "niche": "sleep",
   "keyword": "Sleep",
@@ -9,9 +9,9 @@
     "Reviews",
     "Sleep"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 749,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 615,
   "items": [
     {
       "name": "Cotton Sheets",
@@ -39,7 +39,7 @@
     }
   ],
   "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false

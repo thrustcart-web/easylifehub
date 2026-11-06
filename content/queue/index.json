@@ -349,7 +349,7 @@
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
       "title": "Sleep Gear Buying Guide: 3 Picks Ranked by Real Criteria",
-      "meta_description": "A methodical guide ranks cotton sheets, a weighted blanket, and a duvet, highlighting thread count, weight range, and climate fit to help you choose the right sleep gear.",
+      "meta_description": "Explore our evidence-based sleep gear buying guide featuring cotton sheets, a weighted blanket, and a cooling duvet insert. Compare real specifications now.",
       "template": "bestof",
       "niche": "sleep",
       "keyword": "Sleep",
@@ -357,9 +357,9 @@
         "Reviews",
         "Sleep"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 749,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 615,
       "items": [
         {
           "name": "Cotton Sheets",
@@ -387,7 +387,7 @@
         }
       ],
       "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -621,7 +621,7 @@
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
       "title": "Before You Buy Anker 737 Power Bank 24K: The Honest Version",
-      "meta_description": "An honest look at Anker’s 24K Power Bank: who benefits, what you pay for, real drawbacks, how it measures against rivals, and if it deserves a spot in your bag.",
+      "meta_description": "Evaluating the Anker 737 Power Bank 24K requires checking confirmed output limits, physical dimensions, and device compatibility for your specific gear.",
       "template": "review",
       "niche": "portable power",
       "keyword": "Anker 737 Power Bank 24K",
@@ -629,25 +629,24 @@
         "Reviews",
         "Portable Power"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 823,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 706,
       "items": [
         {
           "name": "Anker 737 Power Bank 24K",
           "asin": "B09VPHVT2Z",
           "asin_verified": true,
           "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
-          "search_term": "Anker 737 Power Bank 24K",
+          "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
           "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20"
         }
       ],
       "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-car-dash-mat-0dee1955dee4",
@@ -822,10 +821,10 @@
         {
           "name": "LEVOIT Core 300-P Air Purifier",
           "asin": "B07VVK39F7",
-          "asin_verified": true,
-          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
           "search_term": "LEVOIT Core 300-P Air Purifier",
-          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
         }
       ],
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
@@ -838,7 +837,7 @@
     {
       "slug": "review-litter-scoop-a162ab1d8392",
       "title": "Litter Scoop: Judging Sifting Ease Against Real Use",
-      "meta_description": "A detailed review of the Litter Scoop for multi‑cat homes, examining sifting ease, design durability, setup, and upkeep to help you decide if it meets your needs.",
+      "meta_description": "Evaluate the Litter Scoop based on confirmed listing details like aluminum alloy construction and matte blue finish to determine your ideal sifting tool.",
       "template": "review",
       "niche": "pets",
       "keyword": "litter scoop for multi cat homes",
@@ -846,9 +845,9 @@
         "Reviews",
         "Pets"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 890,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 676,
       "items": [
         {
           "name": "Litter Scoop",
@@ -860,7 +859,7 @@
         }
       ],
       "html_file": "review-litter-scoop-a162ab1d8392.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -868,7 +867,7 @@
     {
       "slug": "review-mattress-protector-7baedfdfd6e4",
       "title": "Choosing A Mattress Protector for Back Sleepers: Trade-Offs Included",
-      "meta_description": "Explore how a mattress protector can affect back‑sleeping comfort, what support, fit and maintenance factors matter, and which trade‑offs you should verify before buying.",
+      "meta_description": "Learn how to choose a mattress protector for back sleepers using verified product details like the PlushDeluxe Bamboo Waterproof Mattress Protector.",
       "template": "review",
       "niche": "sleep",
       "keyword": "mattress protector for back sleepers",
@@ -876,24 +875,21 @@
         "Reviews",
         "Sleep"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 813,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 764,
       "items": [
         {
           "name": "Mattress Protector",
           "asin": "B07HC2WHS1",
-          "search_term": "mattress protector for back sleepers",
-          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft"
+          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft",
+          "search_term": "mattress protector for back sleepers",
+          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20"
         }
       ],
       "html_file": "review-mattress-protector-7baedfdfd6e4.html",
-      "category_label": "Sleep",
-      "category_url": "/search/label/Sleep",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -901,7 +897,7 @@
     {
       "slug": "review-mortar-and-pestle-3fbfd223937b",
       "title": "Mortar and Pestle for Spice Grinding: An Honest Buying Guide",
-      "meta_description": "Discover how to choose a mortar and pestle for spice grinding, covering material, size, ergonomics, setup, and care to ensure reliable performance.",
+      "meta_description": "Discover what to evaluate when selecting a mortar and pestle for spice grinding and pill crushing, including capacity, material, and efficient use.",
       "template": "review",
       "niche": "food & pantry",
       "keyword": "mortar and pestle for spice grinding",
@@ -909,24 +905,21 @@
         "Reviews",
         "Food & Pantry"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 788,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 709,
       "items": [
         {
           "name": "Mortar and Pestle",
           "asin": "B0D9CP3BPS",
-          "search_term": "mortar and pestle for spice grinding",
-          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20",
           "asin_verified": true,
-          "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving"
+          "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
+          "search_term": "mortar and pestle for spice grinding",
+          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20"
         }
       ],
       "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
-      "category_label": "Food & Pantry",
-      "category_url": "/search/label/Food%20%26%20Pantry",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -934,7 +927,7 @@
     {
       "slug": "review-ninja-creami-nc301-afd5d45b40e8",
       "title": "Choosing Ninja Creami NC301: Six Things That Actually Matter",
-      "meta_description": "Choosing Ninja Creami NC301 - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+      "meta_description": "Evaluating the Ninja Creami NC301 ice cream maker? Check key details on its 7 one-touch programs, included pint containers, silver design, and practical setup.",
       "template": "review",
       "niche": "kitchen",
       "keyword": "Ninja Creami NC301",
@@ -942,9 +935,9 @@
         "Reviews",
         "Kitchen"
       ],
-      "source": "template",
-      "provider": "",
-      "words": 551,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 699,
       "items": [
         {
           "name": "Ninja Creami NC301",
@@ -956,11 +949,10 @@
         }
       ],
       "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-plant-pots-ecc22dbb4c63",
@@ -1226,10 +1218,10 @@
         {
           "name": "LEVOIT Core 300-P Air Purifier",
           "asin": "B07VVK39F7",
-          "asin_verified": true,
-          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
           "search_term": "LEVOIT Core 300-P Air Purifier",
-          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
@@ -1260,10 +1252,10 @@
         {
           "name": "Anker 737 Power Bank 24K",
           "asin": "B09VPHVT2Z",
-          "asin_verified": true,
-          "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-          "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20"
+          "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20",
+          "asin_verified": true,
+          "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display"
         }
       ],
       "html_file": "seed-anker-737-power-bank-review.html",

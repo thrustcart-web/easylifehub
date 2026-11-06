@@ -1,7 +1,7 @@
 {
   "slug": "review-mattress-protector-7baedfdfd6e4",
   "title": "Choosing A Mattress Protector for Back Sleepers: Trade-Offs Included",
-  "meta_description": "Explore how a mattress protector can affect back‑sleeping comfort, what support, fit and maintenance factors matter, and which trade‑offs you should verify before buying.",
+  "meta_description": "Learn how to choose a mattress protector for back sleepers using verified product details like the PlushDeluxe Bamboo Waterproof Mattress Protector.",
   "template": "review",
   "niche": "sleep",
   "keyword": "mattress protector for back sleepers",
@@ -9,24 +9,21 @@
     "Reviews",
     "Sleep"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 813,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 764,
   "items": [
     {
       "name": "Mattress Protector",
       "asin": "B07HC2WHS1",
-      "search_term": "mattress protector for back sleepers",
-      "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft"
+      "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft",
+      "search_term": "mattress protector for back sleepers",
+      "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20"
     }
   ],
   "html_file": "review-mattress-protector-7baedfdfd6e4.html",
-  "category_label": "Sleep",
-  "category_url": "/search/label/Sleep",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false

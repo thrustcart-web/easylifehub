@@ -1,7 +1,7 @@
 {
   "slug": "review-ninja-creami-nc301-afd5d45b40e8",
   "title": "Choosing Ninja Creami NC301: Six Things That Actually Matter",
-  "meta_description": "Choosing Ninja Creami NC301 - an honest, criteria-based breakdown with the trade-offs stated plainly. Updated for 2026.",
+  "meta_description": "Evaluating the Ninja Creami NC301 ice cream maker? Check key details on its 7 one-touch programs, included pint containers, silver design, and practical setup.",
   "template": "review",
   "niche": "kitchen",
   "keyword": "Ninja Creami NC301",
@@ -9,23 +9,22 @@
     "Reviews",
     "Kitchen"
   ],
-  "source": "template",
-  "provider": "",
-  "words": 551,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 699,
   "items": [
     {
       "name": "Ninja Creami NC301",
       "asin": "B08QXB9BH5",
-      "search_term": "Ninja Creami NC301",
-      "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver"
+      "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver",
+      "search_term": "Ninja Creami NC301",
+      "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=qalok0c-20"
     }
   ],
   "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

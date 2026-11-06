@@ -1,7 +1,7 @@
 {
   "slug": "review-litter-scoop-a162ab1d8392",
   "title": "Litter Scoop: Judging Sifting Ease Against Real Use",
-  "meta_description": "A detailed review of the Litter Scoop for multi‑cat homes, examining sifting ease, design durability, setup, and upkeep to help you decide if it meets your needs.",
+  "meta_description": "Evaluate the Litter Scoop based on confirmed listing details like aluminum alloy construction and matte blue finish to determine your ideal sifting tool.",
   "template": "review",
   "niche": "pets",
   "keyword": "litter scoop for multi cat homes",
@@ -9,9 +9,9 @@
     "Reviews",
     "Pets"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 890,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 676,
   "items": [
     {
       "name": "Litter Scoop",
@@ -23,7 +23,7 @@
     }
   ],
   "html_file": "review-litter-scoop-a162ab1d8392.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false

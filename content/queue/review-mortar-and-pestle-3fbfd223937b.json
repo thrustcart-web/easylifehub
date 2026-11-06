@@ -1,7 +1,7 @@
 {
   "slug": "review-mortar-and-pestle-3fbfd223937b",
   "title": "Mortar and Pestle for Spice Grinding: An Honest Buying Guide",
-  "meta_description": "Discover how to choose a mortar and pestle for spice grinding, covering material, size, ergonomics, setup, and care to ensure reliable performance.",
+  "meta_description": "Discover what to evaluate when selecting a mortar and pestle for spice grinding and pill crushing, including capacity, material, and efficient use.",
   "template": "review",
   "niche": "food & pantry",
   "keyword": "mortar and pestle for spice grinding",
@@ -9,24 +9,21 @@
     "Reviews",
     "Food & Pantry"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 788,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 709,
   "items": [
     {
       "name": "Mortar and Pestle",
       "asin": "B0D9CP3BPS",
-      "search_term": "mortar and pestle for spice grinding",
-      "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving"
+      "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
+      "search_term": "mortar and pestle for spice grinding",
+      "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20"
     }
   ],
   "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
-  "category_label": "Food & Pantry",
-  "category_url": "/search/label/Food%20%26%20Pantry",
-  "hub_page": "/p/browse-all-categories.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false
