@@ -204,13 +204,18 @@ def _gemini(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> 
         "system_instruction": {"parts": [{"text": system}]},
         "contents": [{"role": "user", "parts": [{"text": user}]}],
         "generationConfig": {
-            "temperature": temp,
+            # Gemini 3.8 Flash no longer accepts legacy sampling controls
+            # such as temperature. Keep JSON output and the configured token cap.
             "maxOutputTokens": max_tokens,
             "responseMimeType": "application/json",
         },
     }
-    url = f"{cfg['base_url']}/models/{cfg['model']}:generateContent?key={key}"
-    data = _post_json(url, payload, {"User-Agent": USER_AGENT})
+    url = f"{cfg['base_url']}/models/{cfg['model']}:generateContent"
+    data = _post_json(
+        url,
+        payload,
+        {"User-Agent": USER_AGENT, "x-goog-api-key": key},
+    )
     try:
         return data["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError) as exc:
