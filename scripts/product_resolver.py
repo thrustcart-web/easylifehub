@@ -26,7 +26,7 @@ MAX_RESULTS_PER_SEARCH = 3
 # billable results ($0.015) and $0.015 total across every Apify pricing model.
 APIFY_MAX_TOTAL_CHARGE_USD = "0.015"
 APIFY_ENDPOINT = (
-    "https://api.apify.com/v2/actors/"
+    "https://api.apify.com/v2/acts/"
     f"{APIFY_ACTOR_ID}/run-sync-get-dataset-items"
     + "?"
     + parse.urlencode({
