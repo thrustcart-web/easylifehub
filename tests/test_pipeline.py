@@ -533,7 +533,7 @@ class TestAIPath(unittest.TestCase):
             html, article, cfg, expected_product_count=1
         )
         self.assertTrue(quality_ok, quality_problems)
-        self.assertEqual(html.count('class="amazon-cta'), 2)
+        self.assertEqual(html.count('class="amazon-cta-group"'), 2)
         render_mod.save_article(article, topic, cfg, aff, hero="")
         saved = json.loads(
             (util.QUEUE_DIR / "review-levoit-air-purifier-core-300-853749094376.json").read_text()
