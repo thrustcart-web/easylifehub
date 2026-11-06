@@ -197,13 +197,6 @@ def _groq(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> st
     raise AIError(last)
 
 
-def _mistral(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> str:
-    key = os.environ.get(cfg["env_key"], "")
-    if not key:
-        raise AIError("MISTRAL_API_KEY not set")
-    return _openai_style(cfg["base_url"], key, cfg["model"], system, user, temp, max_tokens)
-
-
 def _openrouter(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> str:
     key = os.environ.get(cfg["env_key"], "")
     if not key:
@@ -311,7 +304,6 @@ def _gemini(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> 
 
 PROVIDERS = {
     "groq": _groq,
-    "mistral": _mistral,
     "openrouter": _openrouter,
     "gemini": _gemini,
 }
