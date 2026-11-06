@@ -1,0 +1,37 @@
+{
+  "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
+  "title": "Clothes Brush vs Clothes Line: Deciding Between Two Good Options",
+  "meta_description": "Compare clothes brushes and lines to find the right tool for your laundry. Learn which option best serves workwear care or delicate garment drying.",
+  "template": "comparison",
+  "niche": "laundry & storage",
+  "keyword": "Clothes Brush vs Clothes Line",
+  "labels": [
+    "Reviews",
+    "Laundry & Storage"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 829,
+  "items": [
+    {
+      "name": "Clothes Brush",
+      "asin": "B00QQW5ISA",
+      "search_term": "Clothes Brush",
+      "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=qalok0c-20"
+    },
+    {
+      "name": "Clothes Line",
+      "asin": "B0DQJ61TZJ",
+      "search_term": "Clothes Line",
+      "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=qalok0c-20"
+    }
+  ],
+  "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
+  "category_label": "Laundry & Storage",
+  "category_url": "/search/label/Laundry%20%26%20Storage",
+  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 3,
+  "draft": false,
+  "product_links_verified": true,
+  "review_required": false
+}

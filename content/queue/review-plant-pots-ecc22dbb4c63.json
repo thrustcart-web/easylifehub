@@ -1,0 +1,31 @@
+{
+  "slug": "review-plant-pots-ecc22dbb4c63",
+  "title": "Plant Pots Review: What I Would Check Before Buying",
+  "meta_description": "A practical guide to plant pots, covering drainage, material, size, light suitability, setup and upkeep, so you can pick the right pot for low‑light rooms.",
+  "template": "review",
+  "niche": "garden",
+  "keyword": "plant pots for low light rooms",
+  "labels": [
+    "Reviews",
+    "Garden"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 845,
+  "items": [
+    {
+      "name": "Plant Pots",
+      "asin": "B0BHSX8PYZ",
+      "search_term": "plant pots for low light rooms",
+      "url": "https://www.amazon.com/dp/B0BHSX8PYZ?tag=qalok0c-20"
+    }
+  ],
+  "html_file": "review-plant-pots-ecc22dbb4c63.html",
+  "category_label": "Garden",
+  "category_url": "/search/label/Garden",
+  "hub_page": "/p/browse-all-categories.html",
+  "layout_version": 3,
+  "draft": false,
+  "product_links_verified": true,
+  "review_required": false
+}

@@ -260,6 +260,24 @@
       "ts": "2026-11-06T01:17:34Z",
       "source": "ai:groq",
       "words": 788
+    },
+    {
+      "slug": "review-plant-pots-ecc22dbb4c63",
+      "title": "Plant Pots Review: What I Would Check Before Buying",
+      "template": "review",
+      "keyword": "plant pots for low light rooms",
+      "ts": "2026-11-06T02:07:55Z",
+      "source": "ai:groq",
+      "words": 845
+    },
+    {
+      "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
+      "title": "Clothes Brush vs Clothes Line: Deciding Between Two Good Options",
+      "template": "comparison",
+      "keyword": "Clothes Brush vs Clothes Line",
+      "ts": "2026-11-06T02:10:52Z",
+      "source": "ai:groq",
+      "words": 829
     }
   ],
   "published": [],
@@ -292,7 +310,9 @@
     "review-stud-finder-cf86b7128d04",
     "bestof-fitness-handle-3d07849b4753",
     "review-mattress-protector-7baedfdfd6e4",
-    "review-mortar-and-pestle-3fbfd223937b"
+    "review-mortar-and-pestle-3fbfd223937b",
+    "review-plant-pots-ecc22dbb4c63",
+    "comparison-clothes-brush-vs-clothes-line-5284444e0993"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -431,7 +451,13 @@
     "mattress protector for back sleepers": "2026-11-06",
     "mortar and pestle": "2026-11-06",
     "Mortar and Pestle": "2026-11-06",
-    "mortar and pestle for spice grinding": "2026-11-06"
+    "mortar and pestle for spice grinding": "2026-11-06",
+    "plant pots": "2026-11-06",
+    "Plant Pots": "2026-11-06",
+    "plant pots for low light rooms": "2026-11-06",
+    "clothes brush|clothes line": "2026-11-06",
+    "Clothes Brush": "2026-11-06",
+    "Clothes Line": "2026-11-06"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -487,7 +513,10 @@
     "{P} for {AUD}: An Honest Buying Guide",
     "{A} {P} Review: What I Would Check Before Buying",
     "Best {F}{AUD}: {N} Options We Would Actually Buy",
-    "Choosing Between {A} and {B}: A Practical Comparison"
+    "Choosing Between {A} and {B}: A Practical Comparison",
+    "{P} Review: What I Would Check Before Buying",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "{A} vs {B}: Deciding Between Two Good Options"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -496,7 +525,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 29,
+    "total_generated": 31,
     "total_published": 0
   }
 }
