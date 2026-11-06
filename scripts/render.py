@@ -429,6 +429,8 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             {
             "name": i.get("display_name") or i.get("name"),
             "asin": i.get("asin", ""),
+            "asin_verified": i.get("asin_verified") is True,
+            "verified_product_title": i.get("verified_product_title", ""),
             "search_term": i.get("search_term", ""),
             "url": aff.url_for(i),
         }
