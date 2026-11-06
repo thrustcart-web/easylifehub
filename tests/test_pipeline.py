@@ -558,6 +558,127 @@ class TestAIPath(unittest.TestCase):
         self.assertNotIn("APIFY_API_TOKEN", rebuild_source)
 
 
+    def test_extract_json_handles_fences_and_prose(self):
+        self.assertEqual(providers.extract_json('```json\n{"a": 1}\n```'), {"a": 1})
+        self.assertEqual(providers.extract_json('Sure! Here you go:\n{"a": 1}\nHope that helps'), {"a": 1})
+        self.assertEqual(providers.extract_json('{"a": 1,}'), {"a": 1})   # trailing comma
+
+    def test_extract_json_never_returns_a_non_dict(self):
+        """Regression: a model answering `[{...}]` used to reach normalise() as a
+        list, which raised AttributeError. AttributeError is NOT a RuntimeError,
+        so generate.run()'s catch-all missed it and the whole GitHub Actions job
+        died with "Process completed with exit code 1" mid-batch.
+        """
+        # a one-element array is unwrapped, not rejected
+        self.assertEqual(providers.extract_json('[{"a": 1}]'), {"a": 1})
+        self.assertEqual(providers.extract_json('```json\n[{"a": 1}]\n```'), {"a": 1})
+        self.assertEqual(providers.extract_json('prose [{"a": 1}] prose'), {"a": 1})
+        # anything with no object in it must raise AIError (handled upstream),
+        # never return something the rest of the pipeline would choke on
+        for junk in ('[1, 2, 3]', '[]', '"a string"', '42', 'null', 'true'):
+            with self.assertRaises(providers.AIError, msg=junk):
+                providers.extract_json(junk)
+
+    def test_normalise_survives_any_garbage_input(self):
+        """normalise() is the last line of defence - it must not raise."""
+        topic = {"keyword": "test product", "title": "Test Product Review", "slug": "x"}
+        for junk in ([], [{"title": "T"}], "text", None, 42, 3.5, True):
+            article = normalise(junk, topic)
+            self.assertIsInstance(article, dict)
+            self.assertEqual(article["title"], "Test Product Review")
+
+    def test_a_crashing_ai_provider_cannot_kill_the_batch(self):
+        """Regression: an AttributeError from the AI path used to escape both
+        write_article() and generate.run()'s `except (AIError, RuntimeError)`,
+        killing the whole job. Now every exception is either converted to
+        AIError or swallowed by the template fallback.
+        """
+        def explode(*args, **kwargs):
+            raise AttributeError("'list' object has no attribute 'get'")
+
+        original = ai_writer.generate_json
+        ai_writer.generate_json = explode
+        try:
+            cfg = fresh_cfg()
+            os.environ["GROQ_API_KEY"] = "fake"
+            topic = {"keyword": "test widget", "title": "Test Widget Review",
+                     "slug": "crash-test", "template": "review", "niche": "kitchen",
+                     "items": [{"name": "Test Widget", "display_name": "Test Widget",
+                                "search_term": "test widget", "asin": "B0TEST0001",
+                                "asin_verified": True, "verified_product_title": "Test Widget"}]}
+            try:
+                ai_writer.write_article(topic, cfg)
+            except providers.AIError:
+                pass                        # converted to AIError -> caller falls back
+            except AttributeError as exc:   # the bug: this escaped and killed the job
+                self.fail(f"AttributeError escaped the writer: {exc}")
+        finally:
+            ai_writer.generate_json = original
+
+    def test_generate_one_degrades_to_template_when_the_ai_crashes(self):
+        """End to end: a crashing provider still produces a publishable article."""
+        import generate as gen
+
+        def explode(*args, **kwargs):
+            raise AttributeError("'list' object has no attribute 'get'")
+
+        original = ai_writer.generate_json
+        original_resolver = gen.resolve_topic_items
+        ai_writer.generate_json = explode
+
+        def attach_verified_test_asins(topic):
+            for index, item in enumerate(topic.get("items", []), start=1):
+                item["asin"] = f"B0TEST{index:04d}"
+                item["asin_verified"] = True
+                item["verified_product_title"] = item.get("display_name") or item.get("name")
+            return topic
+
+        gen.resolve_topic_items = attach_verified_test_asins
+        try:
+            cfg = fresh_cfg()
+            cfg["content"]["fallback_to_template"] = True
+            os.environ["GROQ_API_KEY"] = "fake"
+            state = {"generated": [], "published": [], "queued_slugs": [], "keywords_used": {},
+                     "last_publish_ts": None, "failures": {"count": 0, "until": None, "last_error": None},
+                     "counters": {"total_generated": 0, "total_published": 0}, "titles_used": []}
+            topics = topic_planner.next_topics(state=state, count=1)
+            self.assertTrue(topics)
+            result = gen.generate_one(cfg, state, topics[0], mode="auto")
+            self.assertIsNotNone(result, "generate_one returned None after an AI crash")
+            self.assertEqual(result["source"], "template")
+        finally:
+            ai_writer.generate_json = original
+            gen.resolve_topic_items = original_resolver
+
+    def test_normalise_locks_the_planned_title(self):
+        raw = dict(self.GOOD, title="CLICKBAIT: You Will Not Believe This")
+        topic = {"keyword": "test product", "title": "Test Product Review: The Planned Headline", "slug": "x"}
+        self.assertEqual(normalise(raw, topic)["title"], "Test Product Review: The Planned Headline")
+
+    def test_validate_rejects_fabrications(self):
+        cfg = fresh_cfg()
+        bad = json.loads(json.dumps(self.GOOD))
+        bad["sections"][0]["paragraphs"][0] += " It costs $199 and rates 4.5/5 after 40 hours of testing."
+        ok, problems = validate(normalise(bad, {"keyword": "x", "title": "x" * 30, "slug": "x"}), cfg)
+        self.assertFalse(ok)
+        self.assertTrue(any("price" in p or "rating" in p or "test claim" in p for p in problems), problems)
+
+    def test_validate_rejects_links_and_urls(self):
+        cfg = fresh_cfg()
+        bad = json.loads(json.dumps(self.GOOD))
+        bad["sections"][0]["paragraphs"][0] += " Read more at https://example.com/product."
+        ok, problems = validate(normalise(bad, {"keyword": "x", "title": "x" * 30, "slug": "x"}), cfg)
+        self.assertFalse(ok)
+        self.assertTrue(any("links or URLs" in p for p in problems), problems)
+
+    def test_validate_rejects_thin_content(self):
+        cfg = fresh_cfg()
+        thin = json.loads(json.dumps(self.GOOD))
+        thin["sections"] = thin["sections"][:1]
+        ok, problems = validate(normalise(thin, {"keyword": "x", "title": "x" * 30, "slug": "x"}), cfg)
+        self.assertFalse(ok)
+        self.assertTrue(any("short" in p or "sections" in p for p in problems), problems)
+
     def test_gemini_tries_stable_model_fallback_after_503(self):
         calls = []
         original_post_json = providers._post_json
