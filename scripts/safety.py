@@ -26,6 +26,8 @@ REPEATED_SENTENCE_LIMIT = 3
 TABLE_RE = re.compile(r"<table\b.*?</table>", re.S | re.I)
 TAG_OPEN_CLOSE_RE = re.compile(r"</?[a-zA-Z][^>]*>")
 ENTITY_FRAGMENT_RE = re.compile(r"&?[a-zA-Z]+;")
+URL_IN_PROSE_RE = re.compile(r"\b(?:https?://|www\.)\S+", re.I)
+TOC_RE = re.compile(r"<nav[^>]*class=[\"'][^\"']*\btoc\b|aria-label=[\"']table of contents|table of contents", re.I)
 # Owner-supplied data (budget badges, spec cells) is legitimate - it came from
 # data/products.csv, not from a language model. Anything else with a currency
 # symbol in body copy is a hallucinated price and gets rejected.
@@ -68,6 +70,12 @@ def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: in
         reasons.append("hype language survived rendering")
     if PRICE_RE.search(prose):
         reasons.append("fabricated price in body copy (numbers belong in the spec table only)")
+    if CUSTOMER_REVIEW_RE.search(prose_lower):
+        reasons.append("customer review or rating claims are not allowed")
+    if URL_IN_PROSE_RE.search(prose):
+        reasons.append("bare URLs are not allowed in article copy")
+    if TOC_RE.search(html):
+        reasons.append("Table of Contents is not allowed")
 
     # Every hyperlink in a post must point to Amazon and carry the configured
     # Associates tracking tag. Images and plain text are not treated as links.
@@ -75,11 +83,17 @@ def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: in
     anchors = re.findall(r"<a\b([^>]*)>", html, re.I | re.S)
     link_count = 0
     linked_asins: set[str] = set()
+    linked_asin_counts: dict[str, int] = {}
     for attrs in anchors:
         href_match = re.search(r""" \bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)) """.strip(), attrs, re.I | re.S)
         if not href_match:
             reasons.append("anchor without href")
             continue
+        class_match = re.search(r"""\bclass\s*=\s*["']([^"']*)["']""", attrs, re.I)
+        owner_match = re.search(r"""\bdata-owner\s*=\s*["']renderer["']""", attrs, re.I)
+        classes = set((class_match.group(1) if class_match else "").split())
+        if "amazon-cta" not in classes or not owner_match:
+            reasons.append("Amazon links must be renderer-created green CTA buttons, not inline links")
         href = unescape(next((part for part in href_match.groups() if part is not None), "")).strip()
         try:
             parsed = urlsplit(href)
@@ -95,7 +109,9 @@ def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: in
         if not path_match:
             reasons.append("Amazon search or non-product URL found; direct /dp/ASIN links are required")
         else:
-            linked_asins.add(path_match.group(1).upper())
+            asin = path_match.group(1).upper()
+            linked_asins.add(asin)
+            linked_asin_counts[asin] = linked_asin_counts.get(asin, 0) + 1
         tags = parse_qs(parsed.query).get("tag", []) if parsed else []
         if not expected_tag or expected_tag not in tags:
             reasons.append("Amazon link missing the configured Associates tracking tag")
@@ -103,6 +119,9 @@ def quality_gate(html: str, article: dict, cfg: dict, expected_product_count: in
         reasons.append(
             f"missing direct product links: {len(linked_asins)} of {int(expected_product_count)} products"
         )
+    for asin, count in linked_asin_counts.items():
+        if count < 2:
+            reasons.append(f"Amazon CTA for {asin} must appear in the middle and at the end")
     if link_count > LINK_SPAM_THRESHOLD:
         reasons.append(f"link stuffing: {link_count} affiliate links")
 
