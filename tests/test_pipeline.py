@@ -498,6 +498,51 @@ class TestAIPath(unittest.TestCase):
         self.assertIn("only confirmed product-specific listing evidence", user)
         self.assertIn("NEVER invent product facts", system)
 
+    def test_levoit_official_spec_article_passes_all_gates_and_is_approved(self):
+        import json
+        import rebuild_verified_queue as rebuild_mod
+
+        cfg = fresh_cfg()
+        cfg["content"]["min_words"] = 600
+        article = rebuild_mod.build_levoit_official_specs_article()
+        self.assertTrue(article["_editorial_approved"])
+        self.assertEqual(article["_source"], "manual:official_specs")
+
+        article_ok, article_problems = ai_writer.validate(article, cfg)
+        self.assertTrue(article_ok, article_problems)
+
+        topic = {
+            "slug": "review-levoit-air-purifier-core-300-853749094376",
+            "title": article["title"],
+            "meta_description": article["meta_description"],
+            "keyword": "LEVOIT Core 300-P Air Purifier",
+            "template": "review",
+            "niche": "air quality",
+            "items": [{
+                "name": "LEVOIT Core 300-P Air Purifier",
+                "display_name": "LEVOIT Core 300-P Air Purifier",
+                "asin": "B07VVK39F7",
+                "asin_verified": True,
+                "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+                "url": "https://www.amazon.com/dp/B07VVK39F7?tag=testtag-20",
+            }],
+        }
+        aff = affiliate_mod.Affiliate(cfg)
+        html = render_mod.render_html(article, topic, cfg, aff, hero="")
+        quality_ok, quality_problems = safety.quality_gate(
+            html, article, cfg, expected_product_count=1
+        )
+        self.assertTrue(quality_ok, quality_problems)
+        self.assertEqual(html.count('class="amazon-cta'), 2)
+        render_mod.save_article(article, topic, cfg, aff, hero="")
+        saved = json.loads(
+            (util.QUEUE_DIR / "review-levoit-air-purifier-core-300-853749094376.json").read_text()
+        )
+        self.assertEqual(saved["layout_version"], 4)
+        self.assertFalse(saved["review_required"])
+        self.assertTrue(saved["product_links_verified"])
+        self.assertEqual(saved["source"], "manual:official_specs")
+
     def test_repair_scrubber_removes_customer_opinions_but_preserves_product_facts(self):
         import rebuild_verified_queue as rebuild_mod
 
