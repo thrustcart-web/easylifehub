@@ -479,6 +479,60 @@ class TestAIPath(unittest.TestCase):
         "conclusion": ["Closing paragraph one.", "Closing paragraph two."],
     }
 
+    def test_prompt_includes_verified_amazon_listing_title_as_product_evidence(self):
+        cfg = fresh_cfg()
+        topic = {
+            "slug": "coffee-canister-test",
+            "title": "Coffee Canister: What to Check Before Buying",
+            "template": "review",
+            "niche": "coffee & espresso",
+            "items": [{
+                "name": "Coffee Canister",
+                "display_name": "Coffee Canister",
+                "asin": "B0DZ2MMFMJ",
+                "verified_product_title": "Coffee Canister Airtight Storage Container with Lid",
+            }],
+        }
+        system, user = ai_writer.build_prompts(topic, cfg)
+        self.assertIn("Coffee Canister Airtight Storage Container with Lid", user)
+        self.assertIn("only confirmed product-specific listing evidence", user)
+        self.assertIn("Never invent product facts", system)
+
+    def test_verified_queue_rebuilder_rejects_search_links_and_never_calls_product_search(self):
+        import inspect
+        import rebuild_verified_queue as rebuild_mod
+
+        meta = {
+            "slug": "coffee-canister-test",
+            "title": "Coffee Canister: What to Check Before Buying",
+            "source": "ai:groq",
+            "layout_version": 3,
+            "review_required": False,
+            "product_links_verified": True,
+            "items": [{
+                "name": "Coffee Canister",
+                "asin": "B0DZ2MMFMJ",
+                "asin_verified": True,
+                "verified_product_title": "Coffee Canister Airtight Storage Container with Lid",
+                "url": "https://www.amazon.com/dp/B0DZ2MMFMJ?tag=testtag-20",
+            }],
+        }
+        self.assertTrue(rebuild_mod.is_rebuild_candidate(meta, "testtag-20"))
+
+        search_meta = json.loads(json.dumps(meta))
+        search_meta["items"][0]["url"] = "https://www.amazon.com/s?k=coffee+canister&tag=testtag-20"
+        self.assertFalse(rebuild_mod.is_rebuild_candidate(search_meta, "testtag-20"))
+
+        unverified_meta = json.loads(json.dumps(meta))
+        unverified_meta["items"][0]["asin_verified"] = False
+        self.assertFalse(rebuild_mod.is_rebuild_candidate(unverified_meta, "testtag-20"))
+
+        rebuild_source = inspect.getsource(rebuild_mod.rebuild)
+        self.assertNotIn("resolve_items(", rebuild_source)
+        self.assertNotIn("_search_amazon", rebuild_source)
+        self.assertNotIn("SERPAPI_API_KEY", rebuild_source)
+        self.assertNotIn("APIFY_API_TOKEN", rebuild_source)
+
     def test_extract_json_handles_fences_and_prose(self):
         self.assertEqual(providers.extract_json('```json\n{"a": 1}\n```'), {"a": 1})
         self.assertEqual(providers.extract_json('Sure! Here you go:\n{"a": 1}\nHope that helps'), {"a": 1})
