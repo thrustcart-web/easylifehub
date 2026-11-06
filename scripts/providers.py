@@ -137,7 +137,28 @@ def _openai_style(base_url: str, api_key: str, model: str, system: str, user: st
     headers = {"Authorization": f"Bearer {api_key}", "User-Agent": USER_AGENT}
     try:
         data = _post_json(f"{base_url}/chat/completions", payload, headers)
-        return data["choices"][0]["message"]["content"]
+        choices = data.get("choices") or []
+    message = (choices[0].get("message") or {}) if choices else {}
+    content = message.get("content")
+    if isinstance(content, str) and content.strip():
+        return content.strip()
+    if isinstance(content, list):
+        text_parts = [
+            part.get("text")
+            for part in content
+            if isinstance(part, dict) and isinstance(part.get("text"), str) and part.get("text").strip()
+        ]
+        if text_parts:
+            return "\\n".join(text_parts).strip()
+
+    finish_reason = choices[0].get("finish_reason") if choices else "missing_choice"
+    usage = data.get("usage") or {}
+    details = usage.get("completion_tokens_details") or {}
+    reasoning_tokens = details.get("reasoning_tokens")
+    raise AIError(
+        "OpenRouter returned no usable text "
+        f"(finish_reason={finish_reason}, reasoning_tokens={reasoning_tokens})"
+    )
     except (KeyError, IndexError, TypeError) as exc:
         # some free endpoints reject response_format -> retry without it
         payload.pop("response_format", None)
