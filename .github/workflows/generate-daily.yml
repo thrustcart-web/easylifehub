@@ -5,8 +5,8 @@ name: generate-daily
 # Nothing here touches Blogger, so a failure can never damage your account.
 
 on:
-  schedule:
-    - cron: '0 3 * * *'          # 03:00 UTC  (= 05:00 Cairo)
+  # Scheduled generation is paused until the queue contains enough approved v4 posts.
+  # Manual dispatch remains available for controlled generation runs.
   workflow_dispatch:
     inputs:
       count:
