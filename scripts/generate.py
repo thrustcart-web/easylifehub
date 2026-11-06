@@ -278,15 +278,6 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
     removed = render_mod.prune_queue(max_queue) if not dry_run else 0
     render_mod.rebuild_index(cfg)
 
-    # keep the category hub page in sync with whatever is in the repo now
-    try:
-        import categories
-        hub = categories.build_hub(cfg, state)
-        if hub:
-            log.info("category hub rebuilt: %s", hub)
-    except Exception as exc:  # noqa: BLE001 - the hub is a bonus, never fatal
-        log.warning("category hub skipped: %s", str(exc)[:160])
-
     save_state(state)
 
     summary = {
