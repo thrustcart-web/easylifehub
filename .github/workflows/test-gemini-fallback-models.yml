@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Test one small response from the next Gemini stable model
+      - name: Test tiny response against independent Gemini fallback models
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -20,7 +20,7 @@ jobs:
             exit 1
           fi
 
-          for MODEL in gemini-3.7-flash gemini-3.6-flash; do
+          for MODEL in gemini-3.6-flash gemini-3.5-flash-lite gemini-3.1-flash-lite; do
             echo "Trying $MODEL with one tiny test request."
             HTTP_STATUS=$(curl --silent --show-error \
               --output /tmp/gemini-response.json \
@@ -39,37 +39,54 @@ jobs:
 
           model = sys.argv[1]
           data = json.loads(Path("/tmp/gemini-response.json").read_text(encoding="utf-8"))
-          try:
-              response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-          except (KeyError, IndexError, TypeError):
-              raise SystemExit("ERROR: Gemini returned an unexpected response structure.")
+          candidates = data.get("candidates") or []
+          text_parts = []
+          for candidate in candidates:
+              content = candidate.get("content") or {}
+              for part in content.get("parts") or []:
+                  if isinstance(part, dict) and isinstance(part.get("text"), str):
+                      text_parts.append(part["text"])
+          response_text = "\\n".join(text_parts).strip()
 
-          if response_text == "GEMINI_OK":
+          if "GEMINI_OK" in response_text:
               print(f"SUCCESS: {model} generated the expected test response.")
-          else:
-              print(f"ERROR: {model} responded, but not with the expected test token.")
-              raise SystemExit(1)
+              raise SystemExit(0)
+
+          shapes = []
+          for candidate in candidates[:2]:
+              parts = (candidate.get("content") or {}).get("parts") or []
+              shapes.append({
+                  "finishReason": candidate.get("finishReason"),
+                  "partKeys": [sorted(part.keys()) for part in parts if isinstance(part, dict)],
+              })
+          print("No expected text returned. Safe response shape: " + json.dumps({
+              "topKeys": sorted(data.keys()),
+              "candidateCount": len(candidates),
+              "promptBlockReason": (data.get("promptFeedback") or {}).get("blockReason"),
+              "candidateShapes": shapes,
+          }))
+          raise SystemExit(2)
           PY
               then
                 echo "No article or product lookup was run."
                 exit 0
               else
-                exit 1
+                echo "$MODEL returned HTTP 200 but no usable test text; trying the next model."
               fi
+            else
+              case "$HTTP_STATUS" in
+                429|500|502|503|504)
+                  echo "$MODEL temporarily unavailable (HTTP $HTTP_STATUS); trying the next model."
+                  ;;
+                *)
+                  echo "ERROR: $MODEL returned HTTP $HTTP_STATUS. Not trying more models."
+                  echo "Response content hidden; API key was not printed."
+                  exit 1
+                  ;;
+              esac
             fi
-
-            case "$HTTP_STATUS" in
-              429|500|502|503|504)
-                echo "$MODEL temporarily unavailable (HTTP $HTTP_STATUS); trying the next configured model."
-                ;;
-              *)
-                echo "ERROR: $MODEL returned HTTP $HTTP_STATUS. Not trying more models."
-                echo "Response content hidden; API key was not printed."
-                exit 1
-                ;;
-            esac
           done
 
-          echo "ERROR: Both Gemini fallback models were unavailable."
+          echo "ERROR: No configured Gemini fallback model returned a usable test response."
           echo "No article or product lookup was run."
           exit 1
