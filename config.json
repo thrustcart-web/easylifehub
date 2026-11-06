@@ -73,9 +73,9 @@
   "ai": {
     "primary": "groq",
     "fallbacks": [
-      "mistral",
       "openrouter",
-      "gemini"
+      "gemini",
+      "mistral"
     ],
     "temperature": 0.85,
     "max_output_tokens": 6000,
