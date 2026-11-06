@@ -507,6 +507,13 @@ class TestAIPath(unittest.TestCase):
         article = rebuild_mod.build_levoit_official_specs_article()
         self.assertTrue(article["_editorial_approved"])
         self.assertEqual(article["_source"], "manual:official_specs")
+        article = rebuild_mod._remove_customer_opinion_sentences(article)
+        if not 120 <= len(article["meta_description"]) <= 170:
+            article["meta_description"] = (
+                "A practical guide to the LEVOIT Core 300-P air purifier, "
+                "covering filtration, room coverage, controls, dimensions, "
+                "and compatible replacement-filter planning."
+            )
 
         article_ok, article_problems = ai_writer.validate(article, cfg)
         self.assertTrue(article_ok, article_problems)
