@@ -539,6 +539,7 @@ function refillQueueIfLow() {
     Logger.log('Automatic queue refill is paused: AUTOMATION_ENABLED is not true.');
     return;
   }
+  removeLegacyPaidLookupToggle_();
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) {
     Logger.log('Refill check skipped: another script execution holds the lock.');
