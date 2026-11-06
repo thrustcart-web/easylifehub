@@ -1,6 +1,11 @@
 name: test-openrouter-generation
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/test-openrouter-generation.yml'
   workflow_dispatch:
 
 permissions:
