@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - uses: actions/setup-python@v6
         with:
@@ -89,7 +89,24 @@ jobs:
             echo "Nothing new to commit."
           else
             git commit -m "content: $(date -u +'%Y-%m-%d') queue refresh [skip ci]"
-            git push
+            # Code changes may reach main while articles are being generated.
+            # Rebase the prepared queue commit on the latest main before pushing.
+            for attempt in 1 2 3; do
+              echo "Push attempt $attempt/3: fetching and rebasing on latest main..."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "::error::Rebase conflict while saving generated queue."
+                git rebase --abort || true
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                echo "Generated queue successfully saved to main."
+                exit 0
+              fi
+              echo "Push was rejected; retrying with the latest main."
+            done
+            echo "::error::Could not save generated queue after three attempts."
+            exit 1
           fi
 
       - name: Upload summary
