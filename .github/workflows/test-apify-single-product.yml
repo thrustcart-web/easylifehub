@@ -1,0 +1,108 @@
+
+name: test-apify-single-product
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Test one Amazon product
+        env:
+          TEST_API: ${{ secrets.TEST_API }}
+          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from urllib import request, parse, error
+
+          token = os.environ.get("TEST_API", "").strip()
+          if not token:
+              raise SystemExit("ERROR: TEST_API secret is missing")
+
+          params = parse.urlencode({
+              "maxTotalChargeUsd": "0.015",
+              "timeout": "300"
+          })
+
+          endpoint = (
+              "https://api.apify.com/v2/acts/"
+              "junglee~amazon-crawler/run-sync-get-dataset-items?"
+              + params
+          )
+
+          payload = {
+              "categoryOrProductUrls": [{
+                  "url": "https://www.amazon.com/s?k=Marbrasse+Pen+Organizer+with+2+Drawer"
+              }],
+              "maxItemsPerStartUrl": 1,
+              "maxSearchPagesPerStartUrl": 1,
+              "language": "en",
+              "scrapeProductDetails": False,
+              "maxProductVariantsAsSeparateResults": 0,
+              "maxOffers": 0
+          }
+
+          req = request.Request(
+              endpoint,
+              data=json.dumps(payload).encode(),
+              headers={
+                  "Authorization": "Bearer " + token,
+                  "Content-Type": "application/json"
+              },
+              method="POST"
+          )
+
+          try:
+              with request.urlopen(req, timeout=330) as response:
+                  rows = json.loads(response.read().decode())
+          except error.HTTPError as exc:
+              print(exc.read().decode("utf-8", "replace")[:1000])
+              raise SystemExit(f"Apify HTTP {exc.code}")
+          
+          if not isinstance(rows, list) or not rows:
+              raise SystemExit("No products returned")
+
+          product = rows[0]
+          title = str(product.get("title") or "").strip()
+          asin = str(product.get("asin") or "").strip().upper()
+
+          if not re.fullmatch(r"[A-Z0-9]{10}", asin):
+              raise SystemExit("Invalid or missing ASIN")
+
+          required = {"marbrasse", "pen", "organizer"}
+          words = set(re.findall(r"[a-z0-9]+", title.lower()))
+
+          if not required.issubset(words):
+              raise SystemExit("Returned product title did not match the requested product")
+
+          tag = os.environ.get("AFFILIATE_TAG", "qalok0c-20").strip()
+          affiliate_url = (
+              f"https://www.amazon.com/dp/{asin}?"
+              + parse.urlencode({"tag": tag})
+          )
+
+          print("TEST RESULT: SUCCESS")
+          print("Title:", title)
+          print("ASIN:", asin)
+          print("Affiliate product URL:", affiliate_url)
+          print("Queue changed: NO")
+          print("Blogger changed: NO")
+          print("Maximum total Apify charge configured: $0.015")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write("## Apify one-product test: SUCCESS\n")
+              f.write(f"- Product: {title}\n")
+              f.write(f"- ASIN: {asin}\n")
+              f.write(f"- Affiliate URL: {affiliate_url}\n")
+              f.write("- Queue/Blogger changes: none\n")
+              f.write("- Maximum run charge: $0.015\n")
+          PY
