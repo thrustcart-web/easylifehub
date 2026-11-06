@@ -1,10 +1,10 @@
 {
   "slug": "seed-standing-desk-guide",
-  "title": "Before You Buy A Standing Desk: The Honest Version",
-  "meta_description": "Standing desks fail in three predictable ways: wobble, a dead controller, and a height that never quite suits you. Here is how to avoid all three.",
+  "title": "Pamray L-Shaped Desk Review: Fit and Workspace Planning",
+  "meta_description": "A practical look at the Pamray L-shaped desk, including room measurements, reversible storage layout, monitor placement, and setup checks.",
   "template": "review",
   "niche": "home office",
-  "keyword": "standing desk buying guide",
+  "keyword": "Pamray L Shaped Desk",
   "labels": [
     "Reviews",
     "Home Office"
@@ -14,10 +14,12 @@
   "words": 908,
   "items": [
     {
-      "name": "Standing Desk",
-      "asin": "",
-      "search_term": "electric height adjustable standing desk dual motor",
-      "url": "https://www.amazon.com/s?k=electric+height+adjustable+standing+desk+dual+motor&tag=qalok0c-20"
+      "name": "Pamray L Shaped Desk",
+      "asin": "B0FVXMDM4L",
+      "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
+      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-standing-desk-guide.html",
@@ -28,5 +30,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
