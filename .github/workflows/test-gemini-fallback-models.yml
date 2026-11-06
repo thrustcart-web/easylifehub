@@ -1,0 +1,75 @@
+name: test-gemini-fallback-models
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-gemini-fallbacks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Test one small response from the next Gemini stable model
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "ERROR: GEMINI_API_KEY is missing or empty."
+            exit 1
+          fi
+
+          for MODEL in gemini-3.7-flash gemini-3.6-flash; do
+            echo "Trying $MODEL with one tiny test request."
+            HTTP_STATUS=$(curl --silent --show-error \
+              --output /tmp/gemini-response.json \
+              --write-out "%{http_code}" \
+              --header "x-goog-api-key: $GEMINI_API_KEY" \
+              --header "Content-Type: application/json" \
+              --request POST \
+              --data-binary '{"contents":[{"parts":[{"text":"Reply with exactly GEMINI_OK"}]}],"generationConfig":{"maxOutputTokens":16}}' \
+              "https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent")
+
+            if [ "$HTTP_STATUS" = "200" ]; then
+              if python3 - "$MODEL" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          model = sys.argv[1]
+          data = json.loads(Path("/tmp/gemini-response.json").read_text(encoding="utf-8"))
+          try:
+              response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+          except (KeyError, IndexError, TypeError):
+              raise SystemExit("ERROR: Gemini returned an unexpected response structure.")
+
+          if response_text == "GEMINI_OK":
+              print(f"SUCCESS: {model} generated the expected test response.")
+          else:
+              print(f"ERROR: {model} responded, but not with the expected test token.")
+              raise SystemExit(1)
+          PY
+              then
+                echo "No article or product lookup was run."
+                exit 0
+              else
+                exit 1
+              fi
+            fi
+
+            case "$HTTP_STATUS" in
+              429|500|502|503|504)
+                echo "$MODEL temporarily unavailable (HTTP $HTTP_STATUS); trying the next configured model."
+                ;;
+              *)
+                echo "ERROR: $MODEL returned HTTP $HTTP_STATUS. Not trying more models."
+                echo "Response content hidden; API key was not printed."
+                exit 1
+                ;;
+            esac
+          done
+
+          echo "ERROR: Both Gemini fallback models were unavailable."
+          echo "No article or product lookup was run."
+          exit 1
