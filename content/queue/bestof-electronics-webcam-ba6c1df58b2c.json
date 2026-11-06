@@ -1,7 +1,7 @@
 {
   "slug": "bestof-electronics-webcam-ba6c1df58b2c",
   "title": "4 Everyday Electronics Picks Reviewed Against the Criteria That Matter",
-  "meta_description": "A no‑fluff review of a streaming camera, earbuds, USB charger and e‑reader, highlighting real strengths, clear drawbacks and the best overall and best‑value choices for home‑office and student use.",
+  "meta_description": "Explore four distinct electronics options, including a 4K webcam, wireless earbuds, compact USB-C charger, and a pocket e-reader device.",
   "template": "bestof",
   "niche": "electronics",
   "keyword": "Electronics",
@@ -9,50 +9,46 @@
     "Reviews",
     "Electronics"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 1248,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 718,
   "items": [
     {
       "name": "Streaming Camera",
       "asin": "B0CZ6XY78Y",
-      "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
-      "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
+      "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera",
+      "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
+      "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20"
     },
     {
       "name": "Wireless Earbuds",
       "asin": "B09FT58QQP",
-      "search_term": "TOZO A1 Wireless Earbuds",
-      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
+      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+      "search_term": "TOZO A1 Wireless Earbuds",
+      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20"
     },
     {
       "name": "Anker Charger",
       "asin": "B08T5QN2TR",
-      "search_term": "Anker 715 Charger Nano II 65W",
-      "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger"
+      "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger",
+      "search_term": "Anker 715 Charger Nano II 65W",
+      "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20"
     },
     {
       "name": "E-reader",
       "asin": "B0GSZX5MWR",
-      "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
-      "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
+      "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
+      "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
+      "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20"
     }
   ],
   "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
-  "category_label": "Electronics",
-  "category_url": "/search/label/Electronics",
-  "hub_page": "/p/categories.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }

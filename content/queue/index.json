@@ -129,7 +129,7 @@
     {
       "slug": "bestof-electronics-webcam-ba6c1df58b2c",
       "title": "4 Everyday Electronics Picks Reviewed Against the Criteria That Matter",
-      "meta_description": "A no‑fluff review of a streaming camera, earbuds, USB charger and e‑reader, highlighting real strengths, clear drawbacks and the best overall and best‑value choices for home‑office and student use.",
+      "meta_description": "Explore four distinct electronics options, including a 4K webcam, wireless earbuds, compact USB-C charger, and a pocket e-reader device.",
       "template": "bestof",
       "niche": "electronics",
       "keyword": "Electronics",
@@ -137,52 +137,48 @@
         "Reviews",
         "Electronics"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 1248,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 718,
       "items": [
         {
           "name": "Streaming Camera",
           "asin": "B0CZ6XY78Y",
-          "search": "OBSBOT Tiny 2 Lite 4K Webcam",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20",
-          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
+          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera",
+          "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
+          "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20"
         },
         {
           "name": "Wireless Earbuds",
           "asin": "B09FT58QQP",
-          "search": "TOZO A1 Wireless Earbuds",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20",
-          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
+          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+          "search_term": "TOZO A1 Wireless Earbuds",
+          "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20"
         },
         {
           "name": "Anker Charger",
           "asin": "B08T5QN2TR",
-          "search": "Anker 715 Charger Nano II 65W",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20",
-          "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger"
+          "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger",
+          "search_term": "Anker 715 Charger Nano II 65W",
+          "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20"
         },
         {
           "name": "E-reader",
           "asin": "B0GSZX5MWR",
-          "search": "XTEINK X3 Pocket E-Ink eBook Reader",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20",
-          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
+          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
+          "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
+          "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20"
         }
       ],
       "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
-      "category_label": "Electronics",
-      "category_url": "/search/label/Electronics",
-      "hub_page": "/p/categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "bestof-fitness-handle-3d07849b4753",
@@ -473,7 +469,7 @@
     {
       "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
       "title": "Fabric Glue vs Fabric Scissors: Deciding Between Two Good Options",
-      "meta_description": "Compare fabric glue and fabric scissors on readiness, precision, maintenance, fabric impact, and value to help you choose the right tool for your craft projects.",
+      "meta_description": "Compare Aleene's Fabric Fusion Glue and heavy-duty fabric scissors to determine which tool fits your clothing, denim, and sewing projects best.",
       "template": "comparison",
       "niche": "crafts & hobbies",
       "keyword": "Fabric Glue vs Fabric Scissors",
@@ -481,40 +477,37 @@
         "Reviews",
         "Crafts & Hobbies"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 655,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 721,
       "items": [
         {
           "name": "Aleene's Fabric Glue",
           "asin": "B00178QSE6",
-          "search": "Aleene's Fabric Fusion Glue 4 oz",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B00178QSE6?tag=qalok0c-20",
-          "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible"
+          "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
+          "search_term": "Aleene's Fabric Fusion Glue 4 oz",
+          "url": "https://www.amazon.com/dp/B00178QSE6?tag=qalok0c-20"
         },
         {
           "name": "Fabric Scissors",
           "asin": "B082LY2W2G",
-          "search": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B082LY2W2G?tag=qalok0c-20",
-          "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft"
+          "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft",
+          "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
+          "url": "https://www.amazon.com/dp/B082LY2W2G?tag=qalok0c-20"
         }
       ],
       "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
-      "category_label": "Crafts & Hobbies",
-      "category_url": "/search/label/Crafts%20%26%20Hobbies",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
-      "review_required": true,
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
       "title": "Monitor Arm vs Monitor Stand: Which One Should You Actually Buy?",
-      "meta_description": "Compare monitor arms and stands for home offices, covering assembly, ergonomics, desk space, maintenance, and daily use to help you decide which fits your setup today.",
+      "meta_description": "Compare the VIVO Monitor Arm and OPNICE Monitor Stand Riser to find out which setup fits your desk, screen size, and workspace storage needs effectively.",
       "template": "comparison",
       "niche": "home office",
       "keyword": "Monitor Arm vs Monitor Stand",
@@ -522,35 +515,32 @@
         "Reviews",
         "Home Office"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 660,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 676,
       "items": [
         {
           "name": "VIVO Monitor Arm",
           "asin": "B01NH0HTM5",
-          "search": "VIVO STAND-V001O Single Monitor Arm",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=qalok0c-20",
-          "verified_product_title": "VIVO Single Monitor Stand, Fully Adjustable Arm for 17 to 32 inch Screen, Mechanical Articulating Desk Mount, Gaming and Office Setups, VESA 75x75, 100x100, Max 19.8 lbs, Classic, Black, STAND-V001O"
+          "verified_product_title": "VIVO Single Monitor Stand, Fully Adjustable Arm for 17 to 32 inch Screen, Mechanical Articulating Desk Mount, Gaming and Office Setups, VESA 75x75, 100x100, Max 19.8 lbs, Classic, Black, STAND-V001O",
+          "search_term": "VIVO STAND-V001O Single Monitor Arm",
+          "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=qalok0c-20"
         },
         {
           "name": "OPNICE Monitor Stand Riser",
           "asin": "B0DB8F7GDN",
-          "search": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=qalok0c-20",
-          "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black"
+          "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
+          "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
+          "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=qalok0c-20"
         }
       ],
       "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
-      "category_label": "Home Office",
-      "category_url": "/search/label/Home%20Office",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
-      "review_required": true,
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
@@ -692,7 +682,7 @@
     {
       "slug": "review-coffee-canister-1a804dc1169a",
       "title": "Does Capacity Matter in A Coffee Canister? An Honest Look",
-      "meta_description": "Explore if capacity matters for coffee canisters in humid climates. Get design checks and maintenance tips to choose the right size, keeping beans fresh.",
+      "meta_description": "Explore whether you need a large coffee container by examining the Veken Coffee Canister 39OZ model, its dimensions, and practical kitchen fit checks.",
       "template": "review",
       "niche": "coffee & espresso",
       "keyword": "coffee canister for humid climates",
@@ -700,9 +690,9 @@
         "Reviews",
         "Coffee & Espresso"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 749,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 614,
       "items": [
         {
           "name": "Coffee Canister",
@@ -714,7 +704,7 @@
         }
       ],
       "html_file": "review-coffee-canister-1a804dc1169a.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -752,7 +742,7 @@
     {
       "slug": "review-foldable-daypack-2da57045820c",
       "title": "Foldable Daypack for Wedding Trips: Five Things Listings Skip",
-      "meta_description": "A no‑fluff review of a foldable daypack aimed at wedding travelers, covering size, price, drawbacks, competition and who should avoid it.",
+      "meta_description": "Discover what to verify before choosing the G4Free 20L Foldable Daypack for your travels. Learn about its capacity, packability, and practical travel fit.",
       "template": "review",
       "niche": "travel",
       "keyword": "foldable daypack for wedding trips",
@@ -760,33 +750,29 @@
         "Reviews",
         "Travel"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 1011,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 654,
       "items": [
         {
           "name": "G4Free 20L Foldable Daypack",
           "asin": "B07QV16HKB",
-          "search": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20",
-          "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black"
+          "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black",
+          "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
+          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20"
         }
       ],
       "html_file": "review-foldable-daypack-2da57045820c.html",
-      "category_label": "Travel",
-      "category_url": "/search/label/Travel",
-      "hub_page": "/p/browse-all-categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
       "title": "Choosing A Foldable Daypack: Six Things That Actually Matter",
-      "meta_description": "A frank review of a foldable daypack for wedding trips, weighing its price, crease control, and real-world compromises to help you decide if it earns a spot in your luggage.",
+      "meta_description": "Evaluate the G4Free 20L Foldable Daypack by checking verified listing details, capacity limits, packable design, everyday use, and maintenance needs.",
       "template": "review",
       "niche": "travel",
       "keyword": "foldable daypack for wedding trips",
@@ -794,28 +780,24 @@
         "Reviews",
         "Travel"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 1188,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 672,
       "items": [
         {
           "name": "G4Free 20L Foldable Daypack",
           "asin": "B07QV16HKB",
-          "search": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
           "asin_verified": true,
-          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20",
-          "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black"
+          "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black",
+          "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
+          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20"
         }
       ],
       "html_file": "review-foldable-daypack-d32205113585.html",
-      "category_label": "Travel",
-      "category_url": "/search/label/Travel",
-      "hub_page": "/p/categories.html",
+      "layout_version": 4,
       "draft": false,
-      "layout_version": 3,
-      "review_required": true,
-      "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": true
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
@@ -971,7 +953,7 @@
     {
       "slug": "review-plant-pots-ecc22dbb4c63",
       "title": "Plant Pots Review: What I Would Check Before Buying",
-      "meta_description": "A practical guide to plant pots, covering drainage, material, size, light suitability, setup and upkeep, so you can pick the right pot for low‑light rooms.",
+      "meta_description": "Explore practical checks for plant pots, including drainage holes, saucers, and sizing considerations for indoor spaces, before making a purchase.",
       "template": "review",
       "niche": "garden",
       "keyword": "plant pots for low light rooms",
@@ -979,22 +961,21 @@
         "Reviews",
         "Garden"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 845,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 728,
       "items": [
         {
           "name": "Plant Pots",
           "asin": "B0BHSX8PYZ",
+          "asin_verified": true,
+          "verified_product_title": "3 Pack 10 inch Plant Pots with Drainage Holes & Saucer",
           "search_term": "plant pots for low light rooms",
           "url": "https://www.amazon.com/dp/B0BHSX8PYZ?tag=qalok0c-20"
         }
       ],
       "html_file": "review-plant-pots-ecc22dbb4c63.html",
-      "category_label": "Garden",
-      "category_url": "/search/label/Garden",
-      "hub_page": "/p/browse-all-categories.html",
-      "layout_version": 3,
+      "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "review_required": false
@@ -1017,9 +998,9 @@
         {
           "name": "MNN Portable Monitor",
           "asin": "B0B9NNWXVP",
-          "search": "MNN 15.6 FHD 60Hz Portable Monitor",
-          "asin_verified": true,
+          "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
           "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20",
+          "asin_verified": true,
           "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game"
         }
       ],
@@ -1051,9 +1032,9 @@
         {
           "name": "Land Guard Raised Garden Bed",
           "asin": "B09C8HR4Z9",
-          "search": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-          "asin_verified": true,
+          "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
           "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20",
+          "asin_verified": true,
           "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver"
         }
       ],
@@ -1082,9 +1063,9 @@
         {
           "name": "Fit Simplify Resistance Bands",
           "asin": "B01AVDVHTI",
-          "search": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "asin_verified": true,
+          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
           "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
+          "asin_verified": true,
           "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
         }
       ],
@@ -1116,9 +1097,9 @@
         {
           "name": "Fit Simplify Resistance Bands",
           "asin": "B01AVDVHTI",
-          "search": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "asin_verified": true,
+          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
           "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20",
+          "asin_verified": true,
           "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted"
         }
       ],
@@ -1211,9 +1192,9 @@
         {
           "name": "Ring Battery Doorbell 2K",
           "asin": "B0FHJ7TKZM",
-          "search": "Ring Battery Doorbell 2K 2nd Generation",
-          "asin_verified": true,
+          "search_term": "Ring Battery Doorbell 2K 2nd Generation",
           "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=qalok0c-20",
+          "asin_verified": true,
           "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray"
         }
       ],

@@ -1,7 +1,7 @@
 {
   "slug": "review-coffee-canister-1a804dc1169a",
   "title": "Does Capacity Matter in A Coffee Canister? An Honest Look",
-  "meta_description": "Explore if capacity matters for coffee canisters in humid climates. Get design checks and maintenance tips to choose the right size, keeping beans fresh.",
+  "meta_description": "Explore whether you need a large coffee container by examining the Veken Coffee Canister 39OZ model, its dimensions, and practical kitchen fit checks.",
   "template": "review",
   "niche": "coffee & espresso",
   "keyword": "coffee canister for humid climates",
@@ -9,9 +9,9 @@
     "Reviews",
     "Coffee & Espresso"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 749,
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 614,
   "items": [
     {
       "name": "Coffee Canister",
@@ -23,7 +23,7 @@
     }
   ],
   "html_file": "review-coffee-canister-1a804dc1169a.html",
-  "layout_version": 3,
+  "layout_version": 4,
   "draft": false,
   "product_links_verified": true,
   "review_required": false
