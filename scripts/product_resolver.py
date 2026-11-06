@@ -239,12 +239,47 @@ def _trusted_item(item: dict) -> bool:
     )
 
 
-def _apply_candidate(item: dict, rows: list[dict]) -> dict | None:
+def _apply_candidate(
+    item: dict,
+    rows: list[dict],
+    allow_missing_leading_brand: bool = False,
+) -> dict | None:
+    """Accept an exact title, or optionally one omitted leading brand token.
+
+    Some Amazon SERP listings omit the brand at the start of the title. In
+    that case we still require every remaining meaningful name token to match,
+    with at least four tokens remaining so a generic two-word category cannot
+    accidentally validate an unrelated result.
+    """
     name = str(item.get("display_name") or item.get("name") or "").strip()
+    wanted = _normal_tokens(name)
+    raw_name = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", name)
+    raw_tokens = [
+        token.lower()
+        for token in TOKEN_RE.findall(raw_name.lower())
+        if token.lower() not in {"a", "an", "and", "the", "for", "with", "of", "to", "from", "best", "buying", "guide"}
+    ]
+    leading_token = raw_tokens[0] if raw_tokens else ""
+
     for row in rows:
         title = str(row.get("title") or "").strip()
         asin = _extract_asin(row)
-        if asin and title and title_matches(name, title):
+        if not (asin and title):
+            continue
+
+        matches = title_matches(name, title)
+        if not matches and allow_missing_leading_brand and leading_token:
+            found = _normal_tokens(title)
+            missing = wanted - found
+            remaining = wanted - {leading_token}
+            matches = (
+                leading_token in wanted
+                and missing == {leading_token}
+                and len(remaining) >= 4
+                and remaining.issubset(found)
+            )
+
+        if matches:
             result = dict(item)
             result["asin"] = asin
             result["asin_verified"] = True
@@ -314,7 +349,11 @@ def resolve_items(
 
         for index in indexes:
             item = resolved[index]
-            candidate = _apply_candidate(item, rows)
+            candidate = _apply_candidate(
+                item,
+                rows,
+                allow_missing_leading_brand=(provider == "serpapi"),
+            )
             if candidate is None:
                 message = f"no exact Amazon product-title match for: {item.get('display_name') or item.get('name')}"
                 errors.append(message)
