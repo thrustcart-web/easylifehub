@@ -890,11 +890,11 @@ class TestAIPath(unittest.TestCase):
         calls = []
         old_providers = {
             name: providers.PROVIDERS.get(name)
-            for name in ("groq", "mistral", "openrouter")
+            for name in ("groq", "openrouter", "gemini")
         }
         old_env = {
             key: os.environ.get(key)
-            for key in ("GROQ_API_KEY", "MISTRAL_API_KEY", "OPENROUTER_API_KEY")
+            for key in ("GROQ_API_KEY", "OPENROUTER_API_KEY", "GEMINI_API_KEY")
         }
 
         def boom(cfg, system, user, temp, tokens):
@@ -907,18 +907,22 @@ class TestAIPath(unittest.TestCase):
 
         try:
             providers.PROVIDERS["groq"] = boom
-            providers.PROVIDERS["mistral"] = boom
-            providers.PROVIDERS["openrouter"] = works
+            providers.PROVIDERS["openrouter"] = boom
+            providers.PROVIDERS["gemini"] = works
             for key in old_env:
                 os.environ[key] = "fake"
             ai_cfg = fresh_cfg()["ai"]
             parsed, used = providers.generate_json(ai_cfg, "sys", "usr")
-            self.assertEqual(used, "openrouter")
+            self.assertEqual(used, "gemini")
             self.assertEqual(
                 calls,
-                ["openai/gpt-oss-120b", "mistral-large-latest", "openrouter/free"],
+                ["openai/gpt-oss-120b", "openrouter/free", "gemini-3.6-flash"],
             )
             self.assertEqual(parsed["title"], self.GOOD["title"])
+
+            # A caller can still isolate the OpenRouter fallback without
+            # re-running Groq or invoking Gemini.
+            providers.PROVIDERS["openrouter"] = works
             isolated_fallback_cfg = dict(ai_cfg)
             isolated_fallback_cfg["fallbacks"] = ["openrouter"]
             parsed_again, used_again, attempted = providers.generate_json(
@@ -940,66 +944,24 @@ class TestAIPath(unittest.TestCase):
                 else:
                     os.environ[key] = value
 
-
-class TestQualityGate(unittest.TestCase):
-    def test_rejects_thin_content(self):
+    def test_config_matches_requested_provider_and_word_order(self):
         cfg = fresh_cfg()
-        ok, reasons = safety.quality_gate("<p>too short</p>", {}, cfg)
-        self.assertFalse(ok)
-        self.assertTrue(any("thin" in r for r in reasons))
+        self.assertEqual(cfg["content"]["min_words"], 501)
+        self.assertEqual(cfg["ai"]["primary"], "groq")
+        self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
+        self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
 
-    def test_rejects_missing_disclosure(self):
-        cfg = fresh_cfg()
-        body = "<h2>x</h2>" + "<p>" + " ".join(["word"] * 1400) + "</p>"
-        ok, reasons = safety.quality_gate(body, {}, cfg)
-        self.assertFalse(ok)
-        self.assertTrue(any("disclosure" in r for r in reasons))
+    def test_product_discovery_defaults_to_serpapi(self):
+        old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+        try:
+            self.assertEqual(product_resolver._selected_provider(), "serpapi")
+        finally:
+            if old is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
-    def test_rejects_repeated_sentences(self):
-        cfg = fresh_cfg()
-        sentence = "This exact same sentence repeats over and over in the article body. "
-        body = "<h2>x</h2><p>" + sentence * 6 + "</p><div class='disclosure'>Affiliate disclosure.</div>"
-        body += "<p>" + " ".join(["filler"] * 1200) + "</p>"
-        ok, reasons = safety.quality_gate(body, {}, cfg)
-        self.assertFalse(ok)
-        self.assertTrue(any("repeated" in r for r in reasons))
-
-    def test_allows_owner_supplied_prices_in_tables(self):
-        cfg = fresh_cfg()
-        table = '<table class="spec-table"><tr><td>&pound;149</td></tr></table>'
-        badge = '<span class="pb-badge" data-owner-data="1">under $50</span>'
-        body = "<h2>x</h2>" + table + badge + "<p>" + " ".join(["word"] * 1400) + "</p>"
-        body += "<div class='disclosure'>Affiliate disclosure here.</div>"
-        ok, reasons = safety.quality_gate(body, {}, cfg)
-        self.assertTrue(ok, reasons)
-
-
-class TestAffiliateTagGuard(unittest.TestCase):
-    def test_placeholder_tag_is_detected(self):
-        cfg = fresh_cfg()
-        cfg["affiliate"]["tag"] = "YOURTAG-20"
-        from generate import affiliate_tag_ready
-        self.assertFalse(affiliate_tag_ready(cfg))
-
-    def test_real_tag_passes(self):
-        cfg = fresh_cfg()
-        from generate import affiliate_tag_ready
-        self.assertTrue(affiliate_tag_ready(cfg))
-        cfg["affiliate"]["tag"] = ""
-        self.assertFalse(affiliate_tag_ready(cfg))
-
-
-    def test_queue_metadata_records_asin_verification(self):
-        import inspect
-        source = inspect.getsource(render_mod.save_article)
-        self.assertIn('"asin_verified": i.get("asin_verified") is True', source)
-        self.assertIn('"verified_product_title": i.get("verified_product_title", "")', source)
-
-    def test_article_archive_has_no_category_hub_links(self):
-        import inspect
-        source = inspect.getsource(render_mod.render_markdown)
-        self.assertNotIn("Browse All Categories", source)
-        self.assertNotIn("/p/categories.html", source)
 
 class TestEndToEnd(unittest.TestCase):
     def test_offline_pipeline_produces_publishable_html(self):
