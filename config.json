@@ -102,7 +102,11 @@
       "gemini": {
         "env_key": "GEMINI_API_KEY",
         "model": "gemini-3.8-flash",
-        "base_url": "https://generativelanguage.googleapis.com/v1beta"
+        "base_url": "https://generativelanguage.googleapis.com/v1beta",
+        "fallback_models": [
+          "gemini-3.7-flash",
+          "gemini-3.6-flash"
+        ]
       }
     }
   },
