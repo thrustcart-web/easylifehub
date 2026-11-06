@@ -140,7 +140,7 @@
     "cache_file": ".cache/amazon_asins.json",
     "actor": "junglee/amazon-crawler",
     "api_env": "TEST_API",
-    "max_results_per_search": 3,
+    "max_results_per_search": 5,
     "search_pages": 1,
     "scrape_product_details": false,
     "available_providers": [
