@@ -29,6 +29,7 @@ jobs:
       - name: Resolve product pages and rewrite queue links
         env:
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
+          APIFY_SPEND_ENABLED: ${{ vars.APIFY_SPEND_ENABLED }}
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: python3 scripts/backfill_product_links.py
 
