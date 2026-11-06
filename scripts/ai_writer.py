@@ -382,6 +382,12 @@ def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
             # _post_json handles short transient retries; do not repeat a quota-
             # exhausted provider chain for the same article.
             raise
+        except Exception as exc:  # noqa: BLE001 - provider wrapper must never crash the batch
+            log.warning("  AI provider wrapper crashed: %s: %s",
+                        type(exc).__name__, str(exc)[:160])
+            if attempt == attempts:
+                raise AIError(f"{type(exc).__name__}: {exc}") from exc
+            continue
 
         try:
             article = normalise(raw, topic)
