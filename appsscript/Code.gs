@@ -612,7 +612,7 @@ function testConnection() {
 
 
 /**
- * Create a Blogger draft from the next pending article with layout_version 3.
+ * Create a Blogger draft from the next pending article with the approved V4 layout.
  * Does not mark the item published, modify the queue or publish live.
  */
 function createQueuePreviewDraft() {
@@ -738,7 +738,11 @@ function status() {
   Logger.log('Failures        : ' + (P.getProperty('FAIL_COUNT') || '0'));
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
-  Logger.log('Triggers        : ' + ScriptApp.getProjectTriggers().length);
+  var triggers = ScriptApp.getProjectTriggers();
+  Logger.log('Triggers        : ' + triggers.length);
+  triggers.forEach(function (trigger) {
+    Logger.log('  Trigger       : ' + trigger.getHandlerFunction() + ' | ' + trigger.getEventType());
+  });
   try {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     var allPosts = index.posts || [];
