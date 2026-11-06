@@ -584,6 +584,14 @@ class TestAIPath(unittest.TestCase):
         self.assertFalse(ok)
         self.assertTrue(any("price" in p or "rating" in p or "test claim" in p for p in problems), problems)
 
+    def test_validate_rejects_links_and_urls(self):
+        cfg = fresh_cfg()
+        bad = json.loads(json.dumps(self.GOOD))
+        bad["sections"][0]["paragraphs"][0] += " Read more at https://example.com/product."
+        ok, problems = validate(normalise(bad, {"keyword": "x", "title": "x" * 30, "slug": "x"}), cfg)
+        self.assertFalse(ok)
+        self.assertTrue(any("links or URLs" in p for p in problems), problems)
+
     def test_validate_rejects_thin_content(self):
         cfg = fresh_cfg()
         thin = json.loads(json.dumps(self.GOOD))
@@ -612,6 +620,12 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(used, "mistral")
         self.assertEqual(calls, ["openai/gpt-oss-120b", "mistral-large-latest"])
         self.assertEqual(parsed["title"], self.GOOD["title"])
+        parsed_again, used_again, attempted = providers.generate_json(
+            ai_cfg, "sys", "usr", exclude_providers={"groq"}, return_attempted=True
+        )
+        self.assertEqual(used_again, "mistral")
+        self.assertEqual(attempted, ["mistral"])
+        self.assertEqual(parsed_again["title"], self.GOOD["title"])
 
 
 class TestQualityGate(unittest.TestCase):
@@ -692,6 +706,8 @@ class TestEndToEnd(unittest.TestCase):
                 item["asin_verified"] = True
                 item["verified_product_title"] = item.get("display_name") or item.get("name")
             article = template_engine.build_topic_data(topic, cfg)
+            if topic_index == 1:
+                article["intro"][1] += ' <a href="https://example.com/guide">external reference</a> https://example.org/path'
             hero = "<figure class='hero hero-svg'><svg></svg></figure>"
             html = render_mod.render_html(article, topic, cfg, aff, hero)
             ok, reasons = safety.quality_gate(html, article, cfg, expected_product_count=len(topic["items"]))
@@ -703,7 +719,14 @@ class TestEndToEnd(unittest.TestCase):
         for topic, html, path in made:
             self.assertNotIn("<style", html.lower())
             self.assertNotIn("application/ld+json", html)
-            self.assertEqual(html.count("View Product on Amazon"), len(topic["items"]))
+            self.assertNotIn("example.com", html)
+            self.assertNotIn("example.org", html)
+            self.assertEqual(html.count('class="amazon-cta"'), len(topic["items"]) * 2)
+            self.assertEqual(html.count('data-owner="renderer"'), len(topic["items"]) * 2)
+            self.assertNotIn('class="product-links"', html)
+            self.assertNotIn('class="product-box"', html)
+            self.assertNotIn('class="toc"', html.lower())
+            self.assertNotIn("table of contents", html.lower())
             self.assertNotIn("/s?k=", html)
             self.assertIn("tag=testtag-20", html)
             self.assertIn("nofollow sponsored noopener", html)
