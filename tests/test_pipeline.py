@@ -519,7 +519,6 @@ class TestAIPath(unittest.TestCase):
                 "url": "https://www.amazon.com/s?k=coffee+canister&tag=testtag-20",
             }],
         }
-
         resolved = rebuild_mod.resolved_items_for_meta(meta, {}, aff)
         self.assertIsNotNone(resolved)
         self.assertEqual(
@@ -558,6 +557,101 @@ class TestAIPath(unittest.TestCase):
         self.assertNotIn("SERPAPI_API_KEY", rebuild_source)
         self.assertNotIn("APIFY_API_TOKEN", rebuild_source)
 
+
+    def test_gemini_tries_stable_model_fallback_after_503(self):
+        calls = []
+        original_post_json = providers._post_json
+        old_key = os.environ.get("GEMINI_API_KEY")
+        os.environ["GEMINI_API_KEY"] = "fake"
+
+        def fake_post_json(url, payload, headers, timeout=60):
+            calls.append((url, payload, headers))
+            ai_cfg = fresh_cfg()["ai"]["providers"]["gemini"]
+            if ai_cfg["model"] in url:
+                raise providers.AIError("HTTP 503: temporarily overloaded")
+            return {
+                "candidates": [{
+                    "content": {"parts": [{"text": json.dumps(self.GOOD)}]}
+                }]
+            }
+
+        providers._post_json = fake_post_json
+        try:
+            ai_cfg = fresh_cfg()["ai"]
+            gemini_cfg = ai_cfg["providers"]["gemini"]
+            primary_model = gemini_cfg["model"]
+            fallback_model = gemini_cfg["fallback_models"][0]
+            ai_cfg["primary"] = "gemini"
+            ai_cfg["fallbacks"] = []
+            parsed, used = providers.generate_json(ai_cfg, "system", "user")
+            self.assertEqual(used, "gemini")
+            self.assertEqual(parsed["title"], self.GOOD["title"])
+            self.assertEqual(len(calls), 2)
+            self.assertIn(primary_model, calls[0][0])
+            self.assertIn(fallback_model, calls[1][0])
+            self.assertEqual(calls[1][2]["x-goog-api-key"], "fake")
+            self.assertNotIn("temperature", calls[1][1]["generationConfig"])
+        finally:
+            providers._post_json = original_post_json
+            if old_key is None:
+                os.environ.pop("GEMINI_API_KEY", None)
+            else:
+                os.environ["GEMINI_API_KEY"] = old_key
+
+
+    def test_gemini_extracts_text_from_any_response_part(self):
+        original_post_json = providers._post_json
+        old_key = os.environ.get("GEMINI_API_KEY")
+        os.environ["GEMINI_API_KEY"] = "fake"
+
+        def fake_post_json(url, payload, headers, timeout=180):
+            return {
+                "candidates": [{
+                    "content": {
+                        "parts": [
+                            {"thoughtSignature": "opaque-signature"},
+                            {"text": json.dumps(self.GOOD)},
+                        ]
+                    }
+                }]
+            }
+
+        providers._post_json = fake_post_json
+        try:
+            ai_cfg = fresh_cfg()["ai"]
+            ai_cfg["primary"] = "gemini"
+            ai_cfg["fallbacks"] = []
+            parsed, used = providers.generate_json(ai_cfg, "system", "user")
+            self.assertEqual(used, "gemini")
+            self.assertEqual(parsed["title"], self.GOOD["title"])
+        finally:
+            providers._post_json = original_post_json
+            if old_key is None:
+                os.environ.pop("GEMINI_API_KEY", None)
+            else:
+                os.environ["GEMINI_API_KEY"] = old_key
+
+    def test_openrouter_empty_reasoning_only_reply_raises_aierror_for_fallback(self):
+        original = providers._post_json
+        old_key = os.environ.get("OPENROUTER_API_KEY")
+        os.environ["OPENROUTER_API_KEY"] = "fake"
+        providers._post_json = lambda *args, **kwargs: {
+            "choices": [{
+                "message": {"content": None, "reasoning": "hidden reasoning"},
+                "finish_reason": "length",
+            }],
+            "usage": {"completion_tokens_details": {"reasoning_tokens": 32}},
+        }
+        try:
+            cfg = fresh_cfg()["ai"]["providers"]["openrouter"]
+            with self.assertRaisesRegex(providers.AIError, "finish_reason=length"):
+                providers._openrouter(cfg, "system", "user", 0.2, 32)
+        finally:
+            providers._post_json = original
+            if old_key is None:
+                os.environ.pop("OPENROUTER_API_KEY", None)
+            else:
+                os.environ["OPENROUTER_API_KEY"] = old_key
 
     def test_provider_fallback_chain(self):
         calls = []
