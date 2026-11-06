@@ -94,17 +94,43 @@ def _extract_asin(row: dict) -> str:
     return match.group(1).upper() if match else ""
 
 
-def _search_amazon(product_name: str, api_token: str) -> list[dict]:
-    """Run one isolated Amazon US search so returned rows cannot be misattributed."""
+def _selected_provider() -> str:
+    """Select exactly one product discovery provider; default to Apify."""
+    provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "apify").strip().lower() or "apify"
+    if provider not in {"apify", "serpapi"}:
+        raise ProductResolutionError(
+            "PRODUCT_DISCOVERY_PROVIDER must be either 'apify' or 'serpapi'"
+        )
+    return provider
+
+
+def _provider_api_key(provider: str) -> str:
+    if provider == "serpapi":
+        return os.environ.get("SERPAPI_API_KEY", "").strip()
+    return (
+        os.environ.get("TEST_API")
+        or os.environ.get("APIFY_API_TOKEN", "")
+    ).strip()
+
+
+def _provider_secret_name(provider: str) -> str:
+    return "SERPAPI_API_KEY" if provider == "serpapi" else "TEST_API"
+
+
+def _provider_spending_enabled(provider: str) -> bool:
+    variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
+    return os.environ.get(variable, "false").strip().lower() in {"1", "true", "yes"}
+
+
+def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
+    """Run one isolated Amazon US search through the Apify Actor."""
     payload = {
         "categoryOrProductUrls": [{"url": _amazon_search_url(product_name)}],
         "maxItemsPerStartUrl": MAX_RESULTS_PER_SEARCH,
         "maxSearchPagesPerStartUrl": 1,
         "language": "en",
-        # Do NOT set countryCode or zipCode: Amazon.com already selects the
-        # US marketplace, while delivery-location events add $0.06 per result.
-        # Search results already contain titles and ASINs. Do not scrape detail
-        # pages, price, ratings, reviews, or seller/offer information.
+        # Do NOT set countryCode, zipCode, proxyCountry, or delivery-location
+        # fields: they created a separate, expensive event in the user's account.
         "scrapeProductDetails": False,
         "maxProductVariantsAsSeparateResults": 0,
         "maxOffers": 0,
@@ -116,7 +142,7 @@ def _search_amazon(product_name: str, api_token: str) -> list[dict]:
             "Authorization": f"Bearer {api_token}",
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "User-Agent": "EasyLifeHubProductResolver/2.0",
+            "User-Agent": "EasyLifeHubProductResolver/3.0",
         },
         method="POST",
     )
@@ -141,6 +167,66 @@ def _search_amazon(product_name: str, api_token: str) -> list[dict]:
         raise ProductResolutionError("Apify Actor response was not a dataset item list")
     return [row for row in data if isinstance(row, dict)]
 
+
+def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
+    """Search Amazon through SerpApi and retain only the title and ASIN."""
+    params = {
+        "engine": "amazon",
+        "k": product_name,
+        "amazon_domain": "amazon.com",
+        "language": "en_US",
+        "api_key": api_key,
+        "no_cache": "false",
+    }
+    url = "https://serpapi.com/search.json?" + parse.urlencode(params)
+    req = request.Request(
+        url,
+        headers={
+            "Accept": "application/json",
+            "User-Agent": "EasyLifeHubProductResolver/3.0",
+        },
+        method="GET",
+    )
+
+    try:
+        with request.urlopen(req, timeout=60) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:500]
+        raise ProductResolutionError(f"SerpApi HTTP {exc.code}: {detail}") from exc
+    except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise ProductResolutionError(f"SerpApi request failed: {exc}") from exc
+
+    if not isinstance(data, dict):
+        raise ProductResolutionError("SerpApi response was not a JSON object")
+    if data.get("error"):
+        raise ProductResolutionError(f"SerpApi error: {str(data['error'])[:400]}")
+    metadata = data.get("search_metadata") or {}
+    if isinstance(metadata, dict) and metadata.get("status") == "Error":
+        raise ProductResolutionError("SerpApi reported an unsuccessful search")
+    results = data.get("organic_results") or []
+    if not isinstance(results, list):
+        raise ProductResolutionError("SerpApi organic_results was not a list")
+
+    # Deliberately discard all extra source fields, including price, rating,
+    # reviews, shipping, and images. Only product identity is used downstream.
+    rows = []
+    for item in results:
+        if not isinstance(item, dict) or item.get("sponsored") is True:
+            continue
+        title = str(item.get("title") or "").strip()
+        asin = str(item.get("asin") or "").strip().upper()
+        if title and ASIN_RE.fullmatch(asin):
+            rows.append({"title": title, "asin": asin})
+    return rows
+
+
+def _search_amazon(product_name: str, api_token: str) -> list[dict]:
+    """Dispatch to exactly one provider selected by PRODUCT_DISCOVERY_PROVIDER."""
+    provider = _selected_provider()
+    if provider == "serpapi":
+        return _search_amazon_serpapi(product_name, api_token)
+    return _search_amazon_apify(product_name, api_token)
 
 def _trusted_item(item: dict) -> bool:
     asin = str(item.get("asin") or "").strip().upper()
@@ -174,9 +260,8 @@ def resolve_items(
     allow_unresolved: bool = False,
 ) -> list[dict]:
     """Resolve products individually; reuse exact-name cache entries across articles."""
-    api_token = (
-        api_token if api_token is not None else (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", ""))
-    ).strip()
+    provider = _selected_provider()
+    api_token = (api_token if api_token is not None else _provider_api_key(provider)).strip()
     cache = cache if cache is not None else _load_cache()
     resolved = [dict(item) for item in items]
     errors = []
@@ -205,13 +290,13 @@ def resolve_items(
 
     if pending and not api_token:
         raise ProductResolutionError(
-            "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted); refusing to publish an unverified product URL"
+            f"{_provider_secret_name(provider)} is missing; refusing to publish an unverified product URL"
         )
-    spend_enabled = str(os.environ.get("APIFY_SPEND_ENABLED", "false")).strip().lower()
-    if pending and spend_enabled not in {"1", "true", "yes"}:
+    if pending and not _provider_spending_enabled(provider):
+        spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
         raise ProductResolutionError(
-            "Apify spending is disabled. Set the GitHub Actions variable APIFY_SPEND_ENABLED=true "
-            "only after reviewing the per-search cost cap."
+            f"{provider} spending is disabled. Set the GitHub Actions variable "
+            f"{spend_variable}=true only after reviewing the account's search allowance."
         )
 
     for search_term, indexes in pending.items():
@@ -285,13 +370,15 @@ def backfill_queue() -> dict:
 
     cfg = load_config()
     aff = Affiliate(cfg)
-    if not (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", "")).strip():
+    provider = _selected_provider()
+    if not _provider_api_key(provider):
         raise ProductResolutionError(
-            "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted). Add it to GitHub Actions secrets before running the backfill."
+            f"{_provider_secret_name(provider)} is missing. Add it to GitHub Actions secrets before running the backfill."
         )
-    if str(os.environ.get("APIFY_SPEND_ENABLED", "false")).strip().lower() not in {"1", "true", "yes"}:
+    if not _provider_spending_enabled(provider):
+        spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
         raise ProductResolutionError(
-            "Apify spending is disabled. Set GitHub Actions variable APIFY_SPEND_ENABLED=true before running the backfill."
+            f"{provider} spending is disabled. Set GitHub Actions variable {spend_variable}=true before running the backfill."
         )
 
     cache = _load_cache()
