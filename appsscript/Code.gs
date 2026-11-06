@@ -268,6 +268,49 @@ function productLinksReady_(meta) {
       String(item.url || '').indexOf('https://www.amazon.com/dp/' + item.asin + '?tag=') === 0;
   });
 }
+
+/**
+ * Require the new CTA-only layout before previewing or publishing.
+ * Each verified Amazon product must have exactly two renderer-owned green
+ * buttons (mid-article and final CTA). All other anchors and naked URLs fail.
+ */
+function amazonButtonLayoutReady_(html, meta) {
+  var value = String(html || '');
+  var items = (meta && meta.items) || [];
+  if (!items.length) return false;
+  if (/table\\s+of\\s+contents|class=["'][^"']*\\btoc\\b|aria-label=["']table of contents/i.test(value)) return false;
+
+  var withoutAnchors = value.replace(/<a\\b[^>]*>[\\s\\S]*?<\\/a\\s*>/gi, '');
+  if (/(?:https?:\\/\\/|www\\.)\\S+/i.test(withoutAnchors)) return false;
+
+  var expected = {};
+  items.forEach(function (item) {
+    var url = String(item && item.url || '').replace(/&amp;/gi, '&').trim();
+    if (!url || !/^https:\\/\\/www\\.amazon\\.com\\/dp\\/[A-Z0-9]{10}\\?tag=[^&\\s]+$/i.test(url)) return;
+    expected[url] = 0;
+  });
+  if (Object.keys(expected).length !== items.length) return false;
+
+  var anchors = value.match(/<a\\b[^>]*>/gi) || [];
+  if (anchors.length !== items.length * 2) return false;
+  for (var i = 0; i < anchors.length; i++) {
+    var attrs = anchors[i];
+    var hrefMatch = attrs.match(/\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))/i);
+    var classMatch = attrs.match(/\\bclass\\s*=\\s*["']([^"']*)["']/i);
+    var ownerMatch = attrs.match(/\\bdata-owner\\s*=\\s*["']renderer["']/i);
+    if (!hrefMatch || !classMatch || !ownerMatch) return false;
+    var classes = String(classMatch[1] || '').split(/\\s+/);
+    if (classes.indexOf('amazon-cta') === -1) return false;
+    var href = String(hrefMatch[1] || hrefMatch[2] || hrefMatch[3] || '')
+      .replace(/&amp;/gi, '&').trim();
+    if (!Object.prototype.hasOwnProperty.call(expected, href)) return false;
+    expected[href]++;
+  }
+  return items.every(function (item) {
+    var url = String(item.url || '').replace(/&amp;/gi, '&').trim();
+    return expected[url] === 2;
+  });
+}
 function countPublishedToday_() {
   var today = Utilities.formatDate(new Date(), cfg('TZ'), 'yyyy-MM-dd');
   return getPublished_().filter(function (p) { return (p.ts || '').indexOf(today) === 0; }).length;
@@ -394,13 +437,17 @@ function publishNext_(howMany) {
       Logger.log('Skipping article: direct Amazon product pages are not verified yet: ' + meta.slug);
       continue;
     }
-    if (Number(meta.layout_version || 0) < 3) {
-      Logger.log('Skipping legacy article layout: ' + meta.slug);
+    if (Number(meta.layout_version || 0) < 4) {
+      Logger.log('Skipping legacy article layout (v4 required): ' + meta.slug);
       continue;
     }
     if (countPublishedToday_() >= maxPerDay) break;
 
     var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
+    if (!amazonButtonLayoutReady_(html, meta)) {
+      Logger.log('Skipping article: Amazon CTA button layout is missing or contains other links: ' + meta.slug);
+      continue;
+    }
     var labels = (meta.labels || []).filter(Boolean);
 
     html = sanitizePostHtml_(html);
@@ -457,7 +504,7 @@ function installTrigger() {
 
 /**
  * Automatically dispatches the GitHub refill workflow when fewer than
- * REFILL_MIN_PENDING unpublished, approved v3 articles remain.
+ * REFILL_MIN_PENDING unpublished, approved v4 articles remain.
  *
  * Requires Script Property GITHUB_ACTIONS_TOKEN (legacy GITHUB_TOKEN is also accepted) with a fine-grained GitHub token
  * that has Actions: Read and write on the EasyLifeHub repository.
@@ -474,7 +521,7 @@ function refillQueueIfLow() {
     var posts = index.posts || [];
     var pending = posts.filter(function (p) {
       return p && p.slug &&
-        Number(p.layout_version || 0) >= 3 &&
+        Number(p.layout_version || 0) >= 4 &&
         p.review_required !== true &&
         productLinksReady_(p) &&
         !isPublished_(p.slug);
@@ -587,7 +634,7 @@ function createQueuePreviewDraft() {
       item &&
       item.review_required !== true &&
       productLinksReady_(item) &&
-      Number(item.layout_version || 0) >= 3
+      Number(item.layout_version || 0) >= 4
     ) {
       candidate = item;
       break;
@@ -599,6 +646,9 @@ function createQueuePreviewDraft() {
   }
 
   var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + candidate.html_file);
+  if (!amazonButtonLayoutReady_(html, candidate)) {
+    throw new Error('The selected article does not use the required Amazon-button-only v4 layout.');
+  }
   html = sanitizePostHtml_(html);
 
   var draft = bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
@@ -693,7 +743,7 @@ function status() {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     var allPosts = index.posts || [];
     var pending = allPosts.filter(function (p) {
-      return p && p.slug && Number(p.layout_version || 0) >= 3 && p.review_required !== true && productLinksReady_(p) && !isPublished_(p.slug);
+      return p && p.slug && Number(p.layout_version || 0) >= 4 && p.review_required !== true && productLinksReady_(p) && !isPublished_(p.slug);
     }).length;
     var needsReview = allPosts.filter(function (p) {
       return p && p.slug && p.review_required === true && !isPublished_(p.slug);
@@ -702,7 +752,7 @@ function status() {
       return p && Number(p.layout_version || 0) < 3 && !isPublished_(p.slug);
     }).length;
     Logger.log('Queue total     : ' + (index.count || 0));
-    Logger.log('Queue pending v3: ' + pending);
+    Logger.log('Queue pending v4: ' + pending);
     Logger.log('Legacy skipped  : ' + legacy);
     var days = Math.floor(pending / Math.max(1, Number(cfg('MAX_PER_DAY'))));
     Logger.log('Days of content : ~' + days);
