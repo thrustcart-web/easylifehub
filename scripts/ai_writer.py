@@ -60,7 +60,7 @@ def _template_brief(template: str, items: list[dict]) -> str:
         return (
             f"ARTICLE TYPE: head-to-head comparison.\n"
             f"Compare exactly these two products: (A) {a.get('display_name')} and (B) {b.get('display_name')}.\n"
-            f"Use 4-6 main sections comparing product-specific features, controls, setup, maintenance and everyday use.\n"
+            f"Use 4-6 useful sections comparing verified product features, setup, compatibility, practical use and ownership considerations. Do not add a pros/cons list.\n"
             f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
             f"Available context: {names}"
         )
@@ -68,14 +68,14 @@ def _template_brief(template: str, items: list[dict]) -> str:
         return (
             f"ARTICLE TYPE: curated product roundup.\n"
             f"Cover these options, one focused section each, in this order: {names}.\n"
-            f"Use 4-6 main sections covering product-specific features, setup, use and ownership considerations.\n"
+            f"Use 4-6 useful sections covering verified features, setup, practical use and ownership considerations. Do not add a pros/cons list.\n"
             f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
             f"Do not invent product weaknesses or unsupported comparisons."
         )
     return (
         f"ARTICLE TYPE: single-product review.\n"
         f"Subject: {items[0].get('display_name') if items else ''}.\n"
-        f"Use 4-6 main sections covering product features, design, operation, installation/setup and maintenance.\n"
+        f"Use 4-6 useful sections covering verified features, design, operation, installation/setup and maintenance. Do not add a pros/cons list.\n"
         f"Put audience suitability in audience_fit and reserve conclusion for Final Thoughts.\n"
         f"Available context: {names}"
     )
@@ -101,7 +101,7 @@ def _voice_variation(seed: int) -> str:
 
 
 SYSTEM_PROMPT = """You are a senior product reviewer for an independent buyer's-guide blog.
-You write for readers who are about to spend their own money and are tired of sponsored fluff.
+You write clear, useful buyer guides for readers who want accurate product information without sales hype.
 
 HARD RULES - violating any of these makes the article unusable and it will be rejected automatically:
 1. Output ONLY one valid JSON object. No markdown fences, no text before or after.
@@ -111,19 +111,19 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 3. If the supplied context does not confirm a feature, do not guess from the product category or model name.
    Turn the unknown into a practical buyer check ("verify the supported ports on the current manufacturer listing").
 4. Never imply personal ownership, hands-on testing, lab work, or first-hand experience.
-5. Never use these words or phrases: {banned}.
-6. No hype, no exclamation marks, no flattery of the reader.
+5. Do not include product prices, price ranges, discounts, star ratings, review counts, customer opinions, customer-review summaries, or claims about what buyers say. These details are not needed.\n6. Do not invent weaknesses, defects, drawbacks, or negative experiences. Explain practical fit and what a buyer should verify instead.\n7. Never use these words or phrases: {banned}.
+8. No hype, no exclamation marks, no flattery of the reader.
 7. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
-7. Address the reader as "you" at most once per section.
-8. Do not write an introduction that restates the title.
-10. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
-11. Vary paragraph length. Some sections get two sentences, some get five.
-12. The first introduction paragraph must directly answer the reader's central buying question in plain language (about 35-60 words), before adding context.
-13. Each main section's first paragraph must answer or resolve the question implied by its heading; use natural question-led headings when helpful.
-14. Cover the real intent behind the topic, including who the product suits, what to compare, compatibility checks and ownership considerations. Do not repeat the same keyword unnaturally.
-15. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
-16. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
-17. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
+9. Address the reader as "you" at most twice per section.
+10. Do not write an introduction that restates the title.
+11. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
+12. Vary paragraph length. Some sections get two sentences, some get five.
+13. The first introduction paragraph must directly answer the reader's central buying question in plain language (about 35-60 words), before adding context.
+14. Each main section's first paragraph must answer or resolve the question implied by its heading; use natural question-led headings when helpful.
+15. Cover the real intent behind the topic, including who the product suits, what to compare, compatibility checks and ownership considerations. Do not repeat the same keyword unnaturally.
+16. Write for people first and make answers clear enough to stand alone when quoted by answer engines. This is useful structure, not a promise of AI citations or rankings.
+17. Write a unique meta description of 145-160 characters that accurately summarizes the article and includes the topic naturally.
+18. Use the REQUIRED TITLE exactly as given. Do not rewrite it, do not add a year.
 
 JSON SCHEMA (exact keys):
 {{
@@ -169,7 +169,7 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
     fields = []
     for item in items:
         bits = [f"product: {item.get('display_name') or item.get('name')}"]
-        for key in ("search_term", "asin", "niche", "feature", "audience", "budget", "price", "rating", "notes"):
+        for key in ("search_term", "asin", "niche", "feature", "audience", "notes"):
             value = item.get(key)
             if value:
                 bits.append(f"{key}: {value}")
