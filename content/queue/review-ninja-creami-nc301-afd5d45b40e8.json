@@ -15,9 +15,11 @@
   "items": [
     {
       "name": "Ninja Creami NC301",
-      "asin": "B09B8VHGLD",
+      "asin": "B08QXB9BH5",
       "search_term": "Ninja Creami NC301",
-      "url": "https://www.amazon.com/dp/B09B8VHGLD?tag=qalok0c-20"
+      "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver"
     }
   ],
   "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
@@ -25,5 +27,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
