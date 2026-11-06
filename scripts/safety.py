@@ -16,7 +16,7 @@ from html import unescape
 from urllib.parse import parse_qs, urlsplit
 from datetime import datetime, timedelta, timezone
 
-from ai_writer import BANNED_PHRASES, HYPE_RE, PRICE_RE
+from ai_writer import BANNED_PHRASES, HYPE_RE, PRICE_RE, RATING_RE, CUSTOMER_REVIEW_RE
 from util import load_state, log, save_state, word_count
 
 EXCESSIVE_EXCLAMATION = re.compile(r"!{2,}")
