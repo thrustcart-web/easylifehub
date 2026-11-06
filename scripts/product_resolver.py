@@ -20,13 +20,13 @@ CACHE_PATH = ROOT / ".cache" / "amazon_asins.json"
 ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 APIFY_ACTOR_ID = "junglee~amazon-crawler"
-MAX_RESULTS_PER_SEARCH = 5
-# Apify API-level billing safeguards for each individual search run.
-# The actor's current Free-tier base result rate is $0.005/result; this caps
-# a query to five billable results and $0.05 total across all actor pricing.
-APIFY_MAX_TOTAL_CHARGE_USD = "0.05"
+MAX_RESULTS_PER_SEARCH = 3
+# API-level billing safeguards for every individual product search.
+# The user's observed Result rate was $0.005/event. This caps a run at three
+# billable results ($0.015) and $0.015 total across every Apify pricing model.
+APIFY_MAX_TOTAL_CHARGE_USD = "0.015"
 APIFY_ENDPOINT = (
-    "https://api.apify.com/v2/acts/"
+    "https://api.apify.com/v2/actors/"
     f"{APIFY_ACTOR_ID}/run-sync-get-dataset-items"
     + "?"
     + parse.urlencode({
@@ -205,6 +205,12 @@ def resolve_items(
         raise ProductResolutionError(
             "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted); refusing to publish an unverified product URL"
         )
+    spend_enabled = str(os.environ.get("APIFY_SPEND_ENABLED", "false")).strip().lower()
+    if pending and spend_enabled not in {"1", "true", "yes"}:
+        raise ProductResolutionError(
+            "Apify spending is disabled. Set the GitHub Actions variable APIFY_SPEND_ENABLED=true "
+            "only after reviewing the per-search cost cap."
+        )
 
     for search_term, indexes in pending.items():
         try:
@@ -213,7 +219,7 @@ def resolve_items(
             # Authentication, exhausted usage, and rate-limit responses apply
             # to the whole Apify account/run. Stop immediately instead of
             # issuing one doomed request for every remaining product.
-            if re.search(r"Apify Actor HTTP (?:401|403|429)", str(exc)):
+            if re.search(r"Apify Actor HTTP (?:400|401|402|403|429)", str(exc)):
                 raise
             errors.append(str(exc))
             log.warning("Apify search failed | %s | %s", search_term, exc)
@@ -280,6 +286,10 @@ def backfill_queue() -> dict:
     if not (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", "")).strip():
         raise ProductResolutionError(
             "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted). Add it to GitHub Actions secrets before running the backfill."
+        )
+    if str(os.environ.get("APIFY_SPEND_ENABLED", "false")).strip().lower() not in {"1", "true", "yes"}:
+        raise ProductResolutionError(
+            "Apify spending is disabled. Set GitHub Actions variable APIFY_SPEND_ENABLED=true before running the backfill."
         )
 
     cache = _load_cache()
