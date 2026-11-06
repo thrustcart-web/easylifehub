@@ -42,6 +42,7 @@ var DEFAULTS = {
   REFILL_COUNT: '6',
   REFILL_COOLDOWN_HOURS: '12',
   PAID_LOOKUP_ENABLED: 'false',   // explicit opt-in for paid Apify/SerpApi discovery
+  AUTOMATION_ENABLED: 'false',   // keep scheduled publishing/refill off until explicitly approved
   // ---- category hub + related posts (topical authority plumbing) ----
   BLOG_URL:        '',                    // blank = auto-detected once from the API
   CATEGORY_HUB:    'content/categories/index.html',
@@ -62,7 +63,8 @@ function setup() {
     Logger.log(k + ' = ' + (k === 'SA_JSON' ? (v ? '[' + v.length + ' chars]' : '(EMPTY)') : v));
   });
   Logger.log('');
-  Logger.log('Next: run installTrigger(), then testConnection().');
+  Logger.log('Next: run testConnection(), then createQueuePreviewDraft() for a Blogger draft.');
+  Logger.log('Scheduled publishing/refill remain DISABLED until AUTOMATION_ENABLED is explicitly set to true.');
 }
 
 function cfg(key, fallback) {
@@ -386,6 +388,10 @@ function fetchText_(url) {
  * Triggered every hour. Publishes when the hour matches POST_HOURS.
  */
 function publishScheduled() {
+  if (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() !== 'true') {
+    Logger.log('Scheduled publishing is paused: AUTOMATION_ENABLED is not true.');
+    return;
+  }
   var tz = cfg('TZ');
   var now = new Date();
   var hour = Number(Utilities.formatDate(now, tz, 'H'));
@@ -491,6 +497,16 @@ function notifyOnSuccess_(meta, post) {
 /** Installs the publishing trigger and the automatic queue-refill checker. */
 function installTrigger() {
   var existing = ScriptApp.getProjectTriggers();
+  if (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() !== 'true') {
+    existing.forEach(function (trigger) {
+      var handler = trigger.getHandlerFunction();
+      if (handler === 'publishScheduled' || handler === 'refillQueueIfLow') {
+        ScriptApp.deleteTrigger(trigger);
+      }
+    });
+    Logger.log('Automation remains DISABLED. Set Script Property AUTOMATION_ENABLED=true only after the Blogger draft is approved.');
+    return;
+  }
   existing.forEach(function (t) {
     var handler = t.getHandlerFunction();
     if (handler === 'publishScheduled' || handler === 'refillQueueIfLow') {
@@ -511,6 +527,10 @@ function installTrigger() {
  * that has Actions: Read and write on the EasyLifeHub repository.
  */
 function refillQueueIfLow() {
+  if (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() !== 'true') {
+    Logger.log('Automatic queue refill is paused: AUTOMATION_ENABLED is not true.');
+    return;
+  }
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) {
     Logger.log('Refill check skipped: another script execution holds the lock.');
@@ -601,7 +621,9 @@ function testConnection() {
     Logger.log('OK  published : ' + getPublished_().length + ' so far');
     Logger.log('OK  blog url  : ' + (blogUrl_() || '(unknown)'));
     Logger.log('');
-    Logger.log('Everything works. Run installTrigger() if you have not, then forget about it.');
+    Logger.log('Blogger connection and queue access are working.');
+    Logger.log('Next safe step: run createQueuePreviewDraft() and inspect the draft in Blogger.');
+    Logger.log('Do not run installTrigger() until the draft is approved and AUTOMATION_ENABLED is explicitly true.');
   } catch (err) {
     Logger.log('FAILED: ' + err);
     Logger.log('');
