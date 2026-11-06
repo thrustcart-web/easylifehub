@@ -4,6 +4,11 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
@@ -32,67 +37,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Smoke test OpenRouter free route (one tiny request, no article)
-        continue-on-error: true
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: |
-          if [ -z "$OPENROUTER_API_KEY" ]; then
-            echo "OpenRouter smoke test skipped: OPENROUTER_API_KEY is not configured."
-            exit 0
-          fi
-
-          HTTP_STATUS=$(curl --silent --show-error --max-time 45 \
-            --output /tmp/openrouter-smoke.json \
-            --write-out "%{http_code}" \
-            --header "Authorization: Bearer $OPENROUTER_API_KEY" \
-            --header "HTTP-Referer: https://www.easylifehub.top" \
-            --header "X-Title: Easy Life Hub" \
-            --header "Content-Type: application/json" \
-            --request POST \
-            --data-binary '{"model":"openrouter/free","messages":[{"role":"user","content":"Reply with exactly OPENROUTER_OK"}],"max_tokens":512}' \
-            "https://openrouter.ai/api/v1/chat/completions")
-
-          if [ "$HTTP_STATUS" != "200" ]; then
-            echo "OpenRouter smoke test warning: HTTP $HTTP_STATUS. The article rebuild will continue with the configured fallback chain."
-            echo "- OpenRouter smoke test: HTTP $HTTP_STATUS (article rebuild continued)." >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-
-          data = json.loads(Path("/tmp/openrouter-smoke.json").read_text(encoding="utf-8"))
-          choices = data.get("choices") or []
-          message = (choices[0].get("message") or {}) if choices else {}
-          content = message.get("content")
-          if isinstance(content, str):
-              response_text = content
-          elif isinstance(content, list):
-              response_text = "\\n".join(
-                  part.get("text", "")
-                  for part in content
-                  if isinstance(part, dict) and isinstance(part.get("text"), str)
-              )
-          else:
-              response_text = ""
-
-          if "OPENROUTER_OK" not in response_text:
-              print("OpenRouter smoke test warning: expected text was not returned.")
-              print("Response body hidden; article rebuild will continue.")
-              raise SystemExit(1)
-
-          model = str(data.get("model") or "not reported")
-          print("OpenRouter smoke test: SUCCESS")
-          print("Selected model: " + model)
-          with open(Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]), "a", encoding="utf-8") as summary:
-              summary.write("- OpenRouter tiny generation test: SUCCESS (" + model + ").\\n")
-          PY
-
       - name: Rebuild eligible V3 articles as V4 from existing verified products
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Use the confirmed free-model providers only for this queue repair.
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
