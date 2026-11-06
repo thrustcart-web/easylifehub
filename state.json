@@ -287,6 +287,24 @@
       "ts": "2026-11-06T03:07:35Z",
       "source": "ai:groq",
       "words": 890
+    },
+    {
+      "slug": "review-stud-finder-f856f07ac669",
+      "title": "Stud Finder for DIY Beginners: Judging Warranty Honestly",
+      "template": "review",
+      "keyword": "stud finder for diy beginners",
+      "ts": "2026-11-06T03:13:51Z",
+      "source": "ai:groq",
+      "words": 772
+    },
+    {
+      "slug": "bestof-sleep-sunrise-e91fbb0b229d",
+      "title": "Sleep Gear Buying Guide: 3 Picks Ranked by Real Criteria",
+      "template": "bestof",
+      "keyword": "Sleep",
+      "ts": "2026-11-06T03:15:30Z",
+      "source": "ai:groq",
+      "words": 749
     }
   ],
   "published": [],
@@ -322,7 +340,9 @@
     "review-mortar-and-pestle-3fbfd223937b",
     "review-plant-pots-ecc22dbb4c63",
     "comparison-clothes-brush-vs-clothes-line-5284444e0993",
-    "review-litter-scoop-a162ab1d8392"
+    "review-litter-scoop-a162ab1d8392",
+    "review-stud-finder-f856f07ac669",
+    "bestof-sleep-sunrise-e91fbb0b229d"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -443,9 +463,9 @@
     "fabric glue|fabric scissors": "2026-11-05",
     "Fabric Glue": "2026-11-05",
     "Fabric Scissors": "2026-11-05",
-    "stud finder": "2026-11-05",
-    "Stud Finder": "2026-11-05",
-    "stud finder for diy beginners": "2026-11-05",
+    "stud finder": "2026-11-06",
+    "Stud Finder": "2026-11-06",
+    "stud finder for diy beginners": "2026-11-06",
     "fitness:exercise bike|folding treadmill|jump rope|rowing machine|weight bench": "2026-11-05",
     "Folding Treadmill": "2026-11-05",
     "folding treadmill for walkers": "2026-11-05",
@@ -470,7 +490,14 @@
     "Clothes Line": "2026-11-06",
     "litter scoop": "2026-11-06",
     "Litter Scoop": "2026-11-06",
-    "litter scoop for multi cat homes": "2026-11-06"
+    "litter scoop for multi cat homes": "2026-11-06",
+    "sleep:cotton sheets|duvet|weighted blanket": "2026-11-06",
+    "Cotton Sheets": "2026-11-06",
+    "cotton sheets for cold climates": "2026-11-06",
+    "Weighted Blanket": "2026-11-06",
+    "weighted blanket for anxious sleepers": "2026-11-06",
+    "Duvet": "2026-11-06",
+    "duvet for hot sleepers": "2026-11-06"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -536,7 +563,10 @@
     "{P} Explained: What You Are Really Paying For",
     "{N} {F} Options Worth Your Money (and the Ones to Skip)",
     "{A} or {B}? The Honest Comparison",
-    "{P}: Judging {FEAT} Against Real Use"
+    "{P}: Judging {FEAT} Against Real Use",
+    "{P} for {AUD}: Judging {FEAT} Honestly",
+    "{F} Buying Guide: {N} Picks Ranked by Real Criteria",
+    "{A} vs {B}: Which One Should You Actually Buy?"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -545,7 +575,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 32,
+    "total_generated": 34,
     "total_published": 0
   }
 }

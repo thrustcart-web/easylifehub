@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 32,
+  "count": 34,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -353,6 +353,52 @@
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
       "product_links_verified": false
+    },
+    {
+      "slug": "bestof-sleep-sunrise-e91fbb0b229d",
+      "title": "Sleep Gear Buying Guide: 3 Picks Ranked by Real Criteria",
+      "meta_description": "A methodical guide ranks cotton sheets, a weighted blanket, and a duvet, highlighting thread count, weight range, and climate fit to help you choose the right sleep gear.",
+      "template": "bestof",
+      "niche": "sleep",
+      "keyword": "Sleep",
+      "labels": [
+        "Reviews",
+        "Sleep"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 749,
+      "items": [
+        {
+          "name": "Cotton Sheets",
+          "asin": "B0CZXFM3CH",
+          "asin_verified": true,
+          "verified_product_title": "RUVANTI 100% Organic Cotton Flannel Sheets Queen Size Bed Set, Baby Bear",
+          "search_term": "cotton sheets for cold climates",
+          "url": "https://www.amazon.com/dp/B0CZXFM3CH?tag=qalok0c-20"
+        },
+        {
+          "name": "Weighted Blanket",
+          "asin": "B092LZLLGF",
+          "asin_verified": true,
+          "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey",
+          "search_term": "weighted blanket for anxious sleepers",
+          "url": "https://www.amazon.com/dp/B092LZLLGF?tag=qalok0c-20"
+        },
+        {
+          "name": "Duvet",
+          "asin": "B0HFN3GNBJ",
+          "asin_verified": true,
+          "verified_product_title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
+          "search_term": "duvet for hot sleepers",
+          "url": "https://www.amazon.com/dp/B0HFN3GNBJ?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
@@ -967,6 +1013,36 @@
       "draft": false,
       "review_required": true,
       "product_links_verified": false
+    },
+    {
+      "slug": "review-stud-finder-f856f07ac669",
+      "title": "Stud Finder for DIY Beginners: Judging Warranty Honestly",
+      "meta_description": "A straightforward review of a stud finder aimed at DIY beginners, covering its core features, design, ease of use, setup, maintenance, and the honesty of its warranty.",
+      "template": "review",
+      "niche": "tools",
+      "keyword": "stud finder for diy beginners",
+      "labels": [
+        "Reviews",
+        "Tools"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 772,
+      "items": [
+        {
+          "name": "Stud Finder",
+          "asin": "B0GYP8QX4F",
+          "asin_verified": true,
+          "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
+          "search_term": "stud finder for diy beginners",
+          "url": "https://www.amazon.com/dp/B0GYP8QX4F?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "review-stud-finder-f856f07ac669.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-video-doorbell-1b56e37dfa94",
