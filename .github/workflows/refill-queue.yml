@@ -49,7 +49,7 @@ jobs:
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           PRODUCT_DISCOVERY_PROVIDER: serpapi
           APIFY_SPEND_ENABLED: 'false'
-          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' }}
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && 'true' }}
         run: |
           COUNT="${{ github.event.inputs.count }}"
           MODE="${{ github.event.inputs.mode }}"
