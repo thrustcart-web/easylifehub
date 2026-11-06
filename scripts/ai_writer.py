@@ -166,8 +166,8 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
     system = SYSTEM_PROMPT.format(
         banned=", ".join(f'"{b}"' for b in BANNED_PHRASES),
         language=lang_name,
-        min_words=content_cfg.get("min_words", 1150),
-        target_words=content_cfg.get("target_words", 1500),
+        min_words=content_cfg.get("min_words", 501),
+        target_words=content_cfg.get("target_words", 700),
     )
 
     fields = []
@@ -313,7 +313,7 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
     """(ok, problems). ok=False blocks publishing."""
     problems: list[str] = []
     content_cfg = cfg.get("content", {})
-    min_words = int(content_cfg.get("min_words", 1100))
+    min_words = int(content_cfg.get("min_words", 501))
 
     for field in REQUIRED_FIELDS:
         if not article.get(field):
