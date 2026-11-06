@@ -34,7 +34,7 @@ jobs:
             --header "X-Title: Easy Life Hub" \
             --header "Content-Type: application/json" \
             --request POST \
-            --data-binary '{"model":"openrouter/free","messages":[{"role":"user","content":"Reply with exactly OPENROUTER_OK"}],"max_tokens":32}' \
+            --data-binary '{"model":"openrouter/free","messages":[{"role":"user","content":"Reply with exactly OPENROUTER_OK"}],"max_tokens":512}' \
             "https://openrouter.ai/api/v1/chat/completions")
 
           if [ "$HTTP_STATUS" != "200" ]; then
@@ -75,6 +75,8 @@ jobs:
               "messageKeys": sorted(message.keys()),
               "contentType": type(content).__name__,
               "finishReason": choices[0].get("finish_reason") if choices else None,
+              "model": data.get("model"),
+              "usage": data.get("usage"),
           }))
           raise SystemExit(1)
           PY
