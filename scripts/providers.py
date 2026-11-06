@@ -35,23 +35,27 @@ def _post_json(url: str, payload: dict, headers: dict, timeout: int = 180) -> di
     data = json.dumps(payload).encode("utf-8")
     req = urlrequest.Request(url, data=data, headers={"Content-Type": "application/json", **headers}, method="POST")
     last = None
-    for attempt in range(4):
+    for attempt in range(3):
         try:
             with urlrequest.urlopen(req, timeout=timeout) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urlerror.HTTPError as exc:  # noqa: PERF203
             body = exc.read().decode("utf-8", "replace")[:400]
             last = f"HTTP {exc.code}: {body}"
-            if exc.code in (429, 500, 502, 503, 504) and attempt < 3:
-                wait = (2 ** attempt) * 8 + 2
-                log.warning("  %s -> %s, retrying in %ss", url.split("/")[2], exc.code, wait)
+            # A 429 is a provider-level limit: fail over immediately instead
+            # of waiting and retrying the same exhausted account/model.
+            if exc.code == 429:
+                raise AIError(last) from exc
+            if exc.code in (500, 502, 503, 504) and attempt < 2:
+                wait = (2 ** attempt) * 4
+                log.warning("  %s -> %s, retrying once in %ss", url.split("/")[2], exc.code, wait)
                 time.sleep(wait)
                 continue
             raise AIError(last) from exc
         except (urlerror.URLError, TimeoutError, json.JSONDecodeError) as exc:
             last = str(exc)
-            if attempt < 3:
-                time.sleep((2 ** attempt) * 5)
+            if attempt < 2:
+                time.sleep((2 ** attempt) * 3)
                 continue
             raise AIError(last) from exc
     raise AIError(last or "unknown error")
@@ -156,6 +160,10 @@ def _groq(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> st
         except AIError as exc:
             last = f"{model}: {exc}"
             log.warning("  groq/%s failed (%s)", model, str(exc)[:120])
+            # Quota/auth errors apply to the account, not just this model.
+            # Let generate_json move to the next independent provider.
+            if any(marker in str(exc) for marker in ("HTTP 429:", "HTTP 401:", "HTTP 402:", "HTTP 403:")):
+                raise
     raise AIError(last)
 
 
@@ -218,13 +226,25 @@ PROVIDERS = {
 
 
 # ----------------------------------------------------------------- public ---
-def generate_json(ai_cfg: dict, system: str, user: str, timeout_note: str = "") -> tuple[dict, str]:
-    """Try primary then fallbacks. Returns (parsed_json, provider_used)."""
-    order = [ai_cfg.get("primary", "groq")] + [p for p in ai_cfg.get("fallbacks", []) if p != ai_cfg.get("primary")]
+def generate_json(ai_cfg: dict, system: str, user: str, timeout_note: str = "",
+                  exclude_providers: set[str] | None = None,
+                  return_attempted: bool = False):
+    """Try active providers in order, skipping sources already tried for this draft.
+
+    When return_attempted=True, also return every provider considered. The
+    writer uses this to move on after a model returns invalid article content.
+    """
+    all_order = [ai_cfg.get("primary", "groq")] + [
+        p for p in ai_cfg.get("fallbacks", []) if p != ai_cfg.get("primary")
+    ]
+    excluded = set(exclude_providers or ())
+    order = [p for p in all_order if p not in excluded]
     temp = float(ai_cfg.get("temperature", 0.85))
     max_tokens = int(ai_cfg.get("max_output_tokens", 6000))
     errors = []
+    attempted = []
     for name in order:
+        attempted.append(name)
         fn = PROVIDERS.get(name)
         if not fn:
             errors.append(f"{name}: unknown provider")
@@ -233,11 +253,17 @@ def generate_json(ai_cfg: dict, system: str, user: str, timeout_note: str = "") 
         if not cfg:
             errors.append(f"{name}: not configured")
             continue
+        if not os.environ.get(cfg.get("env_key", ""), ""):
+            errors.append(f"{name}: {cfg.get('env_key', 'API key')} not set")
+            log.info("  provider %s skipped (API key not configured)", name)
+            continue
         try:
             log.info("  AI provider: %s %s", name, timeout_note)
             raw = fn(cfg, system, user, temp, max_tokens)
             parsed = extract_json(raw)
             log.info("  AI provider %s OK (%d chars)", name, len(raw))
+            if return_attempted:
+                return parsed, name, attempted
             return parsed, name
         except AIError as exc:
             errors.append(f"{name}: {exc}")
@@ -245,7 +271,11 @@ def generate_json(ai_cfg: dict, system: str, user: str, timeout_note: str = "") 
         except Exception as exc:  # noqa: BLE001 - never die on a free API quirk
             errors.append(f"{name}: {type(exc).__name__}: {exc}")
             log.warning("  provider %s crashed: %s", name, str(exc)[:200])
+    if not order:
+        errors.append("all providers are temporarily excluded after previous validation failures")
     raise AIError("all providers failed -> " + " | ".join(errors))
+
+
 
 
 def available_providers(ai_cfg: dict) -> list[str]:
