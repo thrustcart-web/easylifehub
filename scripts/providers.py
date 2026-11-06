@@ -31,7 +31,7 @@ class AIError(RuntimeError):
 
 
 # --------------------------------------------------------------- plumbing ---
-def _post_json(url: str, payload: dict, headers: dict, timeout: int = 180) -> dict:
+def _post_json(url: str, payload: dict, headers: dict, timeout: int = 60) -> dict:
     data = json.dumps(payload).encode("utf-8")
     req = urlrequest.Request(url, data=data, headers={"Content-Type": "application/json", **headers}, method="POST")
     last = None
@@ -48,7 +48,7 @@ def _post_json(url: str, payload: dict, headers: dict, timeout: int = 180) -> di
                 raise AIError(last) from exc
             if exc.code in (500, 502, 503, 504) and attempt < 2:
                 wait = (2 ** attempt) * 4
-                log.warning("  %s -> %s, retrying once in %ss", url.split("/")[2], exc.code, wait)
+                log.warning("  %s -> %s, retrying in %ss", url.split("/")[2], exc.code, wait)
                 time.sleep(wait)
                 continue
             raise AIError(last) from exc
