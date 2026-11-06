@@ -20,11 +20,21 @@ CACHE_PATH = ROOT / ".cache" / "amazon_asins.json"
 ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 APIFY_ACTOR_ID = "junglee~amazon-crawler"
+MAX_RESULTS_PER_SEARCH = 5
+# Apify API-level billing safeguards for each individual search run.
+# The actor's current Free-tier base result rate is $0.005/result; this caps
+# a query to five billable results and $0.05 total across all actor pricing.
+APIFY_MAX_TOTAL_CHARGE_USD = "0.05"
 APIFY_ENDPOINT = (
     "https://api.apify.com/v2/acts/"
     f"{APIFY_ACTOR_ID}/run-sync-get-dataset-items"
+    + "?"
+    + parse.urlencode({
+        "maxItems": str(MAX_RESULTS_PER_SEARCH),
+        "maxTotalChargeUsd": APIFY_MAX_TOTAL_CHARGE_USD,
+        "timeout": "300",
+    })
 )
-MAX_RESULTS_PER_SEARCH = 5
 
 
 class ProductResolutionError(RuntimeError):
@@ -89,8 +99,8 @@ def _search_amazon(product_name: str, api_token: str) -> list[dict]:
         "maxItemsPerStartUrl": MAX_RESULTS_PER_SEARCH,
         "maxSearchPagesPerStartUrl": 1,
         "language": "en",
-        # Country code determines delivery location. Do not send zipCode as well.
-        "countryCode": "US",
+        # Do NOT set countryCode or zipCode: Amazon.com already selects the
+        # US marketplace, while delivery-location events add $0.06 per result.
         # Search results already contain titles and ASINs. Do not scrape detail
         # pages, price, ratings, reviews, or seller/offer information.
         "scrapeProductDetails": False,
