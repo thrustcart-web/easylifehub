@@ -95,8 +95,8 @@ def _extract_asin(row: dict) -> str:
 
 
 def _selected_provider() -> str:
-    """Select exactly one product discovery provider; default to Apify."""
-    provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "apify").strip().lower() or "apify"
+    """Select one product discovery provider; SerpApi is primary, Apify is optional."""
+    provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "serpapi").strip().lower() or "serpapi"
     if provider not in {"apify", "serpapi"}:
         raise ProductResolutionError(
             "PRODUCT_DISCOVERY_PROVIDER must be either 'apify' or 'serpapi'"
@@ -341,7 +341,15 @@ def resolve_items(
             # Authentication, exhausted usage, and rate-limit responses apply
             # to the whole Apify account/run. Stop immediately instead of
             # issuing one doomed request for every remaining product.
-            if re.search(r"Apify Actor HTTP (?:400|401|402|403|429)", str(exc)):
+            # Stop immediately on account/auth/quota/rate-limit failures for
+            # either paid provider. Repeating the same broken account request
+            # for every remaining product can burn credits without resolving anything.
+            if re.search(
+                r"(?:Apify Actor|SerpApi) HTTP (?:400|401|402|403|429)|"
+                r"(?:Apify Actor|SerpApi) error:",
+                str(exc),
+                re.I,
+            ):
                 raise
             errors.append(str(exc))
             log.warning("Apify search failed | %s | %s", search_term, exc)
