@@ -722,6 +722,28 @@ class TestAIPath(unittest.TestCase):
             else:
                 os.environ["GEMINI_API_KEY"] = old_key
 
+    def test_openrouter_empty_reasoning_only_reply_raises_aierror_for_fallback(self):
+        original = providers._post_json
+        old_key = os.environ.get("OPENROUTER_API_KEY")
+        os.environ["OPENROUTER_API_KEY"] = "fake"
+        providers._post_json = lambda *args, **kwargs: {
+            "choices": [{
+                "message": {"content": None, "reasoning": "hidden reasoning"},
+                "finish_reason": "length",
+            }],
+            "usage": {"completion_tokens_details": {"reasoning_tokens": 32}},
+        }
+        try:
+            cfg = fresh_cfg()["ai"]["providers"]["openrouter"]
+            with self.assertRaisesRegex(providers.AIError, "finish_reason=length"):
+                providers._openrouter(cfg, "system", "user", 0.2, 32)
+        finally:
+            providers._post_json = original
+            if old_key is None:
+                os.environ.pop("OPENROUTER_API_KEY", None)
+            else:
+                os.environ["OPENROUTER_API_KEY"] = old_key
+
     def test_provider_fallback_chain(self):
         calls = []
 
