@@ -1,10 +1,10 @@
 {
   "slug": "review-car-dash-mat-0dee1955dee4",
-  "title": "Car Dash Mat for City Driving: Judging Power Source Honestly",
-  "meta_description": "Review of the Car Dash Mat for city driving, checking power source, fit, operation, installation and care so you can decide if it suits urban commuters.",
+  "title": "Dashboard Cover for Chevy Cavalier 1995–2005: Fit and Material Checks",
+  "meta_description": "Review the dashboard cover listed for the 1995–2005 Chevy Cavalier, focusing on vehicle fit, dashboard coverage, material checks, and installation details.",
   "template": "review",
   "niche": "car",
-  "keyword": "car dash mat for city driving",
+  "keyword": "Chevy Cavalier Dashboard Cover",
   "labels": [
     "Reviews",
     "Car"
@@ -14,10 +14,12 @@
   "words": 704,
   "items": [
     {
-      "name": "Car Dash Mat",
-      "asin": "",
-      "search_term": "car dash mat for city driving",
-      "url": "https://www.amazon.com/s?k=car+dash+mat+for+city+driving&tag=qalok0c-20"
+      "name": "Chevy Cavalier Dashboard Cover",
+      "asin": "B07V68DRDV",
+      "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
+      "verified_product_title": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B07V68DRDV?tag=qalok0c-20"
     }
   ],
   "html_file": "review-car-dash-mat-0dee1955dee4.html",
@@ -27,5 +29,5 @@
   "layout_version": 3,
   "draft": false,
   "review_required": true,
-  "product_links_verified": false
+  "product_links_verified": true
 }
