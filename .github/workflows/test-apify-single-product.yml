@@ -79,12 +79,13 @@ jobs:
               raise SystemExit("Invalid or missing ASIN")
 
           required = {"marbrasse", "pen", "organizer"}
-          words = set(re.findall(r"[a-z0-9]+", title.lower()))
+          normalized_title = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", title)
+          words = set(re.findall(r"[a-z0-9]+", normalized_title.lower()))
 
           if not required.issubset(words):
               raise SystemExit("Returned product title did not match the requested product")
 
-          tag = os.environ.get("AFFILIATE_TAG", "qalok0c-20").strip()
+          tag = os.environ.get("AFFILIATE_TAG", "").strip() or "qalok0c-20"
           affiliate_url = (
               f"https://www.amazon.com/dp/{asin}?"
               + parse.urlencode({"tag": tag})
