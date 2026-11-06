@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from affiliate import Affiliate
-from ai_writer import AIError, write_article
+from ai_writer import AIError, build_prompts, normalise, validate
+from providers import generate_json
 from product_resolver import _load_cache, _normal_name, _trusted_item, title_matches
 from render import rebuild_index, render_html, save_article
 from safety import quality_gate
@@ -90,39 +91,79 @@ def resolved_items_for_meta(meta: dict, cache: dict, aff: Affiliate) -> list[dic
     return resolved
 
 
+def _remove_customer_opinion_sentences(value):
+    """Remove complete sentences that refer to reviews, ratings, or buyer opinion."""
+    if isinstance(value, str):
+        parts = re.split(r"(?<=[.!?])\\s+", value.strip())
+        forbidden = re.compile(
+            r"\\b(?:customer|buyer|user|review|reviews|reviewer|reviewers|"
+            r"rating|ratings|star|stars|testimonial|testimonials|feedback|"
+            r"popularity|popular|best-selling)\\b",
+            re.I,
+        )
+        kept = [part.strip() for part in parts if part.strip() and not forbidden.search(part)]
+        return " ".join(kept).strip()
+    if isinstance(value, list):
+        return [_remove_customer_opinion_sentences(item) for item in value]
+    if isinstance(value, dict):
+        return {key: _remove_customer_opinion_sentences(item) for key, item in value.items()}
+    return value
+
+
 def write_repair_article(topic: dict, cfg: dict) -> tuple[dict, str]:
-    """Use only Gemini for this repair, with one longer-content retry."""
+    """Use only Gemini, scrub buyer-opinion claims, then run the full article validator."""
     cfg.setdefault("ai", {})["primary"] = "gemini"
     cfg["ai"]["fallbacks"] = []
     content_cfg = cfg.setdefault("content", {})
     original_target = int(content_cfg.get("target_words") or 1100)
-    # Keep the project's published quality floor: 600 words minimum.
-    # Aim for the configured 1,100-word target without inventing a higher gate.
     content_cfg["min_words"] = 600
-    # Be explicit about the owner's ban on all review/rating/testimonial content.
+
     for item in topic.get("items", []):
         strict_note = (
-            "STRICT EDITORIAL RULE: Do not mention customer reviews, user opinions, "
-            "buyer feedback, ratings, stars, scores, review counts, popularity, "
-            "or what customers say in any form. Do not paraphrase or summarize them. "
-            "Discuss only product listing facts supplied here and practical checks."
+            "ABSOLUTE EDITORIAL BAN: do not mention customer reviews, buyer or user "
+            "opinions, ratings, stars, scores, review counts, testimonials, popularity, "
+            "or what customers say. Do not quote, paraphrase, summarize, or refer to "
+            "these subjects. Discuss only supplied listing facts and practical checks."
         )
-        existing = str(item.get("notes") or "").strip()
-        item["notes"] = (existing + " " + strict_note).strip()
-    last_error = None
+        item["notes"] = (str(item.get("notes") or "").strip() + " " + strict_note).strip()
 
+    last_problems = []
     for target in (max(original_target, 1100), max(original_target, 1250), max(original_target, 1400)):
         content_cfg["target_words"] = target
+        system, user = build_prompts(topic, cfg)
+        user += (
+            "\\n\\nFINAL REMINDER: absolutely no customer, buyer, or user feedback; "
+            "no reviews, ratings, stars, scores, review counts, testimonials, or popularity. "
+            "Do not mention that this information is missing. Return only useful product "
+            "facts from the supplied product title and neutral buyer checks."
+        )
+        if last_problems:
+            user += "\\nThe previous response was rejected for: " + "; ".join(last_problems[:6])
+            user += "\\nCorrect the issue and return the complete JSON article."
+
         try:
-            return write_article(topic, cfg)
+            raw, provider = generate_json(cfg["ai"], system, user)
+            article = normalise(raw, topic)
+            article = _remove_customer_opinion_sentences(article)
+            ok, problems = validate(article, cfg)
+            if ok:
+                return article, provider
+            last_problems = problems
+            log.warning(
+                "Gemini repair content failed validation | %s | %s",
+                topic.get("slug", ""), "; ".join(problems[:5])
+            )
         except AIError as exc:
-            last_error = exc
+            last_problems = [str(exc)]
             log.warning(
                 "Gemini repair attempt at %d words failed | %s | %s",
                 target, topic.get("slug", ""), str(exc)[:180]
             )
+        except Exception as exc:  # one bad response must never break the whole queue batch
+            last_problems = [f"{type(exc).__name__}: {exc}"]
+            log.warning("Gemini repair parser failed | %s | %s", topic.get("slug", ""), str(exc)[:180])
 
-    raise AIError(f"Gemini did not produce a valid repair after two attempts: {last_error}")
+    raise AIError("Gemini could not produce a clean, valid article after three attempts: " + "; ".join(last_problems[:6]))
 
 
 def topic_from_meta(meta: dict, resolved_items: list[dict]) -> dict:
