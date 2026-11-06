@@ -208,7 +208,9 @@ class TestProductResolution(unittest.TestCase):
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
         old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ["APIFY_SPEND_ENABLED"] = "true"
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             items = [{
                 "display_name": "Marbrasse Pen Organizer",
@@ -226,18 +228,32 @@ class TestProductResolution(unittest.TestCase):
                 os.environ.pop("APIFY_SPEND_ENABLED", None)
             else:
                 os.environ["APIFY_SPEND_ENABLED"] = old_spend
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
     def test_missing_apify_token_blocks_unverified_products(self):
-        with self.assertRaisesRegex(product_resolver.ProductResolutionError, "TEST_API"):
-            product_resolver.resolve_items(
-                [{"display_name": "A Product", "name": "A Product"}],
-                api_token="",
-                cache={},
-            )
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
+        try:
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "TEST_API"):
+                product_resolver.resolve_items(
+                    [{"display_name": "A Product", "name": "A Product"}],
+                    api_token="",
+                    cache={},
+                )
+        finally:
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
     def test_spend_is_disabled_without_explicit_opt_in(self):
         old = os.environ.get("APIFY_SPEND_ENABLED")
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ.pop("APIFY_SPEND_ENABLED", None)
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "spending is disabled"):
                 product_resolver.resolve_items(
@@ -248,6 +264,10 @@ class TestProductResolution(unittest.TestCase):
         finally:
             if old is not None:
                 os.environ["APIFY_SPEND_ENABLED"] = old
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
     def test_apify_search_omits_delivery_location_and_caps_cost(self):
         class FakeResponse:
@@ -268,12 +288,18 @@ class TestProductResolution(unittest.TestCase):
             captured["payload"] = json.loads(req.data.decode("utf-8"))
             return FakeResponse()
 
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         product_resolver.request.urlopen = fake_urlopen
         try:
             rows = product_resolver._search_amazon("desk organizer", "fake-token")
             self.assertEqual(rows[0]["asin"], "B0BYDGF8DT")
         finally:
             product_resolver.request.urlopen = original_urlopen
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
         self.assertIn("maxTotalChargeUsd=0.015", captured["url"])
         self.assertNotIn("countryCode", captured["payload"])
@@ -393,7 +419,9 @@ class TestProductResolution(unittest.TestCase):
 
         product_resolver._search_amazon = blocked_search
         old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ["APIFY_SPEND_ENABLED"] = "true"
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "403"):
                 product_resolver.resolve_items(
@@ -411,6 +439,10 @@ class TestProductResolution(unittest.TestCase):
                 os.environ.pop("APIFY_SPEND_ENABLED", None)
             else:
                 os.environ["APIFY_SPEND_ENABLED"] = old_spend
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
         self.assertEqual(calls, ["desk organizer"])
 
