@@ -71,6 +71,15 @@ function cfg(key, fallback) {
   return (v === null || v === '') ? (fallback || DEFAULTS[key] || '') : v;
 }
 
+// Remove the obsolete manual spending toggle. Automatic refills now authorize
+// SerpApi only when the approved queue drops below its threshold.
+function removeLegacyPaidLookupToggle_() {
+  if (P.getProperty('PAID_LOOKUP_ENABLED') !== null) {
+    P.deleteProperty('PAID_LOOKUP_ENABLED');
+    Logger.log('Removed obsolete PAID_LOOKUP_ENABLED property; product lookup is automatic on low-queue refill.');
+  }
+}
+
 // --------------------------------------------------------- service account --
 function getAccessToken_() {
   // Use the Google account that owns/runs this Apps Script project.
@@ -759,6 +768,7 @@ function syncPublishedProductLinks() {
 
 /** Full status report. */
 function status() {
+  removeLegacyPaidLookupToggle_();
   var pub = getPublished_();
   Logger.log('=== AutoBlog status ===');
   Logger.log('Published total : ' + pub.length);
