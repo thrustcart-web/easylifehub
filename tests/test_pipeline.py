@@ -254,6 +254,106 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 3)
         self.assertFalse(captured["payload"]["scrapeProductDetails"])
 
+    def test_serpapi_returns_only_verified_identity_fields(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return json.dumps({
+                    "search_metadata": {"status": "Success"},
+                    "organic_results": [
+                        {
+                            "title": "Marbrasse Pen Organizer with 2 Drawer",
+                            "asin": "B0BYMRJD7R",
+                            "price": "$29.99",
+                            "rating": 4.5,
+                            "reviews": 5576,
+                            "sponsored": False,
+                        },
+                        {
+                            "title": "Sponsored unrelated organizer",
+                            "asin": "B000000001",
+                            "sponsored": True,
+                        },
+                    ],
+                }).encode("utf-8")
+
+        captured = {}
+        original_urlopen = product_resolver.request.urlopen
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+
+        def fake_urlopen(req, timeout=0):
+            captured["url"] = req.full_url
+            return FakeResponse()
+
+        product_resolver.request.urlopen = fake_urlopen
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
+        try:
+            rows = product_resolver._search_amazon("Marbrasse Pen Organizer", "fake-serpapi-key")
+        finally:
+            product_resolver.request.urlopen = original_urlopen
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
+
+        params = product_resolver.parse.parse_qs(product_resolver.parse.urlsplit(captured["url"]).query)
+        self.assertEqual(params["engine"], ["amazon"])
+        self.assertEqual(params["k"], ["Marbrasse Pen Organizer"])
+        self.assertEqual(params["amazon_domain"], ["amazon.com"])
+        self.assertNotIn("delivery_zip", params)
+        self.assertNotIn("shipping_location", params)
+        self.assertEqual(rows, [{
+            "title": "Marbrasse Pen Organizer with 2 Drawer",
+            "asin": "B0BYMRJD7R",
+        }])
+
+    def test_serpapi_provider_uses_its_own_explicit_spend_guard(self):
+        original_search = product_resolver._search_amazon
+        original_save = product_resolver._save_cache
+        calls = []
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        old_spend = os.environ.get("SERPAPI_SPEND_ENABLED")
+
+        def fake_search(term, token):
+            calls.append((term, token))
+            return [{
+                "title": "Marbrasse Pen Organizer with 2 Drawer",
+                "asin": "B0BYMRJD7R",
+            }]
+
+        product_resolver._search_amazon = fake_search
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
+        os.environ["SERPAPI_SPEND_ENABLED"] = "true"
+        try:
+            result = product_resolver.resolve_items(
+                [{
+                    "display_name": "Marbrasse Pen Organizer",
+                    "name": "Marbrasse Pen Organizer",
+                    "search_term": "desk organizer",
+                }],
+                api_token="fake-serpapi-key",
+                cache={},
+            )
+            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
+            self.assertEqual(calls, [("desk organizer", "fake-serpapi-key")])
+        finally:
+            product_resolver._search_amazon = original_search
+            product_resolver._save_cache = original_save
+            if old_provider is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
+            if old_spend is None:
+                os.environ.pop("SERPAPI_SPEND_ENABLED", None)
+            else:
+                os.environ["SERPAPI_SPEND_ENABLED"] = old_spend
+
     def test_apify_account_limit_error_stops_remaining_product_searches(self):
         original_search = product_resolver._search_amazon
         calls = []
