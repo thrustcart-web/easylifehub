@@ -129,7 +129,7 @@ def rebuild(limit: int = 8) -> dict:
         if resolved_items:
             candidates.append((meta, resolved_items))
 
-    candidates = sorted(candidates, key=lambda pair: str(pair[0].get("slug")))[:max(1, min(int(limit), 8))]
+    candidates = sorted(candidates, key=lambda pair: str(pair[0].get("slug")))[:max(1, min(int(limit), 16))]
     if not candidates:
         raise SystemExit("No legacy articles with fully verified existing product data were found.")
 
@@ -189,7 +189,7 @@ def rebuild(limit: int = 8) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--limit", type=int, default=8, help="maximum legacy articles to rebuild (hard cap: 8)")
+    parser.add_argument("--limit", type=int, default=8, help="maximum legacy articles to rebuild (hard cap: 16)")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
     setup_logging(args.verbose)
