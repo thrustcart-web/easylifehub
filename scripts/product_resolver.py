@@ -277,7 +277,7 @@ def backfill_queue() -> dict:
 
     cfg = load_config()
     aff = Affiliate(cfg)
-    if not os.environ.get("APIFY_API_TOKEN", "").strip():
+    if not (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", "")).strip():
         raise ProductResolutionError(
             "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted). Add it to GitHub Actions secrets before running the backfill."
         )
