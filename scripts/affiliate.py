@@ -1,13 +1,7 @@
 """Affiliate link building + disclosure + link-rot protection.
 
-Two link flavours (both fully supported by Amazon Associates):
-
-  1. ASIN known  -> https://www.amazon.com/dp/B0XXXXXXXX?tag=YOURTAG-20
-  2. No ASIN     -> https://www.amazon.com/s?k=keyword&tag=YOURTAG-20
-
-Search links are the key to "set up and forget": they never rot, they need no
-product database, and they still earn the full commission. The generator mixes
-both so the blog keeps working even with an empty products.csv.
+Only verified ASINs are allowed. Every affiliate link resolves directly to an
+Amazon product detail page; missing or invalid ASINs produce no link.
 
 Every link gets rel="nofollow sponsored noopener" (Google requirement for
 affiliate links) and target="_blank".
@@ -89,7 +83,7 @@ class Affiliate:
             "</div>"
         )
 
-    def product_box(self, item: dict, label: str = "Check Price on Amazon") -> str:
+    def product_box(self, item: dict, label: str = "View Product on Amazon") -> str:
         url = self.url_for(item)
         name = item.get("display_name") or item.get("name", "This product")
         badge = item.get("budget") or item.get("feature") or item.get("audience") or ""
