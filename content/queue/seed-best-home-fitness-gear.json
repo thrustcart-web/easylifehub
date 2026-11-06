@@ -1,47 +1,57 @@
 {
   "slug": "seed-best-home-fitness-gear",
-  "title": "Best Home Fitness Gear: 5 Picks Compared by Real Criteria",
-  "meta_description": "Five pieces of equipment that cover strength, conditioning and mobility in a small space - with the weakness of each stated up front.",
+  "title": "5 Outdoor Fitness and Hiking Essentials for Active Days",
+  "meta_description": "Explore five outdoor fitness and hiking essentials, from route orientation and walking support to carrying gear and preparing for overnight trips.",
   "template": "bestof",
-  "niche": "fitness",
-  "keyword": "Best Home Fitness Gear",
+  "niche": "outdoor fitness",
+  "keyword": "Outdoor Fitness and Hiking Essentials",
   "labels": [
     "Reviews",
-    "Fitness"
+    "Outdoor Fitness"
   ],
   "source": "seed",
   "provider": "",
   "words": 1149,
   "items": [
     {
-      "name": "Adjustable Dumbbells",
-      "asin": "",
-      "search_term": "adjustable dumbbells for home gym small space",
-      "url": "https://www.amazon.com/s?k=adjustable+dumbbells+for+home+gym+small+space&tag=qalok0c-20"
+      "name": "Trekking Poles",
+      "asin": "B01L2HYPNW",
+      "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
+      "verified_product_title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=qalok0c-20"
     },
     {
-      "name": "Resistance Bands Set",
-      "asin": "",
-      "search_term": "resistance bands set with handles and door anchor",
-      "url": "https://www.amazon.com/s?k=resistance+bands+set+with+handles+and+door+anchor&tag=qalok0c-20"
+      "name": "Sleeping Bag",
+      "asin": "B0DK99H94M",
+      "search_term": "Ultralight Warm Weather Sleeping Bag",
+      "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0DK99H94M?tag=qalok0c-20"
     },
     {
-      "name": "Kettlebell",
-      "asin": "",
-      "search_term": "cast iron kettlebell for swings and carries",
-      "url": "https://www.amazon.com/s?k=cast+iron+kettlebell+for+swings+and+carries&tag=qalok0c-20"
+      "name": "Compass",
+      "asin": "B07CK8B3R3",
+      "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
+      "verified_product_title": "Orienteering Compass - Advanced Scout Compass for Hiking, Camping, and Backpacking - Best Survival Gifts for Kids",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B07CK8B3R3?tag=qalok0c-20"
     },
     {
-      "name": "Yoga Mat",
-      "asin": "",
-      "search_term": "non slip yoga mat thick for knees",
-      "url": "https://www.amazon.com/s?k=non+slip+yoga+mat+thick+for+knees&tag=qalok0c-20"
+      "name": "Gym Bag",
+      "asin": "B0C5SPSRNG",
+      "search_term": "Sports Drawstring Backpack Swim Gym Bag",
+      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=qalok0c-20"
     },
     {
-      "name": "Jump Rope",
-      "asin": "",
-      "search_term": "speed jump rope adjustable bearings",
-      "url": "https://www.amazon.com/s?k=speed+jump+rope+adjustable+bearings&tag=qalok0c-20"
+      "name": "Hammock Underquilt",
+      "asin": "B08936QVJD",
+      "search_term": "OneTigris Hideout Hammock Underquilt",
+      "verified_product_title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
+      "asin_verified": true,
+      "url": "https://www.amazon.com/dp/B08936QVJD?tag=qalok0c-20"
     }
   ],
   "html_file": "seed-best-home-fitness-gear.html",
@@ -52,5 +62,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
