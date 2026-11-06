@@ -22,7 +22,6 @@ on:
       - 'data/**'
       - 'config.json'
       - 'content/seed/**'
-      - 'scripts/**'
     branches: [ main ]
 
 permissions:
