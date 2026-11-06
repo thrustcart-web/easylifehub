@@ -45,7 +45,6 @@ jobs:
       - name: Migrate legacy queue or generate articles
         env:
           GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
-          MISTRAL_API_KEY:     ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY:  ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG:       ${{ secrets.AFFILIATE_TAG }}
