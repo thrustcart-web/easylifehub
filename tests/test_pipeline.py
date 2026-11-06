@@ -180,6 +180,8 @@ class TestProductResolution(unittest.TestCase):
 
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
+        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             items = [{
                 "display_name": "Marbrasse Pen Organizer",
@@ -193,6 +195,10 @@ class TestProductResolution(unittest.TestCase):
         finally:
             product_resolver._search_amazon = original_search
             product_resolver._save_cache = original_save
+            if old_spend is None:
+                os.environ.pop("APIFY_SPEND_ENABLED", None)
+            else:
+                os.environ["APIFY_SPEND_ENABLED"] = old_spend
 
     def test_missing_apify_token_blocks_unverified_products(self):
         with self.assertRaisesRegex(product_resolver.ProductResolutionError, "TEST_API"):
@@ -259,6 +265,8 @@ class TestProductResolution(unittest.TestCase):
             )
 
         product_resolver._search_amazon = blocked_search
+        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "403"):
                 product_resolver.resolve_items(
@@ -272,6 +280,10 @@ class TestProductResolution(unittest.TestCase):
                 )
         finally:
             product_resolver._search_amazon = original_search
+            if old_spend is None:
+                os.environ.pop("APIFY_SPEND_ENABLED", None)
+            else:
+                os.environ["APIFY_SPEND_ENABLED"] = old_spend
 
         self.assertEqual(calls, ["desk organizer"])
 
