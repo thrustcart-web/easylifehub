@@ -626,9 +626,41 @@ class TestAIPath(unittest.TestCase):
             self.assertEqual(parsed["title"], self.GOOD["title"])
             self.assertEqual(len(calls), 2)
             self.assertIn("gemini-3.8-flash", calls[0][0])
-            self.assertIn("gemini-3.7-flash", calls[1][0])
+            self.assertIn("gemini-3.6-flash", calls[1][0])
             self.assertEqual(calls[1][2]["x-goog-api-key"], "fake")
             self.assertNotIn("temperature", calls[1][1]["generationConfig"])
+        finally:
+            providers._post_json = original_post_json
+            if old_key is None:
+                os.environ.pop("GEMINI_API_KEY", None)
+            else:
+                os.environ["GEMINI_API_KEY"] = old_key
+
+    def test_gemini_extracts_text_from_any_response_part(self):
+        original_post_json = providers._post_json
+        old_key = os.environ.get("GEMINI_API_KEY")
+        os.environ["GEMINI_API_KEY"] = "fake"
+
+        def fake_post_json(url, payload, headers, timeout=180):
+            return {
+                "candidates": [{
+                    "content": {
+                        "parts": [
+                            {"thoughtSignature": "opaque-signature"},
+                            {"text": json.dumps(self.GOOD)},
+                        ]
+                    }
+                }]
+            }
+
+        providers._post_json = fake_post_json
+        try:
+            ai_cfg = fresh_cfg()["ai"]
+            ai_cfg["primary"] = "gemini"
+            ai_cfg["fallbacks"] = []
+            parsed, used = providers.generate_json(ai_cfg, "system", "user")
+            self.assertEqual(used, "gemini")
+            self.assertEqual(parsed["title"], self.GOOD["title"])
         finally:
             providers._post_json = original_post_json
             if old_key is None:
