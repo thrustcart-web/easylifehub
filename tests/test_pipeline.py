@@ -793,29 +793,36 @@ class TestAIPath(unittest.TestCase):
     def test_verified_queue_rebuild_retries_gemini_with_longer_target(self):
         import rebuild_verified_queue as rebuild_mod
 
-        original = rebuild_mod.write_article
+        original_generate = rebuild_mod.generate_json
+        original_validate = rebuild_mod.validate
         seen = []
 
-        def fake_write_article(topic, cfg):
+        def fake_generate(ai_cfg, system, user, **kwargs):
             seen.append({
-                "target_words": cfg["content"]["target_words"],
-                "min_words": cfg["content"]["min_words"],
-                "primary": cfg["ai"]["primary"],
-                "fallbacks": list(cfg["ai"]["fallbacks"]),
+                "target_words": current_cfg["content"]["target_words"],
+                "min_words": current_cfg["content"]["min_words"],
+                "primary": ai_cfg["primary"],
+                "fallbacks": list(ai_cfg["fallbacks"]),
             })
             if len(seen) == 1:
-                raise providers.AIError("too short: 597 words < 600")
+                raise providers.AIError("temporary model response failure")
             return dict(self.GOOD), "gemini"
 
-        rebuild_mod.write_article = fake_write_article
+        rebuild_mod.generate_json = fake_generate
+        rebuild_mod.validate = lambda article, cfg: (True, [])
+        current_cfg = fresh_cfg()
         try:
-            cfg = fresh_cfg()
-            cfg["content"]["target_words"] = 1100
-            cfg["ai"]["primary"] = "groq"
-            cfg["ai"]["fallbacks"] = ["openrouter"]
-            article, provider = rebuild_mod.write_repair_article(
-                {"slug": "retry-test"}, cfg
-            )
+            current_cfg["content"]["target_words"] = 1100
+            current_cfg["ai"]["primary"] = "groq"
+            current_cfg["ai"]["fallbacks"] = ["openrouter"]
+            topic = {
+                "slug": "retry-test",
+                "title": self.GOOD["title"],
+                "keyword": "Test Product",
+                "template": "review",
+                "items": [{"name": "Test Product", "display_name": "Test Product"}],
+            }
+            article, provider = rebuild_mod.write_repair_article(topic, current_cfg)
             self.assertEqual(provider, "gemini")
             self.assertEqual(article["title"], self.GOOD["title"])
             self.assertEqual([x["target_words"] for x in seen], [1100, 1250])
@@ -823,7 +830,9 @@ class TestAIPath(unittest.TestCase):
             self.assertTrue(all(x["primary"] == "gemini" for x in seen))
             self.assertTrue(all(x["fallbacks"] == [] for x in seen))
         finally:
-            rebuild_mod.write_article = original
+            rebuild_mod.generate_json = original_generate
+            rebuild_mod.validate = original_validate
+
 
     def test_provider_fallback_chain(self):
         calls = []
