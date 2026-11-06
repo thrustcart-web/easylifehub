@@ -482,7 +482,11 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", [])
         ),
         "review_required": not (
-            (str(article.get("_source") or "").lower().startswith("ai:") or str(article.get("_source") or "").lower() == "seed")
+            (
+                str(article.get("_source") or "").lower().startswith("ai:")
+                or str(article.get("_source") or "").lower() == "seed"
+                or article.get("_editorial_approved") is True
+            )
             and bool(topic.get("items"))
             and all(bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", []))
         ),
