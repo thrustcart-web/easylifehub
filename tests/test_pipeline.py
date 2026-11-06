@@ -166,6 +166,33 @@ class TestProductResolution(unittest.TestCase):
             "OPNICE Four Tier Desk File Organizer"
         ))
 
+    def test_serpapi_can_omit_one_leading_brand_but_match_remaining_product_tokens(self):
+        item = {
+            "display_name": "Marbrasse Pen Organizer with 2 Drawer",
+            "name": "Marbrasse Pen Organizer with 2 Drawer",
+        }
+        rows = [{
+            "title": "Pen Organizer with 2 Drawer, Multi-Functional Pencil Holder for Desk",
+            "asin": "B0BYMRJD7R",
+        }]
+        result = product_resolver._apply_candidate(
+            item, rows, allow_missing_leading_brand=True
+        )
+        self.assertIsNotNone(result)
+        self.assertEqual(result["asin"], "B0BYMRJD7R")
+        self.assertTrue(result["asin_verified"])
+
+    def test_serpapi_does_not_ignore_a_leading_word_for_generic_product_names(self):
+        item = {"display_name": "Pen Organizer", "name": "Pen Organizer"}
+        rows = [{
+            "title": "Organizer with Drawer for Office Desk",
+            "asin": "B0BYMRJD7R",
+        }]
+        result = product_resolver._apply_candidate(
+            item, rows, allow_missing_leading_brand=True
+        )
+        self.assertIsNone(result)
+
     def test_resolves_only_matching_asin_from_apify_results(self):
         original_search = product_resolver._search_amazon
         original_save = product_resolver._save_cache
