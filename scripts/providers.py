@@ -4,10 +4,9 @@ Design goal: the system must NEVER stop publishing because one free tier ran
 out of quota. Providers are tried in order; every one of them is free and
 needs no credit card (as of late 2026):
 
-  groq       - 1,000 requests/day, 30 RPM, 200k tokens/day  (primary)
-  mistral    - free-mode credits, per-project caps
-  openrouter - 50 requests/day on ":free" models
-  gemini     - free tier, caps shown per project in AI Studio (heavily cut)
+  groq       - primary writer (with Groq model-level fallbacks)
+  openrouter - first independent provider fallback
+  gemini     - second independent provider fallback
 
 If *all* providers fail, scripts/template_engine.py still produces a complete,
 SEO-structured article offline. That is the "set up and forget" guarantee.
