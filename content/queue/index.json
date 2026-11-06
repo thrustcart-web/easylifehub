@@ -144,32 +144,34 @@
         {
           "name": "Streaming Camera",
           "asin": "B0CZ6XY78Y",
-          "search_term": "streaming camera for home offices",
-          "url": "https://www.amazon.com/s?k=streaming+camera+for+home+offices&tag=qalok0c-20",
+          "search": "OBSBOT Tiny 2 Lite 4K Webcam",
+          "title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera",
           "asin_verified": true,
-          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera"
+          "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20"
         },
         {
           "name": "Wireless Earbuds",
           "asin": "B09FT58QQP",
-          "search_term": "wireless earbuds for home offices",
-          "url": "https://www.amazon.com/s?k=wireless+earbuds+for+home+offices&tag=qalok0c-20",
+          "search": "TOZO A1 Wireless Earbuds",
+          "title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
           "asin_verified": true,
-          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones"
+          "url": "https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20"
         },
         {
-          "name": "USB Charger",
-          "asin": "",
-          "search_term": "usb charger for home offices",
-          "url": "https://www.amazon.com/s?k=usb+charger+for+home+offices&tag=qalok0c-20"
+          "name": "Anker Charger",
+          "asin": "B08T5QN2TR",
+          "search": "Anker 715 Charger Nano II 65W",
+          "title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20"
         },
         {
           "name": "E-reader",
           "asin": "B0GSZX5MWR",
-          "search_term": "e-reader for students",
-          "url": "https://www.amazon.com/s?k=e-reader+for+students&tag=qalok0c-20",
+          "search": "XTEINK X3 Pocket E-Ink eBook Reader",
+          "title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
           "asin_verified": true,
-          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices"
+          "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20"
         }
       ],
       "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
@@ -180,7 +182,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "bestof-fitness-handle-3d07849b4753",
@@ -484,16 +486,20 @@
       "words": 655,
       "items": [
         {
-          "name": "Fabric Glue",
-          "asin": "",
-          "search_term": "Fabric Glue",
-          "url": "https://www.amazon.com/s?k=Fabric+Glue&tag=qalok0c-20"
+          "name": "Aleene's Fabric Glue",
+          "asin": "B00178QSE6",
+          "search": "Aleene's Fabric Fusion Glue 4 oz",
+          "title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B00178QSE6?tag=qalok0c-20"
         },
         {
           "name": "Fabric Scissors",
-          "asin": "",
-          "search_term": "Fabric Scissors",
-          "url": "https://www.amazon.com/s?k=Fabric+Scissors&tag=qalok0c-20"
+          "asin": "B082LY2W2G",
+          "search": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
+          "title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B082LY2W2G?tag=qalok0c-20"
         }
       ],
       "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
@@ -503,7 +509,7 @@
       "layout_version": 3,
       "draft": false,
       "review_required": true,
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
@@ -521,16 +527,20 @@
       "words": 660,
       "items": [
         {
-          "name": "Monitor Arm",
-          "asin": "",
-          "search_term": "Monitor Arm",
-          "url": "https://www.amazon.com/s?k=Monitor+Arm&tag=qalok0c-20"
+          "name": "VIVO Monitor Arm",
+          "asin": "B01NH0HTM5",
+          "search": "VIVO STAND-V001O Single Monitor Arm",
+          "title": "VIVO Single Monitor Stand, Fully Adjustable Arm for 17 to 32 inch Screen, Mechanical Articulating Desk Mount, Gaming and Office Setups, VESA 75x75, 100x100, Max 19.8 lbs, Classic, Black, STAND-V001O",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=qalok0c-20"
         },
         {
-          "name": "Monitor Stand",
-          "asin": "",
-          "search_term": "Monitor Stand",
-          "url": "https://www.amazon.com/s?k=Monitor+Stand&tag=qalok0c-20"
+          "name": "OPNICE Monitor Stand Riser",
+          "asin": "B0DB8F7GDN",
+          "search": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
+          "title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=qalok0c-20"
         }
       ],
       "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
@@ -540,7 +550,7 @@
       "layout_version": 3,
       "draft": false,
       "review_required": true,
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
@@ -755,10 +765,12 @@
       "words": 1011,
       "items": [
         {
-          "name": "Foldable Daypack",
-          "asin": "",
-          "search_term": "foldable daypack for wedding trips",
-          "url": "https://www.amazon.com/s?k=foldable+daypack+for+wedding+trips&tag=qalok0c-20"
+          "name": "G4Free 20L Foldable Daypack",
+          "asin": "B07QV16HKB",
+          "search": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
+          "title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20"
         }
       ],
       "html_file": "review-foldable-daypack-2da57045820c.html",
@@ -769,7 +781,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
@@ -787,10 +799,12 @@
       "words": 1188,
       "items": [
         {
-          "name": "Foldable Daypack",
-          "asin": "",
-          "search_term": "foldable daypack for wedding trips",
-          "url": "https://www.amazon.com/s?k=foldable+daypack+for+wedding+trips&tag=qalok0c-20"
+          "name": "G4Free 20L Foldable Daypack",
+          "asin": "B07QV16HKB",
+          "search": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
+          "title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20"
         }
       ],
       "html_file": "review-foldable-daypack-d32205113585.html",
@@ -801,7 +815,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
@@ -1001,10 +1015,12 @@
       "words": 1253,
       "items": [
         {
-          "name": "Portable Monitor",
-          "asin": "",
-          "search_term": "portable monitor for console players",
-          "url": "https://www.amazon.com/s?k=portable+monitor+for+console+players&tag=qalok0c-20"
+          "name": "MNN Portable Monitor",
+          "asin": "B0B9NNWXVP",
+          "search": "MNN 15.6 FHD 60Hz Portable Monitor",
+          "title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20"
         }
       ],
       "html_file": "review-portable-monitor-ec1fcecd2d09.html",
@@ -1015,7 +1031,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-raised-garden-bed-d615608d706c",
@@ -1033,10 +1049,12 @@
       "words": 548,
       "items": [
         {
-          "name": "Raised Garden Bed",
-          "asin": "",
-          "search_term": "raised garden bed vs traditional alternatives",
-          "url": "https://www.amazon.com/s?k=raised+garden+bed+vs+traditional+alternatives&tag=qalok0c-20"
+          "name": "Land Guard Raised Garden Bed",
+          "asin": "B09C8HR4Z9",
+          "search": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
+          "title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20"
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
@@ -1044,7 +1062,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",
@@ -1062,10 +1080,12 @@
       "words": 902,
       "items": [
         {
-          "name": "Resistance Bands",
-          "asin": "",
-          "search_term": "resistance bands for runners",
-          "url": "https://www.amazon.com/s?k=resistance+bands+for+runners&tag=qalok0c-20"
+          "name": "Fit Simplify Resistance Bands",
+          "asin": "B01AVDVHTI",
+          "search": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+          "title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
         }
       ],
       "html_file": "review-resistance-bands-820d61a673d2.html",
@@ -1076,7 +1096,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-resistance-bands-9d916e3d97f8",
@@ -1094,10 +1114,12 @@
       "words": 738,
       "items": [
         {
-          "name": "Resistance Bands",
-          "asin": "",
-          "search_term": "resistance bands for runners",
-          "url": "https://www.amazon.com/s?k=resistance+bands+for+runners&tag=qalok0c-20"
+          "name": "Fit Simplify Resistance Bands",
+          "asin": "B01AVDVHTI",
+          "search": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
+          "title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20"
         }
       ],
       "html_file": "review-resistance-bands-9d916e3d97f8.html",
@@ -1108,7 +1130,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",
@@ -1187,10 +1209,12 @@
       "words": 570,
       "items": [
         {
-          "name": "Video Doorbell",
-          "asin": "",
-          "search_term": "video doorbell buying guide 2027",
-          "url": "https://www.amazon.com/s?k=video+doorbell+buying+guide+2027&tag=qalok0c-20"
+          "name": "Ring Battery Doorbell 2K",
+          "asin": "B0FHJ7TKZM",
+          "search": "Ring Battery Doorbell 2K 2nd Generation",
+          "title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray",
+          "asin_verified": true,
+          "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=qalok0c-20"
         }
       ],
       "html_file": "review-video-doorbell-1b56e37dfa94.html",
@@ -1198,7 +1222,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "seed-air-purifier-buying-guide",
