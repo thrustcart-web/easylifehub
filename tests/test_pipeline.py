@@ -811,6 +811,14 @@ class TestAIPath(unittest.TestCase):
 
     def test_provider_fallback_chain(self):
         calls = []
+        old_providers = {
+            name: providers.PROVIDERS.get(name)
+            for name in ("groq", "mistral", "openrouter")
+        }
+        old_env = {
+            key: os.environ.get(key)
+            for key in ("GROQ_API_KEY", "MISTRAL_API_KEY", "OPENROUTER_API_KEY")
+        }
 
         def boom(cfg, system, user, temp, tokens):
             calls.append(cfg.get("model"))
@@ -820,24 +828,40 @@ class TestAIPath(unittest.TestCase):
             calls.append(cfg.get("model"))
             return json.dumps(self.GOOD)
 
-        providers.PROVIDERS["groq"] = boom
-        providers.PROVIDERS["openrouter"] = works
-        for name, key in [("groq", "GROQ_API_KEY"), ("openrouter", "OPENROUTER_API_KEY")]:
-            os.environ[key] = "fake"
-        ai_cfg = fresh_cfg()["ai"]
-        parsed, used = providers.generate_json(ai_cfg, "sys", "usr")
-        self.assertEqual(used, "openrouter")
-        self.assertEqual(calls, ["openai/gpt-oss-120b", "openrouter/free"])
-        self.assertEqual(parsed["title"], self.GOOD["title"])
-        isolated_fallback_cfg = dict(ai_cfg)
-        isolated_fallback_cfg["fallbacks"] = ["openrouter"]
-        parsed_again, used_again, attempted = providers.generate_json(
-            isolated_fallback_cfg, "sys", "usr",
-            exclude_providers={"groq"}, return_attempted=True
-        )
-        self.assertEqual(used_again, "openrouter")
-        self.assertEqual(attempted, ["openrouter"])
-        self.assertEqual(parsed_again["title"], self.GOOD["title"])
+        try:
+            providers.PROVIDERS["groq"] = boom
+            providers.PROVIDERS["mistral"] = boom
+            providers.PROVIDERS["openrouter"] = works
+            for key in old_env:
+                os.environ[key] = "fake"
+            ai_cfg = fresh_cfg()["ai"]
+            parsed, used = providers.generate_json(ai_cfg, "sys", "usr")
+            self.assertEqual(used, "openrouter")
+            self.assertEqual(
+                calls,
+                ["openai/gpt-oss-120b", "mistral-large-latest", "openrouter/free"],
+            )
+            self.assertEqual(parsed["title"], self.GOOD["title"])
+            isolated_fallback_cfg = dict(ai_cfg)
+            isolated_fallback_cfg["fallbacks"] = ["openrouter"]
+            parsed_again, used_again, attempted = providers.generate_json(
+                isolated_fallback_cfg, "sys", "usr",
+                exclude_providers={"groq"}, return_attempted=True
+            )
+            self.assertEqual(used_again, "openrouter")
+            self.assertEqual(attempted, ["openrouter"])
+            self.assertEqual(parsed_again["title"], self.GOOD["title"])
+        finally:
+            for name, provider in old_providers.items():
+                if provider is None:
+                    providers.PROVIDERS.pop(name, None)
+                else:
+                    providers.PROVIDERS[name] = provider
+            for key, value in old_env.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
 
 
 class TestQualityGate(unittest.TestCase):
