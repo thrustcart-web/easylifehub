@@ -496,7 +496,7 @@ class TestAIPath(unittest.TestCase):
         system, user = ai_writer.build_prompts(topic, cfg)
         self.assertIn("Coffee Canister Airtight Storage Container with Lid", user)
         self.assertIn("only confirmed product-specific listing evidence", user)
-        self.assertIn("Never invent product facts", system)
+        self.assertIn("NEVER invent product facts", system)
 
     def test_verified_queue_rebuilder_rejects_search_links_and_never_calls_product_search(self):
         import inspect
