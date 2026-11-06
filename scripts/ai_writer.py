@@ -47,6 +47,7 @@ BANNED_PHRASES = [
 HYPE_RE = re.compile(r"\b(best ever|world's #1|guaranteed|miracle|perfect for everyone|100% risk-free)\b", re.I)
 PRICE_RE = re.compile(r"(?<![\w])(?:\$|USD\s?|£|€)\s?\d+(?:\.\d{2})?")
 RATING_RE = re.compile(r"\b\d(?:\.\d)?\s?(?:/|out of)\s?5\b", re.I)
+CUSTOMER_REVIEW_RE = re.compile(r"\b(?:customer|buyer|user)\s+(?:reviews?|ratings?)\b|\b\d[\d,]*\s+(?:customer\s+)?reviews?\b|\b(?:star\s+ratings?|review\s+counts?)\b", re.I)
 FAKE_TEST_RE = re.compile(
     r"\b(?:we (?:tested|measured|ran|used) it for|in our (?:lab|tests)|after \d+ (?:hours|days|weeks) of testing)\b", re.I
 )
@@ -113,7 +114,7 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 4. Never imply personal ownership, hands-on testing, lab work, or first-hand experience.
 5. Do not include product prices, price ranges, discounts, star ratings, review counts, customer opinions, customer-review summaries, or claims about what buyers say. These details are not needed.\n6. Do not invent weaknesses, defects, drawbacks, or negative experiences. Explain practical fit and what a buyer should verify instead.\n7. Never use these words or phrases: {banned}.
 8. No hype, no exclamation marks, no flattery of the reader.
-7. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
+9. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
 10. Address the reader as "you" at most twice per section.
 11. Do not write an introduction that restates the title.
 12. Body copy: {min_words}-{target_words} words. Substance, not padding. The three-paragraph intro, main sections, audience_fit and conclusion are mandatory.
