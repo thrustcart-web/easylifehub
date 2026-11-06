@@ -32,6 +32,7 @@ import template_engine                       # noqa: E402
 import topic_planner                         # noqa: E402
 import util                                  # noqa: E402
 import ai_writer                            # noqa: E402
+import product_resolver                    # noqa: E402
 from ai_writer import normalise, validate    # noqa: E402
 
 util.QUEUE_DIR = _TMP / "queue"
@@ -145,6 +146,61 @@ class TestTopicPlanner(unittest.TestCase):
         second = topic_planner.next_topics(state=state, count=10)
         overlap = {t["slug"] for t in first} & {t["slug"] for t in second}
         self.assertFalse(overlap, f"planner repeated topics: {overlap}")
+
+
+
+class TestProductResolution(unittest.TestCase):
+    def test_asin_can_be_extracted_from_direct_amazon_url(self):
+        asin = product_resolver._extract_asin({
+            "url": "https://www.amazon.com/dp/B0BYMRJD7R?language=en"
+        })
+        self.assertEqual(asin, "B0BYMRJD7R")
+
+    def test_title_matching_requires_all_product_tokens(self):
+        self.assertTrue(product_resolver.title_matches(
+            "Marbrasse Pen Organizer",
+            "Marbrasse Pen Organizer with 2 Drawer for Desk"
+        ))
+        self.assertFalse(product_resolver.title_matches(
+            "Marbrasse Pen Organizer",
+            "OPNICE Four Tier Desk File Organizer"
+        ))
+
+    def test_resolves_only_matching_asin_from_apify_results(self):
+        original_search = product_resolver._search_amazon
+        original_save = product_resolver._save_cache
+        calls = []
+
+        def fake_search(term, token):
+            calls.append((term, token))
+            return [
+                {"title": "OPNICE Four Tier Desk File Organizer", "asin": "B0BYDGF8DT"},
+                {"title": "Marbrasse Pen Organizer with 2 Drawer for Desk", "asin": "B0BYMRJD7R"},
+            ]
+
+        product_resolver._search_amazon = fake_search
+        product_resolver._save_cache = lambda cache: None
+        try:
+            items = [{
+                "display_name": "Marbrasse Pen Organizer",
+                "name": "Marbrasse Pen Organizer",
+                "search_term": "desk organizer",
+            }]
+            result = product_resolver.resolve_items(items, api_token="test-token", cache={})
+            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
+            self.assertTrue(result[0]["asin_verified"])
+            self.assertEqual(calls, [("desk organizer", "test-token")])
+        finally:
+            product_resolver._search_amazon = original_search
+            product_resolver._save_cache = original_save
+
+    def test_missing_apify_token_blocks_unverified_products(self):
+        with self.assertRaisesRegex(product_resolver.ProductResolutionError, "APIFY_API_TOKEN"):
+            product_resolver.resolve_items(
+                [{"display_name": "A Product", "name": "A Product"}],
+                api_token="",
+                cache={},
+            )
 
 
 class TestAffiliateLinks(unittest.TestCase):
