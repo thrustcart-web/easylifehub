@@ -1,6 +1,11 @@
 name: test-groq-generation
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/one-time-groq-retest.trigger'
   workflow_dispatch:
 
 permissions:
