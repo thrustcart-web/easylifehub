@@ -204,23 +204,42 @@ def _gemini(cfg: dict, system: str, user: str, temp: float, max_tokens: int) -> 
         "system_instruction": {"parts": [{"text": system}]},
         "contents": [{"role": "user", "parts": [{"text": user}]}],
         "generationConfig": {
-            # Gemini 3.8 Flash no longer accepts legacy sampling controls
-            # such as temperature. Keep JSON output and the configured token cap.
+            # Gemini 3.x does not accept the legacy temperature parameter.
             "maxOutputTokens": max_tokens,
             "responseMimeType": "application/json",
         },
     }
-    url = f"{cfg['base_url']}/models/{cfg['model']}:generateContent"
-    data = _post_json(
-        url,
-        payload,
-        {"User-Agent": USER_AGENT, "x-goog-api-key": key},
-    )
-    try:
-        return data["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError) as exc:
-        raise AIError(f"gemini blocked/empty: {json.dumps(data)[:200]}") from exc
 
+    models = [cfg["model"], *cfg.get("fallback_models", [])]
+    last_error = ""
+    for model in models:
+        url = f"{cfg['base_url']}/models/{model}:generateContent"
+        try:
+            data = _post_json(
+                url,
+                payload,
+                {"User-Agent": USER_AGENT, "x-goog-api-key": key},
+            )
+            try:
+                return data["candidates"][0]["content"]["parts"][0]["text"]
+            except (KeyError, IndexError, TypeError) as exc:
+                raise AIError(f"gemini blocked/empty for {model}: {json.dumps(data)[:200]}") from exc
+        except AIError as exc:
+            last_error = f"{model}: {exc}"
+            log.warning("  gemini/%s failed (%s)", model, str(exc)[:120])
+            # Model-level overload/quota or a model-specific endpoint failure:
+            # try the next configured stable model. Auth and malformed-request
+            # errors are project/request-wide and should return to provider fallback.
+            retryable = any(
+                marker in str(exc)
+                for marker in (
+                    "HTTP 404:", "HTTP 429:", "HTTP 500:",
+                    "HTTP 502:", "HTTP 503:", "HTTP 504:",
+                )
+            ) or "gemini blocked/empty" in str(exc)
+            if not retryable:
+                raise
+    raise AIError("all configured Gemini models failed -> " + last_error)
 
 PROVIDERS = {
     "groq": _groq,
