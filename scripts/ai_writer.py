@@ -112,7 +112,8 @@ HARD RULES - violating any of these makes the article unusable and it will be re
 3. If the supplied context does not confirm a feature, do not guess from the product category or model name.
    Turn the unknown into a practical buyer check ("verify the supported ports on the current manufacturer listing").
 4. Never imply personal ownership, hands-on testing, lab work, or first-hand experience.
-5. Do not include product prices, price ranges, discounts, star ratings, review counts, customer opinions, customer-review summaries, or claims about what buyers say. These details are not needed.\n6. Do not invent weaknesses, defects, drawbacks, or negative experiences. Explain practical fit and what a buyer should verify instead.\n7. Never use these words or phrases: {banned}.
+5. Do not include product prices, price ranges, discounts, star ratings, review counts, customer opinions, customer-review summaries, or claims about what buyers say. These details are not needed.
+6. Do not invent weaknesses, defects, drawbacks, or negative experiences. Explain practical fit and what a buyer should verify instead.\n7. Never use these words or phrases: {banned}.
 8. No hype, no exclamation marks, no flattery of the reader.
 9. Be specific only when the evidence supports it; otherwise explain the decision criterion clearly.
 10. Address the reader as "you" at most twice per section.
