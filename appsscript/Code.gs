@@ -476,7 +476,7 @@ function installTrigger() {
  * Automatically dispatches the GitHub refill workflow when fewer than
  * REFILL_MIN_PENDING unpublished, approved v3 articles remain.
  *
- * Requires Script Property GITHUB_TOKEN with a fine-grained GitHub token
+ * Requires Script Property GITHUB_ACTIONS_TOKEN (legacy GITHUB_TOKEN is also accepted) with a fine-grained GitHub token
  * that has Actions: Read and write on the EasyLifeHub repository.
  */
 function refillQueueIfLow() {
@@ -514,9 +514,9 @@ function refillQueueIfLow() {
       return;
     }
 
-    var token = String(P.getProperty('GITHUB_TOKEN') || '').trim();
+    var token = String(P.getProperty('GITHUB_ACTIONS_TOKEN') || P.getProperty('GITHUB_TOKEN') || '').trim();
     if (!token) {
-      Logger.log('GITHUB_TOKEN is missing. Add it under Project Settings > Script Properties.');
+      Logger.log('GITHUB_ACTIONS_TOKEN is missing. Add a GitHub fine-grained token under Project Settings > Script Properties.');
       return;
     }
 

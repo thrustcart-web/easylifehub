@@ -134,7 +134,7 @@
     "require_exact_title_tokens": true,
     "cache_file": ".cache/amazon_asins.json",
     "actor": "junglee/amazon-crawler",
-    "api_env": "APIFY_API_TOKEN",
+    "api_env": "TEST_API",
     "max_results_per_search": 5,
     "search_pages": 1,
     "scrape_product_details": false

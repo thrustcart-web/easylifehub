@@ -173,7 +173,7 @@ def resolve_items(
 ) -> list[dict]:
     """Resolve products individually; reuse exact-name cache entries across articles."""
     api_token = (
-        api_token if api_token is not None else os.environ.get("APIFY_API_TOKEN", "")
+        api_token if api_token is not None else (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", ""))
     ).strip()
     cache = cache if cache is not None else _load_cache()
     resolved = [dict(item) for item in items]
@@ -203,7 +203,7 @@ def resolve_items(
 
     if pending and not api_token:
         raise ProductResolutionError(
-            "APIFY_API_TOKEN is missing; refusing to publish an unverified product URL"
+            "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted); refusing to publish an unverified product URL"
         )
 
     for search_term, indexes in pending.items():
@@ -277,9 +277,9 @@ def backfill_queue() -> dict:
 
     cfg = load_config()
     aff = Affiliate(cfg)
-    if not os.environ.get("APIFY_API_TOKEN", "").strip():
+    if not (os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", "")).strip():
         raise ProductResolutionError(
-            "APIFY_API_TOKEN is missing. Add it to GitHub Actions secrets before running the backfill."
+            "TEST_API is missing (legacy APIFY_API_TOKEN is also accepted). Add it to GitHub Actions secrets before running the backfill."
         )
 
     cache = _load_cache()
