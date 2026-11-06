@@ -41,7 +41,6 @@ var DEFAULTS = {
   REFILL_MIN_PENDING: '6',
   REFILL_COUNT: '6',
   REFILL_COOLDOWN_HOURS: '12',
-  PAID_LOOKUP_ENABLED: 'false',   // explicit opt-in for paid Apify/SerpApi discovery
   AUTOMATION_ENABLED: 'false',   // keep scheduled publishing/refill off until explicitly approved
   // ---- category hub + related posts (topical authority plumbing) ----
   BLOG_URL:        '',                    // blank = auto-detected once from the API
@@ -587,7 +586,9 @@ function refillQueueIfLow() {
         inputs: {
           count: String(refillCount),
           mode: 'auto',
-          allow_paid_lookup: String(cfg('PAID_LOOKUP_ENABLED', 'false')).toLowerCase() === 'true'
+          // Automatic low-queue refill is pre-authorized to use the configured SerpApi provider.
+          // The GitHub workflow retains its own SERPAPI_SPEND_ENABLED guard.
+          allow_paid_lookup: true
         }
       }),
       muteHttpExceptions: true
@@ -766,7 +767,7 @@ function status() {
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
   Logger.log('Automation      : ' + (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
-  Logger.log('Paid lookup     : ' + (String(cfg('PAID_LOOKUP_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
+  Logger.log('Product lookup  : AUTO on low queue (SerpApi; GitHub spend guard active)');
   var triggers = ScriptApp.getProjectTriggers();
   Logger.log('Triggers        : ' + triggers.length);
   triggers.forEach(function (trigger) {
