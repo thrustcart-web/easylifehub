@@ -252,6 +252,52 @@ function getPublished_() {
 function setPublished_(arr) {
   P.setProperty('PUBLISHED', JSON.stringify(arr.slice(-500)));
 }
+
+/**
+ * Reconcile the local PUBLISHED registry with Blogger's live posts.
+ * Entries deleted manually in Blogger are removed from the registry so the
+ * corresponding queue articles can become eligible again after their product
+ * links are verified. Does not delete or modify any Blogger content.
+ */
+function reconcilePublishedRegistryWithBlogger() {
+  var blogId = cfg('BLOG_ID');
+  var liveIds = {};
+  var pageToken = '';
+  var pageCount = 0;
+
+  do {
+    var params = { maxResults: 500, status: 'live' };
+    if (pageToken) params.pageToken = pageToken;
+    var result = bloggerCall_('GET', '/blogs/' + blogId + '/posts', null, params);
+    (result.items || []).forEach(function(post) {
+      if (post && post.id) liveIds[String(post.id)] = true;
+    });
+    pageToken = result.nextPageToken || '';
+    pageCount++;
+    if (pageCount > 100) throw new Error('Stopped registry reconciliation after 100 Blogger pages.');
+  } while (pageToken);
+
+  var before = getPublished_();
+  var kept = [];
+  var removed = [];
+  before.forEach(function(entry) {
+    if (!entry || !entry.post_id || liveIds[String(entry.post_id)]) {
+      kept.push(entry);
+    } else {
+      removed.push(entry);
+    }
+  });
+
+  setPublished_(kept);
+  Logger.log('Blogger live posts found: ' + Object.keys(liveIds).length);
+  Logger.log('Published registry before: ' + before.length);
+  Logger.log('Removed deleted-post markers: ' + removed.length);
+  removed.forEach(function(entry) {
+    Logger.log('REOPENED QUEUE ITEM: ' + (entry.slug || '(no slug)') + ' | ' + (entry.title || ''));
+  });
+  Logger.log('Published registry after: ' + kept.length);
+  return { live_posts: Object.keys(liveIds).length, removed_markers: removed.length, remaining: kept.length };
+}
 function isPublished_(slug) {
   return getPublished_().some(function (p) { return p.slug === slug; });
 }
