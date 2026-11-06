@@ -765,6 +765,7 @@ function status() {
   Logger.log('Failures        : ' + (P.getProperty('FAIL_COUNT') || '0'));
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
+  Logger.log('Automation      : ' + (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
   Logger.log('Paid lookup     : ' + (String(cfg('PAID_LOOKUP_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
   var triggers = ScriptApp.getProjectTriggers();
   Logger.log('Triggers        : ' + triggers.length);
