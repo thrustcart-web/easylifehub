@@ -1,7 +1,7 @@
 {
   "slug": "review-levoit-air-purifier-core-300-853749094376",
-  "title": "LEVOIT Air Purifier Core 300 Review: What I Would Check Before Buying",
-  "meta_description": "The Core 300 is a compact, quiet HEPA unit for small rooms. It lacks smart features and has a modest filter size, but it delivers solid air cleaning on a tight budget.",
+  "title": "LEVOIT Core 300-P Air Purifier: Room Fit, Filtration, and Filter Care",
+  "meta_description": "A practical guide to the LEVOIT Core 300-P, covering its three-stage filter, room coverage, controls, dimensions, and replacement-filter planning.",
   "template": "review",
   "niche": "air quality",
   "keyword": "LEVOIT Air Purifier Core 300",
@@ -9,23 +9,22 @@
     "Reviews",
     "Air Quality"
   ],
-  "source": "ai:groq",
-  "provider": "groq",
-  "words": 1532,
+  "source": "manual:official_specs",
+  "provider": "levoit_official_product_information",
+  "words": 1407,
   "items": [
     {
       "name": "LEVOIT Core 300-P Air Purifier",
       "asin": "B07VVK39F7",
-      "search_term": "LEVOIT Core 300-P Air Purifier",
-      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20",
       "asin_verified": true,
-      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White"
+      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+      "search_term": "LEVOIT Core 300-P Air Purifier",
+      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=qalok0c-20"
     }
   ],
   "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
+  "layout_version": 4,
   "draft": false,
-  "layout_version": 3,
-  "review_required": true,
-  "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": true
+  "product_links_verified": true,
+  "review_required": false
 }
