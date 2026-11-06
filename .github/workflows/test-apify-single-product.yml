@@ -16,7 +16,8 @@ jobs:
       - name: Test one Amazon product
         env:
           TEST_API: ${{ secrets.TEST_API }}
-          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+          ALLOW_PAID_LOOKUP: ${{ inputs.allow_paid_lookup }}
+           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
           python - <<'PY'
           import json
@@ -24,8 +25,12 @@ jobs:
           import re
           from urllib import request, parse, error
 
+          if os.environ.get("ALLOW_PAID_LOOKUP", "").strip().lower() != "true":
+              print("SKIPPED: paid Apify lookup was not explicitly authorized.")
+              raise SystemExit(0)
+
           token = os.environ.get("TEST_API", "").strip()
-          if not token:
+           if not token:
               raise SystemExit("ERROR: TEST_API secret is missing")
 
           params = parse.urlencode({
