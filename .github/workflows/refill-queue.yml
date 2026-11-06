@@ -14,6 +14,11 @@ on:
         description: 'auto | ai | template'
         required: false
         default: 'auto'
+      allow_paid_lookup:
+        description: 'Set true only to authorize paid Apify/SerpApi product lookups in this refill'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -44,8 +49,8 @@ jobs:
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          APIFY_SPEND_ENABLED: ${{ vars.APIFY_SPEND_ENABLED }}
-          SERPAPI_SPEND_ENABLED: ${{ vars.SERPAPI_SPEND_ENABLED }}
+          APIFY_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.APIFY_SPEND_ENABLED == 'true' }}
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' }}
         run: |
           COUNT="${{ github.event.inputs.count }}"
           MODE="${{ github.event.inputs.mode }}"
