@@ -4,6 +4,11 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/one-time-levoit-offline.trigger'
   workflow_dispatch:
     inputs:
       limit:
