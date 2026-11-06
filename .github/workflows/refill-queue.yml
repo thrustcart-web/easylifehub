@@ -59,7 +59,13 @@ jobs:
         run: |
           git config user.name  "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
-          git add content/queue content/categories state.json .cache data 2>/dev/null || true
+          # Stage only paths that are guaranteed to exist. The old command
+          # included content/categories (disabled and often absent) and masked
+          # git-add errors with "|| true", which could silently stage nothing
+          # even after articles had been generated.
+          git add -A -- content/queue state.json data .cache
+          echo "Staged changes:"
+          git status --short --untracked-files=all
           if ! git diff --cached --quiet; then
             git commit -m "content: manual refill ${{ github.event.inputs.count }} [skip ci]"
             # Avoid losing a prepared queue when main changes during a refill.
@@ -80,5 +86,7 @@ jobs:
             echo "::error::Could not save refilled queue after three attempts."
             exit 1
           else
-            echo "No queue changes to commit."
+            echo "::error::No files were staged after generation. Refusing to report a successful refill."
+            git status --short --untracked-files=all
+            exit 1
           fi
