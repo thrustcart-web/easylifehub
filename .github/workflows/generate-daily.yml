@@ -17,13 +17,6 @@ on:
         description: 'auto (AI + offline fallback) | ai | template'
         required: false
         default: 'auto'
-  push:
-    paths:
-      - 'data/**'
-      - 'config.json'
-      - 'content/seed/**'
-    branches: [ main ]
-
 permissions:
   contents: write
 
