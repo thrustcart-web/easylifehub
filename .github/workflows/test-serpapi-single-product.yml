@@ -1,0 +1,76 @@
+name: test-serpapi-single-product
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Verify one Amazon product through SerpApi only
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
+          SERPAPI_SPEND_ENABLED: ${{ vars.SERPAPI_SPEND_ENABLED }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, str(Path('scripts').resolve()))
+
+          if os.environ.get('PRODUCT_DISCOVERY_PROVIDER', '').strip().lower() != 'serpapi':
+              raise SystemExit('CONFIG ERROR: PRODUCT_DISCOVERY_PROVIDER must be serpapi')
+          api_key = os.environ.get('SERPAPI_API_KEY', '').strip()
+          if not api_key:
+              raise SystemExit('CONFIG ERROR: SERPAPI_API_KEY secret is missing')
+          if os.environ.get('SERPAPI_SPEND_ENABLED', '').strip().lower() not in {'1', 'true', 'yes'}:
+              raise SystemExit('CONFIG ERROR: SERPAPI_SPEND_ENABLED must be true')
+
+          from product_resolver import _search_amazon_serpapi, _apply_candidate
+          from affiliate import Affiliate
+
+          product = {
+              'name': 'Marbrasse Pen Organizer with 2 Drawer',
+              'display_name': 'Marbrasse Pen Organizer with 2 Drawer',
+              'search_term': 'Marbrasse Pen Organizer with 2 Drawer',
+          }
+          rows = _search_amazon_serpapi(product['search_term'], api_key)
+          resolved = _apply_candidate(product, rows)
+          if not resolved:
+              print('SerpApi result titles:')
+              for row in rows[:5]:
+                  print('-', row.get('title', ''))
+              raise SystemExit('PRODUCT CHECK FAILED: no exact title match with a valid ASIN')
+
+          config = json.loads(Path('config.json').read_text(encoding='utf-8'))
+          url = Affiliate(config).url_for(resolved)
+          if not re.fullmatch(r'https://www\\.amazon\\.com/dp/[A-Z0-9]{10}\\?tag=qalok0c-20', url):
+              raise SystemExit('LINK CHECK FAILED: expected a tagged direct Amazon product URL')
+
+          print('SERPAPI TEST: SUCCESS')
+          print('Title:', resolved['verified_product_title'])
+          print('ASIN:', resolved['asin'])
+          print('Affiliate URL:', url)
+          print('SerpApi requests: 1')
+          print('Apify requests: 0')
+          print('Blogger changes: none')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('## SerpApi one-product test: SUCCESS\\n')
+              summary.write(f"- Product: {resolved['verified_product_title']}\\n")
+              summary.write(f"- ASIN: {resolved['asin']}\\n")
+              summary.write(f'- Direct affiliate link: {url}\\n')
+              summary.write('- SerpApi requests: 1; Apify requests: 0; Blogger changes: none\\n')
+          PY
