@@ -564,8 +564,8 @@
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
-      "title": "Runner Rug vs Area Rug: Which One Should You Actually Buy?",
-      "meta_description": "Runner rugs excel in narrow, high‑traffic corridors, while area rugs shine in open rooms on hardwood floors. This guide breaks down the trade‑offs, lists real pros and cons, and tells three buyer types which option actually works for them.",
+      "title": "Runner Rug vs Area Rug: Choosing the Right Shape for Your Space",
+      "meta_description": "Compare a hallway runner rug with a larger area rug, focusing on proportions, placement, materials, and how each format fits a room.",
       "template": "comparison",
       "niche": "home decor",
       "keyword": "Runner Rug vs Area Rug",
@@ -578,16 +578,20 @@
       "words": 669,
       "items": [
         {
-          "name": "Runner Rug",
-          "asin": "",
-          "search_term": "Runner Rug",
-          "url": "https://www.amazon.com/s?k=Runner+Rug&tag=qalok0c-20"
+          "name": "Rugshop Traditional Medallion Runner Rug",
+          "asin": "B0HGPRSSGT",
+          "asin_verified": true,
+          "verified_product_title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown | Non-Slip, Fade Resistant, Pet Friendly, Easy to Clean, Stain Resistant, Soft Rug for Hallway, Entryway, Kitchen, Foyer",
+          "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
+          "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=qalok0c-20"
         },
         {
-          "name": "Area Rug",
-          "asin": "",
-          "search_term": "Area Rug",
-          "url": "https://www.amazon.com/s?k=Area+Rug&tag=qalok0c-20"
+          "name": "Trademoon 5x7 Jute and Cotton Area Rug",
+          "asin": "B0FMRZRWWX",
+          "asin_verified": true,
+          "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
+          "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
+          "url": "https://www.amazon.com/dp/B0FMRZRWWX?tag=qalok0c-20"
         }
       ],
       "html_file": "comparison-runner-rug-vs-area-rug-d04329b0c6d2.html",
@@ -598,7 +602,7 @@
       "layout_version": 3,
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
-      "product_links_verified": false
+      "product_links_verified": true
     },
     {
       "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
