@@ -1,7 +1,7 @@
 name: refill-queue
 
-# Manual top-up button. Use it when the queue gets low (status() in Apps Script
-# tells you how many days of content are left).
+# Automatic top-up dispatched by Apps Script whenever approved pending articles fall below the queue threshold.
+# SerpApi is the only automatic discovery provider; Apify is never enabled by this workflow.
 
 on:
   workflow_dispatch:
@@ -47,8 +47,8 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-          PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          APIFY_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.APIFY_SPEND_ENABLED == 'true' }}
+          PRODUCT_DISCOVERY_PROVIDER: serpapi
+          APIFY_SPEND_ENABLED: 'false'
           SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' }}
         run: |
           COUNT="${{ github.event.inputs.count }}"
