@@ -172,7 +172,7 @@ def write_repair_article(topic: dict, cfg: dict) -> tuple[dict, str]:
 def build_levoit_official_specs_article() -> dict:
     """A fully written article grounded only in Levoit's published Core 300-P specifications."""
     return {
-        "title": "LEVOIT Air Purifier Core 300 Review: Room Fit, Filtration, and Filter Care",
+        "title": "LEVOIT Core 300-P Air Purifier: Room Fit, Filtration, and Filter Care",
         "meta_description": "A practical guide to the LEVOIT Core 300-P, covering its three-stage filter, room coverage, controls, dimensions, and replacement-filter planning.",
         "intro": [
             "The LEVOIT Core 300-P is a compact, cylindrical air purifier designed for bedrooms, home offices, and other smaller rooms. Its straightforward layout combines a three-stage filter, three fan speeds, a sleep setting, and a timer in a unit that can sit beside a wall without taking up much floor space.",
