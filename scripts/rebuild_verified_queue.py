@@ -96,6 +96,9 @@ def write_repair_article(topic: dict, cfg: dict) -> tuple[dict, str]:
     cfg["ai"]["fallbacks"] = []
     content_cfg = cfg.setdefault("content", {})
     original_target = int(content_cfg.get("target_words") or 1100)
+    # Repair content that meets the intended ~1,100-word brief, not merely
+    # the general 600-word emergency floor used by ordinary generation.
+    content_cfg["min_words"] = max(int(content_cfg.get("min_words") or 600), 950)
     last_error = None
 
     for target in (max(original_target, 1400), max(original_target, 1600)):
@@ -149,7 +152,12 @@ def rebuild(limit: int = 8) -> dict:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        if int(meta.get("layout_version") or 0) >= 4:
+        # Rebuild short V4 drafts too. A V4 layout is not enough if its
+        # article body missed the intended length; leave full-length V4 intact.
+        if (
+            int(meta.get("layout_version") or 0) >= 4
+            and int(meta.get("words") or 0) >= 950
+        ):
             continue
         resolved_items = resolved_items_for_meta(meta, cache, aff)
         if resolved_items:
