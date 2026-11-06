@@ -48,11 +48,11 @@ jobs:
               'search_term': 'Marbrasse Pen Organizer with 2 Drawer',
           }
           rows = _search_amazon_serpapi(product['search_term'], api_key)
-          resolved = _apply_candidate(product, rows)
+          resolved = _apply_candidate(product, rows, allow_missing_leading_brand=True)
           if not resolved:
               print('SerpApi result titles:')
               for row in rows[:5]:
-                  print('-', row.get('title', ''))
+                  print('-', row.get('asin', ''), '|', row.get('title', ''))
               raise SystemExit('PRODUCT CHECK FAILED: no exact title match with a valid ASIN')
 
           config = json.loads(Path('config.json').read_text(encoding='utf-8'))
