@@ -14,10 +14,12 @@
   "words": 1188,
   "items": [
     {
-      "name": "Foldable Daypack",
-      "asin": "",
-      "search_term": "foldable daypack for wedding trips",
-      "url": "https://www.amazon.com/s?k=foldable+daypack+for+wedding+trips&tag=qalok0c-20"
+      "name": "G4Free 20L Foldable Daypack",
+      "asin": "B07QV16HKB",
+      "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
+      "url": "https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black"
     }
   ],
   "html_file": "review-foldable-daypack-d32205113585.html",
@@ -28,5 +30,5 @@
   "layout_version": 3,
   "review_required": true,
   "migration_status": "layout_v3_needs_fact_check",
-  "product_links_verified": false
+  "product_links_verified": true
 }
