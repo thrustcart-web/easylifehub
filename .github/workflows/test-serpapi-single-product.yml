@@ -21,7 +21,8 @@ jobs:
         env:
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          SERPAPI_SPEND_ENABLED: ${{ vars.SERPAPI_SPEND_ENABLED }}
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' }}
+          ALLOW_PAID_LOOKUP: ${{ inputs.allow_paid_lookup }}
         run: |
           python - <<'PY'
           import json
@@ -31,6 +32,9 @@ jobs:
           from pathlib import Path
           sys.path.insert(0, str(Path('scripts').resolve()))
 
+          if os.environ.get('ALLOW_PAID_LOOKUP', '').strip().lower() != 'true':
+              print('SKIPPED: paid SerpApi lookup was not explicitly authorized.')
+              raise SystemExit(0)
           if os.environ.get('PRODUCT_DISCOVERY_PROVIDER', '').strip().lower() != 'serpapi':
               raise SystemExit('CONFIG ERROR: PRODUCT_DISCOVERY_PROVIDER must be serpapi')
           api_key = os.environ.get('SERPAPI_API_KEY', '').strip()
