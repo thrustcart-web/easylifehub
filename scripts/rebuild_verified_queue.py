@@ -99,9 +99,19 @@ def write_repair_article(topic: dict, cfg: dict) -> tuple[dict, str]:
     # Keep the project's published quality floor: 600 words minimum.
     # Aim for the configured 1,100-word target without inventing a higher gate.
     content_cfg["min_words"] = 600
+    # Be explicit about the owner's ban on all review/rating/testimonial content.
+    for item in topic.get("items", []):
+        strict_note = (
+            "STRICT EDITORIAL RULE: Do not mention customer reviews, user opinions, "
+            "buyer feedback, ratings, stars, scores, review counts, popularity, "
+            "or what customers say in any form. Do not paraphrase or summarize them. "
+            "Discuss only product listing facts supplied here and practical checks."
+        )
+        existing = str(item.get("notes") or "").strip()
+        item["notes"] = (existing + " " + strict_note).strip()
     last_error = None
 
-    for target in (max(original_target, 1100), max(original_target, 1250)):
+    for target in (max(original_target, 1100), max(original_target, 1250), max(original_target, 1400)):
         content_cfg["target_words"] = target
         try:
             return write_article(topic, cfg)
