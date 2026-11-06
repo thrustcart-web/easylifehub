@@ -4,6 +4,11 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rebuild_verified_queue.py'
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
@@ -39,7 +44,7 @@ jobs:
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
           LIMIT="${{ inputs.limit }}"
-          if [ -z "$LIMIT" ]; then LIMIT=8; fi
+          if [ -z "$LIMIT" ]; then LIMIT=16; fi
           python3 scripts/rebuild_verified_queue.py --limit "$LIMIT" --verbose
 
       - name: Commit rebuilt queue
