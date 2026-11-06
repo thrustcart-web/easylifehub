@@ -14,16 +14,20 @@
   "words": 660,
   "items": [
     {
-      "name": "Monitor Arm",
-      "asin": "",
-      "search_term": "Monitor Arm",
-      "url": "https://www.amazon.com/s?k=Monitor+Arm&tag=qalok0c-20"
+      "name": "VIVO Monitor Arm",
+      "asin": "B01NH0HTM5",
+      "search_term": "VIVO STAND-V001O Single Monitor Arm",
+      "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "VIVO Single Monitor Stand, Fully Adjustable Arm for 17 to 32 inch Screen, Mechanical Articulating Desk Mount, Gaming and Office Setups, VESA 75x75, 100x100, Max 19.8 lbs, Classic, Black, STAND-V001O"
     },
     {
-      "name": "Monitor Stand",
-      "asin": "",
-      "search_term": "Monitor Stand",
-      "url": "https://www.amazon.com/s?k=Monitor+Stand&tag=qalok0c-20"
+      "name": "OPNICE Monitor Stand Riser",
+      "asin": "B0DB8F7GDN",
+      "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
+      "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=qalok0c-20",
+      "asin_verified": true,
+      "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black"
     }
   ],
   "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
@@ -33,5 +37,5 @@
   "layout_version": 3,
   "draft": false,
   "review_required": true,
-  "product_links_verified": false
+  "product_links_verified": true
 }
