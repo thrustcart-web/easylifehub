@@ -15,7 +15,7 @@ on:
         required: false
         default: 'auto'
       allow_paid_lookup:
-        description: 'Set true only to authorize paid Apify/SerpApi product lookups in this refill'
+        description: 'Authorize SerpApi product lookup for this refill (set automatically by Apps Script when the queue is low)'
         required: false
         type: boolean
         default: false
