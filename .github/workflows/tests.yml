@@ -1,11 +1,11 @@
 name: tests
 
-# Runs the full pipeline test suite on every change. 31 tests, no network,
-# no API keys - so a broken commit can never reach your blog.
+# Runs the full pipeline test suite on relevant code, test and workflow changes.
+# Tests are offline: no network calls, no API keys and no article generation.
 
 on:
   push:
-    paths: ['scripts/**', 'tests/**', 'config.json', 'data/**', 'main.py']
+    paths: ['scripts/**', 'tests/**', 'config.json', 'data/**', 'main.py', '.github/workflows/tests.yml']
   pull_request:
   workflow_dispatch:
 
