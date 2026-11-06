@@ -1,0 +1,66 @@
+name: rebuild-verified-queue-v4
+
+# Manual-only maintenance. Rewrites eligible queued articles using their
+# existing verified Amazon products. Does not call product discovery or Blogger.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum existing articles to rebuild (hard cap: 8)'
+        required: false
+        type: number
+        default: 8
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild eligible V3 articles as V4 from existing verified products
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+        run: |
+          LIMIT="${{ inputs.limit }}"
+          if [ -z "$LIMIT" ]; then LIMIT=8; fi
+          python3 scripts/rebuild_verified_queue.py --limit "$LIMIT" --verbose
+
+      - name: Commit rebuilt queue
+        run: |
+          git config user.name "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add -A -- content/queue
+          if git diff --cached --quiet; then
+            echo "::error::No V4 queue changes were created."
+            exit 1
+          fi
+          git commit -m "content: rebuild verified legacy articles as v4 [skip ci]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Verified V4 queue updates saved to main."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying."
+          done
+          echo "::error::Could not save rebuilt queue after three attempts."
+          exit 1
