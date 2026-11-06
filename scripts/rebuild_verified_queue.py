@@ -106,6 +106,10 @@ def topic_from_meta(meta: dict, resolved_items: list[dict]) -> dict:
 
 def rebuild(limit: int = 8) -> dict:
     cfg = load_config()
+    # For this queue-repair batch, lead with the Gemini Lite model that passed
+    # the live smoke test; retain OpenRouter as the independent fallback.
+    cfg.setdefault("ai", {})["primary"] = "gemini"
+    cfg["ai"]["fallbacks"] = ["openrouter"]
     aff = Affiliate(cfg)
     cache = _load_cache()
     index_path = QUEUE_DIR / "index.json"
