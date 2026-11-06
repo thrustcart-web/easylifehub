@@ -202,6 +202,65 @@ class TestProductResolution(unittest.TestCase):
                 cache={},
             )
 
+    def test_apify_search_omits_delivery_location_and_caps_cost(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return b'[{"title":"Desk Organizer","asin":"B0BYDGF8DT"}]'
+
+        captured = {}
+        original_urlopen = product_resolver.request.urlopen
+
+        def fake_urlopen(req, timeout=0):
+            captured["url"] = req.full_url
+            captured["payload"] = json.loads(req.data.decode("utf-8"))
+            return FakeResponse()
+
+        product_resolver.request.urlopen = fake_urlopen
+        try:
+            rows = product_resolver._search_amazon("desk organizer", "fake-token")
+            self.assertEqual(rows[0]["asin"], "B0BYDGF8DT")
+        finally:
+            product_resolver.request.urlopen = original_urlopen
+
+        self.assertIn("maxTotalChargeUsd=0.05", captured["url"])
+        self.assertNotIn("countryCode", captured["payload"])
+        self.assertNotIn("zipCode", captured["payload"])
+        self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 5)
+        self.assertFalse(captured["payload"]["scrapeProductDetails"])
+
+    def test_apify_account_limit_error_stops_remaining_product_searches(self):
+        original_search = product_resolver._search_amazon
+        calls = []
+
+        def blocked_search(term, token):
+            calls.append(term)
+            raise product_resolver.ProductResolutionError(
+                "Apify Actor HTTP 403: actor-disabled monthly usage limit"
+            )
+
+        product_resolver._search_amazon = blocked_search
+        try:
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "403"):
+                product_resolver.resolve_items(
+                    [
+                        {"display_name": "Desk Organizer", "search_term": "desk organizer"},
+                        {"display_name": "Pen Holder", "search_term": "pen holder"},
+                    ],
+                    api_token="fake-token",
+                    cache={},
+                    allow_unresolved=True,
+                )
+        finally:
+            product_resolver._search_amazon = original_search
+
+        self.assertEqual(calls, ["desk organizer"])
+
 
 class TestAffiliateLinks(unittest.TestCase):
     def setUp(self):
