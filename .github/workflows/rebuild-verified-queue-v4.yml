@@ -4,6 +4,12 @@ name: rebuild-verified-queue-v4
 # existing verified Amazon products. Does not call product discovery or Blogger.
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/queue/index.json'
+      - '.github/workflows/rebuild-verified-queue-v4.yml'
   workflow_dispatch:
     inputs:
       limit:
@@ -17,7 +23,7 @@ permissions:
 
 concurrency:
   group: generate
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   rebuild:
@@ -35,7 +41,6 @@ jobs:
       - name: Rebuild eligible V3 articles as V4 from existing verified products
         env:
           # Use the confirmed free-model providers only for this queue repair.
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
