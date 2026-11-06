@@ -21,14 +21,10 @@ ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 APIFY_ACTOR_ID = "junglee~amazon-crawler"
 APIFY_ENDPOINT = (
-    "https://api.apify.com/v2/actors/"
+    "https://api.apify.com/v2/acts/"
     f"{APIFY_ACTOR_ID}/run-sync-get-dataset-items"
 )
-# The synchronous Apify endpoint waits for at most five minutes. Keeping each
-# run to three Amazon search URLs avoids turning a normal article into a long run.
-MAX_SEARCH_URLS_PER_RUN = 3
 MAX_RESULTS_PER_SEARCH = 5
-MAX_SEARCH_PAGES_PER_START_URL = 1
 
 
 class ProductResolutionError(RuntimeError):
@@ -69,40 +65,12 @@ def _save_cache(cache: dict) -> None:
     CACHE_PATH.write_text(json.dumps(cache, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def _normal_search_term(value: str) -> str:
+def _normal_name(value: str) -> str:
     return " ".join(str(value or "").lower().split())
 
 
 def _amazon_search_url(term: str) -> str:
     return "https://www.amazon.com/s?" + parse.urlencode({"k": term})
-
-
-def _search_key(value: str) -> str:
-    """Normalize an Amazon search URL to its keyword so Apify rows can be grouped."""
-    value = str(value or "").strip()
-    if not value:
-        return ""
-    try:
-        parsed = parse.urlparse(value)
-        query = parse.parse_qs(parsed.query)
-        term = query.get("k") or query.get("keywords")
-        if term:
-            return "q:" + _normal_search_term(term[0])
-    except ValueError:
-        pass
-    return value.rstrip("/").lower()
-
-
-def _row_source_url(row: dict) -> str:
-    """Read the start URL recorded by the Actor output, across its output shapes."""
-    category_data = row.get("categoryPageData")
-    if isinstance(category_data, dict) and category_data.get("categoryUrl"):
-        return str(category_data["categoryUrl"])
-
-    source = row.get("input") or row.get("inputUrl") or row.get("startUrl") or ""
-    if isinstance(source, dict):
-        source = source.get("url") or source.get("href") or ""
-    return str(source)
 
 
 def _extract_asin(row: dict) -> str:
@@ -114,37 +82,24 @@ def _extract_asin(row: dict) -> str:
     return match.group(1).upper() if match else ""
 
 
-def _apify_search_batch(items: list[dict], api_token: str) -> dict[str, list[dict]]:
-    """Run a small batch of Amazon search URLs and group rows by their source query."""
-    unique_urls: dict[str, str] = {}
-    for item in items:
-        term = str(item.get("search_term") or item.get("display_name") or item.get("name") or "").strip()
-        if not term:
-            continue
-        url = _amazon_search_url(term)
-        unique_urls.setdefault(_search_key(url), url)
-
-    if not unique_urls:
-        return {}
-
+def _search_amazon(product_name: str, api_token: str) -> list[dict]:
+    """Run one isolated Amazon US search so returned rows cannot be misattributed."""
     payload = {
-        "categoryOrProductUrls": [{"url": url} for url in unique_urls.values()],
+        "categoryOrProductUrls": [{"url": _amazon_search_url(product_name)}],
         "maxItemsPerStartUrl": MAX_RESULTS_PER_SEARCH,
-        "maxSearchPagesPerStartUrl": MAX_SEARCH_PAGES_PER_START_URL,
+        "maxSearchPagesPerStartUrl": 1,
         "language": "en",
-        # The amazon.com URL determines the marketplace. Let Apify select a
-        # suitable proxy automatically; do not send countryCode and zipCode.
-        "proxyCountry": "AUTO_SELECT_PROXY_COUNTRY",
-        # We need only title + ASIN. Full product pages, prices, ratings and
-        # review counts are unnecessary for direct-link generation.
+        # Country code determines delivery location. Do not send zipCode as well.
+        "countryCode": "US",
+        # Search results already contain titles and ASINs. Do not scrape detail
+        # pages, price, ratings, reviews, or seller/offer information.
         "scrapeProductDetails": False,
         "maxProductVariantsAsSeparateResults": 0,
         "maxOffers": 0,
     }
-    body = json.dumps(payload).encode("utf-8")
     req = request.Request(
         APIFY_ENDPOINT,
-        data=body,
+        data=json.dumps(payload).encode("utf-8"),
         headers={
             "Authorization": f"Bearer {api_token}",
             "Content-Type": "application/json",
@@ -164,33 +119,15 @@ def _apify_search_batch(items: list[dict], api_token: str) -> dict[str, list[dic
         raise ProductResolutionError(f"Apify Actor request failed: {exc}") from exc
 
     if isinstance(data, dict):
-        message = data.get("error", {}).get("message") if isinstance(data.get("error"), dict) else data.get("error")
+        error_data = data.get("error")
+        message = error_data.get("message") if isinstance(error_data, dict) else error_data
         message = message or data.get("message") or data.get("errorMessage")
         raise ProductResolutionError(
             f"Apify Actor returned an unexpected response: {str(message or data)[:400]}"
         )
     if not isinstance(data, list):
         raise ProductResolutionError("Apify Actor response was not a dataset item list")
-
-    grouped: dict[str, list[dict]] = {key: [] for key in unique_urls}
-    for row in data:
-        if not isinstance(row, dict):
-            continue
-        key = _search_key(_row_source_url(row))
-        if key in grouped:
-            grouped[key].append(row)
-
-    # A single-query run can still be safely handled if an Actor output revision
-    # omits its source URL. Never mix rows across multiple product queries.
-    if len(grouped) == 1 and data and not any(grouped.values()):
-        only_key = next(iter(grouped))
-        grouped[only_key] = [row for row in data if isinstance(row, dict)]
-
-    return grouped
-
-
-def _cache_key(name: str) -> str:
-    return " ".join(str(name or "").lower().split())
+    return [row for row in data if isinstance(row, dict)]
 
 
 def _trusted_item(item: dict) -> bool:
@@ -206,22 +143,16 @@ def _trusted_item(item: dict) -> bool:
 
 def _apply_candidate(item: dict, rows: list[dict]) -> dict | None:
     name = str(item.get("display_name") or item.get("name") or "").strip()
-    matches = []
     for row in rows:
         title = str(row.get("title") or "").strip()
         asin = _extract_asin(row)
         if asin and title and title_matches(name, title):
-            matches.append((asin, title))
-    if not matches:
-        return None
-
-    # First qualifying result from this product's own Amazon search is used.
-    asin, verified_title = matches[0]
-    result = dict(item)
-    result["asin"] = asin
-    result["asin_verified"] = True
-    result["verified_product_title"] = verified_title
-    return result
+            result = dict(item)
+            result["asin"] = asin
+            result["asin_verified"] = True
+            result["verified_product_title"] = title
+            return result
+    return None
 
 
 def resolve_items(
@@ -230,14 +161,14 @@ def resolve_items(
     cache: dict | None = None,
     allow_unresolved: bool = False,
 ) -> list[dict]:
-    """Resolve products in batches, refusing to accept a weak or mismatched title."""
+    """Resolve products individually; reuse exact-name cache entries across articles."""
     api_token = (
         api_token if api_token is not None else os.environ.get("APIFY_API_TOKEN", "")
     ).strip()
     cache = cache if cache is not None else _load_cache()
     resolved = [dict(item) for item in items]
-    pending_indexes: list[int] = []
-    errors: list[str] = []
+    errors = []
+    pending: dict[str, list[int]] = {}
 
     for index, item in enumerate(resolved):
         name = str(item.get("display_name") or item.get("name") or "").strip()
@@ -246,7 +177,9 @@ def resolve_items(
             continue
         if _trusted_item(item):
             continue
-        cached = cache.get(_cache_key(name))
+
+        cache_key = _normal_name(name)
+        cached = cache.get(cache_key)
         if (
             isinstance(cached, dict)
             and ASIN_RE.fullmatch(str(cached.get("asin", "")).upper())
@@ -256,23 +189,24 @@ def resolve_items(
             resolved[index]["asin_verified"] = True
             resolved[index]["verified_product_title"] = str(cached["title"])
             continue
-        pending_indexes.append(index)
+        pending.setdefault(_normal_name(str(item.get("search_term") or name)), []).append(index)
 
-    if pending_indexes and not api_token:
+    if pending and not api_token:
         raise ProductResolutionError(
             "APIFY_API_TOKEN is missing; refusing to publish an unverified product URL"
         )
 
-    for start in range(0, len(pending_indexes), MAX_SEARCH_URLS_PER_RUN):
-        batch_indexes = pending_indexes[start : start + MAX_SEARCH_URLS_PER_RUN]
-        batch_items = [resolved[index] for index in batch_indexes]
-        grouped = _apify_search_batch(batch_items, api_token) if batch_items else {}
+    for search_term, indexes in pending.items():
+        try:
+            rows = _search_amazon(search_term, api_token)
+        except ProductResolutionError as exc:
+            errors.append(str(exc))
+            log.warning("Apify search failed | %s | %s", search_term, exc)
+            continue
 
-        for index in batch_indexes:
+        for index in indexes:
             item = resolved[index]
-            term = str(item.get("search_term") or item.get("display_name") or item.get("name") or "").strip()
-            key = _search_key(_amazon_search_url(term))
-            candidate = _apply_candidate(item, grouped.get(key, []))
+            candidate = _apply_candidate(item, rows)
             if candidate is None:
                 message = f"no exact Amazon product-title match for: {item.get('display_name') or item.get('name')}"
                 errors.append(message)
@@ -280,12 +214,11 @@ def resolve_items(
                 continue
 
             resolved[index] = candidate
-            cache[_cache_key(str(item.get("display_name") or item.get("name") or ""))] = {
+            cache[_normal_name(str(item.get("display_name") or item.get("name") or ""))] = {
                 "asin": candidate["asin"],
                 "title": candidate["verified_product_title"],
                 "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
-
         _save_cache(cache)
 
     if errors and not allow_unresolved:
@@ -322,7 +255,7 @@ def product_cards_html(items: list[dict], affiliate) -> str:
 
 
 def backfill_queue() -> dict:
-    """Resolve queued product items and rewrite verified direct links in HTML/meta files."""
+    """Resolve queued products and rewrite verified direct links in HTML/meta files."""
     from affiliate import Affiliate
     from util import QUEUE_DIR, load_config
     from render import rebuild_index
