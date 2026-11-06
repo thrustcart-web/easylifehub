@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 37,
+  "count": 38,
   "posts": [
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -586,6 +586,44 @@
       "review_required": true,
       "migration_status": "layout_v3_needs_fact_check",
       "product_links_verified": false
+    },
+    {
+      "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
+      "title": "Tote Bag or Crossbody Bag? The Honest Comparison",
+      "meta_description": "Compare tote and crossbody bags on strap adjustability, capacity, daily use, style compatibility, and upkeep to decide which fits your lifestyle best.",
+      "template": "comparison",
+      "niche": "fashion & accessories",
+      "keyword": "Tote Bag vs Crossbody Bag",
+      "labels": [
+        "Reviews",
+        "Fashion & Accessories"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 736,
+      "items": [
+        {
+          "name": "Tote Bag",
+          "asin": "B0FKH85DPY",
+          "asin_verified": true,
+          "verified_product_title": "Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
+          "search_term": "Tote Bag",
+          "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=qalok0c-20"
+        },
+        {
+          "name": "Crossbody Bag",
+          "asin": "B0C3LRC59F",
+          "asin_verified": true,
+          "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
+          "search_term": "Crossbody Bag",
+          "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=qalok0c-20"
+        }
+      ],
+      "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
+      "layout_version": 3,
+      "draft": false,
+      "product_links_verified": true,
+      "review_required": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",

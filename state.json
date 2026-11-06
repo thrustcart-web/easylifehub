@@ -332,6 +332,15 @@
       "ts": "2026-11-06T04:08:44Z",
       "source": "ai:groq",
       "words": 749
+    },
+    {
+      "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
+      "title": "Tote Bag or Crossbody Bag? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "Tote Bag vs Crossbody Bag",
+      "ts": "2026-11-06T04:26:05Z",
+      "source": "ai:groq",
+      "words": 736
     }
   ],
   "published": [],
@@ -372,7 +381,8 @@
     "bestof-sleep-sunrise-e91fbb0b229d",
     "review-decorative-bowl-1370bfcfc215",
     "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
-    "review-coffee-canister-1a804dc1169a"
+    "review-coffee-canister-1a804dc1169a",
+    "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -536,7 +546,10 @@
     "Duster with Extension": "2026-11-06",
     "coffee canister": "2026-11-06",
     "Coffee Canister": "2026-11-06",
-    "coffee canister for humid climates": "2026-11-06"
+    "coffee canister for humid climates": "2026-11-06",
+    "tote bag|crossbody bag": "2026-11-06",
+    "Tote Bag": "2026-11-06",
+    "Crossbody Bag": "2026-11-06"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -610,7 +623,10 @@
     "{F} Shortlist: {N} Options, Trade-Offs Included",
     "Choosing Between {A} and {B}: A Practical Comparison",
     "Does {FEAT} Matter in {A} {P}? An Honest Look",
-    "Best {F}: {N} Picks Compared Honestly"
+    "Best {F}: {N} Picks Compared Honestly",
+    "Before You Buy {A} {P} for {AUD}: Read This",
+    "The {N} {F} Worth Your Money (and {N2} to Avoid)",
+    "{A} or {B}? The Honest Comparison"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -619,7 +635,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 37,
+    "total_generated": 38,
     "total_published": 0
   }
 }
