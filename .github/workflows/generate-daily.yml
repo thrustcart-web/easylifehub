@@ -51,6 +51,9 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+          AMAZON_CREATORS_TOKEN_URL: ${{ vars.AMAZON_CREATORS_TOKEN_URL }}
           PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
           APIFY_SPEND_ENABLED: ${{ (inputs.allow_paid_lookup || github.event_name == 'schedule') && vars.PRODUCT_DISCOVERY_PROVIDER == 'apify' && vars.APIFY_SPEND_ENABLED == 'true' }}
           SERPAPI_SPEND_ENABLED: ${{ (inputs.allow_paid_lookup || github.event_name == 'schedule') && vars.PRODUCT_DISCOVERY_PROVIDER == 'serpapi' && vars.SERPAPI_SPEND_ENABLED == 'true' }}
