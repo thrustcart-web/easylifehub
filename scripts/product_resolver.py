@@ -20,6 +20,10 @@ CACHE_PATH = ROOT / ".cache" / "amazon_asins.json"
 ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 APIFY_ACTOR_ID = "junglee~amazon-crawler"
+CREATORS_TOKEN_URL = "https://api.amazon.com/auth/o2/token"
+CREATORS_SEARCH_URL = "https://creatorsapi.amazon/catalog/v1/searchItems"
+_CREATORS_ACCESS_TOKEN = ""
+_CREATORS_TOKEN_EXPIRES_AT = 0.0
 MAX_RESULTS_PER_SEARCH = 3
 # API-level billing safeguards for every individual product search.
 # The user's observed Result rate was $0.005/event. This caps a run at three
@@ -97,9 +101,9 @@ def _extract_asin(row: dict) -> str:
 def _selected_provider() -> str:
     """Select one product discovery provider; SerpApi is primary, Apify is optional."""
     provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "serpapi").strip().lower() or "serpapi"
-    if provider not in {"apify", "serpapi"}:
+    if provider not in {"apify", "serpapi", "creators_api"}:
         raise ProductResolutionError(
-            "PRODUCT_DISCOVERY_PROVIDER must be either 'apify' or 'serpapi'"
+            "PRODUCT_DISCOVERY_PROVIDER must be 'creators_api', 'serpapi', or 'apify'"
         )
     return provider
 
@@ -107,6 +111,10 @@ def _selected_provider() -> str:
 def _provider_api_key(provider: str) -> str:
     if provider == "serpapi":
         return os.environ.get("SERPAPI_API_KEY", "").strip()
+    if provider == "creators_api":
+        client_id = os.environ.get("AMAZON_CREATORS_CLIENT_ID", "").strip()
+        client_secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET", "").strip()
+        return "configured" if client_id and client_secret else ""
     return (
         os.environ.get("TEST_API")
         or os.environ.get("APIFY_API_TOKEN", "")
@@ -114,10 +122,17 @@ def _provider_api_key(provider: str) -> str:
 
 
 def _provider_secret_name(provider: str) -> str:
-    return "SERPAPI_API_KEY" if provider == "serpapi" else "TEST_API"
+    if provider == "serpapi":
+        return "SERPAPI_API_KEY"
+    if provider == "creators_api":
+        return "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET"
+    return "TEST_API"
 
 
 def _provider_spending_enabled(provider: str) -> bool:
+    # Creators API is quota-limited, not billed per search like SerpApi/Apify.
+    if provider == "creators_api":
+        return True
     variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
     return os.environ.get(variable, "false").strip().lower() in {"1", "true", "yes"}
 
@@ -221,11 +236,122 @@ def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
     return rows
 
 
+
+def _creators_partner_settings() -> tuple[str, str]:
+    """Read the marketplace and Associate tag without exposing either in logs."""
+    tag = os.environ.get("AFFILIATE_TAG", "").strip() or os.environ.get("AMAZON_PARTNER_TAG", "").strip()
+    marketplace = os.environ.get("AMAZON_MARKETPLACE", "").strip()
+    if not tag or not marketplace:
+        try:
+            cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+            affiliate = cfg.get("affiliate") or {}
+            tag = tag or str(affiliate.get("tag") or "").strip()
+            market_code = str(affiliate.get("marketplace") or "com").strip().lower()
+            market_map = {
+                "com": "www.amazon.com", "co.uk": "www.amazon.co.uk", "de": "www.amazon.de",
+                "fr": "www.amazon.fr", "ca": "www.amazon.ca", "eg": "www.amazon.eg",
+                "sa": "www.amazon.sa", "ae": "www.amazon.ae", "in": "www.amazon.in",
+            }
+            marketplace = marketplace or market_map.get(market_code, "www.amazon.com")
+        except (OSError, json.JSONDecodeError):
+            marketplace = marketplace or "www.amazon.com"
+    if not tag or tag.startswith("YOURTAG"):
+        raise ProductResolutionError("Creators API needs a valid Associate tag in config.json or AFFILIATE_TAG")
+    return tag, marketplace
+
+
+def _creators_access_token() -> str:
+    """Obtain and cache the Creators API OAuth token for this workflow process."""
+    global _CREATORS_ACCESS_TOKEN, _CREATORS_TOKEN_EXPIRES_AT
+    if _CREATORS_ACCESS_TOKEN and time.time() < (_CREATORS_TOKEN_EXPIRES_AT - 60):
+        return _CREATORS_ACCESS_TOKEN
+    client_id = os.environ.get("AMAZON_CREATORS_CLIENT_ID", "").strip()
+    client_secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET", "").strip()
+    if not client_id or not client_secret:
+        raise ProductResolutionError("Set AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET")
+    token_url = os.environ.get("AMAZON_CREATORS_TOKEN_URL", CREATORS_TOKEN_URL).strip()
+    payload = {
+        "grant_type": "client_credentials", "client_id": client_id,
+        "client_secret": client_secret, "scope": "creatorsapi::default",
+    }
+    req = request.Request(
+        token_url, data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json", "Accept": "application/json"}, method="POST",
+    )
+    try:
+        with request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:500]
+        raise ProductResolutionError(f"Creators API OAuth HTTP {exc.code}: {detail}") from exc
+    except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise ProductResolutionError(f"Creators API OAuth request failed: {exc}") from exc
+    token = str(data.get("access_token") or "").strip() if isinstance(data, dict) else ""
+    if not token:
+        message = (data.get("error_description") or data.get("error") or data) if isinstance(data, dict) else data
+        raise ProductResolutionError(f"Creators API OAuth returned no access token: {str(message)[:400]}")
+    try:
+        expires_in = max(120, int(data.get("expires_in", 3600)))
+    except (TypeError, ValueError):
+        expires_in = 3600
+    _CREATORS_ACCESS_TOKEN = token
+    _CREATORS_TOKEN_EXPIRES_AT = time.time() + expires_in
+    return token
+
+
+def _creators_rows_from_response(data: dict) -> list[dict]:
+    """Keep only product identity fields from the official API response."""
+    items = (data.get("searchResult") or {}).get("items") or []
+    rows = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        asin = str(item.get("asin") or "").strip().upper()
+        title_node = ((item.get("itemInfo") or {}).get("title") or {})
+        title = str(title_node.get("displayValue") or "").strip()
+        if title and ASIN_RE.fullmatch(asin):
+            rows.append({"title": title, "asin": asin, "url": str(item.get("detailPageURL") or "")})
+    return rows
+
+
+def _search_amazon_creators_api(product_name: str) -> list[dict]:
+    """Search Amazon's official Creators API (one request per unique query)."""
+    token = _creators_access_token()
+    partner_tag, marketplace = _creators_partner_settings()
+    payload = {
+        "keywords": product_name, "partnerTag": partner_tag, "marketplace": marketplace,
+        "itemCount": 10, "resources": ["itemInfo.title"],
+    }
+    req = request.Request(
+        CREATORS_SEARCH_URL, data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}", "Content-Type": "application/json",
+            "Accept": "application/json", "x-marketplace": marketplace,
+            "User-Agent": "EasyLifeHubProductResolver/4.0",
+        }, method="POST",
+    )
+    try:
+        with request.urlopen(req, timeout=60) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:600]
+        raise ProductResolutionError(f"Creators API HTTP {exc.code}: {detail}") from exc
+    except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise ProductResolutionError(f"Creators API request failed: {exc}") from exc
+    if not isinstance(data, dict):
+        raise ProductResolutionError("Creators API response was not a JSON object")
+    rows = _creators_rows_from_response(data)
+    if not rows and data.get("errors"):
+        raise ProductResolutionError(f"Creators API returned no valid items: {str(data.get('errors'))[:400]}")
+    return rows
+
 def _search_amazon(product_name: str, api_token: str) -> list[dict]:
     """Dispatch to exactly one provider selected by PRODUCT_DISCOVERY_PROVIDER."""
     provider = _selected_provider()
     if provider == "serpapi":
         return _search_amazon_serpapi(product_name, api_token)
+    if provider == "creators_api":
+        return _search_amazon_creators_api(product_name)
     return _search_amazon_apify(product_name, api_token)
 
 def _trusted_item(item: dict) -> bool:
@@ -345,8 +471,8 @@ def resolve_items(
             # either paid provider. Repeating the same broken account request
             # for every remaining product can burn credits without resolving anything.
             if re.search(
-                r"(?:Apify Actor|SerpApi) HTTP (?:400|401|402|403|429)|"
-                r"(?:Apify Actor|SerpApi) error:",
+                r"(?:Apify Actor|SerpApi|Creators API) HTTP (?:400|401|402|403|429)|"
+                r"(?:Apify Actor|SerpApi|Creators API) error:",
                 str(exc),
                 re.I,
             ):
