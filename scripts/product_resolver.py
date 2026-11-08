@@ -269,7 +269,7 @@ def _creators_access_token() -> str:
     client_secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET", "").strip()
     if not client_id or not client_secret:
         raise ProductResolutionError("Set AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET")
-    token_url = os.environ.get("AMAZON_CREATORS_TOKEN_URL", CREATORS_TOKEN_URL).strip()
+    token_url = os.environ.get("AMAZON_CREATORS_TOKEN_URL", "").strip() or CREATORS_TOKEN_URL
     payload = {
         "grant_type": "client_credentials", "client_id": client_id,
         "client_secret": client_secret, "scope": "creatorsapi::default",
