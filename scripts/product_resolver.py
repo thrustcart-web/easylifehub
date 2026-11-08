@@ -99,7 +99,7 @@ def _extract_asin(row: dict) -> str:
 
 
 def _selected_provider() -> str:
-    """Select one product discovery provider; SerpApi is primary, Apify is optional."""
+    """Select one product discovery provider; Creators API is supported alongside legacy providers."""
     provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "serpapi").strip().lower() or "serpapi"
     if provider not in {"apify", "serpapi", "creators_api"}:
         raise ProductResolutionError(
@@ -478,7 +478,7 @@ def resolve_items(
             ):
                 raise
             errors.append(str(exc))
-            log.warning("Apify search failed | %s | %s", search_term, exc)
+            log.warning("Amazon product search failed | %s | %s", search_term, exc)
             continue
 
         for index in indexes:
