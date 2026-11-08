@@ -150,6 +150,64 @@ class TestTopicPlanner(unittest.TestCase):
 
 
 class TestProductResolution(unittest.TestCase):
+    def test_creators_api_response_keeps_only_asin_and_title_identity(self):
+        rows = product_resolver._creators_rows_from_response({
+            "searchResult": {"items": [
+                {
+                    "asin": "B0BYMRJD7R",
+                    "detailPageURL": "https://www.amazon.com/dp/B0BYMRJD7R?tag=testtag-20",
+                    "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
+                    "offersV2": {"listings": [{"price": {"money": {"amount": 99.99}}}]},
+                },
+                {"asin": "invalid", "itemInfo": {"title": {"displayValue": "Invalid ASIN Product"}}},
+            ]}
+        })
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["asin"], "B0BYMRJD7R")
+        self.assertEqual(rows[0]["title"], "Marbrasse Pen Organizer")
+        self.assertNotIn("price", rows[0])
+
+    def test_creators_api_provider_needs_credentials_but_no_paid_spend_toggle(self):
+        original_search = product_resolver._search_amazon
+        original_save = product_resolver._save_cache
+        calls = []
+        names = [
+            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
+            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
+        ]
+        old = {name: os.environ.get(name) for name in names}
+
+        def fake_search(term, token):
+            calls.append(term)
+            return [{"title": "Marbrasse Pen Organizer with 2 Drawer", "asin": "B0BYMRJD7R"}]
+
+        product_resolver._search_amazon = fake_search
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
+        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
+        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
+        os.environ.pop("APIFY_SPEND_ENABLED", None)
+        try:
+            result = product_resolver.resolve_items(
+                [{
+                    "display_name": "Marbrasse Pen Organizer",
+                    "name": "Marbrasse Pen Organizer",
+                    "search_term": "desk organizer",
+                }],
+                cache={},
+            )
+            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
+            self.assertEqual(calls, ["desk organizer"])
+        finally:
+            product_resolver._search_amazon = original_search
+            product_resolver._save_cache = original_save
+            for name, value in old.items():
+                if value is None:
+                    os.environ.pop(name, None)
+                else:
+                    os.environ[name] = value
+
     def test_asin_can_be_extracted_from_direct_amazon_url(self):
         asin = product_resolver._extract_asin({
             "url": "https://www.amazon.com/dp/B0BYMRJD7R?language=en"
