@@ -1,0 +1,30 @@
+name: test-amazon-creators-api
+
+on:
+  workflow_dispatch:
+    inputs:
+      keywords:
+        description: "Search query for a single Creators API smoke test"
+        required: false
+        default: "wireless headphones"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Make one Amazon Creators API SearchItems request
+        env:
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+          AMAZON_CREATORS_TOKEN_URL: ${{ vars.AMAZON_CREATORS_TOKEN_URL }}
+          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
+        run: |
+          python3 scripts/test_creators_api.py "${{ github.event.inputs.keywords || 'wireless headphones' }}"
