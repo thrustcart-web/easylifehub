@@ -137,12 +137,13 @@
     "search_pages": 1,
     "scrape_product_details": false,
     "available_providers": [
+      "creators_api",
       "serpapi",
       "apify"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
     "serpapi_api_env": "SERPAPI_API_KEY",
     "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
-    "fallback_note": "SerpApi is primary. Apify remains an optional separately selected provider; it is not automatically called after a SerpApi failure."
+    "fallback_note": "Amazon Creators API is supported and should become primary after its one-call smoke test passes. SerpApi and Apify remain available as separately selected alternatives."
   }
 }
