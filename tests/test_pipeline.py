@@ -1055,6 +1055,12 @@ class TestAIPath(unittest.TestCase):
 
 class TestEndToEnd(unittest.TestCase):
     def test_offline_pipeline_produces_publishable_html(self):
+        # Tests share one temporary queue directory. Earlier end-to-end tests
+        # may have written an article there, so isolate this fixture before
+        # asserting that the manifest count matches the six articles below.
+        for path in util.QUEUE_DIR.iterdir():
+            if path.is_file():
+                path.unlink()
         cfg = fresh_cfg()
         # Keep this fixture focused on rendering/link correctness; the template
         # writer may vary slightly in length across planned topic families.
