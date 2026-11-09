@@ -7,19 +7,22 @@
     "name": "Easy Life Hub"
   },
   "schedule": {
-    "daily_posts": 3,
+    "daily_posts": 6,
     "max_queue_size": 60,
     "publish_hours_local": [
       9,
+      11,
       13,
-      18
+      15,
+      17,
+      19
     ],
     "jitter_minutes": 25,
     "timezone": "Africa/Cairo"
   },
   "ramp": {
-    "_comment": "خطة النمو التدريجي: النظام بيزود عدد المقالات لوحده حسب عمر المدونة. day الرقم من أول يوم اشتغال.",
-    "enabled": true,
+    "_comment": "Immediate six-article generation target; staged ramp is disabled because the requested daily target is 6.",
+    "enabled": false,
     "stages": [
       {
         "day": 0,
