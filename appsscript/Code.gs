@@ -31,14 +31,14 @@ var DEFAULTS = {
   QUEUE_DIR:     'content/queue',
   BLOG_ID:       'PUT_YOUR_BLOGGER_BLOG_ID_HERE',
   SA_JSON:       '',                 // full contents of the service-account .json
-  POST_HOURS:    '9,13,18',          // local hours, comma separated
-  MAX_PER_DAY:   '3',
+  POST_HOURS:    '9,11,13,15,17,19',          // local hours, comma separated
+  MAX_PER_DAY:   '6',
   JITTER_MAX:    '240',              // random 0-4 min delay; Utilities.sleep is capped at 5 min
   NOTIFY_EMAIL:  '',                 // blank = your Google account email
   TZ:            'Africa/Cairo',
   MIN_GAP_HOURS: '2',
   GITHUB_REPO: 'thrustcart-web/easylifehub',
-  REFILL_MIN_PENDING: '6',
+  REFILL_MIN_PENDING: '12',
   REFILL_COUNT: '6',
   REFILL_COOLDOWN_HOURS: '12',
   AUTOMATION_ENABLED: 'false',   // keep scheduled publishing/refill off until explicitly approved
