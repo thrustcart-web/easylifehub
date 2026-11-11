@@ -1,0 +1,46 @@
+name: update-affiliate-tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_tag:
+        description: "New Amazon Associates tracking ID"
+        required: true
+        type: string
+        default: "ezylifehub-20"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Update config and every queued affiliate URL
+        env:
+          NEW_AFFILIATE_TAG: ${{ inputs.new_tag }}
+        run: |
+          python3 scripts/update_affiliate_tag.py "$NEW_AFFILIATE_TAG"
+
+      - name: Commit
+        run: |
+          git config user.name "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add config.json content/queue
+          if git diff --cached --quiet; then
+            echo "No affiliate tag changes to commit."
+          else
+            git commit -m "affiliate: switch tracking ID [skip ci]"
+            git push origin HEAD:main
+          fi
