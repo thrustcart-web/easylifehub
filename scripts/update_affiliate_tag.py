@@ -36,7 +36,7 @@ def main() -> int:
 
     pattern = re.compile(
         r"(?P<prefix>[?&]tag=)" + re.escape(old_tag) +
-        r"(?P<suffix>(?:&|&amp;|[\\\"'\\s<>]|$))"
+        r"""(?P<suffix>(?:&|&amp;|["'\s<>]|$))"""
     )
     changed_files = 0
     replacements = 0
