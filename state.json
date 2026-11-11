@@ -626,7 +626,13 @@
     "Best {F}: {N} Picks Compared Honestly",
     "Before You Buy {A} {P} for {AUD}: Read This",
     "The {N} {F} Worth Your Money (and {N2} to Avoid)",
-    "{A} or {B}? The Honest Comparison"
+    "{A} or {B}? The Honest Comparison",
+    "{P} Buying Guide: The Details Listings Leave Out",
+    "Best {F}{AUD}: {N} Picks, Ranked by What Matters",
+    "{P} Explained: What You Are Really Paying For",
+    "Best {F}{AUD}: {N} Options We Would Actually Buy",
+    "{P} for {AUD}: Judging {FEAT} Honestly",
+    "{A} vs {B}: Deciding Between Two Good Options"
   ],
   "last_publish_ts": null,
   "failures": {
