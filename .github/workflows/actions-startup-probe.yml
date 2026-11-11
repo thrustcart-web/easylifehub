@@ -1,0 +1,18 @@
+name: actions-startup-probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Confirm GitHub-hosted runner starts
+        run: |
+          echo "ACTIONS_RUNNER_STARTED"
+          echo "Runner OS: $RUNNER_OS"
+          date -u
