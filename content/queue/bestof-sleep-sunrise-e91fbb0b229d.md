@@ -43,8 +43,8 @@ By focusing on factual attributes like fabric type and physical weight, you can 
 
 ### Product Links
 
-- Cotton Sheets: https://www.amazon.com/dp/B0CZXFM3CH?tag=qalok0c-20
-- Weighted Blanket: https://www.amazon.com/dp/B092LZLLGF?tag=qalok0c-20
-- Duvet: https://www.amazon.com/dp/B0HFN3GNBJ?tag=qalok0c-20
+- Cotton Sheets: https://www.amazon.com/dp/B0CZXFM3CH?tag=ezylifehub-20
+- Weighted Blanket: https://www.amazon.com/dp/B092LZLLGF?tag=ezylifehub-20
+- Duvet: https://www.amazon.com/dp/B0HFN3GNBJ?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

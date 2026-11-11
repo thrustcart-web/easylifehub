@@ -49,6 +49,6 @@ Always check the current manufacturer labeling and listing details before finali
 
 ### Product Links
 
-- Mattress Protector: https://www.amazon.com/dp/B07HC2WHS1?tag=qalok0c-20
+- Mattress Protector: https://www.amazon.com/dp/B07HC2WHS1?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

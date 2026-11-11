@@ -49,10 +49,10 @@ Take time to measure your workout area and verify protocol compatibility for ele
 
 ### Product Links
 
-- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20
-- Gym Bag: https://www.amazon.com/dp/B0C5SPSRNG?tag=qalok0c-20
-- Smart Scale: https://www.amazon.com/dp/B0BFZVBGYH?tag=qalok0c-20
-- Heart Rate Monitor: https://www.amazon.com/dp/B09SKZBZF8?tag=qalok0c-20
-- Adjustable Weight Bench: https://www.amazon.com/dp/B07DNYSJ8W?tag=qalok0c-20
+- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20
+- Gym Bag: https://www.amazon.com/dp/B0C5SPSRNG?tag=ezylifehub-20
+- Smart Scale: https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20
+- Heart Rate Monitor: https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20
+- Adjustable Weight Bench: https://www.amazon.com/dp/B07DNYSJ8W?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

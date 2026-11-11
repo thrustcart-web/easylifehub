@@ -43,7 +43,7 @@ Reviewing the specific dimensions, material types, and care instructions ensures
 
 ### Product Links
 
-- Rugshop Traditional Medallion Runner Rug: https://www.amazon.com/dp/B0HGPRSSGT?tag=qalok0c-20
-- Trademoon 5x7 Jute and Cotton Area Rug: https://www.amazon.com/dp/B0FMRZRWWX?tag=qalok0c-20
+- Rugshop Traditional Medallion Runner Rug: https://www.amazon.com/dp/B0HGPRSSGT?tag=ezylifehub-20
+- Trademoon 5x7 Jute and Cotton Area Rug: https://www.amazon.com/dp/B0FMRZRWWX?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

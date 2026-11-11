@@ -49,6 +49,6 @@ Careful inspection and proper maintenance remain essential for keeping your fitn
 
 ### Product Links
 
-- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01AVDVHTI?tag=qalok0c-20
+- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

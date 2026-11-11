@@ -43,6 +43,6 @@ Take time to review your intended application and countertop space before making
 
 ### Product Links
 
-- Mortar and Pestle: https://www.amazon.com/dp/B0D9CP3BPS?tag=qalok0c-20
+- Mortar and Pestle: https://www.amazon.com/dp/B0D9CP3BPS?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

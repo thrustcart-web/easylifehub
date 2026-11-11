@@ -49,7 +49,7 @@ Always check your monitor dimensions, weight limits, and desk edge constraints t
 
 ### Product Links
 
-- VIVO Monitor Arm: https://www.amazon.com/dp/B01NH0HTM5?tag=qalok0c-20
-- OPNICE Monitor Stand Riser: https://www.amazon.com/dp/B0DB8F7GDN?tag=qalok0c-20
+- VIVO Monitor Arm: https://www.amazon.com/dp/B01NH0HTM5?tag=ezylifehub-20
+- OPNICE Monitor Stand Riser: https://www.amazon.com/dp/B0DB8F7GDN?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

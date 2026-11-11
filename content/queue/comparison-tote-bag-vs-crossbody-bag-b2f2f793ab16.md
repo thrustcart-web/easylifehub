@@ -49,7 +49,7 @@ By confirming strap range, interior organization, material care, and aesthetic c
 
 ### Product Links
 
-- Tote Bag: https://www.amazon.com/dp/B0FKH85DPY?tag=qalok0c-20
-- Crossbody Bag: https://www.amazon.com/dp/B0C3LRC59F?tag=qalok0c-20
+- Tote Bag: https://www.amazon.com/dp/B0FKH85DPY?tag=ezylifehub-20
+- Crossbody Bag: https://www.amazon.com/dp/B0C3LRC59F?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

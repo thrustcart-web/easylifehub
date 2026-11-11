@@ -43,9 +43,9 @@ Take time to verify compatibility with your existing computer, phone, or chargin
 
 ### Product Links
 
-- Streaming Camera: https://www.amazon.com/dp/B0CZ6XY78Y?tag=qalok0c-20
-- Wireless Earbuds: https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20
-- Anker Charger: https://www.amazon.com/dp/B08T5QN2TR?tag=qalok0c-20
-- E-reader: https://www.amazon.com/dp/B0GSZX5MWR?tag=qalok0c-20
+- Streaming Camera: https://www.amazon.com/dp/B0CZ6XY78Y?tag=ezylifehub-20
+- Wireless Earbuds: https://www.amazon.com/dp/B09FT58QQP?tag=ezylifehub-20
+- Anker Charger: https://www.amazon.com/dp/B08T5QN2TR?tag=ezylifehub-20
+- E-reader: https://www.amazon.com/dp/B0GSZX5MWR?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

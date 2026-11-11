@@ -49,6 +49,6 @@ Selecting the right piece of gear comes down to matching its physical attributes
 
 ### Product Links
 
-- G4Free 20L Foldable Daypack: https://www.amazon.com/dp/B07QV16HKB?tag=qalok0c-20
+- G4Free 20L Foldable Daypack: https://www.amazon.com/dp/B07QV16HKB?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

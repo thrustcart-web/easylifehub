@@ -43,6 +43,6 @@ Taking the time to match your hardware interfaces against the available inputs e
 
 ### Product Links
 
-- MNN Portable Monitor: https://www.amazon.com/dp/B0B9NNWXVP?tag=qalok0c-20
+- MNN Portable Monitor: https://www.amazon.com/dp/B0B9NNWXVP?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

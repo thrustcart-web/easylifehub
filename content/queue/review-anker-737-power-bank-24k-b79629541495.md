@@ -49,6 +49,6 @@ By focusing on verified metrics rather than assumptions, you can choose a portab
 
 ### Product Links
 
-- Anker 737 Power Bank 24K: https://www.amazon.com/dp/B09VPHVT2Z?tag=qalok0c-20
+- Anker 737 Power Bank 24K: https://www.amazon.com/dp/B09VPHVT2Z?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

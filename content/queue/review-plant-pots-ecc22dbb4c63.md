@@ -49,6 +49,6 @@ By prioritizing functional requirements over appearance alone, you create a stab
 
 ### Product Links
 
-- Plant Pots: https://www.amazon.com/dp/B0BHSX8PYZ?tag=qalok0c-20
+- Plant Pots: https://www.amazon.com/dp/B0BHSX8PYZ?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

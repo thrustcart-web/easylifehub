@@ -49,6 +49,6 @@ By understanding the assembly process, soil volume requirements, and simple main
 
 ### Product Links
 
-- Land Guard Raised Garden Bed: https://www.amazon.com/dp/B09C8HR4Z9?tag=qalok0c-20
+- Land Guard Raised Garden Bed: https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

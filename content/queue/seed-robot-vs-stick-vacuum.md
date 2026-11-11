@@ -43,7 +43,7 @@ Assess your floor types, furniture layouts, and willingness to perform routine m
 
 ### Product Links
 
-- Roborock Q5 Pro Robot Vacuum: https://www.amazon.com/dp/B0C7VLHMQR?tag=qalok0c-20
-- Shark PowerDetect Stick Vacuum: https://www.amazon.com/dp/B0DBVW1RFW?tag=qalok0c-20
+- Roborock Q5 Pro Robot Vacuum: https://www.amazon.com/dp/B0C7VLHMQR?tag=ezylifehub-20
+- Shark PowerDetect Stick Vacuum: https://www.amazon.com/dp/B0DBVW1RFW?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

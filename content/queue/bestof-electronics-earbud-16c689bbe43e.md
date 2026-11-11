@@ -43,9 +43,9 @@ Review your setup environment carefully to confirm that power capacities, cable 
 
 ### Product Links
 
-- Portable Power Station: https://www.amazon.com/dp/B082TMBYR6?tag=qalok0c-20
-- Wireless Earbuds: https://www.amazon.com/dp/B09FT58QQP?tag=qalok0c-20
-- Surge Protector: https://www.amazon.com/dp/B0GYZ9K5Q1?tag=qalok0c-20
-- Braided Lightning Cable: https://www.amazon.com/dp/B084N1BM9L?tag=qalok0c-20
+- Portable Power Station: https://www.amazon.com/dp/B082TMBYR6?tag=ezylifehub-20
+- Wireless Earbuds: https://www.amazon.com/dp/B09FT58QQP?tag=ezylifehub-20
+- Surge Protector: https://www.amazon.com/dp/B0GYZ9K5Q1?tag=ezylifehub-20
+- Braided Lightning Cable: https://www.amazon.com/dp/B084N1BM9L?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

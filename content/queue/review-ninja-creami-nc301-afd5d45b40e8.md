@@ -55,6 +55,6 @@ Confirming your available cabinet clearance and reviewing freezer storage room e
 
 ### Product Links
 
-- Ninja Creami NC301: https://www.amazon.com/dp/B08QXB9BH5?tag=qalok0c-20
+- Ninja Creami NC301: https://www.amazon.com/dp/B08QXB9BH5?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

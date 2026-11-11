@@ -49,6 +49,6 @@ Take time to verify the shelving orientation and hardware layout before beginnin
 
 ### Product Links
 
-- Pamray L Shaped Desk: https://www.amazon.com/dp/B0FVXMDM4L?tag=qalok0c-20
+- Pamray L Shaped Desk: https://www.amazon.com/dp/B0FVXMDM4L?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

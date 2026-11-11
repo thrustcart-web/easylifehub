@@ -49,6 +49,6 @@ By verifying these core details independently, you avoid sizing mismatches and p
 
 ### Product Links
 
-- Decorative Bowl: https://www.amazon.com/dp/B092XFK5MG?tag=qalok0c-20
+- Decorative Bowl: https://www.amazon.com/dp/B092XFK5MG?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

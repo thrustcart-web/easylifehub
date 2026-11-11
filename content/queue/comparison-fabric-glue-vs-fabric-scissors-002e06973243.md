@@ -43,7 +43,7 @@ Take time to review your project instructions and material types carefully befor
 
 ### Product Links
 
-- Aleene's Fabric Glue: https://www.amazon.com/dp/B00178QSE6?tag=qalok0c-20
-- Fabric Scissors: https://www.amazon.com/dp/B082LY2W2G?tag=qalok0c-20
+- Aleene's Fabric Glue: https://www.amazon.com/dp/B00178QSE6?tag=ezylifehub-20
+- Fabric Scissors: https://www.amazon.com/dp/B082LY2W2G?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.
