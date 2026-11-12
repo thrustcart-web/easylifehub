@@ -1172,13 +1172,14 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["content"]["min_words"], 501)
         self.assertEqual(cfg["ai"]["primary"], "groq")
         self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
-        self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
+        self.assertEqual(cfg["product_discovery"]["provider"], "creators_api")
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serpapi"])
 
-    def test_product_discovery_defaults_to_serpapi(self):
+    def test_product_discovery_defaults_to_creators_api(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            self.assertEqual(product_resolver._selected_provider(), "serpapi")
+            self.assertEqual(product_resolver._selected_provider(), "creators_api")
         finally:
             if old is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
