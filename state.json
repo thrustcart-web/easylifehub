@@ -632,7 +632,13 @@
     "{P} Explained: What You Are Really Paying For",
     "Best {F}{AUD}: {N} Options We Would Actually Buy",
     "{P} for {AUD}: Judging {FEAT} Honestly",
-    "{A} vs {B}: Deciding Between Two Good Options"
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "{P}: Judging {FEAT} Against Real Use",
+    "Which {F}{AUD} Is Right for You? {N} Compared",
+    "{P} Review: What I Would Check Before Buying",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "Choosing {A} {P}: Six Things That Actually Matter"
   ],
   "last_publish_ts": null,
   "failures": {
