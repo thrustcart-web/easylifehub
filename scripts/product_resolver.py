@@ -130,9 +130,9 @@ def _is_global_provider_error(exc: Exception) -> bool:
     """Detect account/quota/auth errors where repeating the same provider is wasteful."""
     message = str(exc)
     return bool(re.search(
-        r"\\bHTTP\\s+(?:400|401|402|403|429)\\b|"
+        r"\bHTTP\s+(?:400|401|402|403|429)\b|"
         r"(?:Apify Actor|SerpApi|Creators API) error:|"
-        r"\\b(?:quota exhausted|rate.?limit|monthly usage limit|unauthorized|forbidden)\\b",
+        r"\b(?:quota exhausted|rate.?limit|monthly usage limit|unauthorized|forbidden)\b",
         message,
         re.I,
     ))
