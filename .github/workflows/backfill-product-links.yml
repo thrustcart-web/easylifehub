@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       allow_paid_lookup:
-        description: 'Set true only to authorize the selected paid product-search provider for this backfill'
+        description: 'Set true to permit the guarded SerpApi fallback for this backfill'
         required: false
         type: boolean
         default: false
@@ -34,11 +34,13 @@ jobs:
 
       - name: Resolve product pages and rewrite queue links
         env:
-          TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-          PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          APIFY_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.APIFY_SPEND_ENABLED == 'true' }}
-          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' }}
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+          AMAZON_CREATORS_TOKEN_URL: ${{ vars.AMAZON_CREATORS_TOKEN_URL }}
+          PRODUCT_DISCOVERY_PROVIDER: creators_api
+          APIFY_SPEND_ENABLED: 'false'
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' && 'true' || 'false' }}
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: python3 scripts/backfill_product_links.py
 
