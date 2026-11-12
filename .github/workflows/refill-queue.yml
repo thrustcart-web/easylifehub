@@ -1,7 +1,7 @@
 name: refill-queue
 
 # Automatic top-up dispatched by Apps Script whenever approved pending articles fall below the queue threshold.
-# SerpApi is the only automatic discovery provider; Apify is never enabled by this workflow.
+# Amazon Creators API is primary. SerpApi is a guarded fallback; Apify is never enabled.
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
         required: false
         default: 'auto'
       allow_paid_lookup:
-        description: 'Authorize SerpApi product lookup for this refill (set automatically by Apps Script when the queue is low)'
+        description: 'Allow the guarded SerpApi fallback for this refill (set automatically by Apps Script)'
         required: false
         type: boolean
         default: false
@@ -50,9 +50,9 @@ jobs:
           AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
           AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
           AMAZON_CREATORS_TOKEN_URL: ${{ vars.AMAZON_CREATORS_TOKEN_URL }}
-          PRODUCT_DISCOVERY_PROVIDER: serpapi
+          PRODUCT_DISCOVERY_PROVIDER: creators_api
           APIFY_SPEND_ENABLED: 'false'
-          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && 'true' }}
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' && 'true' || 'false' }}
         run: |
           COUNT="${{ github.event.inputs.count }}"
           MODE="${{ github.event.inputs.mode }}"

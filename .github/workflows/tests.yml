@@ -5,7 +5,7 @@ name: tests
 
 on:
   push:
-    paths: ['scripts/**', 'tests/**', 'config.json', 'data/**', 'main.py', '.github/workflows/tests.yml']
+    paths: ['scripts/**', 'tests/**', 'config.json', 'data/**', 'main.py', 'appsscript/**', '.github/workflows/**']
   pull_request:
   workflow_dispatch:
 

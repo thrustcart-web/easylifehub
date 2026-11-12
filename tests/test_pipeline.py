@@ -208,6 +208,139 @@ class TestProductResolution(unittest.TestCase):
                 else:
                     os.environ[name] = value
 
+    def test_config_defaults_to_creators_api_with_only_serpapi_fallback(self):
+        cfg = fresh_cfg()
+        self.assertEqual(cfg["product_discovery"]["provider"], "creators_api")
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serpapi"])
+
+    def test_selected_provider_uses_config_when_workflow_override_is_absent(self):
+        old = os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+        try:
+            self.assertEqual(product_resolver._selected_provider(), "creators_api")
+        finally:
+            if old is not None:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
+
+    def test_creators_api_falls_back_to_serpapi_only_when_explicitly_enabled(self):
+        original_primary = product_resolver._search_amazon
+        original_serp = product_resolver._search_amazon_serpapi
+        original_save = product_resolver._save_cache
+        names = [
+            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
+            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY",
+            "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
+        ]
+        old = {name: os.environ.get(name) for name in names}
+        calls = []
+
+        def creators_empty(term, token):
+            calls.append(("creators_api", term))
+            return []
+
+        def serp_match(term, token):
+            calls.append(("serpapi", term, token))
+            return [{
+                "title": "Marbrasse Pen Organizer with 2 Drawer for Desk",
+                "asin": "B0BYMRJD7R",
+            }]
+
+        product_resolver._search_amazon = creators_empty
+        product_resolver._search_amazon_serpapi = serp_match
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
+        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
+        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        os.environ["SERPAPI_API_KEY"] = "test-serpapi-key"
+        os.environ["SERPAPI_SPEND_ENABLED"] = "true"
+        os.environ.pop("APIFY_SPEND_ENABLED", None)
+        try:
+            result = product_resolver.resolve_items(
+                [{
+                    "display_name": "Marbrasse Pen Organizer",
+                    "name": "Marbrasse Pen Organizer",
+                    "search_term": "desk organizer",
+                }],
+                cache={},
+            )
+            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
+            self.assertTrue(result[0]["asin_verified"])
+            self.assertEqual(calls, [
+                ("creators_api", "desk organizer"),
+                ("serpapi", "desk organizer", "test-serpapi-key"),
+            ])
+        finally:
+            product_resolver._search_amazon = original_primary
+            product_resolver._search_amazon_serpapi = original_serp
+            product_resolver._save_cache = original_save
+            for name, value in old.items():
+                if value is None:
+                    os.environ.pop(name, None)
+                else:
+                    os.environ[name] = value
+
+    def test_serpapi_fallback_stays_off_without_spend_guard(self):
+        original_primary = product_resolver._search_amazon
+        original_serp = product_resolver._search_amazon_serpapi
+        original_save = product_resolver._save_cache
+        names = [
+            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
+            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY",
+            "SERPAPI_SPEND_ENABLED",
+        ]
+        old = {name: os.environ.get(name) for name in names}
+        calls = []
+
+        def creators_empty(term, token):
+            calls.append("creators_api")
+            return []
+
+        def serp_must_not_run(term, token):
+            calls.append("serpapi")
+            raise AssertionError("SerpApi must not run without its spend guard")
+
+        product_resolver._search_amazon = creators_empty
+        product_resolver._search_amazon_serpapi = serp_must_not_run
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
+        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
+        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        os.environ["SERPAPI_API_KEY"] = "test-serpapi-key"
+        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
+        try:
+            result = product_resolver.resolve_items(
+                [{
+                    "display_name": "Marbrasse Pen Organizer",
+                    "name": "Marbrasse Pen Organizer",
+                    "search_term": "desk organizer",
+                }],
+                cache={},
+                allow_unresolved=True,
+            )
+            self.assertFalse(result[0].get("asin_verified", False))
+            self.assertEqual(calls, ["creators_api"])
+        finally:
+            product_resolver._search_amazon = original_primary
+            product_resolver._search_amazon_serpapi = original_serp
+            product_resolver._save_cache = original_save
+            for name, value in old.items():
+                if value is None:
+                    os.environ.pop(name, None)
+                else:
+                    os.environ[name] = value
+
+    def test_configured_affiliate_tag_takes_precedence_over_environment_override(self):
+        old = os.environ.get("AFFILIATE_TAG")
+        os.environ["AFFILIATE_TAG"] = "different-secret-tag-20"
+        try:
+            tag, marketplace = product_resolver._creators_partner_settings()
+            self.assertEqual(tag, "ezylifehub-20")
+            self.assertEqual(marketplace, "www.amazon.com")
+        finally:
+            if old is None:
+                os.environ.pop("AFFILIATE_TAG", None)
+            else:
+                os.environ["AFFILIATE_TAG"] = old
+
     def test_asin_can_be_extracted_from_direct_amazon_url(self):
         asin = product_resolver._extract_asin({
             "url": "https://www.amazon.com/dp/B0BYMRJD7R?language=en"

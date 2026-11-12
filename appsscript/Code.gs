@@ -71,8 +71,8 @@ function cfg(key, fallback) {
   return (v === null || v === '') ? (fallback || DEFAULTS[key] || '') : v;
 }
 
-// Remove the obsolete manual spending toggle. Automatic refills now authorize
-// SerpApi only when the approved queue drops below its threshold.
+// Remove the obsolete manual spending toggle. Creators API is the primary
+// product source; SerpApi remains a separately guarded fallback.
 function removeLegacyPaidLookupToggle_() {
   if (P.getProperty('PAID_LOOKUP_ENABLED') !== null) {
     P.deleteProperty('PAID_LOOKUP_ENABLED');
@@ -596,8 +596,8 @@ function refillQueueIfLow() {
         inputs: {
           count: String(refillCount),
           mode: 'auto',
-          // Automatic low-queue refill is pre-authorized to use the configured SerpApi provider.
-          // The GitHub workflow retains its own SERPAPI_SPEND_ENABLED guard.
+          // Refill uses Amazon Creators API first. SerpApi is only a fallback,
+          // and GitHub still requires SERPAPI_SPEND_ENABLED=true before spending.
           allow_paid_lookup: true
         }
       }),

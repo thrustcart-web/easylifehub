@@ -1,8 +1,8 @@
-"""Resolve Amazon products to verified ASINs before a post can enter auto-publish.
+"""Resolve verified Amazon ASINs before an article can enter auto-publish.
 
-Uses the Junglee Amazon Product Scraper Actor on Apify. Only product titles and
-ASINs are retained for resolution; scraped prices, ratings, and review counts
-are deliberately ignored.
+Amazon Creators API is the primary source. SerpApi is a guarded fallback only;
+Apify remains available solely when explicitly selected by an operator.
+Only product titles and ASINs are retained.
 """
 from __future__ import annotations
 
@@ -99,13 +99,43 @@ def _extract_asin(row: dict) -> str:
 
 
 def _selected_provider() -> str:
-    """Select one product discovery provider; Creators API is supported alongside legacy providers."""
-    provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "serpapi").strip().lower() or "serpapi"
+    """Select the explicit workflow override, otherwise use config.json."""
+    provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "").strip().lower()
+    if not provider:
+        try:
+            cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+            provider = str((cfg.get("product_discovery") or {}).get("provider") or "creators_api").strip().lower()
+        except (OSError, json.JSONDecodeError):
+            provider = "creators_api"
     if provider not in {"apify", "serpapi", "creators_api"}:
         raise ProductResolutionError(
             "PRODUCT_DISCOVERY_PROVIDER must be 'creators_api', 'serpapi', or 'apify'"
         )
     return provider
+
+
+def _fallback_provider_names(primary: str) -> list[str]:
+    """Return configured, safe fallback providers; Apify is never automatic."""
+    if primary != "creators_api":
+        return []
+    try:
+        cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        configured = (cfg.get("product_discovery") or {}).get("fallback_providers") or []
+    except (OSError, json.JSONDecodeError):
+        configured = []
+    return [name for name in configured if name == "serpapi"]
+
+
+def _is_global_provider_error(exc: Exception) -> bool:
+    """Detect account/quota/auth errors where repeating the same provider is wasteful."""
+    message = str(exc)
+    return bool(re.search(
+        r"\\bHTTP\\s+(?:400|401|402|403|429)\\b|"
+        r"(?:Apify Actor|SerpApi|Creators API) error:|"
+        r"\\b(?:quota exhausted|rate.?limit|monthly usage limit|unauthorized|forbidden)\\b",
+        message,
+        re.I,
+    ))
 
 
 def _provider_api_key(provider: str) -> str:
@@ -239,22 +269,25 @@ def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
 
 def _creators_partner_settings() -> tuple[str, str]:
     """Read the marketplace and Associate tag without exposing either in logs."""
-    tag = os.environ.get("AFFILIATE_TAG", "").strip() or os.environ.get("AMAZON_PARTNER_TAG", "").strip()
+    # config.json is authoritative because Affiliate builds published URLs from
+    # that same value. Environment variables are only fallbacks for local tests.
+    env_tag = os.environ.get("AFFILIATE_TAG", "").strip() or os.environ.get("AMAZON_PARTNER_TAG", "").strip()
+    tag = ""
     marketplace = os.environ.get("AMAZON_MARKETPLACE", "").strip()
-    if not tag or not marketplace:
-        try:
-            cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
-            affiliate = cfg.get("affiliate") or {}
-            tag = tag or str(affiliate.get("tag") or "").strip()
-            market_code = str(affiliate.get("marketplace") or "com").strip().lower()
-            market_map = {
-                "com": "www.amazon.com", "co.uk": "www.amazon.co.uk", "de": "www.amazon.de",
-                "fr": "www.amazon.fr", "ca": "www.amazon.ca", "eg": "www.amazon.eg",
-                "sa": "www.amazon.sa", "ae": "www.amazon.ae", "in": "www.amazon.in",
-            }
-            marketplace = marketplace or market_map.get(market_code, "www.amazon.com")
-        except (OSError, json.JSONDecodeError):
-            marketplace = marketplace or "www.amazon.com"
+    try:
+        cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        affiliate = cfg.get("affiliate") or {}
+        tag = str(affiliate.get("tag") or "").strip() or env_tag
+        market_code = str(affiliate.get("marketplace") or "com").strip().lower()
+        market_map = {
+            "com": "www.amazon.com", "co.uk": "www.amazon.co.uk", "de": "www.amazon.de",
+            "fr": "www.amazon.fr", "ca": "www.amazon.ca", "eg": "www.amazon.eg",
+            "sa": "www.amazon.sa", "ae": "www.amazon.ae", "in": "www.amazon.in",
+        }
+        marketplace = marketplace or market_map.get(market_code, "www.amazon.com")
+    except (OSError, json.JSONDecodeError):
+        tag = env_tag
+        marketplace = marketplace or "www.amazon.com"
     if not tag or tag.startswith("YOURTAG"):
         raise ProductResolutionError("Creators API needs a valid Associate tag in config.json or AFFILIATE_TAG")
     return tag, marketplace
@@ -345,14 +378,24 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
         raise ProductResolutionError(f"Creators API returned no valid items: {str(data.get('errors'))[:400]}")
     return rows
 
-def _search_amazon(product_name: str, api_token: str) -> list[dict]:
-    """Dispatch to exactly one provider selected by PRODUCT_DISCOVERY_PROVIDER."""
-    provider = _selected_provider()
+def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
+    """Dispatch one query to a named provider without changing global selection."""
     if provider == "serpapi":
+        if not api_token:
+            raise ProductResolutionError("SERPAPI_API_KEY is missing")
         return _search_amazon_serpapi(product_name, api_token)
     if provider == "creators_api":
         return _search_amazon_creators_api(product_name)
-    return _search_amazon_apify(product_name, api_token)
+    if provider == "apify":
+        if not api_token:
+            raise ProductResolutionError("TEST_API is missing")
+        return _search_amazon_apify(product_name, api_token)
+    raise ProductResolutionError(f"Unsupported Amazon product provider: {provider}")
+
+
+def _search_amazon(product_name: str, api_token: str) -> list[dict]:
+    """Dispatch to the configured primary discovery provider."""
+    return _search_amazon_with_provider(product_name, _selected_provider(), api_token)
 
 def _trusted_item(item: dict) -> bool:
     asin = str(item.get("asin") or "").strip().upper()
@@ -420,7 +463,7 @@ def resolve_items(
     cache: dict | None = None,
     allow_unresolved: bool = False,
 ) -> list[dict]:
-    """Resolve products individually; reuse exact-name cache entries across articles."""
+    """Resolve products via Creators API first, using guarded SerpApi fallback."""
     provider = _selected_provider()
     api_token = (api_token if api_token is not None else _provider_api_key(provider)).strip()
     cache = cache if cache is not None else _load_cache()
@@ -449,63 +492,105 @@ def resolve_items(
             continue
         pending.setdefault(_normal_name(str(item.get("search_term") or name)), []).append(index)
 
-    if pending and not api_token:
+    fallback_providers = [
+        name for name in _fallback_provider_names(provider)
+        if _provider_spending_enabled(name) and bool(_provider_api_key(name))
+    ]
+
+    if pending and not api_token and not fallback_providers:
         raise ProductResolutionError(
             f"{_provider_secret_name(provider)} is missing; refusing to publish an unverified product URL"
         )
-    if pending and not _provider_spending_enabled(provider):
-        spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
-        raise ProductResolutionError(
-            f"{provider} spending is disabled. Set the GitHub Actions variable "
-            f"{spend_variable}=true only after reviewing the account's search allowance."
-        )
+    if pending and provider in {"serpapi", "apify"}:
+        if not api_token:
+            raise ProductResolutionError(
+                f"{_provider_secret_name(provider)} is missing; refusing to publish an unverified product URL"
+            )
+        if not _provider_spending_enabled(provider):
+            spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
+            raise ProductResolutionError(
+                f"{provider} spending is disabled. Set the GitHub Actions variable "
+                f"{spend_variable}=true only after reviewing the account's search allowance."
+            )
 
-    for search_term, indexes in pending.items():
-        try:
-            rows = _search_amazon(search_term, api_token)
-        except ProductResolutionError as exc:
-            # Authentication, exhausted usage, and rate-limit responses apply
-            # to the whole Apify account/run. Stop immediately instead of
-            # issuing one doomed request for every remaining product.
-            # Stop immediately on account/auth/quota/rate-limit failures for
-            # either paid provider. Repeating the same broken account request
-            # for every remaining product can burn credits without resolving anything.
-            if re.search(
-                r"(?:Apify Actor|SerpApi|Creators API) HTTP (?:400|401|402|403|429)|"
-                r"(?:Apify Actor|SerpApi|Creators API) error:",
-                str(exc),
-                re.I,
-            ):
-                raise
-            errors.append(str(exc))
-            log.warning("Amazon product search failed | %s | %s", search_term, exc)
-            continue
-
+    def apply_rows(rows: list[dict], source: str, indexes: list[int]) -> list[int]:
+        remaining = []
         for index in indexes:
             item = resolved[index]
             candidate = _apply_candidate(
                 item,
                 rows,
-                allow_missing_leading_brand=(provider == "serpapi"),
+                allow_missing_leading_brand=(source == "serpapi"),
             )
             if candidate is None:
-                message = f"no exact Amazon product-title match for: {item.get('display_name') or item.get('name')}"
-                errors.append(message)
-                log.warning("product resolution failed | %s", message)
+                remaining.append(index)
                 continue
-
             resolved[index] = candidate
             cache[_normal_name(str(item.get("display_name") or item.get("name") or ""))] = {
                 "asin": candidate["asin"],
                 "title": candidate["verified_product_title"],
                 "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
+        return remaining
+
+    for search_term, indexes in pending.items():
+        primary_error = None
+        unresolved = list(indexes)
+
+        try:
+            if not api_token:
+                raise ProductResolutionError(
+                    f"{_provider_secret_name(provider)} is missing"
+                )
+            primary_rows = _search_amazon(search_term, api_token)
+            unresolved = apply_rows(primary_rows, provider, unresolved)
+        except ProductResolutionError as exc:
+            primary_error = exc
+            log.warning("Amazon primary search failed | %s | %s", search_term, exc)
+
+        # A Creators API account-level error should stop the batch when there is
+        # no explicitly enabled SerpApi fallback; never silently retry paid APIs.
+        if unresolved and primary_error and _is_global_provider_error(primary_error) and not fallback_providers:
+            raise primary_error
+
+        fallback_errors = []
+        for fallback_provider in fallback_providers:
+            if not unresolved:
+                break
+            fallback_key = _provider_api_key(fallback_provider)
+            try:
+                fallback_rows = _search_amazon_with_provider(
+                    search_term, fallback_provider, fallback_key
+                )
+            except ProductResolutionError as exc:
+                fallback_errors.append(str(exc))
+                log.warning(
+                    "Amazon fallback search failed | provider=%s | %s",
+                    fallback_provider, exc
+                )
+                if _is_global_provider_error(exc):
+                    raise
+                continue
+            unresolved = apply_rows(fallback_rows, fallback_provider, unresolved)
+
+        if unresolved:
+            if primary_error and _is_global_provider_error(primary_error):
+                raise primary_error
+            for index in unresolved:
+                name = resolved[index].get("display_name") or resolved[index].get("name")
+                if primary_error:
+                    message = f"{primary_error}; no verified fallback match for: {name}"
+                elif fallback_errors:
+                    message = f"{'; '.join(fallback_errors[:2])}; no exact Amazon product-title match for: {name}"
+                else:
+                    message = f"no exact Amazon product-title match for: {name}"
+                errors.append(message)
+                log.warning("product resolution failed | %s", message)
         _save_cache(cache)
 
     if errors and not allow_unresolved:
         raise ProductResolutionError("; ".join(errors[:4]))
     return resolved
-
 
 def resolve_item(item: dict, api_token: str | None = None, cache: dict | None = None) -> dict:
     """Compatibility helper for callers that resolve one product at a time."""

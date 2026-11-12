@@ -14,11 +14,11 @@ on:
         required: false
         default: ''
       mode:
-        description: 'auto (AI + offline fallback) | ai | template'
+        description: 'auto (AI providers; fail closed if all are unavailable) | ai | template'
         required: false
         default: 'auto'
       allow_paid_lookup:
-        description: 'Explicitly allow paid Apify/SerpApi product lookups for this run'
+        description: 'Allow the guarded SerpApi fallback for this run'
         required: false
         type: boolean
         default: false
@@ -54,9 +54,9 @@ jobs:
           AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
           AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
           AMAZON_CREATORS_TOKEN_URL: ${{ vars.AMAZON_CREATORS_TOKEN_URL }}
-          PRODUCT_DISCOVERY_PROVIDER: ${{ vars.PRODUCT_DISCOVERY_PROVIDER }}
-          APIFY_SPEND_ENABLED: ${{ (inputs.allow_paid_lookup || github.event_name == 'schedule') && vars.PRODUCT_DISCOVERY_PROVIDER == 'apify' && vars.APIFY_SPEND_ENABLED == 'true' }}
-          SERPAPI_SPEND_ENABLED: ${{ (inputs.allow_paid_lookup || github.event_name == 'schedule') && vars.PRODUCT_DISCOVERY_PROVIDER == 'serpapi' && vars.SERPAPI_SPEND_ENABLED == 'true' }}
+          PRODUCT_DISCOVERY_PROVIDER: creators_api
+          APIFY_SPEND_ENABLED: 'false'
+          SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' && 'true' || 'false' }}
         run: |
           if [ -f content/queue/MIGRATE_LAYOUT_V3 ]; then
             echo "One-time migration: rebuilding legacy queue HTML with the fixed v3 layout."
