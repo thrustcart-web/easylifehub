@@ -21,7 +21,7 @@
       "search_term": "Clothes Brush",
       "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528,
+      "stock_checked_at": 1794566226,
       "parent_asin": "B00QQW5ISA"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Clothes Line",
       "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533,
+      "stock_checked_at": 1794566235,
       "parent_asin": "B0DQJ9B83X"
     }
   ],
@@ -41,7 +41,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794534535,
+  "products_audited_at": 1794566236,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

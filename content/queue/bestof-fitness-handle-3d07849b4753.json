@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Fit Simplify Resistance Bands",
-      "asin": "B01AVDVHTI",
-      "asin_verified": false,
-      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "asin": "B01KS6DZ34",
+      "asin_verified": true,
+      "verified_product_title": "Fit Simplify Resistance Tube Bands 12 Piece Set with Instruction Booklet",
       "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "url": "",
+      "url": "https://www.amazon.com/dp/B01KS6DZ34?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528,
-      "parent_asin": "B09MJKJYLQ"
+      "stock_checked_at": 1794566250,
+      "parent_asin": "B01KS6DZ34"
     },
     {
       "name": "Gym Bag",
@@ -32,7 +32,7 @@
       "search_term": "Sports Drawstring Backpack Gym Bag",
       "url": "https://www.amazon.com/dp/B072PR2ND1?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534569,
+      "stock_checked_at": 1794566229,
       "parent_asin": "B06WD35WN1"
     },
     {
@@ -43,7 +43,7 @@
       "search_term": "RENPHO Elis Go Travel Smart Scale",
       "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531,
+      "stock_checked_at": 1794566232,
       "parent_asin": "B0BFZVBGYH"
     },
     {
@@ -54,7 +54,7 @@
       "search_term": "HS500 Heart Rate Monitor Chest Strap",
       "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531,
+      "stock_checked_at": 1794566232,
       "parent_asin": "B09SKZBZF8"
     },
     {
@@ -65,17 +65,17 @@
       "search_term": "FLYBIRD Adjustable Weight Bench",
       "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528,
+      "stock_checked_at": 1794566229,
       "parent_asin": "B0HQFFQ7C1"
     }
   ],
   "html_file": "bestof-fitness-handle-3d07849b4753.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794534535,
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794566236,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": true
+  "product_review_required": false
 }

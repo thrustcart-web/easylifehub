@@ -49,7 +49,7 @@ Take time to measure your workout area and verify protocol compatibility for ele
 
 ### Product Links
 
-- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20
+- Fit Simplify Resistance Bands: https://www.amazon.com/dp/B01KS6DZ34?tag=ezylifehub-20
 - Gym Bag: https://www.amazon.com/dp/B072PR2ND1?tag=ezylifehub-20
 - Smart Scale: https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20
 - Heart Rate Monitor: https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20

@@ -21,7 +21,7 @@
       "search_term": "Breville BES450BSS Bambino Espresso Machine",
       "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531,
+      "stock_checked_at": 1794566232,
       "parent_asin": "B0CXYCMB86"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
       "url": "",
       "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534531,
+      "stock_checked_at": 1794566232,
       "parent_asin": "B0BZP1PRNK"
     }
   ],
@@ -41,7 +41,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794534535,
+  "products_audited_at": 1794566236,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

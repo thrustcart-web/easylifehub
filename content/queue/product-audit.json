@@ -1,10 +1,10 @@
 {
-  "checked_at": 1794534535,
+  "checked_at": 1794566236,
   "stock_check_max_age_seconds": 86400,
-  "articles_checked": 38,
+  "articles_checked": 42,
   "queue_duplicate_articles_removed": 0,
   "removed_duplicate_slugs": [],
-  "blogger_titles_reserved": 30,
+  "blogger_titles_reserved": 32,
   "external_products": {},
   "external_asins": [],
   "stock_by_asin": {
@@ -12,372 +12,480 @@
       "title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
       "parent_asin": "B0FDC2L5M6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
     },
     "B00178QSE6": {
       "title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
       "parent_asin": "B0FG59Y4HF",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
+    },
+    "B006JH8T3S": {
+      "title": "Logitech HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p Camera, Desktop or Laptop Webcam",
+      "parent_asin": "B0FD925MZ6",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566226
     },
     "B00QQW5ISA": {
       "title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle | Removes Lint, Pet Hair, Fuzz & Dust Fast, Double-Sided Reusable Clothes Brush, Built-In Shoe Horn, Sturdy Walnut Wood Handle",
       "parent_asin": "B00QQW5ISA",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
+    },
+    "B012T634SM": {
+      "title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
+      "parent_asin": "B0FSS4B8DM",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566226
     },
     "B01AVDVHTI": {
       "title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
       "parent_asin": "B09MJKJYLQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
     },
     "B01HGM33HG": {
       "title": "AKASO EK7000 4K30FPS 20MP WiFi Action Camera with EIS Ultra HD 131FT Waterproof Underwater Camera Remote Control 4X Zoom Support External Microphone Black",
       "parent_asin": "B0GLF7G3LP",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
     },
     "B01I727FQO": {
       "title": "Liberty GARDEN 712 Single Arm Navigator Multi-Directional Garden Hose Reel, Holds 125-Feet of, 5/8-Inch, Bronze",
       "parent_asin": "B0GJG6L1MN",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
     },
     "B01L2HYPNW": {
       "title": "Cascade Mountain Tech Trekking Poles, Shaft Material: Aircraft- grade 6061 Aluminum with Adjustable Locks Expandable to 54\" (Set of 2), Cork Grip, Orange, Extended Grip Material: EVA",
       "parent_asin": "B0CGDXBZ5N",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566226
+    },
+    "B01N4TZOHE": {
+      "title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
+      "parent_asin": "B08KH5RC36",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566226
     },
     "B01NH0HTM5": {
       "title": "VIVO AeroPoise™ Single Monitor Stand, for 17\" to 32\" Screens up to 19.8 lbs | Fully Adjustable Arm, Mechanical Articulating Desk Mount, VESA 75x75 and 100x100, Black, STAND-V001O",
       "parent_asin": "B0C5L7MC6Q",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
     },
     "B0721CX298": {
       "title": "Garden Star 70007 The Original Yard Rover Dual-Wheel Home Garden Wheelbarrow Cart",
       "parent_asin": "B0721CX298",
       "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
+    },
+    "B072PR2ND1": {
+      "title": "HOLYLUCK Drawstring Backpack Bag Sport Gym Sackpack - black",
+      "parent_asin": "B06WD35WN1",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566229
     },
     "B07CK8B3R3": {
       "title": "Orienteering Compass Advanced Scout for Hiking Camping Navigation Green | Map Reading Tool.Kids & Professionals Use.Outdoor Survival.Gift Idea. Survival & Camping",
       "parent_asin": "B09MHX11Q1",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
     },
     "B07DNYSJ8W": {
       "title": "FLYBIRD WB5 Weight Bench, ASTM-Certified 800LBS Adjustable Weight Bench Workout Bench Foldable for Home Gym, 90° to -30° FID and 30in Extended Backrest for Bench Press Strength Training Exercise",
       "parent_asin": "B0HQFFQ7C1",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
+    },
+    "B07G81GQ3Q": {
+      "title": "COHOME All-Season Queen Size Cooling Comforter Duvet Insert - White | Down Alternative Comforter, Luxury Hotel Breathable Soft bedding, Anti-Clump Tech & 8 Tabs, Reversible, 88 x 88 inches",
+      "parent_asin": "B0H8S8WZXC",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566229
     },
     "B07GL4JVNJ": {
       "title": "Kitchen + Home 23” inch Rainbow Static Duster - Electrostatic Feather Duster Attracts dust Like a Magnet!",
       "parent_asin": "B07GL4JVNJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
     },
     "B07HC2WHS1": {
       "title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft | Breathable, Noiseless, Hypoallergenic, Washable, 60x80\" Up to 18\" Deep, Viscose Derived from Bamboo Mattress Cover, White",
       "parent_asin": "B06XVVJ4BG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566229
     },
-    "B07QNM7575": {
-      "title": "Rain Bird LNDDRIPKIT Drip Irrigation Kit | Drip Irrigation Kits, Irrigation Systems, Plant Watering Kits, Garden Irrigation Supplies, gardens and landscaped areas",
-      "parent_asin": "B0F3ZWKWTC",
-      "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534528
-    },
-    "B07V68DRDV": {
-      "title": "Yiz Dash Cover Mat Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46 | Custom Dashboard Cover Pad Carpet",
-      "parent_asin": "B07V7CX95L",
-      "availability_type": "IN_STOCK_SCARCE",
-      "stock_checked_at": 1794534528
+    "B07RSZSYNC": {
+      "title": "Levoit Core 300-P Air Purifier Replacement Filter, Genuine Air Filters | AHAM VERIFIDE, Supports HEPA Sleep Mode, Activated Carbon, Removes Smoke Odor, Allergens, Pet Hair, Core 300-RF, 1 Pack",
+      "parent_asin": "B0D83K6TQZ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566229
     },
     "B07VVK39F7": {
       "title": "Levoit Air Purifier for Home Pets Hair Allergens in Bedroom Quiet Purifiers | Quiet HEPA Sleep Mode, Remove 99.97% Dust Pollen Smoke Pet Odor, AHAM VERIFIDE, Core300-P, Up to 1073 ft², White",
       "parent_asin": "B0GXWMKPH6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566230
+    },
+    "B07WV7F7VC": {
+      "title": "Fit Simplify Exercise Resistance Loop Bands, Set of 5",
+      "parent_asin": "B08PY2W6JT",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566230
     },
     "B082LY2W2G": {
       "title": "8\" Heavy Duty Fabric Scissors, Black Sewing Shears | Ideal for leather tailoring, home, office, and crafting. Ultra-sharp blades ensure precise cuts for heavy-duty materials.",
       "parent_asin": "B0F53XSQD7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566230
     },
     "B082TMBYR6": {
       "title": "Jackery Explorer 300 Portable Power Station,292Wh | Backup LiFePO4 Battery, Solar Generator for Outdoors, Camping, Travel, Hunting, Blackout (Solar Panel Optional)",
       "parent_asin": "B0H5CRPSL9",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566230
+    },
+    "B082VZLPN3": {
+      "title": "Vansuny 250GB Portable External SSD, USB 3.1 Gen2 430MB/s High-Speed Data Transfer, Metal USB C Mini Portable External Solid State Drive for PC, Laptop, Phones and More",
+      "parent_asin": "B09TZZSTQD",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566230
     },
     "B084N1BM9L": {
       "title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord | MFi Certified, tangle-free braided cord, iPhone 14/13/12/11 & earlier, iPad, AirPods, Apple CarPlay, durable charging cable",
       "parent_asin": "B0CTNJ3T6X",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534528
+      "stock_checked_at": 1794566230
+    },
+    "B0855B5Z6F": {
+      "title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
+      "parent_asin": "B0855B5Z6F",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566230
     },
     "B085TFF7M1": {
       "title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video | Stereo Audio, HD Light Correction, Works with Microsoft Teams, Google Meet, Zoom, Nintendo Switch, Mac/Tablet- Black",
       "parent_asin": "B0HQP3HJ6F",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "availability_type": "IN_STOCK_SCARCE",
+      "stock_checked_at": 1794566230
     },
-    "B0874XN4D8": {
-      "title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s | Reliable External Solid State Drive Storage for Gaming, Students, Professionals (MU-PC1T0T/AM)",
+    "B0874YJP92": {
+      "title": "SAMSUNG T7 Portable SSD, 1TB External Solid State Drive, Speeds Up to 1,050MB/s, USB 3.2 Gen 2, Reliable Storage for Gaming, Students, Professionals, MU-PC1T0H/AM, Blue",
       "parent_asin": "B0D87GVYY6",
-      "availability_type": "AVAILABLE_DATE",
-      "stock_checked_at": 1794534530
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566230
     },
     "B08936QVJD": {
       "title": "OneTigris Hideout Hammock Underquilt, Thermal Hammock Quilt for Camping | Quick Setup, Full Length, Ultralight, Warm 4 Season Under Quilt for Hammock Camping Hiking Backpacking Travel",
       "parent_asin": "B089383ZK7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566230
     },
     "B08QXB9BH5": {
       "title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker, Ice Cream, Gelato and more, NC301 | Ninja CREAMi transforms frozen bases into ice cream, sorbet and milkshakes at a button touch, from healthy to indulgent.",
       "parent_asin": "B0H8MGLTX6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
     },
     "B08T5QN2TR": {
       "title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger | For iPhone 17/17 Plus/17 Pro Max/16/16 Plus/16 Pro Max/15 Pro Max/iPad Pro, MacBook Pro and More",
       "parent_asin": "B0BYVW7FCC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
     },
     "B092LZLLGF": {
       "title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey | Cooling Heavy Blanket for Sleeping Perfect for 190-210 Lbs, Breathable Bedding Blanket With Glass Bead, Machine Washable",
       "parent_asin": "B0F8VZBZS4",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
     },
     "B092XFK5MG": {
       "title": "ANDALUCA Large Decorative Balls Bowl Filler Decor Orbs White & Cream (Natural White)",
       "parent_asin": "B0BB682J53",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
+    },
+    "B099Z2Q93Z": {
+      "title": "FIILINES Dash Cover for 1995-2005 Chevy/Chevrolet Cavalier, Dashboard Mat Exact Fit for Cavalier Interior Accessories Dashboard Pad Carpet Dash Mat Sunshade Non-Slip Polyester Protector No Glare Black",
+      "parent_asin": "B0FWJS5W2J",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566231
     },
     "B09C8HR4Z9": {
       "title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables…………",
       "parent_asin": "B0HLNWJC5V",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
+    },
+    "B09DT48V16": {
+      "title": "TAGRY Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Ear buds with Mic for TV Smart Phone Laptop Computer Sports",
+      "parent_asin": "B0H2CYY93W",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566231
     },
     "B09FT58QQP": {
       "title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones | IPX5 Waterproof,2 Mics for AI Calls,Immersive Premium Sound Bass Headset with Charging Case,32 EQ via App Black",
       "parent_asin": "B0H8PFKTQF",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
+    },
+    "B09LQN6815": {
+      "title": "Gaiatop USB Desk Fan, Personal Portable Quiet Small Table Desktop fan | Powerful Mini 3 Speeds, Adjustable Head, for Cooling Home Office Car Summer Travel Gifts Blue",
+      "parent_asin": "B0BGR6R1SR",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566231
     },
     "B09P3PRM5P": {
       "title": "WePet Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small",
       "parent_asin": "B0HNCQ4YZX",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534530
+      "stock_checked_at": 1794566231
     },
     "B09SKZBZF8": {
       "title": "GEOID HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
       "parent_asin": "B09SKZBZF8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B09VPHVT2Z": {
       "title": "Anker 737 Power Bank, 140W 24,000mAh 3-Port Laptop Charger, Smart Display | Fast Multi-Device Charging, for iPhone 16 / 15 / 14 Series, Vision Pro, Samsung, MacBook, and More",
       "parent_asin": "B09VPHVT2Z",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0B1JPPG2L": {
       "title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel | Make café-quality espresso, lattes and cappuccinos at home with this compact, manual coffee maker | Beginner-friendly",
       "parent_asin": "B0CXYCMB86",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0B6G147W6": {
       "title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
       "parent_asin": "B0B6H2HLFL",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0B9NNWXVP": {
       "title": "MNN 15.6\" 1080P Portable Monitor IPS USB-C HDMI Gaming Screen for Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case,Laptop , low blue, work&game",
       "parent_asin": "B0HMH45HJS",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
+    },
+    "B0BCH7PYCD": {
+      "title": "Rain Bird GARDENKIT Drip Irrigation Kit",
+      "parent_asin": "B0BCH7PYCD",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566232
     },
     "B0BFZVBGYH": {
       "title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass | 13 Body Metrics via Bluetooth for Health Tracking, Batteries Included, Protective Case for Hotel, Camping, and Travelers",
       "parent_asin": "B0BFZVBGYH",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0BHSX8PYZ": {
       "title": "Quarut 3 Pack 10 inch Plant Pots with Drainage Holes & Saucer | Whiskey Barrel Planters,Plastic Decor Flower Pots Imitation Wine Barrel Design, for Indoor Outdoor Garden Home Plants-Brown",
       "parent_asin": "B0HKZQ238J",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0BZP1PRNK": {
       "title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
       "parent_asin": "B0BZP1PRNK",
       "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0C3LRC59F": {
       "title": "Banelu Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
       "parent_asin": "B0HMNM3TV8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
+      "stock_checked_at": 1794566232
     },
     "B0C5SPSRNG": {
       "title": "Hoedia Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black | String Bag with Shoes Compartment and Wet Proof Pocket, Adjustable Wider Shoulder Strap, For Soccer, Basketball",
       "parent_asin": "B0DQ81HY2P",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534531
-    },
-    "B0C7VLHMQR": {
-      "title": "roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
-      "parent_asin": "B0HRFFV6MW",
-      "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0CC85MCC6": {
       "title": "ASUS ProArt PA34VCNV 34 Inch 1440p Ultrawide Professional Monitor for Mac | Calman Verified, Delta E<2, IPS, 3800R Curve, USB-C Docking PD 96W, 100% sRGB, RJ45 Ethernet, HDMI, DisplayPort",
       "parent_asin": "B0CC85MCC6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0CCJRWKC5": {
       "title": "DbillionDa USB C to USB C Cable, 60W PD Fast Charging, 90 Degree (10 ft) | Long Cable Design for Gaming, Desk Setup & Everyday Use. Compatible with iPhone, Samsung Galaxy, MacBook & More",
       "parent_asin": "B0HJCFHC87",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0CZ6XY78Y": {
       "title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera | 1/2\" Sensor, Gesture Control, 60 FPS, HDR, Microphones, Web Camera for Desktop Computer, Laptop, Meeting, Video Calls, etc.",
       "parent_asin": "B0CZ6XY78Y",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0CZNZHTYZ": {
       "title": "Weekly Planner, To Do List Notepad, 8.5\" × 11\", College, Office Supplies | 52 Sheets, Home Organization Essentials for Women, Desk Decor, 100 GSM, Undated Tear-Off, School, Student & Teacher Gifts",
       "parent_asin": "B0DKJ9RQFT",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
-    },
-    "B0CZXFM3CH": {
-      "title": "RUVANTI 100% Organic Cotton Flannel Sheets Queen Size Bed Set, Baby Bear | 4 Pc Set, 16\" Deep Pocket, GOTS Certified, Double Brushed, Premium Soft & Breathable, Cozy Warmth for Winter & Cold Rooms",
-      "parent_asin": "B0H9M1T8TT",
-      "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0D9CP3BPS": {
       "title": "Howise Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
       "parent_asin": "B0D9CP3BPS",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0DB8F7GDN": {
       "title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
       "parent_asin": "B0HFWCN5KF",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0DBVW1RFW": {
       "title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
       "parent_asin": "B0HLBX3JSY",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0DK99H94M": {
       "title": "Ultralight Sleeping Bag, Warm Weather Portable Compact Sleeping Bags for Adults, Waterproof, Lightweight, Comfort with Compression Sack for 3 Season Camping, Backpacking, Hiking, Traveling",
       "parent_asin": "B0DTHGRP1B",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534532
+      "stock_checked_at": 1794566233
     },
     "B0DPHLWNBG": {
       "title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
       "parent_asin": "B0HBBP6CM7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566233
     },
     "B0DQJ61TZJ": {
       "title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
       "parent_asin": "B0DQJ9B83X",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
+    },
+    "B0DTP1K3K9": {
+      "title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey | Organic Cotton Percale Queen Sheet Set - Naturally Cooling & Lightweight, Cool All Summer, Cozy All Winter, Great For Gifting",
+      "parent_asin": "B0FB9HLMWW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566235
     },
     "B0DZ2MMFMJ": {
       "title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container | Kitchen Food Storage Jars for Beans,Ground, Espresso, Rice,Tea, Sugar,Cereal,Cookie, Bar Accessories,Gifts, Lids, Scoop, Gray",
       "parent_asin": "B0H4G9TKQC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
+    },
+    "B0F1V9PNB6": {
+      "title": "Rugshop Oriental Medallion Non-Slip Washable Runner Rug Green 2' x 10' | Traditional, Rectangular, Size 2' x 10', Living Room, Bedroom, Dining Room, Home Office, Kitchen, Entryway, Hallway, Nursery",
+      "parent_asin": "B0H8Z8T5TD",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566235
+    },
+    "B0F334DN9J": {
+      "title": "roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
+      "parent_asin": "B0F334DN9J",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566235
     },
     "B0FHJ7TKZM": {
       "title": "Ring Battery Doorbell 2K (newest model), Speckled Gray | Retinal wide-angle video, Up to 6x enhanced zoom, Two-way talk, Built-in battery",
       "parent_asin": "B0GTYB16NH",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
     },
     "B0FKH85DPY": {
       "title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse | Large Teacher Nurse School Bag with 40oz Cup Holder & Strap, Zipper Shoulder Bag Handbag for Travel College Bible Office Gift",
       "parent_asin": "B0FQJG2B8L",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
+    },
+    "B0FLPR9ZBK": {
+      "title": "Anautin Ring Light for Video Conference Lighting,360°Adjustable,Portable LED Video Conference Lighting for Monitor,Laptop&Desktop Computer,Streaming Light for Zoom Meetings, Selfie Makeup, Video Calls",
+      "parent_asin": "B0FLPW9H12",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566235
     },
     "B0FMRZRWWX": {
       "title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
       "parent_asin": "B0FMS4F469",
       "availability_type": "LEADTIME",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
     },
     "B0FVXMDM4L": {
       "title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
       "parent_asin": "B0CW1BCQJB",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566235
+    },
+    "B0G29MV7GK": {
+      "title": "NIVEOLI Webcam 1080P with Microphone & Privacy Cover for PC/Laptop, USB Computer Camera Plug & Play with Auto Light Correction for Video Calls, Live Streaming Gaming & Online Meetings",
+      "parent_asin": "B0GXVRGZDK",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
+    },
+    "B0GCHPCPSZ": {
+      "title": "1TB Magnetic Portable SSD, Up to 2000MB/s – External Solid State Drive | Compatible with MagSafe for iPhone 15/16/17, Mac, Laptops & Tablet, Reliable Storage for Students, Gaming & Professionals",
+      "parent_asin": "B0FYFTFF8H",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
+    },
+    "B0GJ44LX9V": {
+      "title": "Land Guard 2 Pack 8×4×2ft Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Large Metal Raised Garden Beds for Vegetables (Silver)",
+      "parent_asin": "B0HK7L1RYN",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
     },
     "B0GSZX5MWR": {
       "title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini eReader Devices | Ultra-thin 0.2\" design with magnetic pogo-pin charging, gyroscope page-turn, 16GB storage, and distraction-free reading",
       "parent_asin": "B0HFNSRBSL",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
-    },
-    "B0GYP8QX4F": {
-      "title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection | Fast & Accurate Stud Finder Wall Scanner, Smart Chip, HD LCD Display, Easy to Use, for Drywalls, Floors, Ceilings",
-      "parent_asin": "B0DGGX334S",
-      "availability_type": "AVAILABLE_DATE",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566236
     },
     "B0GYZ9K5Q1": {
       "title": "HHSOET Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft | IPX6 Waterproof 6 Plug Extender Port, Exterior Long Extension Cord with Multiple Outlets for Garden, Christmas Decor",
       "parent_asin": "B0HBWWRJWX",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794534533
+      "stock_checked_at": 1794566236
     },
-    "B0HFN3GNBJ": {
-      "title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
-      "parent_asin": "B0HGFKNQHC",
-      "availability_type": "IN_STOCK_SCARCE",
-      "stock_checked_at": 1794534535
+    "B0GZHZJP9K": {
+      "title": "Cyber Tools Stud Finder Multi-Mode Wall Scanner, High-Accuracy Sensor | Rechargeable Stud Finder with Wood & Metal Modes, Digital Display, Lightweight, For Drywall, Plaster, Shear Wall",
+      "parent_asin": "B0GZHZJP9K",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
     },
-    "B0HGPRSSGT": {
-      "title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown | Non-Slip, Fade Resistant, Pet Friendly, Easy to Clean, Stain Resistant, Soft Rug for Hallway, Entryway, Kitchen, Foyer",
-      "parent_asin": "B0HGQ4BB97",
-      "availability_type": "IN_STOCK_SCARCE",
-      "stock_checked_at": 1794534535
+    "B0H8SZ945Y": {
+      "title": "XTEINK X4 Classic Pocket eReader, Ultra-Light 68g & 4.9mm Thin,Reader Gifts | Ultra Thin 0.19\" design, 4.3\" E ink Paper-feel ,Dual Page Turn Button & Shake, Magnetic Pogo-pin attach,Extended Battery Life",
+      "parent_asin": "B0H99KMDTW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
+    },
+    "B0HBC61F7B": {
+      "title": "Mini Projector, HD 1080P WiFi Video Projector, Portable Outdoor Projector with Tripod, Gift for Kids, Home Theater Movie Phone Projector Compatible with USB, Smartphone/Laptop(cyan)",
+      "parent_asin": "B0HBC869WH",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
+    },
+    "B0HDBZ32J1": {
+      "title": "Wireless Charging Laptop Bag with Multi-device Charger，Black：3 in 1 | 17.3 In New Premium Wireless Charging Laptop Bag for Commuters Remote Workers",
+      "parent_asin": "B0HDC2NTN5",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
+    },
+    "B0HQCDLJP9": {
+      "title": "Stud Finder for Beginners: How to Find Wall Studs, Fix False Readings, and Mount Items with Confidence",
+      "parent_asin": "B0HQCDLJP9",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794566236
     }
   },
-  "unique_queue_asins": 71,
-  "unresolved_items": 10,
-  "replacements": 17,
-  "kept_existing_in_stock": 48,
-  "duplicate_or_out_of_stock_encountered": 27
+  "unique_queue_asins": 82,
+  "unresolved_items": 8,
+  "replacements": 3,
+  "kept_existing_in_stock": 73,
+  "duplicate_or_out_of_stock_encountered": 11
 }
