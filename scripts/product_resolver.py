@@ -1021,14 +1021,6 @@ def audit_queue_products() -> dict:
                     rows = _search_amazon_creators_api(query)
                 except ProductResolutionError as exc:
                     log.warning("Creators API replacement search failed | %s | %s", query, exc)
-                    for fallback in _fallback_provider_names("creators_api"):
-                        if not (_provider_spending_enabled(fallback) and _provider_api_key(fallback)):
-                            continue
-                        try:
-                            rows = _search_amazon_with_provider(query, fallback, _provider_api_key(fallback))
-                            break
-                        except ProductResolutionError as fallback_exc:
-                            log.warning("product fallback failed | %s | %s", fallback, fallback_exc)
                 candidate = _apply_candidate(
                     old_item,
                     rows,
