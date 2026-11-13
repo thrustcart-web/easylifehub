@@ -515,7 +515,7 @@ def rebuild_index(cfg: dict) -> None:
     """index.json = the manifest the Apps Script publisher reads. Newest last."""
     entries = []
     for path in sorted(QUEUE_DIR.glob("*.json")):
-        if path.name == "index.json":
+        if path.name in {"index.json", "product-audit.json"}:
             continue
         try:
             entries.append(json.loads(path.read_text(encoding="utf-8")))
