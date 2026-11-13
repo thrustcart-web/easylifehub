@@ -548,6 +548,15 @@ function publishNext_(howMany) {
   Logger.log('Queue size: ' + posts.length);
 
   var reserved = reservedProductSets_(posts);
+  // Fail closed on any existing article collision, including Blogger drafts.
+  var existingBloggerPosts = listBlogPostsByStatus_('LIVE')
+    .concat(listBlogPostsByStatus_('SCHEDULED'))
+    .concat(listBlogPostsByStatus_('DRAFT'));
+  var existingTitleKeys = {};
+  existingBloggerPosts.forEach(function (post) {
+    var key = normalizedArticleTitleKey_(post.title || '');
+    if (key) existingTitleKeys[key] = true;
+  });
   var done = 0;
   for (var i = 0; i < posts.length && done < howMany; i++) {
     var meta = posts[i];
@@ -579,6 +588,12 @@ function publishNext_(howMany) {
       Logger.log('Skipping article: Amazon CTA button layout is missing or contains other links: ' + meta.slug);
       continue;
     }
+    var titleKey = normalizedArticleTitleKey_(meta.title || '');
+    if ((titleKey && existingTitleKeys[titleKey]) ||
+        isDuplicateArticleContent_(html, meta.title, existingBloggerPosts)) {
+      Logger.log('Skipping duplicate article: matching title/body already exists in Blogger: ' + meta.title);
+      continue;
+    }
     var labels = (meta.labels || []).filter(Boolean);
 
     html = sanitizePostHtml_(html);
@@ -599,6 +614,8 @@ function publishNext_(howMany) {
     });
     setPublished_(published);
     reserveArticleProducts_(meta, reserved);
+    existingBloggerPosts.push({ title: meta.title, content: html, status: 'LIVE' });
+    if (titleKey) existingTitleKeys[titleKey] = true;
     recordSuccess_();
     done++;
     Logger.log('PUBLISHED: ' + meta.title + ' -> ' + post.url);
