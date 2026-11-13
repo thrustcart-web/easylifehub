@@ -1,7 +1,10 @@
 """One article = one call: plan topic -> write -> render -> gate -> queue/publish."""
 from __future__ import annotations
 
+import difflib
+import html as html_lib
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -124,6 +127,49 @@ def load_seed_articles() -> list[dict]:
     return out
 
 
+def _article_body_tokens(value: str) -> list[str]:
+    text = re.sub(r"<(script|style)\b[^>]*>[\s\S]*?</\1\s*>", " ", str(value or ""), flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.findall(r"[a-z0-9]+", html_lib.unescape(text).lower())
+
+
+def _find_duplicate_queue_article(
+    html: str, title: str, slug: str, queue_dir: Path | None = None
+) -> str | None:
+    """Detect exact duplicate bodies, or near-identical bodies with the same normalized title."""
+    directory = queue_dir or QUEUE_DIR
+    candidate_tokens = _article_body_tokens(html)
+    if len(candidate_tokens) < 180:
+        return None
+    candidate_title = " ".join(re.findall(r"[a-z0-9]+", str(title or "").lower()))
+    for meta_path in directory.glob("*.json"):
+        if meta_path.name in {"index.json", "product-audit.json"}:
+            continue
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if str(meta.get("slug") or "") == str(slug):
+            continue
+        other_title = " ".join(re.findall(r"[a-z0-9]+", str(meta.get("title") or "").lower()))
+        html_path = directory / str(meta.get("html_file") or f"{meta_path.stem}.html")
+        try:
+            other_tokens = _article_body_tokens(html_path.read_text(encoding="utf-8"))
+        except OSError:
+            continue
+        if len(other_tokens) < 180:
+            continue
+        if candidate_tokens == other_tokens:
+            return str(meta.get("slug") or meta_path.stem)
+        if candidate_title and candidate_title == other_title:
+            ratio = difflib.SequenceMatcher(
+                None, candidate_tokens, other_tokens, autojunk=False
+            ).ratio()
+            if ratio >= 0.88:
+                return str(meta.get("slug") or meta_path.stem)
+    return None
+
+
 def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dict | None:
     # A post cannot enter the automatic publishing queue until every named
     # product has a verified Amazon ASIN and a direct detail-page URL.
@@ -166,6 +212,14 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
     if not ok:
         log.error("  QUALITY GATE REJECTED %s: %s", topic["slug"], "; ".join(reasons[:4]))
         raise AIError("quality gate: " + "; ".join(reasons[:4]))
+
+    duplicate_slug = _find_duplicate_queue_article(html, article["title"], topic["slug"])
+    if duplicate_slug:
+        log.warning(
+            "  DUPLICATE ARTICLE SKIPPED: %s matches existing queue article %s",
+            topic["slug"], duplicate_slug,
+        )
+        return None
 
     path = render_mod.save_article(article, topic, cfg, aff, hero)
 
