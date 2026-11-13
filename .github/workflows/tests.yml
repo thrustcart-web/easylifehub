@@ -17,5 +17,9 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+      - name: Check Apps Script JavaScript syntax
+        run: |
+          cp appsscript/Code.gs /tmp/easylifehub-appsscript.js
+          node --check /tmp/easylifehub-appsscript.js
       - name: Run pipeline tests
         run: python3 tests/test_pipeline.py
