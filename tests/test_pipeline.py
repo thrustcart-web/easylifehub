@@ -212,8 +212,8 @@ class TestProductResolution(unittest.TestCase):
             "AMAZON_CREATORS_CLIENT_SECRET": os.environ.get("AMAZON_CREATORS_CLIENT_SECRET"),
         }
         product_resolver._search_amazon = lambda term, token: [
-            stock_row("Model One Organizer", "B000000001", "B0PARENT001"),
-            stock_row("Model Two Organizer", "B000000002", "B0PARENT001"),
+            stock_row("Model One Organizer", "B000000001", "B0PARENT01"),
+            stock_row("Model Two Organizer", "B000000002", "B0PARENT01"),
         ]
         product_resolver._save_cache = lambda cache: None
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
@@ -274,7 +274,7 @@ class TestProductResolution(unittest.TestCase):
                     "itemResults": {
                         "items": [{
                             "asin": "B0BYMRJD7R",
-                            "parentASIN": "B0PARENT001",
+                            "parentASIN": "B0PARENT01",
                             "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
                             "offersV2": {"listings": [{
                                 "condition": {"value": "New"},
@@ -308,7 +308,7 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(captured["payload"]["itemIds"], ["B0BYMRJD7R"])
         self.assertEqual(captured["payload"]["itemIdType"], "ASIN")
         self.assertEqual(captured["payload"]["condition"], "New")
-        self.assertEqual(rows["B0BYMRJD7R"]["parent_asin"], "B0PARENT001")
+        self.assertEqual(rows["B0BYMRJD7R"]["parent_asin"], "B0PARENT01")
         self.assertEqual(rows["B0BYMRJD7R"]["availability_type"], "IN_STOCK")
 
     def test_creators_search_requests_parent_asin_resource_and_only_available_new_offers(self):
@@ -322,7 +322,7 @@ class TestProductResolution(unittest.TestCase):
                     "searchResult": {
                         "items": [{
                             "asin": "B0BYMRJD7R",
-                            "parentASIN": "B0PARENT001",
+                            "parentASIN": "B0PARENT01",
                             "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
                             "offersV2": {"listings": [{
                                 "condition": {"value": "New"},
@@ -355,7 +355,7 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(captured["payload"]["availability"], "Available")
         self.assertEqual(captured["payload"]["condition"], "New")
         self.assertIn("ParentASIN", captured["payload"]["resources"])
-        self.assertEqual(rows[0]["parent_asin"], "B0PARENT001")
+        self.assertEqual(rows[0]["parent_asin"], "B0PARENT01")
         self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
 
     def test_unknown_outofstock_preorder_and_leadtime_are_not_eligible(self):
@@ -553,9 +553,9 @@ class TestProductResolution(unittest.TestCase):
 
     def test_candidate_rejects_duplicate_asin_or_parent_asin(self):
         item = {"display_name": "Marbrasse Pen Organizer", "name": "Marbrasse Pen Organizer"}
-        rows = [stock_row("Marbrasse Pen Organizer", "B000000002", "B0PARENT001")]
+        rows = [stock_row("Marbrasse Pen Organizer", "B000000002", "B0PARENT01")]
         self.assertIsNone(product_resolver._apply_candidate(
-            item, rows, used_asins={"B000000001"}, used_parent_asins={"B0PARENT001"}
+            item, rows, used_asins={"B000000001"}, used_parent_asins={"B0PARENT01"}
         ))
         rows = [stock_row("Marbrasse Pen Organizer", "B000000001")]
         self.assertIsNone(product_resolver._apply_candidate(item, rows, used_asins={"B000000001"}))
