@@ -149,15 +149,35 @@ class TestTopicPlanner(unittest.TestCase):
 
 
 
+def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str = "IN_STOCK") -> dict:
+    return {
+        "title": title,
+        "asin": asin,
+        "parent_asin": parent_asin or asin,
+        "availability_type": status,
+        "stock_checked_at": int(product_resolver.time.time()),
+    }
+
+
 class TestProductResolution(unittest.TestCase):
-    def test_creators_api_response_keeps_only_asin_and_title_identity(self):
+    def test_creators_api_response_keeps_only_in_stock_identity_fields(self):
         rows = product_resolver._creators_rows_from_response({
             "searchResult": {"items": [
                 {
                     "asin": "B0BYMRJD7R",
+                    "parentASIN": "B0BYMRJD7R",
                     "detailPageURL": "https://www.amazon.com/dp/B0BYMRJD7R?tag=testtag-20",
                     "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
-                    "offersV2": {"listings": [{"price": {"money": {"amount": 99.99}}}]},
+                    "offersV2": {"listings": [{
+                        "condition": {"value": "NEW"},
+                        "availability": {"type": "IN_STOCK"},
+                        "price": {"money": {"amount": 99.99}},
+                    }]},
+                },
+                {
+                    "asin": "B0OUTOFSTK1",
+                    "itemInfo": {"title": {"displayValue": "Out of Stock Organizer"}},
+                    "offersV2": {"listings": [{"availability": {"type": "OUTOFSTOCK"}}]},
                 },
                 {"asin": "invalid", "itemInfo": {"title": {"displayValue": "Invalid ASIN Product"}}},
             ]}
@@ -165,48 +185,41 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["asin"], "B0BYMRJD7R")
         self.assertEqual(rows[0]["title"], "Marbrasse Pen Organizer")
+        self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
+        self.assertEqual(rows[0]["parent_asin"], "B0BYMRJD7R")
         self.assertNotIn("price", rows[0])
 
-    def test_creators_api_provider_needs_credentials_but_no_paid_spend_toggle(self):
-        original_search = product_resolver._search_amazon
-        original_save = product_resolver._save_cache
-        calls = []
-        names = [
-            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
-            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
-        ]
-        old = {name: os.environ.get(name) for name in names}
+    def test_unknown_outofstock_preorder_and_leadtime_are_not_eligible(self):
+        for status in ("UNKNOWN", "OUTOFSTOCK", "PREORDER", "LEADTIME", ""):
+            rows = product_resolver._creators_rows_from_response({
+                "searchResult": {"items": [{
+                    "asin": "B0BYMRJD7R",
+                    "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
+                    "offersV2": {"listings": [{"availability": {"type": status}}]},
+                }]}
+            })
+            self.assertEqual(rows, [], status)
 
-        def fake_search(term, token):
-            calls.append(term)
-            return [{"title": "Marbrasse Pen Organizer with 2 Drawer", "asin": "B0BYMRJD7R"}]
+    def test_stock_check_expires_after_configured_max_age(self):
+        item = stock_row("Marbrasse Pen Organizer", "B0BYMRJD7R")
+        item["stock_checked_at"] -= product_resolver.STOCK_MAX_AGE_SECONDS + 60
+        self.assertFalse(product_resolver._stock_check_fresh(item))
 
-        product_resolver._search_amazon = fake_search
-        product_resolver._save_cache = lambda cache: None
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
-        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
-        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
-        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
-        os.environ.pop("APIFY_SPEND_ENABLED", None)
-        try:
-            result = product_resolver.resolve_items(
-                [{
-                    "display_name": "Marbrasse Pen Organizer",
-                    "name": "Marbrasse Pen Organizer",
-                    "search_term": "desk organizer",
-                }],
-                cache={},
-            )
-            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
-            self.assertEqual(calls, ["desk organizer"])
-        finally:
-            product_resolver._search_amazon = original_search
-            product_resolver._save_cache = original_save
-            for name, value in old.items():
-                if value is None:
-                    os.environ.pop(name, None)
-                else:
-                    os.environ[name] = value
+    def test_asin_can_be_extracted_from_direct_amazon_url(self):
+        self.assertEqual(
+            product_resolver._extract_asin({"url": "https://www.amazon.com/dp/B0BYMRJD7R?language=en"}),
+            "B0BYMRJD7R",
+        )
+
+    def test_title_matching_requires_all_product_tokens(self):
+        self.assertTrue(product_resolver.title_matches(
+            "Marbrasse Pen Organizer",
+            "Marbrasse Pen Organizer with 2 Drawer for Desk"
+        ))
+        self.assertFalse(product_resolver.title_matches(
+            "Marbrasse Pen Organizer",
+            "OPNICE Four Tier Desk File Organizer"
+        ))
 
     def test_config_defaults_to_creators_api_with_only_serpapi_fallback(self):
         cfg = fresh_cfg()
@@ -221,9 +234,48 @@ class TestProductResolution(unittest.TestCase):
             if old is not None:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
+    def test_creators_api_provider_needs_credentials_but_no_paid_spend_toggle(self):
+        original_search = product_resolver._search_amazon
+        original_save = product_resolver._save_cache
+        names = [
+            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
+            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
+        ]
+        old = {name: os.environ.get(name) for name in names}
+        calls = []
+
+        def fake_search(term, token):
+            calls.append((term, token))
+            return [stock_row("Marbrasse Pen Organizer with 2 Drawer", "B0BYMRJD7R")]
+
+        product_resolver._search_amazon = fake_search
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
+        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
+        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
+        os.environ.pop("APIFY_SPEND_ENABLED", None)
+        try:
+            result = product_resolver.resolve_items([{
+                "display_name": "Marbrasse Pen Organizer",
+                "name": "Marbrasse Pen Organizer",
+                "search_term": "desk organizer",
+            }], cache={})
+            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
+            self.assertEqual(result[0]["availability_type"], "IN_STOCK")
+            self.assertEqual(calls, [("desk organizer", "configured")])
+        finally:
+            product_resolver._search_amazon = original_search
+            product_resolver._save_cache = original_save
+            for name, value in old.items():
+                if value is None:
+                    os.environ.pop(name, None)
+                else:
+                    os.environ[name] = value
+
     def test_creators_api_falls_back_to_serpapi_only_when_explicitly_enabled(self):
         original_primary = product_resolver._search_amazon
-        original_serp = product_resolver._search_amazon_serpapi
+        original_dispatch = product_resolver._search_amazon_with_provider
         original_save = product_resolver._save_cache
         names = [
             "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
@@ -237,15 +289,12 @@ class TestProductResolution(unittest.TestCase):
             calls.append(("creators_api", term))
             return []
 
-        def serp_match(term, token):
-            calls.append(("serpapi", term, token))
-            return [{
-                "title": "Marbrasse Pen Organizer with 2 Drawer for Desk",
-                "asin": "B0BYMRJD7R",
-            }]
+        def serp_match(term, provider, token=""):
+            calls.append((provider, term, token))
+            return [stock_row("Marbrasse Pen Organizer with 2 Drawer for Desk", "B0BYMRJD7R")]
 
         product_resolver._search_amazon = creators_empty
-        product_resolver._search_amazon_serpapi = serp_match
+        product_resolver._search_amazon_with_provider = serp_match
         product_resolver._save_cache = lambda cache: None
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
         os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
@@ -254,23 +303,20 @@ class TestProductResolution(unittest.TestCase):
         os.environ["SERPAPI_SPEND_ENABLED"] = "true"
         os.environ.pop("APIFY_SPEND_ENABLED", None)
         try:
-            result = product_resolver.resolve_items(
-                [{
-                    "display_name": "Marbrasse Pen Organizer",
-                    "name": "Marbrasse Pen Organizer",
-                    "search_term": "desk organizer",
-                }],
-                cache={},
-            )
+            result = product_resolver.resolve_items([{
+                "display_name": "Marbrasse Pen Organizer",
+                "name": "Marbrasse Pen Organizer",
+                "search_term": "desk organizer",
+            }], cache={})
             self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
-            self.assertTrue(result[0]["asin_verified"])
+            self.assertEqual(result[0]["availability_type"], "IN_STOCK")
             self.assertEqual(calls, [
                 ("creators_api", "desk organizer"),
                 ("serpapi", "desk organizer", "test-serpapi-key"),
             ])
         finally:
             product_resolver._search_amazon = original_primary
-            product_resolver._search_amazon_serpapi = original_serp
+            product_resolver._search_amazon_with_provider = original_dispatch
             product_resolver._save_cache = original_save
             for name, value in old.items():
                 if value is None:
@@ -280,12 +326,11 @@ class TestProductResolution(unittest.TestCase):
 
     def test_serpapi_fallback_stays_off_without_spend_guard(self):
         original_primary = product_resolver._search_amazon
-        original_serp = product_resolver._search_amazon_serpapi
+        original_dispatch = product_resolver._search_amazon_with_provider
         original_save = product_resolver._save_cache
         names = [
             "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
-            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY",
-            "SERPAPI_SPEND_ENABLED",
+            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY", "SERPAPI_SPEND_ENABLED",
         ]
         old = {name: os.environ.get(name) for name in names}
         calls = []
@@ -294,12 +339,12 @@ class TestProductResolution(unittest.TestCase):
             calls.append("creators_api")
             return []
 
-        def serp_must_not_run(term, token):
+        def serp_must_not_run(term, provider, token=""):
             calls.append("serpapi")
             raise AssertionError("SerpApi must not run without its spend guard")
 
         product_resolver._search_amazon = creators_empty
-        product_resolver._search_amazon_serpapi = serp_must_not_run
+        product_resolver._search_amazon_with_provider = serp_must_not_run
         product_resolver._save_cache = lambda cache: None
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
         os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
@@ -307,20 +352,16 @@ class TestProductResolution(unittest.TestCase):
         os.environ["SERPAPI_API_KEY"] = "test-serpapi-key"
         os.environ.pop("SERPAPI_SPEND_ENABLED", None)
         try:
-            result = product_resolver.resolve_items(
-                [{
-                    "display_name": "Marbrasse Pen Organizer",
-                    "name": "Marbrasse Pen Organizer",
-                    "search_term": "desk organizer",
-                }],
-                cache={},
-                allow_unresolved=True,
-            )
+            result = product_resolver.resolve_items([{
+                "display_name": "Marbrasse Pen Organizer",
+                "name": "Marbrasse Pen Organizer",
+                "search_term": "desk organizer",
+            }], cache={}, allow_unresolved=True)
             self.assertFalse(result[0].get("asin_verified", False))
             self.assertEqual(calls, ["creators_api"])
         finally:
             product_resolver._search_amazon = original_primary
-            product_resolver._search_amazon_serpapi = original_serp
+            product_resolver._search_amazon_with_provider = original_dispatch
             product_resolver._save_cache = original_save
             for name, value in old.items():
                 if value is None:
@@ -341,76 +382,93 @@ class TestProductResolution(unittest.TestCase):
             else:
                 os.environ["AFFILIATE_TAG"] = old
 
-    def test_asin_can_be_extracted_from_direct_amazon_url(self):
-        asin = product_resolver._extract_asin({
-            "url": "https://www.amazon.com/dp/B0BYMRJD7R?language=en"
-        })
-        self.assertEqual(asin, "B0BYMRJD7R")
+    def test_candidate_rejects_duplicate_asin_or_parent_asin(self):
+        item = {"display_name": "Marbrasse Pen Organizer", "name": "Marbrasse Pen Organizer"}
+        rows = [stock_row("Marbrasse Pen Organizer", "B000000002", "B0PARENT001")]
+        self.assertIsNone(product_resolver._apply_candidate(
+            item, rows, used_asins={"B000000001"}, used_parent_asins={"B0PARENT001"}
+        ))
+        rows = [stock_row("Marbrasse Pen Organizer", "B000000001")]
+        self.assertIsNone(product_resolver._apply_candidate(item, rows, used_asins={"B000000001"}))
 
-    def test_title_matching_requires_all_product_tokens(self):
-        self.assertTrue(product_resolver.title_matches(
-            "Marbrasse Pen Organizer",
-            "Marbrasse Pen Organizer with 2 Drawer for Desk"
-        ))
-        self.assertFalse(product_resolver.title_matches(
-            "Marbrasse Pen Organizer",
-            "OPNICE Four Tier Desk File Organizer"
-        ))
+    def test_candidate_rejects_out_of_stock_and_stale_offers(self):
+        item = {"display_name": "Marbrasse Pen Organizer", "name": "Marbrasse Pen Organizer"}
+        out = stock_row("Marbrasse Pen Organizer", "B000000001", status="OUTOFSTOCK")
+        self.assertIsNone(product_resolver._apply_candidate(item, [out]))
+        stale = stock_row("Marbrasse Pen Organizer", "B000000001")
+        stale["stock_checked_at"] -= product_resolver.STOCK_MAX_AGE_SECONDS + 1
+        self.assertIsNone(product_resolver._apply_candidate(item, [stale]))
 
     def test_serpapi_can_omit_one_leading_brand_but_match_remaining_product_tokens(self):
         item = {
             "display_name": "Marbrasse Pen Organizer with 2 Drawer",
             "name": "Marbrasse Pen Organizer with 2 Drawer",
         }
-        rows = [{
-            "title": "Pen Organizer with 2 Drawer, Multi-Functional Pencil Holder for Desk",
-            "asin": "B0BYMRJD7R",
-        }]
-        result = product_resolver._apply_candidate(
-            item, rows, allow_missing_leading_brand=True
-        )
+        rows = [stock_row(
+            "Pen Organizer with 2 Drawer, Multi-Functional Pencil Holder for Desk",
+            "B0BYMRJD7R",
+        )]
+        result = product_resolver._apply_candidate(item, rows, allow_missing_leading_brand=True)
         self.assertIsNotNone(result)
         self.assertEqual(result["asin"], "B0BYMRJD7R")
         self.assertTrue(result["asin_verified"])
 
     def test_serpapi_does_not_ignore_a_leading_word_for_generic_product_names(self):
         item = {"display_name": "Pen Organizer", "name": "Pen Organizer"}
-        rows = [{
-            "title": "Organizer with Drawer for Office Desk",
-            "asin": "B0BYMRJD7R",
-        }]
-        result = product_resolver._apply_candidate(
-            item, rows, allow_missing_leading_brand=True
-        )
-        self.assertIsNone(result)
+        rows = [stock_row("Organizer with Drawer for Office Desk", "B0BYMRJD7R")]
+        self.assertIsNone(product_resolver._apply_candidate(item, rows, allow_missing_leading_brand=True))
+
+    def test_new_article_cannot_reuse_an_asin_from_another_queued_article(self):
+        from pathlib import Path
+        original_queue = product_resolver.ROOT / ".cache" / "test-product-registry"
+        original_dir = product_resolver.ROOT
+        temp_queue = original_queue
+        temp_queue.mkdir(parents=True, exist_ok=True)
+        old_queue_dir = util.QUEUE_DIR
+        try:
+            util.QUEUE_DIR = temp_queue
+            (temp_queue / "existing.json").write_text(json.dumps({
+                "slug": "existing-article",
+                "items": [{"asin": "B0BYMRJD7R", "parent_asin": "B0BYMRJD7R"}],
+            }), encoding="utf-8")
+            used_asins, used_parents = product_resolver._load_product_registry()
+            rows = [stock_row("Marbrasse Pen Organizer", "B0BYMRJD7R")]
+            self.assertIsNone(product_resolver._apply_candidate(
+                {"display_name": "Marbrasse Pen Organizer"},
+                rows, used_asins=used_asins, used_parent_asins=used_parents,
+            ))
+        finally:
+            util.QUEUE_DIR = old_queue_dir
+            for path in temp_queue.glob("*"):
+                path.unlink()
+            temp_queue.rmdir()
 
     def test_resolves_only_matching_asin_from_apify_results(self):
         original_search = product_resolver._search_amazon
         original_save = product_resolver._save_cache
         calls = []
+        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
 
         def fake_search(term, token):
             calls.append((term, token))
             return [
-                {"title": "OPNICE Four Tier Desk File Organizer", "asin": "B0BYDGF8DT"},
-                {"title": "Marbrasse Pen Organizer with 2 Drawer for Desk", "asin": "B0BYMRJD7R"},
+                stock_row("OPNICE Four Tier Desk File Organizer", "B0BYDGF8DT"),
+                stock_row("Marbrasse Pen Organizer with 2 Drawer for Desk", "B0BYMRJD7R"),
             ]
 
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
-        old_spend = os.environ.get("APIFY_SPEND_ENABLED")
-        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ["APIFY_SPEND_ENABLED"] = "true"
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
-            items = [{
+            result = product_resolver.resolve_items([{
                 "display_name": "Marbrasse Pen Organizer",
                 "name": "Marbrasse Pen Organizer",
                 "search_term": "desk organizer",
-            }]
-            result = product_resolver.resolve_items(items, api_token="test-token", cache={})
+            }], api_token="test-token", cache={})
             self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
-            self.assertTrue(result[0]["asin_verified"])
+            self.assertEqual(result[0]["availability_type"], "IN_STOCK")
             self.assertEqual(calls, [("desk organizer", "test-token")])
         finally:
             product_resolver._search_amazon = original_search
@@ -429,11 +487,7 @@ class TestProductResolution(unittest.TestCase):
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "TEST_API"):
-                product_resolver.resolve_items(
-                    [{"display_name": "A Product", "name": "A Product"}],
-                    api_token="",
-                    cache={},
-                )
+                product_resolver.resolve_items([{"display_name": "A Product", "name": "A Product"}], api_token="", cache={})
         finally:
             if old_provider is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
@@ -449,8 +503,7 @@ class TestProductResolution(unittest.TestCase):
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "spending is disabled"):
                 product_resolver.resolve_items(
                     [{"display_name": "A Product", "name": "A Product"}],
-                    api_token="fake-token",
-                    cache={},
+                    api_token="fake-token", cache={},
                 )
         finally:
             if old is not None:
@@ -460,33 +513,37 @@ class TestProductResolution(unittest.TestCase):
             else:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
-    def test_apify_search_omits_delivery_location_and_caps_cost(self):
+    def test_apify_search_is_stock_checked_before_it_returns_candidates(self):
         class FakeResponse:
             def __enter__(self):
                 return self
-
             def __exit__(self, *args):
                 return False
-
             def read(self):
                 return b'[{"title":"Desk Organizer","asin":"B0BYDGF8DT"}]'
 
         captured = {}
         original_urlopen = product_resolver.request.urlopen
+        original_stock_check = product_resolver._creators_get_items_by_asin
+        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
 
         def fake_urlopen(req, timeout=0):
             captured["url"] = req.full_url
             captured["payload"] = json.loads(req.data.decode("utf-8"))
             return FakeResponse()
 
-        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         product_resolver.request.urlopen = fake_urlopen
+        product_resolver._creators_get_items_by_asin = lambda asins: {
+            "B0BYDGF8DT": stock_row("Desk Organizer", "B0BYDGF8DT")
+        }
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             rows = product_resolver._search_amazon("desk organizer", "fake-token")
             self.assertEqual(rows[0]["asin"], "B0BYDGF8DT")
+            self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
         finally:
             product_resolver.request.urlopen = original_urlopen
+            product_resolver._creators_get_items_by_asin = original_stock_check
             if old_provider is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
             else:
@@ -498,14 +555,12 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 3)
         self.assertFalse(captured["payload"]["scrapeProductDetails"])
 
-    def test_serpapi_returns_only_verified_identity_fields(self):
+    def test_serpapi_returns_only_identity_fields_after_official_stock_check(self):
         class FakeResponse:
             def __enter__(self):
                 return self
-
             def __exit__(self, *args):
                 return False
-
             def read(self):
                 return json.dumps({
                     "search_metadata": {"status": "Success"},
@@ -513,21 +568,15 @@ class TestProductResolution(unittest.TestCase):
                         {
                             "title": "Marbrasse Pen Organizer with 2 Drawer",
                             "asin": "B0BYMRJD7R",
-                            "price": "$29.99",
-                            "rating": 4.5,
-                            "reviews": 5576,
-                            "sponsored": False,
+                            "price": "$29.99", "rating": 4.5, "reviews": 5576, "sponsored": False,
                         },
-                        {
-                            "title": "Sponsored unrelated organizer",
-                            "asin": "B000000001",
-                            "sponsored": True,
-                        },
+                        {"title": "Sponsored unrelated organizer", "asin": "B000000001", "sponsored": True},
                     ],
                 }).encode("utf-8")
 
         captured = {}
         original_urlopen = product_resolver.request.urlopen
+        original_stock_check = product_resolver._creators_get_items_by_asin
         old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
 
         def fake_urlopen(req, timeout=0):
@@ -535,11 +584,15 @@ class TestProductResolution(unittest.TestCase):
             return FakeResponse()
 
         product_resolver.request.urlopen = fake_urlopen
+        product_resolver._creators_get_items_by_asin = lambda asins: {
+            "B0BYMRJD7R": stock_row("Marbrasse Pen Organizer with 2 Drawer", "B0BYMRJD7R")
+        }
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
         try:
             rows = product_resolver._search_amazon("Marbrasse Pen Organizer", "fake-serpapi-key")
         finally:
             product_resolver.request.urlopen = original_urlopen
+            product_resolver._creators_get_items_by_asin = original_stock_check
             if old_provider is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
             else:
@@ -551,10 +604,10 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(params["amazon_domain"], ["amazon.com"])
         self.assertNotIn("delivery_zip", params)
         self.assertNotIn("shipping_location", params)
-        self.assertEqual(rows, [{
-            "title": "Marbrasse Pen Organizer with 2 Drawer",
-            "asin": "B0BYMRJD7R",
-        }])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["asin"], "B0BYMRJD7R")
+        self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
+        self.assertNotIn("price", rows[0])
 
     def test_serpapi_provider_uses_its_own_explicit_spend_guard(self):
         original_search = product_resolver._search_amazon
@@ -565,25 +618,18 @@ class TestProductResolution(unittest.TestCase):
 
         def fake_search(term, token):
             calls.append((term, token))
-            return [{
-                "title": "Marbrasse Pen Organizer with 2 Drawer",
-                "asin": "B0BYMRJD7R",
-            }]
+            return [stock_row("Marbrasse Pen Organizer with 2 Drawer", "B0BYMRJD7R")]
 
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
         os.environ["SERPAPI_SPEND_ENABLED"] = "true"
         try:
-            result = product_resolver.resolve_items(
-                [{
-                    "display_name": "Marbrasse Pen Organizer",
-                    "name": "Marbrasse Pen Organizer",
-                    "search_term": "desk organizer",
-                }],
-                api_token="fake-serpapi-key",
-                cache={},
-            )
+            result = product_resolver.resolve_items([{
+                "display_name": "Marbrasse Pen Organizer",
+                "name": "Marbrasse Pen Organizer",
+                "search_term": "desk organizer",
+            }], api_token="fake-serpapi-key", cache={})
             self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
             self.assertEqual(calls, [("desk organizer", "fake-serpapi-key")])
         finally:
@@ -604,9 +650,7 @@ class TestProductResolution(unittest.TestCase):
 
         def blocked_search(term, token):
             calls.append(term)
-            raise product_resolver.ProductResolutionError(
-                "Apify Actor HTTP 403: actor-disabled monthly usage limit"
-            )
+            raise product_resolver.ProductResolutionError("Apify Actor HTTP 403: actor-disabled monthly usage limit")
 
         product_resolver._search_amazon = blocked_search
         old_spend = os.environ.get("APIFY_SPEND_ENABLED")
@@ -615,15 +659,10 @@ class TestProductResolution(unittest.TestCase):
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "403"):
-                product_resolver.resolve_items(
-                    [
-                        {"display_name": "Desk Organizer", "search_term": "desk organizer"},
-                        {"display_name": "Pen Holder", "search_term": "pen holder"},
-                    ],
-                    api_token="fake-token",
-                    cache={},
-                    allow_unresolved=True,
-                )
+                product_resolver.resolve_items([
+                    {"display_name": "Desk Organizer", "search_term": "desk organizer"},
+                    {"display_name": "Pen Holder", "search_term": "pen holder"},
+                ], api_token="fake-token", cache={}, allow_unresolved=True)
         finally:
             product_resolver._search_amazon = original_search
             if old_spend is None:
@@ -634,7 +673,6 @@ class TestProductResolution(unittest.TestCase):
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
             else:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
-
         self.assertEqual(calls, ["desk organizer"])
 
 
