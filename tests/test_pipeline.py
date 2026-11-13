@@ -171,6 +171,24 @@ def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str
 
 
 class TestProductResolution(unittest.TestCase):
+    def test_editorial_review_is_separate_from_stock_review(self):
+        self.assertFalse(product_resolver._editorial_review_required({
+            "source": "ai:gemini",
+            "review_required": True,
+        }))
+        self.assertFalse(product_resolver._editorial_review_required({
+            "source": "seed",
+            "review_required": True,
+        }))
+        self.assertTrue(product_resolver._editorial_review_required({
+            "source": "template",
+            "review_required": False,
+        }))
+        self.assertTrue(product_resolver._editorial_review_required({
+            "source": "ai:gemini",
+            "editorial_review_required": True,
+        }))
+
     def test_generate_skips_exact_duplicate_queue_article_body(self):
         queue = _TMP / "dupe-queue"
         queue.mkdir(exist_ok=True)
