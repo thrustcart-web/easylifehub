@@ -468,6 +468,9 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             "asin": i.get("asin", ""),
             "asin_verified": i.get("asin_verified") is True,
             "verified_product_title": i.get("verified_product_title", ""),
+            "parent_asin": i.get("parent_asin", ""),
+            "availability_type": i.get("availability_type", "UNKNOWN"),
+            "stock_checked_at": int(i.get("stock_checked_at") or 0),
             "search_term": i.get("search_term", ""),
             "url": aff.url_for(i),
         }
@@ -479,7 +482,11 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
         # Offline fallback copy is useful as a starting point, but it has not
         # been independently fact-checked; keep it out of automatic publishing.
         "product_links_verified": bool(topic.get("items")) and all(
-            bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", [])
+            bool(i.get("asin_verified"))
+            and bool(aff.url_for(i))
+            and str(i.get("availability_type") or "").upper() in {"IN_STOCK", "INSTOCK", "INSTOCKSCARCE"}
+            and int(i.get("stock_checked_at") or 0) > 0
+            for i in topic.get("items", [])
         ),
         "review_required": not (
             (
@@ -488,7 +495,13 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
                 or article.get("_editorial_approved") is True
             )
             and bool(topic.get("items"))
-            and all(bool(i.get("asin_verified")) and bool(aff.url_for(i)) for i in topic.get("items", []))
+            and all(
+                bool(i.get("asin_verified"))
+                and bool(aff.url_for(i))
+                and str(i.get("availability_type") or "").upper() in {"IN_STOCK", "INSTOCK", "INSTOCKSCARCE"}
+                and int(i.get("stock_checked_at") or 0) > 0
+                for i in topic.get("items", [])
+            )
         ),
     }
     (QUEUE_DIR / f"{slug}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
