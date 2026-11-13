@@ -898,8 +898,15 @@ function auditAmazonProducts() {
     var queuePosts = index.posts || [];
     var maps = postSlugMaps_(queuePosts);
     var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
+    blogPosts.sort(function (a, b) {
+      var statusA = String(a._easyLifeStatus || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusB = String(b._easyLifeStatus || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      if (statusA !== statusB) return statusA - statusB;
+      return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
+    });
     var externalAsins = {};
-    var managedSlugs = {};
+    var managedSlugs = [];
+    var managedSeen = {};
     var liveCount = 0;
     var scheduledCount = 0;
 
@@ -910,7 +917,10 @@ function auditAmazonProducts() {
       var slug = maps.byPostId[String(post.id)] ||
         maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
       if (slug) {
-        managedSlugs[slug] = true;
+        if (!managedSeen[slug]) {
+          managedSeen[slug] = true;
+          managedSlugs.push(slug);
+        }
       } else {
         extractAmazonAsins_(post.content || '').forEach(function (asin) {
           externalAsins[asin] = true;
@@ -919,7 +929,7 @@ function auditAmazonProducts() {
     });
 
     var reservedExternal = Object.keys(externalAsins).sort();
-    var reservedManaged = Object.keys(managedSlugs).sort();
+    var reservedManaged = managedSlugs;
     P.setProperty('BLOG_EXTERNAL_ASINS', JSON.stringify(reservedExternal));
     P.setProperty('BLOG_RESERVED_SLUGS', JSON.stringify(reservedManaged));
 
