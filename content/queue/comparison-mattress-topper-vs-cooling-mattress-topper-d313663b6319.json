@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319",
+  "title": "Mattress Topper or Cooling Mattress Topper? The Honest Comparison",
+  "meta_description": "Compare a standard mattress topper with a cooling version, looking at material, breathability, fit, sleeper type, setup and ownership to guide your choice.",
+  "template": "comparison",
+  "niche": "sleep",
+  "keyword": "Mattress Topper vs Cooling Mattress Topper",
+  "labels": [
+    "Reviews",
+    "Sleep"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 758,
+  "items": [
+    {
+      "name": "Mattress Topper",
+      "asin": "B0D3D5LKG9",
+      "asin_verified": true,
+      "verified_product_title": "BEDLORE Queen Mattress Topper, Thick Soft Pillow Top Bed Topper | Viscose Bamboo, Stretchable Pockets Fit 6”-18”, Breathable Mattress Topper for Back Pain Relief and Hot Sleepers(Dark Gray)",
+      "parent_asin": "B0FWZCRYB4",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794579062,
+      "search_term": "Mattress Topper",
+      "url": "https://www.amazon.com/dp/B0D3D5LKG9?tag=ezylifehub-20"
+    },
+    {
+      "name": "Cooling Mattress Topper",
+      "asin": "B0GCD1F8DZ",
+      "asin_verified": true,
+      "verified_product_title": "Mattress Pad Queen Size, Cooling Pillow Top Mattress Topper, Ultra Soft Viscose Made from Bamboo, Breathable for Hot Sleepers, Deep Pocket 8\"-20\", Green",
+      "parent_asin": "B0GVYXXD6L",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794579063,
+      "search_term": "Cooling Mattress Topper",
+      "url": "https://www.amazon.com/dp/B0GCD1F8DZ?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

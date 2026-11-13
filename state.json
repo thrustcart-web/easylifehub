@@ -377,6 +377,42 @@
       "ts": "2026-11-13T02:20:34Z",
       "source": "ai:gemini",
       "words": 694
+    },
+    {
+      "slug": "bestof-home-office-desk-pad-cefef8cfaa25",
+      "title": "Best Home Office Gear: 3 Picks Compared Honestly",
+      "template": "bestof",
+      "keyword": "Home Office",
+      "ts": "2026-11-13T14:11:01Z",
+      "source": "ai:groq",
+      "words": 752
+    },
+    {
+      "slug": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319",
+      "title": "Mattress Topper or Cooling Mattress Topper? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "Mattress Topper vs Cooling Mattress Topper",
+      "ts": "2026-11-13T14:11:11Z",
+      "source": "ai:groq",
+      "words": 758
+    },
+    {
+      "slug": "bestof-tools-wrench-50c42e618342",
+      "title": "Power Tools Roundup: 3 Picks With the Trade-Offs Stated",
+      "template": "bestof",
+      "keyword": "Tools",
+      "ts": "2026-11-13T14:12:38Z",
+      "source": "ai:groq",
+      "words": 710
+    },
+    {
+      "slug": "review-cabinet-locks-62cfe8674cb9",
+      "title": "Cabinet Locks with Width Range: Does It Matter or Is It Marketing?",
+      "template": "review",
+      "keyword": "cabinet locks for renters",
+      "ts": "2026-11-13T14:14:11Z",
+      "source": "ai:gemini",
+      "words": 675
     }
   ],
   "published": [],
@@ -422,7 +458,11 @@
     "bestof-budget-tech-bank-7ff94e9fcf2e",
     "comparison-blender-vs-personal-blender-a0d8861f0764",
     "bestof-electronics-webcam-931db97bdda7",
-    "review-smart-fan-fe34301450a1"
+    "review-smart-fan-fe34301450a1",
+    "bestof-home-office-desk-pad-cefef8cfaa25",
+    "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319",
+    "bestof-tools-wrench-50c42e618342",
+    "review-cabinet-locks-62cfe8674cb9"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -605,7 +645,27 @@
     "wireless charger for frequent travellers": "2026-11-13",
     "smart fan": "2026-11-13",
     "Smart Fan": "2026-11-13",
-    "smart fan for energy savers": "2026-11-13"
+    "smart fan for energy savers": "2026-11-13",
+    "home office:cable management kit|noise cancelling headphones|wrist rest": "2026-11-13",
+    "Cable Management Kit": "2026-11-13",
+    "cable management kit for cluttered setups": "2026-11-13",
+    "Wrist Rest": "2026-11-13",
+    "wrist rest for wrist pain": "2026-11-13",
+    "Noise Cancelling Headphones": "2026-11-13",
+    "noise cancelling headphones for shared spaces": "2026-11-13",
+    "mattress topper|cooling mattress topper": "2026-11-13",
+    "Mattress Topper": "2026-11-13",
+    "Cooling Mattress Topper": "2026-11-13",
+    "tools:jigsaw|screwdriver set|tool set": "2026-11-13",
+    "Screwdriver Set": "2026-11-13",
+    "screwdriver set for home repairs": "2026-11-13",
+    "Tool Set": "2026-11-13",
+    "tool set for diy beginners": "2026-11-13",
+    "Jigsaw": "2026-11-13",
+    "jigsaw for curved cuts": "2026-11-13",
+    "cabinet locks": "2026-11-13",
+    "Cabinet Locks": "2026-11-13",
+    "cabinet locks for renters": "2026-11-13"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -700,7 +760,13 @@
     "{A} {P} Review: What I Would Check Before Buying",
     "{A} vs {B}: Deciding Between Two Good Options",
     "{N} {F} Options Worth Your Money (and the Ones to Skip)",
-    "Before You Buy {A} {P} for {AUD}: Read This"
+    "Before You Buy {A} {P} for {AUD}: Read This",
+    "Cheap {P}: What Under {BUD} Really Buys You",
+    "Best {F}: {N} Picks Compared Honestly",
+    "{A} or {B}? The Honest Comparison",
+    "Best {P} for {AUD}: What Actually Matters",
+    "{F} Roundup: {N} Picks With the Trade-Offs Stated",
+    "{P} with {FEAT}: Does It Matter or Is It Marketing?"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -709,7 +775,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 42,
+    "total_generated": 46,
     "total_published": 0
   },
   "blogger_titles": [

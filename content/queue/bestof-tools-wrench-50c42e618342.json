@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-tools-wrench-50c42e618342",
+  "title": "Power Tools Roundup: 3 Picks With the Trade-Offs Stated",
+  "meta_description": "Compare a magnetic screwdriver set, a 94-piece tool kit, and a corded jigsaw. This guide outlines verified features and setup details for your next project.",
+  "template": "bestof",
+  "niche": "tools",
+  "keyword": "Tools",
+  "labels": [
+    "Reviews",
+    "Tools"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 710,
+  "items": [
+    {
+      "name": "Screwdriver Set",
+      "asin": "B0FNBV7NG7",
+      "asin_verified": true,
+      "verified_product_title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
+      "parent_asin": "B0FNBV7NG7",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794579139,
+      "search_term": "screwdriver set for home repairs",
+      "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=ezylifehub-20"
+    },
+    {
+      "name": "Tool Set",
+      "asin": "B0GR9NLSQZ",
+      "asin_verified": true,
+      "verified_product_title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
+      "parent_asin": "B0GXYMC2LG",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794579140,
+      "search_term": "tool set for diy beginners",
+      "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=ezylifehub-20"
+    },
+    {
+      "name": "Jigsaw",
+      "asin": "B0H6B4JD26",
+      "asin_verified": true,
+      "verified_product_title": "Winmitool 5.5-Amp Corded Jig Saw, Electric Jigsaw Tool for Wood Cutting, 6-Speed Wood Cutting Tool with 4 Orbital Settings & ±45° Bevel Cutting, Tool-free Blade Change, Corded Jigsaw Kit with Case",
+      "parent_asin": "B0H6B5L8K9",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794579141,
+      "search_term": "jigsaw for curved cuts",
+      "url": "https://www.amazon.com/dp/B0H6B4JD26?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-tools-wrench-50c42e618342.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

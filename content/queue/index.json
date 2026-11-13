@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 42,
+  "count": 46,
   "posts": [
     {
       "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
@@ -515,6 +515,62 @@
       "product_review_required": true
     },
     {
+      "slug": "bestof-home-office-desk-pad-cefef8cfaa25",
+      "title": "Best Home Office Gear: 3 Picks Compared Honestly",
+      "meta_description": "Compare a cable management kit, ergonomic wrist rest, and noise‑cancelling headphones for home offices. Learn features, setup tips, and who each product suits.",
+      "template": "bestof",
+      "niche": "home office",
+      "keyword": "Home Office",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 752,
+      "items": [
+        {
+          "name": "Cable Management Kit",
+          "asin": "B0B687J37D",
+          "asin_verified": true,
+          "verified_product_title": "N NOROCME 192 PCS Cable Management Kit 4 Wire Organizer Sleeve | 11 Cable Holder,35Cord Clips 10+2 Roll Cable Organizer Straps,100 Fastening Cable Ties,for Computer TV Under Desk",
+          "parent_asin": "B0B687J37D",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579050,
+          "search_term": "cable management kit for cluttered setups",
+          "url": "https://www.amazon.com/dp/B0B687J37D?tag=ezylifehub-20"
+        },
+        {
+          "name": "Wrist Rest",
+          "asin": "B0CDK4SKT6",
+          "asin_verified": true,
+          "verified_product_title": "MEKASS Ergonomic Wrist Rest for Keyboard and Mouse Set, Classic Black | Soft Memory Foam, Non-Slip Keyboard Wrist Rest, Pain Relief, Wrist Support Pad for Office, Gaming & Computer Accessories",
+          "parent_asin": "B0HFJ5CRC5",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579051,
+          "search_term": "wrist rest for wrist pain",
+          "url": "https://www.amazon.com/dp/B0CDK4SKT6?tag=ezylifehub-20"
+        },
+        {
+          "name": "Noise Cancelling Headphones",
+          "asin": "B0HNS972CJ",
+          "asin_verified": true,
+          "verified_product_title": "Boean Active Noise Cancelling Headphones, Bluetooth 6.0 Wireless Over Ear Headphones with 360° Spatial Audio, 120H Playtime & 5 ENC Mics, Soft Memory Foam, Transparency Mode for Office Travel",
+          "parent_asin": "B0HQH99DS6",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579052,
+          "search_term": "noise cancelling headphones for shared spaces",
+          "url": "https://www.amazon.com/dp/B0HNS972CJ?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-home-office-desk-pad-cefef8cfaa25.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "bestof-home-office-organiser-525dc4fb9a20",
       "title": "5 Home Office Essentials for a More Functional Workspace",
       "meta_description": "Discover five core items for a functional workspace, including a weekly planner, l-shaped desk, ergonomic chair, webcam, and external storage.",
@@ -653,6 +709,62 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "bestof-tools-wrench-50c42e618342",
+      "title": "Power Tools Roundup: 3 Picks With the Trade-Offs Stated",
+      "meta_description": "Compare a magnetic screwdriver set, a 94-piece tool kit, and a corded jigsaw. This guide outlines verified features and setup details for your next project.",
+      "template": "bestof",
+      "niche": "tools",
+      "keyword": "Tools",
+      "labels": [
+        "Reviews",
+        "Tools"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 710,
+      "items": [
+        {
+          "name": "Screwdriver Set",
+          "asin": "B0FNBV7NG7",
+          "asin_verified": true,
+          "verified_product_title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
+          "parent_asin": "B0FNBV7NG7",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579139,
+          "search_term": "screwdriver set for home repairs",
+          "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=ezylifehub-20"
+        },
+        {
+          "name": "Tool Set",
+          "asin": "B0GR9NLSQZ",
+          "asin_verified": true,
+          "verified_product_title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
+          "parent_asin": "B0GXYMC2LG",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579140,
+          "search_term": "tool set for diy beginners",
+          "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=ezylifehub-20"
+        },
+        {
+          "name": "Jigsaw",
+          "asin": "B0H6B4JD26",
+          "asin_verified": true,
+          "verified_product_title": "Winmitool 5.5-Amp Corded Jig Saw, Electric Jigsaw Tool for Wood Cutting, 6-Speed Wood Cutting Tool with 4 Orbital Settings & ±45° Bevel Cutting, Tool-free Blade Change, Corded Jigsaw Kit with Case",
+          "parent_asin": "B0H6B5L8K9",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579141,
+          "search_term": "jigsaw for curved cuts",
+          "url": "https://www.amazon.com/dp/B0H6B4JD26?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-tools-wrench-50c42e618342.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
@@ -847,6 +959,51 @@
       "product_review_required": false
     },
     {
+      "slug": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319",
+      "title": "Mattress Topper or Cooling Mattress Topper? The Honest Comparison",
+      "meta_description": "Compare a standard mattress topper with a cooling version, looking at material, breathability, fit, sleeper type, setup and ownership to guide your choice.",
+      "template": "comparison",
+      "niche": "sleep",
+      "keyword": "Mattress Topper vs Cooling Mattress Topper",
+      "labels": [
+        "Reviews",
+        "Sleep"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 758,
+      "items": [
+        {
+          "name": "Mattress Topper",
+          "asin": "B0D3D5LKG9",
+          "asin_verified": true,
+          "verified_product_title": "BEDLORE Queen Mattress Topper, Thick Soft Pillow Top Bed Topper | Viscose Bamboo, Stretchable Pockets Fit 6”-18”, Breathable Mattress Topper for Back Pain Relief and Hot Sleepers(Dark Gray)",
+          "parent_asin": "B0FWZCRYB4",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579062,
+          "search_term": "Mattress Topper",
+          "url": "https://www.amazon.com/dp/B0D3D5LKG9?tag=ezylifehub-20"
+        },
+        {
+          "name": "Cooling Mattress Topper",
+          "asin": "B0GCD1F8DZ",
+          "asin_verified": true,
+          "verified_product_title": "Mattress Pad Queen Size, Cooling Pillow Top Mattress Topper, Ultra Soft Viscose Made from Bamboo, Breathable for Hot Sleepers, Deep Pocket 8\"-20\", Green",
+          "parent_asin": "B0GVYXXD6L",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579063,
+          "search_term": "Cooling Mattress Topper",
+          "url": "https://www.amazon.com/dp/B0GCD1F8DZ?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
       "title": "Monitor Arm vs Monitor Stand: Which One Should You Actually Buy?",
       "meta_description": "Compare the VIVO Monitor Arm and OPNICE Monitor Stand Riser to find out which setup fits your desk, screen size, and workspace storage needs effectively.",
@@ -1026,6 +1183,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
+    },
+    {
+      "slug": "review-cabinet-locks-62cfe8674cb9",
+      "title": "Cabinet Locks with Width Range: Does It Matter or Is It Marketing?",
+      "meta_description": "Discover if adjustable width range matters for adhesive child safety latches. Learn setup tips, renter compatibility, and fit checks for Infinno cabinet locks.",
+      "template": "review",
+      "niche": "baby & kids",
+      "keyword": "cabinet locks for renters",
+      "labels": [
+        "Reviews",
+        "Baby & Kids"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 675,
+      "items": [
+        {
+          "name": "Cabinet Locks",
+          "asin": "B0FVCZBDQ1",
+          "asin_verified": true,
+          "verified_product_title": "Infinno Cabinet Locks for Baby Proofing, Child Safety Latches, 12 Pack | No drill 3M adhesive, heavy duty hold, fits drawers, cupboards and fridge, installs in minutes, keeps toddlers and pets out",
+          "parent_asin": "B0H2PKBJJR",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794579158,
+          "search_term": "cabinet locks for renters",
+          "url": "https://www.amazon.com/dp/B0FVCZBDQ1?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-cabinet-locks-62cfe8674cb9.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-car-dash-mat-0dee1955dee4",

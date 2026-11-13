@@ -819,5 +819,93 @@
     "availability_type": "IN_STOCK",
     "stock_checked_at": 1794566226,
     "verified_at": "2026-11-13T10:37:30Z"
+  },
+  "tweezers": {
+    "asin": "B0BNNGC3Q2",
+    "parent_asin": "B0HBMR5BQ6",
+    "title": "kaverme 3PCS Precision Tweezers Set, Upgraded Anti-Static Stainless Steel | Tweezers for Electronics, Soldering, Laboratory Work, Jewelry-Making, Model, Craft",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794578942,
+    "verified_at": "2026-11-13T14:09:02Z"
+  },
+  "cable management kit": {
+    "asin": "B0B687J37D",
+    "parent_asin": "B0B687J37D",
+    "title": "N NOROCME 192 PCS Cable Management Kit 4 Wire Organizer Sleeve | 11 Cable Holder,35Cord Clips 10+2 Roll Cable Organizer Straps,100 Fastening Cable Ties,for Computer TV Under Desk",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579050,
+    "verified_at": "2026-11-13T14:10:50Z"
+  },
+  "wrist rest": {
+    "asin": "B0CDK4SKT6",
+    "parent_asin": "B0HFJ5CRC5",
+    "title": "MEKASS Ergonomic Wrist Rest for Keyboard and Mouse Set, Classic Black | Soft Memory Foam, Non-Slip Keyboard Wrist Rest, Pain Relief, Wrist Support Pad for Office, Gaming & Computer Accessories",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579051,
+    "verified_at": "2026-11-13T14:10:51Z"
+  },
+  "noise cancelling headphones": {
+    "asin": "B0HNS972CJ",
+    "parent_asin": "B0HQH99DS6",
+    "title": "Boean Active Noise Cancelling Headphones, Bluetooth 6.0 Wireless Over Ear Headphones with 360° Spatial Audio, 120H Playtime & 5 ENC Mics, Soft Memory Foam, Transparency Mode for Office Travel",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579052,
+    "verified_at": "2026-11-13T14:10:52Z"
+  },
+  "mattress topper": {
+    "asin": "B0D3D5LKG9",
+    "parent_asin": "B0FWZCRYB4",
+    "title": "BEDLORE Queen Mattress Topper, Thick Soft Pillow Top Bed Topper | Viscose Bamboo, Stretchable Pockets Fit 6”-18”, Breathable Mattress Topper for Back Pain Relief and Hot Sleepers(Dark Gray)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579062,
+    "verified_at": "2026-11-13T14:11:02Z"
+  },
+  "cooling mattress topper": {
+    "asin": "B0GCD1F8DZ",
+    "parent_asin": "B0GVYXXD6L",
+    "title": "Mattress Pad Queen Size, Cooling Pillow Top Mattress Topper, Ultra Soft Viscose Made from Bamboo, Breathable for Hot Sleepers, Deep Pocket 8\"-20\", Green",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579063,
+    "verified_at": "2026-11-13T14:11:03Z"
+  },
+  "obd2 scanner": {
+    "asin": "B0H4ZK3G8Z",
+    "parent_asin": "B0HRFGLHWC",
+    "title": "OBD2 Bluetooth Scanner ENG AT ABS SRS 4 System Code Reader No Subscription | Car Diagnostic Tools For IOS And Android Lifetime Free App Vehicle code Analysis And AI Repair Suggestions Vehicles 1996+",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579071,
+    "verified_at": "2026-11-13T14:11:11Z"
+  },
+  "screwdriver set": {
+    "asin": "B0FNBV7NG7",
+    "parent_asin": "B0FNBV7NG7",
+    "title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579139,
+    "verified_at": "2026-11-13T14:12:19Z"
+  },
+  "tool set": {
+    "asin": "B0GR9NLSQZ",
+    "parent_asin": "B0GXYMC2LG",
+    "title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579140,
+    "verified_at": "2026-11-13T14:12:20Z"
+  },
+  "jigsaw": {
+    "asin": "B0H6B4JD26",
+    "parent_asin": "B0H6B5L8K9",
+    "title": "Winmitool 5.5-Amp Corded Jig Saw, Electric Jigsaw Tool for Wood Cutting, 6-Speed Wood Cutting Tool with 4 Orbital Settings & ±45° Bevel Cutting, Tool-free Blade Change, Corded Jigsaw Kit with Case",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579141,
+    "verified_at": "2026-11-13T14:12:21Z"
+  },
+  "cabinet locks": {
+    "asin": "B0FVCZBDQ1",
+    "parent_asin": "B0H2PKBJJR",
+    "title": "Infinno Cabinet Locks for Baby Proofing, Child Safety Latches, 12 Pack | No drill 3M adhesive, heavy duty hold, fits drawers, cupboards and fridge, installs in minutes, keeps toddlers and pets out",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794579158,
+    "verified_at": "2026-11-13T14:12:38Z"
   }
 }
