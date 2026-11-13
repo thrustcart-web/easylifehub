@@ -100,6 +100,15 @@ class TestArticleDetection(unittest.TestCase):
 
 
 class TestTopicPlanner(unittest.TestCase):
+    def test_title_key_ignores_punctuation_and_case(self):
+        self.assertEqual(
+            topic_planner._title_key("The Best Desk-Organizer!"),
+            topic_planner._title_key("the best desk organizer"),
+        )
+
+    def test_title_key_is_empty_for_empty_title(self):
+        self.assertEqual(topic_planner._title_key(""), "")
+
     def test_topics_are_valid_and_unique(self):
         topics = topic_planner.next_topics(state=util.load_state(), count=25)
         self.assertEqual(len(topics), 25)
