@@ -20,6 +20,7 @@ without you ever opening it.
 """
 from __future__ import annotations
 
+import json
 import random
 import re
 from collections import defaultdict
@@ -237,6 +238,11 @@ def _cooled(subject: str, used: dict, cooldown_days: int) -> bool:
     except ValueError:
         return True
     return datetime.utcnow() - last_dt >= timedelta(days=cooldown_days)
+
+
+def _title_key(value: str) -> str:
+    """Normalize case and punctuation for exact-title duplicate prevention."""
+    return " ".join(re.findall(r"[a-z0-9]+", str(value or "").lower()))
 
 
 def _make_slug(template: str, identity: str, head: str) -> str:
@@ -743,9 +749,30 @@ def next_topics(state: dict | None = None, count: int = 3) -> list[dict]:
     generated_slugs = {g["slug"] for g in state.get("generated", [])}
     recent_templates = [g.get("template") for g in state.get("generated", [])[-4:]]
     used_titles = state.setdefault("titles_used", [])
-    # every headline the blog has ever produced - the hard anti-duplicate guard
+    # Titles from historical generation, the current queue and Blogger LIVE,
+    # SCHEDULED and DRAFT posts all participate in one hard duplicate guard.
     seen_titles = {str(g.get("title", "")).strip().lower()
                    for g in state.get("generated", []) if g.get("title")}
+    seen_titles.update(
+        str(title).strip().lower()
+        for title in state.get("blogger_titles", [])
+        if str(title).strip()
+    )
+    queue_dir = ROOT / "content" / "queue"
+    for queued_meta in queue_dir.glob("*.json"):
+        if queued_meta.name in {"index.json", "product-audit.json"}:
+            continue
+        try:
+            queued = json.loads(queued_meta.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if queued.get("title"):
+            seen_titles.add(str(queued["title"]).strip().lower())
+    seen_title_keys = {_title_key(title) for title in seen_titles if _title_key(title)}
+    for title in used_titles:
+        key = _title_key(title)
+        if key:
+            seen_title_keys.add(key)
     recent_families = [g.get("family") for g in state.get("generated", [])[-3:]]
 
     products = load_products()
@@ -789,9 +816,12 @@ def next_topics(state: dict | None = None, count: int = 3) -> list[dict]:
                 "subject": product["name"],
             }
             topic["slug"] = _make_slug("review", f"{product['name']}|{title}", slugify(product["name"], 40))
-            if topic["slug"] in generated_slugs:
+            title_key = _title_key(topic["title"])
+            if topic["slug"] in generated_slugs or not title_key or title_key in seen_title_keys:
                 continue
             topics.append(topic)
+            seen_titles.add(topic["title"].strip().lower())
+            seen_title_keys.add(title_key)
             recent_templates.append("review")
             recent_families.append(topic["family"])
             continue
@@ -894,10 +924,12 @@ def next_topics(state: dict | None = None, count: int = 3) -> list[dict]:
             }
             topic["slug"] = _make_slug("review", f"{base}|{entry['search_term']}|{title}", slugify(base, 40))
 
-        if topic["slug"] in generated_slugs:
+        title_key = _title_key(topic["title"])
+        if topic["slug"] in generated_slugs or not title_key or title_key in seen_title_keys:
             continue
         topics.append(topic)
         seen_titles.add(topic["title"].strip().lower())
+        seen_title_keys.add(title_key)
         recent_templates.append(topic["template"])
         recent_families.append(family)
 
