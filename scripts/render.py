@@ -488,6 +488,11 @@ def save_article(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: st
             and int(i.get("stock_checked_at") or 0) > 0
             for i in topic.get("items", [])
         ),
+        "editorial_review_required": not (
+            str(article.get("_source") or "").lower().startswith("ai:")
+            or str(article.get("_source") or "").lower() == "seed"
+            or article.get("_editorial_approved") is True
+        ),
         "review_required": not (
             (
                 str(article.get("_source") or "").lower().startswith("ai:")
