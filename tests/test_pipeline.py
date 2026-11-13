@@ -39,6 +39,8 @@ util.QUEUE_DIR = _TMP / "queue"
 util.QUEUE_DIR.mkdir(parents=True, exist_ok=True)
 util.STATE_PATH = _TMP / "state.json"
 render_mod.QUEUE_DIR = util.QUEUE_DIR
+import generate as generate_mod              # noqa: E402
+generate_mod.QUEUE_DIR = util.QUEUE_DIR
 
 
 def fresh_cfg() -> dict:
@@ -169,6 +171,34 @@ def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str
 
 
 class TestProductResolution(unittest.TestCase):
+    def test_generate_skips_exact_duplicate_queue_article_body(self):
+        queue = _TMP / "dupe-queue"
+        queue.mkdir(exist_ok=True)
+        words = " ".join(f"word{i}" for i in range(260))
+        (queue / "existing.html").write_text("<article>" + words + "</article>", encoding="utf-8")
+        (queue / "existing.json").write_text(json.dumps({
+            "slug": "existing", "title": "Existing Article", "html_file": "existing.html"
+        }), encoding="utf-8")
+        duplicate = "<article>" + words + "</article>"
+        self.assertEqual(
+            generate_mod._find_duplicate_queue_article(duplicate, "A different headline", "new", queue),
+            "existing",
+        )
+
+    def test_generate_allows_similar_body_when_title_differs(self):
+        queue = _TMP / "dupe-queue-different"
+        queue.mkdir(exist_ok=True)
+        words = " ".join(f"word{i}" for i in range(260))
+        (queue / "existing.html").write_text("<article>" + words + "</article>", encoding="utf-8")
+        (queue / "existing.json").write_text(json.dumps({
+            "slug": "existing", "title": "Existing Article", "html_file": "existing.html"
+        }), encoding="utf-8")
+        changed = "<article>" + words + " additional unique content " + "</article>"
+        self.assertIsNone(
+            generate_mod._find_duplicate_queue_article(changed, "A different headline", "new", queue)
+        )
+
+
     def test_unavailable_product_anchor_is_converted_to_non_clickable_text(self):
         url = "https://www.amazon.com/dp/B0BYMRJD7R?tag=testtag-20"
         html = (
