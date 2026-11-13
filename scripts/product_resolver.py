@@ -393,7 +393,7 @@ def _creators_rows_from_response(data: dict, include_unavailable: bool = False) 
 
 
 _CREATORS_LAST_CATALOG_REQUEST_AT = 0.0
-CREATORS_MIN_REQUEST_INTERVAL_SECONDS = 1.05
+CREATORS_MIN_REQUEST_INTERVAL_SECONDS = 1.25
 CREATORS_MAX_429_RETRIES = 3
 
 
@@ -479,13 +479,36 @@ def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
             method="POST",
         )
         data = _creators_catalog_json(req, "Creators API GetItems")
-        # GetItems uses the documented "itemResults" response container.
-        result = data.get("itemResults") or {}
+        # Amazon's current GetItems reference uses "itemResults", while its
+        # troubleshooting examples use "itemsResult". Accept both response
+        # spellings so a partial-success response is not mistaken for zero items.
+        result_key = ""
+        result = data.get("itemResults")
+        if isinstance(result, dict):
+            result_key = "itemResults"
+        else:
+            result = data.get("itemsResult")
+            if isinstance(result, dict):
+                result_key = "itemsResult"
+            else:
+                result = {}
+
         rows = _creators_rows_from_items(result.get("items") or [], include_unavailable=True)
         for row in rows:
             found[row["asin"]] = row
-        if data.get("errors") and not rows:
-            log.warning("Creators API GetItems partial error: %s", str(data.get("errors"))[:300])
+
+        if data.get("errors"):
+            log.warning(
+                "Creators API GetItems partial response: returned=%d requested=%d "
+                "container=%s errors=%s",
+                len(rows), len(batch), result_key or "missing",
+                str(data.get("errors"))[:400],
+            )
+        elif not result_key:
+            log.warning(
+                "Creators API GetItems response has no recognized result container; keys=%s",
+                sorted(data.keys()),
+            )
     return found
 
 
