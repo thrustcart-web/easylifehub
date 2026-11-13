@@ -820,10 +820,13 @@ function listBlogPostsByStatus_(status) {
   var pageToken = '';
   var guard = 0;
   do {
-    var params = { status: status, fetchBodies: true, maxResults: 500, view: 'ADMIN' };
+    var params = { status: String(status || '').toLowerCase(), fetchBodies: true, maxResults: 500, view: 'ADMIN' };
     if (pageToken) params.pageToken = pageToken;
     var page = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID') + '/posts', null, params);
-    (page.items || []).forEach(function (post) { posts.push(post); });
+    (page.items || []).forEach(function (post) {
+      post._easyLifeStatus = String(status || '').toUpperCase();
+      posts.push(post);
+    });
     pageToken = page.nextPageToken || '';
     guard++;
   } while (pageToken && guard < 20);
@@ -900,7 +903,7 @@ function auditAmazonProducts() {
     var scheduledCount = 0;
 
     blogPosts.forEach(function (post) {
-      var status = String(post.status || '').toUpperCase();
+      var status = String(post._easyLifeStatus || post.status || '').toUpperCase();
       if (status === 'SCHEDULED') scheduledCount++;
       else liveCount++;
       var slug = maps.byPostId[String(post.id)] ||
@@ -984,8 +987,8 @@ function syncPublishedProductLinks() {
     var maps = postSlugMaps_(index.posts || []);
     var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
     blogPosts.sort(function (a, b) {
-      var statusA = String(a.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
-      var statusB = String(b.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusA = String(a._easyLifeStatus || a.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusB = String(b._easyLifeStatus || b.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
       if (statusA !== statusB) return statusA - statusB;
       return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
     });
@@ -1002,6 +1005,7 @@ function syncPublishedProductLinks() {
       var slug = maps.byPostId[String(post.id)] ||
         maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
       var meta = slug ? bySlug[slug] : null;
+      var originalContent = sanitizePostHtml_(String(post.content || ''));
       var html = meta && meta.html_file
         ? fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file)
         : String(post.content || '');
@@ -1017,7 +1021,8 @@ function syncPublishedProductLinks() {
         var fresh = checkedAt > 0 && now >= checkedAt &&
           (now - checkedAt) <= AMAZON_STOCK_MAX_AGE_SECONDS;
         var parent = String(stock && stock.parent_asin || asin).toUpperCase();
-        var localDuplicate = localAsins[asin] || (localParents[parent] && !localAsins[asin]);
+        if (localAsins[asin]) return full; // same item has two renderer-owned CTAs
+        var localDuplicate = localParents[parent] && !localAsins[asin];
         var siteDuplicate = usedAsins[asin] || (usedParents[parent] && !usedAsins[asin]);
         if (!AMAZON_STOCK_ALLOWED[status] || !fresh || localDuplicate || siteDuplicate) {
           blockedLinks++;
@@ -1031,7 +1036,7 @@ function syncPublishedProductLinks() {
       });
 
       html = sanitizePostHtml_(html);
-      if (html !== sanitizePostHtml_(before)) {
+      if (html !== originalContent) {
         bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
           content: html
         });
