@@ -391,6 +391,50 @@ def _creators_rows_from_response(data: dict, include_unavailable: bool = False) 
     return _creators_rows_from_items(items, include_unavailable=include_unavailable)
 
 
+_CREATORS_LAST_CATALOG_REQUEST_AT = 0.0
+CREATORS_MIN_REQUEST_INTERVAL_SECONDS = 1.05
+CREATORS_MAX_429_RETRIES = 3
+
+
+def _creators_catalog_json(req: request.Request, operation: str) -> dict:
+    """Call Creators catalog APIs at <=1 TPS and retry temporary HTTP 429s."""
+    global _CREATORS_LAST_CATALOG_REQUEST_AT
+    retries = 0
+    while True:
+        elapsed = time.monotonic() - _CREATORS_LAST_CATALOG_REQUEST_AT
+        wait_for = CREATORS_MIN_REQUEST_INTERVAL_SECONDS - elapsed
+        if wait_for > 0:
+            time.sleep(wait_for)
+        _CREATORS_LAST_CATALOG_REQUEST_AT = time.monotonic()
+        try:
+            with request.urlopen(req, timeout=60) as response:
+                data = json.loads(response.read().decode("utf-8"))
+            if not isinstance(data, dict):
+                raise ProductResolutionError(f"{operation} returned a non-object response")
+            return data
+        except error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:600]
+            if exc.code == 429 and retries < CREATORS_MAX_429_RETRIES:
+                retry_after = 0.0
+                try:
+                    retry_after = float(exc.headers.get("Retry-After", 0) or 0)
+                except (TypeError, ValueError):
+                    retry_after = 0.0
+                delay = max(retry_after, float(2 ** retries))
+                retries += 1
+                log.warning(
+                    "%s throttled by Amazon (HTTP 429); retry %d/%d after %.1fs",
+                    operation, retries, CREATORS_MAX_429_RETRIES, delay,
+                )
+                time.sleep(delay)
+                continue
+            raise ProductResolutionError(f"{operation} HTTP {exc.code}: {detail}") from exc
+        except (error.URLError, TimeoutError) as exc:
+            raise ProductResolutionError(f"{operation} request failed: {exc}") from exc
+        except json.JSONDecodeError as exc:
+            raise ProductResolutionError(f"{operation} returned invalid JSON: {exc}") from exc
+
+
 def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
     """Bulk-check up to 10 ASINs per official GetItems request, including stock and parent ASIN."""
     unique = []
@@ -433,16 +477,7 @@ def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
             },
             method="POST",
         )
-        try:
-            with request.urlopen(req, timeout=60) as response:
-                data = json.loads(response.read().decode("utf-8"))
-        except error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", "replace")[:600]
-            raise ProductResolutionError(f"Creators API GetItems HTTP {exc.code}: {detail}") from exc
-        except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-            raise ProductResolutionError(f"Creators API GetItems request failed: {exc}") from exc
-        if not isinstance(data, dict):
-            raise ProductResolutionError("Creators API GetItems returned a non-object response")
+        data = _creators_catalog_json(req, "Creators API GetItems")
         # GetItems uses the documented "itemResults" response container.
         result = data.get("itemResults") or {}
         rows = _creators_rows_from_items(result.get("items") or [], include_unavailable=True)
@@ -468,7 +503,7 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
             "itemInfo.title",
             "offersV2.listings.availability",
             "offersV2.listings.condition",
-            "ParentASIN",
+            "parentASIN",
         ],
     }
     req = request.Request(
@@ -479,16 +514,7 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
             "User-Agent": "EasyLifeHubProductResolver/5.0",
         }, method="POST",
     )
-    try:
-        with request.urlopen(req, timeout=60) as response:
-            data = json.loads(response.read().decode("utf-8"))
-    except error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", "replace")[:600]
-        raise ProductResolutionError(f"Creators API HTTP {exc.code}: {detail}") from exc
-    except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        raise ProductResolutionError(f"Creators API request failed: {exc}") from exc
-    if not isinstance(data, dict):
-        raise ProductResolutionError("Creators API response was not a JSON object")
+    data = _creators_catalog_json(req, "Creators API SearchItems")
     rows = _creators_rows_from_response(data)
     if not rows and data.get("errors"):
         raise ProductResolutionError(f"Creators API returned no valid in-stock items: {str(data.get('errors'))[:400]}")
