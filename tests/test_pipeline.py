@@ -263,6 +263,101 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(rows[0]["parent_asin"], "B0BYMRJD7R")
         self.assertNotIn("price", rows[0])
 
+    def test_creators_get_items_parses_official_item_results_container(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return json.dumps({
+                    "itemResults": {
+                        "items": [{
+                            "asin": "B0BYMRJD7R",
+                            "parentASIN": "B0PARENT001",
+                            "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
+                            "offersV2": {"listings": [{
+                                "condition": {"value": "New"},
+                                "availability": {"type": "IN_STOCK"},
+                            }]},
+                        }]
+                    }
+                }).encode("utf-8")
+
+        captured = {}
+        old_urlopen = product_resolver.request.urlopen
+        old_token = product_resolver._creators_access_token
+        old_settings = product_resolver._creators_partner_settings
+
+        def fake_urlopen(req, timeout=0):
+            captured["url"] = req.full_url
+            captured["payload"] = json.loads(req.data.decode("utf-8"))
+            return FakeResponse()
+
+        product_resolver.request.urlopen = fake_urlopen
+        product_resolver._creators_access_token = lambda: "test-token"
+        product_resolver._creators_partner_settings = lambda: ("testtag-20", "www.amazon.com")
+        try:
+            rows = product_resolver._creators_get_items_by_asin(["B0BYMRJD7R"])
+        finally:
+            product_resolver.request.urlopen = old_urlopen
+            product_resolver._creators_access_token = old_token
+            product_resolver._creators_partner_settings = old_settings
+
+        self.assertEqual(captured["url"], product_resolver.CREATORS_GET_ITEMS_URL)
+        self.assertEqual(captured["payload"]["itemIds"], ["B0BYMRJD7R"])
+        self.assertEqual(captured["payload"]["itemIdType"], "ASIN")
+        self.assertEqual(captured["payload"]["condition"], "New")
+        self.assertEqual(rows["B0BYMRJD7R"]["parent_asin"], "B0PARENT001")
+        self.assertEqual(rows["B0BYMRJD7R"]["availability_type"], "IN_STOCK")
+
+    def test_creators_search_requests_parent_asin_resource_and_only_available_new_offers(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return json.dumps({
+                    "searchResult": {
+                        "items": [{
+                            "asin": "B0BYMRJD7R",
+                            "parentASIN": "B0PARENT001",
+                            "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
+                            "offersV2": {"listings": [{
+                                "condition": {"value": "New"},
+                                "availability": {"type": "IN_STOCK"},
+                            }]},
+                        }]
+                    }
+                }).encode("utf-8")
+
+        captured = {}
+        old_urlopen = product_resolver.request.urlopen
+        old_token = product_resolver._creators_access_token
+        old_settings = product_resolver._creators_partner_settings
+
+        def fake_urlopen(req, timeout=0):
+            captured["payload"] = json.loads(req.data.decode("utf-8"))
+            captured["headers"] = dict(req.header_items())
+            return FakeResponse()
+
+        product_resolver.request.urlopen = fake_urlopen
+        product_resolver._creators_access_token = lambda: "test-token"
+        product_resolver._creators_partner_settings = lambda: ("testtag-20", "www.amazon.com")
+        try:
+            rows = product_resolver._search_amazon_creators_api("pen organizer")
+        finally:
+            product_resolver.request.urlopen = old_urlopen
+            product_resolver._creators_access_token = old_token
+            product_resolver._creators_partner_settings = old_settings
+
+        self.assertEqual(captured["payload"]["availability"], "Available")
+        self.assertEqual(captured["payload"]["condition"], "New")
+        self.assertIn("ParentASIN", captured["payload"]["resources"])
+        self.assertEqual(rows[0]["parent_asin"], "B0PARENT001")
+        self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
+
     def test_unknown_outofstock_preorder_and_leadtime_are_not_eligible(self):
         for status in ("UNKNOWN", "OUTOFSTOCK", "PREORDER", "LEADTIME", ""):
             rows = product_resolver._creators_rows_from_response({
