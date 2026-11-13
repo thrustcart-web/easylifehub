@@ -368,6 +368,51 @@ class TestProductResolution(unittest.TestCase):
         self.assertEqual(rows["B0BYMRJD7R"]["parent_asin"], "B0PARENT01")
         self.assertEqual(rows["B0BYMRJD7R"]["availability_type"], "IN_STOCK")
 
+    def test_creators_get_items_accepts_items_result_alias_with_partial_errors(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return json.dumps({
+                    "errors": [{
+                        "code": "ItemNotAccessible",
+                        "message": "One requested ASIN is not accessible",
+                    }],
+                    "itemsResult": {
+                        "items": [{
+                            "asin": "B0BYMRJD7R",
+                            "parentASIN": "B0PARENT01",
+                            "itemInfo": {"title": {"displayValue": "Marbrasse Pen Organizer"}},
+                            "offersV2": {"listings": [{
+                                "condition": {"value": "New"},
+                                "availability": {"type": "IN_STOCK"},
+                            }]},
+                        }]
+                    },
+                }).encode("utf-8")
+
+        old_urlopen = product_resolver.request.urlopen
+        old_token = product_resolver._creators_access_token
+        old_settings = product_resolver._creators_partner_settings
+        old_last_request = product_resolver._CREATORS_LAST_CATALOG_REQUEST_AT
+        product_resolver.request.urlopen = lambda req, timeout=0: FakeResponse()
+        product_resolver._creators_access_token = lambda: "test-token"
+        product_resolver._creators_partner_settings = lambda: ("testtag-20", "www.amazon.com")
+        product_resolver._CREATORS_LAST_CATALOG_REQUEST_AT = 0.0
+        try:
+            rows = product_resolver._creators_get_items_by_asin(["B0BYMRJD7R", "B000000000"])
+        finally:
+            product_resolver.request.urlopen = old_urlopen
+            product_resolver._creators_access_token = old_token
+            product_resolver._creators_partner_settings = old_settings
+            product_resolver._CREATORS_LAST_CATALOG_REQUEST_AT = old_last_request
+
+        self.assertEqual(list(rows), ["B0BYMRJD7R"])
+        self.assertEqual(rows["B0BYMRJD7R"]["parent_asin"], "B0PARENT01")
+        self.assertEqual(rows["B0BYMRJD7R"]["availability_type"], "IN_STOCK")
+
     def test_creators_search_requests_parent_asin_resource_and_only_available_new_offers(self):
         class FakeResponse:
             def __enter__(self):
