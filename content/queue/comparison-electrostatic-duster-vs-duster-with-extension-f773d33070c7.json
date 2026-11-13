@@ -16,31 +16,33 @@
     {
       "name": "Electrostatic Duster",
       "asin": "B07GL4JVNJ",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Kitchen + Home 23” inch Rainbow Static Duster - Electrostatic Feather Duster Attracts dust Like a Magnet!",
       "search_term": "Electrostatic Duster",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "url": "https://www.amazon.com/dp/B07GL4JVNJ?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
       "parent_asin": "B07GL4JVNJ"
     },
     {
       "name": "Duster with Extension",
       "asin": "B0B6G147W6",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
       "search_term": "Duster with Extension",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0B6G147W6"
+      "url": "https://www.amazon.com/dp/B0B6G147W6?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
+      "parent_asin": "B0B6H2HLFL"
     }
   ],
   "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

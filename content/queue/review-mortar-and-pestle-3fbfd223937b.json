@@ -16,20 +16,22 @@
     {
       "name": "Mortar and Pestle",
       "asin": "B0D9CP3BPS",
-      "asin_verified": false,
-      "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
+      "asin_verified": true,
+      "verified_product_title": "Howise Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
       "search_term": "mortar and pestle for spice grinding",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534532,
       "parent_asin": "B0D9CP3BPS"
     }
   ],
   "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

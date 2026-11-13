@@ -16,20 +16,22 @@
     {
       "name": "Ring Battery Doorbell 2K",
       "asin": "B0FHJ7TKZM",
-      "asin_verified": false,
-      "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray",
+      "asin_verified": true,
+      "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray | Retinal wide-angle video, Up to 6x enhanced zoom, Two-way talk, Built-in battery",
       "search_term": "Ring Battery Doorbell 2K 2nd Generation",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0FHJ7TKZM"
+      "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0GTYB16NH"
     }
   ],
   "html_file": "review-video-doorbell-1b56e37dfa94.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

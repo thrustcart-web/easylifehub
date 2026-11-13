@@ -50,7 +50,7 @@ Take time to verify dimensions, installation requirements, and utility connectio
 ### Product Links
 
 - Fiskars Pruning Shears: https://www.amazon.com/dp/B00002N66H?tag=ezylifehub-20
-- Rain Bird Drip Irrigation Kit: https://www.amazon.com/dp/B07QNM7575?tag=ezylifehub-20
+- Rain Bird Drip Irrigation Kit: https://www.amazon.com/dp/B0BCH7PYCD?tag=ezylifehub-20
 - Liberty Garden Hose Reel: https://www.amazon.com/dp/B01I727FQO?tag=ezylifehub-20
 - Marathon Yard Rover Wheelbarrow: https://www.amazon.com/dp/B0721CX298?tag=ezylifehub-20
 - Land Guard Raised Garden Bed: https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20

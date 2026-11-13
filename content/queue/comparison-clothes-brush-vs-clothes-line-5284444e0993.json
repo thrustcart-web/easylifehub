@@ -16,31 +16,33 @@
     {
       "name": "Clothes Brush",
       "asin": "B00QQW5ISA",
-      "asin_verified": false,
-      "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle",
+      "asin_verified": true,
+      "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle | Removes Lint, Pet Hair, Fuzz & Dust Fast, Double-Sided Reusable Clothes Brush, Built-In Shoe Horn, Sturdy Walnut Wood Handle",
       "search_term": "Clothes Brush",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
       "parent_asin": "B00QQW5ISA"
     },
     {
       "name": "Clothes Line",
       "asin": "B0DQJ61TZJ",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
       "search_term": "Clothes Line",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0DQJ61TZJ"
+      "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0DQJ9B83X"
     }
   ],
   "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

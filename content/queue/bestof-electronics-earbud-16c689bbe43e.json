@@ -16,53 +16,55 @@
     {
       "name": "Portable Power Station",
       "asin": "B082TMBYR6",
-      "asin_verified": false,
-      "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh",
+      "asin_verified": true,
+      "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh | Backup LiFePO4 Battery, Solar Generator for Outdoors, Camping, Travel, Hunting, Blackout (Solar Panel Optional)",
       "search_term": "portable power station for frequent travellers",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B082TMBYR6"
+      "url": "https://www.amazon.com/dp/B082TMBYR6?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0H5CRPSL9"
     },
     {
       "name": "Wireless Earbuds",
-      "asin": "B09FT58QQP",
-      "asin_verified": false,
-      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+      "asin": "B09DT48V16",
+      "asin_verified": true,
+      "verified_product_title": "TAGRY Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Ear buds with Mic for TV Smart Phone Laptop Computer Sports",
       "search_term": "wireless earbuds for students",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B09FT58QQP"
+      "url": "https://www.amazon.com/dp/B09DT48V16?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534555,
+      "parent_asin": "B0H2CYY93W"
     },
     {
       "name": "Surge Protector",
       "asin": "B0GYZ9K5Q1",
-      "asin_verified": false,
-      "verified_product_title": "Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft",
+      "asin_verified": true,
+      "verified_product_title": "HHSOET Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft | IPX6 Waterproof 6 Plug Extender Port, Exterior Long Extension Cord with Multiple Outlets for Garden, Christmas Decor",
       "search_term": "surge protector for storm areas",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0GYZ9K5Q1"
+      "url": "https://www.amazon.com/dp/B0GYZ9K5Q1?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0HBWWRJWX"
     },
     {
       "name": "Braided Lightning Cable",
       "asin": "B084N1BM9L",
-      "asin_verified": false,
-      "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord",
+      "asin_verified": true,
+      "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord | MFi Certified, tangle-free braided cord, iPhone 14/13/12/11 & earlier, iPad, AirPods, Apple CarPlay, durable charging cable",
       "search_term": "braided lightning cable for home theatre",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B084N1BM9L"
+      "url": "https://www.amazon.com/dp/B084N1BM9L?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0CTNJ3T6X"
     }
   ],
   "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

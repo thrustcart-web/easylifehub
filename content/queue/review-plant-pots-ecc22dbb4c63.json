@@ -16,20 +16,22 @@
     {
       "name": "Plant Pots",
       "asin": "B0BHSX8PYZ",
-      "asin_verified": false,
-      "verified_product_title": "3 Pack 10 inch Plant Pots with Drainage Holes & Saucer",
+      "asin_verified": true,
+      "verified_product_title": "Quarut 3 Pack 10 inch Plant Pots with Drainage Holes & Saucer | Whiskey Barrel Planters,Plastic Decor Flower Pots Imitation Wine Barrel Design, for Indoor Outdoor Garden Home Plants-Brown",
       "search_term": "plant pots for low light rooms",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0BHSX8PYZ"
+      "url": "https://www.amazon.com/dp/B0BHSX8PYZ?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
+      "parent_asin": "B0HKZQ238J"
     }
   ],
   "html_file": "review-plant-pots-ecc22dbb4c63.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

@@ -20,9 +20,9 @@
       "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
       "search_term": "LEVOIT Core 300-P Air Purifier",
       "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B07VVK39F7"
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0GXWMKPH6"
     }
   ],
   "html_file": "seed-air-purifier-buying-guide.html",
@@ -30,6 +30,8 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": true
 }

@@ -16,31 +16,33 @@
     {
       "name": "Tote Bag",
       "asin": "B0FKH85DPY",
-      "asin_verified": false,
-      "verified_product_title": "Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
+      "asin_verified": true,
+      "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse | Large Teacher Nurse School Bag with 40oz Cup Holder & Strap, Zipper Shoulder Bag Handbag for Travel College Bible Office Gift",
       "search_term": "Tote Bag",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0FKH85DPY"
+      "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0FQJG2B8L"
     },
     {
       "name": "Crossbody Bag",
       "asin": "B0C3LRC59F",
-      "asin_verified": false,
-      "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
+      "asin_verified": true,
+      "verified_product_title": "Banelu Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
       "search_term": "Crossbody Bag",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0C3LRC59F"
+      "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
+      "parent_asin": "B0HMNM3TV8"
     }
   ],
   "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

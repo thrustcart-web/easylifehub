@@ -16,53 +16,55 @@
     {
       "name": "Streaming Camera",
       "asin": "B0CZ6XY78Y",
-      "asin_verified": false,
-      "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera",
+      "asin_verified": true,
+      "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera | 1/2\" Sensor, Gesture Control, 60 FPS, HDR, Microphones, Web Camera for Desktop Computer, Laptop, Meeting, Video Calls, etc.",
       "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534532,
       "parent_asin": "B0CZ6XY78Y"
     },
     {
       "name": "Wireless Earbuds",
       "asin": "B09FT58QQP",
-      "asin_verified": false,
-      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+      "asin_verified": true,
+      "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones | IPX5 Waterproof,2 Mics for AI Calls,Immersive Premium Sound Bass Headset with Charging Case,32 EQ via App Black",
       "search_term": "TOZO A1 Wireless Earbuds",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B09FT58QQP"
+      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B0H8PFKTQF"
     },
     {
       "name": "Anker Charger",
       "asin": "B08T5QN2TR",
-      "asin_verified": false,
-      "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger",
+      "asin_verified": true,
+      "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger | For iPhone 17/17 Plus/17 Pro Max/16/16 Plus/16 Pro Max/15 Pro Max/iPad Pro, MacBook Pro and More",
       "search_term": "Anker 715 Charger Nano II 65W",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B08T5QN2TR"
+      "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B0BYVW7FCC"
     },
     {
       "name": "E-reader",
-      "asin": "B0GSZX5MWR",
-      "asin_verified": false,
-      "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
+      "asin": "B0H8SZ945Y",
+      "asin_verified": true,
+      "verified_product_title": "XTEINK X4 Classic Pocket eReader, Ultra-Light 68g & 4.9mm Thin,Reader Gifts | Ultra Thin 0.19\" design, 4.3\" E ink Paper-feel ,Dual Page Turn Button & Shake, Magnetic Pogo-pin attach,Extended Battery Life",
       "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0GSZX5MWR"
+      "url": "https://www.amazon.com/dp/B0H8SZ945Y?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534537,
+      "parent_asin": "B0H99KMDTW"
     }
   ],
   "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

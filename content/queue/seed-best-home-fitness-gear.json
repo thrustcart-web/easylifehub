@@ -16,64 +16,66 @@
     {
       "name": "Trekking Poles",
       "asin": "B01L2HYPNW",
-      "asin_verified": false,
-      "verified_product_title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
+      "asin_verified": true,
+      "verified_product_title": "Cascade Mountain Tech Trekking Poles, Shaft Material: Aircraft- grade 6061 Aluminum with Adjustable Locks Expandable to 54\" (Set of 2), Cork Grip, Orange, Extended Grip Material: EVA",
       "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B01L2HYPNW"
+      "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0CGDXBZ5N"
     },
     {
       "name": "Sleeping Bag",
       "asin": "B0DK99H94M",
-      "asin_verified": false,
-      "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
+      "asin_verified": true,
+      "verified_product_title": "Ultralight Sleeping Bag, Warm Weather Portable Compact Sleeping Bags for Adults, Waterproof, Lightweight, Comfort with Compression Sack for 3 Season Camping, Backpacking, Hiking, Traveling",
       "search_term": "Ultralight Warm Weather Sleeping Bag",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0DK99H94M"
+      "url": "https://www.amazon.com/dp/B0DK99H94M?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534532,
+      "parent_asin": "B0DTHGRP1B"
     },
     {
       "name": "Compass",
       "asin": "B07CK8B3R3",
-      "asin_verified": false,
-      "verified_product_title": "Orienteering Compass - Advanced Scout Compass for Hiking, Camping, and Backpacking - Best Survival Gifts for Kids",
+      "asin_verified": true,
+      "verified_product_title": "Orienteering Compass Advanced Scout for Hiking Camping Navigation Green | Map Reading Tool.Kids & Professionals Use.Outdoor Survival.Gift Idea. Survival & Camping",
       "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B07CK8B3R3"
+      "url": "https://www.amazon.com/dp/B07CK8B3R3?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B09MHX11Q1"
     },
     {
       "name": "Gym Bag",
       "asin": "B0C5SPSRNG",
-      "asin_verified": false,
-      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+      "asin_verified": true,
+      "verified_product_title": "Hoedia Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black | String Bag with Shoes Compartment and Wet Proof Pocket, Adjustable Wider Shoulder Strap, For Soccer, Basketball",
       "search_term": "Sports Drawstring Backpack Swim Gym Bag",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0C5SPSRNG"
+      "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
+      "parent_asin": "B0DQ81HY2P"
     },
     {
       "name": "Hammock Underquilt",
       "asin": "B08936QVJD",
-      "asin_verified": false,
-      "verified_product_title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
+      "asin_verified": true,
+      "verified_product_title": "OneTigris Hideout Hammock Underquilt, Thermal Hammock Quilt for Camping | Quick Setup, Full Length, Ultralight, Warm 4 Season Under Quilt for Hammock Camping Hiking Backpacking Travel",
       "search_term": "OneTigris Hideout Hammock Underquilt",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B08936QVJD"
+      "url": "https://www.amazon.com/dp/B08936QVJD?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B089383ZK7"
     }
   ],
   "html_file": "seed-best-home-fitness-gear.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

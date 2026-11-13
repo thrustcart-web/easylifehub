@@ -20,55 +20,57 @@
         {
           "name": "Portable Power Station",
           "asin": "B082TMBYR6",
-          "asin_verified": false,
-          "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh",
+          "asin_verified": true,
+          "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh | Backup LiFePO4 Battery, Solar Generator for Outdoors, Camping, Travel, Hunting, Blackout (Solar Panel Optional)",
           "search_term": "portable power station for frequent travellers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B082TMBYR6"
+          "url": "https://www.amazon.com/dp/B082TMBYR6?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0H5CRPSL9"
         },
         {
           "name": "Wireless Earbuds",
-          "asin": "B09FT58QQP",
-          "asin_verified": false,
-          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+          "asin": "B09DT48V16",
+          "asin_verified": true,
+          "verified_product_title": "TAGRY Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Ear buds with Mic for TV Smart Phone Laptop Computer Sports",
           "search_term": "wireless earbuds for students",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B09FT58QQP"
+          "url": "https://www.amazon.com/dp/B09DT48V16?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534555,
+          "parent_asin": "B0H2CYY93W"
         },
         {
           "name": "Surge Protector",
           "asin": "B0GYZ9K5Q1",
-          "asin_verified": false,
-          "verified_product_title": "Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft",
+          "asin_verified": true,
+          "verified_product_title": "HHSOET Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft | IPX6 Waterproof 6 Plug Extender Port, Exterior Long Extension Cord with Multiple Outlets for Garden, Christmas Decor",
           "search_term": "surge protector for storm areas",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0GYZ9K5Q1"
+          "url": "https://www.amazon.com/dp/B0GYZ9K5Q1?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0HBWWRJWX"
         },
         {
           "name": "Braided Lightning Cable",
           "asin": "B084N1BM9L",
-          "asin_verified": false,
-          "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord",
+          "asin_verified": true,
+          "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord | MFi Certified, tangle-free braided cord, iPhone 14/13/12/11 & earlier, iPad, AirPods, Apple CarPlay, durable charging cable",
           "search_term": "braided lightning cable for home theatre",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B084N1BM9L"
+          "url": "https://www.amazon.com/dp/B084N1BM9L?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0CTNJ3T6X"
         }
       ],
       "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "bestof-electronics-earbud-3e66ad5bf3a1",
@@ -88,77 +90,79 @@
         {
           "name": "Webcam",
           "asin": "B085TFF7M1",
-          "asin_verified": false,
-          "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+          "asin_verified": true,
+          "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video | Stereo Audio, HD Light Correction, Works with Microsoft Teams, Google Meet, Zoom, Nintendo Switch, Mac/Tablet- Black",
           "search_term": "webcam for home offices",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B085TFF7M1"
+          "url": "https://www.amazon.com/dp/B085TFF7M1?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0HQP3HJ6F"
         },
         {
           "name": "E-reader",
           "asin": "B0GSZX5MWR",
-          "asin_verified": false,
-          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
+          "asin_verified": true,
+          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini eReader Devices | Ultra-thin 0.2\" design with magnetic pogo-pin charging, gyroscope page-turn, 16GB storage, and distraction-free reading",
           "search_term": "e-reader for commuters",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0GSZX5MWR"
+          "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0HFNSRBSL"
         },
         {
           "name": "USB C Cable",
           "asin": "B0CCJRWKC5",
-          "asin_verified": false,
-          "verified_product_title": "DbillionDa USB C to USB C Cable, 60W PD Fast Charging, 90 Degree (10 ft)",
+          "asin_verified": true,
+          "verified_product_title": "DbillionDa USB C to USB C Cable, 60W PD Fast Charging, 90 Degree (10 ft) | Long Cable Design for Gaming, Desk Setup & Everyday Use. Compatible with iPhone, Samsung Galaxy, MacBook & More",
           "search_term": "usb c cable for desk setups",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0CCJRWKC5"
+          "url": "https://www.amazon.com/dp/B0CCJRWKC5?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
+          "parent_asin": "B0HJCFHC87"
         },
         {
           "name": "Portable SSD",
-          "asin": "B0874XN4D8",
-          "asin_verified": false,
-          "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+          "asin": "B0GCHPCPSZ",
+          "asin_verified": true,
+          "verified_product_title": "1TB Magnetic Portable SSD, Up to 2000MB/s – External Solid State Drive | Compatible with MagSafe for iPhone 15/16/17, Mac, Laptops & Tablet, Reliable Storage for Students, Gaming & Professionals",
           "search_term": "portable ssd for frequent travellers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0874XN4D8"
+          "url": "https://www.amazon.com/dp/B0GCHPCPSZ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534536,
+          "parent_asin": "B0FYFTFF8H"
         },
         {
           "name": "Action Camera",
           "asin": "B01HGM33HG",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "AKASO EK7000 4K30FPS 20MP WiFi Action Camera with EIS Ultra HD 131FT Waterproof Underwater Camera Remote Control 4X Zoom Support External Microphone Black",
           "search_term": "action camera for budget buyers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01HGM33HG"
+          "url": "https://www.amazon.com/dp/B01HGM33HG?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0GLF7G3LP"
         },
         {
           "name": "Ultrawide Monitor",
           "asin": "B0CC85MCC6",
-          "asin_verified": false,
-          "verified_product_title": "ASUS ProArt PA34VCNV 34 Inch 1440p Ultrawide Professional Monitor for Mac",
+          "asin_verified": true,
+          "verified_product_title": "ASUS ProArt PA34VCNV 34 Inch 1440p Ultrawide Professional Monitor for Mac | Calman Verified, Delta E<2, IPS, 3800R Curve, USB-C Docking PD 96W, 100% sRGB, RJ45 Ethernet, HDMI, DisplayPort",
           "search_term": "ultrawide monitor for photo editing",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B0CC85MCC6?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
           "parent_asin": "B0CC85MCC6"
         }
       ],
       "html_file": "bestof-electronics-earbud-3e66ad5bf3a1.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "bestof-electronics-webcam-ba6c1df58b2c",
@@ -178,55 +182,57 @@
         {
           "name": "Streaming Camera",
           "asin": "B0CZ6XY78Y",
-          "asin_verified": false,
-          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera",
+          "asin_verified": true,
+          "verified_product_title": "OBSBOT Tiny 2 Lite 4K Webcam for PC, AI Tracking PTZ Streaming Camera | 1/2\" Sensor, Gesture Control, 60 FPS, HDR, Microphones, Web Camera for Desktop Computer, Laptop, Meeting, Video Calls, etc.",
           "search_term": "OBSBOT Tiny 2 Lite 4K Webcam",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B0CZ6XY78Y?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
           "parent_asin": "B0CZ6XY78Y"
         },
         {
           "name": "Wireless Earbuds",
           "asin": "B09FT58QQP",
-          "asin_verified": false,
-          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
+          "asin_verified": true,
+          "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones | IPX5 Waterproof,2 Mics for AI Calls,Immersive Premium Sound Bass Headset with Charging Case,32 EQ via App Black",
           "search_term": "TOZO A1 Wireless Earbuds",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B09FT58QQP"
+          "url": "https://www.amazon.com/dp/B09FT58QQP?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0H8PFKTQF"
         },
         {
           "name": "Anker Charger",
           "asin": "B08T5QN2TR",
-          "asin_verified": false,
-          "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger",
+          "asin_verified": true,
+          "verified_product_title": "Anker Nano 65W GaN II PPS USB C Charger, Fast Compact Foldable Charger | For iPhone 17/17 Plus/17 Pro Max/16/16 Plus/16 Pro Max/15 Pro Max/iPad Pro, MacBook Pro and More",
           "search_term": "Anker 715 Charger Nano II 65W",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B08T5QN2TR"
+          "url": "https://www.amazon.com/dp/B08T5QN2TR?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0BYVW7FCC"
         },
         {
           "name": "E-reader",
-          "asin": "B0GSZX5MWR",
-          "asin_verified": false,
-          "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
+          "asin": "B0H8SZ945Y",
+          "asin_verified": true,
+          "verified_product_title": "XTEINK X4 Classic Pocket eReader, Ultra-Light 68g & 4.9mm Thin,Reader Gifts | Ultra Thin 0.19\" design, 4.3\" E ink Paper-feel ,Dual Page Turn Button & Shake, Magnetic Pogo-pin attach,Extended Battery Life",
           "search_term": "XTEINK X3 Pocket E-Ink eBook Reader",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0GSZX5MWR"
+          "url": "https://www.amazon.com/dp/B0H8SZ945Y?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534537,
+          "parent_asin": "B0H99KMDTW"
         }
       ],
       "html_file": "bestof-electronics-webcam-ba6c1df58b2c.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "bestof-fitness-handle-3d07849b4753",
@@ -250,53 +256,53 @@
           "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
           "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01AVDVHTI"
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B09MJKJYLQ"
         },
         {
           "name": "Gym Bag",
-          "asin": "B0C5SPSRNG",
-          "asin_verified": false,
-          "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+          "asin": "B072PR2ND1",
+          "asin_verified": true,
+          "verified_product_title": "HOLYLUCK Drawstring Backpack Bag Sport Gym Sackpack - black",
           "search_term": "Sports Drawstring Backpack Gym Bag",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0C5SPSRNG"
+          "url": "https://www.amazon.com/dp/B072PR2ND1?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534569,
+          "parent_asin": "B06WD35WN1"
         },
         {
           "name": "Smart Scale",
           "asin": "B0BFZVBGYH",
-          "asin_verified": false,
-          "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
+          "asin_verified": true,
+          "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass | 13 Body Metrics via Bluetooth for Health Tracking, Batteries Included, Protective Case for Hotel, Camping, and Travelers",
           "search_term": "RENPHO Elis Go Travel Smart Scale",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
           "parent_asin": "B0BFZVBGYH"
         },
         {
           "name": "Heart Rate Monitor",
           "asin": "B09SKZBZF8",
-          "asin_verified": false,
-          "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
+          "asin_verified": true,
+          "verified_product_title": "GEOID HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
           "search_term": "HS500 Heart Rate Monitor Chest Strap",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
           "parent_asin": "B09SKZBZF8"
         },
         {
           "name": "Adjustable Weight Bench",
           "asin": "B07DNYSJ8W",
-          "asin_verified": false,
-          "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
+          "asin_verified": true,
+          "verified_product_title": "FLYBIRD WB5 Weight Bench, ASTM-Certified 800LBS Adjustable Weight Bench Workout Bench Foldable for Home Gym, 90° to -30° FID and 30in Extended Backrest for Bench Press Strength Training Exercise",
           "search_term": "FLYBIRD Adjustable Weight Bench",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07DNYSJ8W"
+          "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0HQFFQ7C1"
         }
       ],
       "html_file": "bestof-fitness-handle-3d07849b4753.html",
@@ -304,8 +310,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "bestof-garden-blower-335192546968",
@@ -325,35 +333,35 @@
         {
           "name": "Fiskars Pruning Shears",
           "asin": "B00002N66H",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
           "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B00002N66H"
+          "url": "https://www.amazon.com/dp/B00002N66H?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0FDC2L5M6"
         },
         {
           "name": "Rain Bird Drip Irrigation Kit",
-          "asin": "B07QNM7575",
-          "asin_verified": false,
-          "verified_product_title": "Rain Bird LNDDRIPKIT Drip Irrigation Landscape/Garden Watering Kit with Drippers, Micro-Bubblers, Micro-Sprays Standard Kit Landscape/Garden Kit",
+          "asin": "B0BCH7PYCD",
+          "asin_verified": true,
+          "verified_product_title": "Rain Bird GARDENKIT Drip Irrigation Kit",
           "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07QNM7575"
+          "url": "https://www.amazon.com/dp/B0BCH7PYCD?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534539,
+          "parent_asin": "B0BCH7PYCD"
         },
         {
           "name": "Liberty Garden Hose Reel",
           "asin": "B01I727FQO",
-          "asin_verified": false,
-          "verified_product_title": "Liberty Garden 712 Single Arm Navigator Multi-Directional Garden Hose Reel",
+          "asin_verified": true,
+          "verified_product_title": "Liberty GARDEN 712 Single Arm Navigator Multi-Directional Garden Hose Reel, Holds 125-Feet of, 5/8-Inch, Bronze",
           "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01I727FQO"
+          "url": "https://www.amazon.com/dp/B01I727FQO?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0GJG6L1MN"
         },
         {
           "name": "Marathon Yard Rover Wheelbarrow",
@@ -362,20 +370,20 @@
           "verified_product_title": "Marathon Yard Rover – 2 Tire Wheelbarrow Garden Cart - Green/Black",
           "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "availability_type": "OUT_OF_STOCK",
+          "stock_checked_at": 1794534528,
           "parent_asin": "B0721CX298"
         },
         {
           "name": "Land Guard Raised Garden Bed",
           "asin": "B09C8HR4Z9",
-          "asin_verified": false,
-          "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+          "asin_verified": true,
+          "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables…………",
           "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B09C8HR4Z9"
+          "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0HLNWJC5V"
         }
       ],
       "html_file": "bestof-garden-blower-335192546968.html",
@@ -383,8 +391,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "bestof-home-office-organiser-525dc4fb9a20",
@@ -404,66 +414,68 @@
         {
           "name": "Desk Planner",
           "asin": "B0CZNZHTYZ",
-          "asin_verified": false,
-          "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+          "asin_verified": true,
+          "verified_product_title": "Weekly Planner, To Do List Notepad, 8.5\" × 11\", College, Office Supplies | 52 Sheets, Home Organization Essentials for Women, Desk Decor, 100 GSM, Undated Tear-Off, School, Student & Teacher Gifts",
           "search_term": "Weekly Desk Planner 8.5x11",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0CZNZHTYZ"
+          "url": "https://www.amazon.com/dp/B0CZNZHTYZ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
+          "parent_asin": "B0DKJ9RQFT"
         },
         {
           "name": "L Shaped Desk",
           "asin": "B0FVXMDM4L",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
           "search_term": "Pamray 40 Inch L Shaped Computer Desk",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0FVXMDM4L"
+          "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0CW1BCQJB"
         },
         {
           "name": "Mesh Office Chair",
           "asin": "B0DPHLWNBG",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
           "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DPHLWNBG"
+          "url": "https://www.amazon.com/dp/B0DPHLWNBG?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0HBBP6CM7"
         },
         {
           "name": "Webcam",
-          "asin": "B085TFF7M1",
-          "asin_verified": false,
-          "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+          "asin": "B006JH8T3S",
+          "asin_verified": true,
+          "verified_product_title": "Logitech HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p Camera, Desktop or Laptop Webcam",
           "search_term": "Logitech C920x HD Pro Webcam",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B085TFF7M1"
+          "url": "https://www.amazon.com/dp/B006JH8T3S?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534541,
+          "parent_asin": "B0FD925MZ6"
         },
         {
           "name": "Portable SSD",
-          "asin": "B0874XN4D8",
-          "asin_verified": false,
-          "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+          "asin": "B0874YJP92",
+          "asin_verified": true,
+          "verified_product_title": "SAMSUNG T7 Portable SSD, 1TB External Solid State Drive, Speeds Up to 1,050MB/s, USB 3.2 Gen 2, Reliable Storage for Gaming, Students, Professionals, MU-PC1T0H/AM, Blue",
           "search_term": "Samsung T7 Portable SSD 1TB",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0874XN4D8"
+          "url": "https://www.amazon.com/dp/B0874YJP92?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534542,
+          "parent_asin": "B0D87GVYY6"
         }
       ],
       "html_file": "bestof-home-office-organiser-525dc4fb9a20.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
@@ -482,45 +494,47 @@
       "items": [
         {
           "name": "Cotton Sheets",
-          "asin": "B0CZXFM3CH",
-          "asin_verified": false,
-          "verified_product_title": "RUVANTI 100% Organic Cotton Flannel Sheets Queen Size Bed Set, Baby Bear",
+          "asin": "B0DTP1K3K9",
+          "asin_verified": true,
+          "verified_product_title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey | Organic Cotton Percale Queen Sheet Set - Naturally Cooling & Lightweight, Cool All Summer, Cozy All Winter, Great For Gifting",
           "search_term": "cotton sheets for cold climates",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0CZXFM3CH"
+          "url": "https://www.amazon.com/dp/B0DTP1K3K9?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534544,
+          "parent_asin": "B0FB9HLMWW"
         },
         {
           "name": "Weighted Blanket",
           "asin": "B092LZLLGF",
-          "asin_verified": false,
-          "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey",
+          "asin_verified": true,
+          "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey | Cooling Heavy Blanket for Sleeping Perfect for 190-210 Lbs, Breathable Bedding Blanket With Glass Bead, Machine Washable",
           "search_term": "weighted blanket for anxious sleepers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B092LZLLGF"
+          "url": "https://www.amazon.com/dp/B092LZLLGF?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0F8VZBZS4"
         },
         {
           "name": "Duvet",
-          "asin": "B0HFN3GNBJ",
-          "asin_verified": false,
-          "verified_product_title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
+          "asin": "B07G81GQ3Q",
+          "asin_verified": true,
+          "verified_product_title": "COHOME All-Season Queen Size Cooling Comforter Duvet Insert - White | Down Alternative Comforter, Luxury Hotel Breathable Soft bedding, Anti-Clump Tech & 8 Tabs, Reversible, 88 x 88 inches",
           "search_term": "duvet for hot sleepers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0HFN3GNBJ"
+          "url": "https://www.amazon.com/dp/B07G81GQ3Q?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534545,
+          "parent_asin": "B0H8S8WZXC"
         }
       ],
       "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
@@ -540,33 +554,35 @@
         {
           "name": "Clothes Brush",
           "asin": "B00QQW5ISA",
-          "asin_verified": false,
-          "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle",
+          "asin_verified": true,
+          "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle | Removes Lint, Pet Hair, Fuzz & Dust Fast, Double-Sided Reusable Clothes Brush, Built-In Shoe Horn, Sturdy Walnut Wood Handle",
           "search_term": "Clothes Brush",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
           "parent_asin": "B00QQW5ISA"
         },
         {
           "name": "Clothes Line",
           "asin": "B0DQJ61TZJ",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
           "search_term": "Clothes Line",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DQJ61TZJ"
+          "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0DQJ9B83X"
         }
       ],
       "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
@@ -586,33 +602,35 @@
         {
           "name": "Electrostatic Duster",
           "asin": "B07GL4JVNJ",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Kitchen + Home 23” inch Rainbow Static Duster - Electrostatic Feather Duster Attracts dust Like a Magnet!",
           "search_term": "Electrostatic Duster",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B07GL4JVNJ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
           "parent_asin": "B07GL4JVNJ"
         },
         {
           "name": "Duster with Extension",
           "asin": "B0B6G147W6",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
           "search_term": "Duster with Extension",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0B6G147W6"
+          "url": "https://www.amazon.com/dp/B0B6G147W6?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0B6H2HLFL"
         }
       ],
       "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
@@ -632,33 +650,35 @@
         {
           "name": "Aleene's Fabric Glue",
           "asin": "B00178QSE6",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
           "search_term": "Aleene's Fabric Fusion Glue 4 oz",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B00178QSE6"
+          "url": "https://www.amazon.com/dp/B00178QSE6?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0FG59Y4HF"
         },
         {
           "name": "Fabric Scissors",
           "asin": "B082LY2W2G",
-          "asin_verified": false,
-          "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft",
+          "asin_verified": true,
+          "verified_product_title": "8\" Heavy Duty Fabric Scissors, Black Sewing Shears | Ideal for leather tailoring, home, office, and crafting. Ultra-sharp blades ensure precise cuts for heavy-duty materials.",
           "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B082LY2W2G"
+          "url": "https://www.amazon.com/dp/B082LY2W2G?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0F53XSQD7"
         }
       ],
       "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
@@ -678,33 +698,35 @@
         {
           "name": "VIVO Monitor Arm",
           "asin": "B01NH0HTM5",
-          "asin_verified": false,
-          "verified_product_title": "VIVO Single Monitor Stand, Fully Adjustable Arm for 17 to 32 inch Screen, Mechanical Articulating Desk Mount, Gaming and Office Setups, VESA 75x75, 100x100, Max 19.8 lbs, Classic, Black, STAND-V001O",
+          "asin_verified": true,
+          "verified_product_title": "VIVO AeroPoise™ Single Monitor Stand, for 17\" to 32\" Screens up to 19.8 lbs | Fully Adjustable Arm, Mechanical Articulating Desk Mount, VESA 75x75 and 100x100, Black, STAND-V001O",
           "search_term": "VIVO STAND-V001O Single Monitor Arm",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01NH0HTM5"
+          "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0C5L7MC6Q"
         },
         {
           "name": "OPNICE Monitor Stand Riser",
           "asin": "B0DB8F7GDN",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
           "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DB8F7GDN"
+          "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
+          "parent_asin": "B0HFWCN5KF"
         }
       ],
       "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
@@ -723,14 +745,14 @@
       "items": [
         {
           "name": "Rugshop Traditional Medallion Runner Rug",
-          "asin": "B0HGPRSSGT",
-          "asin_verified": false,
-          "verified_product_title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown | Non-Slip, Fade Resistant, Pet Friendly, Easy to Clean, Stain Resistant, Soft Rug for Hallway, Entryway, Kitchen, Foyer",
+          "asin": "B0F1V9PNB6",
+          "asin_verified": true,
+          "verified_product_title": "Rugshop Oriental Medallion Non-Slip Washable Runner Rug Green 2' x 10' | Traditional, Rectangular, Size 2' x 10', Living Room, Bedroom, Dining Room, Home Office, Kitchen, Entryway, Hallway, Nursery",
           "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0HGPRSSGT"
+          "url": "https://www.amazon.com/dp/B0F1V9PNB6?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534546,
+          "parent_asin": "B0H8Z8T5TD"
         },
         {
           "name": "Trademoon 5x7 Jute and Cotton Area Rug",
@@ -739,9 +761,9 @@
           "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
           "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0FMRZRWWX"
+          "availability_type": "LEADTIME",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0FMS4F469"
         }
       ],
       "html_file": "comparison-runner-rug-vs-area-rug-d04329b0c6d2.html",
@@ -749,8 +771,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
@@ -770,33 +794,35 @@
         {
           "name": "Tote Bag",
           "asin": "B0FKH85DPY",
-          "asin_verified": false,
-          "verified_product_title": "Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
+          "asin_verified": true,
+          "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse | Large Teacher Nurse School Bag with 40oz Cup Holder & Strap, Zipper Shoulder Bag Handbag for Travel College Bible Office Gift",
           "search_term": "Tote Bag",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0FKH85DPY"
+          "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0FQJG2B8L"
         },
         {
           "name": "Crossbody Bag",
           "asin": "B0C3LRC59F",
-          "asin_verified": false,
-          "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
+          "asin_verified": true,
+          "verified_product_title": "Banelu Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
           "search_term": "Crossbody Bag",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0C3LRC59F"
+          "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0HMNM3TV8"
         }
       ],
       "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
@@ -820,8 +846,8 @@
           "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
           "parent_asin": "B09VPHVT2Z"
         }
       ],
@@ -830,8 +856,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "review-car-dash-mat-0dee1955dee4",
@@ -850,23 +878,25 @@
       "items": [
         {
           "name": "Chevy Cavalier Dashboard Cover",
-          "asin": "B07V68DRDV",
-          "asin_verified": false,
-          "verified_product_title": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46",
+          "asin": "B099Z2Q93Z",
+          "asin_verified": true,
+          "verified_product_title": "FIILINES Dash Cover for 1995-2005 Chevy/Chevrolet Cavalier, Dashboard Mat Exact Fit for Cavalier Interior Accessories Dashboard Pad Carpet Dash Mat Sunshade Non-Slip Polyester Protector No Glare Black",
           "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07V68DRDV"
+          "url": "https://www.amazon.com/dp/B099Z2Q93Z?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534550,
+          "parent_asin": "B0FWJS5W2J"
         }
       ],
       "html_file": "review-car-dash-mat-0dee1955dee4.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-coffee-canister-1a804dc1169a",
@@ -886,22 +916,24 @@
         {
           "name": "Coffee Canister",
           "asin": "B0DZ2MMFMJ",
-          "asin_verified": false,
-          "verified_product_title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container",
+          "asin_verified": true,
+          "verified_product_title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container | Kitchen Food Storage Jars for Beans,Ground, Espresso, Rice,Tea, Sugar,Cereal,Cookie, Bar Accessories,Gifts, Lids, Scoop, Gray",
           "search_term": "coffee canister for humid climates",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DZ2MMFMJ"
+          "url": "https://www.amazon.com/dp/B0DZ2MMFMJ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0H4G9TKQC"
         }
       ],
       "html_file": "review-coffee-canister-1a804dc1169a.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-decorative-bowl-1370bfcfc215",
@@ -921,22 +953,24 @@
         {
           "name": "Decorative Bowl",
           "asin": "B092XFK5MG",
-          "asin_verified": false,
-          "verified_product_title": "Large Decorative Balls Bowl Filler Decor Orbs White & Cream (Natural White)",
+          "asin_verified": true,
+          "verified_product_title": "ANDALUCA Large Decorative Balls Bowl Filler Decor Orbs White & Cream (Natural White)",
           "search_term": "decorative bowl for dried flowers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B092XFK5MG"
+          "url": "https://www.amazon.com/dp/B092XFK5MG?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0BB682J53"
         }
       ],
       "html_file": "review-decorative-bowl-1370bfcfc215.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-foldable-daypack-2da57045820c",
@@ -961,7 +995,7 @@
           "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
           "url": "",
           "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "stock_checked_at": 1794534535,
           "parent_asin": "B07QV16HKB"
         }
       ],
@@ -970,8 +1004,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "review-foldable-daypack-d32205113585",
@@ -996,7 +1032,7 @@
           "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
           "url": "",
           "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "stock_checked_at": 1794534535,
           "parent_asin": "B07QV16HKB"
         }
       ],
@@ -1005,8 +1041,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",
@@ -1025,23 +1063,25 @@
       "items": [
         {
           "name": "LEVOIT Core 300-P Air Purifier",
-          "asin": "B07VVK39F7",
-          "asin_verified": false,
-          "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+          "asin": "B07RSZSYNC",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Core 300-P Air Purifier Replacement Filter, Genuine Air Filters | AHAM VERIFIDE, Supports HEPA Sleep Mode, Activated Carbon, Removes Smoke Odor, Allergens, Pet Hair, Core 300-RF, 1 Pack",
           "search_term": "LEVOIT Core 300-P Air Purifier",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07VVK39F7"
+          "url": "https://www.amazon.com/dp/B07RSZSYNC?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534552,
+          "parent_asin": "B0D83K6TQZ"
         }
       ],
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
+      "product_links_verified": true,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": true,
+      "product_review_required": false
     },
     {
       "slug": "review-litter-scoop-a162ab1d8392",
@@ -1061,22 +1101,24 @@
         {
           "name": "Litter Scoop",
           "asin": "B09P3PRM5P",
-          "asin_verified": false,
-          "verified_product_title": "Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small",
+          "asin_verified": true,
+          "verified_product_title": "WePet Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small",
           "search_term": "litter scoop for multi cat homes",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B09P3PRM5P"
+          "url": "https://www.amazon.com/dp/B09P3PRM5P?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0HNCQ4YZX"
         }
       ],
       "html_file": "review-litter-scoop-a162ab1d8392.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-mattress-protector-7baedfdfd6e4",
@@ -1096,22 +1138,24 @@
         {
           "name": "Mattress Protector",
           "asin": "B07HC2WHS1",
-          "asin_verified": false,
-          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft",
+          "asin_verified": true,
+          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft | Breathable, Noiseless, Hypoallergenic, Washable, 60x80\" Up to 18\" Deep, Viscose Derived from Bamboo Mattress Cover, White",
           "search_term": "mattress protector for back sleepers",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07HC2WHS1"
+          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B06XVVJ4BG"
         }
       ],
       "html_file": "review-mattress-protector-7baedfdfd6e4.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-mortar-and-pestle-3fbfd223937b",
@@ -1131,22 +1175,24 @@
         {
           "name": "Mortar and Pestle",
           "asin": "B0D9CP3BPS",
-          "asin_verified": false,
-          "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
+          "asin_verified": true,
+          "verified_product_title": "Howise Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
           "search_term": "mortar and pestle for spice grinding",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
           "parent_asin": "B0D9CP3BPS"
         }
       ],
       "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-ninja-creami-nc301-afd5d45b40e8",
@@ -1166,22 +1212,24 @@
         {
           "name": "Ninja Creami NC301",
           "asin": "B08QXB9BH5",
-          "asin_verified": false,
-          "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver",
+          "asin_verified": true,
+          "verified_product_title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker, Ice Cream, Gelato and more, NC301 | Ninja CREAMi transforms frozen bases into ice cream, sorbet and milkshakes at a button touch, from healthy to indulgent.",
           "search_term": "Ninja Creami NC301",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B08QXB9BH5"
+          "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B0H8MGLTX6"
         }
       ],
       "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-plant-pots-ecc22dbb4c63",
@@ -1201,22 +1249,24 @@
         {
           "name": "Plant Pots",
           "asin": "B0BHSX8PYZ",
-          "asin_verified": false,
-          "verified_product_title": "3 Pack 10 inch Plant Pots with Drainage Holes & Saucer",
+          "asin_verified": true,
+          "verified_product_title": "Quarut 3 Pack 10 inch Plant Pots with Drainage Holes & Saucer | Whiskey Barrel Planters,Plastic Decor Flower Pots Imitation Wine Barrel Design, for Indoor Outdoor Garden Home Plants-Brown",
           "search_term": "plant pots for low light rooms",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0BHSX8PYZ"
+          "url": "https://www.amazon.com/dp/B0BHSX8PYZ?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0HKZQ238J"
         }
       ],
       "html_file": "review-plant-pots-ecc22dbb4c63.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-portable-monitor-ec1fcecd2d09",
@@ -1236,22 +1286,24 @@
         {
           "name": "MNN Portable Monitor",
           "asin": "B0B9NNWXVP",
-          "asin_verified": false,
-          "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game",
+          "asin_verified": true,
+          "verified_product_title": "MNN 15.6\" 1080P Portable Monitor IPS USB-C HDMI Gaming Screen for Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case,Laptop , low blue, work&game",
           "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0B9NNWXVP"
+          "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0HMH45HJS"
         }
       ],
       "html_file": "review-portable-monitor-ec1fcecd2d09.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-raised-garden-bed-d615608d706c",
@@ -1270,23 +1322,25 @@
       "items": [
         {
           "name": "Land Guard Raised Garden Bed",
-          "asin": "B09C8HR4Z9",
-          "asin_verified": false,
-          "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+          "asin": "B0GJ44LX9V",
+          "asin_verified": true,
+          "verified_product_title": "Land Guard 2 Pack 8×4×2ft Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Large Metal Raised Garden Beds for Vegetables (Silver)",
           "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B09C8HR4Z9"
+          "url": "https://www.amazon.com/dp/B0GJ44LX9V?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534554,
+          "parent_asin": "B0HK7L1RYN"
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",
@@ -1306,22 +1360,24 @@
         {
           "name": "Fit Simplify Resistance Bands",
           "asin": "B01AVDVHTI",
-          "asin_verified": false,
-          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "asin_verified": true,
+          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
           "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01AVDVHTI"
+          "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B09MJKJYLQ"
         }
       ],
       "html_file": "review-resistance-bands-820d61a673d2.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-resistance-bands-9d916e3d97f8",
@@ -1340,23 +1396,25 @@
       "items": [
         {
           "name": "Fit Simplify Resistance Bands",
-          "asin": "B01AVDVHTI",
-          "asin_verified": false,
-          "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+          "asin": "B07WV7F7VC",
+          "asin_verified": true,
+          "verified_product_title": "Fit Simplify Exercise Resistance Loop Bands, Set of 5",
           "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01AVDVHTI"
+          "url": "https://www.amazon.com/dp/B07WV7F7VC?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534557,
+          "parent_asin": "B08PY2W6JT"
         }
       ],
       "html_file": "review-resistance-bands-9d916e3d97f8.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",
@@ -1375,23 +1433,25 @@
       "items": [
         {
           "name": "Stud Finder",
-          "asin": "B0GYP8QX4F",
-          "asin_verified": false,
-          "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
+          "asin": "B0HQCDLJP9",
+          "asin_verified": true,
+          "verified_product_title": "Stud Finder for Beginners: How to Find Wall Studs, Fix False Readings, and Mount Items with Confidence",
           "search_term": "stud finder for diy beginners",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0GYP8QX4F"
+          "url": "https://www.amazon.com/dp/B0HQCDLJP9?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534559,
+          "parent_asin": "B0HQCDLJP9"
         }
       ],
       "html_file": "review-stud-finder-cf86b7128d04.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-stud-finder-f856f07ac669",
@@ -1410,23 +1470,25 @@
       "items": [
         {
           "name": "Stud Finder",
-          "asin": "B0GYP8QX4F",
-          "asin_verified": false,
-          "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
+          "asin": "B0GZHZJP9K",
+          "asin_verified": true,
+          "verified_product_title": "Cyber Tools Stud Finder Multi-Mode Wall Scanner, High-Accuracy Sensor | Rechargeable Stud Finder with Wood & Metal Modes, Digital Display, Lightweight, For Drywall, Plaster, Shear Wall",
           "search_term": "stud finder for diy beginners",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0GYP8QX4F"
+          "url": "https://www.amazon.com/dp/B0GZHZJP9K?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534560,
+          "parent_asin": "B0GZHZJP9K"
         }
       ],
       "html_file": "review-stud-finder-f856f07ac669.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "review-video-doorbell-1b56e37dfa94",
@@ -1446,22 +1508,24 @@
         {
           "name": "Ring Battery Doorbell 2K",
           "asin": "B0FHJ7TKZM",
-          "asin_verified": false,
-          "verified_product_title": "Ring Battery Doorbell 2K (newest model) Retinal 2K with wide-angle video, up to 6x Enhanced Zoom, Two-Way Talk, and Built-In Battery, Speckled Gray",
+          "asin_verified": true,
+          "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray | Retinal wide-angle video, Up to 6x enhanced zoom, Two-way talk, Built-in battery",
           "search_term": "Ring Battery Doorbell 2K 2nd Generation",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0FHJ7TKZM"
+          "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0GTYB16NH"
         }
       ],
       "html_file": "review-video-doorbell-1b56e37dfa94.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "seed-air-purifier-buying-guide",
@@ -1485,9 +1549,9 @@
           "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
           "search_term": "LEVOIT Core 300-P Air Purifier",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07VVK39F7"
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0GXWMKPH6"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
@@ -1495,8 +1559,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "seed-anker-737-power-bank-review",
@@ -1520,8 +1586,8 @@
           "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
           "parent_asin": "B09VPHVT2Z"
         }
       ],
@@ -1530,8 +1596,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "seed-best-home-fitness-gear",
@@ -1551,66 +1619,68 @@
         {
           "name": "Trekking Poles",
           "asin": "B01L2HYPNW",
-          "asin_verified": false,
-          "verified_product_title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
+          "asin_verified": true,
+          "verified_product_title": "Cascade Mountain Tech Trekking Poles, Shaft Material: Aircraft- grade 6061 Aluminum with Adjustable Locks Expandable to 54\" (Set of 2), Cork Grip, Orange, Extended Grip Material: EVA",
           "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B01L2HYPNW"
+          "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B0CGDXBZ5N"
         },
         {
           "name": "Sleeping Bag",
           "asin": "B0DK99H94M",
-          "asin_verified": false,
-          "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
+          "asin_verified": true,
+          "verified_product_title": "Ultralight Sleeping Bag, Warm Weather Portable Compact Sleeping Bags for Adults, Waterproof, Lightweight, Comfort with Compression Sack for 3 Season Camping, Backpacking, Hiking, Traveling",
           "search_term": "Ultralight Warm Weather Sleeping Bag",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DK99H94M"
+          "url": "https://www.amazon.com/dp/B0DK99H94M?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
+          "parent_asin": "B0DTHGRP1B"
         },
         {
           "name": "Compass",
           "asin": "B07CK8B3R3",
-          "asin_verified": false,
-          "verified_product_title": "Orienteering Compass - Advanced Scout Compass for Hiking, Camping, and Backpacking - Best Survival Gifts for Kids",
+          "asin_verified": true,
+          "verified_product_title": "Orienteering Compass Advanced Scout for Hiking Camping Navigation Green | Map Reading Tool.Kids & Professionals Use.Outdoor Survival.Gift Idea. Survival & Camping",
           "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B07CK8B3R3"
+          "url": "https://www.amazon.com/dp/B07CK8B3R3?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534528,
+          "parent_asin": "B09MHX11Q1"
         },
         {
           "name": "Gym Bag",
           "asin": "B0C5SPSRNG",
-          "asin_verified": false,
-          "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
+          "asin_verified": true,
+          "verified_product_title": "Hoedia Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black | String Bag with Shoes Compartment and Wet Proof Pocket, Adjustable Wider Shoulder Strap, For Soccer, Basketball",
           "search_term": "Sports Drawstring Backpack Swim Gym Bag",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0C5SPSRNG"
+          "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0DQ81HY2P"
         },
         {
           "name": "Hammock Underquilt",
           "asin": "B08936QVJD",
-          "asin_verified": false,
-          "verified_product_title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
+          "asin_verified": true,
+          "verified_product_title": "OneTigris Hideout Hammock Underquilt, Thermal Hammock Quilt for Camping | Quick Setup, Full Length, Ultralight, Warm 4 Season Under Quilt for Hammock Camping Hiking Backpacking Travel",
           "search_term": "OneTigris Hideout Hammock Underquilt",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B08936QVJD"
+          "url": "https://www.amazon.com/dp/B08936QVJD?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534530,
+          "parent_asin": "B089383ZK7"
         }
       ],
       "html_file": "seed-best-home-fitness-gear.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "seed-espresso-vs-pourover",
@@ -1630,13 +1700,13 @@
         {
           "name": "Breville Bambino Espresso Machine",
           "asin": "B0B1JPPG2L",
-          "asin_verified": false,
-          "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
+          "asin_verified": true,
+          "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel | Make café-quality espresso, lattes and cappuccinos at home with this compact, manual coffee maker | Beginner-friendly",
           "search_term": "Breville BES450BSS Bambino Espresso Machine",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0B1JPPG2L"
+          "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534531,
+          "parent_asin": "B0CXYCMB86"
         },
         {
           "name": "Maestri House Pour Over Coffee Maker",
@@ -1645,8 +1715,8 @@
           "verified_product_title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
           "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
+          "availability_type": "OUT_OF_STOCK",
+          "stock_checked_at": 1794534531,
           "parent_asin": "B0BZP1PRNK"
         }
       ],
@@ -1655,8 +1725,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     },
     {
       "slug": "seed-robot-vs-stick-vacuum",
@@ -1675,34 +1747,36 @@
       "items": [
         {
           "name": "Roborock Q5 Pro Robot Vacuum",
-          "asin": "B0C7VLHMQR",
-          "asin_verified": false,
-          "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
+          "asin": "B0F334DN9J",
+          "asin_verified": true,
+          "verified_product_title": "roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
           "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0C7VLHMQR"
+          "url": "https://www.amazon.com/dp/B0F334DN9J?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534565,
+          "parent_asin": "B0GS1Q53X5"
         },
         {
           "name": "Shark PowerDetect Stick Vacuum",
           "asin": "B0DBVW1RFW",
-          "asin_verified": false,
+          "asin_verified": true,
           "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
           "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0DBVW1RFW"
+          "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=ezylifehub-20",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534532,
+          "parent_asin": "B0HLBX3JSY"
         }
       ],
       "html_file": "seed-robot-vs-stick-vacuum.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "product_links_verified": true,
+      "review_required": false,
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": false
     },
     {
       "slug": "seed-standing-desk-guide",
@@ -1726,9 +1800,9 @@
           "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
           "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794531022,
-          "parent_asin": "B0FVXMDM4L"
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794534533,
+          "parent_asin": "B0CW1BCQJB"
         }
       ],
       "html_file": "seed-standing-desk-guide.html",
@@ -1736,8 +1810,10 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794531022,
-      "stock_check_max_age_seconds": 86400
+      "products_audited_at": 1794534535,
+      "stock_check_max_age_seconds": 86400,
+      "editorial_review_required": false,
+      "product_review_required": true
     }
   ]
 }

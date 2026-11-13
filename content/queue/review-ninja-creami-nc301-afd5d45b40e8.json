@@ -16,20 +16,22 @@
     {
       "name": "Ninja Creami NC301",
       "asin": "B08QXB9BH5",
-      "asin_verified": false,
-      "verified_product_title": "Ninja NC301 CREAMi Ice Cream Maker, 7 One-Touch Programs, with Two Pint Containers and Lids, Silver",
+      "asin_verified": true,
+      "verified_product_title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker, Ice Cream, Gelato and more, NC301 | Ninja CREAMi transforms frozen bases into ice cream, sorbet and milkshakes at a button touch, from healthy to indulgent.",
       "search_term": "Ninja Creami NC301",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B08QXB9BH5"
+      "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B0H8MGLTX6"
     }
   ],
   "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

@@ -16,13 +16,13 @@
     {
       "name": "Breville Bambino Espresso Machine",
       "asin": "B0B1JPPG2L",
-      "asin_verified": false,
-      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
+      "asin_verified": true,
+      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel | Make café-quality espresso, lattes and cappuccinos at home with this compact, manual coffee maker | Beginner-friendly",
       "search_term": "Breville BES450BSS Bambino Espresso Machine",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0B1JPPG2L"
+      "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
+      "parent_asin": "B0CXYCMB86"
     },
     {
       "name": "Maestri House Pour Over Coffee Maker",
@@ -31,8 +31,8 @@
       "verified_product_title": "Maestri House Pour Over Coffee Maker, Magnetic Coffee Dripper and 600ML Carafe Coffee Server, Drip Coffee Maker with Metal Base, Dishwasher Safe for Home or Office",
       "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
       "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1794534531,
       "parent_asin": "B0BZP1PRNK"
     }
   ],
@@ -41,6 +41,8 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": true
 }

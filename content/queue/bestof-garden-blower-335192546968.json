@@ -16,35 +16,35 @@
     {
       "name": "Fiskars Pruning Shears",
       "asin": "B00002N66H",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
       "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B00002N66H"
+      "url": "https://www.amazon.com/dp/B00002N66H?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0FDC2L5M6"
     },
     {
       "name": "Rain Bird Drip Irrigation Kit",
-      "asin": "B07QNM7575",
-      "asin_verified": false,
-      "verified_product_title": "Rain Bird LNDDRIPKIT Drip Irrigation Landscape/Garden Watering Kit with Drippers, Micro-Bubblers, Micro-Sprays Standard Kit Landscape/Garden Kit",
+      "asin": "B0BCH7PYCD",
+      "asin_verified": true,
+      "verified_product_title": "Rain Bird GARDENKIT Drip Irrigation Kit",
       "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B07QNM7575"
+      "url": "https://www.amazon.com/dp/B0BCH7PYCD?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534539,
+      "parent_asin": "B0BCH7PYCD"
     },
     {
       "name": "Liberty Garden Hose Reel",
       "asin": "B01I727FQO",
-      "asin_verified": false,
-      "verified_product_title": "Liberty Garden 712 Single Arm Navigator Multi-Directional Garden Hose Reel",
+      "asin_verified": true,
+      "verified_product_title": "Liberty GARDEN 712 Single Arm Navigator Multi-Directional Garden Hose Reel, Holds 125-Feet of, 5/8-Inch, Bronze",
       "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B01I727FQO"
+      "url": "https://www.amazon.com/dp/B01I727FQO?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0GJG6L1MN"
     },
     {
       "name": "Marathon Yard Rover Wheelbarrow",
@@ -53,20 +53,20 @@
       "verified_product_title": "Marathon Yard Rover – 2 Tire Wheelbarrow Garden Cart - Green/Black",
       "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
       "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1794534528,
       "parent_asin": "B0721CX298"
     },
     {
       "name": "Land Guard Raised Garden Bed",
       "asin": "B09C8HR4Z9",
-      "asin_verified": false,
-      "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
+      "asin_verified": true,
+      "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables…………",
       "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B09C8HR4Z9"
+      "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B0HLNWJC5V"
     }
   ],
   "html_file": "bestof-garden-blower-335192546968.html",
@@ -74,6 +74,8 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": true
 }

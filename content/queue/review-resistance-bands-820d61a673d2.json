@@ -16,20 +16,22 @@
     {
       "name": "Fit Simplify Resistance Bands",
       "asin": "B01AVDVHTI",
-      "asin_verified": false,
-      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
+      "asin_verified": true,
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
       "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B01AVDVHTI"
+      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B09MJKJYLQ"
     }
   ],
   "html_file": "review-resistance-bands-820d61a673d2.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

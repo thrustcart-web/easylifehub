@@ -15,32 +15,34 @@
   "items": [
     {
       "name": "Roborock Q5 Pro Robot Vacuum",
-      "asin": "B0C7VLHMQR",
-      "asin_verified": false,
-      "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
+      "asin": "B0F334DN9J",
+      "asin_verified": true,
+      "verified_product_title": "roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
       "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0C7VLHMQR"
+      "url": "https://www.amazon.com/dp/B0F334DN9J?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534565,
+      "parent_asin": "B0GS1Q53X5"
     },
     {
       "name": "Shark PowerDetect Stick Vacuum",
       "asin": "B0DBVW1RFW",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
       "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0DBVW1RFW"
+      "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534532,
+      "parent_asin": "B0HLBX3JSY"
     }
   ],
   "html_file": "seed-robot-vs-stick-vacuum.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

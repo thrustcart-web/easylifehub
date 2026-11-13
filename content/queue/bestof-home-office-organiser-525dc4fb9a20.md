@@ -52,7 +52,7 @@ Take time to measure your room dimensions, check port compatibility, and confirm
 - Desk Planner: https://www.amazon.com/dp/B0CZNZHTYZ?tag=ezylifehub-20
 - L Shaped Desk: https://www.amazon.com/dp/B0FVXMDM4L?tag=ezylifehub-20
 - Mesh Office Chair: https://www.amazon.com/dp/B0DPHLWNBG?tag=ezylifehub-20
-- Webcam: https://www.amazon.com/dp/B085TFF7M1?tag=ezylifehub-20
-- Portable SSD: https://www.amazon.com/dp/B0874XN4D8?tag=ezylifehub-20
+- Webcam: https://www.amazon.com/dp/B006JH8T3S?tag=ezylifehub-20
+- Portable SSD: https://www.amazon.com/dp/B0874YJP92?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

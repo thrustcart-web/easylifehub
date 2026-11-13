@@ -43,6 +43,6 @@ Take time to review the manufacturer guidelines and measure your vehicle's layou
 
 ### Product Links
 
-- Chevy Cavalier Dashboard Cover: https://www.amazon.com/dp/B07V68DRDV?tag=ezylifehub-20
+- Chevy Cavalier Dashboard Cover: https://www.amazon.com/dp/B099Z2Q93Z?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

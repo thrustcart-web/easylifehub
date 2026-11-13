@@ -16,64 +16,66 @@
     {
       "name": "Desk Planner",
       "asin": "B0CZNZHTYZ",
-      "asin_verified": false,
-      "verified_product_title": "Weekly Desk Planner, 8.5x11 In To Do List Notepad, 52 Sheets, Pink",
+      "asin_verified": true,
+      "verified_product_title": "Weekly Planner, To Do List Notepad, 8.5\" × 11\", College, Office Supplies | 52 Sheets, Home Organization Essentials for Women, Desk Decor, 100 GSM, Undated Tear-Off, School, Student & Teacher Gifts",
       "search_term": "Weekly Desk Planner 8.5x11",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0CZNZHTYZ"
+      "url": "https://www.amazon.com/dp/B0CZNZHTYZ?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534532,
+      "parent_asin": "B0DKJ9RQFT"
     },
     {
       "name": "L Shaped Desk",
       "asin": "B0FVXMDM4L",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
       "search_term": "Pamray 40 Inch L Shaped Computer Desk",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0FVXMDM4L"
+      "url": "https://www.amazon.com/dp/B0FVXMDM4L?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0CW1BCQJB"
     },
     {
       "name": "Mesh Office Chair",
       "asin": "B0DPHLWNBG",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
       "search_term": "ELABEST X100 Ergonomic Mesh Office Chair",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0DPHLWNBG"
+      "url": "https://www.amazon.com/dp/B0DPHLWNBG?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534533,
+      "parent_asin": "B0HBBP6CM7"
     },
     {
       "name": "Webcam",
-      "asin": "B085TFF7M1",
-      "asin_verified": false,
-      "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
+      "asin": "B006JH8T3S",
+      "asin_verified": true,
+      "verified_product_title": "Logitech HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p Camera, Desktop or Laptop Webcam",
       "search_term": "Logitech C920x HD Pro Webcam",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B085TFF7M1"
+      "url": "https://www.amazon.com/dp/B006JH8T3S?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534541,
+      "parent_asin": "B0FD925MZ6"
     },
     {
       "name": "Portable SSD",
-      "asin": "B0874XN4D8",
-      "asin_verified": false,
-      "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
+      "asin": "B0874YJP92",
+      "asin_verified": true,
+      "verified_product_title": "SAMSUNG T7 Portable SSD, 1TB External Solid State Drive, Speeds Up to 1,050MB/s, USB 3.2 Gen 2, Reliable Storage for Gaming, Students, Professionals, MU-PC1T0H/AM, Blue",
       "search_term": "Samsung T7 Portable SSD 1TB",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0874XN4D8"
+      "url": "https://www.amazon.com/dp/B0874YJP92?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534542,
+      "parent_asin": "B0D87GVYY6"
     }
   ],
   "html_file": "bestof-home-office-organiser-525dc4fb9a20.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

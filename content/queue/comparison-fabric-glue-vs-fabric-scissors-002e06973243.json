@@ -16,31 +16,33 @@
     {
       "name": "Aleene's Fabric Glue",
       "asin": "B00178QSE6",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
       "search_term": "Aleene's Fabric Fusion Glue 4 oz",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B00178QSE6"
+      "url": "https://www.amazon.com/dp/B00178QSE6?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0FG59Y4HF"
     },
     {
       "name": "Fabric Scissors",
       "asin": "B082LY2W2G",
-      "asin_verified": false,
-      "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor, Tailoring Shears for Home Office Craft",
+      "asin_verified": true,
+      "verified_product_title": "8\" Heavy Duty Fabric Scissors, Black Sewing Shears | Ideal for leather tailoring, home, office, and crafting. Ultra-sharp blades ensure precise cuts for heavy-duty materials.",
       "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B082LY2W2G"
+      "url": "https://www.amazon.com/dp/B082LY2W2G?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534528,
+      "parent_asin": "B0F53XSQD7"
     }
   ],
   "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

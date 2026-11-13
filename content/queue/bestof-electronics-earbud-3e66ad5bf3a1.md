@@ -58,7 +58,7 @@ Take time to verify your computer's interface compatibility before purchasing ex
 - Webcam: https://www.amazon.com/dp/B085TFF7M1?tag=ezylifehub-20
 - E-reader: https://www.amazon.com/dp/B0GSZX5MWR?tag=ezylifehub-20
 - USB C Cable: https://www.amazon.com/dp/B0CCJRWKC5?tag=ezylifehub-20
-- Portable SSD: https://www.amazon.com/dp/B0874XN4D8?tag=ezylifehub-20
+- Portable SSD: https://www.amazon.com/dp/B0GCHPCPSZ?tag=ezylifehub-20
 - Action Camera: https://www.amazon.com/dp/B01HGM33HG?tag=ezylifehub-20
 - Ultrawide Monitor: https://www.amazon.com/dp/B0CC85MCC6?tag=ezylifehub-20
 

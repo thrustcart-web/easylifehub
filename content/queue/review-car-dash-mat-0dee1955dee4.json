@@ -15,21 +15,23 @@
   "items": [
     {
       "name": "Chevy Cavalier Dashboard Cover",
-      "asin": "B07V68DRDV",
-      "asin_verified": false,
-      "verified_product_title": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005 (Black) Y46",
+      "asin": "B099Z2Q93Z",
+      "asin_verified": true,
+      "verified_product_title": "FIILINES Dash Cover for 1995-2005 Chevy/Chevrolet Cavalier, Dashboard Mat Exact Fit for Cavalier Interior Accessories Dashboard Pad Carpet Dash Mat Sunshade Non-Slip Polyester Protector No Glare Black",
       "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B07V68DRDV"
+      "url": "https://www.amazon.com/dp/B099Z2Q93Z?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534550,
+      "parent_asin": "B0FWJS5W2J"
     }
   ],
   "html_file": "review-car-dash-mat-0dee1955dee4.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }

@@ -20,8 +20,8 @@
       "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
       "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
       "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534531,
       "parent_asin": "B09VPHVT2Z"
     }
   ],
@@ -30,6 +30,8 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": true
 }

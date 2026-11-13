@@ -15,43 +15,45 @@
   "items": [
     {
       "name": "Cotton Sheets",
-      "asin": "B0CZXFM3CH",
-      "asin_verified": false,
-      "verified_product_title": "RUVANTI 100% Organic Cotton Flannel Sheets Queen Size Bed Set, Baby Bear",
+      "asin": "B0DTP1K3K9",
+      "asin_verified": true,
+      "verified_product_title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey | Organic Cotton Percale Queen Sheet Set - Naturally Cooling & Lightweight, Cool All Summer, Cozy All Winter, Great For Gifting",
       "search_term": "cotton sheets for cold climates",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0CZXFM3CH"
+      "url": "https://www.amazon.com/dp/B0DTP1K3K9?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534544,
+      "parent_asin": "B0FB9HLMWW"
     },
     {
       "name": "Weighted Blanket",
       "asin": "B092LZLLGF",
-      "asin_verified": false,
-      "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey",
+      "asin_verified": true,
+      "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey | Cooling Heavy Blanket for Sleeping Perfect for 190-210 Lbs, Breathable Bedding Blanket With Glass Bead, Machine Washable",
       "search_term": "weighted blanket for anxious sleepers",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B092LZLLGF"
+      "url": "https://www.amazon.com/dp/B092LZLLGF?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534530,
+      "parent_asin": "B0F8VZBZS4"
     },
     {
       "name": "Duvet",
-      "asin": "B0HFN3GNBJ",
-      "asin_verified": false,
-      "verified_product_title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
+      "asin": "B07G81GQ3Q",
+      "asin_verified": true,
+      "verified_product_title": "COHOME All-Season Queen Size Cooling Comforter Duvet Insert - White | Down Alternative Comforter, Luxury Hotel Breathable Soft bedding, Anti-Clump Tech & 8 Tabs, Reversible, 88 x 88 inches",
       "search_term": "duvet for hot sleepers",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1794531022,
-      "parent_asin": "B0HFN3GNBJ"
+      "url": "https://www.amazon.com/dp/B07G81GQ3Q?tag=ezylifehub-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794534545,
+      "parent_asin": "B0H8S8WZXC"
     }
   ],
   "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794531022,
-  "stock_check_max_age_seconds": 86400
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794534535,
+  "stock_check_max_age_seconds": 86400,
+  "editorial_review_required": false,
+  "product_review_required": false
 }
