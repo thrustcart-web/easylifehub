@@ -792,6 +792,9 @@ class TestAIPath(unittest.TestCase):
                 "asin": "B07VVK39F7",
                 "asin_verified": True,
                 "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+                "parent_asin": "B07VVK39F7",
+                "availability_type": "IN_STOCK",
+                "stock_checked_at": int(product_resolver.time.time()),
                 "url": "https://www.amazon.com/dp/B07VVK39F7?tag=testtag-20",
             }],
         }
@@ -845,6 +848,9 @@ class TestAIPath(unittest.TestCase):
                 "asin": "B0DZ2MMFMJ",
                 "asin_verified": True,
                 "verified_product_title": "Coffee Canister Airtight Storage Container with Lid",
+                "parent_asin": "B0DZ2MMFMJ",
+                "availability_type": "IN_STOCK",
+                "stock_checked_at": int(product_resolver.time.time()),
                 "url": "https://www.amazon.com/s?k=coffee+canister&tag=testtag-20",
             }],
         }
@@ -858,7 +864,10 @@ class TestAIPath(unittest.TestCase):
         cached = {
             "coffee canister": {
                 "asin": "B0DZ2MMFMJ",
+                "parent_asin": "B0DZ2MMFMJ",
                 "title": "Coffee Canister Airtight Storage Container with Lid",
+                "availability_type": "IN_STOCK",
+                "stock_checked_at": int(product_resolver.time.time()),
             }
         }
         cache_meta = {
