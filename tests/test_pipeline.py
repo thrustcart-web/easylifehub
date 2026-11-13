@@ -160,6 +160,80 @@ def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str
 
 
 class TestProductResolution(unittest.TestCase):
+    def test_unavailable_product_anchor_is_converted_to_non_clickable_text(self):
+        url = "https://www.amazon.com/dp/B0BYMRJD7R?tag=testtag-20"
+        html = (
+            '<div><a class="cta-btn" href="' + url + '">View on Amazon</a>'
+            '<a href="https://example.com/keep">Keep other anchor</a></div>'
+        )
+        cleaned = product_resolver._disable_amazon_link(html, url)
+        self.assertNotIn('href="' + url + '"', cleaned)
+        self.assertIn('<span class="amazon-unavailable">View on Amazon</span>', cleaned)
+        self.assertIn('href="https://example.com/keep"', cleaned)
+
+    def test_product_audit_report_is_not_listed_as_a_queue_article(self):
+        from pathlib import Path
+        old_queue = util.QUEUE_DIR
+        old_render_queue = render_mod.QUEUE_DIR
+        temp_queue = _TMP / "product-audit-index-test"
+        if temp_queue.exists():
+            shutil.rmtree(temp_queue)
+        temp_queue.mkdir(parents=True)
+        try:
+            util.QUEUE_DIR = temp_queue
+            render_mod.QUEUE_DIR = temp_queue
+            (temp_queue / "real-article.json").write_text(json.dumps({
+                "slug": "real-article",
+                "title": "A real queued article",
+                "html_file": "real-article.html",
+                "items": [],
+                "layout_version": 4,
+            }), encoding="utf-8")
+            (temp_queue / "product-audit.json").write_text(json.dumps({
+                "checked_at": 123,
+                "external_products": {},
+                "stock_by_asin": {},
+            }), encoding="utf-8")
+            (temp_queue / "real-article.html").write_text("<article>Article</article>", encoding="utf-8")
+            render_mod.rebuild_index(fresh_cfg())
+            index = json.loads((temp_queue / "index.json").read_text(encoding="utf-8"))
+            self.assertEqual([post["slug"] for post in index["posts"]], ["real-article"])
+        finally:
+            util.QUEUE_DIR = old_queue
+            render_mod.QUEUE_DIR = old_render_queue
+            shutil.rmtree(temp_queue, ignore_errors=True)
+
+    def test_two_products_in_same_article_cannot_share_parent_asin(self):
+        original_search = product_resolver._search_amazon
+        original_save = product_resolver._save_cache
+        old = {
+            "PRODUCT_DISCOVERY_PROVIDER": os.environ.get("PRODUCT_DISCOVERY_PROVIDER"),
+            "AMAZON_CREATORS_CLIENT_ID": os.environ.get("AMAZON_CREATORS_CLIENT_ID"),
+            "AMAZON_CREATORS_CLIENT_SECRET": os.environ.get("AMAZON_CREATORS_CLIENT_SECRET"),
+        }
+        product_resolver._search_amazon = lambda term, token: [
+            stock_row("Model One Organizer", "B000000001", "B0PARENT001"),
+            stock_row("Model Two Organizer", "B000000002", "B0PARENT001"),
+        ]
+        product_resolver._save_cache = lambda cache: None
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
+        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
+        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        try:
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "no unique verified in-stock"):
+                product_resolver.resolve_items([
+                    {"display_name": "Model One Organizer", "search_term": "organizer"},
+                    {"display_name": "Model Two Organizer", "search_term": "organizer"},
+                ], cache={})
+        finally:
+            product_resolver._search_amazon = original_search
+            product_resolver._save_cache = original_save
+            for name, value in old.items():
+                if value is None:
+                    os.environ.pop(name, None)
+                else:
+                    os.environ[name] = value
+
     def test_creators_api_response_keeps_only_in_stock_identity_fields(self):
         rows = product_resolver._creators_rows_from_response({
             "searchResult": {"items": [
