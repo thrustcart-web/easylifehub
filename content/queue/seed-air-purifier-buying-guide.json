@@ -15,23 +15,23 @@
   "items": [
     {
       "name": "LEVOIT Core 300-P Air Purifier",
-      "asin": "B07VVK39F7",
-      "asin_verified": false,
-      "verified_product_title": "Levoit Core 300-P Air Purifier for Home Pets Hair Allergens in Bedroom, Quiet HEPA Sleep Mode, White",
+      "asin": "B0CTJF48C1",
+      "asin_verified": true,
+      "verified_product_title": "Core 300 Replacement Filter for LEVOIT Core 300-P Core 300S-P Air Purifier | Compatible with LEVOIT Core 300 Core 300-P Core 300S Core 300S-P Air Purifier, Core 300-RF, 2 Pack",
       "search_term": "LEVOIT Core 300-P Air Purifier",
-      "url": "",
+      "url": "https://www.amazon.com/dp/B0CTJF48C1?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794566230,
-      "parent_asin": "B0GXWMKPH6"
+      "stock_checked_at": 1794609448,
+      "parent_asin": "B0HQCN5PSD"
     }
   ],
   "html_file": "seed-air-purifier-buying-guide.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794566236,
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794609442,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": true
+  "product_review_required": false
 }

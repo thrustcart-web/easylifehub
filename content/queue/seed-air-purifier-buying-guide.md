@@ -49,6 +49,6 @@ Take time to review the physical dimensions, filter replacement costs, and opera
 
 ### Product Links
 
-- LEVOIT Core 300-P Air Purifier: https://www.amazon.com/dp/B07VVK39F7?tag=ezylifehub-20
+- LEVOIT Core 300-P Air Purifier: https://www.amazon.com/dp/B0CTJF48C1?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

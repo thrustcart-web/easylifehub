@@ -20,7 +20,7 @@
       "verified_product_title": "N NOROCME 192 PCS Cable Management Kit 4 Wire Organizer Sleeve | 11 Cable Holder,35Cord Clips 10+2 Roll Cable Organizer Straps,100 Fastening Cable Ties,for Computer TV Under Desk",
       "parent_asin": "B0B687J37D",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794579050,
+      "stock_checked_at": 1794609436,
       "search_term": "cable management kit for cluttered setups",
       "url": "https://www.amazon.com/dp/B0B687J37D?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "MEKASS Ergonomic Wrist Rest for Keyboard and Mouse Set, Classic Black | Soft Memory Foam, Non-Slip Keyboard Wrist Rest, Pain Relief, Wrist Support Pad for Office, Gaming & Computer Accessories",
       "parent_asin": "B0HFJ5CRC5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794579051,
+      "stock_checked_at": 1794609437,
       "search_term": "wrist rest for wrist pain",
       "url": "https://www.amazon.com/dp/B0CDK4SKT6?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "Boean Active Noise Cancelling Headphones, Bluetooth 6.0 Wireless Over Ear Headphones with 360° Spatial Audio, 120H Playtime & 5 ENC Mics, Soft Memory Foam, Transparency Mode for Office Travel",
       "parent_asin": "B0HQH99DS6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794579052,
+      "stock_checked_at": 1794609441,
       "search_term": "noise cancelling headphones for shared spaces",
       "url": "https://www.amazon.com/dp/B0HNS972CJ?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794609442,
+  "stock_check_max_age_seconds": 86400
 }
