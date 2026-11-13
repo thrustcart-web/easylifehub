@@ -839,7 +839,7 @@ def resolve_topic_items(topic: dict) -> dict:
     items = topic.get("items") or []
     if not items:
         raise ProductResolutionError(f"{topic.get('slug', 'topic')}: no products to resolve")
-    topic["items"] = resolve_items(items)
+    topic["items"] = resolve_items(items, exclude_slug=str(topic.get("slug") or ""))
     return topic
 
 
@@ -864,8 +864,8 @@ def _disable_amazon_link(body: str, url: str) -> str:
     variants = {url, html_lib.escape(url, quote=True)}
     for candidate in variants:
         pattern = re.compile(
-            r"<a\\b(?=[^>]*\\bhref\\s*=\\s*(['\"])" + re.escape(candidate) +
-            r"\\1)[^>]*>([\\s\\S]*?)</a\\s*>",
+            r"<a\b(?=[^>]*\bhref\s*=\s*(['\"])" + re.escape(candidate) +
+            r"\1)[^>]*>([\s\S]*?)</a\s*>",
             re.I,
         )
         body = pattern.sub(
@@ -1021,6 +1021,25 @@ def audit_queue_products() -> dict:
                     used_asins=used_asins,
                     used_parent_asins=used_parents,
                 )
+                if candidate is None:
+                    for fallback in _fallback_provider_names("creators_api"):
+                        if not (_provider_spending_enabled(fallback) and _provider_api_key(fallback)):
+                            continue
+                        try:
+                            fallback_rows = _search_amazon_with_provider(
+                                query, fallback, _provider_api_key(fallback)
+                            )
+                            candidate = _apply_candidate(
+                                old_item,
+                                fallback_rows,
+                                allow_missing_leading_brand=(fallback == "serpapi"),
+                                used_asins=used_asins,
+                                used_parent_asins=used_parents,
+                            )
+                            if candidate:
+                                break
+                        except ProductResolutionError as fallback_exc:
+                            log.warning("product fallback failed | %s | %s", fallback, fallback_exc)
                 if candidate:
                     replacements += 1
 
@@ -1089,6 +1108,15 @@ def audit_queue_products() -> dict:
         "articles_checked": updated_articles,
         "external_products": external_products,
         "external_asins": sorted(external_asins),
+        "stock_by_asin": {
+            asin: {
+                "title": row.get("title", ""),
+                "parent_asin": row.get("parent_asin") or asin,
+                "availability_type": row.get("availability_type", "UNKNOWN"),
+                "stock_checked_at": int(row.get("stock_checked_at") or now),
+            }
+            for asin, row in stock_by_asin.items()
+        },
         "unique_queue_asins": len(used_asins - set(external_asins)),
         "unresolved_items": unresolved_items,
         "replacements": replacements,
