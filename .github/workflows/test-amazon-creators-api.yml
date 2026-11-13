@@ -11,6 +11,12 @@ on:
 permissions:
   contents: read
 
+# Share the same serialization group as generation/audits to respect Amazon's
+# initial 1-TPS catalog API allocation.
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
 jobs:
   test:
     runs-on: ubuntu-latest
