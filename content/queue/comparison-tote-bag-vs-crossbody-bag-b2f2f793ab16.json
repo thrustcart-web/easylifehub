@@ -16,23 +16,31 @@
     {
       "name": "Tote Bag",
       "asin": "B0FKH85DPY",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
       "search_term": "Tote Bag",
-      "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0FKH85DPY"
     },
     {
       "name": "Crossbody Bag",
       "asin": "B0C3LRC59F",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
       "search_term": "Crossbody Bag",
-      "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0C3LRC59F"
     }
   ],
   "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

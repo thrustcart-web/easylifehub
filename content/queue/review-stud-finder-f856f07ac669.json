@@ -16,15 +16,20 @@
     {
       "name": "Stud Finder",
       "asin": "B0GYP8QX4F",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Stud Finder, Upgranded Wood and Metal Stud Detector, Live Wire Detection",
       "search_term": "stud finder for diy beginners",
-      "url": "https://www.amazon.com/dp/B0GYP8QX4F?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0GYP8QX4F"
     }
   ],
   "html_file": "review-stud-finder-f856f07ac669.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

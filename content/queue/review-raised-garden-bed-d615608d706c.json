@@ -16,15 +16,20 @@
     {
       "name": "Land Guard Raised Garden Bed",
       "asin": "B09C8HR4Z9",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
       "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-      "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B09C8HR4Z9"
     }
   ],
   "html_file": "review-raised-garden-bed-d615608d706c.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

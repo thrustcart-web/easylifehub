@@ -16,15 +16,20 @@
     {
       "name": "MNN Portable Monitor",
       "asin": "B0B9NNWXVP",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "MNN 15.6\" FHD 60Hz Portable Monitor USB-C HDMI IPS HDR Gaming Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case, Laptop, low blue, work and game",
       "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-      "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0B9NNWXVP"
     }
   ],
   "html_file": "review-portable-monitor-ec1fcecd2d09.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

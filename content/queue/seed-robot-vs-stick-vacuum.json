@@ -16,23 +16,31 @@
     {
       "name": "Roborock Q5 Pro Robot Vacuum",
       "asin": "B0C7VLHMQR",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Roborock Q5 Pro Robot Vacuum and Mop Combo, 5500Pa Powerful Suction, DuoRoller Brush, LiDAR Navigation, 3D Mapping, Robotic Cleaner for Dirt, Floors, Pet Hair, 240min Runtime, Smart No-Go Zone, Black",
       "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-      "url": "https://www.amazon.com/dp/B0C7VLHMQR?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0C7VLHMQR"
     },
     {
       "name": "Shark PowerDetect Stick Vacuum",
       "asin": "B0DBVW1RFW",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
       "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
-      "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0DBVW1RFW"
     }
   ],
   "html_file": "seed-robot-vs-stick-vacuum.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

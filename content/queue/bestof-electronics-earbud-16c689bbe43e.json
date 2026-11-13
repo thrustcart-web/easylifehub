@@ -16,39 +16,53 @@
     {
       "name": "Portable Power Station",
       "asin": "B082TMBYR6",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Jackery Explorer 300 Portable Power Station,292Wh",
       "search_term": "portable power station for frequent travellers",
-      "url": "https://www.amazon.com/dp/B082TMBYR6?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B082TMBYR6"
     },
     {
       "name": "Wireless Earbuds",
       "asin": "B09FT58QQP",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
       "search_term": "wireless earbuds for students",
-      "url": "https://www.amazon.com/dp/B09FT58QQP?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B09FT58QQP"
     },
     {
       "name": "Surge Protector",
       "asin": "B0GYZ9K5Q1",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Outdoor Power Strip Weatherproof, 2700J Surge Protector, Yellow 6Ft",
       "search_term": "surge protector for storm areas",
-      "url": "https://www.amazon.com/dp/B0GYZ9K5Q1?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0GYZ9K5Q1"
     },
     {
       "name": "Braided Lightning Cable",
       "asin": "B084N1BM9L",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Belkin USB A to Lightning Braided Cable 3.3ft Fast iPhone Charger Cord",
       "search_term": "braided lightning cable for home theatre",
-      "url": "https://www.amazon.com/dp/B084N1BM9L?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B084N1BM9L"
     }
   ],
   "html_file": "bestof-electronics-earbud-16c689bbe43e.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

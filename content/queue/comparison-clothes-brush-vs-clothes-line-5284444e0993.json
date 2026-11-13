@@ -16,23 +16,31 @@
     {
       "name": "Clothes Brush",
       "asin": "B00QQW5ISA",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle",
       "search_term": "Clothes Brush",
-      "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B00QQW5ISA"
     },
     {
       "name": "Clothes Line",
       "asin": "B0DQJ61TZJ",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
       "search_term": "Clothes Line",
-      "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0DQJ61TZJ"
     }
   ],
   "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

@@ -16,23 +16,31 @@
     {
       "name": "Rugshop Traditional Medallion Runner Rug",
       "asin": "B0HGPRSSGT",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown | Non-Slip, Fade Resistant, Pet Friendly, Easy to Clean, Stain Resistant, Soft Rug for Hallway, Entryway, Kitchen, Foyer",
       "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
-      "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0HGPRSSGT"
     },
     {
       "name": "Trademoon 5x7 Jute and Cotton Area Rug",
       "asin": "B0FMRZRWWX",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
       "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
-      "url": "https://www.amazon.com/dp/B0FMRZRWWX?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0FMRZRWWX"
     }
   ],
   "html_file": "comparison-runner-rug-vs-area-rug-d04329b0c6d2.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

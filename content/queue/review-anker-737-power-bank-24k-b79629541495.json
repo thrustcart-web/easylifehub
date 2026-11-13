@@ -16,15 +16,20 @@
     {
       "name": "Anker 737 Power Bank 24K",
       "asin": "B09VPHVT2Z",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
       "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
-      "url": "https://www.amazon.com/dp/B09VPHVT2Z?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B09VPHVT2Z"
     }
   ],
   "html_file": "review-anker-737-power-bank-24k-b79629541495.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

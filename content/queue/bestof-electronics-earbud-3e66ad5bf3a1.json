@@ -16,55 +16,75 @@
     {
       "name": "Webcam",
       "asin": "B085TFF7M1",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Logitech C920x HD Pro PC Webcam with Microphone, Full HD 1080p/30fps Video",
       "search_term": "webcam for home offices",
-      "url": "https://www.amazon.com/dp/B085TFF7M1?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B085TFF7M1"
     },
     {
       "name": "E-reader",
       "asin": "B0GSZX5MWR",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "XTEINK X3 3.7\" Pocket E-Ink eBook Reader,58g,Magnetic, Mini Ereader Devices",
       "search_term": "e-reader for commuters",
-      "url": "https://www.amazon.com/dp/B0GSZX5MWR?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0GSZX5MWR"
     },
     {
       "name": "USB C Cable",
       "asin": "B0CCJRWKC5",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "DbillionDa USB C to USB C Cable, 60W PD Fast Charging, 90 Degree (10 ft)",
       "search_term": "usb c cable for desk setups",
-      "url": "https://www.amazon.com/dp/B0CCJRWKC5?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0CCJRWKC5"
     },
     {
       "name": "Portable SSD",
       "asin": "B0874XN4D8",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2 Gen 2, Up to 1,050MB/s",
       "search_term": "portable ssd for frequent travellers",
-      "url": "https://www.amazon.com/dp/B0874XN4D8?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0874XN4D8"
     },
     {
       "name": "Action Camera",
       "asin": "B01HGM33HG",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "AKASO EK7000 4K30FPS 20MP WiFi Action Camera with EIS Ultra HD 131FT Waterproof Underwater Camera Remote Control 4X Zoom Support External Microphone Black",
       "search_term": "action camera for budget buyers",
-      "url": "https://www.amazon.com/dp/B01HGM33HG?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B01HGM33HG"
     },
     {
       "name": "Ultrawide Monitor",
       "asin": "B0CC85MCC6",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "ASUS ProArt PA34VCNV 34 Inch 1440p Ultrawide Professional Monitor for Mac",
       "search_term": "ultrawide monitor for photo editing",
-      "url": "https://www.amazon.com/dp/B0CC85MCC6?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0CC85MCC6"
     }
   ],
   "html_file": "bestof-electronics-earbud-3e66ad5bf3a1.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

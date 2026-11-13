@@ -16,47 +16,64 @@
     {
       "name": "Fiskars Pruning Shears",
       "asin": "B00002N66H",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Fiskars Bypass Pruning Shears, 5/8\" Cut Capacity Garden Clippers | Self-Cleaning Sap Groove Prevents Sticking, Non-Slip Grip for Cutting Stems & Branches, Steel Blades w/ Low-Friction Coating",
       "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
-      "url": "https://www.amazon.com/dp/B00002N66H?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B00002N66H"
     },
     {
       "name": "Rain Bird Drip Irrigation Kit",
       "asin": "B07QNM7575",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Rain Bird LNDDRIPKIT Drip Irrigation Landscape/Garden Watering Kit with Drippers, Micro-Bubblers, Micro-Sprays Standard Kit Landscape/Garden Kit",
       "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
-      "url": "https://www.amazon.com/dp/B07QNM7575?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B07QNM7575"
     },
     {
       "name": "Liberty Garden Hose Reel",
       "asin": "B01I727FQO",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Liberty Garden 712 Single Arm Navigator Multi-Directional Garden Hose Reel",
       "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
-      "url": "https://www.amazon.com/dp/B01I727FQO?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B01I727FQO"
     },
     {
       "name": "Marathon Yard Rover Wheelbarrow",
       "asin": "B0721CX298",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Marathon Yard Rover – 2 Tire Wheelbarrow Garden Cart - Green/Black",
       "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
-      "url": "https://www.amazon.com/dp/B0721CX298?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0721CX298"
     },
     {
       "name": "Land Guard Raised Garden Bed",
       "asin": "B09C8HR4Z9",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Land Guard Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Oval Large Metal Raised Garden Beds for Vegetables, 4x2x1ft, Silver",
       "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-      "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B09C8HR4Z9"
     }
   ],
   "html_file": "bestof-garden-blower-335192546968.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

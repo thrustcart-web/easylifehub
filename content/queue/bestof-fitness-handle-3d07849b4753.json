@@ -16,47 +16,64 @@
     {
       "name": "Fit Simplify Resistance Bands",
       "asin": "B01AVDVHTI",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5 Assorted",
       "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-      "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B01AVDVHTI"
     },
     {
       "name": "Gym Bag",
       "asin": "B0C5SPSRNG",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
       "search_term": "Sports Drawstring Backpack Gym Bag",
-      "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0C5SPSRNG"
     },
     {
       "name": "Smart Scale",
       "asin": "B0BFZVBGYH",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass",
       "search_term": "RENPHO Elis Go Travel Smart Scale",
-      "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0BFZVBGYH"
     },
     {
       "name": "Heart Rate Monitor",
       "asin": "B09SKZBZF8",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
       "search_term": "HS500 Heart Rate Monitor Chest Strap",
-      "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B09SKZBZF8"
     },
     {
       "name": "Adjustable Weight Bench",
       "asin": "B07DNYSJ8W",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "FLYBIRD Adjustable Weight Bench, 750 LB ASTM Tested, Foldable Workout Bench",
       "search_term": "FLYBIRD Adjustable Weight Bench",
-      "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B07DNYSJ8W"
     }
   ],
   "html_file": "bestof-fitness-handle-3d07849b4753.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }

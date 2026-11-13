@@ -1,0 +1,13 @@
+{
+  "checked_at": 1794531022,
+  "stock_check_max_age_seconds": 86400,
+  "articles_checked": 38,
+  "external_products": {},
+  "external_asins": [],
+  "stock_by_asin": {},
+  "unique_queue_asins": 62,
+  "unresolved_items": 75,
+  "replacements": 0,
+  "kept_existing_in_stock": 0,
+  "duplicate_or_out_of_stock_encountered": 75
+}

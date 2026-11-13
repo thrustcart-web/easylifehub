@@ -16,31 +16,42 @@
     {
       "name": "Cotton Sheets",
       "asin": "B0CZXFM3CH",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "RUVANTI 100% Organic Cotton Flannel Sheets Queen Size Bed Set, Baby Bear",
       "search_term": "cotton sheets for cold climates",
-      "url": "https://www.amazon.com/dp/B0CZXFM3CH?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0CZXFM3CH"
     },
     {
       "name": "Weighted Blanket",
       "asin": "B092LZLLGF",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey",
       "search_term": "weighted blanket for anxious sleepers",
-      "url": "https://www.amazon.com/dp/B092LZLLGF?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B092LZLLGF"
     },
     {
       "name": "Duvet",
       "asin": "B0HFN3GNBJ",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
       "search_term": "duvet for hot sleepers",
-      "url": "https://www.amazon.com/dp/B0HFN3GNBJ?tag=ezylifehub-20"
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1794531022,
+      "parent_asin": "B0HFN3GNBJ"
     }
   ],
   "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1794531022,
+  "stock_check_max_age_seconds": 86400
 }
