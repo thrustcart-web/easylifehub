@@ -1,16 +1,27 @@
-name: backfill-product-links
+name: audit-amazon-products
 
-# One-time/manual maintenance. Resolves each queued item to a verified Amazon ASIN,
-# rewrites queued HTML/metadata, and commits the updated queue for Blogger sync.
+# Audits queued Amazon offers against Creators API stock data, reserves products
+# already used by live/scheduled Blogger posts, replaces unavailable/duplicate items,
+# and removes CTAs when a safe in-stock replacement cannot be verified.
 
 on:
   workflow_dispatch:
     inputs:
       allow_paid_lookup:
-        description: 'Set true to permit the guarded SerpApi fallback for this backfill'
+        description: 'Set true to permit the guarded SerpApi fallback during replacement searches'
         required: false
         type: boolean
         default: false
+      external_asins:
+        description: 'JSON array of ASINs already used by unmanaged live/scheduled Blogger posts'
+        required: false
+        type: string
+        default: '[]'
+      published_slugs:
+        description: 'JSON array of queue-managed live/scheduled Blogger article slugs'
+        required: false
+        type: string
+        default: '[]'
 
 permissions:
   contents: write
@@ -32,7 +43,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Resolve product pages and rewrite queue links
+      - name: Audit stock and uniqueness for all queued Amazon product links
         env:
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
@@ -41,6 +52,8 @@ jobs:
           PRODUCT_DISCOVERY_PROVIDER: creators_api
           APIFY_SPEND_ENABLED: 'false'
           SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' && 'true' || 'false' }}
+          EXTERNAL_ASINS_JSON: ${{ inputs.external_asins || '[]' }}
+          PUBLISHED_SLUGS_JSON: ${{ inputs.published_slugs || '[]' }}
           AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: python3 scripts/backfill_product_links.py
 
@@ -52,6 +65,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No product-link changes."
           else
-            git commit -m "affiliate: replace Amazon search links with product pages [skip ci]"
+            git commit -m "affiliate: audit stock and deduplicate Amazon product links [skip ci]"
             git push
           fi
