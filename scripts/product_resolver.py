@@ -526,29 +526,91 @@ def _search_amazon(product_name: str, api_token: str) -> list[dict]:
     """Dispatch to the configured primary discovery provider."""
     return _search_amazon_with_provider(product_name, _selected_provider(), api_token)
 
+def _stock_check_fresh(item: dict) -> bool:
+    try:
+        checked_at = float(item.get("stock_checked_at") or 0)
+    except (TypeError, ValueError):
+        return False
+    return checked_at > 0 and 0 <= (time.time() - checked_at) <= STOCK_MAX_AGE_SECONDS
+
+
 def _trusted_item(item: dict) -> bool:
     asin = str(item.get("asin") or "").strip().upper()
     verified_title = str(item.get("verified_product_title") or "")
     name = str(item.get("display_name") or item.get("name") or "").strip()
+    availability = str(item.get("availability_type") or "").strip().upper()
     return (
         item.get("asin_verified") is True
         and bool(ASIN_RE.fullmatch(asin))
         and title_matches(name, verified_title)
+        and availability in STOCK_ALLOWED
+        and _stock_check_fresh(item)
     )
+
+
+def _json_string_set(env_name: str) -> set[str]:
+    raw = os.environ.get(env_name, "").strip()
+    if not raw:
+        return set()
+    try:
+        value = json.loads(raw)
+        if isinstance(value, list):
+            return {str(v).strip().upper() for v in value if ASIN_RE.fullmatch(str(v).strip().upper())}
+    except json.JSONDecodeError:
+        pass
+    return {
+        part.strip().upper()
+        for part in raw.split(",")
+        if ASIN_RE.fullmatch(part.strip().upper())
+    }
+
+
+def _load_product_registry(
+    exclude_slug: str | None = None,
+    reserved_asins: set[str] | None = None,
+    reserved_parent_asins: set[str] | None = None,
+) -> tuple[set[str], set[str]]:
+    """Collect product identities already used by other queued/live articles."""
+    used_asins = {str(v).strip().upper() for v in (reserved_asins or set())}
+    used_parents = {str(v).strip().upper() for v in (reserved_parent_asins or set())}
+    if reserved_asins is not None or reserved_parent_asins is not None:
+        return used_asins, used_parents
+
+    used_asins.update(_json_string_set("EXTERNAL_ASINS_JSON"))
+    used_parents.update(_json_string_set("EXTERNAL_PARENT_ASINS_JSON"))
+    try:
+        from util import QUEUE_DIR
+        for meta_path in QUEUE_DIR.glob("*.json"):
+            if meta_path.name == "index.json":
+                continue
+            try:
+                meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if exclude_slug and str(meta.get("slug") or "") == exclude_slug:
+                continue
+            for item in meta.get("items") or []:
+                if not isinstance(item, dict):
+                    continue
+                asin = str(item.get("asin") or "").strip().upper()
+                parent = str(item.get("parent_asin") or item.get("parentASIN") or asin).strip().upper()
+                if ASIN_RE.fullmatch(asin):
+                    used_asins.add(asin)
+                if ASIN_RE.fullmatch(parent):
+                    used_parents.add(parent)
+    except OSError:
+        pass
+    return used_asins, used_parents
 
 
 def _apply_candidate(
     item: dict,
     rows: list[dict],
     allow_missing_leading_brand: bool = False,
+    used_asins: set[str] | None = None,
+    used_parent_asins: set[str] | None = None,
 ) -> dict | None:
-    """Accept an exact title, or optionally one omitted leading brand token.
-
-    Some Amazon SERP listings omit the brand at the start of the title. In
-    that case we still require every remaining meaningful name token to match,
-    with at least four tokens remaining so a generic two-word category cannot
-    accidentally validate an unrelated result.
-    """
+    """Accept only an exact title match, explicit in-stock offer and unused ASIN family."""
     name = str(item.get("display_name") or item.get("name") or "").strip()
     wanted = _normal_tokens(name)
     raw_name = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", name)
@@ -558,11 +620,20 @@ def _apply_candidate(
         if token.lower() not in {"a", "an", "and", "the", "for", "with", "of", "to", "from", "best", "buying", "guide"}
     ]
     leading_token = raw_tokens[0] if raw_tokens else ""
+    used_asins = used_asins if used_asins is not None else set()
+    used_parent_asins = used_parent_asins if used_parent_asins is not None else set()
 
     for row in rows:
         title = str(row.get("title") or "").strip()
         asin = _extract_asin(row)
-        if not (asin and title):
+        parent_asin = str(row.get("parent_asin") or asin).strip().upper()
+        availability = str(row.get("availability_type") or "").strip().upper()
+        if not (
+            asin and title and availability in STOCK_ALLOWED
+            and _stock_check_fresh(row)
+            and asin not in used_asins
+            and parent_asin not in used_parent_asins
+        ):
             continue
 
         matches = title_matches(name, title)
@@ -580,8 +651,12 @@ def _apply_candidate(
         if matches:
             result = dict(item)
             result["asin"] = asin
+            result["parent_asin"] = parent_asin
             result["asin_verified"] = True
             result["verified_product_title"] = title
+            result["availability_type"] = availability
+            result["stock_checked_at"] = int(row.get("stock_checked_at") or time.time())
+            result["url"] = str(row.get("url") or "")
             return result
     return None
 
@@ -591,11 +666,20 @@ def resolve_items(
     api_token: str | None = None,
     cache: dict | None = None,
     allow_unresolved: bool = False,
+    exclude_slug: str | None = None,
+    reserved_asins: set[str] | None = None,
+    reserved_parent_asins: set[str] | None = None,
+    force_refresh: bool = False,
 ) -> list[dict]:
-    """Resolve products via Creators API first, using guarded SerpApi fallback."""
+    """Resolve products to fresh in-stock Amazon offers without reusing ASIN families."""
     provider = _selected_provider()
     api_token = (api_token if api_token is not None else _provider_api_key(provider)).strip()
     cache = cache if cache is not None else _load_cache()
+    used_asins, used_parents = _load_product_registry(
+        exclude_slug=exclude_slug,
+        reserved_asins=reserved_asins,
+        reserved_parent_asins=reserved_parent_asins,
+    )
     resolved = [dict(item) for item in items]
     errors = []
     pending: dict[str, list[int]] = {}
@@ -605,19 +689,39 @@ def resolve_items(
         if not name:
             errors.append("product item has no name")
             continue
-        if _trusted_item(item):
+
+        asin = str(item.get("asin") or "").strip().upper()
+        parent = str(item.get("parent_asin") or asin).strip().upper()
+        duplicate = bool(asin and (asin in used_asins or parent in used_parents))
+        if _trusted_item(item) and not duplicate:
+            used_asins.add(asin)
+            used_parents.add(parent)
             continue
 
         cache_key = _normal_name(name)
         cached = cache.get(cache_key)
-        if (
+        cached_asin = str(cached.get("asin") or "").strip().upper() if isinstance(cached, dict) else ""
+        cached_parent = str(cached.get("parent_asin") or cached_asin).strip().upper() if isinstance(cached, dict) else ""
+        cache_fresh = (
             isinstance(cached, dict)
-            and ASIN_RE.fullmatch(str(cached.get("asin", "")).upper())
+            and bool(ASIN_RE.fullmatch(cached_asin))
             and title_matches(name, str(cached.get("title") or ""))
-        ):
-            resolved[index]["asin"] = str(cached["asin"]).upper()
-            resolved[index]["asin_verified"] = True
-            resolved[index]["verified_product_title"] = str(cached["title"])
+            and str(cached.get("availability_type") or "").upper() in STOCK_ALLOWED
+            and _stock_check_fresh(cached)
+            and cached_asin not in used_asins
+            and cached_parent not in used_parents
+        )
+        if cache_fresh and not force_refresh:
+            resolved[index].update({
+                "asin": cached_asin,
+                "parent_asin": cached_parent,
+                "asin_verified": True,
+                "verified_product_title": str(cached["title"]),
+                "availability_type": str(cached["availability_type"]).upper(),
+                "stock_checked_at": int(cached["stock_checked_at"]),
+            })
+            used_asins.add(cached_asin)
+            used_parents.add(cached_parent)
             continue
         pending.setdefault(_normal_name(str(item.get("search_term") or name)), []).append(index)
 
@@ -645,19 +749,25 @@ def resolve_items(
     def apply_rows(rows: list[dict], source: str, indexes: list[int]) -> list[int]:
         remaining = []
         for index in indexes:
-            item = resolved[index]
             candidate = _apply_candidate(
-                item,
+                resolved[index],
                 rows,
                 allow_missing_leading_brand=(source == "serpapi"),
+                used_asins=used_asins,
+                used_parent_asins=used_parents,
             )
             if candidate is None:
                 remaining.append(index)
                 continue
             resolved[index] = candidate
-            cache[_normal_name(str(item.get("display_name") or item.get("name") or ""))] = {
+            used_asins.add(candidate["asin"])
+            used_parents.add(candidate.get("parent_asin") or candidate["asin"])
+            cache[_normal_name(str(candidate.get("display_name") or candidate.get("name") or ""))] = {
                 "asin": candidate["asin"],
+                "parent_asin": candidate.get("parent_asin") or candidate["asin"],
                 "title": candidate["verified_product_title"],
+                "availability_type": candidate["availability_type"],
+                "stock_checked_at": candidate["stock_checked_at"],
                 "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
         return remaining
@@ -665,20 +775,15 @@ def resolve_items(
     for search_term, indexes in pending.items():
         primary_error = None
         unresolved = list(indexes)
-
         try:
             if not api_token:
-                raise ProductResolutionError(
-                    f"{_provider_secret_name(provider)} is missing"
-                )
+                raise ProductResolutionError(f"{_provider_secret_name(provider)} is missing")
             primary_rows = _search_amazon(search_term, api_token)
             unresolved = apply_rows(primary_rows, provider, unresolved)
         except ProductResolutionError as exc:
             primary_error = exc
             log.warning("Amazon primary search failed | %s | %s", search_term, exc)
 
-        # A Creators API account-level error should stop the batch when there is
-        # no explicitly enabled SerpApi fallback; never silently retry paid APIs.
         if unresolved and primary_error and _is_global_provider_error(primary_error) and not fallback_providers:
             raise primary_error
 
@@ -688,33 +793,36 @@ def resolve_items(
                 break
             fallback_key = _provider_api_key(fallback_provider)
             try:
-                fallback_rows = _search_amazon_with_provider(
-                    search_term, fallback_provider, fallback_key
-                )
+                fallback_rows = _search_amazon_with_provider(search_term, fallback_provider, fallback_key)
             except ProductResolutionError as exc:
                 fallback_errors.append(str(exc))
-                log.warning(
-                    "Amazon fallback search failed | provider=%s | %s",
-                    fallback_provider, exc
-                )
+                log.warning("Amazon fallback search failed | provider=%s | %s", fallback_provider, exc)
                 if _is_global_provider_error(exc):
                     raise
                 continue
             unresolved = apply_rows(fallback_rows, fallback_provider, unresolved)
 
         if unresolved:
-            if primary_error and _is_global_provider_error(primary_error):
-                raise primary_error
             for index in unresolved:
-                name = resolved[index].get("display_name") or resolved[index].get("name")
+                item = resolved[index]
+                name = item.get("display_name") or item.get("name")
                 if primary_error:
-                    message = f"{primary_error}; no verified fallback match for: {name}"
+                    message = f"{primary_error}; no verified in-stock fallback match for: {name}"
                 elif fallback_errors:
-                    message = f"{'; '.join(fallback_errors[:2])}; no exact Amazon product-title match for: {name}"
+                    message = f"{'; '.join(fallback_errors[:2])}; no unique in-stock match for: {name}"
                 else:
-                    message = f"no exact Amazon product-title match for: {name}"
+                    message = f"no unique verified in-stock Amazon match for: {name}"
                 errors.append(message)
                 log.warning("product resolution failed | %s", message)
+                # Never leave an old/unverified link in a result that the caller
+                # explicitly requested with allow_unresolved=True.
+                item["asin_verified"] = False
+                item["url"] = ""
+                item.pop("asin", None)
+                item.pop("parent_asin", None)
+                item.pop("verified_product_title", None)
+                item.pop("availability_type", None)
+                item.pop("stock_checked_at", None)
         _save_cache(cache)
 
     if errors and not allow_unresolved:
