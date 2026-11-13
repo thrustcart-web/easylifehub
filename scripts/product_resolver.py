@@ -22,8 +22,11 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 APIFY_ACTOR_ID = "junglee~amazon-crawler"
 CREATORS_TOKEN_URL = "https://api.amazon.com/auth/o2/token"
 CREATORS_SEARCH_URL = "https://creatorsapi.amazon/catalog/v1/searchItems"
+CREATORS_GET_ITEMS_URL = "https://creatorsapi.amazon/catalog/v1/getItems"
 _CREATORS_ACCESS_TOKEN = ""
 _CREATORS_TOKEN_EXPIRES_AT = 0.0
+STOCK_ALLOWED = {"IN_STOCK", "INSTOCK", "INSTOCKSCARCE"}
+STOCK_MAX_AGE_SECONDS = 24 * 60 * 60
 MAX_RESULTS_PER_SEARCH = 3
 # API-level billing safeguards for every individual product search.
 # The user's observed Result rate was $0.005/event. This caps a run at three
@@ -332,35 +335,147 @@ def _creators_access_token() -> str:
     return token
 
 
-def _creators_rows_from_response(data: dict) -> list[dict]:
-    """Keep only product identity fields from the official API response."""
-    items = (data.get("searchResult") or {}).get("items") or []
+def _availability_from_listings(listings: list[dict]) -> str:
+    """Return an explicit Amazon availability value; unknown is never treated as stock."""
+    statuses = []
+    for listing in listings or []:
+        if not isinstance(listing, dict):
+            continue
+        condition = listing.get("condition") or {}
+        condition_value = str(condition.get("value") or "").upper()
+        if condition_value and condition_value != "NEW":
+            continue
+        availability = listing.get("availability") or {}
+        status = str(availability.get("type") or "").strip().upper()
+        if status:
+            statuses.append(status)
+    for preferred in ("IN_STOCK", "INSTOCK", "INSTOCKSCARCE"):
+        if preferred in statuses:
+            return preferred
+    return statuses[0] if statuses else "UNKNOWN"
+
+
+def _creators_rows_from_items(items: list[dict], include_unavailable: bool = False) -> list[dict]:
+    """Extract title, ASIN, parent ASIN and explicit stock status only."""
     rows = []
-    for item in items:
+    checked_at = int(time.time())
+    for item in items or []:
         if not isinstance(item, dict):
             continue
         asin = str(item.get("asin") or "").strip().upper()
         title_node = ((item.get("itemInfo") or {}).get("title") or {})
         title = str(title_node.get("displayValue") or "").strip()
-        if title and ASIN_RE.fullmatch(asin):
-            rows.append({"title": title, "asin": asin, "url": str(item.get("detailPageURL") or "")})
+        listings = ((item.get("offersV2") or {}).get("listings") or [])
+        availability_type = _availability_from_listings(listings)
+        if not (title and ASIN_RE.fullmatch(asin)):
+            continue
+        if not include_unavailable and availability_type not in STOCK_ALLOWED:
+            continue
+        parent_asin = str(item.get("parentASIN") or asin).strip().upper()
+        if not ASIN_RE.fullmatch(parent_asin):
+            parent_asin = asin
+        rows.append({
+            "title": title,
+            "asin": asin,
+            "parent_asin": parent_asin,
+            "availability_type": availability_type,
+            "stock_checked_at": checked_at,
+            "url": str(item.get("detailPageURL") or ""),
+        })
     return rows
 
 
+def _creators_rows_from_response(data: dict, include_unavailable: bool = False) -> list[dict]:
+    """Keep only product identity and stock fields from the official API response."""
+    items = (data.get("searchResult") or {}).get("items") or []
+    return _creators_rows_from_items(items, include_unavailable=include_unavailable)
+
+
+def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
+    """Bulk-check up to 10 ASINs per official GetItems request, including stock and parent ASIN."""
+    unique = []
+    seen = set()
+    for value in asins or []:
+        asin = str(value or "").strip().upper()
+        if ASIN_RE.fullmatch(asin) and asin not in seen:
+            seen.add(asin)
+            unique.append(asin)
+    if not unique:
+        return {}
+
+    token = _creators_access_token()
+    partner_tag, marketplace = _creators_partner_settings()
+    found: dict[str, dict] = {}
+    for offset in range(0, len(unique), 10):
+        batch = unique[offset:offset + 10]
+        payload = {
+            "itemIds": batch,
+            "itemIdType": "ASIN",
+            "partnerTag": partner_tag,
+            "marketplace": marketplace,
+            "condition": "New",
+            "resources": [
+                "itemInfo.title",
+                "offersV2.listings.availability",
+                "offersV2.listings.condition",
+                "parentASIN",
+            ],
+        }
+        req = request.Request(
+            CREATORS_GET_ITEMS_URL,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "x-marketplace": marketplace,
+                "User-Agent": "EasyLifeHubProductResolver/5.0",
+            },
+            method="POST",
+        )
+        try:
+            with request.urlopen(req, timeout=60) as response:
+                data = json.loads(response.read().decode("utf-8"))
+        except error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:600]
+            raise ProductResolutionError(f"Creators API GetItems HTTP {exc.code}: {detail}") from exc
+        except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            raise ProductResolutionError(f"Creators API GetItems request failed: {exc}") from exc
+        if not isinstance(data, dict):
+            raise ProductResolutionError("Creators API GetItems returned a non-object response")
+        result = data.get("itemsResult") or {}
+        rows = _creators_rows_from_items(result.get("items") or [], include_unavailable=True)
+        for row in rows:
+            found[row["asin"]] = row
+        if data.get("errors") and not rows:
+            log.warning("Creators API GetItems partial error: %s", str(data.get("errors"))[:300])
+    return found
+
+
 def _search_amazon_creators_api(product_name: str) -> list[dict]:
-    """Search Amazon's official Creators API (one request per unique query)."""
+    """Search for new-condition Amazon offers and retain only explicitly in-stock items."""
     token = _creators_access_token()
     partner_tag, marketplace = _creators_partner_settings()
     payload = {
-        "keywords": product_name, "partnerTag": partner_tag, "marketplace": marketplace,
-        "itemCount": 10, "resources": ["itemInfo.title"],
+        "keywords": product_name,
+        "partnerTag": partner_tag,
+        "marketplace": marketplace,
+        "availability": "Available",
+        "condition": "New",
+        "itemCount": 10,
+        "resources": [
+            "itemInfo.title",
+            "offersV2.listings.availability",
+            "offersV2.listings.condition",
+            "parentASIN",
+        ],
     }
     req = request.Request(
         CREATORS_SEARCH_URL, data=json.dumps(payload).encode("utf-8"),
         headers={
             "Authorization": f"Bearer {token}", "Content-Type": "application/json",
             "Accept": "application/json", "x-marketplace": marketplace,
-            "User-Agent": "EasyLifeHubProductResolver/4.0",
+            "User-Agent": "EasyLifeHubProductResolver/5.0",
         }, method="POST",
     )
     try:
@@ -375,22 +490,36 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
         raise ProductResolutionError("Creators API response was not a JSON object")
     rows = _creators_rows_from_response(data)
     if not rows and data.get("errors"):
-        raise ProductResolutionError(f"Creators API returned no valid items: {str(data.get('errors'))[:400]}")
+        raise ProductResolutionError(f"Creators API returned no valid in-stock items: {str(data.get('errors'))[:400]}")
     return rows
 
+
 def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
-    """Dispatch one query to a named provider without changing global selection."""
+    """Dispatch one query and enforce Amazon's official in-stock check for every source."""
+    if provider == "creators_api":
+        return _search_amazon_creators_api(product_name)
     if provider == "serpapi":
         if not api_token:
             raise ProductResolutionError("SERPAPI_API_KEY is missing")
-        return _search_amazon_serpapi(product_name, api_token)
-    if provider == "creators_api":
-        return _search_amazon_creators_api(product_name)
-    if provider == "apify":
+        raw_rows = _search_amazon_serpapi(product_name, api_token)
+    elif provider == "apify":
         if not api_token:
             raise ProductResolutionError("TEST_API is missing")
-        return _search_amazon_apify(product_name, api_token)
-    raise ProductResolutionError(f"Unsupported Amazon product provider: {provider}")
+        raw_rows = _search_amazon_apify(product_name, api_token)
+    else:
+        raise ProductResolutionError(f"Unsupported Amazon product provider: {provider}")
+
+    # A third-party search result is never enough to assert stock. Verify every
+    # candidate against Amazon Creators API GetItems before it can become a link.
+    stock = _creators_get_items_by_asin([row.get("asin") for row in raw_rows])
+    verified = []
+    for row in raw_rows:
+        asin = _extract_asin(row)
+        official = stock.get(asin)
+        if not official or official.get("availability_type") not in STOCK_ALLOWED:
+            continue
+        verified.append({**row, **official})
+    return verified
 
 
 def _search_amazon(product_name: str, api_token: str) -> list[dict]:
