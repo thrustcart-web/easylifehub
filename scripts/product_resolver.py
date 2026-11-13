@@ -857,67 +857,257 @@ def product_cards_html(items: list[dict], affiliate) -> str:
     )
 
 
-def backfill_queue() -> dict:
-    """Resolve queued products and rewrite verified direct links in HTML/meta files."""
+def _disable_amazon_link(body: str, url: str) -> str:
+    """Turn every CTA for an unverified product into non-clickable text."""
+    if not url:
+        return body
+    variants = {url, html_lib.escape(url, quote=True)}
+    for candidate in variants:
+        pattern = re.compile(
+            r"<a\\b(?=[^>]*\\bhref\\s*=\\s*(['\"])" + re.escape(candidate) +
+            r"\\1)[^>]*>([\\s\\S]*?)</a\\s*>",
+            re.I,
+        )
+        body = pattern.sub(
+            lambda match: '<span class="amazon-unavailable">' + match.group(2) + "</span>",
+            body,
+        )
+    return body
+
+
+def _published_priority() -> list[str]:
+    raw = os.environ.get("PUBLISHED_SLUGS_JSON", "").strip()
+    if not raw:
+        return []
+    try:
+        values = json.loads(raw)
+        return [str(v) for v in values if isinstance(v, str)]
+    except json.JSONDecodeError:
+        log.warning("PUBLISHED_SLUGS_JSON is invalid; using generation order for article priority")
+        return []
+
+
+def audit_queue_products() -> dict:
+    """Recheck stock, remove duplicate ASIN families, and rewrite every queued article's CTAs."""
     from affiliate import Affiliate
-    from util import QUEUE_DIR, load_config
+    from util import QUEUE_DIR, load_config, load_state
     from render import rebuild_index
 
     cfg = load_config()
     aff = Affiliate(cfg)
-    provider = _selected_provider()
-    if not _provider_api_key(provider):
-        raise ProductResolutionError(
-            f"{_provider_secret_name(provider)} is missing. Add it to GitHub Actions secrets before running the backfill."
-        )
-    if not _provider_spending_enabled(provider):
-        spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
-        raise ProductResolutionError(
-            f"{provider} spending is disabled. Set GitHub Actions variable {spend_variable}=true before running the backfill."
-        )
-
-    cache = _load_cache()
-    updated = 0
-    unresolved = 0
-    files = sorted(p for p in QUEUE_DIR.glob("*.json") if p.name != "index.json")
-
-    for meta_path in files:
+    files = []
+    metadata_by_path = {}
+    for meta_path in QUEUE_DIR.glob("*.json"):
+        if meta_path.name in {"index.json", "product-audit.json"}:
+            continue
         try:
             meta = json.loads(meta_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        items = meta.get("items") or []
-        if not items:
+        if not isinstance(meta, dict) or not (meta.get("items") or []):
             continue
+        files.append(meta_path)
+        metadata_by_path[meta_path] = meta
 
-        old_urls = [str(item.get("url") or "") for item in items]
-        new_items = resolve_items(items, cache=cache, allow_unresolved=True)
-        ok = all(_trusted_item(item) for item in new_items)
-        unresolved += sum(1 for item in new_items if not _trusted_item(item))
+    if not _provider_api_key("creators_api"):
+        raise ProductResolutionError(
+            "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET are required for stock auditing"
+        )
 
-        html_path = QUEUE_DIR / str(meta.get("html_file") or f"{meta.get('slug')}.html")
-        if ok and html_path.exists():
+    # Audit previously published articles first so their product links win over
+    # queued drafts. Within each group, preserve the oldest generation order.
+    state = load_state()
+    generated = {
+        str(row.get("slug") or ""): str(row.get("ts") or "")
+        for row in (state.get("generated") or [])
+        if isinstance(row, dict)
+    }
+    published_order = _published_priority()
+    published_rank = {slug: index for index, slug in enumerate(published_order)}
+    files.sort(key=lambda path: (
+        0 if str(metadata_by_path[path].get("slug") or "") in published_rank else 1,
+        published_rank.get(str(metadata_by_path[path].get("slug") or ""), 10**9),
+        generated.get(str(metadata_by_path[path].get("slug") or ""), "9999"),
+        str(metadata_by_path[path].get("slug") or path.stem),
+    ))
+
+    external_asins = sorted(_json_string_set("EXTERNAL_ASINS_JSON"))
+    all_existing_asins = set(external_asins)
+    for meta in metadata_by_path.values():
+        for item in meta.get("items") or []:
+            asin = str(item.get("asin") or "").strip().upper()
+            if ASIN_RE.fullmatch(asin):
+                all_existing_asins.add(asin)
+
+    # One official GetItems request can verify up to ten ASINs. This is much
+    # cheaper than running a new keyword search for every existing product.
+    stock_by_asin = _creators_get_items_by_asin(sorted(all_existing_asins))
+    used_asins = set(external_asins)
+    used_parents = set()
+    external_products = {}
+    for asin in external_asins:
+        row = stock_by_asin.get(asin) or {}
+        parent = str(row.get("parent_asin") or asin).upper()
+        external_products[asin] = {
+            "parent_asin": parent,
+            "availability_type": str(row.get("availability_type") or "UNKNOWN"),
+            "stock_checked_at": int(row.get("stock_checked_at") or time.time()),
+        }
+        if ASIN_RE.fullmatch(parent):
+            used_parents.add(parent)
+
+    cache = _load_cache()
+    updated_articles = 0
+    replacements = 0
+    unresolved_items = 0
+    kept_existing = 0
+    duplicate_or_oos = 0
+    now = int(time.time())
+
+    for meta_path in files:
+        meta = metadata_by_path[meta_path]
+        slug = str(meta.get("slug") or meta_path.stem)
+        old_items = [dict(item) for item in (meta.get("items") or []) if isinstance(item, dict)]
+        new_items = []
+        old_urls = []
+
+        for old_item in old_items:
+            old_url = str(old_item.get("url") or aff.url_for(old_item) or "")
+            old_urls.append(old_url)
+            old_asin = str(old_item.get("asin") or "").strip().upper()
+            official = stock_by_asin.get(old_asin) if old_asin else None
+            name = str(old_item.get("display_name") or old_item.get("name") or "").strip()
+            parent = str((official or {}).get("parent_asin") or old_item.get("parent_asin") or old_asin).strip().upper()
+
+            candidate = None
+            can_keep = (
+                bool(official)
+                and official.get("availability_type") in STOCK_ALLOWED
+                and title_matches(name, str(official.get("title") or ""))
+                and old_asin not in used_asins
+                and parent not in used_parents
+            )
+            if can_keep:
+                candidate = dict(old_item)
+                candidate.update({
+                    "asin": old_asin,
+                    "parent_asin": parent or old_asin,
+                    "asin_verified": True,
+                    "verified_product_title": official["title"],
+                    "availability_type": official["availability_type"],
+                    "stock_checked_at": official["stock_checked_at"],
+                })
+                kept_existing += 1
+            else:
+                if old_asin:
+                    duplicate_or_oos += 1
+                query = str(old_item.get("search_term") or name).strip()
+                rows = []
+                try:
+                    rows = _search_amazon_creators_api(query)
+                except ProductResolutionError as exc:
+                    log.warning("Creators API replacement search failed | %s | %s", query, exc)
+                    for fallback in _fallback_provider_names("creators_api"):
+                        if not (_provider_spending_enabled(fallback) and _provider_api_key(fallback)):
+                            continue
+                        try:
+                            rows = _search_amazon_with_provider(query, fallback, _provider_api_key(fallback))
+                            break
+                        except ProductResolutionError as fallback_exc:
+                            log.warning("product fallback failed | %s | %s", fallback, fallback_exc)
+                candidate = _apply_candidate(
+                    old_item,
+                    rows,
+                    used_asins=used_asins,
+                    used_parent_asins=used_parents,
+                )
+                if candidate:
+                    replacements += 1
+
+            if candidate:
+                asin = str(candidate["asin"]).upper()
+                parent_asin = str(candidate.get("parent_asin") or asin).upper()
+                candidate["url"] = aff.url_for(candidate)
+                used_asins.add(asin)
+                used_parents.add(parent_asin)
+                cache[_normal_name(name)] = {
+                    "asin": asin,
+                    "parent_asin": parent_asin,
+                    "title": candidate["verified_product_title"],
+                    "availability_type": candidate["availability_type"],
+                    "stock_checked_at": candidate["stock_checked_at"],
+                    "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                }
+            else:
+                unresolved_items += 1
+                candidate = dict(old_item)
+                candidate["asin_verified"] = False
+                candidate["availability_type"] = str((official or {}).get("availability_type") or "UNKNOWN")
+                candidate["stock_checked_at"] = int((official or {}).get("stock_checked_at") or now)
+                candidate["parent_asin"] = parent or old_asin
+                candidate["url"] = ""
+                if old_asin:
+                    used_asins.add(old_asin)
+                if parent and ASIN_RE.fullmatch(parent):
+                    used_parents.add(parent)
+            new_items.append(candidate)
+
+        all_valid = bool(new_items) and all(_trusted_item(item) for item in new_items)
+        html_path = QUEUE_DIR / str(meta.get("html_file") or f"{slug}.html")
+        if html_path.exists():
             body = html_path.read_text(encoding="utf-8")
-            for item, old_url in zip(new_items, old_urls):
-                new_url = aff.url_for(item)
+            for old_item, new_item, old_url in zip(old_items, new_items, old_urls):
+                new_url = aff.url_for(new_item) if _trusted_item(new_item) else ""
                 if old_url and new_url:
                     body = body.replace(html_lib.escape(old_url, quote=True), html_lib.escape(new_url, quote=True))
                     body = body.replace(old_url, html_lib.escape(new_url, quote=True))
-            if 'class="product-links"' not in body:
-                body += product_cards_html(new_items, aff)
+                elif old_url:
+                    body = _disable_amazon_link(body, old_url)
             html_path.write_text(body, encoding="utf-8")
-            meta["items"] = [{**item, "url": aff.url_for(item)} for item in new_items]
-            meta["product_links_verified"] = True
-            if str(meta.get("source") or "").startswith("ai:") or meta.get("source") == "seed":
-                meta["review_required"] = bool(meta.get("review_required", False))
-            updated += 1
-        else:
-            meta["items"] = new_items
-            meta["product_links_verified"] = False
-            meta["review_required"] = True
-        meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            md_path = html_path.with_suffix(".md")
+            if md_path.exists():
+                markdown = md_path.read_text(encoding="utf-8")
+                for old_url, new_item in zip(old_urls, new_items):
+                    new_url = aff.url_for(new_item) if _trusted_item(new_item) else ""
+                    if old_url and new_url:
+                        markdown = markdown.replace(old_url, new_url)
+                    elif old_url:
+                        markdown = markdown.replace(f"]({old_url})", "]")
+                md_path.write_text(markdown, encoding="utf-8")
 
+        meta["items"] = new_items
+        meta["product_links_verified"] = all_valid
+        meta["review_required"] = bool(meta.get("review_required", False)) or not all_valid
+        meta["products_audited_at"] = now
+        meta["stock_check_max_age_seconds"] = STOCK_MAX_AGE_SECONDS
+        meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        updated_articles += 1
+
+    audit_report = {
+        "checked_at": now,
+        "stock_check_max_age_seconds": STOCK_MAX_AGE_SECONDS,
+        "articles_checked": updated_articles,
+        "external_products": external_products,
+        "external_asins": sorted(external_asins),
+        "unique_queue_asins": len(used_asins - set(external_asins)),
+        "unresolved_items": unresolved_items,
+        "replacements": replacements,
+        "kept_existing_in_stock": kept_existing,
+        "duplicate_or_out_of_stock_encountered": duplicate_or_oos,
+    }
+    (QUEUE_DIR / "product-audit.json").write_text(
+        json.dumps(audit_report, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     rebuild_index(cfg)
     _save_cache(cache)
-    log.info("Product link backfill complete: updated=%d unresolved_items=%d", updated, unresolved)
-    return {"updated_articles": updated, "unresolved_items": unresolved}
+    log.info(
+        "Amazon product audit complete: articles=%d kept=%d replaced=%d unresolved=%d",
+        updated_articles, kept_existing, replacements, unresolved_items,
+    )
+    return audit_report
+
+
+def backfill_queue() -> dict:
+    """Compatibility entry point for the existing backfill workflow."""
+    return audit_queue_products()
