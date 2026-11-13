@@ -56,6 +56,9 @@ def resolve_from_existing_data(item: dict, cache: dict, aff: Affiliate) -> dict 
         resolved["asin"] = str(cached["asin"]).upper()
         resolved["asin_verified"] = True
         resolved["verified_product_title"] = str(cached["title"])
+        resolved["parent_asin"] = str(cached.get("parent_asin") or cached["asin"]).upper()
+        resolved["availability_type"] = str(cached.get("availability_type") or "").upper()
+        resolved["stock_checked_at"] = int(cached.get("stock_checked_at") or 0)
 
     if not _trusted_item(resolved):
         return None
