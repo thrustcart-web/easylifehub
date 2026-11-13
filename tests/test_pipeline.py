@@ -505,7 +505,15 @@ class TestProductResolution(unittest.TestCase):
                 "slug": "existing-article",
                 "items": [{"asin": "B0BYMRJD7R", "parent_asin": "B0BYMRJD7R"}],
             }), encoding="utf-8")
+            (temp_queue / "product-audit.json").write_text(json.dumps({
+                "external_products": {
+                    "B0EXT12345": {"parent_asin": "B0PARENT01"}
+                },
+                "external_asins": ["B0EXT12345"],
+            }), encoding="utf-8")
             used_asins, used_parents = product_resolver._load_product_registry()
+            self.assertIn("B0EXT12345", used_asins)
+            self.assertIn("B0PARENT01", used_parents)
             rows = [stock_row("Marbrasse Pen Organizer", "B0BYMRJD7R")]
             self.assertIsNone(product_resolver._apply_candidate(
                 {"display_name": "Marbrasse Pen Organizer"},
