@@ -267,6 +267,19 @@ function isPublished_(slug) {
   return getPublished_().some(function (p) { return p.slug === slug; });
 }
 
+function isDraftedSlug_(slug) {
+  return parseJsonArrayProperty_('BLOG_DRAFT_SLUGS').some(function (value) {
+    return String(value) === String(slug);
+  });
+}
+
+function reserveDraftSlug_(slug) {
+  if (!slug) return;
+  var list = parseJsonArrayProperty_('BLOG_DRAFT_SLUGS').map(String);
+  if (list.indexOf(String(slug)) === -1) list.push(String(slug));
+  P.setProperty('BLOG_DRAFT_SLUGS', JSON.stringify(list.slice(-500)));
+}
+
 /** True only when every item has a verified, tracked Amazon product detail page. */
 var AMAZON_STOCK_MAX_AGE_SECONDS = 24 * 60 * 60;
 var AMAZON_STOCK_ALLOWED = { IN_STOCK: true, INSTOCK: true, INSTOCKSCARCE: true };
@@ -539,6 +552,10 @@ function publishNext_(howMany) {
   for (var i = 0; i < posts.length && done < howMany; i++) {
     var meta = posts[i];
     if (!meta || !meta.slug || isPublished_(meta.slug)) continue;
+    if (isDraftedSlug_(meta.slug)) {
+      Logger.log('Skipping article: it already exists as a Blogger draft: ' + meta.slug);
+      continue;
+    }
     if (meta.review_required === true) {
       Logger.log('Skipping article pending editorial review: ' + meta.slug);
       continue;
@@ -763,47 +780,59 @@ function createQueuePreviewDraft() {
   var generated = (state.generated || []).slice().sort(function (a, b) {
     return String(b.ts || '').localeCompare(String(a.ts || ''));
   });
-  var candidate = null;
+  var blogPosts = listBlogPostsByStatus_('LIVE')
+    .concat(listBlogPostsByStatus_('SCHEDULED'))
+    .concat(listBlogPostsByStatus_('DRAFT'));
+  var titles = {};
+  blogPosts.forEach(function (post) {
+    var key = normalizedArticleTitleKey_(post.title || '');
+    if (key) titles[key] = true;
+  });
+  var reserved = {};
+  parseJsonArrayProperty_('BLOG_DRAFT_SLUGS').forEach(function (slug) { reserved[String(slug)] = true; });
 
-  // Preview the newest generated article first. Do not accidentally create a
-  // Blogger draft from older queue entries that still need editorial review.
+  var candidate = null;
+  var candidateHtml = '';
   for (var i = 0; i < generated.length; i++) {
     var slug = generated[i] && generated[i].slug;
-    if (!slug || isPublished_(slug)) continue;
+    if (!slug || isPublished_(slug) || reserved[String(slug)] || isDraftedSlug_(slug)) continue;
     var item = posts.filter(function (p) { return p && p.slug === slug; })[0];
-    if (
-      item &&
-      item.review_required !== true &&
-      productLinksReady_(item) &&
-      Number(item.layout_version || 0) >= 4
-    ) {
-      candidate = item;
-      break;
+    if (!item || item.review_required === true ||
+        !productLinksReady_(item) || Number(item.layout_version || 0) < 4) continue;
+    var titleKey = normalizedArticleTitleKey_(item.title || '');
+    if (titleKey && titles[titleKey]) {
+      Logger.log('Skipping duplicate Blogger title: ' + item.title);
+      continue;
     }
+    var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + item.html_file);
+    if (!amazonButtonLayoutReady_(html, item)) continue;
+    if (isDuplicateArticleContent_(html, item.title, blogPosts)) {
+      Logger.log('Skipping duplicate Blogger article body: ' + item.title);
+      continue;
+    }
+    candidate = item;
+    candidateHtml = html;
+    break;
   }
 
   if (!candidate) {
-    throw new Error('No newly generated, editorially approved article with verified direct Amazon links is available for preview.');
+    throw new Error('No new, unique, approved article with fresh verified Amazon links is available for preview.');
   }
-
-  var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + candidate.html_file);
-  if (!amazonButtonLayoutReady_(html, candidate)) {
-    throw new Error('The selected article does not use the required Amazon-button-only v4 layout.');
-  }
-  html = sanitizePostHtml_(html);
-
+  var html = sanitizePostHtml_(candidateHtml);
   var draft = bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
     { title: candidate.title, content: html, labels: (candidate.labels || []).filter(Boolean) },
     { isDraft: true });
-
   if (!draft || !draft.id) throw new Error('Blogger did not return a draft ID.');
+
+  reserveDraftSlug_(candidate.slug);
   Logger.log('DRAFT CREATED: ' + candidate.title);
   Logger.log('DRAFT SLUG: ' + candidate.slug);
   Logger.log('DRAFT ID: ' + draft.id);
   Logger.log('DRAFT URL: ' + (draft.url || 'Open Blogger > Posts > Drafts'));
-  Logger.log('This preview did not mark the queue item as published.');
+  Logger.log('Queue slug reserved to prevent second publication.');
   return { title: candidate.title, slug: candidate.slug, draftId: String(draft.id), url: draft.url || '' };
-}/** Publish immediately regardless of the hour (for testing). */
+}
+/** Publish immediately regardless of the hour (for testing). */
 function publishNow() {
   if (breakerOpen_()) return;
   try { publishNext_(1); }
@@ -831,6 +860,135 @@ function listBlogPostsByStatus_(status) {
     guard++;
   } while (pageToken && guard < 20);
   return posts;
+}
+
+function normalizedArticleTitleKey_(title) {
+  return String(title || '').replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;|&#160;/gi, ' ').replace(/&amp;/gi, ' and ')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function articleShingles_(html) {
+  var value = String(html || '')
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;|&#160;/gi, ' ').replace(/&amp;/gi, ' and ')
+    .replace(/&quot;|&#34;/gi, ' ').replace(/&#39;|&apos;/gi, ' ')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+  var words = value ? value.split(' ') : [];
+  if (words.length < 180) return null;
+  var set = {};
+  for (var i = 0; i <= words.length - 5; i++) set[words.slice(i, i + 5).join(' ')] = true;
+  return { set: set, size: Object.keys(set).length, words: words.length };
+}
+
+function duplicateArticleSimilarity_(contentA, contentB) {
+  var a = articleShingles_(contentA);
+  var b = articleShingles_(contentB);
+  if (!a || !b || Math.min(a.size, b.size) < 100) return null;
+  var intersection = 0;
+  Object.keys(a.set).forEach(function (key) { if (b.set[key]) intersection++; });
+  var union = a.size + b.size - intersection;
+  return {
+    jaccard: union ? intersection / union : 0,
+    containment: intersection / Math.min(a.size, b.size),
+    wordsA: a.words,
+    wordsB: b.words
+  };
+}
+
+function isDuplicateArticleContent_(content, title, posts) {
+  var key = normalizedArticleTitleKey_(title);
+  return (posts || []).some(function (post) {
+    var score = duplicateArticleSimilarity_(content, post.content || post.summary || '');
+    if (!score) return false;
+    var sameTitle = key && key === normalizedArticleTitleKey_(post.title || '');
+    return (score.jaccard >= 0.95 && score.containment >= 0.97) ||
+      (sameTitle && score.jaccard >= 0.82 && score.containment >= 0.92);
+  });
+}
+
+function duplicateBloggerPosts_() {
+  var posts = listBlogPostsByStatus_('LIVE')
+    .concat(listBlogPostsByStatus_('SCHEDULED'))
+    .concat(listBlogPostsByStatus_('DRAFT'));
+  var rank = { LIVE: 0, SCHEDULED: 1, DRAFT: 2 };
+  posts.sort(function (a, b) {
+    var ar = rank[String(a._easyLifeStatus || '').toUpperCase()];
+    var br = rank[String(b._easyLifeStatus || '').toUpperCase()];
+    if (ar !== br) return ar - br;
+    return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
+  });
+
+  var keepers = [];
+  var duplicates = [];
+  posts.forEach(function (post) {
+    var key = normalizedArticleTitleKey_(post.title || '');
+    var found = null;
+    for (var i = 0; i < keepers.length; i++) {
+      var keep = keepers[i];
+      var score = duplicateArticleSimilarity_(
+        post.content || post.summary || '', keep.content || keep.summary || ''
+      );
+      if (!score) continue;
+      var sameTitle = key && key === normalizedArticleTitleKey_(keep.title || '');
+      if ((score.jaccard >= 0.95 && score.containment >= 0.97) ||
+          (sameTitle && score.jaccard >= 0.82 && score.containment >= 0.92)) {
+        found = { post: keep, score: score };
+        break;
+      }
+    }
+    if (found) duplicates.push({ duplicate: post, keep: found.post, score: found.score });
+    else keepers.push(post);
+  });
+  return duplicates;
+}
+
+/** Read-only scan; inspect its log before running cleanupDuplicateArticles(). */
+function previewDuplicateArticles() {
+  var rows = duplicateBloggerPosts_();
+  Logger.log('Duplicate scan finished. Candidate duplicate posts=' + rows.length);
+  rows.forEach(function (row, i) {
+    Logger.log(
+      (i + 1) + '. status=' + row.duplicate._easyLifeStatus +
+      ' | duplicate=' + row.duplicate.title + ' | postId=' + row.duplicate.id +
+      ' | keepPostId=' + row.keep.id +
+      ' | similarity=' + row.score.jaccard.toFixed(3) +
+      ' | containment=' + row.score.containment.toFixed(3)
+    );
+  });
+  return rows.map(function (row) {
+    return {
+      duplicatePostId: String(row.duplicate.id),
+      duplicateTitle: String(row.duplicate.title || ''),
+      duplicateStatus: String(row.duplicate._easyLifeStatus || ''),
+      keepPostId: String(row.keep.id),
+      keepTitle: String(row.keep.title || ''),
+      similarity: row.score.jaccard
+    };
+  });
+}
+
+/** Deletes only highly-confident duplicates identified by the same conservative detector. */
+function cleanupDuplicateArticles() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) throw new Error('Duplicate cleanup skipped: another script execution is running.');
+  try {
+    var rows = duplicateBloggerPosts_();
+    var deleted = 0;
+    rows.forEach(function (row) {
+      bloggerCall_('DELETE', '/blogs/' + cfg('BLOG_ID') + '/posts/' + row.duplicate.id);
+      deleted++;
+      Logger.log('Deleted duplicate postId=' + row.duplicate.id + ' | kept postId=' + row.keep.id +
+        ' | title=' + row.duplicate.title);
+      Utilities.sleep(400);
+    });
+    Logger.log('Duplicate cleanup complete. Deleted=' + deleted);
+    return deleted;
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 function extractAmazonAsins_(html) {
@@ -897,10 +1055,13 @@ function auditAmazonProducts() {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
     var queuePosts = index.posts || [];
     var maps = postSlugMaps_(queuePosts);
-    var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
+    var blogPosts = listBlogPostsByStatus_('LIVE')
+      .concat(listBlogPostsByStatus_('SCHEDULED'))
+      .concat(listBlogPostsByStatus_('DRAFT'));
+    var statusRank = { LIVE: 0, SCHEDULED: 1, DRAFT: 2 };
     blogPosts.sort(function (a, b) {
-      var statusA = String(a._easyLifeStatus || '').toUpperCase() === 'LIVE' ? 0 : 1;
-      var statusB = String(b._easyLifeStatus || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusA = statusRank[String(a._easyLifeStatus || '').toUpperCase()];
+      var statusB = statusRank[String(b._easyLifeStatus || '').toUpperCase()];
       if (statusA !== statusB) return statusA - statusB;
       return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
     });
@@ -909,11 +1070,16 @@ function auditAmazonProducts() {
     var managedSeen = {};
     var liveCount = 0;
     var scheduledCount = 0;
+    var draftCount = 0;
+    var bloggerTitles = {};
 
     blogPosts.forEach(function (post) {
       var status = String(post._easyLifeStatus || post.status || '').toUpperCase();
       if (status === 'SCHEDULED') scheduledCount++;
+      else if (status === 'DRAFT') draftCount++;
       else liveCount++;
+      var title = String(post.title || '').trim();
+      if (title) bloggerTitles[title] = true;
       var slug = maps.byPostId[String(post.id)] ||
         maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
       if (slug) {
@@ -932,6 +1098,7 @@ function auditAmazonProducts() {
     var reservedManaged = managedSlugs;
     P.setProperty('BLOG_EXTERNAL_ASINS', JSON.stringify(reservedExternal));
     P.setProperty('BLOG_RESERVED_SLUGS', JSON.stringify(reservedManaged));
+    P.setProperty('BLOGGER_TITLES', JSON.stringify(Object.keys(bloggerTitles)));
 
     var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
     var url = 'https://api.github.com/repos/' + repo +
@@ -947,9 +1114,10 @@ function auditAmazonProducts() {
       payload: JSON.stringify({
         ref: 'main',
         inputs: {
-          allow_paid_lookup: true,
+          allow_paid_lookup: false,
           external_asins: JSON.stringify(reservedExternal),
-          published_slugs: JSON.stringify(reservedManaged)
+          published_slugs: JSON.stringify(reservedManaged),
+          blogger_titles: JSON.stringify(Object.keys(bloggerTitles))
         }
       }),
       muteHttpExceptions: true
@@ -963,8 +1131,10 @@ function auditAmazonProducts() {
     Logger.log(
       'Amazon audit dispatched. Blogger posts: live=' + liveCount +
       ', scheduled=' + scheduledCount +
+      ', drafts=' + draftCount +
       ', queue-managed=' + reservedManaged.length +
-      ', external ASIN reservations=' + reservedExternal.length
+      ', external ASIN reservations=' + reservedExternal.length +
+      ', Blogger titles=' + Object.keys(bloggerTitles).length
     );
   } finally {
     lock.releaseLock();
@@ -1012,10 +1182,13 @@ function syncPublishedProductLinks() {
       });
     });
     var maps = postSlugMaps_(index.posts || []);
-    var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
+    var blogPosts = listBlogPostsByStatus_('LIVE')
+      .concat(listBlogPostsByStatus_('SCHEDULED'))
+      .concat(listBlogPostsByStatus_('DRAFT'));
+    var statusRank = { LIVE: 0, SCHEDULED: 1, DRAFT: 2 };
     blogPosts.sort(function (a, b) {
-      var statusA = String(a._easyLifeStatus || a.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
-      var statusB = String(b._easyLifeStatus || b.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusA = statusRank[String(a._easyLifeStatus || a.status || '').toUpperCase()];
+      var statusB = statusRank[String(b._easyLifeStatus || b.status || '').toUpperCase()];
       if (statusA !== statusB) return statusA - statusB;
       return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
     });
