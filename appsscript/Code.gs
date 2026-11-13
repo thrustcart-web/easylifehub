@@ -624,7 +624,7 @@ function installTrigger() {
   ScriptApp.newTrigger('publishScheduled').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('refillQueueIfLow').timeBased().everyHours(4).create();
   ScriptApp.newTrigger('auditAmazonProducts').timeBased().everyHours(12).create();
-  ScriptApp.newTrigger('syncPublishedProductLinks').timeBased().everyHours(12).create();
+  ScriptApp.newTrigger('syncPublishedProductLinks').timeBased().everyHours(4).create();
   Logger.log('Hourly publishing trigger installed. Posting hours: ' + cfg('POST_HOURS') + ' (' + cfg('TZ') + ')');
   Logger.log('Automatic queue-refill checker installed. It checks every 4 hours.');
   Logger.log('Amazon stock/duplicate audit and live/scheduled link sync installed every 12 hours.');
@@ -864,14 +864,15 @@ function disableAmazonLinksForAsins_(html, disallowed) {
 
 function postSlugMaps_(indexPosts) {
   var byTitle = {};
+  var duplicateTitles = {};
   var byPostId = {};
   (indexPosts || []).forEach(function (meta) {
     var key = String(meta.title || '').trim().toLowerCase();
-    if (key) {
-      if (byTitle[key]) byTitle[key] = '';
-      else byTitle[key] = meta.slug;
-    }
+    if (!key) return;
+    if (Object.prototype.hasOwnProperty.call(byTitle, key)) duplicateTitles[key] = true;
+    else byTitle[key] = meta.slug;
   });
+  Object.keys(duplicateTitles).forEach(function (key) { byTitle[key] = ''; });
   getPublished_().forEach(function (post) {
     if (post && post.post_id && post.slug) byPostId[String(post.post_id)] = post.slug;
   });
@@ -982,7 +983,23 @@ function syncPublishedProductLinks() {
     var stockByAsin = audit.stock_by_asin || {};
     var bySlug = {};
     (index.posts || []).forEach(function (meta) {
-      if (meta && meta.slug) bySlug[meta.slug] = meta;
+      if (!meta || !meta.slug) return;
+      bySlug[meta.slug] = meta;
+      // A newly generated item may be newer than the last site-wide audit.
+      // Its own official Amazon stock check is valid evidence until it expires.
+      (meta.items || []).forEach(function (item) {
+        var asin = String(item && item.asin || '').toUpperCase();
+        var checkedAt = Number(item && item.stock_checked_at || 0);
+        var existing = stockByAsin[asin];
+        if (/^[A-Z0-9]{10}$/.test(asin) &&
+            checkedAt > Number(existing && existing.stock_checked_at || 0)) {
+          stockByAsin[asin] = {
+            parent_asin: String(item.parent_asin || asin).toUpperCase(),
+            availability_type: String(item.availability_type || 'UNKNOWN').toUpperCase(),
+            stock_checked_at: checkedAt
+          };
+        }
+      });
     });
     var maps = postSlugMaps_(index.posts || []);
     var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
@@ -1011,6 +1028,7 @@ function syncPublishedProductLinks() {
         : String(post.content || '');
       var localAsins = {};
       var localParents = {};
+      var localAnchorCounts = {};
       var before = html;
       html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function (full, attrs, inner) {
         var asin = amazonLinkAsin_(attrs);
@@ -1021,7 +1039,12 @@ function syncPublishedProductLinks() {
         var fresh = checkedAt > 0 && now >= checkedAt &&
           (now - checkedAt) <= AMAZON_STOCK_MAX_AGE_SECONDS;
         var parent = String(stock && stock.parent_asin || asin).toUpperCase();
-        if (localAsins[asin]) return full; // same item has two renderer-owned CTAs
+        if (localAsins[asin]) {
+          localAnchorCounts[asin] = Number(localAnchorCounts[asin] || 1) + 1;
+          if (localAnchorCounts[asin] <= 2) return full; // mid-article + final CTA only
+          blockedLinks++;
+          return '<span class="amazon-unavailable">' + inner + '</span>';
+        }
         var localDuplicate = localParents[parent] && !localAsins[asin];
         var siteDuplicate = usedAsins[asin] || (usedParents[parent] && !usedAsins[asin]);
         if (!AMAZON_STOCK_ALLOWED[status] || !fresh || localDuplicate || siteDuplicate) {
@@ -1030,6 +1053,7 @@ function syncPublishedProductLinks() {
         }
         localAsins[asin] = true;
         localParents[parent] = true;
+        localAnchorCounts[asin] = 1;
         usedAsins[asin] = true;
         usedParents[parent] = true;
         return full;
