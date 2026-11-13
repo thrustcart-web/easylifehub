@@ -946,7 +946,7 @@ def _article_title_key(value: str) -> str:
 
 
 def _article_text_for_dedupe(value: str) -> str:
-    text = re.sub(r"<(script|style)\\b[^>]*>[\\s\\S]*?</\\1\\s*>", " ", str(value or ""), flags=re.I)
+    text = re.sub(r"<(script|style)\b[^>]*>[\s\S]*?</\1\s*>", " ", str(value or ""), flags=re.I)
     text = re.sub(r"<[^>]+>", " ", text)
     text = html_lib.unescape(text).lower()
     return " ".join(TOKEN_RE.findall(text))
