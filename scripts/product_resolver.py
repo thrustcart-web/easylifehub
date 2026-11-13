@@ -576,6 +576,18 @@ def _trusted_item(item: dict) -> bool:
     )
 
 
+def _editorial_review_required(meta: dict) -> bool:
+    """Keep editorial review independent from temporary product-stock failures."""
+    if "editorial_review_required" in meta:
+        return bool(meta.get("editorial_review_required"))
+    source = str(meta.get("source") or "").strip().lower()
+    return not (
+        source.startswith("ai:")
+        or source == "seed"
+        or meta.get("editorial_approved") is True
+    )
+
+
 def _json_string_set(env_name: str) -> set[str]:
     raw = os.environ.get(env_name, "").strip()
     if not raw:
@@ -1231,7 +1243,10 @@ def audit_queue_products() -> dict:
 
         meta["items"] = new_items
         meta["product_links_verified"] = all_valid
-        meta["review_required"] = bool(meta.get("review_required", False)) or not all_valid
+        editorial_review = _editorial_review_required(meta)
+        meta["editorial_review_required"] = editorial_review
+        meta["product_review_required"] = not all_valid
+        meta["review_required"] = editorial_review or not all_valid
         meta["products_audited_at"] = now
         meta["stock_check_max_age_seconds"] = STOCK_MAX_AGE_SECONDS
         meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
