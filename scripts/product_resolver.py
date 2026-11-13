@@ -443,7 +443,8 @@ def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
             raise ProductResolutionError(f"Creators API GetItems request failed: {exc}") from exc
         if not isinstance(data, dict):
             raise ProductResolutionError("Creators API GetItems returned a non-object response")
-        result = data.get("itemsResult") or {}
+        # GetItems uses the documented "itemResults" response container.
+        result = data.get("itemResults") or {}
         rows = _creators_rows_from_items(result.get("items") or [], include_unavailable=True)
         for row in rows:
             found[row["asin"]] = row
@@ -467,7 +468,7 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
             "itemInfo.title",
             "offersV2.listings.availability",
             "offersV2.listings.condition",
-            "parentASIN",
+            "ParentASIN",
         ],
     }
     req = request.Request(
