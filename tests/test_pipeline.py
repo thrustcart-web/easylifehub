@@ -354,7 +354,8 @@ class TestProductResolution(unittest.TestCase):
 
         self.assertEqual(captured["payload"]["availability"], "Available")
         self.assertEqual(captured["payload"]["condition"], "New")
-        self.assertIn("ParentASIN", captured["payload"]["resources"])
+        self.assertIn("parentASIN", captured["payload"]["resources"])
+        self.assertNotIn("ParentASIN", captured["payload"]["resources"])
         self.assertEqual(rows[0]["parent_asin"], "B0PARENT01")
         self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
 
