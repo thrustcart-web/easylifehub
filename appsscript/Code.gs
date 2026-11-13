@@ -268,15 +268,41 @@ function isPublished_(slug) {
 }
 
 /** True only when every item has a verified, tracked Amazon product detail page. */
+var AMAZON_STOCK_MAX_AGE_SECONDS = 24 * 60 * 60;
+var AMAZON_STOCK_ALLOWED = { IN_STOCK: true, INSTOCK: true, INSTOCKSCARCE: true };
+
+function productItemStockReady_(item) {
+  if (!item) return false;
+  var status = String(item.availability_type || '').toUpperCase();
+  var checkedAt = Number(item.stock_checked_at || 0);
+  var age = Math.floor(Date.now() / 1000) - checkedAt;
+  return !!AMAZON_STOCK_ALLOWED[status] &&
+    checkedAt > 0 &&
+    age >= 0 &&
+    age <= AMAZON_STOCK_MAX_AGE_SECONDS;
+}
+
+/** A product link is eligible only with a fresh official Amazon stock check. */
 function productLinksReady_(meta) {
   if (!meta || meta.product_links_verified !== true) return false;
   var items = meta.items || [];
   if (!items.length) return false;
+  var seenAsins = {};
+  var seenParents = {};
   return items.every(function (item) {
-    return item &&
-      item.asin_verified === true &&
-      /^[A-Z0-9]{10}$/.test(String(item.asin || '')) &&
-      String(item.url || '').indexOf('https://www.amazon.com/dp/' + item.asin + '?tag=') === 0;
+    if (!item ||
+        item.asin_verified !== true ||
+        !/^[A-Z0-9]{10}$/.test(String(item.asin || '')) ||
+        !productItemStockReady_(item) ||
+        String(item.url || '').indexOf('https://www.amazon.com/dp/' + item.asin + '?tag=') !== 0) {
+      return false;
+    }
+    var asin = String(item.asin).toUpperCase();
+    var parent = String(item.parent_asin || asin).toUpperCase();
+    if (seenAsins[asin] || seenParents[parent]) return false;
+    seenAsins[asin] = true;
+    seenParents[parent] = true;
+    return true;
   });
 }
 
@@ -329,6 +355,74 @@ function countPublishedToday_() {
 function lastPublishTime_() {
   var list = getPublished_();
   return list.length ? new Date(list[list.length - 1].ts).getTime() : 0;
+}
+
+function parseJsonArrayProperty_(name) {
+  try {
+    var value = JSON.parse(P.getProperty(name) || '[]');
+    return Array.isArray(value) ? value : [];
+  } catch (e) {
+    Logger.log('Invalid JSON in Script Property ' + name);
+    return [];
+  }
+}
+
+/** Build the ASIN/parent-ASIN reservation set for products already on the blog. */
+function reservedProductSets_(queuePosts) {
+  var usedAsins = {};
+  var usedParents = {};
+  parseJsonArrayProperty_('BLOG_EXTERNAL_ASINS').forEach(function (asin) {
+    asin = String(asin || '').toUpperCase();
+    if (/^[A-Z0-9]{10}$/.test(asin)) usedAsins[asin] = true;
+  });
+  parseJsonArrayProperty_('BLOG_EXTERNAL_PARENT_ASINS').forEach(function (asin) {
+    asin = String(asin || '').toUpperCase();
+    if (/^[A-Z0-9]{10}$/.test(asin)) usedParents[asin] = true;
+  });
+
+  var reservedSlugs = {};
+  parseJsonArrayProperty_('BLOG_RESERVED_SLUGS').forEach(function (slug) {
+    reservedSlugs[String(slug)] = true;
+  });
+  getPublished_().forEach(function (post) {
+    if (post && post.slug) reservedSlugs[String(post.slug)] = true;
+  });
+  (queuePosts || []).forEach(function (meta) {
+    if (!meta || !reservedSlugs[String(meta.slug || '')]) return;
+    (meta.items || []).forEach(function (item) {
+      var asin = String(item && item.asin || '').toUpperCase();
+      var parent = String(item && item.parent_asin || asin).toUpperCase();
+      if (/^[A-Z0-9]{10}$/.test(asin)) usedAsins[asin] = true;
+      if (/^[A-Z0-9]{10}$/.test(parent)) usedParents[parent] = true;
+    });
+  });
+  return { asins: usedAsins, parents: usedParents };
+}
+
+function articleUsesReservedProducts_(meta, reserved) {
+  var localAsins = {};
+  var localParents = {};
+  var items = (meta && meta.items) || [];
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i] || {};
+    var asin = String(item.asin || '').toUpperCase();
+    var parent = String(item.parent_asin || asin).toUpperCase();
+    if (!asin || !parent) return true;
+    if (reserved.asins[asin] || reserved.parents[parent] ||
+        localAsins[asin] || localParents[parent]) return true;
+    localAsins[asin] = true;
+    localParents[parent] = true;
+  }
+  return false;
+}
+
+function reserveArticleProducts_(meta, reserved) {
+  (meta.items || []).forEach(function (item) {
+    var asin = String(item && item.asin || '').toUpperCase();
+    var parent = String(item && item.parent_asin || asin).toUpperCase();
+    if (/^[A-Z0-9]{10}$/.test(asin)) reserved.asins[asin] = true;
+    if (/^[A-Z0-9]{10}$/.test(parent)) reserved.parents[parent] = true;
+  });
 }
 
 // ---------------------------------------------------------- circuit breaker --
@@ -440,6 +534,7 @@ function publishNext_(howMany) {
   var posts = index.posts || [];
   Logger.log('Queue size: ' + posts.length);
 
+  var reserved = reservedProductSets_(posts);
   var done = 0;
   for (var i = 0; i < posts.length && done < howMany; i++) {
     var meta = posts[i];
@@ -449,7 +544,11 @@ function publishNext_(howMany) {
       continue;
     }
     if (!productLinksReady_(meta)) {
-      Logger.log('Skipping article: direct Amazon product pages are not verified yet: ' + meta.slug);
+      Logger.log('Skipping article: fresh Amazon in-stock verification is missing or expired: ' + meta.slug);
+      continue;
+    }
+    if (articleUsesReservedProducts_(meta, reserved)) {
+      Logger.log('Skipping article: one or more Amazon products are already used by another live/scheduled/published article: ' + meta.slug);
       continue;
     }
     if (Number(meta.layout_version || 0) < 4) {
@@ -482,6 +581,7 @@ function publishNext_(howMany) {
       source: meta.source || ''
     });
     setPublished_(published);
+    reserveArticleProducts_(meta, reserved);
     recordSuccess_();
     done++;
     Logger.log('PUBLISHED: ' + meta.title + ' -> ' + post.url);
@@ -505,26 +605,29 @@ function notifyOnSuccess_(meta, post) {
 /** Installs the publishing trigger and the automatic queue-refill checker. */
 function installTrigger() {
   var existing = ScriptApp.getProjectTriggers();
+  var managedHandlers = {
+    publishScheduled: true,
+    refillQueueIfLow: true,
+    auditAmazonProducts: true,
+    syncPublishedProductLinks: true
+  };
   if (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() !== 'true') {
     existing.forEach(function (trigger) {
-      var handler = trigger.getHandlerFunction();
-      if (handler === 'publishScheduled' || handler === 'refillQueueIfLow') {
-        ScriptApp.deleteTrigger(trigger);
-      }
+      if (managedHandlers[trigger.getHandlerFunction()]) ScriptApp.deleteTrigger(trigger);
     });
     Logger.log('Automation remains DISABLED. Set Script Property AUTOMATION_ENABLED=true only after the Blogger draft is approved.');
     return;
   }
   existing.forEach(function (t) {
-    var handler = t.getHandlerFunction();
-    if (handler === 'publishScheduled' || handler === 'refillQueueIfLow') {
-      ScriptApp.deleteTrigger(t);
-    }
+    if (managedHandlers[t.getHandlerFunction()]) ScriptApp.deleteTrigger(t);
   });
   ScriptApp.newTrigger('publishScheduled').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('refillQueueIfLow').timeBased().everyHours(4).create();
+  ScriptApp.newTrigger('auditAmazonProducts').timeBased().everyHours(12).create();
+  ScriptApp.newTrigger('syncPublishedProductLinks').timeBased().everyHours(12).create();
   Logger.log('Hourly publishing trigger installed. Posting hours: ' + cfg('POST_HOURS') + ' (' + cfg('TZ') + ')');
   Logger.log('Automatic queue-refill checker installed. It checks every 4 hours.');
+  Logger.log('Amazon stock/duplicate audit and live/scheduled link sync installed every 12 hours.');
 }
 
 /**
@@ -712,56 +815,249 @@ function publishNow() {
  * Blogger posts so their old Amazon search URLs become direct /dp/ASIN pages.
  * This only touches posts whose every product has a verified ASIN.
  */
+function listBlogPostsByStatus_(status) {
+  var posts = [];
+  var pageToken = '';
+  var guard = 0;
+  do {
+    var params = { status: status, fetchBodies: true, maxResults: 500, view: 'ADMIN' };
+    if (pageToken) params.pageToken = pageToken;
+    var page = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID') + '/posts', null, params);
+    (page.items || []).forEach(function (post) { posts.push(post); });
+    pageToken = page.nextPageToken || '';
+    guard++;
+  } while (pageToken && guard < 20);
+  return posts;
+}
+
+function extractAmazonAsins_(html) {
+  var found = {};
+  var anchors = String(html || '').match(/<a\b[^>]*>/gi) || [];
+  anchors.forEach(function (anchor) {
+    var href = anchor.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
+    if (!href) return;
+    var url = String(href[1] || href[2] || '').replace(/&amp;/gi, '&');
+    var asin = url.match(/https?:\/\/(?:www\.)?amazon\.com\/dp\/([A-Z0-9]{10})(?:[/?&#]|$)/i);
+    if (asin) found[asin[1].toUpperCase()] = true;
+  });
+  return Object.keys(found);
+}
+
+function amazonLinkAsin_(anchorAttrs) {
+  var href = String(anchorAttrs || '').match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
+  if (!href) return '';
+  var url = String(href[1] || href[2] || '').replace(/&amp;/gi, '&');
+  var match = url.match(/https?:\/\/(?:www\.)?amazon\.com\/dp\/([A-Z0-9]{10})(?:[/?&#]|$)/i);
+  return match ? match[1].toUpperCase() : '';
+}
+
+function disableAmazonLinksForAsins_(html, disallowed) {
+  return String(html || '').replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function (full, attrs, inner) {
+    var asin = amazonLinkAsin_(attrs);
+    if (!asin || !disallowed[asin]) return full;
+    return '<span class="amazon-unavailable">' + inner + '</span>';
+  });
+}
+
+function postSlugMaps_(indexPosts) {
+  var byTitle = {};
+  var byPostId = {};
+  (indexPosts || []).forEach(function (meta) {
+    var key = String(meta.title || '').trim().toLowerCase();
+    if (key) {
+      if (byTitle[key]) byTitle[key] = '';
+      else byTitle[key] = meta.slug;
+    }
+  });
+  getPublished_().forEach(function (post) {
+    if (post && post.post_id && post.slug) byPostId[String(post.post_id)] = post.slug;
+  });
+  return { byTitle: byTitle, byPostId: byPostId };
+}
+
+/**
+ * Reads all LIVE and SCHEDULED Blogger posts, reserves their existing products,
+ * then starts the GitHub audit. Queue-managed posts are prioritised by their
+ * Blogger slug; unmanaged posts become external ASIN reservations.
+ */
+function auditAmazonProducts() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Amazon stock audit skipped: another script execution is running.');
+    return;
+  }
+  try {
+    var token = String(P.getProperty('GITHUB_ACTIONS_TOKEN') || P.getProperty('GITHUB_TOKEN') || '').trim();
+    if (!token) throw new Error('GITHUB_ACTIONS_TOKEN is missing; cannot dispatch the product audit workflow.');
+
+    var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+    var queuePosts = index.posts || [];
+    var maps = postSlugMaps_(queuePosts);
+    var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
+    var externalAsins = {};
+    var managedSlugs = {};
+    var liveCount = 0;
+    var scheduledCount = 0;
+
+    blogPosts.forEach(function (post) {
+      var status = String(post.status || '').toUpperCase();
+      if (status === 'SCHEDULED') scheduledCount++;
+      else liveCount++;
+      var slug = maps.byPostId[String(post.id)] ||
+        maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
+      if (slug) {
+        managedSlugs[slug] = true;
+      } else {
+        extractAmazonAsins_(post.content || '').forEach(function (asin) {
+          externalAsins[asin] = true;
+        });
+      }
+    });
+
+    var reservedExternal = Object.keys(externalAsins).sort();
+    var reservedManaged = Object.keys(managedSlugs).sort();
+    P.setProperty('BLOG_EXTERNAL_ASINS', JSON.stringify(reservedExternal));
+    P.setProperty('BLOG_RESERVED_SLUGS', JSON.stringify(reservedManaged));
+
+    var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+    var url = 'https://api.github.com/repos/' + repo +
+      '/actions/workflows/backfill-product-links.yml/dispatches';
+    var response = UrlFetchApp.fetch(url, {
+      method: 'post',
+      contentType: 'application/json',
+      headers: {
+        Authorization: 'Bearer ' + token,
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      },
+      payload: JSON.stringify({
+        ref: 'main',
+        inputs: {
+          allow_paid_lookup: true,
+          external_asins: JSON.stringify(reservedExternal),
+          published_slugs: JSON.stringify(reservedManaged)
+        }
+      }),
+      muteHttpExceptions: true
+    });
+    var httpStatus = response.getResponseCode();
+    if (httpStatus !== 204) {
+      throw new Error('Amazon product audit dispatch failed (' + httpStatus + '): ' +
+        response.getContentText().slice(0, 500));
+    }
+    P.setProperty('AMAZON_AUDIT_LAST_DISPATCH_MS', String(Date.now()));
+    Logger.log(
+      'Amazon audit dispatched. Blogger posts: live=' + liveCount +
+      ', scheduled=' + scheduledCount +
+      ', queue-managed=' + reservedManaged.length +
+      ', external ASIN reservations=' + reservedExternal.length
+    );
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
+ * Sync audited queue HTML to existing live/scheduled Blogger posts, and disable
+ * any unmanaged Amazon link that is out of stock, stale, or duplicated.
+ */
 function syncPublishedProductLinks() {
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) {
     Logger.log('Product-link sync skipped: another execution is running.');
     return;
   }
-
   try {
     var index = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/index.json');
+    var audit;
+    try {
+      audit = fetchJson_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/product-audit.json');
+    } catch (auditErr) {
+      Logger.log('Product-link sync skipped: stock audit has not completed yet.');
+      return;
+    }
+    var stockByAsin = audit.stock_by_asin || {};
     var bySlug = {};
     (index.posts || []).forEach(function (meta) {
       if (meta && meta.slug) bySlug[meta.slug] = meta;
     });
-
-    var published = getPublished_();
-    var updated = 0;
-    var skipped = 0;
-
-    published.forEach(function (post) {
-      var meta = bySlug[post.slug];
-      if (!meta || meta.product_links_verified !== true || !meta.html_file) {
-        skipped++;
-        return;
-      }
-
-      var items = meta.items || [];
-      var valid = items.length > 0 && items.every(function (item) {
-        return item &&
-          item.asin_verified === true &&
-          /^[A-Z0-9]{10}$/.test(String(item.asin || '')) &&
-          /^https:\/\/www\.amazon\.com\/dp\/[A-Z0-9]{10}\?tag=[^&\s]+$/.test(String(item.url || ''));
-      });
-      if (!valid || !post.post_id) {
-        skipped++;
-        return;
-      }
-
-      var html = fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file);
-      html = sanitizePostHtml_(html);
-      bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.post_id, {
-        title: meta.title || post.title,
-        content: html,
-        labels: (meta.labels || []).filter(Boolean)
-      });
-      updated++;
-      Logger.log('UPDATED PRODUCT LINKS: ' + (meta.title || post.title));
-      Utilities.sleep(1000);
+    var maps = postSlugMaps_(index.posts || []);
+    var blogPosts = listBlogPostsByStatus_('LIVE').concat(listBlogPostsByStatus_('SCHEDULED'));
+    blogPosts.sort(function (a, b) {
+      var statusA = String(a.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      var statusB = String(b.status || '').toUpperCase() === 'LIVE' ? 0 : 1;
+      if (statusA !== statusB) return statusA - statusB;
+      return String(a.published || a.updated || '').localeCompare(String(b.published || b.updated || ''));
     });
 
-    Logger.log('Product-link sync complete. Updated=' + updated + ', skipped=' + skipped);
+    var usedAsins = {};
+    var usedParents = {};
+    var updated = 0;
+    var blockedLinks = 0;
+    var skipped = 0;
+    var now = Math.floor(Date.now() / 1000);
+
+    blogPosts.forEach(function (post) {
+      if (!post || !post.id) return;
+      var slug = maps.byPostId[String(post.id)] ||
+        maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
+      var meta = slug ? bySlug[slug] : null;
+      var html = meta && meta.html_file
+        ? fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file)
+        : String(post.content || '');
+      var localAsins = {};
+      var localParents = {};
+      var before = html;
+      html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function (full, attrs, inner) {
+        var asin = amazonLinkAsin_(attrs);
+        if (!asin) return full;
+        var stock = stockByAsin[asin];
+        var status = String(stock && stock.availability_type || '').toUpperCase();
+        var checkedAt = Number(stock && stock.stock_checked_at || 0);
+        var fresh = checkedAt > 0 && now >= checkedAt &&
+          (now - checkedAt) <= AMAZON_STOCK_MAX_AGE_SECONDS;
+        var parent = String(stock && stock.parent_asin || asin).toUpperCase();
+        var localDuplicate = localAsins[asin] || (localParents[parent] && !localAsins[asin]);
+        var siteDuplicate = usedAsins[asin] || (usedParents[parent] && !usedAsins[asin]);
+        if (!AMAZON_STOCK_ALLOWED[status] || !fresh || localDuplicate || siteDuplicate) {
+          blockedLinks++;
+          return '<span class="amazon-unavailable">' + inner + '</span>';
+        }
+        localAsins[asin] = true;
+        localParents[parent] = true;
+        usedAsins[asin] = true;
+        usedParents[parent] = true;
+        return full;
+      });
+
+      html = sanitizePostHtml_(html);
+      if (html !== sanitizePostHtml_(before)) {
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
+          content: html
+        });
+        updated++;
+        Logger.log('SYNCED STOCK-SAFE LINKS: ' + post.title + ' (' + String(post.status || '') + ')');
+        Utilities.sleep(500);
+      } else {
+        // Even if content did not change, this post reserves its products for later articles.
+      }
+    });
+
+    var externalProducts = audit.external_products || {};
+    var externalAsins = [];
+    var externalParents = [];
+    Object.keys(externalProducts).forEach(function (asin) {
+      externalAsins.push(asin);
+      var parent = String(externalProducts[asin].parent_asin || asin).toUpperCase();
+      externalParents.push(parent);
+    });
+    P.setProperty('BLOG_EXTERNAL_ASINS', JSON.stringify(externalAsins));
+    P.setProperty('BLOG_EXTERNAL_PARENT_ASINS', JSON.stringify(externalParents));
+    P.setProperty('AMAZON_AUDIT_LAST_SYNC_MS', String(Date.now()));
+    Logger.log(
+      'Stock-safe product sync complete. Updated posts=' + updated +
+      ', disabled links=' + blockedLinks + ', skipped=' + skipped
+    );
   } finally {
     lock.releaseLock();
   }
@@ -778,7 +1074,7 @@ function status() {
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
   Logger.log('Automation      : ' + (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
-  Logger.log('Product lookup  : AUTO on low queue (SerpApi; GitHub spend guard active)');
+  Logger.log('Product lookup  : Amazon Creators API (new + in-stock only); guarded SerpApi fallback');
   var triggers = ScriptApp.getProjectTriggers();
   Logger.log('Triggers        : ' + triggers.length);
   triggers.forEach(function (trigger) {
