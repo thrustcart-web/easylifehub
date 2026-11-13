@@ -341,6 +341,42 @@
       "ts": "2026-11-06T04:26:05Z",
       "source": "ai:groq",
       "words": 736
+    },
+    {
+      "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
+      "title": "Best Budget Tech for Students: 3 Options We Would Actually Buy",
+      "template": "bestof",
+      "keyword": "Budget Tech",
+      "ts": "2026-11-13T02:15:03Z",
+      "source": "ai:gemini",
+      "words": 671
+    },
+    {
+      "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
+      "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
+      "template": "comparison",
+      "keyword": "Blender vs Personal Blender",
+      "ts": "2026-11-13T02:17:25Z",
+      "source": "ai:groq",
+      "words": 597
+    },
+    {
+      "slug": "bestof-electronics-webcam-931db97bdda7",
+      "title": "3 Everyday Electronics Options Worth Your Money (and the Ones to Skip)",
+      "template": "bestof",
+      "keyword": "Electronics",
+      "ts": "2026-11-13T02:18:24Z",
+      "source": "ai:gemini",
+      "words": 624
+    },
+    {
+      "slug": "review-smart-fan-fe34301450a1",
+      "title": "Before You Buy A Smart Fan for Energy Savers: Read This",
+      "template": "review",
+      "keyword": "smart fan for energy savers",
+      "ts": "2026-11-13T02:20:34Z",
+      "source": "ai:gemini",
+      "words": 694
     }
   ],
   "published": [],
@@ -382,7 +418,11 @@
     "review-decorative-bowl-1370bfcfc215",
     "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
     "review-coffee-canister-1a804dc1169a",
-    "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16"
+    "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
+    "bestof-budget-tech-bank-7ff94e9fcf2e",
+    "comparison-blender-vs-personal-blender-a0d8861f0764",
+    "bestof-electronics-webcam-931db97bdda7",
+    "review-smart-fan-fe34301450a1"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -471,13 +511,13 @@
     "Area Rug": "2026-11-04",
     "resistance bands": "2026-11-04",
     "electronics:action camera|e-reader|portable ssd|ultrawide monitor|usb c cable|webcam": "2026-11-04",
-    "Webcam": "2026-11-04",
+    "Webcam": "2026-11-13",
     "webcam for home offices": "2026-11-04",
     "e-reader for commuters": "2026-11-04",
     "USB C Cable": "2026-11-04",
     "usb c cable for desk setups": "2026-11-04",
-    "Portable SSD": "2026-11-04",
-    "portable ssd for frequent travellers": "2026-11-04",
+    "Portable SSD": "2026-11-13",
+    "portable ssd for frequent travellers": "2026-11-13",
     "Action Camera": "2026-11-04",
     "action camera for budget buyers": "2026-11-04",
     "Ultrawide Monitor": "2026-11-04",
@@ -488,7 +528,7 @@
     "cable management tray for back pain sufferers": "2026-11-04",
     "Lap Desk": "2026-11-04",
     "lap desk for back pain sufferers": "2026-11-04",
-    "Ring Light": "2026-11-04",
+    "Ring Light": "2026-11-13",
     "ring light for video calls": "2026-11-04",
     "Desk Lamp": "2026-11-04",
     "desk lamp for dual monitor setups": "2026-11-04",
@@ -549,7 +589,23 @@
     "coffee canister for humid climates": "2026-11-06",
     "tote bag|crossbody bag": "2026-11-06",
     "Tote Bag": "2026-11-06",
-    "Crossbody Bag": "2026-11-06"
+    "Crossbody Bag": "2026-11-06",
+    "budget tech:portable projector|ring light|usb desk fan": "2026-11-13",
+    "USB Desk Fan": "2026-11-13",
+    "usb desk fan for students": "2026-11-13",
+    "ring light for students": "2026-11-13",
+    "Portable Projector": "2026-11-13",
+    "portable projector for gifts under 30 dollars": "2026-11-13",
+    "blender|personal blender": "2026-11-13",
+    "Blender": "2026-11-13",
+    "Personal Blender": "2026-11-13",
+    "electronics:portable ssd|webcam|wireless charger": "2026-11-13",
+    "webcam for video calls": "2026-11-13",
+    "Wireless Charger": "2026-11-13",
+    "wireless charger for frequent travellers": "2026-11-13",
+    "smart fan": "2026-11-13",
+    "Smart Fan": "2026-11-13",
+    "smart fan for energy savers": "2026-11-13"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -638,7 +694,13 @@
     "{P} Review: What I Would Check Before Buying",
     "{N} {F} Picks Reviewed Against the Criteria That Matter",
     "{A} vs {B}: Which One Should You Actually Buy?",
-    "Choosing {A} {P}: Six Things That Actually Matter"
+    "Choosing {A} {P}: Six Things That Actually Matter",
+    "{P} for {AUD}: Five Things Listings Skip",
+    "Best {F}{AUD}: {N} Options We Would Actually Buy",
+    "{A} {P} Review: What I Would Check Before Buying",
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "{N} {F} Options Worth Your Money (and the Ones to Skip)",
+    "Before You Buy {A} {P} for {AUD}: Read This"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -647,7 +709,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 38,
+    "total_generated": 42,
     "total_published": 0
   },
   "blogger_titles": [

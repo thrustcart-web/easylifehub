@@ -74,12 +74,12 @@
     "verified_at": "2026-11-13T01:49:15Z"
   },
   "webcam": {
-    "asin": "B006JH8T3S",
-    "parent_asin": "B0FD925MZ6",
-    "title": "Logitech HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p Camera, Desktop or Laptop Webcam",
+    "asin": "B0G29MV7GK",
+    "parent_asin": "B0GXVRGZDK",
+    "title": "NIVEOLI Webcam 1080P with Microphone & Privacy Cover for PC/Laptop, USB Computer Camera Plug & Play with Auto Light Correction for Video Calls, Live Streaming Gaming & Online Meetings",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794534541,
-    "verified_at": "2026-11-13T01:49:01Z"
+    "stock_checked_at": 1794536245,
+    "verified_at": "2026-11-13T02:17:25Z"
   },
   "e-reader": {
     "asin": "B0H8SZ945Y",
@@ -98,12 +98,12 @@
     "verified_at": "2026-11-13T01:48:55Z"
   },
   "portable ssd": {
-    "asin": "B0874YJP92",
-    "parent_asin": "B0D87GVYY6",
-    "title": "SAMSUNG T7 Portable SSD, 1TB External Solid State Drive, Speeds Up to 1,050MB/s, USB 3.2 Gen 2, Reliable Storage for Gaming, Students, Professionals, MU-PC1T0H/AM, Blue",
+    "asin": "B082VZLPN3",
+    "parent_asin": "B09TZZSTQD",
+    "title": "Vansuny 250GB Portable External SSD, USB 3.1 Gen2 430MB/s High-Speed Data Transfer, Metal USB C Mini Portable External Solid State Drive for PC, Laptop, Phones and More",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794534542,
-    "verified_at": "2026-11-13T01:49:02Z"
+    "stock_checked_at": 1794536248,
+    "verified_at": "2026-11-13T02:17:28Z"
   },
   "action camera": {
     "asin": "B01HGM33HG",
@@ -744,5 +744,77 @@
     "asin": "B08936QVJD",
     "title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
     "verified_at": "2026-11-06"
+  },
+  "car wax kit": {
+    "asin": "B0002UNOYM",
+    "parent_asin": "B0H4319VQ2",
+    "title": "Meguiar's Gold Class Carnauba Plus Premium Liquid Wax Kit, 16 Oz | Car Detailing Kit with a Pure Carnauba Wax Blend and a Foam Applicator Pad for Keeping Glossy Paint Protected Like a Pro",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794535729,
+    "verified_at": "2026-11-13T02:08:49Z"
+  },
+  "usb desk fan": {
+    "asin": "B09LQN6815",
+    "parent_asin": "B0BGR6R1SR",
+    "title": "Gaiatop USB Desk Fan, Personal Portable Quiet Small Table Desktop fan | Powerful Mini 3 Speeds, Adjustable Head, for Cooling Home Office Car Summer Travel Gifts Blue",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794535955,
+    "verified_at": "2026-11-13T02:12:35Z"
+  },
+  "ring light": {
+    "asin": "B0FLPR9ZBK",
+    "parent_asin": "B0FLPW9H12",
+    "title": "Anautin Ring Light for Video Conference Lighting,360°Adjustable,Portable LED Video Conference Lighting for Monitor,Laptop&Desktop Computer,Streaming Light for Zoom Meetings, Selfie Makeup, Video Calls",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794535956,
+    "verified_at": "2026-11-13T02:12:36Z"
+  },
+  "portable projector": {
+    "asin": "B0HBC61F7B",
+    "parent_asin": "B0HBC869WH",
+    "title": "Mini Projector, HD 1080P WiFi Video Projector, Portable Outdoor Projector with Tripod, Gift for Kids, Home Theater Movie Phone Projector Compatible with USB, Smartphone/Laptop(cyan)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794535958,
+    "verified_at": "2026-11-13T02:12:38Z"
+  },
+  "cup holder expander": {
+    "asin": "B0DGSZDNCJ",
+    "parent_asin": "B0HF7345M3",
+    "title": "DYLEN Car Cup Holder Tray, 9.5”Detachable Car Food Tray Table for Eating | Cup Holder Expander Adapter for Car, Road Trip Essentials, Car Accessories Fits Owala, Yeti, Large Bottles 16-46 oz",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794536103,
+    "verified_at": "2026-11-13T02:15:03Z"
+  },
+  "blender": {
+    "asin": "B0855B5Z6F",
+    "parent_asin": "B0855B5Z6F",
+    "title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794536231,
+    "verified_at": "2026-11-13T02:17:11Z"
+  },
+  "personal blender": {
+    "asin": "B012T634SM",
+    "parent_asin": "B0FSS4B8DM",
+    "title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794536233,
+    "verified_at": "2026-11-13T02:17:13Z"
+  },
+  "wireless charger": {
+    "asin": "B0HDBZ32J1",
+    "parent_asin": "B0HDC2NTN5",
+    "title": "Wireless Charging Laptop Bag with Multi-device Charger，Black：3 in 1 | 17.3 In New Premium Wireless Charging Laptop Bag for Commuters Remote Workers",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794536247,
+    "verified_at": "2026-11-13T02:17:27Z"
+  },
+  "smart fan": {
+    "asin": "B01N4TZOHE",
+    "parent_asin": "B08KH5RC36",
+    "title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794536304,
+    "verified_at": "2026-11-13T02:18:24Z"
   }
 }

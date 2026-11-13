@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
+  "title": "Best Budget Tech for Students: 3 Options We Would Actually Buy",
+  "meta_description": "Discover practical desk accessories for students, including compact USB fans, monitor-mounted ring lights, and portable mini projectors for small spaces.",
+  "template": "bestof",
+  "niche": "budget tech",
+  "keyword": "Budget Tech",
+  "labels": [
+    "Reviews",
+    "Budget Tech"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 671,
+  "items": [
+    {
+      "name": "USB Desk Fan",
+      "asin": "B09LQN6815",
+      "asin_verified": true,
+      "verified_product_title": "Gaiatop USB Desk Fan, Personal Portable Quiet Small Table Desktop fan | Powerful Mini 3 Speeds, Adjustable Head, for Cooling Home Office Car Summer Travel Gifts Blue",
+      "parent_asin": "B0BGR6R1SR",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794535955,
+      "search_term": "usb desk fan for students",
+      "url": "https://www.amazon.com/dp/B09LQN6815?tag=ezylifehub-20"
+    },
+    {
+      "name": "Ring Light",
+      "asin": "B0FLPR9ZBK",
+      "asin_verified": true,
+      "verified_product_title": "Anautin Ring Light for Video Conference Lighting,360°Adjustable,Portable LED Video Conference Lighting for Monitor,Laptop&Desktop Computer,Streaming Light for Zoom Meetings, Selfie Makeup, Video Calls",
+      "parent_asin": "B0FLPW9H12",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794535956,
+      "search_term": "ring light for students",
+      "url": "https://www.amazon.com/dp/B0FLPR9ZBK?tag=ezylifehub-20"
+    },
+    {
+      "name": "Portable Projector",
+      "asin": "B0HBC61F7B",
+      "asin_verified": true,
+      "verified_product_title": "Mini Projector, HD 1080P WiFi Video Projector, Portable Outdoor Projector with Tripod, Gift for Kids, Home Theater Movie Phone Projector Compatible with USB, Smartphone/Laptop(cyan)",
+      "parent_asin": "B0HBC869WH",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794535958,
+      "search_term": "portable projector for gifts under 30 dollars",
+      "url": "https://www.amazon.com/dp/B0HBC61F7B?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-budget-tech-bank-7ff94e9fcf2e.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

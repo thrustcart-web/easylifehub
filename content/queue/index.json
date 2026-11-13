@@ -1,7 +1,63 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 38,
+  "count": 42,
   "posts": [
+    {
+      "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
+      "title": "Best Budget Tech for Students: 3 Options We Would Actually Buy",
+      "meta_description": "Discover practical desk accessories for students, including compact USB fans, monitor-mounted ring lights, and portable mini projectors for small spaces.",
+      "template": "bestof",
+      "niche": "budget tech",
+      "keyword": "Budget Tech",
+      "labels": [
+        "Reviews",
+        "Budget Tech"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 671,
+      "items": [
+        {
+          "name": "USB Desk Fan",
+          "asin": "B09LQN6815",
+          "asin_verified": true,
+          "verified_product_title": "Gaiatop USB Desk Fan, Personal Portable Quiet Small Table Desktop fan | Powerful Mini 3 Speeds, Adjustable Head, for Cooling Home Office Car Summer Travel Gifts Blue",
+          "parent_asin": "B0BGR6R1SR",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794535955,
+          "search_term": "usb desk fan for students",
+          "url": "https://www.amazon.com/dp/B09LQN6815?tag=ezylifehub-20"
+        },
+        {
+          "name": "Ring Light",
+          "asin": "B0FLPR9ZBK",
+          "asin_verified": true,
+          "verified_product_title": "Anautin Ring Light for Video Conference Lighting,360°Adjustable,Portable LED Video Conference Lighting for Monitor,Laptop&Desktop Computer,Streaming Light for Zoom Meetings, Selfie Makeup, Video Calls",
+          "parent_asin": "B0FLPW9H12",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794535956,
+          "search_term": "ring light for students",
+          "url": "https://www.amazon.com/dp/B0FLPR9ZBK?tag=ezylifehub-20"
+        },
+        {
+          "name": "Portable Projector",
+          "asin": "B0HBC61F7B",
+          "asin_verified": true,
+          "verified_product_title": "Mini Projector, HD 1080P WiFi Video Projector, Portable Outdoor Projector with Tripod, Gift for Kids, Home Theater Movie Phone Projector Compatible with USB, Smartphone/Laptop(cyan)",
+          "parent_asin": "B0HBC869WH",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794535958,
+          "search_term": "portable projector for gifts under 30 dollars",
+          "url": "https://www.amazon.com/dp/B0HBC61F7B?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-budget-tech-bank-7ff94e9fcf2e.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
       "title": "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -163,6 +219,62 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "bestof-electronics-webcam-931db97bdda7",
+      "title": "3 Everyday Electronics Options Worth Your Money (and the Ones to Skip)",
+      "meta_description": "Explore essential everyday electronics including 1080P webcams, wireless charging laptop bags, and portable SSDs to find the right hardware for your setup.",
+      "template": "bestof",
+      "niche": "electronics",
+      "keyword": "Electronics",
+      "labels": [
+        "Reviews",
+        "Electronics"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 624,
+      "items": [
+        {
+          "name": "Webcam",
+          "asin": "B0G29MV7GK",
+          "asin_verified": true,
+          "verified_product_title": "NIVEOLI Webcam 1080P with Microphone & Privacy Cover for PC/Laptop, USB Computer Camera Plug & Play with Auto Light Correction for Video Calls, Live Streaming Gaming & Online Meetings",
+          "parent_asin": "B0GXVRGZDK",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536245,
+          "search_term": "webcam for video calls",
+          "url": "https://www.amazon.com/dp/B0G29MV7GK?tag=ezylifehub-20"
+        },
+        {
+          "name": "Wireless Charger",
+          "asin": "B0HDBZ32J1",
+          "asin_verified": true,
+          "verified_product_title": "Wireless Charging Laptop Bag with Multi-device Charger，Black：3 in 1 | 17.3 In New Premium Wireless Charging Laptop Bag for Commuters Remote Workers",
+          "parent_asin": "B0HDC2NTN5",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536247,
+          "search_term": "wireless charger for frequent travellers",
+          "url": "https://www.amazon.com/dp/B0HDBZ32J1?tag=ezylifehub-20"
+        },
+        {
+          "name": "Portable SSD",
+          "asin": "B082VZLPN3",
+          "asin_verified": true,
+          "verified_product_title": "Vansuny 250GB Portable External SSD, USB 3.1 Gen2 430MB/s High-Speed Data Transfer, Metal USB C Mini Portable External Solid State Drive for PC, Laptop, Phones and More",
+          "parent_asin": "B09TZZSTQD",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536248,
+          "search_term": "portable ssd for frequent travellers",
+          "url": "https://www.amazon.com/dp/B082VZLPN3?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-electronics-webcam-931db97bdda7.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "bestof-electronics-webcam-ba6c1df58b2c",
@@ -535,6 +647,51 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
+      "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
+      "meta_description": "Compare a 1400W Ninja Professional Plus Blender with a 250W Magic Bullet Personal Blender. See how power, size and cleaning affect the right kitchen fit.",
+      "template": "comparison",
+      "niche": "kitchen",
+      "keyword": "Blender vs Personal Blender",
+      "labels": [
+        "Reviews",
+        "Kitchen"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 597,
+      "items": [
+        {
+          "name": "Blender",
+          "asin": "B0855B5Z6F",
+          "asin_verified": true,
+          "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
+          "parent_asin": "B0855B5Z6F",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536231,
+          "search_term": "Blender",
+          "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=ezylifehub-20"
+        },
+        {
+          "name": "Personal Blender",
+          "asin": "B012T634SM",
+          "asin_verified": true,
+          "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
+          "parent_asin": "B0FSS4B8DM",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536233,
+          "search_term": "Personal Blender",
+          "url": "https://www.amazon.com/dp/B012T634SM?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
@@ -1415,6 +1572,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-smart-fan-fe34301450a1",
+      "title": "Before You Buy A Smart Fan for Energy Savers: Read This",
+      "meta_description": "Explore feature details, HVAC compatibility, and energy-saving principles for the Vornado 683DC Energy Smart Pedestal Fan before making your buying choice.",
+      "template": "review",
+      "niche": "smart home",
+      "keyword": "smart fan for energy savers",
+      "labels": [
+        "Reviews",
+        "Smart Home"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 694,
+      "items": [
+        {
+          "name": "Smart Fan",
+          "asin": "B01N4TZOHE",
+          "asin_verified": true,
+          "verified_product_title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
+          "parent_asin": "B08KH5RC36",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794536304,
+          "search_term": "smart fan for energy savers",
+          "url": "https://www.amazon.com/dp/B01N4TZOHE?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-smart-fan-fe34301450a1.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",

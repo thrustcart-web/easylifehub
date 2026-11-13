@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
+  "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
+  "meta_description": "Compare a 1400W Ninja Professional Plus Blender with a 250W Magic Bullet Personal Blender. See how power, size and cleaning affect the right kitchen fit.",
+  "template": "comparison",
+  "niche": "kitchen",
+  "keyword": "Blender vs Personal Blender",
+  "labels": [
+    "Reviews",
+    "Kitchen"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 597,
+  "items": [
+    {
+      "name": "Blender",
+      "asin": "B0855B5Z6F",
+      "asin_verified": true,
+      "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
+      "parent_asin": "B0855B5Z6F",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794536231,
+      "search_term": "Blender",
+      "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=ezylifehub-20"
+    },
+    {
+      "name": "Personal Blender",
+      "asin": "B012T634SM",
+      "asin_verified": true,
+      "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
+      "parent_asin": "B0FSS4B8DM",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794536233,
+      "search_term": "Personal Blender",
+      "url": "https://www.amazon.com/dp/B012T634SM?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
