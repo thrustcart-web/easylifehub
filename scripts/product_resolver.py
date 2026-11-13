@@ -6,6 +6,7 @@ Only product titles and ASINs are retained.
 """
 from __future__ import annotations
 
+import difflib
 import html as html_lib
 import json
 import os
@@ -928,6 +929,87 @@ def _published_priority() -> list[str]:
         return []
 
 
+def _blogger_titles_from_env() -> list[str]:
+    raw = os.environ.get("BLOGGER_TITLES_JSON", "").strip()
+    if not raw:
+        return []
+    try:
+        values = json.loads(raw)
+    except json.JSONDecodeError:
+        log.warning("BLOGGER_TITLES_JSON is invalid; ignoring remote article-title reservations")
+        return []
+    return [str(value).strip() for value in values if isinstance(value, str) and str(value).strip()]
+
+
+def _article_title_key(value: str) -> str:
+    return " ".join(TOKEN_RE.findall(str(value or "").lower()))
+
+
+def _article_text_for_dedupe(value: str) -> str:
+    text = re.sub(r"<(script|style)\\b[^>]*>[\\s\\S]*?</\\1\\s*>", " ", str(value or ""), flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html_lib.unescape(text).lower()
+    return " ".join(TOKEN_RE.findall(text))
+
+
+def _queue_articles_duplicate(meta_a: dict, meta_b: dict) -> bool:
+    """Conservative duplicate check: exact body, or same title + near-identical body."""
+    from util import QUEUE_DIR
+    slug_a = str(meta_a.get("slug") or "")
+    slug_b = str(meta_b.get("slug") or "")
+    html_a = QUEUE_DIR / str(meta_a.get("html_file") or f"{slug_a}.html")
+    html_b = QUEUE_DIR / str(meta_b.get("html_file") or f"{slug_b}.html")
+    try:
+        text_a = _article_text_for_dedupe(html_a.read_text(encoding="utf-8"))
+        text_b = _article_text_for_dedupe(html_b.read_text(encoding="utf-8"))
+    except OSError:
+        return False
+    if min(len(text_a), len(text_b)) < 1200:
+        return False
+    if text_a == text_b:
+        return True
+    same_title = _article_title_key(meta_a.get("title", "")) == _article_title_key(meta_b.get("title", ""))
+    if not same_title:
+        return False
+    return difflib.SequenceMatcher(None, text_a.split(), text_b.split(), autojunk=False).ratio() >= 0.88
+
+
+def _remove_duplicate_pending_queue_articles(
+    files: list[Path], metadata_by_path: dict[Path, dict], protected_slugs: set[str]
+) -> list[str]:
+    """Remove only highly-confident pending duplicates; never delete Blogger-managed slugs."""
+    ordered = sorted(files, key=lambda path: (
+        0 if str(metadata_by_path[path].get("slug") or path.stem) in protected_slugs else 1,
+        str(metadata_by_path[path].get("slug") or path.stem),
+    ))
+    keepers: list[dict] = []
+    removed: list[str] = []
+    from util import QUEUE_DIR
+    for path in ordered:
+        meta = metadata_by_path[path]
+        slug = str(meta.get("slug") or path.stem)
+        if any(_queue_articles_duplicate(meta, kept) for kept in keepers):
+            if slug in protected_slugs:
+                # Two Blogger posts are both protected here; Blogger cleanup
+                # handles those explicitly, so preserve both queue manifests.
+                keepers.append(meta)
+                continue
+            for candidate in (
+                path,
+                QUEUE_DIR / str(meta.get("html_file") or f"{slug}.html"),
+                QUEUE_DIR / f"{slug}.md",
+            ):
+                try:
+                    candidate.unlink(missing_ok=True)
+                except OSError as exc:
+                    log.warning("Could not remove duplicate queue file %s: %s", candidate.name, exc)
+            removed.append(slug)
+            log.warning("Removed duplicate pending queue article: %s", slug)
+        else:
+            keepers.append(meta)
+    return removed
+
+
 def audit_queue_products() -> dict:
     """Recheck stock, remove duplicate ASIN families, and rewrite every queued article's CTAs."""
     from affiliate import Affiliate
@@ -955,15 +1037,30 @@ def audit_queue_products() -> dict:
             "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET are required for stock auditing"
         )
 
-    # Audit previously published articles first so their product links win over
-    # queued drafts. Within each group, preserve the oldest generation order.
+    # Audit Blogger-managed posts first; live, scheduled and draft slugs are protected.
     state = load_state()
+    blogger_titles = _blogger_titles_from_env()
+    if blogger_titles:
+        known_titles = set(str(title).strip() for title in (state.get("blogger_titles") or []) if str(title).strip())
+        known_titles.update(blogger_titles)
+        state["blogger_titles"] = sorted(known_titles)
     generated = {
         str(row.get("slug") or ""): str(row.get("ts") or "")
         for row in (state.get("generated") or [])
         if isinstance(row, dict)
     }
     published_order = _published_priority()
+    protected_slugs = set(published_order)
+    duplicate_queue_slugs = _remove_duplicate_pending_queue_articles(files, metadata_by_path, protected_slugs)
+    if duplicate_queue_slugs:
+        removed_set = set(duplicate_queue_slugs)
+        files = [path for path in files if str(metadata_by_path[path].get("slug") or path.stem) not in removed_set]
+        for path in list(metadata_by_path):
+            if str(metadata_by_path[path].get("slug") or path.stem) in removed_set:
+                metadata_by_path.pop(path, None)
+        state["queued_slugs"] = [
+            slug for slug in (state.get("queued_slugs") or []) if slug not in removed_set
+        ]
     published_rank = {slug: index for index, slug in enumerate(published_order)}
     files.sort(key=lambda path: (
         0 if str(metadata_by_path[path].get("slug") or "") in published_rank else 1,
@@ -983,6 +1080,11 @@ def audit_queue_products() -> dict:
     # One official GetItems request can verify up to ten ASINs. This is much
     # cheaper than running a new keyword search for every existing product.
     stock_by_asin = _creators_get_items_by_asin(sorted(all_existing_asins))
+    if all_existing_asins and not stock_by_asin:
+        raise ProductResolutionError(
+            "Amazon Creators API GetItems returned zero accessible products. "
+            "Aborting the audit without rewriting queue links; check API access, request limits and response data."
+        )
     used_asins = set(external_asins)
     used_parents = set()
     external_products = {}
@@ -1139,6 +1241,9 @@ def audit_queue_products() -> dict:
         "checked_at": now,
         "stock_check_max_age_seconds": STOCK_MAX_AGE_SECONDS,
         "articles_checked": updated_articles,
+        "queue_duplicate_articles_removed": len(duplicate_queue_slugs),
+        "removed_duplicate_slugs": duplicate_queue_slugs,
+        "blogger_titles_reserved": len(blogger_titles),
         "external_products": external_products,
         "external_asins": sorted(external_asins),
         "stock_by_asin": {
@@ -1162,9 +1267,11 @@ def audit_queue_products() -> dict:
     )
     rebuild_index(cfg)
     _save_cache(cache)
+    from util import save_state
+    save_state(state)
     log.info(
-        "Amazon product audit complete: articles=%d kept=%d replaced=%d unresolved=%d",
-        updated_articles, kept_existing, replacements, unresolved_items,
+        "Amazon product audit complete: articles=%d kept=%d replaced=%d unresolved=%d queue_duplicates_removed=%d",
+        updated_articles, kept_existing, replacements, unresolved_items, len(duplicate_queue_slugs),
     )
     return audit_report
 
