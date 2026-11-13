@@ -580,8 +580,22 @@ def _load_product_registry(
     used_parents.update(_json_string_set("EXTERNAL_PARENT_ASINS_JSON"))
     try:
         from util import QUEUE_DIR
+        # External products are ASINs used by Blogger LIVE/SCHEDULED posts
+        # that do not have queue metadata. Reserve them for every later run.
+        audit_path = QUEUE_DIR / "product-audit.json"
+        try:
+            audit = json.loads(audit_path.read_text(encoding="utf-8"))
+            for asin, details in (audit.get("external_products") or {}).items():
+                asin = str(asin).strip().upper()
+                parent = str((details or {}).get("parent_asin") or asin).strip().upper()
+                if ASIN_RE.fullmatch(asin):
+                    used_asins.add(asin)
+                if ASIN_RE.fullmatch(parent):
+                    used_parents.add(parent)
+        except (OSError, json.JSONDecodeError):
+            pass
         for meta_path in QUEUE_DIR.glob("*.json"):
-            if meta_path.name == "index.json":
+            if meta_path.name in {"index.json", "product-audit.json"}:
                 continue
             try:
                 meta = json.loads(meta_path.read_text(encoding="utf-8"))
