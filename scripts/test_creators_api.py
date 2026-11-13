@@ -31,7 +31,15 @@ def main() -> int:
         "provider": "amazon_creators_api",
         "query": query,
         "result_count": len(rows),
-        "sample": [{"title": row["title"], "asin": row["asin"]} for row in rows[:3]],
+        "sample": [
+            {
+                "title": row["title"],
+                "asin": row["asin"],
+                "parent_asin": row.get("parent_asin", row["asin"]),
+                "availability_type": row.get("availability_type", "UNKNOWN"),
+            }
+            for row in rows[:3]
+        ],
     }, ensure_ascii=False, indent=2))
     return 0
 
