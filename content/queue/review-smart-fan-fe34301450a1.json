@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Smart Fan",
-      "asin": "B01N4TZOHE",
+      "asin": "B0BSHBTV4V",
       "asin_verified": true,
-      "verified_product_title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
-      "parent_asin": "B08KH5RC36",
+      "verified_product_title": "DREO 16 Inch 20dB Quiet Smart Fans for Bedroom, DC Room Fan with Remote, 120°+120° Oscillating Fan, 6 Modes, 9 Speeds, 12H Timer,Works Alexa/Google/WiFi/Voice Control, Silver, Oversize (DR-HAF004S)",
+      "parent_asin": "B0D7Q9N4QL",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609432,
+      "stock_checked_at": 1794652645,
       "search_term": "smart fan for energy savers",
-      "url": "https://www.amazon.com/dp/B01N4TZOHE?tag=ezylifehub-20"
+      "url": "https://www.amazon.com/dp/B0BSHBTV4V?tag=ezylifehub-20"
     }
   ],
   "html_file": "review-smart-fan-fe34301450a1.html",
@@ -32,6 +32,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794609442,
+  "products_audited_at": 1794652639,
   "stock_check_max_age_seconds": 86400
 }

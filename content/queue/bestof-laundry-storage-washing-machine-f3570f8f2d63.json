@@ -20,7 +20,7 @@
       "verified_product_title": "ARM & HAMMER Power Sheets Laundry Detergent, Fragrance Free, 60 Count | No Dyes or Perfumes, Quick-Dissolve Sheets, Up to 120 Small Loads, Lightweight and Travel-Friendly, Zero Plastic Bottle Waste",
       "parent_asin": "B0G3WPX1RW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636559,
+      "stock_checked_at": 1794652637,
       "search_term": "laundry detergent sheets for campervans",
       "url": "https://www.amazon.com/dp/B0DYCBT63D?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "Mesh Laundry Bags for Delicates, 3 Pack Laundry Bags Mesh Wash Bags in 3 Sizes(1 Large, 1 Medium, 1 Small), Durable and Gentle Lingerie Bags for Washing Delicates, Garment Bag for Washing Machine",
       "parent_asin": "B0FG1ZLBX6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636560,
+      "stock_checked_at": 1794652635,
       "search_term": "mesh wash bag for small bathrooms",
       "url": "https://www.amazon.com/dp/B0DDXQC96K?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "Cokaka Clothes Brush Garment Brush Lint Remover Brush with Genuine Soft Horsehair and Wooden Handle for Coat Men Suits Shoes Jacket Furniture Car Mat and Pet Hair (1-Pack(Walnut Wood))",
       "parent_asin": "B07FYGZ1QG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636562,
+      "stock_checked_at": 1794652629,
       "search_term": "clothes brush for workwear",
       "url": "https://www.amazon.com/dp/B07FYJSPPF?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794652639,
+  "stock_check_max_age_seconds": 86400
 }

@@ -21,7 +21,7 @@
       "search_term": "Fiskars Bypass Pruning Shears 5/8 inch",
       "url": "https://www.amazon.com/dp/B00002N66H?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609430,
+      "stock_checked_at": 1794652628,
       "parent_asin": "B0FDC2L5M6"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Rain Bird LNDDRIPKIT Drip Irrigation Kit",
       "url": "https://www.amazon.com/dp/B0BCH7PYCD?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609436,
+      "stock_checked_at": 1794652634,
       "parent_asin": "B0BCH7PYCD"
     },
     {
@@ -43,7 +43,7 @@
       "search_term": "Liberty Garden 712 Single Arm Navigator Hose Reel",
       "url": "https://www.amazon.com/dp/B01I727FQO?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609430,
+      "stock_checked_at": 1794652628,
       "parent_asin": "B0GJG6L1MN"
     },
     {
@@ -54,7 +54,7 @@
       "search_term": "Marathon Yard Rover 2 Tire Wheelbarrow Garden Cart",
       "url": "",
       "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1794609432,
+      "stock_checked_at": 1794652629,
       "parent_asin": "B0721CX298"
     },
     {
@@ -65,7 +65,7 @@
       "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
       "url": "https://www.amazon.com/dp/B09C8HR4Z9?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609435,
+      "stock_checked_at": 1794652632,
       "parent_asin": "B0HLNWJC5V"
     }
   ],
@@ -74,7 +74,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794609442,
+  "products_audited_at": 1794652639,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

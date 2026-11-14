@@ -49,6 +49,6 @@ Before completing a purchase, confirm room dimensions, available floor space, an
 
 ### Product Links
 
-- Smart Fan: https://www.amazon.com/dp/B01N4TZOHE?tag=ezylifehub-20
+- Smart Fan: https://www.amazon.com/dp/B0BSHBTV4V?tag=ezylifehub-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

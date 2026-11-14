@@ -21,7 +21,7 @@
       "search_term": "Electrostatic Duster",
       "url": "https://www.amazon.com/dp/B07GL4JVNJ?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609432,
+      "stock_checked_at": 1794652629,
       "parent_asin": "B07GL4JVNJ"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Duster with Extension",
       "url": "https://www.amazon.com/dp/B0B6G147W6?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609436,
+      "stock_checked_at": 1794652633,
       "parent_asin": "B0B6H2HLFL"
     }
   ],
@@ -41,7 +41,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794609442,
+  "products_audited_at": 1794652639,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -20,7 +20,7 @@
       "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
       "parent_asin": "B0D4R5CP5S",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636534,
+      "stock_checked_at": 1794652633,
       "search_term": "seed starting tray",
       "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "VIVOSUN Outdoor Tumbling Composter Dual Rotating Batch Compost Bin, 43 Gallon Black Door",
       "parent_asin": "B08SWCXD9P",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636535,
+      "stock_checked_at": 1794652630,
       "search_term": "compost bin for beginners",
       "url": "https://www.amazon.com/dp/B08346W5S6?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "GooingTop Grow Light,6000K Full Spectrum Indoor Plant Growing Lamp | Desk Lamp with White Red LEDs for Indoor Plants,Clamp with Flexible Gooseneck,Brightness Adjustable,Auto Timer 4 8 12Hrs",
       "parent_asin": "B0H3F1P6ST",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794636537,
+      "stock_checked_at": 1794652632,
       "search_term": "plant grow light for low maintenance gardens",
       "url": "https://www.amazon.com/dp/B085CDPSMR?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794652639,
+  "stock_check_max_age_seconds": 86400
 }

@@ -21,7 +21,7 @@
       "search_term": "Tote Bag",
       "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609439,
+      "stock_checked_at": 1794652637,
       "parent_asin": "B0FQJG2B8L"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Crossbody Bag",
       "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794609437,
+      "stock_checked_at": 1794652634,
       "parent_asin": "B0HMNM3TV8"
     }
   ],
@@ -41,7 +41,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794609442,
+  "products_audited_at": 1794652639,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false
