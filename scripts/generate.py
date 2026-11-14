@@ -1,6 +1,7 @@
 """One article = one call: plan topic -> write -> render -> gate -> queue/publish."""
 from __future__ import annotations
 
+import copy
 import difflib
 import html as html_lib
 import json
@@ -170,10 +171,25 @@ def _find_duplicate_queue_article(
     return None
 
 
+def _content_config_for_topic(cfg: dict, topic: dict) -> dict:
+    """Use a longer evidence-led target only for explicitly curated long-form topics."""
+    if topic.get("content_profile") != "monitor_arm_longform":
+        return cfg
+    article_cfg = copy.deepcopy(cfg)
+    content_cfg = article_cfg.setdefault("content", {})
+    content_cfg["min_words"] = 1100
+    content_cfg["target_words"] = 1400
+    article_cfg.setdefault("ai", {})["max_output_tokens"] = max(
+        9000, int(article_cfg.get("ai", {}).get("max_output_tokens", 6000))
+    )
+    return article_cfg
+
+
 def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dict | None:
     # A post cannot enter the automatic publishing queue until every named
     # product has a verified Amazon ASIN and a direct detail-page URL.
     resolve_topic_items(topic)
+    article_cfg = _content_config_for_topic(cfg, topic)
     aff = Affiliate(cfg)
     keyword = topic["keyword"]
     niche = topic.get("niche", "")
@@ -186,7 +202,7 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
     source = "template"
     if mode in ("auto", "ai"):
         try:
-            article, provider = write_article(topic, cfg)
+            article, provider = write_article(topic, article_cfg)
             source = f"ai:{provider}"
         except AIError as exc:
             log.warning("  AI unavailable (%s)", str(exc)[:160])
@@ -198,9 +214,9 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
             if mode == "ai":
                 raise AIError(f"{type(exc).__name__}: {exc}") from exc
     if article is None:
-        if not cfg.get("content", {}).get("fallback_to_template", True):
+        if not article_cfg.get("content", {}).get("fallback_to_template", True):
             raise AIError("AI failed and template fallback is disabled")
-        article = template_engine.build_topic_data(topic, cfg)
+        article = template_engine.build_topic_data(topic, article_cfg)
         source = "template"
         log.info("  using offline template engine (still a complete, valid article)")
 
@@ -208,7 +224,7 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
 
     # ---- render + gate
     html = render_mod.render_html(article, topic, cfg, aff, hero)
-    ok, reasons = safety.quality_gate(html, article, cfg, expected_product_count=len(topic.get("items", [])))
+    ok, reasons = safety.quality_gate(html, article, article_cfg, expected_product_count=len(topic.get("items", [])))
     if not ok:
         log.error("  QUALITY GATE REJECTED %s: %s", topic["slug"], "; ".join(reasons[:4]))
         raise AIError("quality gate: " + "; ".join(reasons[:4]))
@@ -243,7 +259,8 @@ def generate_one(cfg: dict, state: dict, topic: dict, mode: str = "auto") -> dic
 
 
 def run(count: int | None = None, mode: str = "auto", publish: str = "none",
-        dry_run: bool = False, use_seed_first: bool = True, verbose: bool = False) -> dict:
+        dry_run: bool = False, use_seed_first: bool = True, verbose: bool = False,
+        focus: str = "general") -> dict:
     setup_logging(verbose)
     cfg = load_config()
     state = load_state()
@@ -256,8 +273,8 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
         count = max(1, min(int(count), hard_cap))
 
     log.info("=" * 72)
-    log.info("AutoBlog generate | target=%d | mode=%s | publish=%s%s",
-             count, mode, publish, " | DRY RUN" if dry_run else "")
+    log.info("AutoBlog generate | target=%d | mode=%s | publish=%s | focus=%s%s",
+             count, mode, publish, focus, " | DRY RUN" if dry_run else "")
     log.info("Ramp: day %d -> %d post(s)/day (hard cap %d)", ramp_day, count, hard_cap)
     log.info("=" * 72)
     warn_if_tag_missing(cfg)
@@ -302,7 +319,14 @@ def run(count: int | None = None, mode: str = "auto", publish: str = "none",
     remaining = max(0, count - queued_now)
     made: list[dict] = []
     if remaining:
-        topics = next_topics(state, count=remaining)
+        if focus == "monitor_arm":
+            from focused_topics import monitor_arm_topics
+            topics = monitor_arm_topics(state, count=remaining)
+            log.info("Focused monitor-arm series: selected %d of %d requested topics.", len(topics), remaining)
+        elif focus == "general":
+            topics = next_topics(state, count=remaining)
+        else:
+            raise ValueError(f"Unsupported content focus: {focus}")
         if not topics:
             log.warning("topic planner returned nothing - check data/keywords.csv and data/products.csv")
         for topic in topics:
@@ -405,6 +429,8 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--publish", choices=["none", "blogger"], default="none")
     parser.add_argument("--dry-run", action="store_true", help="generate only, no state/publish side effects on Blogger")
     parser.add_argument("--no-seed", action="store_true", help="skip the bundled hand-written articles")
+    parser.add_argument("--focus", choices=["general", "monitor_arm"], default="general",
+                        help="optional curated topic focus; monitor_arm produces long-form articles")
     parser.add_argument("--stats", action="store_true")
     parser.add_argument("--ramp", action="store_true",
                         help="print the current growth-ramp stage and exit")
@@ -447,7 +473,8 @@ def main(argv: list[str]) -> int:
         return 0
 
     run(count=_as_count(args.count), mode=args.mode, publish=args.publish,
-        dry_run=args.dry_run, use_seed_first=not args.no_seed, verbose=args.verbose)
+        dry_run=args.dry_run, use_seed_first=not args.no_seed, verbose=args.verbose,
+        focus=args.focus)
     return 0
 
 

@@ -55,8 +55,18 @@ MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(https?://[^)]+\)", re.I)
 
 
 # ----------------------------------------------------------------- prompts --
-def _template_brief(template: str, items: list[dict]) -> str:
+def _template_brief(template: str, items: list[dict], topic: dict | None = None) -> str:
     names = ", ".join((i.get("display_name") or i.get("name", "")) for i in items)
+    if topic and topic.get("content_profile") == "monitor_arm_longform":
+        return (
+            "ARTICLE TYPE: long-form monitor-arm category buying and setup guide.\n"
+            f"Cover the reader's real decision in six substantial sections. Subject: {names}.\n"
+            "Use practical explanations, a step-by-step checklist, and clear distinctions between general "
+            "category advice and confirmed facts about the selected Amazon listing. No shallow filler, "
+            "no generic comparison against unrelated products, and no invented product specifications.\n"
+            f"EDITORIAL BRIEF: {topic.get('editorial_brief', '')}\n"
+            f"Available context: {names}"
+        )
     if template == "comparison":
         a, b = items[0], items[1]
         return (
@@ -183,7 +193,7 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
         fields.append(" | ".join(bits))
 
     planned_title = topic.get("title", "")
-    user = f"""{_template_brief(topic['template'], items)}
+    user = f"""{_template_brief(topic['template'], items, topic)}
 
 REQUIRED TITLE (use verbatim as the "title" value): "{planned_title}"
 

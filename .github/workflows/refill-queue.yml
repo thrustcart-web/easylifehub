@@ -19,6 +19,14 @@ on:
         required: false
         type: boolean
         default: false
+      focus:
+        description: 'general queue refill or the curated long-form monitor-arm series'
+        required: false
+        type: choice
+        options:
+          - general
+          - monitor_arm
+        default: general
 
 permissions:
   contents: write
@@ -56,7 +64,11 @@ jobs:
         run: |
           COUNT="${{ github.event.inputs.count }}"
           MODE="${{ github.event.inputs.mode }}"
-          if [ -n "$COUNT" ]; then
+          FOCUS="${{ github.event.inputs.focus || 'general' }}"
+          if [ "$FOCUS" = "monitor_arm" ]; then
+            # Explicitly selected content cluster; never enable paid lookup here.
+            python3 main.py --count "$COUNT" --mode "$MODE" --focus "$FOCUS" --no-seed --verbose
+          elif [ -n "$COUNT" ]; then
             python3 main.py --count "$COUNT" --mode "$MODE" --verbose
           else
             python3 main.py --mode "$MODE" --verbose

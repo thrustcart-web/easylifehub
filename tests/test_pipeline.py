@@ -69,6 +69,14 @@ class TestKeywordParsing(unittest.TestCase):
         self.assertIn("cats", parsed["audience"])
         self.assertEqual(parsed["intent"], "bestof")
 
+    def test_monitor_arm_query_variants_stay_on_monitor_arm_product(self):
+        for phrase in (
+            "monitor arm for remote workers with small desks",
+            "monitor arm for gaming desks with limited space",
+            "monitor arm for small desks with an XL mouse pad",
+        ):
+            self.assertEqual(kw.parse(phrase, "home office")["base"], "monitor arm")
+
     def test_head_noun_groups_families(self):
         self.assertEqual(kw.head_noun("robot vacuum"), kw.head_noun("stick vacuum"))
         self.assertNotEqual(kw.head_noun("robot vacuum"), kw.head_noun("espresso machine"))
@@ -168,6 +176,67 @@ def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str
         "availability_type": status,
         "stock_checked_at": int(product_resolver.time.time()),
     }
+
+
+class TestMonitorArmFocus(unittest.TestCase):
+    def test_curated_focus_returns_four_relevant_long_form_topics(self):
+        from focused_topics import monitor_arm_topics
+
+        topics = monitor_arm_topics(
+            {"generated": [], "blogger_titles": [], "queued_slugs": []},
+            count=4,
+        )
+        self.assertEqual(len(topics), 4)
+        self.assertTrue(all(t["content_profile"] == "monitor_arm_longform" for t in topics))
+        self.assertTrue(all(t["template"] == "review" and len(t["items"]) == 1 for t in topics))
+        joined = " ".join(t["title"].lower() for t in topics)
+        self.assertIn("monitor arm", joined)
+        self.assertNotIn("nightstand", joined)
+        self.assertNotIn("bar stool", joined)
+        self.assertNotIn("music stand", joined)
+
+    def test_curated_focus_skips_already_generated_or_reserved_titles(self):
+        from focused_topics import MONITOR_ARM_TOPICS, monitor_arm_topics
+
+        state = {
+            "generated": [{"slug": MONITOR_ARM_TOPICS[0]["slug"], "title": MONITOR_ARM_TOPICS[0]["title"]}],
+            "blogger_titles": [MONITOR_ARM_TOPICS[1]["title"]],
+            "queued_slugs": [],
+        }
+        topics = monitor_arm_topics(state, count=4)
+        self.assertEqual(len(topics), 2)
+        self.assertEqual(topics[0]["slug"], MONITOR_ARM_TOPICS[2]["slug"])
+        self.assertEqual(topics[1]["slug"], MONITOR_ARM_TOPICS[3]["slug"])
+
+    def test_long_form_word_target_is_scoped_to_monitor_arm_topics(self):
+        cfg = fresh_cfg()
+        original_min = cfg["content"]["min_words"]
+        original_target = cfg["content"]["target_words"]
+        original_tokens = cfg["ai"]["max_output_tokens"]
+
+        long_cfg = generate_mod._content_config_for_topic(
+            cfg, {"content_profile": "monitor_arm_longform"}
+        )
+        self.assertEqual(long_cfg["content"]["min_words"], 1100)
+        self.assertEqual(long_cfg["content"]["target_words"], 1400)
+        self.assertGreaterEqual(long_cfg["ai"]["max_output_tokens"], 9000)
+        self.assertEqual(cfg["content"]["min_words"], original_min)
+        self.assertEqual(cfg["content"]["target_words"], original_target)
+        self.assertEqual(cfg["ai"]["max_output_tokens"], original_tokens)
+
+        normal_cfg = generate_mod._content_config_for_topic(cfg, {"template": "review"})
+        self.assertIs(normal_cfg, cfg)
+
+    def test_monitor_arm_editorial_brief_and_source_notes_reach_ai_prompt(self):
+        from focused_topics import monitor_arm_topics
+
+        topic = monitor_arm_topics({"generated": [], "blogger_titles": []}, count=1)[0]
+        cfg = generate_mod._content_config_for_topic(fresh_cfg(), topic)
+        system, user = ai_writer.build_prompts(topic, cfg)
+        self.assertIn("six substantial sections", user)
+        self.assertIn("VESA", user)
+        self.assertIn("OSHA", user)
+        self.assertIn("1400", system)
 
 
 class TestProductResolution(unittest.TestCase):
