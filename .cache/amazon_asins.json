@@ -1083,5 +1083,29 @@
     "availability_type": "IN_STOCK",
     "stock_checked_at": 1794695834,
     "verified_at": "2026-11-14T22:37:28Z"
+  },
+  "monitor arm": {
+    "asin": "B0FQM6QB48",
+    "parent_asin": "B0GK9FYKY1",
+    "title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794699622,
+    "verified_at": "2026-11-14T23:40:22Z"
+  },
+  "dual monitor arm": {
+    "asin": "B07T5SY43L",
+    "parent_asin": "B0HKSLL2S4",
+    "title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794699845,
+    "verified_at": "2026-11-14T23:44:05Z"
+  },
+  "ultrawide monitor arm": {
+    "asin": "B0DQ19YC9H",
+    "parent_asin": "B0FVSW6WW5",
+    "title": "HUANUO TitanLift Heavy Duty Monitor Arm for Screens up to 49\", Holds 44 lbs, Aluminum Ultrawide Screen Monitor Mount, Fully Adjustable Single Gaming Desk Mount with Dual C-Clamp, Max VESA 100x100mm",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794699945,
+    "verified_at": "2026-11-14T23:45:45Z"
   }
 }

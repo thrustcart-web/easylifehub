@@ -1,0 +1,34 @@
+{
+  "slug": "monitor-arm-ergonomic-setup-screen-height-viewing-distance",
+  "title": "How to Set Up a Monitor Arm: Screen Height, Viewing Distance, and Desk Position",
+  "meta_description": "Learn how to set up a monitor arm correctly by adjusting screen height, viewing distance, tilt, and cable routing for an ergonomic home office desk setup.",
+  "template": "review",
+  "niche": "home office",
+  "keyword": "how to set up a monitor arm",
+  "labels": [
+    "Reviews",
+    "Home Office"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 1322,
+  "items": [
+    {
+      "name": "Monitor Arm",
+      "asin": "B0FQM6QB48",
+      "asin_verified": true,
+      "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
+      "parent_asin": "B0GK9FYKY1",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794699622,
+      "search_term": "monitor arm",
+      "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "monitor-arm-ergonomic-setup-screen-height-viewing-distance.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

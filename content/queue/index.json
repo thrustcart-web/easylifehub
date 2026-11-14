@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 56,
+  "count": 58,
   "posts": [
     {
       "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
@@ -1391,6 +1391,74 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "dual-monitor-arm-guide-load-vesa-alignment-desk-space",
+      "title": "Dual Monitor Arm Guide: Screen Fit, Weight Capacity, Alignment, and Desk Space",
+      "meta_description": "Learn how to select the right dual monitor arm by evaluating weight capacity, VESA compatibility, desk clearance, screen alignment, and layout options.",
+      "template": "review",
+      "niche": "home office",
+      "keyword": "dual monitor arm buying guide",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 1597,
+      "items": [
+        {
+          "name": "Dual Monitor Arm",
+          "asin": "B07T5SY43L",
+          "asin_verified": true,
+          "verified_product_title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
+          "parent_asin": "B0HKSLL2S4",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794699845,
+          "search_term": "dual monitor arm",
+          "url": "https://www.amazon.com/dp/B07T5SY43L?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "dual-monitor-arm-guide-load-vesa-alignment-desk-space.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
+      "slug": "monitor-arm-ergonomic-setup-screen-height-viewing-distance",
+      "title": "How to Set Up a Monitor Arm: Screen Height, Viewing Distance, and Desk Position",
+      "meta_description": "Learn how to set up a monitor arm correctly by adjusting screen height, viewing distance, tilt, and cable routing for an ergonomic home office desk setup.",
+      "template": "review",
+      "niche": "home office",
+      "keyword": "how to set up a monitor arm",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 1322,
+      "items": [
+        {
+          "name": "Monitor Arm",
+          "asin": "B0FQM6QB48",
+          "asin_verified": true,
+          "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
+          "parent_asin": "B0GK9FYKY1",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794699622,
+          "search_term": "monitor arm",
+          "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "monitor-arm-ergonomic-setup-screen-height-viewing-distance.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
