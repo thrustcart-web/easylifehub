@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-laundry-storage-washing-machine-f3570f8f2d63",
+  "title": "The 3 Laundry & Storage Worth Your Money (and 2 to Avoid)",
+  "meta_description": "Select effective laundry detergent sheets, mesh wash bags, and clothes brushes. Learn what features matter for garment care and storage organization.",
+  "template": "bestof",
+  "niche": "laundry & storage",
+  "keyword": "Laundry & Storage",
+  "labels": [
+    "Reviews",
+    "Laundry & Storage"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 648,
+  "items": [
+    {
+      "name": "Laundry Detergent Sheets",
+      "asin": "B0DYCBT63D",
+      "asin_verified": true,
+      "verified_product_title": "ARM & HAMMER Power Sheets Laundry Detergent, Fragrance Free, 60 Count | No Dyes or Perfumes, Quick-Dissolve Sheets, Up to 120 Small Loads, Lightweight and Travel-Friendly, Zero Plastic Bottle Waste",
+      "parent_asin": "B0G3WPX1RW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636559,
+      "search_term": "laundry detergent sheets for campervans",
+      "url": "https://www.amazon.com/dp/B0DYCBT63D?tag=ezylifehub-20"
+    },
+    {
+      "name": "Mesh Wash Bag",
+      "asin": "B0DDXQC96K",
+      "asin_verified": true,
+      "verified_product_title": "Mesh Laundry Bags for Delicates, 3 Pack Laundry Bags Mesh Wash Bags in 3 Sizes(1 Large, 1 Medium, 1 Small), Durable and Gentle Lingerie Bags for Washing Delicates, Garment Bag for Washing Machine",
+      "parent_asin": "B0FG1ZLBX6",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636560,
+      "search_term": "mesh wash bag for small bathrooms",
+      "url": "https://www.amazon.com/dp/B0DDXQC96K?tag=ezylifehub-20"
+    },
+    {
+      "name": "Clothes Brush",
+      "asin": "B07FYJSPPF",
+      "asin_verified": true,
+      "verified_product_title": "Cokaka Clothes Brush Garment Brush Lint Remover Brush with Genuine Soft Horsehair and Wooden Handle for Coat Men Suits Shoes Jacket Furniture Car Mat and Pet Hair (1-Pack(Walnut Wood))",
+      "parent_asin": "B07FYGZ1QG",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636562,
+      "search_term": "clothes brush for workwear",
+      "url": "https://www.amazon.com/dp/B07FYJSPPF?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-laundry-storage-washing-machine-f3570f8f2d63.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "review-cutting-board-c5a541e5d9b9",
+  "title": "Cutting Board for Families of Four: Judging Dishwasher Safe Parts Honestly",
+  "meta_description": "Review of a color‑coded cutting board set for families of four, assessing dishwasher‑safe parts, setup, maintenance, and durability to aid a confident purchase.",
+  "template": "review",
+  "niche": "kitchen",
+  "keyword": "cutting board for families of four",
+  "labels": [
+    "Reviews",
+    "Kitchen"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 668,
+  "items": [
+    {
+      "name": "Cutting Board",
+      "asin": "B0885WX1YM",
+      "asin_verified": true,
+      "verified_product_title": "Color Coded Cutting Boards Set of 4 with Holder, BPA-Free | Preventing Cross-Contamination of Different Food Types, Dishwasher Safe",
+      "parent_asin": "B08JK89PSJ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636546,
+      "search_term": "cutting board for families of four",
+      "url": "https://www.amazon.com/dp/B0885WX1YM?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-cutting-board-c5a541e5d9b9.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 46,
+  "count": 51,
   "posts": [
     {
       "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
@@ -515,6 +515,62 @@
       "product_review_required": true
     },
     {
+      "slug": "bestof-garden-garden-bed-0b11f4478711",
+      "title": "Garden Tools Shortlist: 3 Options, Trade-Offs Included",
+      "meta_description": "Compare a seed starting tray, compost bin, and plant grow light with clear trade‑offs, setup tips, and fit for beginners and low‑maintenance gardeners.",
+      "template": "bestof",
+      "niche": "garden",
+      "keyword": "Garden",
+      "labels": [
+        "Reviews",
+        "Garden"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 522,
+      "items": [
+        {
+          "name": "Seed Starting Tray",
+          "asin": "B09S7YL4QV",
+          "asin_verified": true,
+          "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
+          "parent_asin": "B0D4R5CP5S",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636534,
+          "search_term": "seed starting tray",
+          "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=ezylifehub-20"
+        },
+        {
+          "name": "Compost Bin",
+          "asin": "B08346W5S6",
+          "asin_verified": true,
+          "verified_product_title": "VIVOSUN Outdoor Tumbling Composter Dual Rotating Batch Compost Bin, 43 Gallon Black Door",
+          "parent_asin": "B08SWCXD9P",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636535,
+          "search_term": "compost bin for beginners",
+          "url": "https://www.amazon.com/dp/B08346W5S6?tag=ezylifehub-20"
+        },
+        {
+          "name": "Plant Grow Light",
+          "asin": "B085CDPSMR",
+          "asin_verified": true,
+          "verified_product_title": "GooingTop Grow Light,6000K Full Spectrum Indoor Plant Growing Lamp | Desk Lamp with White Red LEDs for Indoor Plants,Clamp with Flexible Gooseneck,Brightness Adjustable,Auto Timer 4 8 12Hrs",
+          "parent_asin": "B0H3F1P6ST",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636537,
+          "search_term": "plant grow light for low maintenance gardens",
+          "url": "https://www.amazon.com/dp/B085CDPSMR?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-garden-garden-bed-0b11f4478711.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "bestof-home-office-desk-pad-cefef8cfaa25",
       "title": "Best Home Office Gear: 3 Picks Compared Honestly",
       "meta_description": "Compare a cable management kit, ergonomic wrist rest, and noise‑cancelling headphones for home offices. Learn features, setup tips, and who each product suits.",
@@ -653,6 +709,62 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "bestof-laundry-storage-washing-machine-f3570f8f2d63",
+      "title": "The 3 Laundry & Storage Worth Your Money (and 2 to Avoid)",
+      "meta_description": "Select effective laundry detergent sheets, mesh wash bags, and clothes brushes. Learn what features matter for garment care and storage organization.",
+      "template": "bestof",
+      "niche": "laundry & storage",
+      "keyword": "Laundry & Storage",
+      "labels": [
+        "Reviews",
+        "Laundry & Storage"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 648,
+      "items": [
+        {
+          "name": "Laundry Detergent Sheets",
+          "asin": "B0DYCBT63D",
+          "asin_verified": true,
+          "verified_product_title": "ARM & HAMMER Power Sheets Laundry Detergent, Fragrance Free, 60 Count | No Dyes or Perfumes, Quick-Dissolve Sheets, Up to 120 Small Loads, Lightweight and Travel-Friendly, Zero Plastic Bottle Waste",
+          "parent_asin": "B0G3WPX1RW",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636559,
+          "search_term": "laundry detergent sheets for campervans",
+          "url": "https://www.amazon.com/dp/B0DYCBT63D?tag=ezylifehub-20"
+        },
+        {
+          "name": "Mesh Wash Bag",
+          "asin": "B0DDXQC96K",
+          "asin_verified": true,
+          "verified_product_title": "Mesh Laundry Bags for Delicates, 3 Pack Laundry Bags Mesh Wash Bags in 3 Sizes(1 Large, 1 Medium, 1 Small), Durable and Gentle Lingerie Bags for Washing Delicates, Garment Bag for Washing Machine",
+          "parent_asin": "B0FG1ZLBX6",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636560,
+          "search_term": "mesh wash bag for small bathrooms",
+          "url": "https://www.amazon.com/dp/B0DDXQC96K?tag=ezylifehub-20"
+        },
+        {
+          "name": "Clothes Brush",
+          "asin": "B07FYJSPPF",
+          "asin_verified": true,
+          "verified_product_title": "Cokaka Clothes Brush Garment Brush Lint Remover Brush with Genuine Soft Horsehair and Wooden Handle for Coat Men Suits Shoes Jacket Furniture Car Mat and Pet Hair (1-Pack(Walnut Wood))",
+          "parent_asin": "B07FYGZ1QG",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636562,
+          "search_term": "clothes brush for workwear",
+          "url": "https://www.amazon.com/dp/B07FYJSPPF?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-laundry-storage-washing-machine-f3570f8f2d63.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
@@ -1305,6 +1417,40 @@
       "product_review_required": false
     },
     {
+      "slug": "review-cutting-board-c5a541e5d9b9",
+      "title": "Cutting Board for Families of Four: Judging Dishwasher Safe Parts Honestly",
+      "meta_description": "Review of a color‑coded cutting board set for families of four, assessing dishwasher‑safe parts, setup, maintenance, and durability to aid a confident purchase.",
+      "template": "review",
+      "niche": "kitchen",
+      "keyword": "cutting board for families of four",
+      "labels": [
+        "Reviews",
+        "Kitchen"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 668,
+      "items": [
+        {
+          "name": "Cutting Board",
+          "asin": "B0885WX1YM",
+          "asin_verified": true,
+          "verified_product_title": "Color Coded Cutting Boards Set of 4 with Holder, BPA-Free | Preventing Cross-Contamination of Different Food Types, Dishwasher Safe",
+          "parent_asin": "B08JK89PSJ",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636546,
+          "search_term": "cutting board for families of four",
+          "url": "https://www.amazon.com/dp/B0885WX1YM?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-cutting-board-c5a541e5d9b9.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-decorative-bowl-1370bfcfc215",
       "title": "Decorative Bowl for Dried Flowers: Five Things Listings Skip",
       "meta_description": "Learn what verified listings omit about the Decorative Bowl for Dried Flowers. Compare specs, materials, and placement needs for your home interior setup.",
@@ -1564,6 +1710,40 @@
       "product_review_required": false
     },
     {
+      "slug": "review-nail-drill-46cf2ffabf79",
+      "title": "Nail Drill for Travellers: Five Things Listings Skip",
+      "meta_description": "Discover the five hidden factors to evaluate before buying a nail drill for travel, from noise and size to power, speed control, and maintenance.",
+      "template": "review",
+      "niche": "personal care",
+      "keyword": "nail drill for travellers",
+      "labels": [
+        "Reviews",
+        "Personal Care"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 525,
+      "items": [
+        {
+          "name": "Nail Drill",
+          "asin": "B0CKYJ63SG",
+          "asin_verified": true,
+          "verified_product_title": "COSLUS C40 Electric Nail Drill Professional, Precise Speed Dial, Purple | Nail File Machine for Acrylic Gel Dip Powder Removal, Compact Manicure Tools, Beginner-friendly Polishing Set, Home",
+          "parent_asin": "B0F58Z632T",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636530,
+          "search_term": "nail drill for travellers",
+          "url": "https://www.amazon.com/dp/B0CKYJ63SG?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-nail-drill-46cf2ffabf79.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-ninja-creami-nc301-afd5d45b40e8",
       "title": "Choosing Ninja Creami NC301: Six Things That Actually Matter",
       "meta_description": "Evaluating the Ninja Creami NC301 ice cream maker? Check key details on its 7 one-touch programs, included pint containers, silver design, and practical setup.",
@@ -1821,6 +2001,40 @@
       "product_review_required": false,
       "products_audited_at": 1794609442,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-stand-mixer-39880e6a4e89",
+      "title": "Stand Mixer: Judging Easy Cleaning Against Real Use",
+      "meta_description": "Assess the Hamilton Beach 4‑qt stand mixer’s easy‑clean design, features, and suitability for family cooking, with guidance on setup, operation, and maintenance.",
+      "template": "review",
+      "niche": "kitchen",
+      "keyword": "stand mixer for families of four",
+      "labels": [
+        "Reviews",
+        "Kitchen"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 562,
+      "items": [
+        {
+          "name": "Stand Mixer",
+          "asin": "B0758BQPY8",
+          "asin_verified": true,
+          "verified_product_title": "Hamilton Beach 4 Qt Electric Stand Mixer With 7 Speeds, Easy-Carry Handle | Planetary Mixing For Full Bowl Coverage | Splash Guard | 300 Watts | Whisk, Flat Beater, Dough Hook | Mixing Guide | Black",
+          "parent_asin": "B0CYHK66QD",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794636699,
+          "search_term": "stand mixer for families of four",
+          "url": "https://www.amazon.com/dp/B0758BQPY8?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-stand-mixer-39880e6a4e89.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-stud-finder-cf86b7128d04",

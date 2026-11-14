@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-garden-garden-bed-0b11f4478711",
+  "title": "Garden Tools Shortlist: 3 Options, Trade-Offs Included",
+  "meta_description": "Compare a seed starting tray, compost bin, and plant grow light with clear trade‑offs, setup tips, and fit for beginners and low‑maintenance gardeners.",
+  "template": "bestof",
+  "niche": "garden",
+  "keyword": "Garden",
+  "labels": [
+    "Reviews",
+    "Garden"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 522,
+  "items": [
+    {
+      "name": "Seed Starting Tray",
+      "asin": "B09S7YL4QV",
+      "asin_verified": true,
+      "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
+      "parent_asin": "B0D4R5CP5S",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636534,
+      "search_term": "seed starting tray",
+      "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=ezylifehub-20"
+    },
+    {
+      "name": "Compost Bin",
+      "asin": "B08346W5S6",
+      "asin_verified": true,
+      "verified_product_title": "VIVOSUN Outdoor Tumbling Composter Dual Rotating Batch Compost Bin, 43 Gallon Black Door",
+      "parent_asin": "B08SWCXD9P",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636535,
+      "search_term": "compost bin for beginners",
+      "url": "https://www.amazon.com/dp/B08346W5S6?tag=ezylifehub-20"
+    },
+    {
+      "name": "Plant Grow Light",
+      "asin": "B085CDPSMR",
+      "asin_verified": true,
+      "verified_product_title": "GooingTop Grow Light,6000K Full Spectrum Indoor Plant Growing Lamp | Desk Lamp with White Red LEDs for Indoor Plants,Clamp with Flexible Gooseneck,Brightness Adjustable,Auto Timer 4 8 12Hrs",
+      "parent_asin": "B0H3F1P6ST",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636537,
+      "search_term": "plant grow light for low maintenance gardens",
+      "url": "https://www.amazon.com/dp/B085CDPSMR?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-garden-garden-bed-0b11f4478711.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "review-stand-mixer-39880e6a4e89",
+  "title": "Stand Mixer: Judging Easy Cleaning Against Real Use",
+  "meta_description": "Assess the Hamilton Beach 4‑qt stand mixer’s easy‑clean design, features, and suitability for family cooking, with guidance on setup, operation, and maintenance.",
+  "template": "review",
+  "niche": "kitchen",
+  "keyword": "stand mixer for families of four",
+  "labels": [
+    "Reviews",
+    "Kitchen"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 562,
+  "items": [
+    {
+      "name": "Stand Mixer",
+      "asin": "B0758BQPY8",
+      "asin_verified": true,
+      "verified_product_title": "Hamilton Beach 4 Qt Electric Stand Mixer With 7 Speeds, Easy-Carry Handle | Planetary Mixing For Full Bowl Coverage | Splash Guard | 300 Watts | Whisk, Flat Beater, Dough Hook | Mixing Guide | Black",
+      "parent_asin": "B0CYHK66QD",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794636699,
+      "search_term": "stand mixer for families of four",
+      "url": "https://www.amazon.com/dp/B0758BQPY8?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-stand-mixer-39880e6a4e89.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

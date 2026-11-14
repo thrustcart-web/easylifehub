@@ -158,12 +158,12 @@
     "verified_at": "2026-11-06T02:08:17Z"
   },
   "clothes brush": {
-    "asin": "B00QQW5ISA",
-    "parent_asin": "B00QQW5ISA",
-    "title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle | Removes Lint, Pet Hair, Fuzz & Dust Fast, Double-Sided Reusable Clothes Brush, Built-In Shoe Horn, Sturdy Walnut Wood Handle",
+    "asin": "B07FYJSPPF",
+    "parent_asin": "B07FYGZ1QG",
+    "title": "Cokaka Clothes Brush Garment Brush Lint Remover Brush with Genuine Soft Horsehair and Wooden Handle for Coat Men Suits Shoes Jacket Furniture Car Mat and Pet Hair (1-Pack(Walnut Wood))",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794609430,
-    "verified_at": "2026-11-13T22:37:23Z"
+    "stock_checked_at": 1794636562,
+    "verified_at": "2026-11-14T06:09:22Z"
   },
   "clothes line": {
     "asin": "B0DQJ61TZJ",
@@ -907,5 +907,93 @@
     "availability_type": "IN_STOCK",
     "stock_checked_at": 1794609439,
     "verified_at": "2026-11-13T22:37:32Z"
+  },
+  "nail drill": {
+    "asin": "B0CKYJ63SG",
+    "parent_asin": "B0F58Z632T",
+    "title": "COSLUS C40 Electric Nail Drill Professional, Precise Speed Dial, Purple | Nail File Machine for Acrylic Gel Dip Powder Removal, Compact Manicure Tools, Beginner-friendly Polishing Set, Home",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636530,
+    "verified_at": "2026-11-14T06:08:50Z"
+  },
+  "seed starting tray": {
+    "asin": "B09S7YL4QV",
+    "parent_asin": "B0D4R5CP5S",
+    "title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636534,
+    "verified_at": "2026-11-14T06:08:54Z"
+  },
+  "compost bin": {
+    "asin": "B08346W5S6",
+    "parent_asin": "B08SWCXD9P",
+    "title": "VIVOSUN Outdoor Tumbling Composter Dual Rotating Batch Compost Bin, 43 Gallon Black Door",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636535,
+    "verified_at": "2026-11-14T06:08:55Z"
+  },
+  "plant grow light": {
+    "asin": "B085CDPSMR",
+    "parent_asin": "B0H3F1P6ST",
+    "title": "GooingTop Grow Light,6000K Full Spectrum Indoor Plant Growing Lamp | Desk Lamp with White Red LEDs for Indoor Plants,Clamp with Flexible Gooseneck,Brightness Adjustable,Auto Timer 4 8 12Hrs",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636537,
+    "verified_at": "2026-11-14T06:08:57Z"
+  },
+  "cutting board": {
+    "asin": "B0885WX1YM",
+    "parent_asin": "B08JK89PSJ",
+    "title": "Color Coded Cutting Boards Set of 4 with Holder, BPA-Free | Preventing Cross-Contamination of Different Food Types, Dishwasher Safe",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636546,
+    "verified_at": "2026-11-14T06:09:06Z"
+  },
+  "laundry detergent sheets": {
+    "asin": "B0DYCBT63D",
+    "parent_asin": "B0G3WPX1RW",
+    "title": "ARM & HAMMER Power Sheets Laundry Detergent, Fragrance Free, 60 Count | No Dyes or Perfumes, Quick-Dissolve Sheets, Up to 120 Small Loads, Lightweight and Travel-Friendly, Zero Plastic Bottle Waste",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636559,
+    "verified_at": "2026-11-14T06:09:19Z"
+  },
+  "mesh wash bag": {
+    "asin": "B0DDXQC96K",
+    "parent_asin": "B0FG1ZLBX6",
+    "title": "Mesh Laundry Bags for Delicates, 3 Pack Laundry Bags Mesh Wash Bags in 3 Sizes(1 Large, 1 Medium, 1 Small), Durable and Gentle Lingerie Bags for Washing Delicates, Garment Bag for Washing Machine",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636560,
+    "verified_at": "2026-11-14T06:09:20Z"
+  },
+  "stand mixer": {
+    "asin": "B0758BQPY8",
+    "parent_asin": "B0CYHK66QD",
+    "title": "Hamilton Beach 4 Qt Electric Stand Mixer With 7 Speeds, Easy-Carry Handle | Planetary Mixing For Full Bowl Coverage | Splash Guard | 300 Watts | Whisk, Flat Beater, Dough Hook | Mixing Guide | Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636699,
+    "verified_at": "2026-11-14T06:11:39Z"
+  },
+  "storage baskets": {
+    "asin": "B07QL5BT3F",
+    "parent_asin": "B0897Q68YF",
+    "title": "LA JOLIE MUSE Small Wicker Baskets for Organizing, Desert 3 Pack | Decorative Organizer with Vegan Leather Tag, Round Handle, Storage Baskets for Shelves, Bedroom, Kitchen, Office and Home",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636707,
+    "verified_at": "2026-11-14T06:11:47Z"
+  },
+  "entryway organiser": {
+    "asin": "B0CRVDFZVK",
+    "parent_asin": "B0CS3BXW2C",
+    "title": "YYW Shoe Rack, Foldable Bamboo Shoes Shelf, Freestanding Shoe Storage Organiser for Entryway, Hallway, Bedroom, Closet (Brown, 8 Layers)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636708,
+    "verified_at": "2026-11-14T06:11:48Z"
+  },
+  "floor lamp": {
+    "asin": "B07Z5NQPDS",
+    "parent_asin": "B0BSVHR6DQ",
+    "title": "Modern Floor Lamp Simple Design with White Shade & Foot Pedal Switch | 60\" Black Floor Lamp(Without Bulb), Tall Lamps for Living Room Bedroom Office Dining Room Kitchen",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794636709,
+    "verified_at": "2026-11-14T06:11:49Z"
   }
 }
