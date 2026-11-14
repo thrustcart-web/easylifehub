@@ -995,5 +995,93 @@
     "availability_type": "IN_STOCK",
     "stock_checked_at": 1794636709,
     "verified_at": "2026-11-14T06:11:49Z"
+  },
+  "deadbolt": {
+    "asin": "B0FLVSTPJC",
+    "parent_asin": "B0FLVSTPJC",
+    "title": "MOSECYOU Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield | Block the Access to Keyhole/Thumb Turn, Disable Deadbolt Lock, Temporary Protector Lock, All-Metal Construction",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694129,
+    "verified_at": "2026-11-14T22:08:49Z"
+  },
+  "walking cane": {
+    "asin": "B0CCG17HGN",
+    "parent_asin": "B0GFBKD2WG",
+    "title": "Medline Aluminum Offset Walking Cane, Adjustable Height, 300 lb Capacity | Height Adjustable, Sturdy Aluminum for Reliability, Comfortable Foam Handle with Strap, Rubber Pads for Stability, Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694140,
+    "verified_at": "2026-11-14T22:09:00Z"
+  },
+  "blood pressure monitor": {
+    "asin": "B01C5QS1T8",
+    "parent_asin": "B0H636XX71",
+    "title": "iHealth Track Smart Upper Arm Blood Pressure Monitor with Wide-Range Cuff | Bluetooth BP monitor for standard to large adult arms, compatible with iOS and Android",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694142,
+    "verified_at": "2026-11-14T22:09:02Z"
+  },
+  "posture corrector": {
+    "asin": "B07VST9VYH",
+    "parent_asin": "B07VST9VYH",
+    "title": "Schiara Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694143,
+    "verified_at": "2026-11-14T22:09:03Z"
+  },
+  "jump rope": {
+    "asin": "B09DF9NWC7",
+    "parent_asin": "B0B49D14SZ",
+    "title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men and Kids, Adjustable Foam Handles Steel Jump Ropes for Fitness",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694240,
+    "verified_at": "2026-11-14T22:10:40Z"
+  },
+  "orthopedic dog bed": {
+    "asin": "B0BDLGZCTY",
+    "parent_asin": "B0D76YXPWZ",
+    "title": "EHEYCIGA Orthopedic Extra Large Dog Bed, Waterproof Washable XL Pet Bed 44\" | Non-Slip Bottom and Egg-Crate Polyurethane Foam Big Dog Couch Bed with Washable Removable Cover, Grey",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694247,
+    "verified_at": "2026-11-14T22:10:47Z"
+  },
+  "dog bed": {
+    "asin": "B09D7DWTVB",
+    "parent_asin": "B0FNWNVGBL",
+    "title": "KSIIA Washable Dog Bed Medium Size Dog Crate Bed Plush Pet Mat 35\"x23\" Gray | Deluxe Plush Comfy Kennel Pad, Anti-Slip Bottom,Deep Sleeping Mat for Medium Dogs,Machine Washable for Easy Cleaning",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694248,
+    "verified_at": "2026-11-14T22:10:48Z"
+  },
+  "espresso tamper": {
+    "asin": "B0HCVJPS41",
+    "parent_asin": "B0HCVHK8XC",
+    "title": "Maclia Espresso Tamper 51mm, Stainless Steel Coffee Tamper with Wood Handle | Espresso Press Tool for 51mm Portafilter, Coffee Machine Accessories and Barista Tools for Home Baristas",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694427,
+    "verified_at": "2026-11-14T22:13:47Z"
+  },
+  "steam wand machine": {
+    "asin": "B0F12TWP55",
+    "parent_asin": "B0H3F8ZNC9",
+    "title": "XIXUBX Compact Espresso & Cappuccino Machine, 3.5 Bar with Steam Wand | 800W Fast Heating, Safety Lock & Tritan Cup, One-Touch 4-Cup Brewing & Powerful Steam for Latte, Black for Home & Office",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694428,
+    "verified_at": "2026-11-14T22:13:48Z"
+  },
+  "espresso machine": {
+    "asin": "B0DQWC47JN",
+    "parent_asin": "B0DQWC47JN",
+    "title": "De'Longhi Classic Signature Espresso Machine, Adjustable Milk Frother | #1 Worldwide Espresso Machine Maker, Rapid Heat-Up, Preset Single & Double Espresso, Frother, Pressure Gauge, Compact Design",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694429,
+    "verified_at": "2026-11-14T22:13:49Z"
+  },
+  "key holder": {
+    "asin": "B0D5J1DN95",
+    "parent_asin": "B0DPM936C3",
+    "title": "Kazai. Key Holder 'Toke' | Minimalist Key Hook Design from Berlin | Modern Key Holder Wall Mount with Wooden Shelf | Key Rack for Wall as Entryway Organizer | Walnut",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794694438,
+    "verified_at": "2026-11-14T22:13:58Z"
   }
 }

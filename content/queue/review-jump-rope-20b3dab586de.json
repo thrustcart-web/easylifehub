@@ -1,0 +1,34 @@
+{
+  "slug": "review-jump-rope-20b3dab586de",
+  "title": "Jump Rope Review: Who It Is For and Who Should Skip It",
+  "meta_description": "Review of the Jump Rope with tangle‑free cable and adjustable foam handles, evaluating its fit for home‑gym cardio and noting who might opt for a different rope.",
+  "template": "review",
+  "niche": "fitness",
+  "keyword": "jump rope for home gyms",
+  "labels": [
+    "Reviews",
+    "Fitness"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 553,
+  "items": [
+    {
+      "name": "Jump Rope",
+      "asin": "B09DF9NWC7",
+      "asin_verified": true,
+      "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men and Kids, Adjustable Foam Handles Steel Jump Ropes for Fitness",
+      "parent_asin": "B0B49D14SZ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794694240,
+      "search_term": "jump rope for home gyms",
+      "url": "https://www.amazon.com/dp/B09DF9NWC7?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-jump-rope-20b3dab586de.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

@@ -458,6 +458,51 @@
       "ts": "2026-11-14T06:11:46Z",
       "source": "ai:groq",
       "words": 562
+    },
+    {
+      "slug": "review-deadbolt-cf3066990956",
+      "title": "Before You Buy A Deadbolt for Key Losing Households: Read This",
+      "template": "review",
+      "keyword": "deadbolt for key losing households",
+      "ts": "2026-11-14T22:08:59Z",
+      "source": "ai:groq",
+      "words": 563
+    },
+    {
+      "slug": "bestof-health-wellness-corrector-a24a55716d8b",
+      "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
+      "template": "bestof",
+      "keyword": "Health & Wellness",
+      "ts": "2026-11-14T22:10:39Z",
+      "source": "ai:gemini",
+      "words": 668
+    },
+    {
+      "slug": "review-jump-rope-20b3dab586de",
+      "title": "Jump Rope Review: Who It Is For and Who Should Skip It",
+      "template": "review",
+      "keyword": "jump rope for home gyms",
+      "ts": "2026-11-14T22:10:46Z",
+      "source": "ai:groq",
+      "words": 553
+    },
+    {
+      "slug": "bestof-coffee-espresso-pitcher-3db38a6609e5",
+      "title": "3 Coffee Gear Options Worth Your Money (and the Ones to Skip)",
+      "template": "bestof",
+      "keyword": "Coffee & Espresso",
+      "ts": "2026-11-14T22:13:57Z",
+      "source": "ai:groq",
+      "words": 651
+    },
+    {
+      "slug": "review-key-holder-e9a5f7ebbeac",
+      "title": "Is A Key Holder Worth It for Small Entryways? The Honest Answer",
+      "template": "review",
+      "keyword": "key holder for small entryways",
+      "ts": "2026-11-14T22:14:09Z",
+      "source": "ai:groq",
+      "words": 567
     }
   ],
   "published": [],
@@ -512,7 +557,12 @@
     "bestof-garden-garden-bed-0b11f4478711",
     "review-cutting-board-c5a541e5d9b9",
     "bestof-laundry-storage-washing-machine-f3570f8f2d63",
-    "review-stand-mixer-39880e6a4e89"
+    "review-stand-mixer-39880e6a4e89",
+    "review-deadbolt-cf3066990956",
+    "bestof-health-wellness-corrector-a24a55716d8b",
+    "review-jump-rope-20b3dab586de",
+    "bestof-coffee-espresso-pitcher-3db38a6609e5",
+    "review-key-holder-e9a5f7ebbeac"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -567,11 +617,11 @@
     "cast iron kettlebell for swings and carries": "2026-11-04",
     "Yoga Mat": "2026-11-04",
     "non slip yoga mat thick for knees": "2026-11-04",
-    "Jump Rope": "2026-11-05",
+    "Jump Rope": "2026-11-14",
     "speed jump rope adjustable bearings": "2026-11-04",
     "espresso machine vs pour over": "2026-11-04",
     "coffee & espresso": "2026-11-04",
-    "Espresso Machine": "2026-11-04",
+    "Espresso Machine": "2026-11-14",
     "home espresso machine with milk frother for beginners": "2026-11-04",
     "Pour Over Kit": "2026-11-04",
     "pour over coffee kit with gooseneck kettle and scale": "2026-11-04",
@@ -736,7 +786,28 @@
     "clothes brush for workwear": "2026-11-14",
     "stand mixer": "2026-11-14",
     "Stand Mixer": "2026-11-14",
-    "stand mixer for families of four": "2026-11-14"
+    "stand mixer for families of four": "2026-11-14",
+    "deadbolt": "2026-11-14",
+    "Deadbolt": "2026-11-14",
+    "deadbolt for key losing households": "2026-11-14",
+    "health & wellness:blood pressure monitor|posture corrector|walking cane": "2026-11-14",
+    "Walking Cane": "2026-11-14",
+    "walking cane for rehab users": "2026-11-14",
+    "Blood Pressure Monitor": "2026-11-14",
+    "blood pressure monitor for seniors": "2026-11-14",
+    "Posture Corrector": "2026-11-14",
+    "posture corrector for desk workers": "2026-11-14",
+    "jump rope": "2026-11-14",
+    "jump rope for home gyms": "2026-11-14",
+    "coffee & espresso:espresso machine|espresso tamper|steam wand machine": "2026-11-14",
+    "Espresso Tamper": "2026-11-14",
+    "espresso tamper for one person households": "2026-11-14",
+    "Steam Wand Machine": "2026-11-14",
+    "steam wand machine for latte drinkers": "2026-11-14",
+    "espresso machine for one person households": "2026-11-14",
+    "key holder": "2026-11-14",
+    "Key Holder": "2026-11-14",
+    "key holder for small entryways": "2026-11-14"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -843,7 +914,13 @@
     "{P} for {AUD}: Judging {FEAT} Honestly",
     "The {N} {F} Worth Your Money (and {N2} to Avoid)",
     "{P}: Judging {FEAT} Against Real Use",
-    "Best {F}{AUD}: {N} Picks, Ranked by What Matters"
+    "Best {F}{AUD}: {N} Picks, Ranked by What Matters",
+    "Before You Buy {A} {P} for {AUD}: Read This",
+    "{F} Buying Guide: {N} Picks Ranked by Real Criteria",
+    "{P} Review: Who It Is For and Who Should Skip It",
+    "Choosing Between {A} and {B}: A Practical Comparison",
+    "{N} {F} Options Worth Your Money (and the Ones to Skip)",
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -852,7 +929,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 51,
+    "total_generated": 56,
     "total_published": 0
   },
   "blogger_titles": [

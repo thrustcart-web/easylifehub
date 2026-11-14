@@ -1,6 +1,6 @@
 {
   "repo_raw_base": "https://raw.githubusercontent.com/thrustcart-web/easylifehub/main",
-  "count": 51,
+  "count": 56,
   "posts": [
     {
       "slug": "bestof-budget-tech-bank-7ff94e9fcf2e",
@@ -60,6 +60,62 @@
       "product_review_required": false,
       "products_audited_at": 1794652639,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "bestof-coffee-espresso-pitcher-3db38a6609e5",
+      "title": "3 Coffee Gear Options Worth Your Money (and the Ones to Skip)",
+      "meta_description": "Compare a 51mm tamper, a compact steam‑wand espresso machine, and a De'Longhi classic maker to decide which suits solo households or latte daily fans.",
+      "template": "bestof",
+      "niche": "coffee & espresso",
+      "keyword": "Coffee & Espresso",
+      "labels": [
+        "Reviews",
+        "Coffee & Espresso"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 651,
+      "items": [
+        {
+          "name": "Espresso Tamper",
+          "asin": "B0HCVJPS41",
+          "asin_verified": true,
+          "verified_product_title": "Maclia Espresso Tamper 51mm, Stainless Steel Coffee Tamper with Wood Handle | Espresso Press Tool for 51mm Portafilter, Coffee Machine Accessories and Barista Tools for Home Baristas",
+          "parent_asin": "B0HCVHK8XC",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694427,
+          "search_term": "espresso tamper for one person households",
+          "url": "https://www.amazon.com/dp/B0HCVJPS41?tag=ezylifehub-20"
+        },
+        {
+          "name": "Steam Wand Machine",
+          "asin": "B0F12TWP55",
+          "asin_verified": true,
+          "verified_product_title": "XIXUBX Compact Espresso & Cappuccino Machine, 3.5 Bar with Steam Wand | 800W Fast Heating, Safety Lock & Tritan Cup, One-Touch 4-Cup Brewing & Powerful Steam for Latte, Black for Home & Office",
+          "parent_asin": "B0H3F8ZNC9",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694428,
+          "search_term": "steam wand machine for latte drinkers",
+          "url": "https://www.amazon.com/dp/B0F12TWP55?tag=ezylifehub-20"
+        },
+        {
+          "name": "Espresso Machine",
+          "asin": "B0DQWC47JN",
+          "asin_verified": true,
+          "verified_product_title": "De'Longhi Classic Signature Espresso Machine, Adjustable Milk Frother | #1 Worldwide Espresso Machine Maker, Rapid Heat-Up, Preset Single & Double Espresso, Frother, Pressure Gauge, Compact Design",
+          "parent_asin": "B0DQWC47JN",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694429,
+          "search_term": "espresso machine for one person households",
+          "url": "https://www.amazon.com/dp/B0DQWC47JN?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-coffee-espresso-pitcher-3db38a6609e5.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "bestof-electronics-earbud-16c689bbe43e",
@@ -572,6 +628,62 @@
       "product_review_required": false,
       "products_audited_at": 1794652639,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "bestof-health-wellness-corrector-a24a55716d8b",
+      "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
+      "meta_description": "Selecting wellness items requires clear specifications. Read our detailed guide on walking canes, blood pressure monitors, and posture correctors.",
+      "template": "bestof",
+      "niche": "health & wellness",
+      "keyword": "Health & Wellness",
+      "labels": [
+        "Reviews",
+        "Health & Wellness"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 668,
+      "items": [
+        {
+          "name": "Walking Cane",
+          "asin": "B0CCG17HGN",
+          "asin_verified": true,
+          "verified_product_title": "Medline Aluminum Offset Walking Cane, Adjustable Height, 300 lb Capacity | Height Adjustable, Sturdy Aluminum for Reliability, Comfortable Foam Handle with Strap, Rubber Pads for Stability, Black",
+          "parent_asin": "B0GFBKD2WG",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694140,
+          "search_term": "walking cane for rehab users",
+          "url": "https://www.amazon.com/dp/B0CCG17HGN?tag=ezylifehub-20"
+        },
+        {
+          "name": "Blood Pressure Monitor",
+          "asin": "B01C5QS1T8",
+          "asin_verified": true,
+          "verified_product_title": "iHealth Track Smart Upper Arm Blood Pressure Monitor with Wide-Range Cuff | Bluetooth BP monitor for standard to large adult arms, compatible with iOS and Android",
+          "parent_asin": "B0H636XX71",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694142,
+          "search_term": "blood pressure monitor for seniors",
+          "url": "https://www.amazon.com/dp/B01C5QS1T8?tag=ezylifehub-20"
+        },
+        {
+          "name": "Posture Corrector",
+          "asin": "B07VST9VYH",
+          "asin_verified": true,
+          "verified_product_title": "Schiara Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
+          "parent_asin": "B07VST9VYH",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694143,
+          "search_term": "posture corrector for desk workers",
+          "url": "https://www.amazon.com/dp/B07VST9VYH?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "bestof-health-wellness-corrector-a24a55716d8b.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "bestof-home-office-desk-pad-cefef8cfaa25",
@@ -1460,6 +1572,40 @@
       "stock_check_max_age_seconds": 86400
     },
     {
+      "slug": "review-deadbolt-cf3066990956",
+      "title": "Before You Buy A Deadbolt for Key Losing Households: Read This",
+      "meta_description": "Learn how a metal lockout shield for deadbolts works, its installation, code capacity, maintenance, and who benefits—key for households that often lose keys.",
+      "template": "review",
+      "niche": "security & safety",
+      "keyword": "deadbolt for key losing households",
+      "labels": [
+        "Reviews",
+        "Security & Safety"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 563,
+      "items": [
+        {
+          "name": "Deadbolt",
+          "asin": "B0FLVSTPJC",
+          "asin_verified": true,
+          "verified_product_title": "MOSECYOU Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield | Block the Access to Keyhole/Thumb Turn, Disable Deadbolt Lock, Temporary Protector Lock, All-Metal Construction",
+          "parent_asin": "B0FLVSTPJC",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694129,
+          "search_term": "deadbolt for key losing households",
+          "url": "https://www.amazon.com/dp/B0FLVSTPJC?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-deadbolt-cf3066990956.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-decorative-bowl-1370bfcfc215",
       "title": "Decorative Bowl for Dried Flowers: Five Things Listings Skip",
       "meta_description": "Learn what verified listings omit about the Decorative Bowl for Dried Flowers. Compare specs, materials, and placement needs for your home interior setup.",
@@ -1569,6 +1715,74 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-jump-rope-20b3dab586de",
+      "title": "Jump Rope Review: Who It Is For and Who Should Skip It",
+      "meta_description": "Review of the Jump Rope with tangle‑free cable and adjustable foam handles, evaluating its fit for home‑gym cardio and noting who might opt for a different rope.",
+      "template": "review",
+      "niche": "fitness",
+      "keyword": "jump rope for home gyms",
+      "labels": [
+        "Reviews",
+        "Fitness"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 553,
+      "items": [
+        {
+          "name": "Jump Rope",
+          "asin": "B09DF9NWC7",
+          "asin_verified": true,
+          "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men and Kids, Adjustable Foam Handles Steel Jump Ropes for Fitness",
+          "parent_asin": "B0B49D14SZ",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694240,
+          "search_term": "jump rope for home gyms",
+          "url": "https://www.amazon.com/dp/B09DF9NWC7?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-jump-rope-20b3dab586de.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
+      "slug": "review-key-holder-e9a5f7ebbeac",
+      "title": "Is A Key Holder Worth It for Small Entryways? The Honest Answer",
+      "meta_description": "Find out if the Kazai ‘Toke’ key holder is a practical, durable solution for small entryways, covering design, installation, shelf use, material durability, and upkeep.",
+      "template": "review",
+      "niche": "home decor",
+      "keyword": "key holder for small entryways",
+      "labels": [
+        "Reviews",
+        "Home Decor"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 567,
+      "items": [
+        {
+          "name": "Key Holder",
+          "asin": "B0D5J1DN95",
+          "asin_verified": true,
+          "verified_product_title": "Kazai. Key Holder 'Toke' | Minimalist Key Hook Design from Berlin | Modern Key Holder Wall Mount with Wooden Shelf | Key Rack for Wall as Entryway Organizer | Walnut",
+          "parent_asin": "B0DPM936C3",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794694438,
+          "search_term": "key holder for small entryways",
+          "url": "https://www.amazon.com/dp/B0D5J1DN95?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-key-holder-e9a5f7ebbeac.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-levoit-air-purifier-core-300-853749094376",

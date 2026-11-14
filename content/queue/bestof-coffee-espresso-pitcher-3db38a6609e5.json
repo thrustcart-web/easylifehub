@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-coffee-espresso-pitcher-3db38a6609e5",
+  "title": "3 Coffee Gear Options Worth Your Money (and the Ones to Skip)",
+  "meta_description": "Compare a 51mm tamper, a compact steam‑wand espresso machine, and a De'Longhi classic maker to decide which suits solo households or latte daily fans.",
+  "template": "bestof",
+  "niche": "coffee & espresso",
+  "keyword": "Coffee & Espresso",
+  "labels": [
+    "Reviews",
+    "Coffee & Espresso"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 651,
+  "items": [
+    {
+      "name": "Espresso Tamper",
+      "asin": "B0HCVJPS41",
+      "asin_verified": true,
+      "verified_product_title": "Maclia Espresso Tamper 51mm, Stainless Steel Coffee Tamper with Wood Handle | Espresso Press Tool for 51mm Portafilter, Coffee Machine Accessories and Barista Tools for Home Baristas",
+      "parent_asin": "B0HCVHK8XC",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794694427,
+      "search_term": "espresso tamper for one person households",
+      "url": "https://www.amazon.com/dp/B0HCVJPS41?tag=ezylifehub-20"
+    },
+    {
+      "name": "Steam Wand Machine",
+      "asin": "B0F12TWP55",
+      "asin_verified": true,
+      "verified_product_title": "XIXUBX Compact Espresso & Cappuccino Machine, 3.5 Bar with Steam Wand | 800W Fast Heating, Safety Lock & Tritan Cup, One-Touch 4-Cup Brewing & Powerful Steam for Latte, Black for Home & Office",
+      "parent_asin": "B0H3F8ZNC9",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794694428,
+      "search_term": "steam wand machine for latte drinkers",
+      "url": "https://www.amazon.com/dp/B0F12TWP55?tag=ezylifehub-20"
+    },
+    {
+      "name": "Espresso Machine",
+      "asin": "B0DQWC47JN",
+      "asin_verified": true,
+      "verified_product_title": "De'Longhi Classic Signature Espresso Machine, Adjustable Milk Frother | #1 Worldwide Espresso Machine Maker, Rapid Heat-Up, Preset Single & Double Espresso, Frother, Pressure Gauge, Compact Design",
+      "parent_asin": "B0DQWC47JN",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794694429,
+      "search_term": "espresso machine for one person households",
+      "url": "https://www.amazon.com/dp/B0DQWC47JN?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-coffee-espresso-pitcher-3db38a6609e5.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
