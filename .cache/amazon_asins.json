@@ -309,17 +309,20 @@
     "verified_at": "2026-11-15T10:37:24Z"
   },
   "white noise machine": {
-    "asin": "B07RWRJ4XW",
-    "title": "Magicteam Sound White Noise Machine with 20 Non Looping Natural Soothing Sounds and Memory Function 32 Levels of Volume Powered by AC or USB and Sleep Sound Timer Therapy for Baby Kids Adults",
-    "verified_at": "2026-11-06T04:25:43Z"
+    "asin": "B0FL16C5FZ",
+    "parent_asin": "B0GQK5CKGF",
+    "title": "Babysense PRO Full HD 5.5\" Split Screen Baby Monitor with 2 Cameras, 6-Color Night Light, White Noise, Sound & Light Machine, 20-Hour Battery, Hack-Proof Non-WiFi Secure Connection",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751996,
+    "verified_at": "2026-11-15T14:13:16Z"
   },
   "mesh office chair": {
-    "asin": "B0DPHLWNBG",
-    "parent_asin": "B0HBBP6CM7",
-    "title": "ELABEST X100 Ergonomic Mesh Office Chair with Footrest, Big and Tall Hone Desk Chair with 5D Flip-Up Arms, Adjustable 3D Lumbar Support,Gaming & Executive Computer Chairs",
+    "asin": "B07Y8BXBX8",
+    "parent_asin": "B0HHFXXYHZ",
+    "title": "GABRYLLY Ergonomic Office Chair, High Back Home Desk Chair with Headrest, Flip-Up Arms, 90-120° Tilt Lock and Wide Cushion, Big and Tall Mesh Chairs for Man Woman, Black Task Chair",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794739038,
-    "verified_at": "2026-11-15T10:37:24Z"
+    "stock_checked_at": 1794751994,
+    "verified_at": "2026-11-15T14:13:14Z"
   },
   "tote bag": {
     "asin": "B0FKH85DPY",
@@ -768,12 +771,12 @@
     "verified_at": "2026-11-15T10:37:28Z"
   },
   "ring light": {
-    "asin": "B0FLPR9ZBK",
-    "parent_asin": "B0FLPW9H12",
-    "title": "Anautin Ring Light for Video Conference Lighting,360°Adjustable,Portable LED Video Conference Lighting for Monitor,Laptop&Desktop Computer,Streaming Light for Zoom Meetings, Selfie Makeup, Video Calls",
+    "asin": "B08LZKSMRH",
+    "parent_asin": "B0FGCLV255",
+    "title": "Cyezcor Video Conference Lighting Kit, Ring Light for Monitor Clip On | for Remote Working, Distance Learning,Zoom Calls, Self Broadcasting and Live Streaming, Computer Laptop Video Conferencing",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794739039,
-    "verified_at": "2026-11-15T10:37:28Z"
+    "stock_checked_at": 1794751995,
+    "verified_at": "2026-11-15T14:13:15Z"
   },
   "portable projector": {
     "asin": "B0HBC61F7B",
@@ -1110,5 +1113,69 @@
     "availability_type": "IN_STOCK",
     "stock_checked_at": 1794699945,
     "verified_at": "2026-11-14T23:45:45Z"
+  },
+  "tv": {
+    "asin": "B0F13SYF7Y",
+    "parent_asin": "B0F8QS5WGB",
+    "title": "JARHETUN TV Stand with LED Lights for 55 Inch TV, Entertainment Center with 3-Tier Open Shelves, TV Console Table for Living Room, Bedroom, Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751731,
+    "verified_at": "2026-11-15T14:08:51Z"
+  },
+  "ab roller": {
+    "asin": "B09W9HV6MN",
+    "parent_asin": "B0HP8TNRGY",
+    "title": "Ab Roller Wheel for Home Gym, Core Strength Workout Equipment for Men Women | Ab rollerl for core and full-body strength training, built for balance, control and home workouts",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751737,
+    "verified_at": "2026-11-15T14:08:57Z"
+  },
+  "power rack": {
+    "asin": "B0HN2BBK86",
+    "parent_asin": "B0HP19Z7W2",
+    "title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System | 1600LBS Heavy Duty Alloy Steel Reinforced Triangular Frame,Adjustable J-Hoooks with Multi Attachments for Full Body Home Gym",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751738,
+    "verified_at": "2026-11-15T14:08:58Z"
+  },
+  "travel yoga mat": {
+    "asin": "B0D5LH513W",
+    "parent_asin": "B0D7H19Y74",
+    "title": "JOOEER Foldable Yoga Mat, 1.5mm Thick Exercise Yoga Mat With Carry Bag | 72\" L x 24\" W, Non-slip Suede Fitness Travel Yoga Mat for Hot Yoga, Exercise, Pilates, Home & Gym Use, 3 lbs, Blue",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751740,
+    "verified_at": "2026-11-15T14:09:00Z"
+  },
+  "lifting straps": {
+    "asin": "B0CK2MTXXK",
+    "parent_asin": "B07BB4463X",
+    "title": "Gymreapers Lifting Wrist Straps for Weightlifting, Bodybuilding, Powerlifting, Strength Training, & Deadlifts - Padded Neoprene with 18\" Cotton (Black/Black)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751972,
+    "verified_at": "2026-11-15T14:12:52Z"
+  },
+  "weight lifting gloves": {
+    "asin": "B07KQP1X5T",
+    "parent_asin": "B07N582C6N",
+    "title": "ATERCEL Workout Gloves for Men and Women, Exercise Gloves for Weight Lifting, Cycling, Gym, Training, Breathable and Snug fit (Black, L)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751973,
+    "verified_at": "2026-11-15T14:12:53Z"
+  },
+  "lens pen": {
+    "asin": "B007G5NNOW",
+    "parent_asin": "B0B86K1RRK",
+    "title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black | Retractable Dust Removal Brush, Non-Liquid Cleaning Element, 12mm Round Cleaning Tip, 11cm Long",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794751978,
+    "verified_at": "2026-11-15T14:12:58Z"
+  },
+  "hydration bladder": {
+    "asin": "B071DQSZB8",
+    "parent_asin": "B0BXC7Y9LG",
+    "title": "Hydration Bladder, 2L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Hydration Pack Replacement for Camping Cycling Running, Military Green",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1794752036,
+    "verified_at": "2026-11-15T14:13:56Z"
   }
 }

@@ -1,0 +1,34 @@
+{
+  "slug": "review-lens-pen-5707e568617a",
+  "title": "Lens Pen: Judging Lint Free Wipes Against Real Use",
+  "meta_description": "A practical review of the LensPen NLP‑1 lint‑free wipes, covering design, operation and maintenance to help you decide if it fits dusty photography settings.",
+  "template": "review",
+  "niche": "photography & video",
+  "keyword": "lens pen for dusty locations",
+  "labels": [
+    "Reviews",
+    "Photography & Video"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 579,
+  "items": [
+    {
+      "name": "Lens Pen",
+      "asin": "B007G5NNOW",
+      "asin_verified": true,
+      "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black | Retractable Dust Removal Brush, Non-Liquid Cleaning Element, 12mm Round Cleaning Tip, 11cm Long",
+      "parent_asin": "B0B86K1RRK",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794751978,
+      "search_term": "lens pen for dusty locations",
+      "url": "https://www.amazon.com/dp/B007G5NNOW?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-lens-pen-5707e568617a.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

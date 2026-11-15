@@ -1,0 +1,34 @@
+{
+  "slug": "review-tv-be4c016034ee",
+  "title": "Does Input Lag Matter in A TV? An Honest Look",
+  "meta_description": "Explore how input lag affects gaming TVs, what specs to check, and why the JARHETUN TV stand suits small‑desk setups while preserving performance.",
+  "template": "review",
+  "niche": "gaming",
+  "keyword": "tv for small desks",
+  "labels": [
+    "Reviews",
+    "Gaming"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 690,
+  "items": [
+    {
+      "name": "TV",
+      "asin": "B0F13SYF7Y",
+      "asin_verified": true,
+      "verified_product_title": "JARHETUN TV Stand with LED Lights for 55 Inch TV, Entertainment Center with 3-Tier Open Shelves, TV Console Table for Living Room, Bedroom, Black",
+      "parent_asin": "B0F8QS5WGB",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794751731,
+      "search_term": "tv for small desks",
+      "url": "https://www.amazon.com/dp/B0F13SYF7Y?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-tv-be4c016034ee.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

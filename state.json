@@ -521,6 +521,51 @@
       "ts": "2026-11-14T23:45:44Z",
       "source": "ai:gemini",
       "words": 1597
+    },
+    {
+      "slug": "review-tv-be4c016034ee",
+      "title": "Does Input Lag Matter in A TV? An Honest Look",
+      "template": "review",
+      "keyword": "tv for small desks",
+      "ts": "2026-11-15T14:08:56Z",
+      "source": "ai:groq",
+      "words": 690
+    },
+    {
+      "slug": "bestof-fitness-rack-cc087069939d",
+      "title": "Best Home Fitness Gear: 3 Picks Compared Honestly",
+      "template": "bestof",
+      "keyword": "Fitness",
+      "ts": "2026-11-15T14:12:51Z",
+      "source": "ai:openrouter",
+      "words": 703
+    },
+    {
+      "slug": "comparison-lifting-straps-vs-weight-lifting-gloves-6eee1cf71150",
+      "title": "Lifting Straps vs Weight Lifting Gloves: Deciding Between Two Good Options",
+      "template": "comparison",
+      "keyword": "Lifting Straps vs Weight Lifting Gloves",
+      "ts": "2026-11-15T14:12:58Z",
+      "source": "ai:groq",
+      "words": 548
+    },
+    {
+      "slug": "review-lens-pen-5707e568617a",
+      "title": "Lens Pen: Judging Lint Free Wipes Against Real Use",
+      "template": "review",
+      "keyword": "lens pen for dusty locations",
+      "ts": "2026-11-15T14:13:13Z",
+      "source": "ai:groq",
+      "words": 579
+    },
+    {
+      "slug": "bestof-home-office-stand-e940061f524a",
+      "title": "Which Home Office Gear for Long Workdays Is Right for You? 3 Compared",
+      "template": "bestof",
+      "keyword": "Home Office",
+      "ts": "2026-11-15T14:13:55Z",
+      "source": "ai:gemini",
+      "words": 698
     }
   ],
   "published": [],
@@ -582,7 +627,12 @@
     "bestof-coffee-espresso-pitcher-3db38a6609e5",
     "review-key-holder-e9a5f7ebbeac",
     "monitor-arm-ergonomic-setup-screen-height-viewing-distance",
-    "dual-monitor-arm-guide-load-vesa-alignment-desk-space"
+    "dual-monitor-arm-guide-load-vesa-alignment-desk-space",
+    "review-tv-be4c016034ee",
+    "bestof-fitness-rack-cc087069939d",
+    "comparison-lifting-straps-vs-weight-lifting-gloves-6eee1cf71150",
+    "review-lens-pen-5707e568617a",
+    "bestof-home-office-stand-e940061f524a"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -688,8 +738,8 @@
     "cable management tray for back pain sufferers": "2026-11-04",
     "Lap Desk": "2026-11-04",
     "lap desk for back pain sufferers": "2026-11-04",
-    "Ring Light": "2026-11-13",
-    "ring light for video calls": "2026-11-04",
+    "Ring Light": "2026-11-15",
+    "ring light for video calls": "2026-11-15",
     "Desk Lamp": "2026-11-04",
     "desk lamp for dual monitor setups": "2026-11-04",
     "Small Humidifier": "2026-11-04",
@@ -832,7 +882,28 @@
     "monitor arm": "2026-11-14",
     "dual monitor arm guide load vesa alignment desk space": "2026-11-14",
     "Dual Monitor Arm": "2026-11-14",
-    "dual monitor arm": "2026-11-14"
+    "dual monitor arm": "2026-11-14",
+    "tv": "2026-11-15",
+    "TV": "2026-11-15",
+    "tv for small desks": "2026-11-15",
+    "fitness:ab roller|power rack|travel yoga mat": "2026-11-15",
+    "Ab Roller": "2026-11-15",
+    "ab roller for travellers": "2026-11-15",
+    "Power Rack": "2026-11-15",
+    "power rack for home gyms": "2026-11-15",
+    "Travel Yoga Mat": "2026-11-15",
+    "travel yoga mat for hot yoga": "2026-11-15",
+    "lifting straps|weight lifting gloves": "2026-11-15",
+    "Lifting Straps": "2026-11-15",
+    "Weight Lifting Gloves": "2026-11-15",
+    "lens pen": "2026-11-15",
+    "Lens Pen": "2026-11-15",
+    "lens pen for dusty locations": "2026-11-15",
+    "home office:mesh office chair|ring light|white noise machine": "2026-11-15",
+    "Mesh Office Chair": "2026-11-15",
+    "mesh office chair for long workdays": "2026-11-15",
+    "White Noise Machine": "2026-11-15",
+    "white noise machine for dual monitor setups": "2026-11-15"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -945,7 +1016,13 @@
     "{P} Review: Who It Is For and Who Should Skip It",
     "Choosing Between {A} and {B}: A Practical Comparison",
     "{N} {F} Options Worth Your Money (and the Ones to Skip)",
-    "Is {A} {P} Worth It for {AUD}? The Honest Answer"
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer",
+    "Does {FEAT} Matter in {A} {P}? An Honest Look",
+    "Best {F}: {N} Picks Compared Honestly",
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "{P}: Judging {FEAT} Against Real Use",
+    "Which {F}{AUD} Is Right for You? {N} Compared",
+    "Before You Buy {A} {P} for {AUD}: Read This"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -954,7 +1031,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 58,
+    "total_generated": 63,
     "total_published": 0
   },
   "blogger_titles": [

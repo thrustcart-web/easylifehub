@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-fitness-rack-cc087069939d",
+  "title": "Best Home Fitness Gear: 3 Picks Compared Honestly",
+  "meta_description": "A plain comparison of an ab roller, power rack, and foldable travel yoga mat, covering verified listing features, setup, and what to check before buying.",
+  "template": "bestof",
+  "niche": "fitness",
+  "keyword": "Fitness",
+  "labels": [
+    "Reviews",
+    "Fitness"
+  ],
+  "source": "ai:openrouter",
+  "provider": "openrouter",
+  "words": 703,
+  "items": [
+    {
+      "name": "Ab Roller",
+      "asin": "B09W9HV6MN",
+      "asin_verified": true,
+      "verified_product_title": "Ab Roller Wheel for Home Gym, Core Strength Workout Equipment for Men Women | Ab rollerl for core and full-body strength training, built for balance, control and home workouts",
+      "parent_asin": "B0HP8TNRGY",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794751737,
+      "search_term": "ab roller for travellers",
+      "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=ezylifehub-20"
+    },
+    {
+      "name": "Power Rack",
+      "asin": "B0HN2BBK86",
+      "asin_verified": true,
+      "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System | 1600LBS Heavy Duty Alloy Steel Reinforced Triangular Frame,Adjustable J-Hoooks with Multi Attachments for Full Body Home Gym",
+      "parent_asin": "B0HP19Z7W2",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794751738,
+      "search_term": "power rack for home gyms",
+      "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=ezylifehub-20"
+    },
+    {
+      "name": "Travel Yoga Mat",
+      "asin": "B0D5LH513W",
+      "asin_verified": true,
+      "verified_product_title": "JOOEER Foldable Yoga Mat, 1.5mm Thick Exercise Yoga Mat With Carry Bag | 72\" L x 24\" W, Non-slip Suede Fitness Travel Yoga Mat for Hot Yoga, Exercise, Pilates, Home & Gym Use, 3 lbs, Blue",
+      "parent_asin": "B0D7H19Y74",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794751740,
+      "search_term": "travel yoga mat for hot yoga",
+      "url": "https://www.amazon.com/dp/B0D5LH513W?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-fitness-rack-cc087069939d.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
