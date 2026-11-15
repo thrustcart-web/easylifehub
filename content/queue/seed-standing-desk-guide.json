@@ -15,23 +15,23 @@
   "items": [
     {
       "name": "Pamray L Shaped Desk",
-      "asin": "B0FVXMDM4L",
-      "asin_verified": false,
-      "verified_product_title": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves, Small Corner Desk for Small Space Home Office, Writing Study Table PC Desk for Bedroom, Black",
+      "asin": "B0GKRTGRRK",
+      "asin_verified": true,
+      "verified_product_title": "Pamray 47 Inch Reversible L Shaped Gaming Desk Corner Computer Desk with Storage Bag Home Office Table for Writing Study Black",
       "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
-      "url": "",
+      "url": "https://www.amazon.com/dp/B0GKRTGRRK?tag=ezylifehub-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794695838,
-      "parent_asin": "B0CW1BCQJB"
+      "stock_checked_at": 1794739051,
+      "parent_asin": "B0FM41F6G2"
     }
   ],
   "html_file": "seed-standing-desk-guide.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1794695839,
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1794739042,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": true
+  "product_review_required": false
 }
