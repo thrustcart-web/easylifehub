@@ -20,7 +20,7 @@
       "verified_product_title": "EWFEN 12 Inch Tri-Ply Stainless Steel Frying Pan, Compatible with All Cooktops Up to 600℉, Large Frying Pan with lids, Induction-Ready Skillet, Dishwasher and Oven Safe, Even Heat, 12\" Skillet + Lid",
       "parent_asin": "B0HJCCRVHM",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823873,
+      "stock_checked_at": 1794825438,
       "search_term": "stainless steel pan for induction cooktops",
       "url": "https://www.amazon.com/dp/B0FR426HPZ?tag=ezylifehub-20"
     }
@@ -30,5 +30,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794825439,
+  "stock_check_max_age_seconds": 86400
 }

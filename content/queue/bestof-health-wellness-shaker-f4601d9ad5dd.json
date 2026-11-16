@@ -20,7 +20,7 @@
       "verified_product_title": "VELOMIX 2 Pack 28oz Protein Shaker Bottle for Protein Mixes, Black/Transpar | 2x Wire Whisk, Leak Proof Shaker Cups for Protein Shakes, Stackable, Dishwasher safe, BPA free, Pre Workout and Fitness ready",
       "parent_asin": "B0HQQL65QJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823860,
+      "stock_checked_at": 1794825434,
       "search_term": "protein shaker for gym goers",
       "url": "https://www.amazon.com/dp/B0CXPWMSX6?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "Bracoo Adjustable Compression Knee Patellar Pad Tendon Support Sleeve Brace for Men Women - Arthritis Pain, Injury Recovery, Running, Workout, KS10 (Black)",
       "parent_asin": "B083JZ8BGN",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823862,
+      "stock_checked_at": 1794825428,
       "search_term": "knee brace for seniors",
       "url": "https://www.amazon.com/dp/B005BINV84?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "LiveFine Automatic Pill Dispenser with Removable Cups, 21 Compartments, 9 Dosage Rings, Alarm Reminder, LCD Display, Sound & Light Alerts, Locking Key for Vitamins, Supplements, Medications & Seniors",
       "parent_asin": "B0GT651NX3",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823863,
+      "stock_checked_at": 1794825438,
       "search_term": "vitamin dispenser for seniors",
       "url": "https://www.amazon.com/dp/B0G5B5L8PS?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794825439,
+  "stock_check_max_age_seconds": 86400
 }

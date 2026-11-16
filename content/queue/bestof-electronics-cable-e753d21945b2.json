@@ -20,7 +20,7 @@
       "verified_product_title": "AquaQuest Storm 100% Waterproof Laptop Sleeve – Lightweight Ripstop Nylon Case, Welded Seams and Removable 5 mm Neoprene Liner – 13 in – Black – Fits up to 13.25 × 10.5 in",
       "parent_asin": "B0F1GYDZCD",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823739,
+      "stock_checked_at": 1794825430,
       "search_term": "laptop sleeve for storm areas",
       "url": "https://www.amazon.com/dp/B07VGMWZ5Z?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "Wireless Charging Laptop Bag with Multi-device Charger，Black：3 in 1 | 17.3 In New Premium Wireless Charging Laptop Bag for Commuters Remote Workers",
       "parent_asin": "B0HDC2NTN5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794739041,
+      "stock_checked_at": 1794825439,
       "search_term": "wireless charger for frequent travellers",
       "url": "https://www.amazon.com/dp/B0HDBZ32J1?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "Logitech M185 Compact Ambidextrous 2.4 GHz Wireless Mouse - Swift Grey | Ambidextrous mouse with 2.4 GHz USB-A Nano Receiver, Optical Tracking, 12-Months Battery Life, PC, Mac, Laptop compatible",
       "parent_asin": "B0H4LB8MPT",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794823740,
+      "stock_checked_at": 1794825428,
       "search_term": "wireless mouse for typists",
       "url": "https://www.amazon.com/dp/B004YAVF8I?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794825439,
+  "stock_check_max_age_seconds": 86400
 }
