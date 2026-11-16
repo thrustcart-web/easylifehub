@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97",
+  "title": "Under Bed Storage or Storage Bins? The Honest Comparison",
+  "meta_description": "Compare under bed storage against heavy-duty storage bins. Learn how dimensions, capacity, materials, and placement dictate the ideal household organizer.",
+  "template": "comparison",
+  "niche": "laundry & storage",
+  "keyword": "Under Bed Storage vs Storage Bins",
+  "labels": [
+    "Reviews",
+    "Laundry & Storage"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 713,
+  "items": [
+    {
+      "name": "Under Bed Storage",
+      "asin": "B09Q38H2J4",
+      "asin_verified": true,
+      "verified_product_title": "Budding Joy 95L Under Bed Storage Containers, 4 Pack Closet Organizers Grey | Foldable underbed storage bins for linen sheets, blanket, clothing, comforter, sweaters, pillows, wrapping paper",
+      "parent_asin": "B0H8R8F7BW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794823762,
+      "search_term": "Under Bed Storage",
+      "url": "https://www.amazon.com/dp/B09Q38H2J4?tag=ezylifehub-20"
+    },
+    {
+      "name": "Storage Bins",
+      "asin": "B0H3KSXC25",
+      "asin_verified": true,
+      "verified_product_title": "CLMSTE 6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
+      "parent_asin": "B0HF7MYNFZ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794823763,
+      "search_term": "Storage Bins",
+      "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

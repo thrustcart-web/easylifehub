@@ -566,6 +566,60 @@
       "ts": "2026-11-15T14:13:55Z",
       "source": "ai:gemini",
       "words": 698
+    },
+    {
+      "slug": "review-led-strip-lights-fc0eb6a6b8e8",
+      "title": "Choosing LED Strip Lights for Dark Hallways: Trade-Offs Included",
+      "template": "review",
+      "keyword": "led strip lights for dark hallways",
+      "ts": "2026-11-16T10:08:58Z",
+      "source": "ai:groq",
+      "words": 673
+    },
+    {
+      "slug": "bestof-electronics-cable-e753d21945b2",
+      "title": "Everyday Electronics: 3 Candidates Judged on the Same Criteria",
+      "template": "bestof",
+      "keyword": "Electronics",
+      "ts": "2026-11-16T10:09:16Z",
+      "source": "ai:groq",
+      "words": 733
+    },
+    {
+      "slug": "review-money-belt-50c248696d72",
+      "title": "Money Belt for Business Trips: An Honest Buying Guide",
+      "template": "review",
+      "keyword": "money belt for business trips",
+      "ts": "2026-11-16T10:09:22Z",
+      "source": "ai:groq",
+      "words": 585
+    },
+    {
+      "slug": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97",
+      "title": "Under Bed Storage or Storage Bins? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "Under Bed Storage vs Storage Bins",
+      "ts": "2026-11-16T10:11:00Z",
+      "source": "ai:gemini",
+      "words": 713
+    },
+    {
+      "slug": "bestof-health-wellness-shaker-f4601d9ad5dd",
+      "title": "Best Health & Wellness for Gym Goers: 3 Options We Would Actually Buy",
+      "template": "bestof",
+      "keyword": "Health & Wellness",
+      "ts": "2026-11-16T10:11:13Z",
+      "source": "ai:groq",
+      "words": 612
+    },
+    {
+      "slug": "review-stainless-steel-pan-b931ccabf8fe",
+      "title": "Is A Stainless Steel Pan Worth It for Induction Cooktops? The Honest Answer",
+      "template": "review",
+      "keyword": "stainless steel pan for induction cooktops",
+      "ts": "2026-11-16T10:12:45Z",
+      "source": "ai:gemini",
+      "words": 620
     }
   ],
   "published": [],
@@ -632,7 +686,13 @@
     "bestof-fitness-rack-cc087069939d",
     "comparison-lifting-straps-vs-weight-lifting-gloves-6eee1cf71150",
     "review-lens-pen-5707e568617a",
-    "bestof-home-office-stand-e940061f524a"
+    "bestof-home-office-stand-e940061f524a",
+    "review-led-strip-lights-fc0eb6a6b8e8",
+    "bestof-electronics-cable-e753d21945b2",
+    "review-money-belt-50c248696d72",
+    "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97",
+    "bestof-health-wellness-shaker-f4601d9ad5dd",
+    "review-stainless-steel-pan-b931ccabf8fe"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -811,8 +871,8 @@
     "Personal Blender": "2026-11-13",
     "electronics:portable ssd|webcam|wireless charger": "2026-11-13",
     "webcam for video calls": "2026-11-13",
-    "Wireless Charger": "2026-11-13",
-    "wireless charger for frequent travellers": "2026-11-13",
+    "Wireless Charger": "2026-11-16",
+    "wireless charger for frequent travellers": "2026-11-16",
     "smart fan": "2026-11-13",
     "Smart Fan": "2026-11-13",
     "smart fan for energy savers": "2026-11-13",
@@ -903,7 +963,31 @@
     "Mesh Office Chair": "2026-11-15",
     "mesh office chair for long workdays": "2026-11-15",
     "White Noise Machine": "2026-11-15",
-    "white noise machine for dual monitor setups": "2026-11-15"
+    "white noise machine for dual monitor setups": "2026-11-15",
+    "led strip lights": "2026-11-16",
+    "LED Strip Lights": "2026-11-16",
+    "led strip lights for dark hallways": "2026-11-16",
+    "electronics:laptop sleeve|wireless charger|wireless mouse": "2026-11-16",
+    "Laptop Sleeve": "2026-11-16",
+    "laptop sleeve for storm areas": "2026-11-16",
+    "Wireless Mouse": "2026-11-16",
+    "wireless mouse for typists": "2026-11-16",
+    "money belt": "2026-11-16",
+    "Money Belt": "2026-11-16",
+    "money belt for business trips": "2026-11-16",
+    "under bed storage|storage bins": "2026-11-16",
+    "Under Bed Storage": "2026-11-16",
+    "Storage Bins": "2026-11-16",
+    "health & wellness:knee brace|protein shaker|vitamin dispenser": "2026-11-16",
+    "Protein Shaker": "2026-11-16",
+    "protein shaker for gym goers": "2026-11-16",
+    "Knee Brace": "2026-11-16",
+    "knee brace for seniors": "2026-11-16",
+    "Vitamin Dispenser": "2026-11-16",
+    "vitamin dispenser for seniors": "2026-11-16",
+    "stainless steel pan": "2026-11-16",
+    "Stainless Steel Pan": "2026-11-16",
+    "stainless steel pan for induction cooktops": "2026-11-16"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1022,7 +1106,13 @@
     "{A} vs {B}: Deciding Between Two Good Options",
     "{P}: Judging {FEAT} Against Real Use",
     "Which {F}{AUD} Is Right for You? {N} Compared",
-    "Before You Buy {A} {P} for {AUD}: Read This"
+    "Before You Buy {A} {P} for {AUD}: Read This",
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{P} for {AUD}: An Honest Buying Guide",
+    "{A} or {B}? The Honest Comparison",
+    "Best {F}{AUD}: {N} Options We Would Actually Buy",
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1031,7 +1121,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 63,
+    "total_generated": 69,
     "total_published": 0
   },
   "blogger_titles": [
