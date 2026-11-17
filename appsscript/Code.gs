@@ -154,7 +154,7 @@ function ensureAffiliateDisclosures_(html) {
   var value = String(html || '');
   var associateFound = false;
 
-  value = value.replace(/<p\\b[^>]*>[\\s\\S]*?<\\/p\\s*>/gi, function(block) {
+  value = value.replace(/<p\b[^>]*>[\s\S]*?<\/p\s*>/gi, function(block) {
     var plain = block.replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ')
       .replace(/&amp;/gi, '&').toLowerCase();
     if (plain.indexOf('as an amazon associate') !== -1) {
@@ -164,16 +164,16 @@ function ensureAffiliateDisclosures_(html) {
     return block;
   });
   if (!associateFound) {
-    value = '<p><em>' + AMAZON_ASSOCIATE_DISCLOSURE_ + '</em></p>\\n' + value;
+    value = '<p><em>' + AMAZON_ASSOCIATE_DISCLOSURE_ + '</em></p>\n' + value;
   }
 
   var groupCount = 0;
   value = value.replace(
-    /<div\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\bamazon-cta-group\\b[^"']*["'])[^>]*>/gi,
+    /<div\b(?=[^>]*\bclass\s*=\s*["'][^"']*\bamazon-cta-group\b[^"']*["'])[^>]*>/gi,
     function(tag, offset, full) {
       groupCount++;
       var before = full.slice(Math.max(0, offset - 700), offset);
-      var alreadyAdjacent = /<p\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\baffiliate-link-disclosure\\b[^"']*["'])[^>]*>[\\s\\S]*?<\\/p\\s*>\\s*$/i.test(before);
+      var alreadyAdjacent = /<p\b(?=[^>]*\bclass\s*=\s*["'][^"']*\baffiliate-link-disclosure\b[^"']*["'])[^>]*>[\s\S]*?<\/p\s*>\s*$/i.test(before);
       return alreadyAdjacent ? tag : affiliateLinkDisclosureHtml_() + tag;
     }
   );
@@ -182,10 +182,10 @@ function ensureAffiliateDisclosures_(html) {
   // put a disclosure immediately before each direct Amazon product anchor.
   if (groupCount === 0) {
     value = value.replace(
-      /<a\\b(?=[^>]*\\bhref\\s*=\\s*["']https?:\\/\\/(?:www\\.)?amazon\\.com\\/dp\\/)[^>]*>/gi,
+      /<a\b(?=[^>]*\bhref\s*=\s*["']https?:\/\/(?:www\.)?amazon\.com\/dp\/)[^>]*>/gi,
       function(tag, offset, full) {
         var before = full.slice(Math.max(0, offset - 700), offset);
-        var alreadyAdjacent = /<p\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\baffiliate-link-disclosure\\b[^"']*["'])[^>]*>[\\s\\S]*?<\\/p\\s*>\\s*$/i.test(before);
+        var alreadyAdjacent = /<p\b(?=[^>]*\bclass\s*=\s*["'][^"']*\baffiliate-link-disclosure\b[^"']*["'])[^>]*>[\s\S]*?<\/p\s*>\s*$/i.test(before);
         return alreadyAdjacent ? tag : affiliateLinkDisclosureHtml_() + tag;
       }
     );
@@ -1239,7 +1239,7 @@ function syncAffiliateDisclosures() {
     posts.forEach(function(post) {
       if (!post || !post.id) return;
       var current = String(post.content || '');
-      if (!/amazon\\.com/i.test(current)) {
+      if (!/amazon\.com/i.test(current)) {
         noAmazonLinks++;
         return;
       }
