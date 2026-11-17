@@ -620,6 +620,42 @@
       "ts": "2026-11-16T10:12:45Z",
       "source": "ai:gemini",
       "words": 620
+    },
+    {
+      "slug": "review-instant-pot-f01d4702e01a",
+      "title": "Instant Pot: An Honest Look at the Trade-Offs",
+      "template": "review",
+      "keyword": "instant pot for families of four",
+      "ts": "2026-11-17T10:09:10Z",
+      "source": "ai:groq",
+      "words": 1228
+    },
+    {
+      "slug": "bestof-home-decor-blanket-ee68c5987358",
+      "title": "3 Home Decor Picks Reviewed Against the Criteria That Matter",
+      "template": "bestof",
+      "keyword": "Home Decor",
+      "ts": "2026-11-17T10:13:21Z",
+      "source": "ai:groq",
+      "words": 650
+    },
+    {
+      "slug": "review-legal-pad-5d14e73c2bc2",
+      "title": "Legal Pad for Bullet Journalers: Five Things Listings Skip",
+      "template": "review",
+      "keyword": "legal pad for bullet journalers",
+      "ts": "2026-11-17T10:15:08Z",
+      "source": "ai:gemini",
+      "words": 745
+    },
+    {
+      "slug": "bestof-car-starter-f50390dc0d4c",
+      "title": "Which Car Accessories for Long Drives Is Right for You? 3 Compared",
+      "template": "bestof",
+      "keyword": "Car",
+      "ts": "2026-11-17T10:15:16Z",
+      "source": "ai:groq",
+      "words": 539
     }
   ],
   "published": [],
@@ -692,7 +728,11 @@
     "review-money-belt-50c248696d72",
     "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97",
     "bestof-health-wellness-shaker-f4601d9ad5dd",
-    "review-stainless-steel-pan-b931ccabf8fe"
+    "review-stainless-steel-pan-b931ccabf8fe",
+    "review-instant-pot-f01d4702e01a",
+    "bestof-home-decor-blanket-ee68c5987358",
+    "review-legal-pad-5d14e73c2bc2",
+    "bestof-car-starter-f50390dc0d4c"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -987,7 +1027,27 @@
     "vitamin dispenser for seniors": "2026-11-16",
     "stainless steel pan": "2026-11-16",
     "Stainless Steel Pan": "2026-11-16",
-    "stainless steel pan for induction cooktops": "2026-11-16"
+    "stainless steel pan for induction cooktops": "2026-11-16",
+    "instant pot": "2026-11-17",
+    "Instant Pot": "2026-11-17",
+    "instant pot for families of four": "2026-11-17",
+    "home decor:curtain rods|storage baskets|table lamp": "2026-11-17",
+    "Storage Baskets": "2026-11-17",
+    "storage baskets for family homes": "2026-11-17",
+    "Curtain Rods": "2026-11-17",
+    "curtain rods for cold rooms": "2026-11-17",
+    "Table Lamp": "2026-11-17",
+    "table lamp for dark hallways": "2026-11-17",
+    "legal pad": "2026-11-17",
+    "Legal Pad": "2026-11-17",
+    "legal pad for bullet journalers": "2026-11-17",
+    "car:car sun shade|car wax|dashboard mat": "2026-11-17",
+    "Car Sun Shade": "2026-11-17",
+    "car sun shade for long drives": "2026-11-17",
+    "Car Wax": "2026-11-17",
+    "car wax for hot climates": "2026-11-17",
+    "Dashboard Mat": "2026-11-17",
+    "dashboard mat for rideshare drivers": "2026-11-17"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1112,7 +1172,13 @@
     "{P} for {AUD}: An Honest Buying Guide",
     "{A} or {B}? The Honest Comparison",
     "Best {F}{AUD}: {N} Options We Would Actually Buy",
-    "Is {A} {P} Worth It for {AUD}? The Honest Answer"
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer",
+    "{P}: An Honest Look at the Trade-Offs",
+    "Best {F}{AUD}: {N} Picks, Ranked by What Matters",
+    "Best {P} Under {BUD}: What You Get and What You Lose",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "{P} for {AUD}: Five Things Listings Skip",
+    "Which {F}{AUD} Is Right for You? {N} Compared"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1121,7 +1187,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 69,
+    "total_generated": 73,
     "total_published": 0
   },
   "blogger_titles": [

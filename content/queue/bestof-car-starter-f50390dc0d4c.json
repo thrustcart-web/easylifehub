@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-car-starter-f50390dc0d4c",
+  "title": "Which Car Accessories for Long Drives Is Right for You? 3 Compared",
+  "meta_description": "Compare a car sun shade, ceramic spray wax, and dashboard mat to see which accessory best enhances comfort, paint protection, and organization on long drives.",
+  "template": "bestof",
+  "niche": "car",
+  "keyword": "Car",
+  "labels": [
+    "Reviews",
+    "Car"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 539,
+  "items": [
+    {
+      "name": "Car Sun Shade",
+      "asin": "B07Q72HJ65",
+      "asin_verified": true,
+      "verified_product_title": "Sfee Car Window Shade for Side Windows, 2 Pack Sun Shade Retractable for Car Blocks Heat and UV Rays Glare Protection Roller Sunshade Visor for Baby, Kids, Pets, Passengers",
+      "parent_asin": "B07Q97SY6L",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794910508,
+      "search_term": "car sun shade for long drives",
+      "url": "https://www.amazon.com/dp/B07Q72HJ65?tag=ezylifehub-20"
+    },
+    {
+      "name": "Car Wax",
+      "asin": "B07XYPS3PS",
+      "asin_verified": true,
+      "verified_product_title": "Turtle Wax Hybrid Solutions Ceramic Spray Wax Coating, 16 oz (Pack of 1) | High Shine Car Wax, Offers Durable Paint Protection, Extreme Water Beading Action, Safe for Glass, Wheels, Trim & More",
+      "parent_asin": "B0F99PQ5XJ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794910510,
+      "search_term": "car wax for hot climates",
+      "url": "https://www.amazon.com/dp/B07XYPS3PS?tag=ezylifehub-20"
+    },
+    {
+      "name": "Dashboard Mat",
+      "asin": "B0GYD4XYVV",
+      "asin_verified": true,
+      "verified_product_title": "Car Dashboard Phone Holder Mat – Anti-Slip Mount with 360° Rotation,Organizer Tray & Accessories for Keys, Coins, Cards, Sunglasses",
+      "parent_asin": "B0GYD4XYVV",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794910511,
+      "search_term": "dashboard mat for rideshare drivers",
+      "url": "https://www.amazon.com/dp/B0GYD4XYVV?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "bestof-car-starter-f50390dc0d4c.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

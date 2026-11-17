@@ -1,0 +1,34 @@
+{
+  "slug": "review-legal-pad-5d14e73c2bc2",
+  "title": "Legal Pad for Bullet Journalers: Five Things Listings Skip",
+  "meta_description": "Choosing a legal pad for a bullet journal requires attention to paper weight and layout. Verify the specific ruling and binding style before you make a purchase.",
+  "template": "review",
+  "niche": "office & school supplies",
+  "keyword": "legal pad for bullet journalers",
+  "labels": [
+    "Reviews",
+    "Office & School Supplies"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 745,
+  "items": [
+    {
+      "name": "Legal Pad",
+      "asin": "B001E6BW6K",
+      "asin_verified": true,
+      "verified_product_title": "Ampad Gold Fibre Classic, Wirebound Planner Pad, Size 8-1/2 x 11-3/4, Red Cover, Legal Ruling , 70 Sheets per Pad (20-811),White",
+      "parent_asin": "B0HPL4YK17",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794910402,
+      "search_term": "legal pad for bullet journalers",
+      "url": "https://www.amazon.com/dp/B001E6BW6K?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-legal-pad-5d14e73c2bc2.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

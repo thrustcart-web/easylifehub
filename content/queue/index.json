@@ -3,144 +3,60 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-electronics-cable-e753d21945b2",
-      "title": "Everyday Electronics: 3 Candidates Judged on the Same Criteria",
-      "meta_description": "Compare a waterproof laptop sleeve, a wireless charging bag, and a compact mouse. This guide details verified features and practical checks for daily use.",
+      "slug": "bestof-car-starter-f50390dc0d4c",
+      "title": "Which Car Accessories for Long Drives Is Right for You? 3 Compared",
+      "meta_description": "Compare a car sun shade, ceramic spray wax, and dashboard mat to see which accessory best enhances comfort, paint protection, and organization on long drives.",
       "template": "bestof",
-      "niche": "electronics",
-      "keyword": "Electronics",
+      "niche": "car",
+      "keyword": "Car",
       "labels": [
         "Reviews",
-        "Electronics"
+        "Car"
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 733,
+      "words": 539,
       "items": [
         {
-          "name": "Laptop Sleeve",
-          "asin": "B07VGMWZ5Z",
+          "name": "Car Sun Shade",
+          "asin": "B07Q72HJ65",
           "asin_verified": true,
-          "verified_product_title": "AquaQuest Storm 100% Waterproof Laptop Sleeve – Lightweight Ripstop Nylon Case, Welded Seams and Removable 5 mm Neoprene Liner – 13 in – Black – Fits up to 13.25 × 10.5 in",
-          "parent_asin": "B0F1GYDZCD",
+          "verified_product_title": "Sfee Car Window Shade for Side Windows, 2 Pack Sun Shade Retractable for Car Blocks Heat and UV Rays Glare Protection Roller Sunshade Visor for Baby, Kids, Pets, Passengers",
+          "parent_asin": "B07Q97SY6L",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868633,
-          "search_term": "laptop sleeve for storm areas",
-          "url": "https://www.amazon.com/dp/B07VGMWZ5Z?tag=ezylifehub-20"
+          "stock_checked_at": 1794910508,
+          "search_term": "car sun shade for long drives",
+          "url": "https://www.amazon.com/dp/B07Q72HJ65?tag=ezylifehub-20"
         },
         {
-          "name": "Wireless Charger",
-          "asin": "B0HDBZ32J1",
+          "name": "Car Wax",
+          "asin": "B07XYPS3PS",
           "asin_verified": true,
-          "verified_product_title": "Wireless Charging Laptop Bag with Multi-device Charger，Black：3 in 1 | 17.3 In New Premium Wireless Charging Laptop Bag for Commuters Remote Workers",
-          "parent_asin": "B0HDC2NTN5",
+          "verified_product_title": "Turtle Wax Hybrid Solutions Ceramic Spray Wax Coating, 16 oz (Pack of 1) | High Shine Car Wax, Offers Durable Paint Protection, Extreme Water Beading Action, Safe for Glass, Wheels, Trim & More",
+          "parent_asin": "B0F99PQ5XJ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868641,
-          "search_term": "wireless charger for frequent travellers",
-          "url": "https://www.amazon.com/dp/B0HDBZ32J1?tag=ezylifehub-20"
+          "stock_checked_at": 1794910510,
+          "search_term": "car wax for hot climates",
+          "url": "https://www.amazon.com/dp/B07XYPS3PS?tag=ezylifehub-20"
         },
         {
-          "name": "Wireless Mouse",
-          "asin": "B004YAVF8I",
+          "name": "Dashboard Mat",
+          "asin": "B0GYD4XYVV",
           "asin_verified": true,
-          "verified_product_title": "Logitech M185 Compact Ambidextrous 2.4 GHz Wireless Mouse - Swift Grey | Ambidextrous mouse with 2.4 GHz USB-A Nano Receiver, Optical Tracking, 12-Months Battery Life, PC, Mac, Laptop compatible",
-          "parent_asin": "B0H4LB8MPT",
+          "verified_product_title": "Car Dashboard Phone Holder Mat – Anti-Slip Mount with 360° Rotation,Organizer Tray & Accessories for Keys, Coins, Cards, Sunglasses",
+          "parent_asin": "B0GYD4XYVV",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868629,
-          "search_term": "wireless mouse for typists",
-          "url": "https://www.amazon.com/dp/B004YAVF8I?tag=ezylifehub-20"
+          "stock_checked_at": 1794910511,
+          "search_term": "dashboard mat for rideshare drivers",
+          "url": "https://www.amazon.com/dp/B0GYD4XYVV?tag=ezylifehub-20"
         }
       ],
-      "html_file": "bestof-electronics-cable-e753d21945b2.html",
+      "html_file": "bestof-car-starter-f50390dc0d4c.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794868641,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-fitness-handle-3d07849b4753",
-      "title": "5 Home Fitness Gear Picks for Strength, Cardio, and Progress Tracking",
-      "meta_description": "Explore five essential home fitness gear picks, including resistance bands, gym bags, smart scales, heart rate monitors, and adjustable benches.",
-      "template": "bestof",
-      "niche": "fitness",
-      "keyword": "Home Fitness Gear",
-      "labels": [
-        "Reviews",
-        "Fitness"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 803,
-      "items": [
-        {
-          "name": "Fit Simplify Resistance Bands",
-          "asin": "B01KS6DZ34",
-          "asin_verified": true,
-          "verified_product_title": "Fit Simplify Resistance Tube Bands 12 Piece Set with Instruction Booklet",
-          "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
-          "url": "https://www.amazon.com/dp/B01KS6DZ34?tag=ezylifehub-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868629,
-          "parent_asin": "B01KS6DZ34"
-        },
-        {
-          "name": "Gym Bag",
-          "asin": "B072PR2ND1",
-          "asin_verified": true,
-          "verified_product_title": "HOLYLUCK Drawstring Backpack Bag Sport Gym Sackpack - black",
-          "search_term": "Sports Drawstring Backpack Gym Bag",
-          "url": "https://www.amazon.com/dp/B072PR2ND1?tag=ezylifehub-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868631,
-          "parent_asin": "B06WD35WN1"
-        },
-        {
-          "name": "Smart Scale",
-          "asin": "B0BFZVBGYH",
-          "asin_verified": true,
-          "verified_product_title": "RENPHO Elis Go Travel Smart Scale with BMI, Body Fat, Muscle Mass | 13 Body Metrics via Bluetooth for Health Tracking, Batteries Included, Protective Case for Hotel, Camping, and Travelers",
-          "search_term": "RENPHO Elis Go Travel Smart Scale",
-          "url": "https://www.amazon.com/dp/B0BFZVBGYH?tag=ezylifehub-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868635,
-          "parent_asin": "B0BFZVBGYH"
-        },
-        {
-          "name": "Heart Rate Monitor",
-          "asin": "B09SKZBZF8",
-          "asin_verified": true,
-          "verified_product_title": "GEOID HS500 Heart Rate Monitor, Heart Rate Sensor Chest Strap, Protocol ANT+/Bluetooth, 800h Battery, IP67 Waterproof, Compatible with iOS/Android APPs",
-          "search_term": "HS500 Heart Rate Monitor Chest Strap",
-          "url": "https://www.amazon.com/dp/B09SKZBZF8?tag=ezylifehub-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868635,
-          "parent_asin": "B09SKZBZF8"
-        },
-        {
-          "name": "Adjustable Weight Bench",
-          "asin": "B07DNYSJ8W",
-          "asin_verified": true,
-          "verified_product_title": "FLYBIRD WB5 Weight Bench, ASTM-Certified 800LBS Adjustable Weight Bench Workout Bench Foldable for Home Gym, 90° to -30° FID and 30in Extended Backrest for Bench Press Strength Training Exercise",
-          "search_term": "FLYBIRD Adjustable Weight Bench",
-          "url": "https://www.amazon.com/dp/B07DNYSJ8W?tag=ezylifehub-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868631,
-          "parent_asin": "B0HQFFQ7C1"
-        }
-      ],
-      "html_file": "bestof-fitness-handle-3d07849b4753.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1794868641,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
+      "review_required": false
     },
     {
       "slug": "bestof-fitness-rack-cc087069939d",
@@ -192,65 +108,6 @@
         }
       ],
       "html_file": "bestof-fitness-rack-cc087069939d.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794868641,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-garden-garden-bed-0b11f4478711",
-      "title": "Garden Tools Shortlist: 3 Options, Trade-Offs Included",
-      "meta_description": "Compare a seed starting tray, compost bin, and plant grow light with clear trade‑offs, setup tips, and fit for beginners and low‑maintenance gardeners.",
-      "template": "bestof",
-      "niche": "garden",
-      "keyword": "Garden",
-      "labels": [
-        "Reviews",
-        "Garden"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 522,
-      "items": [
-        {
-          "name": "Seed Starting Tray",
-          "asin": "B09S7YL4QV",
-          "asin_verified": true,
-          "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
-          "parent_asin": "B0D4R5CP5S",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868635,
-          "search_term": "seed starting tray",
-          "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=ezylifehub-20"
-        },
-        {
-          "name": "Compost Bin",
-          "asin": "B08346W5S6",
-          "asin_verified": true,
-          "verified_product_title": "VIVOSUN Outdoor Tumbling Composter Dual Rotating Batch Compost Bin, 43 Gallon Black Door",
-          "parent_asin": "B08SWCXD9P",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868633,
-          "search_term": "compost bin for beginners",
-          "url": "https://www.amazon.com/dp/B08346W5S6?tag=ezylifehub-20"
-        },
-        {
-          "name": "Plant Grow Light",
-          "asin": "B085CDPSMR",
-          "asin_verified": true,
-          "verified_product_title": "GooingTop Grow Light,6000K Full Spectrum Indoor Plant Growing Lamp | Desk Lamp with White Red LEDs for Indoor Plants,Clamp with Flexible Gooseneck,Brightness Adjustable,Auto Timer 4 8 12Hrs",
-          "parent_asin": "B0H3F1P6ST",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868633,
-          "search_term": "plant grow light for low maintenance gardens",
-          "url": "https://www.amazon.com/dp/B085CDPSMR?tag=ezylifehub-20"
-        }
-      ],
-      "html_file": "bestof-garden-garden-bed-0b11f4478711.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
@@ -379,63 +236,60 @@
       "stock_check_max_age_seconds": 86400
     },
     {
-      "slug": "bestof-home-office-stand-e940061f524a",
-      "title": "Which Home Office Gear for Long Workdays Is Right for You? 3 Compared",
-      "meta_description": "Compare essential home office gear for long workdays, including an ergonomic mesh chair, clip-on ring light, and white noise unit with visual monitoring.",
+      "slug": "bestof-home-decor-blanket-ee68c5987358",
+      "title": "3 Home Decor Picks Reviewed Against the Criteria That Matter",
+      "meta_description": "Three home decor picks—storage basket, curtain rod, and table lamp—assessed for capacity, durability, and lighting to match homes, cold rooms, and dark hallways.",
       "template": "bestof",
-      "niche": "home office",
-      "keyword": "Home Office",
+      "niche": "home decor",
+      "keyword": "Home Decor",
       "labels": [
         "Reviews",
-        "Home Office"
+        "Home Decor"
       ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 698,
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 650,
       "items": [
         {
-          "name": "Mesh Office Chair",
-          "asin": "B07Y8BXBX8",
+          "name": "Storage Baskets",
+          "asin": "B0CF586TH4",
           "asin_verified": true,
-          "verified_product_title": "GABRYLLY Ergonomic Office Chair, High Back Home Desk Chair with Headrest, Flip-Up Arms, 90-120° Tilt Lock and Wide Cushion, Big and Tall Mesh Chairs for Man Woman, Black Task Chair",
-          "parent_asin": "B0HHFXXYHZ",
+          "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown | 22”x17”x12” Laundry Basket with Handle, Organizing Blanket and Toys for Living Room, Nursery, Bedroom, Brown Variegated",
+          "parent_asin": "B0CL9NT578",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868633,
-          "search_term": "mesh office chair for long workdays",
-          "url": "https://www.amazon.com/dp/B07Y8BXBX8?tag=ezylifehub-20"
+          "stock_checked_at": 1794910386,
+          "search_term": "storage baskets for family homes",
+          "url": "https://www.amazon.com/dp/B0CF586TH4?tag=ezylifehub-20"
         },
         {
-          "name": "Ring Light",
-          "asin": "B08LZKSMRH",
+          "name": "Curtain Rods",
+          "asin": "B0F6LM95F2",
           "asin_verified": true,
-          "verified_product_title": "Cyezcor Video Conference Lighting Kit, Ring Light for Monitor Clip On | for Remote Working, Distance Learning,Zoom Calls, Self Broadcasting and Live Streaming, Computer Laptop Video Conferencing",
-          "parent_asin": "B0FGCLV255",
+          "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
+          "parent_asin": "B0F9Y2LQKN",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868634,
-          "search_term": "ring light for video calls",
-          "url": "https://www.amazon.com/dp/B08LZKSMRH?tag=ezylifehub-20"
+          "stock_checked_at": 1794910387,
+          "search_term": "curtain rods for cold rooms",
+          "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=ezylifehub-20"
         },
         {
-          "name": "White Noise Machine",
-          "asin": "B0FL16C5FZ",
+          "name": "Table Lamp",
+          "asin": "B0CVVH3HNJ",
           "asin_verified": true,
-          "verified_product_title": "Babysense PRO Full HD 5.5\" Split Screen Baby Monitor with 2 Cameras, 6-Color Night Light, White Noise, Sound & Light Machine, 20-Hour Battery, Hack-Proof Non-WiFi Secure Connection",
-          "parent_asin": "B0GQK5CKGF",
+          "verified_product_title": "Buffet Lamps Set of 2, 30\" Tall Black Table Lamps for Console Table, Entryway, Hallway, Dining Sideboard & Living Room, Candlestick Lamps with Linen Shade, Pull Chain, E26 Base, 6FT Cord",
+          "parent_asin": "B0FKRJ4NQX",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794868639,
-          "search_term": "white noise machine for dual monitor setups",
-          "url": "https://www.amazon.com/dp/B0FL16C5FZ?tag=ezylifehub-20"
+          "stock_checked_at": 1794910388,
+          "search_term": "table lamp for dark hallways",
+          "url": "https://www.amazon.com/dp/B0CVVH3HNJ?tag=ezylifehub-20"
         }
       ],
-      "html_file": "bestof-home-office-stand-e940061f524a.html",
+      "html_file": "bestof-home-decor-blanket-ee68c5987358.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794868641,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
@@ -1443,6 +1297,40 @@
       "product_review_required": false
     },
     {
+      "slug": "review-instant-pot-f01d4702e01a",
+      "title": "Instant Pot: An Honest Look at the Trade-Offs",
+      "meta_description": "This guide examines the Instant Pot Duo 6 Qt 7-in-1. It details its pressure cooking features, stainless steel design, and practical considerations for family meal prep.",
+      "template": "review",
+      "niche": "kitchen",
+      "keyword": "instant pot for families of four",
+      "labels": [
+        "Reviews",
+        "Kitchen"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 1228,
+      "items": [
+        {
+          "name": "Instant Pot",
+          "asin": "B00FLYWNYQ",
+          "asin_verified": true,
+          "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel | Slow cooks, makes rice and yogurt, steams, sautés, warms and sterilizes, with an app featuring 800+ recipes.",
+          "parent_asin": "B0GXKV5FHP",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794910132,
+          "search_term": "instant pot for families of four",
+          "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-instant-pot-f01d4702e01a.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-jump-rope-20b3dab586de",
       "title": "Jump Rope Review: Who It Is For and Who Should Skip It",
       "meta_description": "Review of the Jump Rope with tangle‑free cable and adjustable foam handles, evaluating its fit for home‑gym cardio and noting who might opt for a different rope.",
@@ -1552,6 +1440,40 @@
       "product_review_required": false,
       "products_audited_at": 1794868641,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-legal-pad-5d14e73c2bc2",
+      "title": "Legal Pad for Bullet Journalers: Five Things Listings Skip",
+      "meta_description": "Choosing a legal pad for a bullet journal requires attention to paper weight and layout. Verify the specific ruling and binding style before you make a purchase.",
+      "template": "review",
+      "niche": "office & school supplies",
+      "keyword": "legal pad for bullet journalers",
+      "labels": [
+        "Reviews",
+        "Office & School Supplies"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 745,
+      "items": [
+        {
+          "name": "Legal Pad",
+          "asin": "B001E6BW6K",
+          "asin_verified": true,
+          "verified_product_title": "Ampad Gold Fibre Classic, Wirebound Planner Pad, Size 8-1/2 x 11-3/4, Red Cover, Legal Ruling , 70 Sheets per Pad (20-811),White",
+          "parent_asin": "B0HPL4YK17",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1794910402,
+          "search_term": "legal pad for bullet journalers",
+          "url": "https://www.amazon.com/dp/B001E6BW6K?tag=ezylifehub-20"
+        }
+      ],
+      "html_file": "review-legal-pad-5d14e73c2bc2.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-lens-pen-5707e568617a",

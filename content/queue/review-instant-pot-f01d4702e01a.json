@@ -1,0 +1,34 @@
+{
+  "slug": "review-instant-pot-f01d4702e01a",
+  "title": "Instant Pot: An Honest Look at the Trade-Offs",
+  "meta_description": "This guide examines the Instant Pot Duo 6 Qt 7-in-1. It details its pressure cooking features, stainless steel design, and practical considerations for family meal prep.",
+  "template": "review",
+  "niche": "kitchen",
+  "keyword": "instant pot for families of four",
+  "labels": [
+    "Reviews",
+    "Kitchen"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 1228,
+  "items": [
+    {
+      "name": "Instant Pot",
+      "asin": "B00FLYWNYQ",
+      "asin_verified": true,
+      "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel | Slow cooks, makes rice and yogurt, steams, sautés, warms and sterilizes, with an app featuring 800+ recipes.",
+      "parent_asin": "B0GXKV5FHP",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1794910132,
+      "search_term": "instant pot for families of four",
+      "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=ezylifehub-20"
+    }
+  ],
+  "html_file": "review-instant-pot-f01d4702e01a.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
