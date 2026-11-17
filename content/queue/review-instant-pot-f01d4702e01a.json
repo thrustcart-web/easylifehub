@@ -20,7 +20,7 @@
       "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel | Slow cooks, makes rice and yogurt, steams, sautés, warms and sterilizes, with an app featuring 800+ recipes.",
       "parent_asin": "B0GXKV5FHP",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794910132,
+      "stock_checked_at": 1794911828,
       "search_term": "instant pot for families of four",
       "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=ezylifehub-20"
     }
@@ -30,5 +30,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794911837,
+  "stock_check_max_age_seconds": 86400
 }

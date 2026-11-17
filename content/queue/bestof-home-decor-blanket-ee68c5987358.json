@@ -20,7 +20,7 @@
       "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown | 22”x17”x12” Laundry Basket with Handle, Organizing Blanket and Toys for Living Room, Nursery, Bedroom, Brown Variegated",
       "parent_asin": "B0CL9NT578",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794910386,
+      "stock_checked_at": 1794911832,
       "search_term": "storage baskets for family homes",
       "url": "https://www.amazon.com/dp/B0CF586TH4?tag=ezylifehub-20"
     },
@@ -31,7 +31,7 @@
       "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
       "parent_asin": "B0F9Y2LQKN",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794910387,
+      "stock_checked_at": 1794911835,
       "search_term": "curtain rods for cold rooms",
       "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=ezylifehub-20"
     },
@@ -42,7 +42,7 @@
       "verified_product_title": "Buffet Lamps Set of 2, 30\" Tall Black Table Lamps for Console Table, Entryway, Hallway, Dining Sideboard & Living Room, Candlestick Lamps with Linen Shade, Pull Chain, E26 Base, 6FT Cord",
       "parent_asin": "B0FKRJ4NQX",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794910388,
+      "stock_checked_at": 1794911834,
       "search_term": "table lamp for dark hallways",
       "url": "https://www.amazon.com/dp/B0CVVH3HNJ?tag=ezylifehub-20"
     }
@@ -52,5 +52,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1794911837,
+  "stock_check_max_age_seconds": 86400
 }
