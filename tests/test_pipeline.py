@@ -1154,6 +1154,16 @@ class TestAIPath(unittest.TestCase):
         )
         self.assertTrue(quality_ok, quality_problems)
         self.assertEqual(html.count('class="amazon-cta-group"'), 2)
+        self.assertEqual(html.count('class="disclosure affiliate-link-disclosure"'), 2)
+        self.assertEqual(
+            html.count("Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you."),
+            2,
+        )
+        first_cta = html.index('<div class="amazon-cta-group">')
+        second_cta = html.index('<div class="amazon-cta-group">', first_cta + 1)
+        self.assertIn("affiliate-link-disclosure", html[max(0, first_cta - 700):first_cta])
+        self.assertIn("affiliate-link-disclosure", html[max(first_cta, second_cta - 700):second_cta])
+        self.assertIn("As an Amazon Associate I earn from qualifying purchases.", html)
         render_mod.save_article(article, topic, cfg, aff, hero="")
         saved = json.loads(
             (util.QUEUE_DIR / "review-levoit-air-purifier-core-300-853749094376.json").read_text()

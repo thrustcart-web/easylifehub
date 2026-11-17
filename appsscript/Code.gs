@@ -135,14 +135,72 @@ function bloggerCall_(method, path, payload, params) {
   return text ? JSON.parse(text) : {};
 }
 
+var AMAZON_ASSOCIATE_DISCLOSURE_ = 'As an Amazon Associate I earn from qualifying purchases.';
+var AFFILIATE_LINK_DISCLOSURE_ = 'Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.';
+
+function affiliateLinkDisclosureHtml_() {
+  return '<p class="disclosure affiliate-link-disclosure" role="note" ' +
+    'style="font-size:13px;line-height:1.5;color:#4a525e;background-color:#f6f8fa;' +
+    'border-left:3px solid #2e8b27;padding:8px 11px;margin:18px 0 8px;">' +
+    AFFILIATE_LINK_DISCLOSURE_ + '</p>';
+}
+
+/**
+ * Makes the required Amazon identification statement visible and adds a
+ * link-level disclosure immediately before every renderer-owned Amazon CTA.
+ * Safe to run repeatedly: an existing disclosure is not duplicated.
+ */
+function ensureAffiliateDisclosures_(html) {
+  var value = String(html || '');
+  var associateFound = false;
+
+  value = value.replace(/<p\\b[^>]*>[\\s\\S]*?<\\/p\\s*>/gi, function(block) {
+    var plain = block.replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ')
+      .replace(/&amp;/gi, '&').toLowerCase();
+    if (plain.indexOf('as an amazon associate') !== -1) {
+      associateFound = true;
+      return '<p><em>' + AMAZON_ASSOCIATE_DISCLOSURE_ + '</em></p>';
+    }
+    return block;
+  });
+  if (!associateFound) {
+    value = '<p><em>' + AMAZON_ASSOCIATE_DISCLOSURE_ + '</em></p>\\n' + value;
+  }
+
+  var groupCount = 0;
+  value = value.replace(
+    /<div\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\bamazon-cta-group\\b[^"']*["'])[^>]*>/gi,
+    function(tag, offset, full) {
+      groupCount++;
+      var before = full.slice(Math.max(0, offset - 700), offset);
+      var alreadyAdjacent = /<p\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\baffiliate-link-disclosure\\b[^"']*["'])[^>]*>[\\s\\S]*?<\\/p\\s*>\\s*$/i.test(before);
+      return alreadyAdjacent ? tag : affiliateLinkDisclosureHtml_() + tag;
+    }
+  );
+
+  // Older layouts may not wrap buttons in amazon-cta-group. In that case,
+  // put a disclosure immediately before each direct Amazon product anchor.
+  if (groupCount === 0) {
+    value = value.replace(
+      /<a\\b(?=[^>]*\\bhref\\s*=\\s*["']https?:\\/\\/(?:www\\.)?amazon\\.com\\/dp\\/)[^>]*>/gi,
+      function(tag, offset, full) {
+        var before = full.slice(Math.max(0, offset - 700), offset);
+        var alreadyAdjacent = /<p\\b(?=[^>]*\\bclass\\s*=\\s*["'][^"']*\\baffiliate-link-disclosure\\b[^"']*["'])[^>]*>[\\s\\S]*?<\\/p\\s*>\\s*$/i.test(before);
+        return alreadyAdjacent ? tag : affiliateLinkDisclosureHtml_() + tag;
+      }
+    );
+  }
+  return value;
+}
+
 function insertPost_(title, html, labels) {
   return bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
-    { title: title, content: html, labels: labels || [] });
+    { title: title, content: ensureAffiliateDisclosures_(html), labels: labels || [] });
 }
 
 function updatePost_(postId, title, html, labels) {
   return bloggerCall_('PUT', '/blogs/' + cfg('BLOG_ID') + '/posts/' + postId,
-    { title: title, content: html, labels: labels || [] });
+    { title: title, content: ensureAffiliateDisclosures_(html), labels: labels || [] });
 }
 
 // ------------------------------------------------- links, related, hub page --
@@ -835,7 +893,7 @@ function createQueuePreviewDraft() {
   if (!candidate) {
     throw new Error('No new, unique, approved article with fresh verified Amazon links is available for preview.');
   }
-  var html = sanitizePostHtml_(candidateHtml);
+  var html = sanitizePostHtml_(ensureAffiliateDisclosures_(candidateHtml));
   var draft = bloggerCall_('POST', '/blogs/' + cfg('BLOG_ID') + '/posts',
     { title: candidate.title, content: html, labels: (candidate.labels || []).filter(Boolean) },
     { isDraft: true });
@@ -1159,6 +1217,60 @@ function auditAmazonProducts() {
 }
 
 /**
+ * One-time (and safe to repeat) migration for existing affiliate posts.
+ * Covers LIVE, SCHEDULED, and DRAFT Blogger posts without changing article copy,
+ * product destinations, labels, or publication dates.
+ */
+function syncAffiliateDisclosures() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Affiliate disclosure sync skipped: another execution is running.');
+    return;
+  }
+  try {
+    var posts = listBlogPostsByStatus_('LIVE')
+      .concat(listBlogPostsByStatus_('SCHEDULED'))
+      .concat(listBlogPostsByStatus_('DRAFT'));
+    var updated = 0;
+    var checked = 0;
+    var noAmazonLinks = 0;
+    var errors = 0;
+
+    posts.forEach(function(post) {
+      if (!post || !post.id) return;
+      var current = String(post.content || '');
+      if (!/amazon\\.com/i.test(current)) {
+        noAmazonLinks++;
+        return;
+      }
+      checked++;
+      var revised = ensureAffiliateDisclosures_(current);
+      if (revised === current) return;
+      try {
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
+          content: revised
+        });
+        updated++;
+        Logger.log('DISCLOSURE UPDATED: ' + post.title + ' | ' + post._easyLifeStatus);
+        Utilities.sleep(350);
+      } catch (err) {
+        errors++;
+        Logger.log('DISCLOSURE UPDATE FAILED: ' + post.title + ' | ' + err);
+      }
+    });
+
+    Logger.log(
+      'Affiliate disclosure migration complete. Checked=' + checked +
+      ', updated=' + updated + ', already current=' + (checked - updated - errors) +
+      ', no Amazon links=' + noAmazonLinks + ', errors=' + errors
+    );
+    return { checked: checked, updated: updated, noAmazonLinks: noAmazonLinks, errors: errors };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
  * Sync audited queue HTML to existing live/scheduled Blogger posts, and disable
  * any unmanaged Amazon link that is out of stock, stale, or duplicated.
  */
@@ -1259,6 +1371,7 @@ function syncPublishedProductLinks() {
         return full;
       });
 
+      html = ensureAffiliateDisclosures_(html);
       html = sanitizePostHtml_(html);
       if (html !== originalContent) {
         bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {

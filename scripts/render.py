@@ -157,6 +157,27 @@ def _amazon_buttons(items: list[dict], aff: Affiliate) -> str:
         buttons.append(button)
     return '<div class="amazon-cta-group">' + "".join(buttons) + "</div>"
 
+def _affiliate_link_disclosure(aff: Affiliate) -> str:
+    """Render the clear affiliate disclosure immediately before each Amazon CTA group."""
+    disclosure = str(
+        aff.disclosure
+        or "Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you."
+    ).strip()
+    if not disclosure:
+        return ""
+    return (
+        '<p class="disclosure affiliate-link-disclosure" role="note" '
+        'style="font-size:13px;line-height:1.5;color:#4a525e;'
+        'background-color:#f6f8fa;border-left:3px solid #2e8b27;'
+        'padding:8px 11px;margin:18px 0 8px;">'
+        f'{html_escape(disclosure)}</p>'
+    )
+
+
+def _amazon_cta_block(items: list[dict], aff: Affiliate) -> str:
+    """Keep the affiliate disclosure directly beside the buttons it applies to."""
+    return _affiliate_link_disclosure(aff) + _amazon_buttons(items, aff)
+
 def _clean_post_fragment(value: str) -> str:
     """Clean model fragments: no anchors, Markdown links, URLs, style or scripts."""
     text = str(value or "").strip()
@@ -319,11 +340,8 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
     for paragraph in intro:
         parts.append(f"<p>{paragraph}</p>")
 
-    disclosure = (
-        "As an Amazon Associate I earn from qualifying purchases. "
-        + str(aff.disclosure or "This post contains affiliate links.")
-    )
-    parts.append(f"<p><em>{html_escape(disclosure)}</em></p>")
+    amazon_disclosure = "As an Amazon Associate I earn from qualifying purchases."
+    parts.append(f"<p><em>{html_escape(amazon_disclosure)}</em></p>")
 
     # Verify every product URL before writing any CTA into the post.
     for item in items:
@@ -370,11 +388,11 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
                 parts.append(f"<p>{fragment}</p>")
 
         if section_index == middle_after:
-            parts.append(_amazon_buttons(items, aff))
+            parts.append(_amazon_cta_block(items, aff))
             middle_cta_added = True
 
     if not middle_cta_added:
-        parts.append(_amazon_buttons(items, aff))
+        parts.append(_amazon_cta_block(items, aff))
 
     parts.append(
         '<h2 style="background-color: #f1f3f4; padding: 10px 15px; '
@@ -404,7 +422,7 @@ def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str
         parts.append(f"<p>{paragraph}</p>")
 
     # The second CTA placement is always the final element in the article body.
-    parts.append(_amazon_buttons(items, aff))
+    parts.append(_amazon_cta_block(items, aff))
 
     # Only renderer-generated green Amazon buttons may remain clickable.
     return _keep_amazon_links_only("\n".join(parts), aff.tag)
