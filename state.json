@@ -1178,7 +1178,13 @@
     "Best {P} Under {BUD}: What You Get and What You Lose",
     "{N} {F} Picks Reviewed Against the Criteria That Matter",
     "{P} for {AUD}: Five Things Listings Skip",
-    "Which {F}{AUD} Is Right for You? {N} Compared"
+    "Which {F}{AUD} Is Right for You? {N} Compared",
+    "{P} Explained: What You Are Really Paying For",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "{P}: The Questions Worth Asking First",
+    "{F} Roundup: {N} Picks With the Trade-Offs Stated",
+    "{P} Review: What I Would Check Before Buying"
   ],
   "last_publish_ts": null,
   "failures": {
