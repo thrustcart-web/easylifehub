@@ -81,8 +81,6 @@ def load_config(path: Path | str = CONFIG_PATH) -> dict:
     env_map = {
         "BLOG_ID": ("blog", "id"),
         "BLOGGER_BLOG_ID": ("blog", "id"),
-        "AFFILIATE_TAG": ("affiliate", "tag"),
-        "AMAZON_TAG": ("affiliate", "tag"),
         "DAILY_POSTS": ("schedule", "daily_posts"),
     }
     for env_name, (section, key) in env_map.items():
