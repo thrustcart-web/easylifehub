@@ -71,8 +71,8 @@ function cfg(key, fallback) {
   return (v === null || v === '') ? (fallback || DEFAULTS[key] || '') : v;
 }
 
-// Remove the obsolete manual spending toggle. Creators API is the primary
-// product source; SerpApi remains a separately guarded fallback.
+// Remove the obsolete manual spending toggle. SerpApi is the primary
+// product source; Apify is a separately guarded fallback and stock-audit source.
 function removeLegacyPaidLookupToggle_() {
   if (P.getProperty('PAID_LOOKUP_ENABLED') !== null) {
     P.deleteProperty('PAID_LOOKUP_ENABLED');
@@ -794,8 +794,8 @@ function refillQueueIfLow() {
         inputs: {
           count: String(refillCount),
           mode: 'auto',
-          // Refill uses Amazon Creators API first. SerpApi is only a fallback,
-          // and GitHub still requires SERPAPI_SPEND_ENABLED=true before spending.
+          // Refill uses SerpApi first. Apify is a separately guarded fallback;
+          // the GitHub spend variables must also allow each paid provider.
           allow_paid_lookup: true
         }
       }),
@@ -1413,7 +1413,7 @@ function syncPublishedProductLinks() {
             parent_asin: String(item.parent_asin || asin).toUpperCase(),
             availability_type: String(item.availability_type || 'UNKNOWN').toUpperCase(),
             stock_checked_at: checkedAt,
-            stock_source: 'apify'
+            stock_source: stockSource
           };
         }
       });
@@ -1525,7 +1525,7 @@ function status() {
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
   Logger.log('Automation      : ' + (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
-  Logger.log('Product lookup  : Apify Amazon crawler (explicit in-stock data; paid calls guarded)');
+  Logger.log('Product lookup  : SerpApi primary + guarded Apify fallback; Apify bulk stock audit');
   var triggers = ScriptApp.getProjectTriggers();
   Logger.log('Triggers        : ' + triggers.length);
   triggers.forEach(function (trigger) {
