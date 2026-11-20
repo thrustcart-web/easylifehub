@@ -175,6 +175,7 @@ def stock_row(title: str, asin: str, parent_asin: str | None = None, status: str
         "parent_asin": parent_asin or asin,
         "availability_type": status,
         "stock_checked_at": int(product_resolver.time.time()),
+        "stock_source": "apify",
     }
 
 
