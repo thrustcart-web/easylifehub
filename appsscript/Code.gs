@@ -943,6 +943,81 @@ function listBlogPostsByStatus_(status) {
  * Refresh the Blogger title cache and the current custom-domain URL from
  * Blogger itself. Does not create, edit, delete, or publish any blog post.
  */
+/**
+ * Retag every Amazon US product link in existing LIVE, SCHEDULED and DRAFT posts.
+ * Safe to repeat. Only amazon.com product detail links are changed.
+ */
+function retagBloggerAmazonLinks() {
+  var oldTag = 'ezylifehub-20';
+  var newTag = 'hotr0e-20';
+  var posts = listBlogPostsByStatus_('LIVE')
+    .concat(listBlogPostsByStatus_('SCHEDULED'))
+    .concat(listBlogPostsByStatus_('DRAFT'));
+  var updatedPosts = 0;
+  var updatedLinks = 0;
+  var errors = 0;
+  var titles = {};
+
+  posts.forEach(function (post) {
+    var title = String(post.title || '').trim();
+    if (title) titles[title] = true;
+    if (!post || !post.id) return;
+
+    var before = String(post.content || '');
+    var changedLinks = 0;
+    var after = before.replace(
+      /\\bhref\\s*=\\s*(["'])(https?:\\/\\/(?:www\\.)?amazon\\.com\\/(?:dp|gp\\/product)\\/[A-Z0-9]{10}[^"']*)\\1/gi,
+      function (full, quote, rawUrl) {
+        var url = String(rawUrl || '').replace(/&amp;/gi, '&');
+        var queryTag = /([?&]tag=)[^&#]*/i;
+        var nextUrl;
+        if (queryTag.test(url)) {
+          nextUrl = url.replace(queryTag, '$1' + newTag);
+        } else {
+          nextUrl = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'tag=' + newTag;
+        }
+        if (nextUrl === url) return full;
+        changedLinks++;
+        return 'href=' + quote + nextUrl.replace(/&/g, '&amp;') + quote;
+      }
+    );
+
+    if (changedLinks && after !== before) {
+      try {
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
+          content: after
+        });
+        updatedPosts++;
+        updatedLinks += changedLinks;
+        Logger.log('RETAGGED ' + changedLinks + ' Amazon link(s): ' + title);
+        Utilities.sleep(350);
+      } catch (err) {
+        errors++;
+        Logger.log('RETAG FAILED: ' + title + ' | ' + String(err).slice(0, 300));
+      }
+    }
+  });
+
+  P.setProperty('BLOGGER_TITLES', JSON.stringify(Object.keys(titles)));
+  var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
+  var currentUrl = String(blog.url || '').replace(/\\/+$/, '');
+  if (currentUrl) P.setProperty('BLOG_URL', currentUrl);
+
+  Logger.log(
+    'Honest Trove Amazon tag migration: old=' + oldTag + ', new=' + newTag +
+    ', posts updated=' + updatedPosts + ', links updated=' + updatedLinks +
+    ', errors=' + errors + ', titles refreshed=' + Object.keys(titles).length
+  );
+  Logger.log('Current Blogger URL: ' + currentUrl);
+  return {
+    postsUpdated: updatedPosts,
+    linksUpdated: updatedLinks,
+    errors: errors,
+    titleCount: Object.keys(titles).length,
+    blogUrl: currentUrl
+  };
+}
+
 function refreshBloggerTitlesOnly() {
   var posts = listBlogPostsByStatus_('LIVE')
     .concat(listBlogPostsByStatus_('SCHEDULED'))
