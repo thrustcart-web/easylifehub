@@ -1123,9 +1123,15 @@ def audit_queue_products() -> dict:
         files.append(meta_path)
         metadata_by_path[meta_path] = meta
 
-    if not _provider_api_key("creators_api"):
+    provider = _selected_provider()
+    api_token = _provider_api_key(provider)
+    if not api_token:
         raise ProductResolutionError(
-            "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET are required for stock auditing"
+            "TEST_API (Apify API token) is required for stock auditing"
+        )
+    if not _provider_spending_enabled(provider):
+        raise ProductResolutionError(
+            "Apify spending is disabled. Set APIFY_SPEND_ENABLED=true and explicitly opt in to paid lookup for this run."
         )
 
     # Audit Blogger-managed posts first; live, scheduled and draft slugs are protected.
@@ -1168,9 +1174,9 @@ def audit_queue_products() -> dict:
             if ASIN_RE.fullmatch(asin):
                 all_existing_asins.add(asin)
 
-    # One official GetItems request can verify up to ten ASINs. This is much
-    # cheaper than running a new keyword search for every existing product.
-    stock_by_asin = _creators_get_items_by_asin(sorted(all_existing_asins))
+    # Recheck existing ASINs through product-page stock fields from Apify.
+    # Requests are split into small batches and protected by the actor's $0.015 run cap.
+    stock_by_asin = _apify_get_items_by_asin(sorted(all_existing_asins), api_token)
     if all_existing_asins and not stock_by_asin:
         raise ProductResolutionError(
             "Amazon Creators API GetItems returned zero accessible products. "
@@ -1238,34 +1244,16 @@ def audit_queue_products() -> dict:
                 query = str(old_item.get("search_term") or name).strip()
                 rows = []
                 try:
-                    rows = _search_amazon_creators_api(query)
+                    rows = _search_amazon(query, api_token)
                 except ProductResolutionError as exc:
-                    log.warning("Creators API replacement search failed | %s | %s", query, exc)
+                    log.warning("Apify replacement search failed | %s | %s", query, exc)
+                    rows = []
                 candidate = _apply_candidate(
                     old_item,
                     rows,
                     used_asins=used_asins,
                     used_parent_asins=used_parents,
                 )
-                if candidate is None:
-                    for fallback in _fallback_provider_names("creators_api"):
-                        if not (_provider_spending_enabled(fallback) and _provider_api_key(fallback)):
-                            continue
-                        try:
-                            fallback_rows = _search_amazon_with_provider(
-                                query, fallback, _provider_api_key(fallback)
-                            )
-                            candidate = _apply_candidate(
-                                old_item,
-                                fallback_rows,
-                                allow_missing_leading_brand=(fallback == "serpapi"),
-                                used_asins=used_asins,
-                                used_parent_asins=used_parents,
-                            )
-                            if candidate:
-                                break
-                        except ProductResolutionError as fallback_exc:
-                            log.warning("product fallback failed | %s | %s", fallback, fallback_exc)
                 if candidate:
                     replacements += 1
 
