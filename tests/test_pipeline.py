@@ -639,7 +639,7 @@ class TestProductResolution(unittest.TestCase):
         os.environ["AFFILIATE_TAG"] = "different-secret-tag-20"
         try:
             tag, marketplace = product_resolver._creators_partner_settings()
-            self.assertEqual(tag, "ezylifehub-20")
+            self.assertEqual(tag, "hotr0e-20")
             self.assertEqual(marketplace, "www.amazon.com")
         finally:
             if old is None:
