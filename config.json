@@ -135,7 +135,7 @@
     "require_exact_title_tokens": true,
     "cache_file": ".cache/amazon_asins.json",
     "actor": "junglee/amazon-crawler",
-    "api_env": "SERPAPI_API_KEY",
+    "api_env": "TEST_API",
     "max_results_per_search": 3,
     "search_pages": 1,
     "scrape_product_details": false,
@@ -143,9 +143,7 @@
       "apify"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
-    "serpapi_api_env": "SERPAPI_API_KEY",
-    "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
-    "fallback_note": "Apify is the only configured product source. It reads Amazon product details and explicit in-stock status. Paid lookup is blocked unless the per-run approval and APIFY_SPEND_ENABLED guard are both enabled. Amazon Creators API is not used.",
+    "fallback_note": "Apify is the only configured product source. It reads Amazon product details and explicit in-stock status. Paid lookups require both per-run approval and APIFY_SPEND_ENABLED=true. Amazon Creators API and SerpApi are not used by the active pipeline.",
     "fallback_providers": []
   }
 }
