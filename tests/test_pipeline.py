@@ -334,17 +334,17 @@ class TestProductResolution(unittest.TestCase):
         original_save = product_resolver._save_cache
         old = {
             "PRODUCT_DISCOVERY_PROVIDER": os.environ.get("PRODUCT_DISCOVERY_PROVIDER"),
-            "AMAZON_CREATORS_CLIENT_ID": os.environ.get("AMAZON_CREATORS_CLIENT_ID"),
-            "AMAZON_CREATORS_CLIENT_SECRET": os.environ.get("AMAZON_CREATORS_CLIENT_SECRET"),
+            "TEST_API": os.environ.get("TEST_API"),
+            "APIFY_SPEND_ENABLED": os.environ.get("APIFY_SPEND_ENABLED"),
         }
         product_resolver._search_amazon = lambda term, token: [
             stock_row("Model One Organizer", "B000000001", "B0PARENT01"),
             stock_row("Model Two Organizer", "B000000002", "B0PARENT01"),
         ]
         product_resolver._save_cache = lambda cache: None
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
-        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
-        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
+        os.environ["TEST_API"] = "test-apify-token"
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             with self.assertRaisesRegex(product_resolver.ProductResolutionError, "no unique verified in-stock"):
                 product_resolver.resolve_items([
@@ -562,7 +562,7 @@ class TestProductResolution(unittest.TestCase):
             "OPNICE Four Tier Desk File Organizer"
         ))
 
-    def test_config_defaults_to_creators_api_with_only_serpapi_fallback(self):
+    def test_config_defaults_to_apify_without_fallback(self):
         cfg = fresh_cfg()
         self.assertEqual(cfg["product_discovery"]["provider"], "apify")
         self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
@@ -1439,14 +1439,14 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["content"]["min_words"], 501)
         self.assertEqual(cfg["ai"]["primary"], "groq")
         self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
-        self.assertEqual(cfg["product_discovery"]["provider"], "creators_api")
+        self.assertEqual(cfg["product_discovery"]["provider"], "apify")
         self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
 
     def test_product_discovery_defaults_to_apify(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            self.assertEqual(product_resolver._selected_provider(), "creators_api")
+            self.assertEqual(product_resolver._selected_provider(), "apify")
         finally:
             if old is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
