@@ -1,6 +1,13 @@
 name: enhance-published-articles
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/enhance_published_articles.py"
+      - "tests/test_enhance_published.py"
+      - "appsscript/Code.gs"
+      - ".github/workflows/enhance-published-articles.yml"
   workflow_dispatch:
     inputs:
       batch_id:
@@ -35,6 +42,7 @@ jobs:
           python3 tests/test_pipeline.py
 
       - name: Enhance every exported LIVE article
+        if: github.event_name == 'workflow_dispatch'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -43,6 +51,7 @@ jobs:
           python3 scripts/enhance_published_articles.py "${{ inputs.batch_id }}"
 
       - name: Commit enhanced content and report
+        if: github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
