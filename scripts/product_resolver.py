@@ -208,6 +208,7 @@ def _apify_product_rows(items: list[dict], include_unavailable: bool = False) ->
             "parent_asin": parent,
             "availability_type": availability,
             "stock_checked_at": checked_at,
+            "stock_source": "apify",
             "url": str(item.get("url") or ""),
         })
     return rows
@@ -651,6 +652,7 @@ def _trusted_item(item: dict) -> bool:
         and bool(ASIN_RE.fullmatch(asin))
         and title_matches(name, verified_title)
         and availability in STOCK_ALLOWED
+        and str(item.get("stock_source") or "").lower() == "apify"
         and _stock_check_fresh(item)
     )
 
@@ -789,6 +791,7 @@ def _apply_candidate(
             result["verified_product_title"] = title
             result["availability_type"] = availability
             result["stock_checked_at"] = int(row.get("stock_checked_at") or time.time())
+            result["stock_source"] = str(row.get("stock_source") or "apify").lower()
             result["url"] = str(row.get("url") or "")
             return result
     return None
@@ -840,6 +843,7 @@ def resolve_items(
             and bool(ASIN_RE.fullmatch(cached_asin))
             and title_matches(name, str(cached.get("title") or ""))
             and str(cached.get("availability_type") or "").upper() in STOCK_ALLOWED
+            and str(cached.get("stock_source") or "").lower() == "apify"
             and _stock_check_fresh(cached)
             and cached_asin not in used_asins
             and cached_parent not in used_parents
@@ -852,6 +856,7 @@ def resolve_items(
                 "verified_product_title": str(cached["title"]),
                 "availability_type": str(cached["availability_type"]).upper(),
                 "stock_checked_at": int(cached["stock_checked_at"]),
+                "stock_source": "apify",
             })
             used_asins.add(cached_asin)
             used_parents.add(cached_parent)
@@ -901,6 +906,7 @@ def resolve_items(
                 "title": candidate["verified_product_title"],
                 "availability_type": candidate["availability_type"],
                 "stock_checked_at": candidate["stock_checked_at"],
+                "stock_source": "apify",
                 "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
         return remaining
@@ -1192,6 +1198,7 @@ def audit_queue_products() -> dict:
             "parent_asin": parent,
             "availability_type": str(row.get("availability_type") or "UNKNOWN"),
             "stock_checked_at": int(row.get("stock_checked_at") or time.time()),
+            "stock_source": str(row.get("stock_source") or "apify"),
         }
         if ASIN_RE.fullmatch(parent):
             used_parents.add(parent)
@@ -1223,6 +1230,7 @@ def audit_queue_products() -> dict:
             can_keep = (
                 bool(official)
                 and official.get("availability_type") in STOCK_ALLOWED
+                and str(official.get("stock_source") or "").lower() == "apify"
                 and title_matches(name, str(official.get("title") or ""))
                 and old_asin not in used_asins
                 and parent not in used_parents
@@ -1236,6 +1244,7 @@ def audit_queue_products() -> dict:
                     "verified_product_title": official["title"],
                     "availability_type": official["availability_type"],
                     "stock_checked_at": official["stock_checked_at"],
+                    "stock_source": "apify",
                 })
                 kept_existing += 1
             else:
@@ -1269,6 +1278,7 @@ def audit_queue_products() -> dict:
                     "title": candidate["verified_product_title"],
                     "availability_type": candidate["availability_type"],
                     "stock_checked_at": candidate["stock_checked_at"],
+                    "stock_source": "apify",
                     "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 }
             else:
@@ -1334,6 +1344,7 @@ def audit_queue_products() -> dict:
                 "parent_asin": row.get("parent_asin") or asin,
                 "availability_type": row.get("availability_type", "UNKNOWN"),
                 "stock_checked_at": int(row.get("stock_checked_at") or now),
+                "stock_source": str(row.get("stock_source") or "apify"),
             }
             for asin, row in stock_by_asin.items()
         },
