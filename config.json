@@ -138,7 +138,7 @@
     "api_env": "TEST_API",
     "max_results_per_search": 3,
     "search_pages": 1,
-    "scrape_product_details": false,
+    "scrape_product_details": true,
     "available_providers": [
       "apify"
     ],
