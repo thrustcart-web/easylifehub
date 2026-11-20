@@ -57,7 +57,7 @@
     "keyword_cooldown_days": 45
   },
   "affiliate": {
-    "tag": "ezylifehub-20",
+    "tag": "hotr0e-20",
     "marketplace": "com",
     "country": "US",
     "currency": "USD",
@@ -130,7 +130,7 @@
     "show_chips_in_posts": false
   },
   "product_discovery": {
-    "provider": "creators_api",
+    "provider": "apify",
     "amazon_domain": "amazon.com",
     "require_exact_title_tokens": true,
     "cache_file": ".cache/amazon_asins.json",
@@ -140,16 +140,12 @@
     "search_pages": 1,
     "scrape_product_details": false,
     "available_providers": [
-      "creators_api",
-      "serpapi",
       "apify"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
     "serpapi_api_env": "SERPAPI_API_KEY",
     "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
-    "fallback_note": "Creators API is the primary product source. SerpApi is attempted only when Creators API fails or yields no exact title match, and only when SERPAPI_SPEND_ENABLED=true and SERPAPI_API_KEY is configured. Apify is never an automatic fallback.",
-    "fallback_providers": [
-      "serpapi"
-    ]
+    "fallback_note": "Apify is the only configured product source. It reads Amazon product details and explicit in-stock status. Paid lookup is blocked unless the per-run approval and APIFY_SPEND_ENABLED guard are both enabled. Amazon Creators API is not used.",
+    "fallback_providers": []
   }
 }
