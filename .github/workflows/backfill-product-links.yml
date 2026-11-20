@@ -1,6 +1,6 @@
 name: audit-amazon-products
 
-# Audits queued Amazon offers against Creators API stock data, reserves products
+# Audits queued Amazon offers against Apify product-page stock data, reserves products
 # already used by live/scheduled Blogger posts, replaces unavailable/duplicate items,
 # and removes CTAs when a safe in-stock replacement cannot be verified.
 
