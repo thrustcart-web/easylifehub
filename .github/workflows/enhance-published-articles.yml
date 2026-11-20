@@ -1,0 +1,87 @@
+name: enhance-published-articles
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_id:
+        description: "Batch ID created by startPublishedArticleEnhancement() in Apps Script"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  enhance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Validate code and existing pipeline
+        run: |
+          python3 -m py_compile scripts/enhance_published_articles.py
+          python3 tests/test_enhance_published.py
+          python3 tests/test_pipeline.py
+
+      - name: Enhance every exported LIVE article
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 scripts/enhance_published_articles.py "${{ inputs.batch_id }}"
+
+      - name: Commit enhanced content and report
+        run: |
+          git config user.name "autoblog-bot"
+          git config user.email "autoblog-bot@users.noreply.github.com"
+          git add "content/enhancement/jobs/${{ inputs.batch_id }}.output.json"
+          if git diff --cached --quiet; then
+            echo "::error::No enhancement output was created."
+            exit 1
+          fi
+          git commit -m "content: enhance published articles batch ${{ inputs.batch_id }} [skip ci]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "::error::Could not rebase enhancement output on latest main."
+              git rebase --abort || true
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "Enhancement output saved."
+              exit 0
+            fi
+            echo "Push rejected; retrying."
+          done
+          echo "::error::Could not push enhancement output after three attempts."
+          exit 1
+
+      - name: Publish job summary
+        if: always()
+        run: |
+          echo "## Honest Trove — Published article enhancement" >> "$GITHUB_STEP_SUMMARY"
+          echo "Batch ID: ${{ inputs.batch_id }}" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "content/enhancement/jobs/${{ inputs.batch_id }}.output.json" ]; then
+            python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p = Path("content/enhancement/jobs/${{ inputs.batch_id }}.output.json")
+          d = json.loads(p.read_text(encoding="utf-8"))
+          print(f"- Articles in batch: **{d.get('total', 0)}**")
+          print(f"- Enhanced: **{d.get('enhanced', 0)}**")
+          print(f"- Already enhanced: **{d.get('already_enhanced', 0)}**")
+          print(f"- Failed: **{d.get('failed', 0)}**")
+          PY
+          fi
