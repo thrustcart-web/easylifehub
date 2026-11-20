@@ -103,7 +103,7 @@ jobs:
           in_stock = product.get("inStock")
           in_stock_text = str(product.get("inStockText") or "").strip().lower()
           if not (in_stock is True or in_stock_text == "in stock" or
-                  re.search(r"only\\s+\\d+\\s+left", in_stock_text)):
+                  re.search(r"only\s+\d+\s+left", in_stock_text)):
               raise SystemExit("The product did not include explicit in-stock evidence")
 
           affiliate_url = (
