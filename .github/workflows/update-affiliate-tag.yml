@@ -7,6 +7,11 @@ on:
         description: "New Amazon Associates tracking ID"
         required: true
         type: string
+        default: "hotr0e-20"
+      old_tag:
+        description: "Existing tracking ID to replace in queued content"
+        required: true
+        type: string
         default: "ezylifehub-20"
 
 permissions:
@@ -30,8 +35,9 @@ jobs:
       - name: Update config and every queued affiliate URL
         env:
           NEW_AFFILIATE_TAG: ${{ inputs.new_tag }}
+          OLD_AFFILIATE_TAG: ${{ inputs.old_tag }}
         run: |
-          python3 scripts/update_affiliate_tag.py "$NEW_AFFILIATE_TAG"
+          python3 scripts/update_affiliate_tag.py "$NEW_AFFILIATE_TAG" "$OLD_AFFILIATE_TAG"
 
       - name: Commit
         run: |
