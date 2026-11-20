@@ -1,8 +1,8 @@
-"""Resolve verified Amazon ASINs before an article can enter auto-publish.
+"""Resolve verified Amazon ASINs without Amazon Creators API.
 
-Amazon Creators API is the primary source. SerpApi is a guarded fallback only;
-Apify remains available solely when explicitly selected by an operator.
-Only product titles and ASINs are retained.
+Apify scrapes the Amazon product page and provides an explicit in-stock field.
+Unknown stock is rejected. Paid calls are blocked unless APIFY_SPEND_ENABLED
+and a per-run opt-in are both present.
 """
 from __future__ import annotations
 
@@ -103,31 +103,25 @@ def _extract_asin(row: dict) -> str:
 
 
 def _selected_provider() -> str:
-    """Select the explicit workflow override, otherwise use config.json."""
+    """Select the approved non-Creators product source."""
     provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "").strip().lower()
     if not provider:
         try:
             cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
-            provider = str((cfg.get("product_discovery") or {}).get("provider") or "creators_api").strip().lower()
+            provider = str((cfg.get("product_discovery") or {}).get("provider") or "apify").strip().lower()
         except (OSError, json.JSONDecodeError):
-            provider = "creators_api"
-    if provider not in {"apify", "serpapi", "creators_api"}:
+            provider = "apify"
+    if provider != "apify":
         raise ProductResolutionError(
-            "PRODUCT_DISCOVERY_PROVIDER must be 'creators_api', 'serpapi', or 'apify'"
+            "Amazon Creators API and SerpApi are disabled for this project. "
+            "PRODUCT_DISCOVERY_PROVIDER must be 'apify'."
         )
     return provider
 
 
 def _fallback_provider_names(primary: str) -> list[str]:
-    """Return configured, safe fallback providers; Apify is never automatic."""
-    if primary != "creators_api":
-        return []
-    try:
-        cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
-        configured = (cfg.get("product_discovery") or {}).get("fallback_providers") or []
-    except (OSError, json.JSONDecodeError):
-        configured = []
-    return [name for name in configured if name == "serpapi"]
+    """No automatic provider fallback: every Apify request is explicitly guarded."""
+    return []
 
 
 def _is_global_provider_error(exc: Exception) -> bool:
@@ -171,16 +165,68 @@ def _provider_spending_enabled(provider: str) -> bool:
     return os.environ.get(variable, "false").strip().lower() in {"1", "true", "yes"}
 
 
-def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
-    """Run one isolated Amazon US search through the Apify Actor."""
+def _apify_availability(row: dict) -> str:
+    """Read only explicit stock evidence from the scraped Amazon product page."""
+    value = row.get("inStock")
+    if isinstance(value, bool):
+        return "IN_STOCK" if value else "OUT_OF_STOCK"
+    text = str(
+        row.get("inStockText") or row.get("availability") or row.get("stock") or ""
+    ).strip().lower()
+    if not text:
+        return "UNKNOWN"
+    if re.search(r"out of stock|currently unavailable|temporarily unavailable|not available", text):
+        return "OUT_OF_STOCK"
+    if re.search(r"\\bin stock\\b|only\\s+\\d+\\s+left|available now", text):
+        return "IN_STOCK"
+    return "UNKNOWN"
+
+
+def _apify_product_rows(items: list[dict], include_unavailable: bool = False) -> list[dict]:
+    """Normalize Apify product-detail records; missing stock remains UNKNOWN."""
+    rows = []
+    checked_at = int(time.time())
+    for item in items or []:
+        if not isinstance(item, dict):
+            continue
+        title = str(item.get("title") or "").strip()
+        asin = _extract_asin(item)
+        if not title or not ASIN_RE.fullmatch(asin):
+            continue
+        condition = str(item.get("condition") or "").strip().lower()
+        if condition and any(word in condition for word in ("used", "renewed", "refurbished", "open box")):
+            continue
+        availability = _apify_availability(item)
+        if not include_unavailable and availability not in STOCK_ALLOWED:
+            continue
+        parent = str(item.get("parentAsin") or item.get("parent_asin") or item.get("parentASIN") or asin).strip().upper()
+        if not ASIN_RE.fullmatch(parent):
+            parent = asin
+        rows.append({
+            "title": title,
+            "asin": asin,
+            "parent_asin": parent,
+            "availability_type": availability,
+            "stock_checked_at": checked_at,
+            "url": str(item.get("url") or ""),
+        })
+    return rows
+
+
+def _run_apify_urls(urls: list[str], api_token: str, max_items_per_start_url: int = 3) -> list[dict]:
+    """Run the capped Amazon crawler on search URLs or explicit product URLs."""
+    if not api_token:
+        raise ProductResolutionError("TEST_API is missing")
+    clean_urls = [str(url).strip() for url in urls if str(url).strip()]
+    if not clean_urls:
+        return []
     payload = {
-        "categoryOrProductUrls": [{"url": _amazon_search_url(product_name)}],
-        "maxItemsPerStartUrl": MAX_RESULTS_PER_SEARCH,
+        "categoryOrProductUrls": [{"url": url} for url in clean_urls],
+        "maxItemsPerStartUrl": max(1, min(int(max_items_per_start_url), MAX_RESULTS_PER_SEARCH)),
         "maxSearchPagesPerStartUrl": 1,
         "language": "en",
-        # Do NOT set countryCode, zipCode, proxyCountry, or delivery-location
-        # fields: they created a separate, expensive event in the user's account.
-        "scrapeProductDetails": False,
+        # Product details are required for explicit inStock/inStockText evidence.
+        "scrapeProductDetails": True,
         "maxProductVariantsAsSeparateResults": 0,
         "maxOffers": 0,
     }
@@ -191,11 +237,10 @@ def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
             "Authorization": f"Bearer {api_token}",
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "User-Agent": "EasyLifeHubProductResolver/3.0",
+            "User-Agent": "HonestTroveProductResolver/1.0",
         },
         method="POST",
     )
-
     try:
         with request.urlopen(req, timeout=310) as response:
             data = json.loads(response.read().decode("utf-8"))
@@ -204,7 +249,6 @@ def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
         raise ProductResolutionError(f"Apify Actor HTTP {exc.code}: {detail}") from exc
     except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
         raise ProductResolutionError(f"Apify Actor request failed: {exc}") from exc
-
     if isinstance(data, dict):
         error_data = data.get("error")
         message = error_data.get("message") if isinstance(error_data, dict) else error_data
@@ -214,7 +258,36 @@ def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
         )
     if not isinstance(data, list):
         raise ProductResolutionError("Apify Actor response was not a dataset item list")
-    return [row for row in data if isinstance(row, dict)]
+    return data
+
+
+def _search_amazon_apify(product_name: str, api_token: str) -> list[dict]:
+    """Search Amazon and keep only exact products with explicit in-stock status."""
+    rows = _run_apify_urls([_amazon_search_url(product_name)], api_token, MAX_RESULTS_PER_SEARCH)
+    return _apify_product_rows(rows)
+
+
+def _apify_get_items_by_asin(asins: list[str], api_token: str) -> dict[str, dict]:
+    """Recheck up to three existing product pages per capped Apify run."""
+    unique = []
+    seen = set()
+    for value in asins or []:
+        asin = str(value or "").strip().upper()
+        if ASIN_RE.fullmatch(asin) and asin not in seen:
+            seen.add(asin)
+            unique.append(asin)
+    found = {}
+    for offset in range(0, len(unique), MAX_RESULTS_PER_SEARCH):
+        batch = unique[offset:offset + MAX_RESULTS_PER_SEARCH]
+        items = _run_apify_urls(
+            [f"https://www.amazon.com/dp/{asin}" for asin in batch],
+            api_token,
+            1,
+        )
+        for row in _apify_product_rows(items, include_unavailable=True):
+            if row["asin"] in batch:
+                found[row["asin"]] = row
+    return found
 
 
 def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
@@ -546,31 +619,14 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
 
 
 def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
-    """Dispatch one query and enforce Amazon's official in-stock check for every source."""
-    if provider == "creators_api":
-        return _search_amazon_creators_api(product_name)
-    if provider == "serpapi":
-        if not api_token:
-            raise ProductResolutionError("SERPAPI_API_KEY is missing")
-        raw_rows = _search_amazon_serpapi(product_name, api_token)
-    elif provider == "apify":
-        if not api_token:
-            raise ProductResolutionError("TEST_API is missing")
-        raw_rows = _search_amazon_apify(product_name, api_token)
-    else:
-        raise ProductResolutionError(f"Unsupported Amazon product provider: {provider}")
-
-    # A third-party search result is never enough to assert stock. Verify every
-    # candidate against Amazon Creators API GetItems before it can become a link.
-    stock = _creators_get_items_by_asin([row.get("asin") for row in raw_rows])
-    verified = []
-    for row in raw_rows:
-        asin = _extract_asin(row)
-        official = stock.get(asin)
-        if not official or official.get("availability_type") not in STOCK_ALLOWED:
-            continue
-        verified.append({**row, **official})
-    return verified
+    """Search using the selected non-Creators source and its own stock fields."""
+    if provider != "apify":
+        raise ProductResolutionError(
+            "Amazon Creators API and SerpApi are disabled; only Apify product-detail scraping is enabled."
+        )
+    if not api_token:
+        raise ProductResolutionError("TEST_API is missing")
+    return _search_amazon_apify(product_name, api_token)
 
 
 def _search_amazon(product_name: str, api_token: str) -> list[dict]:
