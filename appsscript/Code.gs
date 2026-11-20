@@ -1562,6 +1562,88 @@ function enhancementGitHubRequest_(method, path, payload, allowNotFound) {
   return body ? JSON.parse(body) : {};
 }
 
+
+/**
+ * Diagnose the exact GitHub identity and repository visibility of the token
+ * stored in Apps Script. This function never logs or returns the token value.
+ */
+function diagnoseGitHubEnhancementToken() {
+  var keyName = P.getProperty('GITHUB_ACTIONS_TOKEN')
+    ? 'GITHUB_ACTIONS_TOKEN'
+    : (P.getProperty('GITHUB_TOKEN') ? 'GITHUB_TOKEN' : '');
+  if (!keyName) {
+    Logger.log('TOKEN PROPERTY: MISSING. Add GITHUB_ACTIONS_TOKEN under Script Properties.');
+    return { ok: false, reason: 'missing_token_property' };
+  }
+
+  var token = String(P.getProperty(keyName) || '').trim();
+  var headers = {
+    Authorization: 'Bearer ' + token,
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28'
+  };
+  Logger.log('TOKEN PROPERTY SELECTED: ' + keyName);
+
+  var userResponse = UrlFetchApp.fetch('https://api.github.com/user', {
+    method: 'get', headers: headers, muteHttpExceptions: true
+  });
+  var userCode = userResponse.getResponseCode();
+  if (userCode !== 200) {
+    Logger.log('TOKEN AUTHENTICATION: FAILED (HTTP ' + userCode + '). The saved value is expired, revoked, malformed, or not a valid GitHub PAT.');
+    Logger.log('GitHub response: ' + userResponse.getContentText().slice(0, 250));
+    return { ok: false, reason: 'authentication_failed', status: userCode, property: keyName };
+  }
+
+  var user = JSON.parse(userResponse.getContentText() || '{}');
+  var login = String(user.login || '');
+  Logger.log('TOKEN AUTHENTICATED GITHUB ACCOUNT: ' + (login || '(not returned)'));
+
+  var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+  var repoResponse = UrlFetchApp.fetch('https://api.github.com/repos/' + repo, {
+    method: 'get', headers: headers, muteHttpExceptions: true
+  });
+  var repoCode = repoResponse.getResponseCode();
+  Logger.log('REPOSITORY ACCESS: HTTP ' + repoCode);
+  if (repoCode !== 200) {
+    Logger.log('The token cannot access this repository. Confirm that Resource owner is thrustcart-web and easylifehub is selected.');
+    Logger.log('GitHub response: ' + repoResponse.getContentText().slice(0, 250));
+    return { ok: false, reason: 'repository_not_accessible', status: repoCode, property: keyName, login: login };
+  }
+
+  var repoData = JSON.parse(repoResponse.getContentText() || '{}');
+  var canPush = !!(repoData.permissions && repoData.permissions.push);
+  Logger.log('REPOSITORY ACCOUNT: ' + String(repoData.full_name || repo));
+  Logger.log('GITHUB ACCOUNT MATCHES REPOSITORY OWNER: ' + (login.toLowerCase() === 'thrustcart-web'));
+  Logger.log('ACCOUNT PUSH ACCESS: ' + canPush);
+
+  var contentsResponse = UrlFetchApp.fetch(
+    'https://api.github.com/repos/' + repo + '/contents/README_AR.md?ref=main',
+    { method: 'get', headers: headers, muteHttpExceptions: true }
+  );
+  Logger.log('CONTENTS READ TEST: HTTP ' + contentsResponse.getResponseCode());
+
+  var workflowResponse = UrlFetchApp.fetch(
+    'https://api.github.com/repos/' + repo + '/actions/workflows/enhance-published-articles.yml',
+    { method: 'get', headers: headers, muteHttpExceptions: true }
+  );
+  Logger.log('ACTIONS WORKFLOW READ TEST: HTTP ' + workflowResponse.getResponseCode());
+
+  Logger.log('REQUIRED TOKEN SETTINGS: Resource owner=thrustcart-web; Repository=easylifehub; Contents=Read and write; Actions=Read and write.');
+  Logger.log('IMPORTANT: GitHub GET tests do not prove the token has Contents write scope; they identify account/repository mismatch before the next write attempt.');
+
+  return {
+    ok: repoCode === 200 && login.toLowerCase() === 'thrustcart-web' && canPush &&
+      contentsResponse.getResponseCode() === 200,
+    property: keyName,
+    login: login,
+    repository: String(repoData.full_name || repo),
+    accountMatchesOwner: login.toLowerCase() === 'thrustcart-web',
+    canPush: canPush,
+    contentsReadStatus: contentsResponse.getResponseCode(),
+    actionsReadStatus: workflowResponse.getResponseCode()
+  };
+}
+
 function enhancementGitHubPutJson_(path, value, message) {
   var encodedPath = String(path).split('/').map(encodeURIComponent).join('/');
   var existing = enhancementGitHubRequest_('get', 'contents/' + encodedPath + '?ref=main', null, true);
