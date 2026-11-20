@@ -946,7 +946,7 @@ function listBlogPostsByStatus_(status) {
 function replaceOldBrandInHtmlTextNodes_(html) {
   return String(html || '').split(/(<[^>]*>)/g).map(function (part, index) {
     if (index % 2 !== 0) return part;
-    return part.replace(/Easy\\s*Life\\s*Hub/gi, 'Honest Trove');
+    return part.replace(/Easy\s*Life\s*Hub/gi, 'Honest Trove');
   }).join('');
 }
 
