@@ -204,18 +204,20 @@ function updatePost_(postId, title, html, labels) {
 }
 
 // ------------------------------------------------- links, related, hub page --
-/** The blog's own address. Detected once from the API, then cached. */
+/** The blog's current address. Refresh from Blogger so a custom-domain change cannot leave stale links cached. */
 function blogUrl_() {
-  var url = String(cfg('BLOG_URL') || '').replace(/\/+$/, '');
-  if (url) return url;
+  var cached = String(cfg('BLOG_URL') || '').replace(/\/+$/, '');
   try {
     var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
-    url = String(blog.url || '').replace(/\/+$/, '');
-    if (url) P.setProperty('BLOG_URL', url);
+    var detected = String(blog.url || '').replace(/\/+$/, '');
+    if (detected) {
+      if (detected !== cached) P.setProperty('BLOG_URL', detected);
+      return detected;
+    }
   } catch (e) {
-    Logger.log('blogUrl_: ' + e);
+    Logger.log('blogUrl_ API refresh: ' + e);
   }
-  return url;
+  return cached;
 }
 
 /**
@@ -809,7 +811,7 @@ function refillQueueIfLow() {
     Logger.log('REFILL DISPATCHED: GitHub will generate up to ' + refillCount + ' new articles.');
   } catch (err) {
     Logger.log('AUTOMATIC REFILL ERROR: ' + err);
-    notify_('EasyLifeHub automatic refill failed', String(err).slice(0, 800));
+    notify_('Honest Trove automatic refill failed', String(err).slice(0, 800));
   } finally {
     lock.releaseLock();
   }
@@ -935,6 +937,65 @@ function listBlogPostsByStatus_(status) {
     guard++;
   } while (pageToken && guard < 20);
   return posts;
+}
+
+/**
+ * Replace old brand wording in HTML text nodes only. HTML attributes, links,
+ * image URLs and other destinations are left untouched.
+ */
+function replaceOldBrandInHtmlTextNodes_(html) {
+  return String(html || '').split(/(<[^>]*>)/g).map(function (part, index) {
+    if (index % 2 !== 0) return part;
+    return part.replace(/Easy\\s*Life\\s*Hub/gi, 'Honest Trove');
+  }).join('');
+}
+
+/**
+ * One-time, repeat-safe brand migration for the public welcome article.
+ * Renames its title and visible text, preserves its URL and all link targets,
+ * then refreshes BLOGGER_TITLES from the actual Blogger posts.
+ */
+function renameWelcomePostForHonestTrove() {
+  var oldTitle = 'Welcome to EasyLifeHub — What This Blog Is About';
+  var newTitle = 'Welcome to Honest Trove — What This Blog Is About';
+  var oldKey = normalizedArticleTitleKey_(oldTitle);
+  var newKey = normalizedArticleTitleKey_(newTitle);
+  var posts = listBlogPostsByStatus_('LIVE')
+    .concat(listBlogPostsByStatus_('SCHEDULED'))
+    .concat(listBlogPostsByStatus_('DRAFT'));
+  var renamed = 0;
+  var alreadyNew = 0;
+
+  posts.forEach(function (post) {
+    var key = normalizedArticleTitleKey_(post.title || '');
+    if (key === oldKey) {
+      var updatedContent = replaceOldBrandInHtmlTextNodes_(post.content || '');
+      bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
+        title: newTitle,
+        content: updatedContent
+      });
+      post.title = newTitle;
+      post.content = updatedContent;
+      renamed++;
+    } else if (key === newKey) {
+      alreadyNew++;
+    }
+  });
+
+  var titleSet = {};
+  posts.forEach(function (post) {
+    var title = String(post.title || '').trim();
+    if (title) titleSet[title] = true;
+  });
+  P.setProperty('BLOGGER_TITLES', JSON.stringify(Object.keys(titleSet)));
+
+  if (!renamed && !alreadyNew) {
+    Logger.log('No exact welcome article title was found. No Blogger post was changed.');
+  } else {
+    Logger.log('Honest Trove welcome article migration complete. Renamed=' + renamed +
+      ', already renamed=' + alreadyNew + ', BLOGGER_TITLES refreshed=' + Object.keys(titleSet).length);
+  }
+  return { renamed: renamed, alreadyRenamed: alreadyNew, bloggerTitles: Object.keys(titleSet).length };
 }
 
 function normalizedArticleTitleKey_(title) {
