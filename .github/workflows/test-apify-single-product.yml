@@ -23,7 +23,6 @@ jobs:
         env:
           TEST_API: ${{ secrets.TEST_API }}
           ALLOW_PAID_LOOKUP: ${{ inputs.allow_paid_lookup }}
-          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
           python - <<'PY'
           import json
@@ -57,7 +56,7 @@ jobs:
               "maxItemsPerStartUrl": 1,
               "maxSearchPagesPerStartUrl": 1,
               "language": "en",
-              "scrapeProductDetails": False,
+              "scrapeProductDetails": True,
               "maxProductVariantsAsSeparateResults": 0,
               "maxOffers": 0
           }
@@ -96,7 +95,17 @@ jobs:
           if not required.issubset(words):
               raise SystemExit("Returned product title did not match the requested product")
 
-          tag = os.environ.get("AFFILIATE_TAG", "").strip() or "qalok0c-20"
+          with open("config.json", encoding="utf-8") as handle:
+              tag = str(json.load(handle)["affiliate"]["tag"]).strip()
+          if tag != "hotr0e-20":
+              raise SystemExit("config.json does not contain the Honest Trove tracking ID")
+
+          in_stock = product.get("inStock")
+          in_stock_text = str(product.get("inStockText") or "").strip().lower()
+          if not (in_stock is True or in_stock_text == "in stock" or
+                  re.search(r"only\\s+\\d+\\s+left", in_stock_text)):
+              raise SystemExit("The product did not include explicit in-stock evidence")
+
           affiliate_url = (
               f"https://www.amazon.com/dp/{asin}?"
               + parse.urlencode({"tag": tag})
@@ -106,6 +115,7 @@ jobs:
           print("Title:", title)
           print("ASIN:", asin)
           print("Affiliate product URL:", affiliate_url)
+          print("Stock evidence:", product.get("inStockText") or product.get("inStock"))
           print("Queue changed: NO")
           print("Blogger changed: NO")
           print("Maximum total Apify charge configured: $0.015")
