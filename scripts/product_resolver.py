@@ -1154,11 +1154,7 @@ def audit_queue_products() -> dict:
 
     provider = _selected_provider()
     api_token = _provider_api_key(provider)
-    if not api_token or not _provider_spending_enabled(provider):
-        variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
-        raise ProductResolutionError(
-            f"{_provider_secret_name(provider)} and {variable}=true are required for replacement search during the audit"
-        )
+    primary_search_enabled = bool(api_token) and _provider_spending_enabled(provider)
     # Bulk stock audits are intentionally handled by Apify product-page details;
     # this uses a separate token and spending gate from the SerpApi discovery path.
     audit_api_token = _provider_api_key("apify")
@@ -1279,10 +1275,11 @@ def audit_queue_products() -> dict:
                     duplicate_or_oos += 1
                 query = str(old_item.get("search_term") or name).strip()
                 rows = []
-                try:
-                    rows = _search_amazon_with_provider(query, provider, api_token)
-                except ProductResolutionError as exc:
-                    log.warning("%s replacement search failed | %s | %s", provider, query, exc)
+                if primary_search_enabled:
+                    try:
+                        rows = _search_amazon_with_provider(query, provider, api_token)
+                    except ProductResolutionError as exc:
+                        log.warning("%s replacement search failed | %s | %s", provider, query, exc)
                 candidate = _apply_candidate(
                     old_item,
                     rows,
