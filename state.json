@@ -1196,7 +1196,13 @@
     "Does {FEAT} Matter in {A} {P}? An Honest Look",
     "{N} {F} Compared: Where Each One Wins and Loses",
     "{A} {P} Review: What I Would Check Before Buying",
-    "Best {F}{AUD}: {N} Options We Would Actually Buy"
+    "Best {F}{AUD}: {N} Options We Would Actually Buy",
+    "{P} Explained: What You Are Really Paying For",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{P}: An Honest Look at the Trade-Offs",
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer"
   ],
   "last_publish_ts": null,
   "failures": {
