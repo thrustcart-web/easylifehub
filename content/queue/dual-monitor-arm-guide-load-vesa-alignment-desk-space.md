@@ -67,6 +67,6 @@ Proper cable routing and ergonomic height alignment transform dual displays into
 
 ### Product Links
 
-- Dual Monitor Arm: https://www.amazon.com/dp/B07T5SY43L?tag=ezylifehub-20
+- Dual Monitor Arm: https://www.amazon.com/dp/B07T5SY43L?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

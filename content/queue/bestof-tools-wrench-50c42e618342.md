@@ -49,8 +49,8 @@ Verify the current product listing for any updates to included accessories or sp
 
 ### Product Links
 
-- Screwdriver Set: https://www.amazon.com/dp/B0FNBV7NG7?tag=ezylifehub-20
-- Tool Set: https://www.amazon.com/dp/B0GR9NLSQZ?tag=ezylifehub-20
-- Jigsaw: https://www.amazon.com/dp/B0H6B4JD26?tag=ezylifehub-20
+- Screwdriver Set: https://www.amazon.com/dp/B0FNBV7NG7?tag=hotr0e-20
+- Tool Set: https://www.amazon.com/dp/B0GR9NLSQZ?tag=hotr0e-20
+- Jigsaw: https://www.amazon.com/dp/B0H6B4JD26?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

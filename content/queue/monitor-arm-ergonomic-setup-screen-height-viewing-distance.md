@@ -67,6 +67,6 @@ Always verify hardware specifications against monitor dimensions, VESA pattern d
 
 ### Product Links
 
-- Monitor Arm: https://www.amazon.com/dp/B0FQM6QB48?tag=ezylifehub-20
+- Monitor Arm: https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

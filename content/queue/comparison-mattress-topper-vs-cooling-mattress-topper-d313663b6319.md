@@ -49,7 +49,7 @@ Review the pocket depth compatibility, confirm care instructions, and check warr
 
 ### Product Links
 
-- Mattress Topper: https://www.amazon.com/dp/B0D3D5LKG9?tag=ezylifehub-20
-- Cooling Mattress Topper: https://www.amazon.com/dp/B0GCD1F8DZ?tag=ezylifehub-20
+- Mattress Topper: https://www.amazon.com/dp/B0D3D5LKG9?tag=hotr0e-20
+- Cooling Mattress Topper: https://www.amazon.com/dp/B0GCD1F8DZ?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

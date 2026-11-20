@@ -49,7 +49,7 @@ Consider your typical training intensity, willingness to learn a wrapping techni
 
 ### Product Links
 
-- Lifting Straps: https://www.amazon.com/dp/B0CK2MTXXK?tag=ezylifehub-20
-- Weight Lifting Gloves: https://www.amazon.com/dp/B07KQP1X5T?tag=ezylifehub-20
+- Lifting Straps: https://www.amazon.com/dp/B0CK2MTXXK?tag=hotr0e-20
+- Weight Lifting Gloves: https://www.amazon.com/dp/B07KQP1X5T?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

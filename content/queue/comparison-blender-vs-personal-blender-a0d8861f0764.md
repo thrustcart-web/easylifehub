@@ -43,7 +43,7 @@ Assess your most common blending scenarios, verify that the accessories match yo
 
 ### Product Links
 
-- Blender: https://www.amazon.com/dp/B0855B5Z6F?tag=ezylifehub-20
-- Personal Blender: https://www.amazon.com/dp/B012T634SM?tag=ezylifehub-20
+- Blender: https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20
+- Personal Blender: https://www.amazon.com/dp/B012T634SM?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.
