@@ -345,7 +345,8 @@ var AMAZON_STOCK_MAX_AGE_SECONDS = 24 * 60 * 60;
 var AMAZON_STOCK_ALLOWED = { IN_STOCK: true, INSTOCK: true, INSTOCKSCARCE: true };
 
 function productItemStockReady_(item) {
-  if (!item || String(item.stock_source || '').toLowerCase() !== 'apify') return false;
+  var source = String(item && item.stock_source || '').toLowerCase();
+  if (!item || (source !== 'serpapi' && source !== 'apify')) return false;
   var status = String(item.availability_type || '').toUpperCase();
   var checkedAt = Number(item.stock_checked_at || 0);
   var age = Math.floor(Date.now() / 1000) - checkedAt;
@@ -355,7 +356,7 @@ function productItemStockReady_(item) {
     age <= AMAZON_STOCK_MAX_AGE_SECONDS;
 }
 
-/** A product link is eligible only with a fresh Apify stock check. */
+/** A product link is eligible only with a fresh SerpApi or Apify stock check. */
 function productLinksReady_(meta) {
   if (!meta || meta.product_links_verified !== true) return false;
   var items = meta.items || [];
@@ -1400,13 +1401,13 @@ function syncPublishedProductLinks() {
       if (!meta || !meta.slug) return;
       bySlug[meta.slug] = meta;
       // A newly generated item may be newer than the last site-wide audit.
-      // Only its own fresh Apify stock check is valid evidence until it expires.
+      // Only a fresh, explicitly sourced SerpApi or Apify stock check is valid until it expires.
       (meta.items || []).forEach(function (item) {
         var asin = String(item && item.asin || '').toUpperCase();
         var checkedAt = Number(item && item.stock_checked_at || 0);
         var stockSource = String(item && item.stock_source || '').toLowerCase();
         var existing = stockByAsin[asin];
-        if (/^[A-Z0-9]{10}$/.test(asin) && stockSource === 'apify' &&
+        if (/^[A-Z0-9]{10}$/.test(asin) && (stockSource === 'apify' || stockSource === 'serpapi') &&
             checkedAt > Number(existing && existing.stock_checked_at || 0)) {
           stockByAsin[asin] = {
             parent_asin: String(item.parent_asin || asin).toUpperCase(),
@@ -1456,7 +1457,7 @@ function syncPublishedProductLinks() {
         var status = String(stock && stock.availability_type || '').toUpperCase();
         var checkedAt = Number(stock && stock.stock_checked_at || 0);
         var stockSource = String(stock && stock.stock_source || '').toLowerCase();
-        var fresh = stockSource === 'apify' && checkedAt > 0 && now >= checkedAt &&
+        var fresh = (stockSource === 'apify' || stockSource === 'serpapi') && checkedAt > 0 && now >= checkedAt &&
           (now - checkedAt) <= AMAZON_STOCK_MAX_AGE_SECONDS;
         var parent = String(stock && stock.parent_asin || asin).toUpperCase();
         if (localAsins[asin]) {
