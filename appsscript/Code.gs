@@ -1769,6 +1769,11 @@ function applyPublishedArticleEnhancement() {
     livePosts.forEach(function (post) { liveById[String(post.id)] = post; });
 
     var results = output.results;
+    var expectedResults = Number(P.getProperty('PUBLISHED_ENHANCEMENT_EXPECTED') || 0);
+    if (expectedResults && results.length !== expectedResults) {
+      throw new Error('Enhancement result count mismatch: expected=' + expectedResults +
+        ', received=' + results.length + '. No Blogger posts were changed by this execution.');
+    }
     var start = Math.max(0, Number(P.getProperty('PUBLISHED_ENHANCEMENT_APPLY_INDEX') || 0));
     var end = Math.min(results.length, start + 5);
     var applied = Number(P.getProperty('PUBLISHED_ENHANCEMENT_APPLIED') || 0);
