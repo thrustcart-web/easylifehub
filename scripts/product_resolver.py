@@ -177,7 +177,7 @@ def _apify_availability(row: dict) -> str:
         return "UNKNOWN"
     if re.search(r"out of stock|currently unavailable|temporarily unavailable|not available", text):
         return "OUT_OF_STOCK"
-    if re.search(r"\\bin stock\\b|only\\s+\\d+\\s+left|available now", text):
+    if re.search(r"\bin stock\b|only\s+\d+\s+left|available now", text):
         return "IN_STOCK"
     return "UNKNOWN"
 
@@ -1179,7 +1179,7 @@ def audit_queue_products() -> dict:
     stock_by_asin = _apify_get_items_by_asin(sorted(all_existing_asins), api_token)
     if all_existing_asins and not stock_by_asin:
         raise ProductResolutionError(
-            "Amazon Creators API GetItems returned zero accessible products. "
+            "Apify returned zero readable product-detail records. "
             "Aborting the audit without rewriting queue links; check API access, request limits and response data."
         )
     used_asins = set(external_asins)
