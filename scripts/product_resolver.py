@@ -576,7 +576,7 @@ def _creators_get_items_by_asin(asins: list[str]) -> dict[str, dict]:
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "x-marketplace": marketplace,
-                "User-Agent": "EasyLifeHubProductResolver/5.0",
+                "User-Agent": "HonestTroveProductResolver/5.0",
             },
             method="POST",
         )
@@ -637,7 +637,7 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
         headers={
             "Authorization": f"Bearer {token}", "Content-Type": "application/json",
             "Accept": "application/json", "x-marketplace": marketplace,
-            "User-Agent": "EasyLifeHubProductResolver/5.0",
+            "User-Agent": "HonestTroveProductResolver/5.0",
         }, method="POST",
     )
     data = _creators_catalog_json(req, "Creators API SearchItems")
