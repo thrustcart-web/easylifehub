@@ -321,7 +321,7 @@ def _jsonld(article: dict, topic: dict, aff: Affiliate, cfg: dict) -> str:
 
 
 def render_html(article: dict, topic: dict, cfg: dict, aff: Affiliate, hero: str) -> str:
-    """Render every article with the fixed EasyLifeHub green review layout.
+    """Render every article with the fixed Honest Trove green review layout.
 
     The layout is deliberately independent of topic: only article copy,
     section headings and the affiliate destination change from post to post.
