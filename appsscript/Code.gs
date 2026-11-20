@@ -1446,7 +1446,7 @@ function status() {
   Logger.log('Breaker         : ' + (breakerOpen_() ? 'OPEN (paused)' : 'closed'));
   Logger.log('Posting hours   : ' + cfg('POST_HOURS') + ' ' + cfg('TZ'));
   Logger.log('Automation      : ' + (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() === 'true' ? 'ENABLED' : 'DISABLED'));
-  Logger.log('Product lookup  : Amazon Creators API (new + in-stock only); guarded SerpApi fallback');
+  Logger.log('Product lookup  : Apify Amazon crawler (explicit in-stock data; paid calls guarded)');
   var triggers = ScriptApp.getProjectTriggers();
   Logger.log('Triggers        : ' + triggers.length);
   triggers.forEach(function (trigger) {
