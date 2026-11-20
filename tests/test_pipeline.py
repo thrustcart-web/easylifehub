@@ -563,18 +563,59 @@ class TestProductResolution(unittest.TestCase):
             "OPNICE Four Tier Desk File Organizer"
         ))
 
-    def test_config_defaults_to_apify_without_fallback(self):
+    def test_config_defaults_to_serpapi_with_apify_fallback(self):
         cfg = fresh_cfg()
-        self.assertEqual(cfg["product_discovery"]["provider"], "apify")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
+        self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["apify"])
 
     def test_selected_provider_uses_config_when_workflow_override_is_absent(self):
         old = os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            self.assertEqual(product_resolver._selected_provider(), "apify")
+            self.assertEqual(product_resolver._selected_provider(), "serpapi")
         finally:
             if old is not None:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
+
+    def test_serpapi_stock_text_parser_fails_closed_on_unknown_status(self):
+        self.assertEqual(product_resolver._serpapi_availability("In Stock"), "IN_STOCK")
+        self.assertEqual(product_resolver._serpapi_availability("Only 2 left in stock - order soon."), "IN_STOCK")
+        self.assertEqual(product_resolver._serpapi_availability("Currently unavailable"), "OUT_OF_STOCK")
+        self.assertEqual(product_resolver._serpapi_availability("Ships in 2 weeks"), "UNKNOWN")
+
+    def test_serpapi_search_keeps_only_explicit_in_stock_product_rows(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return json.dumps({
+                    "search_metadata": {"status": "Success"},
+                    "organic_results": [
+                        {"title": "Marbrasse Pen Organizer with 2 Drawer", "asin": "B0BYMRJD7R", "stock": "In Stock"},
+                        {"title": "Marbrasse Pen Organizer with 3 Drawer", "asin": "B0BYMRJD7S", "stock": "Currently unavailable"},
+                        {"title": "Marbrasse Pen Organizer with 4 Drawer", "asin": "B0BYMRJD7T"}
+                    ]
+                }).encode("utf-8")
+
+        captured = {}
+        original = product_resolver.request.urlopen
+
+        def fake_urlopen(req, timeout=0):
+            captured["url"] = req.full_url
+            return FakeResponse()
+
+        product_resolver.request.urlopen = fake_urlopen
+        try:
+            rows = product_resolver._search_amazon_serpapi("Marbrasse Pen Organizer", "fake-key")
+        finally:
+            product_resolver.request.urlopen = original
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["asin"], "B0BYMRJD7R")
+        self.assertEqual(rows[0]["stock_source"], "serpapi")
+        self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
+        self.assertIn("engine=amazon", captured["url"])
 
     def test_apify_provider_uses_its_own_spend_guard_and_token(self):
         original_search = product_resolver._search_amazon
@@ -623,12 +664,13 @@ class TestProductResolution(unittest.TestCase):
             else:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
-    def test_serpapi_is_not_an_enabled_product_source(self):
+    def test_serpapi_is_primary_and_apify_is_configured_fallback(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
+        os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "disabled"):
-                product_resolver._selected_provider()
+            self.assertEqual(product_resolver._selected_provider(), "serpapi")
+            self.assertEqual(product_resolver._fallback_provider_names("serpapi"), ["apify"])
+            self.assertEqual(product_resolver._fallback_provider_names("apify"), [])
         finally:
             if old is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
@@ -1443,8 +1485,8 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["content"]["min_words"], 501)
         self.assertEqual(cfg["ai"]["primary"], "groq")
         self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
-        self.assertEqual(cfg["product_discovery"]["provider"], "apify")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
+        self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["apify"])
 
     def test_product_discovery_defaults_to_apify(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
