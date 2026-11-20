@@ -364,6 +364,7 @@ def run(batch_id: str) -> Path:
                     raise ValueError("enhanced article did not grow")
                 result["status"] = "enhanced"
                 result["content"] = updated
+                result["enhanced_sha256"] = sha256_text(updated)
                 result["provider"] = provider
                 result["added_words"] = additions["word_count"]
             log.info(
