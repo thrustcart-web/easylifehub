@@ -1000,7 +1000,7 @@ function retagBloggerAmazonLinks() {
 
   P.setProperty('BLOGGER_TITLES', JSON.stringify(Object.keys(titles)));
   var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
-  var currentUrl = String(blog.url || '').replace(/\\/+$/, '');
+  var currentUrl = String(blog.url || '').replace(/\/+$/, '');
   if (currentUrl) P.setProperty('BLOG_URL', currentUrl);
 
   Logger.log(
