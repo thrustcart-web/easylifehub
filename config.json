@@ -130,20 +130,27 @@
     "show_chips_in_posts": false
   },
   "product_discovery": {
-    "provider": "apify",
+    "provider": "serpapi",
     "amazon_domain": "amazon.com",
     "require_exact_title_tokens": true,
     "cache_file": ".cache/amazon_asins.json",
     "actor": "junglee/amazon-crawler",
-    "api_env": "TEST_API",
+    "api_env": "SERPAPI_API_KEY",
     "max_results_per_search": 3,
     "search_pages": 1,
     "scrape_product_details": true,
     "available_providers": [
+      "serpapi",
       "apify"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
-    "fallback_note": "Apify is the only configured product source. It reads Amazon product details and explicit in-stock status. Paid lookups require both per-run approval and APIFY_SPEND_ENABLED=true. Amazon Creators API and SerpApi are not used by the active pipeline.",
-    "fallback_providers": []
+    "fallback_note": "SerpApi is the primary Amazon search source and only accepts results with explicit in-stock text. Apify is the guarded product-detail fallback and is also used for bulk stock audits. Each provider has a separate API secret and spending guard. Amazon Creators API is not used by the active pipeline.",
+    "fallback_providers": [
+      "apify"
+    ],
+    "serpapi_api_env": "SERPAPI_API_KEY",
+    "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
+    "apify_api_env": "TEST_API",
+    "apify_spend_guard": "APIFY_SPEND_ENABLED"
   }
 }
