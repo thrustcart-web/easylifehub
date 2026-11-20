@@ -1572,14 +1572,17 @@ function enhancementGitHubPutJson_(path, value, message) {
 }
 
 function enhancementGitHubGetJson_(path) {
-  var encodedPath = String(path).split('/').map(encodeURIComponent).join('/');
-  var file = enhancementGitHubRequest_('get', 'contents/' + encodedPath + '?ref=main', null, false);
-  if (!file || file.encoding !== 'base64' || !file.content) {
-    throw new Error('GitHub enhancement output is not ready or is not base64 encoded: ' + path);
+  // Read the public raw file directly so large multi-article results are not
+  // subject to the GitHub Contents API's base64 response-size limit.
+  var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+  var rawPath = String(path).split('/').map(encodeURIComponent).join('/');
+  var url = 'https://raw.githubusercontent.com/' + repo + '/main/' + rawPath;
+  var response = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+  var code = response.getResponseCode();
+  if (code < 200 || code >= 300) {
+    throw new Error('GitHub enhancement output is not ready (' + code + '): ' + path);
   }
-  var bytes = Utilities.base64Decode(String(file.content).replace(/\s/g, ''));
-  var decoded = Utilities.newBlob(bytes).getDataAsString('UTF-8');
-  return JSON.parse(decoded);
+  return JSON.parse(response.getContentText());
 }
 
 function enhancementSha256_(value) {
@@ -1868,21 +1871,37 @@ function rollbackLastPublishedArticleEnhancement() {
     if (!batchId) throw new Error('No enhancement batch is available for rollback.');
 
     var inputPath = 'content/enhancement/jobs/' + batchId + '.input.json';
+    var outputPath = 'content/enhancement/jobs/' + batchId + '.output.json';
     var input = enhancementGitHubGetJson_(inputPath);
+    var output = enhancementGitHubGetJson_(outputPath);
     var originals = {};
     (input.posts || []).forEach(function (post) {
       originals[String(post.id)] = String(post.content || '');
+    });
+    var resultById = {};
+    (output.results || []).forEach(function (item) {
+      resultById[String(item.post_id)] = item;
     });
     var live = listBlogPostsByStatus_('LIVE');
     var restored = 0;
     var skipped = 0;
     var errors = 0;
     live.forEach(function (post) {
-      var originalHtml = originals[String(post.id)];
-      if (!originalHtml || String(post.content || '').indexOf('<!-- honest-trove-enhancement:v1 -->') === -1) return;
+      var postId = String(post.id);
+      var originalHtml = originals[postId];
+      var result = resultById[postId] || {};
+      var currentHtml = String(post.content || '');
+      if (!originalHtml || result.status !== 'enhanced' ||
+          currentHtml.indexOf('<!-- honest-trove-enhancement:v1 -->') === -1) return;
+      // Do not roll back an article that someone edited after the enhancement.
+      if (!result.enhanced_sha256 || enhancementSha256_(currentHtml) !== String(result.enhanced_sha256)) {
+        skipped++;
+        Logger.log('ROLLBACK SKIPPED: article changed after enhancement | ' + post.title);
+        return;
+      }
       try {
-        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
-          content: originalHtml
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + postId, {
+          content: sanitizePostHtml_(originalHtml)
         });
         restored++;
         Logger.log('RESTORED ORIGINAL ARTICLE: ' + post.title);
