@@ -1551,6 +1551,11 @@ function enhancementGitHubRequest_(method, path, payload, allowNotFound) {
   var code = response.getResponseCode();
   var body = response.getContentText();
   if (allowNotFound && code === 404) return null;
+  if (code === 403) {
+    throw new Error('GitHub API 403 for ' + path +
+      ': GITHUB_ACTIONS_TOKEN in Apps Script needs Contents: Read and write and Actions: Read and write permissions on ' +
+      repo + '. ' + body.slice(0, 300));
+  }
   if (code < 200 || code >= 300) {
     throw new Error('GitHub API ' + code + ' for ' + path + ': ' + body.slice(0, 500));
   }
