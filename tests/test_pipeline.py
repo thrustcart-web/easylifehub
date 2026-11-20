@@ -1488,11 +1488,11 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
         self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["apify"])
 
-    def test_product_discovery_defaults_to_apify(self):
+    def test_product_discovery_defaults_to_serpapi(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            self.assertEqual(product_resolver._selected_provider(), "apify")
+            self.assertEqual(product_resolver._selected_provider(), "serpapi")
         finally:
             if old is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
