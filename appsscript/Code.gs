@@ -1450,7 +1450,7 @@ function syncPublishedProductLinks() {
       // A stale/missing stock audit must never turn a useful product link into
       // dead text. Amazon itself can show availability on the destination page.
       var preservedLinks = 0;
-      html = html.replace(/<a\\b([^>]*)>([\\s\\S]*?)<\\/a\\s*>/gi, function (full, attrs, inner) {
+      html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function (full, attrs, inner) {
         var asin = amazonLinkAsin_(attrs);
         if (!asin) return full;
         preservedLinks++;
