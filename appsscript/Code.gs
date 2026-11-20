@@ -43,7 +43,7 @@ var DEFAULTS = {
   REFILL_COOLDOWN_HOURS: '12',
   AUTOMATION_ENABLED: 'false',   // keep scheduled publishing/refill off until explicitly approved
   // ---- category hub + related posts (topical authority plumbing) ----
-  BLOG_URL:        '',                    // blank = auto-detected once from the API
+  BLOG_URL:        '',                    // current custom domain is refreshed from Blogger API
   CATEGORY_HUB:    'content/categories/index.html',
   CATEGORY_PAGE:   'Browse All Categories',
   RELATED_LIMIT:   '4',
@@ -729,7 +729,7 @@ function installTrigger() {
  * REFILL_MIN_PENDING unpublished, approved v4 articles remain.
  *
  * Requires Script Property GITHUB_ACTIONS_TOKEN (legacy GITHUB_TOKEN is also accepted) with a fine-grained GitHub token
- * that has Actions: Read and write on the EasyLifeHub repository.
+ * that has Actions: Read and write on the Honest Trove automation repository.
  */
 function refillQueueIfLow() {
   if (String(cfg('AUTOMATION_ENABLED', 'false')).toLowerCase() !== 'true') {
