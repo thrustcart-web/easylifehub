@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       allow_paid_lookup:
-        description: 'Set true to permit this run's SerpApi search and Apify product-detail stock checks/replacements (each service still has a separate repository variable)'
+        description: "Set true to permit SerpApi search and Apify product-detail stock checks/replacements; each service still has a separate repository variable"
         required: false
         type: boolean
         default: false
