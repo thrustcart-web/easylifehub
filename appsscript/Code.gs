@@ -1526,7 +1526,7 @@ function enhancementGitHubToken_() {
 
 function enhancementGitHubRequest_(method, path, payload, allowNotFound) {
   var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
-  var url = 'https://api.github.com/repos/' + repo + '/' + String(path || '').replace(/^\\/+/, '');
+  var url = 'https://api.github.com/repos/' + repo + '/' + String(path || '').replace(/^\/+/, '');
   var options = {
     method: method,
     headers: {
@@ -1570,7 +1570,7 @@ function enhancementGitHubGetJson_(path) {
   if (!file || file.encoding !== 'base64' || !file.content) {
     throw new Error('GitHub enhancement output is not ready or is not base64 encoded: ' + path);
   }
-  var bytes = Utilities.base64Decode(String(file.content).replace(/\\s/g, ''));
+  var bytes = Utilities.base64Decode(String(file.content).replace(/\s/g, ''));
   var decoded = Utilities.newBlob(bytes).getDataAsString('UTF-8');
   return JSON.parse(decoded);
 }
@@ -1589,8 +1589,8 @@ function enhancementSha256_(value) {
 
 function enhancementAnchorHrefs_(html) {
   var hrefs = [];
-  String(html || '').replace(/<a\\b([^>]*)>/gi, function (tag, attrs) {
-    var match = /\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))/i.exec(attrs || '');
+  String(html || '').replace(/<a\b([^>]*)>/gi, function (tag, attrs) {
+    var match = /\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(attrs || '');
     if (match) {
       for (var i = 1; i <= 3; i++) {
         if (match[i] !== undefined) {
@@ -1606,9 +1606,9 @@ function enhancementAnchorHrefs_(html) {
 
 function enhancementIsAmazonHref_(href) {
   var value = String(href || '').replace(/&amp;/gi, '&').trim();
-  var match = /^https?:\\/\\/([^\\/?#]+)/i.exec(value);
+  var match = /^https?:\/\/([^\/?#]+)/i.exec(value);
   if (!match) return false;
-  var host = match[1].toLowerCase().replace(/:\\d+$/, '');
+  var host = match[1].toLowerCase().replace(/:\d+$/, '');
   return host === 'amazon.com' || host.endsWith('.amazon.com') ||
     host === 'amzn.to' || host === 'amzn.com';
 }
