@@ -1,6 +1,11 @@
+import sys
 import unittest
+from pathlib import Path
 
-from scripts.enhance_published_articles import (
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from enhance_published_articles import (
     MARKER,
     enhance_html,
     extract_anchor_hrefs,
