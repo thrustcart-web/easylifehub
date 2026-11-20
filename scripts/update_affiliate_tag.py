@@ -13,18 +13,19 @@ QUEUE_DIR = ROOT / "content" / "queue"
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("Usage: python3 scripts/update_affiliate_tag.py NEW_TRACKING_ID", file=sys.stderr)
+    if len(sys.argv) not in {2, 3}:
+        print("Usage: python3 scripts/update_affiliate_tag.py NEW_TRACKING_ID [OLD_TRACKING_ID]", file=sys.stderr)
         return 2
 
     new_tag = sys.argv[1].strip()
+    requested_old_tag = sys.argv[2].strip() if len(sys.argv) == 3 else ""
     if not re.fullmatch(r"[A-Za-z0-9-]{3,64}", new_tag):
         print("ERROR: tracking ID must contain only letters, numbers, and hyphens.", file=sys.stderr)
         return 2
 
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     affiliate = config.setdefault("affiliate", {})
-    old_tag = str(affiliate.get("tag") or "").strip()
+    old_tag = requested_old_tag or str(affiliate.get("tag") or "").strip()
 
     if not old_tag:
         print("ERROR: config.json does not contain affiliate.tag; refusing to guess the old tag.", file=sys.stderr)
