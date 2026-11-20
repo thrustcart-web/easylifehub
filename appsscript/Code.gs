@@ -1508,6 +1508,392 @@ function syncPublishedProductLinks() {
   }
 }
 
+
+/**
+ * Published-content enhancement bridge.
+ * Exports every LIVE Blogger post to a backed-up GitHub input file, dispatches
+ * the AI enhancement workflow, then safely applies the completed HTML in
+ * small batches. Only post.content is patched; title, labels, status and dates
+ * are never sent in the update request.
+ */
+function enhancementGitHubToken_() {
+  var token = String(P.getProperty('GITHUB_ACTIONS_TOKEN') || P.getProperty('GITHUB_TOKEN') || '').trim();
+  if (!token) {
+    throw new Error('GITHUB_ACTIONS_TOKEN is missing from Apps Script Project Settings > Script Properties.');
+  }
+  return token;
+}
+
+function enhancementGitHubRequest_(method, path, payload, allowNotFound) {
+  var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+  var url = 'https://api.github.com/repos/' + repo + '/' + String(path || '').replace(/^\\/+/, '');
+  var options = {
+    method: method,
+    headers: {
+      Authorization: 'Bearer ' + enhancementGitHubToken_(),
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    },
+    muteHttpExceptions: true
+  };
+  if (payload) {
+    options.contentType = 'application/json';
+    options.payload = JSON.stringify(payload);
+  }
+  var response = UrlFetchApp.fetch(url, options);
+  var code = response.getResponseCode();
+  var body = response.getContentText();
+  if (allowNotFound && code === 404) return null;
+  if (code < 200 || code >= 300) {
+    throw new Error('GitHub API ' + code + ' for ' + path + ': ' + body.slice(0, 500));
+  }
+  return body ? JSON.parse(body) : {};
+}
+
+function enhancementGitHubPutJson_(path, value, message) {
+  var encodedPath = String(path).split('/').map(encodeURIComponent).join('/');
+  var existing = enhancementGitHubRequest_('get', 'contents/' + encodedPath + '?ref=main', null, true);
+  var textValue = JSON.stringify(value);
+  var content = Utilities.base64Encode(Utilities.newBlob(textValue, 'application/json').getBytes());
+  var payload = {
+    message: message,
+    content: content,
+    branch: 'main'
+  };
+  if (existing && existing.sha) payload.sha = existing.sha;
+  return enhancementGitHubRequest_('put', 'contents/' + encodedPath, payload, false);
+}
+
+function enhancementGitHubGetJson_(path) {
+  var encodedPath = String(path).split('/').map(encodeURIComponent).join('/');
+  var file = enhancementGitHubRequest_('get', 'contents/' + encodedPath + '?ref=main', null, false);
+  if (!file || file.encoding !== 'base64' || !file.content) {
+    throw new Error('GitHub enhancement output is not ready or is not base64 encoded: ' + path);
+  }
+  var bytes = Utilities.base64Decode(String(file.content).replace(/\\s/g, ''));
+  var decoded = Utilities.newBlob(bytes).getDataAsString('UTF-8');
+  return JSON.parse(decoded);
+}
+
+function enhancementSha256_(value) {
+  var bytes = Utilities.computeDigest(
+    Utilities.DigestAlgorithm.SHA_256,
+    String(value || ''),
+    Utilities.Charset.UTF_8
+  );
+  return bytes.map(function (byte) {
+    var unsigned = byte < 0 ? byte + 256 : byte;
+    return ('0' + unsigned.toString(16)).slice(-2);
+  }).join('');
+}
+
+function enhancementAnchorHrefs_(html) {
+  var hrefs = [];
+  String(html || '').replace(/<a\\b([^>]*)>/gi, function (tag, attrs) {
+    var match = /\\bhref\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))/i.exec(attrs || '');
+    if (match) {
+      for (var i = 1; i <= 3; i++) {
+        if (match[i] !== undefined) {
+          hrefs.push(String(match[i]));
+          break;
+        }
+      }
+    }
+    return tag;
+  });
+  return hrefs;
+}
+
+function enhancementIsAmazonHref_(href) {
+  var value = String(href || '').replace(/&amp;/gi, '&').trim();
+  var match = /^https?:\\/\\/([^\\/?#]+)/i.exec(value);
+  if (!match) return false;
+  var host = match[1].toLowerCase().replace(/:\\d+$/, '');
+  return host === 'amazon.com' || host.endsWith('.amazon.com') ||
+    host === 'amzn.to' || host === 'amzn.com';
+}
+
+function enhancementSameAmazonLinks_(before, after) {
+  var first = enhancementAnchorHrefs_(before).filter(enhancementIsAmazonHref_);
+  var secondAll = enhancementAnchorHrefs_(after);
+  var second = secondAll.filter(enhancementIsAmazonHref_);
+  if (first.length !== second.length) return false;
+  for (var i = 0; i < first.length; i++) {
+    if (first[i] !== second[i]) return false;
+  }
+  return secondAll.every(enhancementIsAmazonHref_);
+}
+
+/**
+ * START: capture all currently published Blogger posts and queue an AI job.
+ * Run this once. The full original HTML is backed up in the GitHub job input.
+ */
+function startPublishedArticleEnhancement() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Enhancement start skipped: another Apps Script execution is running.');
+    return;
+  }
+  try {
+    var activeBatch = String(P.getProperty('PUBLISHED_ENHANCEMENT_BATCH_ID') || '').trim();
+    if (activeBatch) {
+      throw new Error('An enhancement batch is already active: ' + activeBatch +
+        '. Apply its output or finish it before starting another batch.');
+    }
+
+    var posts = listBlogPostsByStatus_('LIVE');
+    if (!posts.length) {
+      Logger.log('No LIVE Blogger posts found. Nothing to enhance.');
+      return;
+    }
+
+    var batchId = 'ht-enhance-' + Utilities.formatDate(new Date(), 'UTC', 'yyyyMMdd-HHmmss') +
+      '-' + Utilities.getUuid().replace(/-/g, '').slice(0, 8);
+    var exportPosts = posts.map(function (post) {
+      return {
+        id: String(post.id || ''),
+        title: String(post.title || ''),
+        status: 'LIVE',
+        published: String(post.published || ''),
+        updated: String(post.updated || ''),
+        content: String(post.content || '')
+      };
+    }).filter(function (post) { return post.id && post.content; });
+
+    if (!exportPosts.length) throw new Error('LIVE Blogger posts were found, but none had readable HTML content.');
+
+    var input = {
+      schema_version: 1,
+      batch_id: batchId,
+      blog_id: String(cfg('BLOG_ID')),
+      blog_url: blogUrl_(),
+      created_at: new Date().toISOString(),
+      scope: 'LIVE_ONLY',
+      rules: {
+        preserve_existing_html_structure: true,
+        preserve_amazon_hrefs_exactly: true,
+        remove_non_amazon_anchor_links: true,
+        append_only_editorial_enhancement: true
+      },
+      posts: exportPosts
+    };
+    var inputPath = 'content/enhancement/jobs/' + batchId + '.input.json';
+    enhancementGitHubPutJson_(inputPath, input,
+      'backup: export LIVE Blogger posts for enhancement ' + batchId);
+
+    var repo = String(cfg('GITHUB_REPO', 'thrustcart-web/easylifehub')).trim();
+    var dispatchUrl = 'https://api.github.com/repos/' + repo +
+      '/actions/workflows/enhance-published-articles.yml/dispatches';
+    var dispatch = UrlFetchApp.fetch(dispatchUrl, {
+      method: 'post',
+      contentType: 'application/json',
+      headers: {
+        Authorization: 'Bearer ' + enhancementGitHubToken_(),
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      },
+      payload: JSON.stringify({ ref: 'main', inputs: { batch_id: batchId } }),
+      muteHttpExceptions: true
+    });
+    var status = dispatch.getResponseCode();
+    if (status !== 204) {
+      throw new Error('Enhancement workflow dispatch failed (' + status + '): ' +
+        dispatch.getContentText().slice(0, 500) +
+        '. The original backup remains at ' + inputPath);
+    }
+
+    P.setProperty('PUBLISHED_ENHANCEMENT_BATCH_ID', batchId);
+    P.setProperty('PUBLISHED_ENHANCEMENT_APPLY_INDEX', '0');
+    P.setProperty('PUBLISHED_ENHANCEMENT_EXPECTED', String(exportPosts.length));
+    P.setProperty('PUBLISHED_ENHANCEMENT_APPLIED', '0');
+    P.setProperty('PUBLISHED_ENHANCEMENT_SKIPPED', '0');
+    P.setProperty('PUBLISHED_ENHANCEMENT_ERRORS', '0');
+    Logger.log('PUBLISHED ARTICLE ENHANCEMENT DISPATCHED');
+    Logger.log('Batch ID: ' + batchId);
+    Logger.log('LIVE posts exported: ' + exportPosts.length);
+    Logger.log('Original HTML backup: ' + inputPath);
+    Logger.log('Next: wait for the GitHub workflow to finish successfully, then run applyPublishedArticleEnhancement().');
+    return { batchId: batchId, posts: exportPosts.length, inputPath: inputPath };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
+ * APPLY: update at most five LIVE posts per execution. Additional one-time
+ * triggers continue automatically until all results have been checked.
+ */
+function applyPublishedArticleEnhancement() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Enhancement apply skipped: another execution holds the script lock.');
+    return;
+  }
+  try {
+    var batchId = String(P.getProperty('PUBLISHED_ENHANCEMENT_BATCH_ID') || '').trim();
+    if (!batchId) {
+      Logger.log('No active published-article enhancement batch.');
+      return;
+    }
+
+    var outputPath = 'content/enhancement/jobs/' + batchId + '.output.json';
+    var output;
+    try {
+      output = enhancementGitHubGetJson_(outputPath);
+    } catch (readError) {
+      Logger.log('Enhancement output is not available yet. Confirm the GitHub workflow succeeded, then run this function again. ' +
+        String(readError).slice(0, 350));
+      return;
+    }
+    if (String(output.batch_id || '') !== batchId || !Array.isArray(output.results)) {
+      throw new Error('Enhancement output batch ID or result structure is invalid.');
+    }
+
+    var livePosts = listBlogPostsByStatus_('LIVE');
+    var liveById = {};
+    livePosts.forEach(function (post) { liveById[String(post.id)] = post; });
+
+    var results = output.results;
+    var start = Math.max(0, Number(P.getProperty('PUBLISHED_ENHANCEMENT_APPLY_INDEX') || 0));
+    var end = Math.min(results.length, start + 5);
+    var applied = Number(P.getProperty('PUBLISHED_ENHANCEMENT_APPLIED') || 0);
+    var skipped = Number(P.getProperty('PUBLISHED_ENHANCEMENT_SKIPPED') || 0);
+    var errors = Number(P.getProperty('PUBLISHED_ENHANCEMENT_ERRORS') || 0);
+
+    for (var i = start; i < end; i++) {
+      var item = results[i] || {};
+      if (item.status !== 'enhanced') {
+        skipped++;
+        Logger.log('ENHANCEMENT SKIPPED: ' + (item.title || item.post_id || 'unknown') +
+          ' | status=' + String(item.status || 'missing') +
+          (item.error ? ' | ' + String(item.error).slice(0, 180) : ''));
+        continue;
+      }
+
+      var postId = String(item.post_id || '');
+      var currentPost = liveById[postId];
+      if (!currentPost) {
+        skipped++;
+        Logger.log('ENHANCEMENT SKIPPED: post is no longer LIVE or cannot be found | ' + postId);
+        continue;
+      }
+
+      var currentHtml = String(currentPost.content || '');
+      var revisedHtml = String(item.content || '');
+      if (!item.original_sha256 || enhancementSha256_(currentHtml) !== String(item.original_sha256)) {
+        skipped++;
+        Logger.log('ENHANCEMENT CONFLICT: article changed after export; left untouched | ' + currentPost.title);
+        continue;
+      }
+      if (revisedHtml.indexOf('<!-- honest-trove-enhancement:v1 -->') === -1 ||
+          !enhancementSameAmazonLinks_(currentHtml, revisedHtml)) {
+        skipped++;
+        Logger.log('ENHANCEMENT VALIDATION FAILED: structure/link safety check did not pass | ' + currentPost.title);
+        continue;
+      }
+
+      try {
+        // Content-only PATCH: keep Blogger's original title, labels and dates.
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + postId, {
+          content: revisedHtml
+        });
+        applied++;
+        Logger.log('ENHANCED LIVE ARTICLE: ' + currentPost.title +
+          ' | added words=' + Number(item.added_words || 0) +
+          ' | provider=' + String(item.provider || 'unknown'));
+        Utilities.sleep(350);
+      } catch (patchError) {
+        errors++;
+        Logger.log('ENHANCEMENT UPDATE FAILED: ' + currentPost.title + ' | ' +
+          String(patchError).slice(0, 250));
+      }
+    }
+
+    P.setProperty('PUBLISHED_ENHANCEMENT_APPLY_INDEX', String(end));
+    P.setProperty('PUBLISHED_ENHANCEMENT_APPLIED', String(applied));
+    P.setProperty('PUBLISHED_ENHANCEMENT_SKIPPED', String(skipped));
+    P.setProperty('PUBLISHED_ENHANCEMENT_ERRORS', String(errors));
+
+    if (end < results.length) {
+      ScriptApp.getProjectTriggers().forEach(function (trigger) {
+        if (trigger.getHandlerFunction() === 'applyPublishedArticleEnhancement') {
+          ScriptApp.deleteTrigger(trigger);
+        }
+      });
+      ScriptApp.newTrigger('applyPublishedArticleEnhancement').timeBased().after(60 * 1000).create();
+      Logger.log('Enhancement progress: ' + end + '/' + results.length +
+        ' checked. The next batch of up to five posts is scheduled automatically.');
+    } else {
+      Logger.log('PUBLISHED ARTICLE ENHANCEMENT FINISHED');
+      Logger.log('Results: total=' + results.length + ', applied=' + applied +
+        ', skipped=' + skipped + ', errors=' + errors);
+      Logger.log('Backup retained in GitHub: content/enhancement/jobs/' + batchId + '.input.json');
+      P.setProperty('PUBLISHED_ENHANCEMENT_LAST_DONE_BATCH_ID', batchId);
+      P.deleteProperty('PUBLISHED_ENHANCEMENT_BATCH_ID');
+      P.deleteProperty('PUBLISHED_ENHANCEMENT_APPLY_INDEX');
+      ScriptApp.getProjectTriggers().forEach(function (trigger) {
+        if (trigger.getHandlerFunction() === 'applyPublishedArticleEnhancement') {
+          ScriptApp.deleteTrigger(trigger);
+        }
+      });
+    }
+    return { checked: end, total: results.length, applied: applied, skipped: skipped, errors: errors };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
+ * Roll back the last enhancement batch using its original HTML backup.
+ * It only restores posts that still contain this enhancement marker.
+ */
+function rollbackLastPublishedArticleEnhancement() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) {
+    Logger.log('Enhancement rollback skipped: another execution holds the script lock.');
+    return;
+  }
+  try {
+    var batchId = String(
+      P.getProperty('PUBLISHED_ENHANCEMENT_BATCH_ID') ||
+      P.getProperty('PUBLISHED_ENHANCEMENT_LAST_DONE_BATCH_ID') || ''
+    ).trim();
+    if (!batchId) throw new Error('No enhancement batch is available for rollback.');
+
+    var inputPath = 'content/enhancement/jobs/' + batchId + '.input.json';
+    var input = enhancementGitHubGetJson_(inputPath);
+    var originals = {};
+    (input.posts || []).forEach(function (post) {
+      originals[String(post.id)] = String(post.content || '');
+    });
+    var live = listBlogPostsByStatus_('LIVE');
+    var restored = 0;
+    var skipped = 0;
+    var errors = 0;
+    live.forEach(function (post) {
+      var originalHtml = originals[String(post.id)];
+      if (!originalHtml || String(post.content || '').indexOf('<!-- honest-trove-enhancement:v1 -->') === -1) return;
+      try {
+        bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
+          content: originalHtml
+        });
+        restored++;
+        Logger.log('RESTORED ORIGINAL ARTICLE: ' + post.title);
+        Utilities.sleep(350);
+      } catch (err) {
+        errors++;
+        Logger.log('ROLLBACK FAILED: ' + post.title + ' | ' + String(err).slice(0, 250));
+      }
+    });
+    Logger.log('ENHANCEMENT ROLLBACK FINISHED: restored=' + restored +
+      ', skipped=' + skipped + ', errors=' + errors + ', batch=' + batchId);
+    P.setProperty('PUBLISHED_ENHANCEMENT_LAST_ROLLBACK_BATCH_ID', batchId);
+    return { restored: restored, skipped: skipped, errors: errors, batchId: batchId };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
 /** Full status report. */
 function status() {
   removeLegacyPaidLookupToggle_();
