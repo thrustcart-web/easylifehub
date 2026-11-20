@@ -940,62 +940,31 @@ function listBlogPostsByStatus_(status) {
 }
 
 /**
- * Replace old brand wording in HTML text nodes only. HTML attributes, links,
- * image URLs and other destinations are left untouched.
+ * Refresh the Blogger title cache and the current custom-domain URL from
+ * Blogger itself. Does not create, edit, delete, or publish any blog post.
  */
-function replaceOldBrandInHtmlTextNodes_(html) {
-  return String(html || '').split(/(<[^>]*>)/g).map(function (part, index) {
-    if (index % 2 !== 0) return part;
-    return part.replace(/Easy\s*Life\s*Hub/gi, 'Honest Trove');
-  }).join('');
-}
-
-/**
- * One-time, repeat-safe brand migration for the public welcome article.
- * Renames its title and visible text, preserves its URL and all link targets,
- * then refreshes BLOGGER_TITLES from the actual Blogger posts.
- */
-function renameWelcomePostForHonestTrove() {
-  var oldTitle = 'Welcome to EasyLifeHub — What This Blog Is About';
-  var newTitle = 'Welcome to Honest Trove — What This Blog Is About';
-  var oldKey = normalizedArticleTitleKey_(oldTitle);
-  var newKey = normalizedArticleTitleKey_(newTitle);
+function refreshBloggerTitlesOnly() {
   var posts = listBlogPostsByStatus_('LIVE')
     .concat(listBlogPostsByStatus_('SCHEDULED'))
     .concat(listBlogPostsByStatus_('DRAFT'));
-  var renamed = 0;
-  var alreadyNew = 0;
-
-  posts.forEach(function (post) {
-    var key = normalizedArticleTitleKey_(post.title || '');
-    if (key === oldKey) {
-      var updatedContent = replaceOldBrandInHtmlTextNodes_(post.content || '');
-      bloggerCall_('PATCH', '/blogs/' + cfg('BLOG_ID') + '/posts/' + post.id, {
-        title: newTitle,
-        content: updatedContent
-      });
-      post.title = newTitle;
-      post.content = updatedContent;
-      renamed++;
-    } else if (key === newKey) {
-      alreadyNew++;
-    }
-  });
-
   var titleSet = {};
   posts.forEach(function (post) {
     var title = String(post.title || '').trim();
     if (title) titleSet[title] = true;
   });
-  P.setProperty('BLOGGER_TITLES', JSON.stringify(Object.keys(titleSet)));
 
-  if (!renamed && !alreadyNew) {
-    Logger.log('No exact welcome article title was found. No Blogger post was changed.');
-  } else {
-    Logger.log('Honest Trove welcome article migration complete. Renamed=' + renamed +
-      ', already renamed=' + alreadyNew + ', BLOGGER_TITLES refreshed=' + Object.keys(titleSet).length);
-  }
-  return { renamed: renamed, alreadyRenamed: alreadyNew, bloggerTitles: Object.keys(titleSet).length };
+  var titles = Object.keys(titleSet);
+  P.setProperty('BLOGGER_TITLES', JSON.stringify(titles));
+
+  var blog = bloggerCall_('GET', '/blogs/' + cfg('BLOG_ID'));
+  var currentUrl = String(blog.url || '').replace(/\\/+$/, '');
+  if (currentUrl) P.setProperty('BLOG_URL', currentUrl);
+
+  Logger.log('Blogger title cache refreshed: ' + titles.length + ' unique titles.');
+  Logger.log('Current Blogger name: ' + String(blog.name || '(not returned)'));
+  Logger.log('Current Blogger URL: ' + (currentUrl || '(not returned)'));
+  Logger.log('No Blogger posts were modified.');
+  return { titleCount: titles.length, blogName: blog.name || '', blogUrl: currentUrl };
 }
 
 function normalizedArticleTitleKey_(title) {
