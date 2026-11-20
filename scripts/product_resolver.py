@@ -304,7 +304,7 @@ def _serpapi_availability(value: object) -> str:
         return "UNKNOWN"
     if re.search(r"out of stock|currently unavailable|temporarily unavailable|not available", text):
         return "OUT_OF_STOCK"
-    if re.search(r"\\bin stock\\b|only\\s+\\d+\\s+left(?: in stock)?|available now", text):
+    if re.search(r"\bin stock\b|only\s+\d+\s+left(?: in stock)?|available now", text):
         return "IN_STOCK"
     return "UNKNOWN"
 
