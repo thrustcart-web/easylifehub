@@ -1446,39 +1446,33 @@ function syncPublishedProductLinks() {
       var html = meta && meta.html_file
         ? fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file)
         : String(post.content || '');
-      var localAsins = {};
-      var localParents = {};
-      var localAnchorCounts = {};
-      var before = html;
-      html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, function (full, attrs, inner) {
+      // Preserve every direct Amazon product anchor in existing articles.
+      // A stale/missing stock audit must never turn a useful product link into
+      // dead text. Amazon itself can show availability on the destination page.
+      var preservedLinks = 0;
+      html = html.replace(/<a\\b([^>]*)>([\\s\\S]*?)<\\/a\\s*>/gi, function (full, attrs, inner) {
         var asin = amazonLinkAsin_(attrs);
         if (!asin) return full;
+        preservedLinks++;
         var stock = stockByAsin[asin];
+        var parent = String(stock && stock.parent_asin || asin).toUpperCase();
+        // Reserve product families only when the audit is fresh and trusted.
+        // This affects future product selection, never the clickability here.
         var status = String(stock && stock.availability_type || '').toUpperCase();
         var checkedAt = Number(stock && stock.stock_checked_at || 0);
         var stockSource = String(stock && stock.stock_source || '').toLowerCase();
-        var fresh = (stockSource === 'apify' || stockSource === 'serpapi') && checkedAt > 0 && now >= checkedAt &&
+        var fresh = (stockSource === 'apify' || stockSource === 'serpapi') &&
+          checkedAt > 0 && now >= checkedAt &&
           (now - checkedAt) <= AMAZON_STOCK_MAX_AGE_SECONDS;
-        var parent = String(stock && stock.parent_asin || asin).toUpperCase();
-        if (localAsins[asin]) {
-          localAnchorCounts[asin] = Number(localAnchorCounts[asin] || 1) + 1;
-          if (localAnchorCounts[asin] <= 2) return full; // mid-article + final CTA only
-          blockedLinks++;
-          return '<span class="amazon-unavailable">' + inner + '</span>';
+        if (AMAZON_STOCK_ALLOWED[status] && fresh) {
+          usedAsins[asin] = true;
+          usedParents[parent] = true;
         }
-        var localDuplicate = localParents[parent] && !localAsins[asin];
-        var siteDuplicate = usedAsins[asin] || (usedParents[parent] && !usedAsins[asin]);
-        if (!AMAZON_STOCK_ALLOWED[status] || !fresh || localDuplicate || siteDuplicate) {
-          blockedLinks++;
-          return '<span class="amazon-unavailable">' + inner + '</span>';
-        }
-        localAsins[asin] = true;
-        localParents[parent] = true;
-        localAnchorCounts[asin] = 1;
-        usedAsins[asin] = true;
-        usedParents[parent] = true;
         return full;
       });
+      if (preservedLinks) {
+        Logger.log('PRESERVED AMAZON LINKS: ' + post.title + ' | links=' + preservedLinks);
+      }
 
       html = ensureAffiliateDisclosures_(html);
       html = sanitizePostHtml_(html);
