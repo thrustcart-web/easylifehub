@@ -264,7 +264,7 @@ function sanitizePostHtml_(html) {
 
     var hostMatch = href.match(/^https?:\/\/([^\/?#:]+)(?::\d+)?/i);
     var host = hostMatch ? hostMatch[1].toLowerCase() : '';
-    if (host === 'amazon.com' || /\.amazon\.com$/.test(host)) return full;
+    if (host === 'amazon.com' || /\.amazon\.com$/.test(host) || host === 'amzn.to' || host === 'amzn.com') return full;
     return inner || '';
   });
 
@@ -1442,10 +1442,17 @@ function syncPublishedProductLinks() {
       var slug = maps.byPostId[String(post.id)] ||
         maps.byTitle[String(post.title || '').trim().toLowerCase()] || '';
       var meta = slug ? bySlug[slug] : null;
-      var originalContent = sanitizePostHtml_(String(post.content || ''));
-      var html = meta && meta.html_file
-        ? fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file)
-        : String(post.content || '');
+      var rawPostContent = String(post.content || '');
+      var originalContent = sanitizePostHtml_(rawPostContent);
+      var hasEditorialEnhancement = rawPostContent.indexOf('<!-- honest-trove-enhancement:v1 -->') !== -1;
+      // Once an article has been editorially enhanced, Blogger becomes the
+      // source of truth for its body. Queue HTML is older and must never
+      // overwrite the added editorial sections during a later stock sync.
+      var html = hasEditorialEnhancement
+        ? rawPostContent
+        : (meta && meta.html_file
+          ? fetchText_(cfg('RAW_BASE') + '/' + cfg('QUEUE_DIR') + '/' + meta.html_file)
+          : rawPostContent);
       // Preserve every direct Amazon product anchor in existing articles.
       // A stale/missing stock audit must never turn a useful product link into
       // dead text. Amazon itself can show availability on the destination page.
