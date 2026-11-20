@@ -1006,6 +1006,7 @@ class TestAIPath(unittest.TestCase):
                 "parent_asin": "B07VVK39F7",
                 "availability_type": "IN_STOCK",
                 "stock_checked_at": int(product_resolver.time.time()),
+                "stock_source": "apify",
                 "url": "https://www.amazon.com/dp/B07VVK39F7?tag=testtag-20",
             }],
         }
@@ -1072,6 +1073,7 @@ class TestAIPath(unittest.TestCase):
                 "parent_asin": "B0DZ2MMFMJ",
                 "availability_type": "IN_STOCK",
                 "stock_checked_at": int(product_resolver.time.time()),
+                "stock_source": "apify",
                 "url": "https://www.amazon.com/s?k=coffee+canister&tag=testtag-20",
             }],
         }
@@ -1089,6 +1091,7 @@ class TestAIPath(unittest.TestCase):
                 "title": "Coffee Canister Airtight Storage Container with Lid",
                 "availability_type": "IN_STOCK",
                 "stock_checked_at": int(product_resolver.time.time()),
+                "stock_source": "apify",
             }
         }
         cache_meta = {
