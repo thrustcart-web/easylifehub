@@ -103,25 +103,31 @@ def _extract_asin(row: dict) -> str:
 
 
 def _selected_provider() -> str:
-    """Select the approved non-Creators product source."""
+    """Select the primary non-Creators product source."""
     provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER", "").strip().lower()
     if not provider:
         try:
             cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
-            provider = str((cfg.get("product_discovery") or {}).get("provider") or "apify").strip().lower()
+            provider = str((cfg.get("product_discovery") or {}).get("provider") or "serpapi").strip().lower()
         except (OSError, json.JSONDecodeError):
-            provider = "apify"
-    if provider != "apify":
+            provider = "serpapi"
+    if provider not in {"serpapi", "apify"}:
         raise ProductResolutionError(
-            "Amazon Creators API and SerpApi are disabled for this project. "
-            "PRODUCT_DISCOVERY_PROVIDER must be 'apify'."
+            "Amazon Creators API is disabled. PRODUCT_DISCOVERY_PROVIDER must be 'serpapi' or 'apify'."
         )
     return provider
 
 
 def _fallback_provider_names(primary: str) -> list[str]:
-    """No automatic provider fallback: every Apify request is explicitly guarded."""
-    return []
+    """Return only configured non-Creators fallbacks; each has its own spend guard."""
+    if primary != "serpapi":
+        return []
+    try:
+        cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        configured = (cfg.get("product_discovery") or {}).get("fallback_providers") or []
+    except (OSError, json.JSONDecodeError):
+        configured = []
+    return [name for name in configured if name == "apify"]
 
 
 def _is_global_provider_error(exc: Exception) -> bool:
@@ -154,13 +160,13 @@ def _provider_secret_name(provider: str) -> str:
         return "SERPAPI_API_KEY"
     if provider == "creators_api":
         return "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET"
-    return "TEST_API"
+    return "TEST_API or APIFY_API_TOKEN"
 
 
 def _provider_spending_enabled(provider: str) -> bool:
-    # Creators API is quota-limited, not billed per search like SerpApi/Apify.
+    # SerpApi and Apify use separate per-provider spend guards.
     if provider == "creators_api":
-        return True
+        return False
     variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
     return os.environ.get(variable, "false").strip().lower() in {"1", "true", "yes"}
 
@@ -291,8 +297,22 @@ def _apify_get_items_by_asin(asins: list[str], api_token: str) -> dict[str, dict
     return found
 
 
+def _serpapi_availability(value: object) -> str:
+    """Normalize only explicit Amazon stock text returned by SerpApi."""
+    text = str(value or "").strip().lower()
+    if not text:
+        return "UNKNOWN"
+    if re.search(r"out of stock|currently unavailable|temporarily unavailable|not available", text):
+        return "OUT_OF_STOCK"
+    if re.search(r"\\bin stock\\b|only\\s+\\d+\\s+left(?: in stock)?|available now", text):
+        return "IN_STOCK"
+    return "UNKNOWN"
+
+
 def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
-    """Search Amazon through SerpApi and retain only the title and ASIN."""
+    """Search Amazon through SerpApi; accept only exact rows with explicit stock."""
+    if not api_key:
+        raise ProductResolutionError("SERPAPI_API_KEY is missing")
     params = {
         "engine": "amazon",
         "k": product_name,
@@ -306,7 +326,7 @@ def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
         url,
         headers={
             "Accept": "application/json",
-            "User-Agent": "EasyLifeHubProductResolver/3.0",
+            "User-Agent": "HonestTroveProductResolver/1.0",
         },
         method="GET",
     )
@@ -331,16 +351,24 @@ def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
     if not isinstance(results, list):
         raise ProductResolutionError("SerpApi organic_results was not a list")
 
-    # Deliberately discard all extra source fields, including price, rating,
-    # reviews, shipping, and images. Only product identity is used downstream.
+    checked_at = int(time.time())
     rows = []
     for item in results:
         if not isinstance(item, dict) or item.get("sponsored") is True:
             continue
         title = str(item.get("title") or "").strip()
         asin = str(item.get("asin") or "").strip().upper()
-        if title and ASIN_RE.fullmatch(asin):
-            rows.append({"title": title, "asin": asin})
+        availability = _serpapi_availability(item.get("stock"))
+        if title and ASIN_RE.fullmatch(asin) and availability in STOCK_ALLOWED:
+            rows.append({
+                "title": title,
+                "asin": asin,
+                "parent_asin": asin,
+                "availability_type": availability,
+                "stock_checked_at": checked_at,
+                "stock_source": "serpapi",
+                "url": str(item.get("link_clean") or item.get("link") or ""),
+            })
     return rows
 
 
@@ -620,14 +648,12 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
 
 
 def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
-    """Search using the selected non-Creators source and its own stock fields."""
-    if provider != "apify":
-        raise ProductResolutionError(
-            "Amazon Creators API and SerpApi are disabled; only Apify product-detail scraping is enabled."
-        )
-    if not api_token:
-        raise ProductResolutionError("TEST_API is missing")
-    return _search_amazon_apify(product_name, api_token)
+    """Search via SerpApi first or the separately guarded Apify fallback."""
+    if provider == "serpapi":
+        return _search_amazon_serpapi(product_name, api_token)
+    if provider == "apify":
+        return _search_amazon_apify(product_name, api_token)
+    raise ProductResolutionError("Amazon Creators API is disabled; provider must be SerpApi or Apify.")
 
 
 def _search_amazon(product_name: str, api_token: str) -> list[dict]:
@@ -652,7 +678,7 @@ def _trusted_item(item: dict) -> bool:
         and bool(ASIN_RE.fullmatch(asin))
         and title_matches(name, verified_title)
         and availability in STOCK_ALLOWED
-        and str(item.get("stock_source") or "").lower() == "apify"
+        and str(item.get("stock_source") or "").lower() in {"serpapi", "apify"}
         and _stock_check_fresh(item)
     )
 
@@ -765,6 +791,7 @@ def _apply_candidate(
         availability = str(row.get("availability_type") or "").strip().upper()
         if not (
             asin and title and availability in STOCK_ALLOWED
+            and str(row.get("stock_source") or "").lower() in {"serpapi", "apify"}
             and _stock_check_fresh(row)
             and asin not in used_asins
             and parent_asin not in used_parent_asins
@@ -843,7 +870,7 @@ def resolve_items(
             and bool(ASIN_RE.fullmatch(cached_asin))
             and title_matches(name, str(cached.get("title") or ""))
             and str(cached.get("availability_type") or "").upper() in STOCK_ALLOWED
-            and str(cached.get("stock_source") or "").lower() == "apify"
+            and str(cached.get("stock_source") or "").lower() in {"serpapi", "apify"}
             and _stock_check_fresh(cached)
             and cached_asin not in used_asins
             and cached_parent not in used_parents
@@ -856,7 +883,7 @@ def resolve_items(
                 "verified_product_title": str(cached["title"]),
                 "availability_type": str(cached["availability_type"]).upper(),
                 "stock_checked_at": int(cached["stock_checked_at"]),
-                "stock_source": "apify",
+                "stock_source": str(cached.get("stock_source") or "").lower(),
             })
             used_asins.add(cached_asin)
             used_parents.add(cached_parent)
@@ -868,21 +895,14 @@ def resolve_items(
         if _provider_spending_enabled(name) and bool(_provider_api_key(name))
     ]
 
-    if pending and not api_token and not fallback_providers:
-        raise ProductResolutionError(
-            f"{_provider_secret_name(provider)} is missing; refusing to publish an unverified product URL"
-        )
-    if pending and provider in {"serpapi", "apify"}:
+    primary_enabled = bool(api_token) and _provider_spending_enabled(provider)
+    if pending and not primary_enabled and not fallback_providers:
         if not api_token:
-            raise ProductResolutionError(
-                f"{_provider_secret_name(provider)} is missing; refusing to publish an unverified product URL"
-            )
-        if not _provider_spending_enabled(provider):
+            reason = f"{_provider_secret_name(provider)} is missing"
+        else:
             spend_variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
-            raise ProductResolutionError(
-                f"{provider} spending is disabled. Set the GitHub Actions variable "
-                f"{spend_variable}=true only after reviewing the account's search allowance."
-            )
+            reason = f"{provider} spending is disabled; set {spend_variable}=true after reviewing the allowance"
+        raise ProductResolutionError(reason + "; refusing to publish an unverified product URL")
 
     def apply_rows(rows: list[dict], source: str, indexes: list[int]) -> list[int]:
         remaining = []
@@ -906,7 +926,7 @@ def resolve_items(
                 "title": candidate["verified_product_title"],
                 "availability_type": candidate["availability_type"],
                 "stock_checked_at": candidate["stock_checked_at"],
-                "stock_source": "apify",
+                "stock_source": str(candidate.get("stock_source") or provider).lower(),
                 "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
         return remaining
@@ -914,14 +934,17 @@ def resolve_items(
     for search_term, indexes in pending.items():
         primary_error = None
         unresolved = list(indexes)
-        try:
-            if not api_token:
-                raise ProductResolutionError(f"{_provider_secret_name(provider)} is missing")
-            primary_rows = _search_amazon(search_term, api_token)
-            unresolved = apply_rows(primary_rows, provider, unresolved)
-        except ProductResolutionError as exc:
-            primary_error = exc
-            log.warning("Amazon primary search failed | %s | %s", search_term, exc)
+        if primary_enabled:
+            try:
+                primary_rows = _search_amazon(search_term, api_token)
+                unresolved = apply_rows(primary_rows, provider, unresolved)
+            except ProductResolutionError as exc:
+                primary_error = exc
+                log.warning("Amazon primary search failed | %s | %s", search_term, exc)
+        else:
+            primary_error = ProductResolutionError(
+                f"{provider} is not enabled for this run; trying only an explicitly enabled fallback"
+            )
 
         if unresolved and primary_error and _is_global_provider_error(primary_error) and not fallback_providers:
             raise primary_error
@@ -1131,13 +1154,17 @@ def audit_queue_products() -> dict:
 
     provider = _selected_provider()
     api_token = _provider_api_key(provider)
-    if not api_token:
+    if not api_token or not _provider_spending_enabled(provider):
+        variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
         raise ProductResolutionError(
-            "TEST_API (Apify API token) is required for stock auditing"
+            f"{_provider_secret_name(provider)} and {variable}=true are required for replacement search during the audit"
         )
-    if not _provider_spending_enabled(provider):
+    # Bulk stock audits are intentionally handled by Apify product-page details;
+    # this uses a separate token and spending gate from the SerpApi discovery path.
+    audit_api_token = _provider_api_key("apify")
+    if not audit_api_token or not _provider_spending_enabled("apify"):
         raise ProductResolutionError(
-            "Apify spending is disabled. Set APIFY_SPEND_ENABLED=true and explicitly opt in to paid lookup for this run."
+            "Apify stock audit is disabled. Set TEST_API/APIFY_API_TOKEN and APIFY_SPEND_ENABLED=true for this audit."
         )
 
     # Audit Blogger-managed posts first; live, scheduled and draft slugs are protected.
@@ -1182,7 +1209,7 @@ def audit_queue_products() -> dict:
 
     # Recheck existing ASINs through product-page stock fields from Apify.
     # Requests are split into small batches and protected by the actor's $0.015 run cap.
-    stock_by_asin = _apify_get_items_by_asin(sorted(all_existing_asins), api_token)
+    stock_by_asin = _apify_get_items_by_asin(sorted(all_existing_asins), audit_api_token)
     if all_existing_asins and not stock_by_asin:
         raise ProductResolutionError(
             "Apify returned zero readable product-detail records. "
@@ -1253,16 +1280,27 @@ def audit_queue_products() -> dict:
                 query = str(old_item.get("search_term") or name).strip()
                 rows = []
                 try:
-                    rows = _search_amazon(query, api_token)
+                    rows = _search_amazon_with_provider(query, provider, api_token)
                 except ProductResolutionError as exc:
-                    log.warning("Apify replacement search failed | %s | %s", query, exc)
-                    rows = []
+                    log.warning("%s replacement search failed | %s | %s", provider, query, exc)
                 candidate = _apply_candidate(
                     old_item,
                     rows,
+                    allow_missing_leading_brand=(provider == "serpapi"),
                     used_asins=used_asins,
                     used_parent_asins=used_parents,
                 )
+                if candidate is None and _provider_spending_enabled("apify") and _provider_api_key("apify"):
+                    try:
+                        fallback_rows = _search_amazon_with_provider(query, "apify", _provider_api_key("apify"))
+                        candidate = _apply_candidate(
+                            old_item,
+                            fallback_rows,
+                            used_asins=used_asins,
+                            used_parent_asins=used_parents,
+                        )
+                    except ProductResolutionError as fallback_exc:
+                        log.warning("Apify replacement fallback failed | %s | %s", query, fallback_exc)
                 if candidate:
                     replacements += 1
 
@@ -1278,7 +1316,7 @@ def audit_queue_products() -> dict:
                     "title": candidate["verified_product_title"],
                     "availability_type": candidate["availability_type"],
                     "stock_checked_at": candidate["stock_checked_at"],
-                    "stock_source": "apify",
+                    "stock_source": str(candidate.get("stock_source") or "apify").lower(),
                     "verified_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 }
             else:
