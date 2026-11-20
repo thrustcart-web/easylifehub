@@ -36,7 +36,6 @@ jobs:
         env:
           # Use the confirmed free-model providers only for this queue repair.
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          AFFILIATE_TAG: ${{ secrets.AFFILIATE_TAG }}
         run: |
           LIMIT="${{ inputs.limit }}"
           if [ -z "$LIMIT" ]; then LIMIT=16; fi
