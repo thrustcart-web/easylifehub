@@ -966,7 +966,7 @@ function retagBloggerAmazonLinks() {
     var before = String(post.content || '');
     var changedLinks = 0;
     var after = before.replace(
-      /\\bhref\\s*=\\s*(["'])(https?:\\/\\/(?:www\\.)?amazon\\.com\\/(?:dp|gp\\/product)\\/[A-Z0-9]{10}[^"']*)\\1/gi,
+      /\bhref\s*=\s*(["'])(https?:\/\/(?:www\.)?amazon\.com\/(?:dp|gp\/product)\/[A-Z0-9]{10}[^"']*)\1/gi,
       function (full, quote, rawUrl) {
         var url = String(rawUrl || '').replace(/&amp;/gi, '&');
         var queryTag = /([?&]tag=)[^&#]*/i;
