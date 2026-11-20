@@ -564,24 +564,21 @@ class TestProductResolution(unittest.TestCase):
 
     def test_config_defaults_to_creators_api_with_only_serpapi_fallback(self):
         cfg = fresh_cfg()
-        self.assertEqual(cfg["product_discovery"]["provider"], "creators_api")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serpapi"])
+        self.assertEqual(cfg["product_discovery"]["provider"], "apify")
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
 
     def test_selected_provider_uses_config_when_workflow_override_is_absent(self):
         old = os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
-            self.assertEqual(product_resolver._selected_provider(), "creators_api")
+            self.assertEqual(product_resolver._selected_provider(), "apify")
         finally:
             if old is not None:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
-    def test_creators_api_provider_needs_credentials_but_no_paid_spend_toggle(self):
+    def test_apify_provider_uses_its_own_spend_guard_and_token(self):
         original_search = product_resolver._search_amazon
         original_save = product_resolver._save_cache
-        names = [
-            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
-            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
-        ]
+        names = ["PRODUCT_DISCOVERY_PROVIDER", "TEST_API", "APIFY_SPEND_ENABLED"]
         old = {name: os.environ.get(name) for name in names}
         calls = []
 
@@ -591,11 +588,9 @@ class TestProductResolution(unittest.TestCase):
 
         product_resolver._search_amazon = fake_search
         product_resolver._save_cache = lambda cache: None
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
-        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
-        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
-        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
-        os.environ.pop("APIFY_SPEND_ENABLED", None)
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
+        os.environ["TEST_API"] = "test-apify-token"
+        os.environ["APIFY_SPEND_ENABLED"] = "true"
         try:
             result = product_resolver.resolve_items([{
                 "display_name": "Marbrasse Pen Organizer",
@@ -604,7 +599,7 @@ class TestProductResolution(unittest.TestCase):
             }], cache={})
             self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
             self.assertEqual(result[0]["availability_type"], "IN_STOCK")
-            self.assertEqual(calls, [("desk organizer", "configured")])
+            self.assertEqual(calls, [("desk organizer", "test-apify-token")])
         finally:
             product_resolver._search_amazon = original_search
             product_resolver._save_cache = original_save
@@ -614,101 +609,30 @@ class TestProductResolution(unittest.TestCase):
                 else:
                     os.environ[name] = value
 
-    def test_creators_api_falls_back_to_serpapi_only_when_explicitly_enabled(self):
-        original_primary = product_resolver._search_amazon
-        original_dispatch = product_resolver._search_amazon_with_provider
-        original_save = product_resolver._save_cache
-        names = [
-            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
-            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY",
-            "SERPAPI_SPEND_ENABLED", "APIFY_SPEND_ENABLED",
-        ]
-        old = {name: os.environ.get(name) for name in names}
-        calls = []
-
-        def creators_empty(term, token):
-            calls.append(("creators_api", term))
-            return []
-
-        def serp_match(term, provider, token=""):
-            calls.append((provider, term, token))
-            return [stock_row("Marbrasse Pen Organizer with 2 Drawer for Desk", "B0BYMRJD7R")]
-
-        product_resolver._search_amazon = creators_empty
-        product_resolver._search_amazon_with_provider = serp_match
-        product_resolver._save_cache = lambda cache: None
+    def test_apify_has_no_automatic_paid_provider_fallback(self):
+        self.assertEqual(product_resolver._fallback_provider_names("apify"), [])
+        old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
-        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
-        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
-        os.environ["SERPAPI_API_KEY"] = "test-serpapi-key"
-        os.environ["SERPAPI_SPEND_ENABLED"] = "true"
-        os.environ.pop("APIFY_SPEND_ENABLED", None)
         try:
-            result = product_resolver.resolve_items([{
-                "display_name": "Marbrasse Pen Organizer",
-                "name": "Marbrasse Pen Organizer",
-                "search_term": "desk organizer",
-            }], cache={})
-            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
-            self.assertEqual(result[0]["availability_type"], "IN_STOCK")
-            self.assertEqual(calls, [
-                ("creators_api", "desk organizer"),
-                ("serpapi", "desk organizer", "test-serpapi-key"),
-            ])
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "disabled"):
+                product_resolver._selected_provider()
         finally:
-            product_resolver._search_amazon = original_primary
-            product_resolver._search_amazon_with_provider = original_dispatch
-            product_resolver._save_cache = original_save
-            for name, value in old.items():
-                if value is None:
-                    os.environ.pop(name, None)
-                else:
-                    os.environ[name] = value
+            if old is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
-    def test_serpapi_fallback_stays_off_without_spend_guard(self):
-        original_primary = product_resolver._search_amazon
-        original_dispatch = product_resolver._search_amazon_with_provider
-        original_save = product_resolver._save_cache
-        names = [
-            "PRODUCT_DISCOVERY_PROVIDER", "AMAZON_CREATORS_CLIENT_ID",
-            "AMAZON_CREATORS_CLIENT_SECRET", "SERPAPI_API_KEY", "SERPAPI_SPEND_ENABLED",
-        ]
-        old = {name: os.environ.get(name) for name in names}
-        calls = []
-
-        def creators_empty(term, token):
-            calls.append("creators_api")
-            return []
-
-        def serp_must_not_run(term, provider, token=""):
-            calls.append("serpapi")
-            raise AssertionError("SerpApi must not run without its spend guard")
-
-        product_resolver._search_amazon = creators_empty
-        product_resolver._search_amazon_with_provider = serp_must_not_run
-        product_resolver._save_cache = lambda cache: None
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
-        os.environ["AMAZON_CREATORS_CLIENT_ID"] = "test-client"
-        os.environ["AMAZON_CREATORS_CLIENT_SECRET"] = "test-secret"
-        os.environ["SERPAPI_API_KEY"] = "test-serpapi-key"
-        os.environ.pop("SERPAPI_SPEND_ENABLED", None)
+    def test_serpapi_is_not_an_enabled_product_source(self):
+        old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
         try:
-            result = product_resolver.resolve_items([{
-                "display_name": "Marbrasse Pen Organizer",
-                "name": "Marbrasse Pen Organizer",
-                "search_term": "desk organizer",
-            }], cache={}, allow_unresolved=True)
-            self.assertFalse(result[0].get("asin_verified", False))
-            self.assertEqual(calls, ["creators_api"])
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "disabled"):
+                product_resolver._selected_provider()
         finally:
-            product_resolver._search_amazon = original_primary
-            product_resolver._search_amazon_with_provider = original_dispatch
-            product_resolver._save_cache = original_save
-            for name, value in old.items():
-                if value is None:
-                    os.environ.pop(name, None)
-                else:
-                    os.environ[name] = value
+            if old is None:
+                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
+            else:
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
     def test_configured_affiliate_tag_takes_precedence_over_environment_override(self):
         old = os.environ.get("AFFILIATE_TAG")
@@ -862,18 +786,17 @@ class TestProductResolution(unittest.TestCase):
             else:
                 os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
 
-    def test_apify_search_is_stock_checked_before_it_returns_candidates(self):
+    def test_apify_search_reads_explicit_stock_without_creators_api(self):
         class FakeResponse:
             def __enter__(self):
                 return self
             def __exit__(self, *args):
                 return False
             def read(self):
-                return b'[{"title":"Desk Organizer","asin":"B0BYDGF8DT"}]'
+                return b'[{"title":"Desk Organizer","asin":"B0BYDGF8DT","inStock":true,"inStockText":"In Stock","condition":"New"}]'
 
         captured = {}
         original_urlopen = product_resolver.request.urlopen
-        original_stock_check = product_resolver._creators_get_items_by_asin
         old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
 
         def fake_urlopen(req, timeout=0):
@@ -882,9 +805,6 @@ class TestProductResolution(unittest.TestCase):
             return FakeResponse()
 
         product_resolver.request.urlopen = fake_urlopen
-        product_resolver._creators_get_items_by_asin = lambda asins: {
-            "B0BYDGF8DT": stock_row("Desk Organizer", "B0BYDGF8DT")
-        }
         os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "apify"
         try:
             rows = product_resolver._search_amazon("desk organizer", "fake-token")
@@ -892,7 +812,6 @@ class TestProductResolution(unittest.TestCase):
             self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
         finally:
             product_resolver.request.urlopen = original_urlopen
-            product_resolver._creators_get_items_by_asin = original_stock_check
             if old_provider is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
             else:
@@ -902,96 +821,38 @@ class TestProductResolution(unittest.TestCase):
         self.assertNotIn("countryCode", captured["payload"])
         self.assertNotIn("zipCode", captured["payload"])
         self.assertEqual(captured["payload"]["maxItemsPerStartUrl"], 3)
-        self.assertFalse(captured["payload"]["scrapeProductDetails"])
+        self.assertTrue(captured["payload"]["scrapeProductDetails"])
 
-    def test_serpapi_returns_only_identity_fields_after_official_stock_check(self):
-        class FakeResponse:
-            def __enter__(self):
-                return self
-            def __exit__(self, *args):
-                return False
-            def read(self):
-                return json.dumps({
-                    "search_metadata": {"status": "Success"},
-                    "organic_results": [
-                        {
-                            "title": "Marbrasse Pen Organizer with 2 Drawer",
-                            "asin": "B0BYMRJD7R",
-                            "price": "$29.99", "rating": 4.5, "reviews": 5576, "sponsored": False,
-                        },
-                        {"title": "Sponsored unrelated organizer", "asin": "B000000001", "sponsored": True},
-                    ],
-                }).encode("utf-8")
+    def test_apify_stock_parser_fails_closed_on_missing_or_unavailable_stock(self):
+        rows = product_resolver._apify_product_rows([
+            {"title": "Available Desk Organizer", "asin": "B0BYDGF8DT", "inStock": True},
+            {"title": "Unavailable Desk Organizer", "asin": "B0BYDGF8DU", "inStock": False},
+            {"title": "Unknown Stock Desk Organizer", "asin": "B0BYDGF8DV"},
+        ], include_unavailable=True)
+        by_asin = {row["asin"]: row for row in rows}
+        self.assertEqual(by_asin["B0BYDGF8DT"]["availability_type"], "IN_STOCK")
+        self.assertEqual(by_asin["B0BYDGF8DU"]["availability_type"], "OUT_OF_STOCK")
+        self.assertEqual(by_asin["B0BYDGF8DV"]["availability_type"], "UNKNOWN")
+        self.assertEqual(
+            [row["asin"] for row in product_resolver._apify_product_rows([
+                {"title": "Available Desk Organizer", "asin": "B0BYDGF8DT", "inStock": True},
+                {"title": "Unavailable Desk Organizer", "asin": "B0BYDGF8DU", "inStock": False},
+                {"title": "Unknown Stock Desk Organizer", "asin": "B0BYDGF8DV"},
+            ])],
+            ["B0BYDGF8DT"],
+        )
 
-        captured = {}
-        original_urlopen = product_resolver.request.urlopen
-        original_stock_check = product_resolver._creators_get_items_by_asin
-        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
-
-        def fake_urlopen(req, timeout=0):
-            captured["url"] = req.full_url
-            return FakeResponse()
-
-        product_resolver.request.urlopen = fake_urlopen
-        product_resolver._creators_get_items_by_asin = lambda asins: {
-            "B0BYMRJD7R": stock_row("Marbrasse Pen Organizer with 2 Drawer", "B0BYMRJD7R")
-        }
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
+    def test_creators_api_is_not_accepted_as_a_provider_override(self):
+        old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
+        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "creators_api"
         try:
-            rows = product_resolver._search_amazon("Marbrasse Pen Organizer", "fake-serpapi-key")
+            with self.assertRaisesRegex(product_resolver.ProductResolutionError, "disabled"):
+                product_resolver._search_amazon("desk organizer", "unused")
         finally:
-            product_resolver.request.urlopen = original_urlopen
-            product_resolver._creators_get_items_by_asin = original_stock_check
-            if old_provider is None:
+            if old is None:
                 os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
             else:
-                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
-
-        params = product_resolver.parse.parse_qs(product_resolver.parse.urlsplit(captured["url"]).query)
-        self.assertEqual(params["engine"], ["amazon"])
-        self.assertEqual(params["k"], ["Marbrasse Pen Organizer"])
-        self.assertEqual(params["amazon_domain"], ["amazon.com"])
-        self.assertNotIn("delivery_zip", params)
-        self.assertNotIn("shipping_location", params)
-        self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]["asin"], "B0BYMRJD7R")
-        self.assertEqual(rows[0]["availability_type"], "IN_STOCK")
-        self.assertNotIn("price", rows[0])
-
-    def test_serpapi_provider_uses_its_own_explicit_spend_guard(self):
-        original_search = product_resolver._search_amazon
-        original_save = product_resolver._save_cache
-        calls = []
-        old_provider = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
-        old_spend = os.environ.get("SERPAPI_SPEND_ENABLED")
-
-        def fake_search(term, token):
-            calls.append((term, token))
-            return [stock_row("Marbrasse Pen Organizer with 2 Drawer", "B0BYMRJD7R")]
-
-        product_resolver._search_amazon = fake_search
-        product_resolver._save_cache = lambda cache: None
-        os.environ["PRODUCT_DISCOVERY_PROVIDER"] = "serpapi"
-        os.environ["SERPAPI_SPEND_ENABLED"] = "true"
-        try:
-            result = product_resolver.resolve_items([{
-                "display_name": "Marbrasse Pen Organizer",
-                "name": "Marbrasse Pen Organizer",
-                "search_term": "desk organizer",
-            }], api_token="fake-serpapi-key", cache={})
-            self.assertEqual(result[0]["asin"], "B0BYMRJD7R")
-            self.assertEqual(calls, [("desk organizer", "fake-serpapi-key")])
-        finally:
-            product_resolver._search_amazon = original_search
-            product_resolver._save_cache = original_save
-            if old_provider is None:
-                os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
-            else:
-                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old_provider
-            if old_spend is None:
-                os.environ.pop("SERPAPI_SPEND_ENABLED", None)
-            else:
-                os.environ["SERPAPI_SPEND_ENABLED"] = old_spend
+                os.environ["PRODUCT_DISCOVERY_PROVIDER"] = old
 
     def test_apify_account_limit_error_stops_remaining_product_searches(self):
         original_search = product_resolver._search_amazon
@@ -1579,9 +1440,9 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["ai"]["primary"], "groq")
         self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
         self.assertEqual(cfg["product_discovery"]["provider"], "creators_api")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serpapi"])
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], [])
 
-    def test_product_discovery_defaults_to_creators_api(self):
+    def test_product_discovery_defaults_to_apify(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
         os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
