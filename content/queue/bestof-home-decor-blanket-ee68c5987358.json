@@ -17,34 +17,37 @@
       "name": "Storage Baskets",
       "asin": "B0CF586TH4",
       "asin_verified": true,
-      "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown | 22”x17”x12” Laundry Basket with Handle, Organizing Blanket and Toys for Living Room, Nursery, Bedroom, Brown Variegated",
-      "parent_asin": "B0CL9NT578",
+      "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
+      "parent_asin": "B0CF586TH4",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911832,
+      "stock_checked_at": 1795237929,
       "search_term": "storage baskets for family homes",
-      "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Curtain Rods",
       "asin": "B0F6LM95F2",
       "asin_verified": true,
       "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
-      "parent_asin": "B0F9Y2LQKN",
+      "parent_asin": "B0F6LM95F2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911835,
+      "stock_checked_at": 1795237999,
       "search_term": "curtain rods for cold rooms",
-      "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Table Lamp",
-      "asin": "B0CVVH3HNJ",
+      "asin": "B0FS1JXJZJ",
       "asin_verified": true,
-      "verified_product_title": "Buffet Lamps Set of 2, 30\" Tall Black Table Lamps for Console Table, Entryway, Hallway, Dining Sideboard & Living Room, Candlestick Lamps with Linen Shade, Pull Chain, E26 Base, 6FT Cord",
-      "parent_asin": "B0FKRJ4NQX",
+      "verified_product_title": "28\" Modern Table Lamps Set of 2 for Living Room Bedroom, USB Ports",
+      "parent_asin": "B0FS1JXJZJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911834,
+      "stock_checked_at": 1795238350,
       "search_term": "table lamp for dark hallways",
-      "url": "https://www.amazon.com/dp/B0CVVH3HNJ?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0FS1JXJZJ?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "bestof-home-decor-blanket-ee68c5987358.html",
@@ -54,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

@@ -17,34 +17,37 @@
       "name": "Ab Roller",
       "asin": "B09W9HV6MN",
       "asin_verified": true,
-      "verified_product_title": "Vinsguir Ab Roller Wheel for Home Gym Core Strength Workout,Black | Ab rollerl for core and full-body strength training, built for balance, control and home workouts",
-      "parent_asin": "B0HP8TNRGY",
+      "verified_product_title": "Vinsguir Ab Roller Wheel for Home Gym Core Strength Workout",
+      "parent_asin": "B09W9HV6MN",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911831,
+      "stock_checked_at": 1795237903,
       "search_term": "ab roller for travellers",
-      "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Power Rack",
       "asin": "B0HN2BBK86",
       "asin_verified": true,
-      "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System | 1600LBS Heavy Duty Alloy Steel Reinforced Triangular Frame,Adjustable J-Hoooks with Multi Attachments for Full Body Home Gym",
-      "parent_asin": "B0HP19Z7W2",
+      "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System",
+      "parent_asin": "B0HN2BBK86",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911837,
+      "stock_checked_at": 1795238067,
       "search_term": "power rack for home gyms",
-      "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Travel Yoga Mat",
-      "asin": "B0D5LH513W",
+      "asin": "B0092L64M6",
       "asin_verified": true,
-      "verified_product_title": "JOOEER Foldable Yoga Mat, 1.5mm Thick Exercise Yoga Mat With Carry Bag | 72\" L x 24\" W, Non-slip Suede Fitness Travel Yoga Mat for Hot Yoga, Exercise, Pilates, Home & Gym Use, 3 lbs, Blue",
-      "parent_asin": "B0D7H19Y74",
+      "verified_product_title": "Manduka | eKO Superlite Travel Yoga Mat",
+      "parent_asin": "B0092L64M6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911834,
+      "stock_checked_at": 1795238302,
       "search_term": "travel yoga mat for hot yoga",
-      "url": "https://www.amazon.com/dp/B0D5LH513W?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0092L64M6?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-fitness-rack-cc087069939d.html",
@@ -54,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

@@ -57,6 +57,6 @@ Use the open questions above as a checklist with each seller, and let the answer
 
 - Ab Roller: https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20
 - Power Rack: https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20
-- Travel Yoga Mat: https://www.amazon.com/dp/B0D5LH513W?tag=hotr0e-20
+- Travel Yoga Mat: https://www.amazon.com/dp/B0092L64M6?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

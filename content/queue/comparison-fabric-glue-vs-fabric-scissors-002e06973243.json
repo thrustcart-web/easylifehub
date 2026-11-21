@@ -15,25 +15,27 @@
   "items": [
     {
       "name": "Aleene's Fabric Glue",
-      "asin": "B00178QSE6",
+      "asin": "B00KD6ZHD6",
       "asin_verified": true,
-      "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
+      "verified_product_title": "Aleene's Quick Dry Fabric Fusion, Fast-Drying Permanent Fabric Glue, Stong Bond Dries Soft and Clear in Minutes, 4 fl oz",
       "search_term": "Aleene's Fabric Fusion Glue 4 oz",
-      "url": "https://www.amazon.com/dp/B00178QSE6?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B00KD6ZHD6?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911828,
-      "parent_asin": "B0FG59Y4HF"
+      "stock_checked_at": 1795238503,
+      "parent_asin": "B00KD6ZHD6",
+      "stock_source": "apify"
     },
     {
       "name": "Fabric Scissors",
       "asin": "B082LY2W2G",
       "asin_verified": true,
-      "verified_product_title": "8\" Heavy Duty Fabric Scissors, Black Sewing Shears | Ideal for leather tailoring, home, office, and crafting. Ultra-sharp blades ensure precise cuts for heavy-duty materials.",
+      "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor,Tailoring Shears for Home Office Craft Black",
       "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
       "url": "https://www.amazon.com/dp/B082LY2W2G?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
-      "parent_asin": "B0F53XSQD7"
+      "stock_checked_at": 1795237841,
+      "parent_asin": "B082LY2W2G",
+      "stock_source": "apify"
     }
   ],
   "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
@@ -41,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -50,6 +50,6 @@ By confirming strap range, interior organization, material care, and aesthetic c
 ### Product Links
 
 - Tote Bag: https://www.amazon.com/dp/B0FKH85DPY?tag=hotr0e-20
-- Crossbody Bag: https://www.amazon.com/dp/B0C3LRC59F?tag=hotr0e-20
+- Crossbody Bag: https://www.amazon.com/dp/B0BWH7GP46?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

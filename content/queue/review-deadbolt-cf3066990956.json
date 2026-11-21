@@ -17,12 +17,13 @@
       "name": "Deadbolt",
       "asin": "B0FLVSTPJC",
       "asin_verified": true,
-      "verified_product_title": "MOSECYOU Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield | Block the Access to Keyhole/Thumb Turn, Disable Deadbolt Lock, Temporary Protector Lock, All-Metal Construction",
+      "verified_product_title": "Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield",
       "parent_asin": "B0FLVSTPJC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911836,
+      "stock_checked_at": 1795238022,
       "search_term": "deadbolt for key losing households",
-      "url": "https://www.amazon.com/dp/B0FLVSTPJC?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0FLVSTPJC?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-deadbolt-cf3066990956.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

@@ -17,12 +17,13 @@
       "name": "Lens Pen",
       "asin": "B007G5NNOW",
       "asin_verified": true,
-      "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black | Retractable Dust Removal Brush, Non-Liquid Cleaning Element, 12mm Round Cleaning Tip, 11cm Long",
-      "parent_asin": "B0B86K1RRK",
+      "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black",
+      "parent_asin": "B007G5NNOW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911828,
+      "stock_checked_at": 1795237779,
       "search_term": "lens pen for dusty locations",
-      "url": "https://www.amazon.com/dp/B007G5NNOW?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B007G5NNOW?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-lens-pen-5707e568617a.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

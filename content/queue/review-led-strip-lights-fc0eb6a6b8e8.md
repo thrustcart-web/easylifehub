@@ -43,6 +43,6 @@ By verifying connector compatibility, power capacity, and adhesive durability ah
 
 ### Product Links
 
-- LED Strip Lights: https://www.amazon.com/dp/B0991Q94KP?tag=hotr0e-20
+- LED Strip Lights: https://www.amazon.com/dp/B0H45ZH6CG?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

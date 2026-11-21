@@ -21,44 +21,46 @@
           "name": "Car Sun Shade",
           "asin": "B07Q72HJ65",
           "asin_verified": true,
-          "verified_product_title": "Sfee Car Window Shade for Side Windows, 2 Pack Sun Shade Retractable for Car Blocks Heat and UV Rays Glare Protection Roller Sunshade Visor for Baby, Kids, Pets, Passengers",
-          "parent_asin": "B07Q97SY6L",
+          "verified_product_title": "Car Window Shade for Side Windows, 2 Pack Sun Shade Retractable for Car Blocks Heat and UV Rays Glare Protection Roller Sunshade Visor for Baby, Kids, Pets, Passengers",
+          "parent_asin": "B07Q72HJ65",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
+          "stock_checked_at": 1795237818,
           "search_term": "car sun shade for long drives",
-          "url": "https://www.amazon.com/dp/B07Q72HJ65?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B07Q72HJ65?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Car Wax",
           "asin": "B07XYPS3PS",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "Turtle Wax Hybrid Solutions Ceramic Spray Wax Coating, 16 oz (Pack of 1) | High Shine Car Wax, Offers Durable Paint Protection, Extreme Water Beading Action, Safe for Glass, Wheels, Trim & More",
           "parent_asin": "B0F99PQ5XJ",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "search_term": "car wax for hot climates",
-          "url": "https://www.amazon.com/dp/B07XYPS3PS?tag=hotr0e-20"
+          "url": ""
         },
         {
           "name": "Dashboard Mat",
-          "asin": "B0GYD4XYVV",
+          "asin": "B0GQLNKVYN",
           "asin_verified": true,
-          "verified_product_title": "Car Dashboard Phone Holder Mat – Anti-Slip Mount with 360° Rotation,Organizer Tray & Accessories for Keys, Coins, Cards, Sunglasses",
-          "parent_asin": "B0GYD4XYVV",
+          "verified_product_title": "Car Dashboard Non-Slip Mat, 10.55\" x 5.82\" Sticky Pads (Basketball)",
+          "parent_asin": "B0GQLNKVYN",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
+          "stock_checked_at": 1795238348,
           "search_term": "dashboard mat for rideshare drivers",
-          "url": "https://www.amazon.com/dp/B0GYD4XYVV?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0GQLNKVYN?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "bestof-car-starter-f50390dc0d4c.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
+      "product_links_verified": false,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "review_required": true,
+      "product_review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -80,34 +82,37 @@
           "name": "Ab Roller",
           "asin": "B09W9HV6MN",
           "asin_verified": true,
-          "verified_product_title": "Vinsguir Ab Roller Wheel for Home Gym Core Strength Workout,Black | Ab rollerl for core and full-body strength training, built for balance, control and home workouts",
-          "parent_asin": "B0HP8TNRGY",
+          "verified_product_title": "Vinsguir Ab Roller Wheel for Home Gym Core Strength Workout",
+          "parent_asin": "B09W9HV6MN",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "stock_checked_at": 1795237903,
           "search_term": "ab roller for travellers",
-          "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Power Rack",
           "asin": "B0HN2BBK86",
           "asin_verified": true,
-          "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System | 1600LBS Heavy Duty Alloy Steel Reinforced Triangular Frame,Adjustable J-Hoooks with Multi Attachments for Full Body Home Gym",
-          "parent_asin": "B0HP19Z7W2",
+          "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System",
+          "parent_asin": "B0HN2BBK86",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
+          "stock_checked_at": 1795238067,
           "search_term": "power rack for home gyms",
-          "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Travel Yoga Mat",
-          "asin": "B0D5LH513W",
+          "asin": "B0092L64M6",
           "asin_verified": true,
-          "verified_product_title": "JOOEER Foldable Yoga Mat, 1.5mm Thick Exercise Yoga Mat With Carry Bag | 72\" L x 24\" W, Non-slip Suede Fitness Travel Yoga Mat for Hot Yoga, Exercise, Pilates, Home & Gym Use, 3 lbs, Blue",
-          "parent_asin": "B0D7H19Y74",
+          "verified_product_title": "Manduka | eKO Superlite Travel Yoga Mat",
+          "parent_asin": "B0092L64M6",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795238302,
           "search_term": "travel yoga mat for hot yoga",
-          "url": "https://www.amazon.com/dp/B0D5LH513W?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0092L64M6?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "bestof-fitness-rack-cc087069939d.html",
@@ -117,7 +122,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -137,36 +142,39 @@
       "items": [
         {
           "name": "Walking Cane",
-          "asin": "B0CCG17HGN",
+          "asin": "B0CYSY6MDR",
           "asin_verified": true,
-          "verified_product_title": "Medline Aluminum Offset Walking Cane, Adjustable Height, 300 lb Capacity | Height Adjustable, Sturdy Aluminum for Reliability, Comfortable Foam Handle with Strap, Rubber Pads for Stability, Black",
-          "parent_asin": "B0GFBKD2WG",
+          "verified_product_title": "REHAND Walking Cane for Men & Women - Foldable, Adjustable, Lightweight, Self Standing Pivot Walking Cane, Soft Handle Grip, with Travel Bag, Walking Sticks for Seniors & Adults",
+          "parent_asin": "B0CYSY6MDR",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795238279,
           "search_term": "walking cane for rehab users",
-          "url": "https://www.amazon.com/dp/B0CCG17HGN?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0CYSY6MDR?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Blood Pressure Monitor",
-          "asin": "B01C5QS1T8",
+          "asin": "B0CHXY8WQW",
           "asin_verified": true,
-          "verified_product_title": "iHealth Track Smart Upper Arm Blood Pressure Monitor with Wide-Range Cuff | Bluetooth BP monitor for standard to large adult arms, compatible with iOS and Android",
-          "parent_asin": "B0H636XX71",
+          "verified_product_title": "Oklar Wrist Blood Pressure Monitor, FDA Cleared Rechargeable BP Machine",
+          "parent_asin": "B0CHXY8WQW",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795238290,
           "search_term": "blood pressure monitor for seniors",
-          "url": "https://www.amazon.com/dp/B01C5QS1T8?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0CHXY8WQW?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Posture Corrector",
           "asin": "B07VST9VYH",
           "asin_verified": true,
-          "verified_product_title": "Schiara Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
+          "verified_product_title": "Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
           "parent_asin": "B07VST9VYH",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
+          "stock_checked_at": 1795237833,
           "search_term": "posture corrector for desk workers",
-          "url": "https://www.amazon.com/dp/B07VST9VYH?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B07VST9VYH?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "bestof-health-wellness-corrector-a24a55716d8b.html",
@@ -176,7 +184,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -198,34 +206,37 @@
           "name": "Protein Shaker",
           "asin": "B0CXPWMSX6",
           "asin_verified": true,
-          "verified_product_title": "VELOMIX 2 Pack 28oz Protein Shaker Bottle for Protein Mixes, Black/Transpar | 2x Wire Whisk, Leak Proof Shaker Cups for Protein Shakes, Stackable, Dishwasher safe, BPA free, Pre Workout and Fitness ready",
-          "parent_asin": "B0HQQL65QJ",
+          "verified_product_title": "VELOMIX 2 Pack 28oz Protein Shaker Bottle for Protein Mixes, Black/Transpar",
+          "parent_asin": "B0CXPWMSX6",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795237944,
           "search_term": "protein shaker for gym goers",
-          "url": "https://www.amazon.com/dp/B0CXPWMSX6?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0CXPWMSX6?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Knee Brace",
           "asin": "B005BINV84",
           "asin_verified": true,
-          "verified_product_title": "Bracoo Adjustable Compression Knee Patellar Pad Tendon Support Sleeve Brace for Men Women - Arthritis Pain, Injury Recovery, Running, Workout, KS10 (Black)",
-          "parent_asin": "B083JZ8BGN",
+          "verified_product_title": "Bracoo Knee Support Brace for Men Women, Adjustable Compression Sleeve Wrap Patellar Pad Tendon - Arthritis Pain, meniscus tear, Injury Recovery, Running, Workout, KS10",
+          "parent_asin": "B005BINV84",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795237770,
           "search_term": "knee brace for seniors",
-          "url": "https://www.amazon.com/dp/B005BINV84?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B005BINV84?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Vitamin Dispenser",
           "asin": "B0G5B5L8PS",
           "asin_verified": true,
           "verified_product_title": "LiveFine Automatic Pill Dispenser with Removable Cups, 21 Compartments, 9 Dosage Rings, Alarm Reminder, LCD Display, Sound & Light Alerts, Locking Key for Vitamins, Supplements, Medications & Seniors",
-          "parent_asin": "B0GT651NX3",
+          "parent_asin": "B0G5B5L8PS",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "stock_checked_at": 1795238037,
           "search_term": "vitamin dispenser for seniors",
-          "url": "https://www.amazon.com/dp/B0G5B5L8PS?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0G5B5L8PS?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "bestof-health-wellness-shaker-f4601d9ad5dd.html",
@@ -235,7 +246,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -257,34 +268,37 @@
           "name": "Storage Baskets",
           "asin": "B0CF586TH4",
           "asin_verified": true,
-          "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown | 22”x17”x12” Laundry Basket with Handle, Organizing Blanket and Toys for Living Room, Nursery, Bedroom, Brown Variegated",
-          "parent_asin": "B0CL9NT578",
+          "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
+          "parent_asin": "B0CF586TH4",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795237929,
           "search_term": "storage baskets for family homes",
-          "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Curtain Rods",
           "asin": "B0F6LM95F2",
           "asin_verified": true,
           "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
-          "parent_asin": "B0F9Y2LQKN",
+          "parent_asin": "B0F6LM95F2",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
+          "stock_checked_at": 1795237999,
           "search_term": "curtain rods for cold rooms",
-          "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Table Lamp",
-          "asin": "B0CVVH3HNJ",
+          "asin": "B0FS1JXJZJ",
           "asin_verified": true,
-          "verified_product_title": "Buffet Lamps Set of 2, 30\" Tall Black Table Lamps for Console Table, Entryway, Hallway, Dining Sideboard & Living Room, Candlestick Lamps with Linen Shade, Pull Chain, E26 Base, 6FT Cord",
-          "parent_asin": "B0FKRJ4NQX",
+          "verified_product_title": "28\" Modern Table Lamps Set of 2 for Living Room Bedroom, USB Ports",
+          "parent_asin": "B0FS1JXJZJ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795238350,
           "search_term": "table lamp for dark hallways",
-          "url": "https://www.amazon.com/dp/B0CVVH3HNJ?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0FS1JXJZJ?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "bestof-home-decor-blanket-ee68c5987358.html",
@@ -294,7 +308,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -316,34 +330,37 @@
           "name": "Cotton Sheets",
           "asin": "B0DTP1K3K9",
           "asin_verified": true,
-          "verified_product_title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey | Organic Cotton Percale Queen Sheet Set - Naturally Cooling & Lightweight, Cool All Summer, Cozy All Winter, Great For Gifting",
+          "verified_product_title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey",
           "search_term": "cotton sheets for cold climates",
           "url": "https://www.amazon.com/dp/B0DTP1K3K9?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0FB9HLMWW"
+          "stock_checked_at": 1795237969,
+          "parent_asin": "B0DTP1K3K9",
+          "stock_source": "apify"
         },
         {
           "name": "Weighted Blanket",
-          "asin": "B092LZLLGF",
+          "asin": "B07MP2R8X5",
           "asin_verified": true,
-          "verified_product_title": "Yescool Weighted Throw Blanket for Adults 20lbs Queen Size, 60\" x 80\", Grey | Cooling Heavy Blanket for Sleeping Perfect for 190-210 Lbs, Breathable Bedding Blanket With Glass Bead, Machine Washable",
+          "verified_product_title": "Weighted Blanket for Adults with Removable Cover, 12 lb, 48x72 in, Grey",
           "search_term": "weighted blanket for anxious sleepers",
-          "url": "https://www.amazon.com/dp/B092LZLLGF?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B07MP2R8X5?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
-          "parent_asin": "B0F8VZBZS4"
+          "stock_checked_at": 1795238073,
+          "parent_asin": "B07MP2R8X5",
+          "stock_source": "serpapi"
         },
         {
           "name": "Duvet",
           "asin": "B07G81GQ3Q",
           "asin_verified": true,
-          "verified_product_title": "COHOME All-Season Queen Size Cooling Comforter Duvet Insert - White | Down Alternative Comforter, Luxury Hotel Breathable Soft bedding, Anti-Clump Tech & 8 Tabs, Reversible, 88 x 88 inches",
+          "verified_product_title": "All-Season Queen Size Cooling Comforter Duvet Insert - White",
           "search_term": "duvet for hot sleepers",
           "url": "https://www.amazon.com/dp/B07G81GQ3Q?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
-          "parent_asin": "B0H8S8WZXC"
+          "stock_checked_at": 1795237798,
+          "parent_asin": "B07G81GQ3Q",
+          "stock_source": "apify"
         }
       ],
       "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
@@ -351,7 +368,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -378,31 +395,34 @@
           "verified_product_title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
           "parent_asin": "B0FNBV7NG7",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "stock_checked_at": 1795238031,
           "search_term": "screwdriver set for home repairs",
-          "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Tool Set",
           "asin": "B0GR9NLSQZ",
           "asin_verified": true,
           "verified_product_title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
-          "parent_asin": "B0GXYMC2LG",
+          "parent_asin": "B0GR9NLSQZ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
+          "stock_checked_at": 1795238059,
           "search_term": "tool set for diy beginners",
-          "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Jigsaw",
-          "asin": "B0H6B4JD26",
+          "asin": "B0GV7BBHKB",
           "asin_verified": true,
-          "verified_product_title": "Winmitool 5.5-Amp Corded Jig Saw, Electric Jigsaw Tool for Wood Cutting, 6-Speed Wood Cutting Tool with 4 Orbital Settings & ±45° Bevel Cutting, Tool-free Blade Change, Corded Jigsaw Kit with Case",
-          "parent_asin": "B0H6B5L8K9",
+          "verified_product_title": "Cordless Jig Saw,Brushless Jigsaw Saw with 2×2.0Ah Batteries",
+          "parent_asin": "B0GV7BBHKB",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
+          "stock_checked_at": 1795238239,
           "search_term": "jigsaw for curved cuts",
-          "url": "https://www.amazon.com/dp/B0H6B4JD26?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0GV7BBHKB?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "bestof-tools-wrench-50c42e618342.html",
@@ -412,7 +432,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -434,23 +454,25 @@
           "name": "Blender",
           "asin": "B0855B5Z6F",
           "asin_verified": true,
-          "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
-          "parent_asin": "B0HQ7LZ2F1",
+          "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
+          "parent_asin": "B0855B5Z6F",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
+          "stock_checked_at": 1795237841,
           "search_term": "Blender",
-          "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Personal Blender",
           "asin": "B012T634SM",
           "asin_verified": true,
-          "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
-          "parent_asin": "B0FSS4B8DM",
+          "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101",
+          "parent_asin": "B012T634SM",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795237786,
           "search_term": "Personal Blender",
-          "url": "https://www.amazon.com/dp/B012T634SM?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B012T634SM?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
@@ -460,7 +482,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -480,36 +502,37 @@
       "items": [
         {
           "name": "Clothes Brush",
-          "asin": "B00QQW5ISA",
+          "asin": "B0037AMY6S",
           "asin_verified": true,
-          "verified_product_title": "3-in-1 Clothes Brush: Lint Remover, Suit Brush & Shoe Horn - Wood Handle | Removes Lint, Pet Hair, Fuzz & Dust Fast, Double-Sided Reusable Clothes Brush, Built-In Shoe Horn, Sturdy Walnut Wood Handle",
+          "verified_product_title": "KENT CR8 Clothes Brush, 100% Natural Black Boar Bristle Lint Remover for Cashmere, Wool, and Silk for Keeping Fabrics Free from Fibres, Fluff and Pet Hair. Luxury Three Veneered Woods. Made in England",
           "search_term": "Clothes Brush",
-          "url": "https://www.amazon.com/dp/B00QQW5ISA?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0037AMY6S?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
-          "parent_asin": "B00QQW5ISA"
+          "stock_checked_at": 1795238076,
+          "parent_asin": "B0037AMY6S",
+          "stock_source": "serpapi"
         },
         {
           "name": "Clothes Line",
           "asin": "B0DQJ61TZJ",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
           "search_term": "Clothes Line",
-          "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
+          "url": "",
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B0DQJ9B83X"
         }
       ],
       "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1794911837,
+      "product_links_verified": false,
+      "review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
-      "product_review_required": false
+      "product_review_required": true
     },
     {
       "slug": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
@@ -534,8 +557,9 @@
           "search_term": "Electrostatic Duster",
           "url": "https://www.amazon.com/dp/B07GL4JVNJ?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
-          "parent_asin": "B07GL4JVNJ"
+          "stock_checked_at": 1795237798,
+          "parent_asin": "B07GL4JVNJ",
+          "stock_source": "apify"
         },
         {
           "name": "Duster with Extension",
@@ -545,8 +569,9 @@
           "search_term": "Duster with Extension",
           "url": "https://www.amazon.com/dp/B0B6G147W6?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
-          "parent_asin": "B0B6H2HLFL"
+          "stock_checked_at": 1795237912,
+          "parent_asin": "B0B6G147W6",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
@@ -554,7 +579,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -576,25 +601,27 @@
       "items": [
         {
           "name": "Aleene's Fabric Glue",
-          "asin": "B00178QSE6",
+          "asin": "B00KD6ZHD6",
           "asin_verified": true,
-          "verified_product_title": "Aleene's Fabric Fusion Glue 4 oz, Permanent and Washable Adhesive, No-Sew Fabric Glue for Clothing, Denim, Polyester, Cotton, Flannel Materials, Dries Flexible",
+          "verified_product_title": "Aleene's Quick Dry Fabric Fusion, Fast-Drying Permanent Fabric Glue, Stong Bond Dries Soft and Clear in Minutes, 4 fl oz",
           "search_term": "Aleene's Fabric Fusion Glue 4 oz",
-          "url": "https://www.amazon.com/dp/B00178QSE6?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B00KD6ZHD6?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
-          "parent_asin": "B0FG59Y4HF"
+          "stock_checked_at": 1795238503,
+          "parent_asin": "B00KD6ZHD6",
+          "stock_source": "apify"
         },
         {
           "name": "Fabric Scissors",
           "asin": "B082LY2W2G",
           "asin_verified": true,
-          "verified_product_title": "8\" Heavy Duty Fabric Scissors, Black Sewing Shears | Ideal for leather tailoring, home, office, and crafting. Ultra-sharp blades ensure precise cuts for heavy-duty materials.",
+          "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor,Tailoring Shears for Home Office Craft Black",
           "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
           "url": "https://www.amazon.com/dp/B082LY2W2G?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
-          "parent_asin": "B0F53XSQD7"
+          "stock_checked_at": 1795237841,
+          "parent_asin": "B082LY2W2G",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
@@ -602,7 +629,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -626,23 +653,25 @@
           "name": "Lifting Straps",
           "asin": "B0CK2MTXXK",
           "asin_verified": true,
-          "verified_product_title": "Gymreapers Lifting Wrist Straps for Weightlifting, Bodybuilding, Powerlifting, Strength Training, & Deadlifts - Padded Neoprene with 18\" Cotton (Black/Black)",
-          "parent_asin": "B07BB4463X",
+          "verified_product_title": "Gymreapers Lifting Wrist Straps for Weightlifting, Bodybuilding, Powerlifting, Strength Training, & Deadlifts - Padded Neoprene with 18\" Cotton",
+          "parent_asin": "B0CK2MTXXK",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795237936,
           "search_term": "Lifting Straps",
-          "url": "https://www.amazon.com/dp/B0CK2MTXXK?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0CK2MTXXK?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Weight Lifting Gloves",
           "asin": "B07KQP1X5T",
           "asin_verified": true,
-          "verified_product_title": "ATERCEL Workout Gloves for Men and Women, Exercise Gloves for Weight Lifting, Cycling, Gym, Training, Breathable and Snug fit (Black, L)",
-          "parent_asin": "B07N582C6N",
+          "verified_product_title": "ATERCEL Workout Gloves for Men and Women, Exercise Gloves for Weight Lifting, Cycling, Gym, Training, Breathable and Snug fit",
+          "parent_asin": "B07KQP1X5T",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
+          "stock_checked_at": 1795237818,
           "search_term": "Weight Lifting Gloves",
-          "url": "https://www.amazon.com/dp/B07KQP1X5T?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B07KQP1X5T?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-lifting-straps-vs-weight-lifting-gloves-6eee1cf71150.html",
@@ -652,7 +681,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -674,33 +703,34 @@
           "name": "Mattress Topper",
           "asin": "B0D3D5LKG9",
           "asin_verified": true,
-          "verified_product_title": "BEDLORE Queen Mattress Topper, Thick Soft Pillow Top Bed Topper | Viscose Bamboo, Stretchable Pockets Fit 6”-18”, Breathable Mattress Topper for Back Pain Relief and Hot Sleepers(Dark Gray)",
-          "parent_asin": "B0FWZCRYB4",
+          "verified_product_title": "BEDLORE Queen Mattress Topper, Thick Soft Pillow Top Bed Topper",
+          "parent_asin": "B0D3D5LKG9",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795237944,
           "search_term": "Mattress Topper",
-          "url": "https://www.amazon.com/dp/B0D3D5LKG9?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0D3D5LKG9?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Cooling Mattress Topper",
           "asin": "B0GCD1F8DZ",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "Mattress Pad Queen Size, Cooling Pillow Top Mattress Topper, Ultra Soft Viscose Made from Bamboo, Breathable for Hot Sleepers, Deep Pocket 8\"-20\", Green",
           "parent_asin": "B0GVYXXD6L",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "search_term": "Cooling Mattress Topper",
-          "url": "https://www.amazon.com/dp/B0GCD1F8DZ?tag=hotr0e-20"
+          "url": ""
         }
       ],
       "html_file": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
+      "product_links_verified": false,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "review_required": true,
+      "product_review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -721,35 +751,35 @@
         {
           "name": "VIVO Monitor Arm",
           "asin": "B01NH0HTM5",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "VIVO AeroPoise™ Single Monitor Stand, for 17\" to 32\" Screens up to 19.8 lbs | Fully Adjustable Arm, Mechanical Articulating Desk Mount, VESA 75x75 and 100x100, Black, STAND-V001O",
           "search_term": "VIVO STAND-V001O Single Monitor Arm",
-          "url": "https://www.amazon.com/dp/B01NH0HTM5?tag=hotr0e-20",
+          "url": "",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
-          "parent_asin": "B0C5L7MC6Q"
+          "stock_checked_at": 1795237792,
+          "parent_asin": "B01NH0HTM5"
         },
         {
           "name": "OPNICE Monitor Stand Riser",
           "asin": "B0DB8F7GDN",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
           "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
-          "url": "https://www.amazon.com/dp/B0DB8F7GDN?tag=hotr0e-20",
+          "url": "",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
-          "parent_asin": "B0HFWCN5KF"
+          "stock_checked_at": 1795237961,
+          "parent_asin": "B0DB8F7GDN"
         }
       ],
       "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1794911837,
+      "product_links_verified": false,
+      "review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
-      "product_review_required": false
+      "product_review_required": true
     },
     {
       "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
@@ -768,14 +798,15 @@
       "items": [
         {
           "name": "Rugshop Traditional Medallion Runner Rug",
-          "asin": "B0F1V9PNB6",
+          "asin": "B0HGPRSSGT",
           "asin_verified": true,
-          "verified_product_title": "Rugshop Oriental Medallion Non-Slip Washable Runner Rug Green 2' x 10' | Traditional, Rectangular, Size 2' x 10', Living Room, Bedroom, Dining Room, Home Office, Kitchen, Entryway, Hallway, Nursery",
+          "verified_product_title": "Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown",
           "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
-          "url": "https://www.amazon.com/dp/B0F1V9PNB6?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0H8Z8T5TD"
+          "stock_checked_at": 1795238092,
+          "parent_asin": "B0HGPRSSGT",
+          "stock_source": "serpapi"
         },
         {
           "name": "Trademoon 5x7 Jute and Cotton Area Rug",
@@ -784,8 +815,8 @@
           "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
           "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
           "url": "",
-          "availability_type": "LEADTIME",
-          "stock_checked_at": 1794911836,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B0FMS4F469"
         }
       ],
@@ -794,7 +825,7 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
@@ -818,23 +849,25 @@
           "name": "Tote Bag",
           "asin": "B0FKH85DPY",
           "asin_verified": true,
-          "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse | Large Teacher Nurse School Bag with 40oz Cup Holder & Strap, Zipper Shoulder Bag Handbag for Travel College Bible Office Gift",
+          "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
           "search_term": "Tote Bag",
           "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0FQJG2B8L"
+          "stock_checked_at": 1795238022,
+          "parent_asin": "B0FKH85DPY",
+          "stock_source": "apify"
         },
         {
           "name": "Crossbody Bag",
-          "asin": "B0C3LRC59F",
+          "asin": "B0BWH7GP46",
           "asin_verified": true,
-          "verified_product_title": "Banelu Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
+          "verified_product_title": "Simptech Mini Crossbody Sling Bag - Water-Resistant Dual Pocket Chest Pack - Lightweight Fanny Pack for Running, Travel & Everyday Workout",
           "search_term": "Crossbody Bag",
-          "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0BWH7GP46?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
-          "parent_asin": "B0HMNM3TV8"
+          "stock_checked_at": 1795238121,
+          "parent_asin": "B0BWH7GP46",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
@@ -842,7 +875,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -866,23 +899,25 @@
           "name": "Under Bed Storage",
           "asin": "B09Q38H2J4",
           "asin_verified": true,
-          "verified_product_title": "Budding Joy 95L Under Bed Storage Containers, 4 Pack Closet Organizers Grey | Foldable underbed storage bins for linen sheets, blanket, clothing, comforter, sweaters, pillows, wrapping paper",
-          "parent_asin": "B0H8R8F7BW",
+          "verified_product_title": "Budding Joy 95L Under Bed Storage Containers, 4 Pack Closet Organizers Grey",
+          "parent_asin": "B09Q38H2J4",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "stock_checked_at": 1795237892,
           "search_term": "Under Bed Storage",
-          "url": "https://www.amazon.com/dp/B09Q38H2J4?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B09Q38H2J4?tag=hotr0e-20",
+          "stock_source": "apify"
         },
         {
           "name": "Storage Bins",
           "asin": "B0H3KSXC25",
           "asin_verified": true,
-          "verified_product_title": "CLMSTE 6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
-          "parent_asin": "B0HF7MYNFZ",
+          "verified_product_title": "6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
+          "parent_asin": "B0H3KSXC25",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
+          "stock_checked_at": 1795238067,
           "search_term": "Storage Bins",
-          "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97.html",
@@ -892,7 +927,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -915,11 +950,12 @@
           "asin": "B07T5SY43L",
           "asin_verified": true,
           "verified_product_title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
-          "parent_asin": "B0HKSLL2S4",
+          "parent_asin": "B07T5SY43L",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
+          "stock_checked_at": 1795237827,
           "search_term": "dual monitor arm",
-          "url": "https://www.amazon.com/dp/B07T5SY43L?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B07T5SY43L?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "dual-monitor-arm-guide-load-vesa-alignment-desk-space.html",
@@ -929,7 +965,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -952,11 +988,12 @@
           "asin": "B0FQM6QB48",
           "asin_verified": true,
           "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
-          "parent_asin": "B0GK9FYKY1",
+          "parent_asin": "B0FQM6QB48",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "stock_checked_at": 1795238031,
           "search_term": "monitor arm",
-          "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "monitor-arm-ergonomic-setup-screen-height-viewing-distance.html",
@@ -966,7 +1003,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -991,8 +1028,8 @@
           "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
           "url": "",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B09VPHVT2Z"
         }
       ],
@@ -1001,7 +1038,7 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
@@ -1025,12 +1062,13 @@
           "name": "Cabinet Locks",
           "asin": "B0FVCZBDQ1",
           "asin_verified": true,
-          "verified_product_title": "Infinno Cabinet Locks for Baby Proofing, Child Safety Latches, 12 Pack | No drill 3M adhesive, heavy duty hold, fits drawers, cupboards and fridge, installs in minutes, keeps toddlers and pets out",
-          "parent_asin": "B0H2PKBJJR",
+          "verified_product_title": "Infinno Cabinet Locks for Baby Proofing, Child Safety Latches, 12 Pack",
+          "parent_asin": "B0FVCZBDQ1",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "stock_checked_at": 1795238037,
           "search_term": "cabinet locks for renters",
-          "url": "https://www.amazon.com/dp/B0FVCZBDQ1?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0FVCZBDQ1?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-cabinet-locks-62cfe8674cb9.html",
@@ -1040,7 +1078,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1066,8 +1104,9 @@
           "search_term": "Dashboard Cover Dash Cover Mat Pad Carpet Custom Fit for Chevy Chevrolet Cavalier 1995-2005",
           "url": "https://www.amazon.com/dp/B099Z2Q93Z?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
-          "parent_asin": "B0FWJS5W2J"
+          "stock_checked_at": 1795237885,
+          "parent_asin": "B099Z2Q93Z",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-car-dash-mat-0dee1955dee4.html",
@@ -1075,7 +1114,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1099,12 +1138,13 @@
           "name": "Coffee Canister",
           "asin": "B0DZ2MMFMJ",
           "asin_verified": true,
-          "verified_product_title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container | Kitchen Food Storage Jars for Beans,Ground, Espresso, Rice,Tea, Sugar,Cereal,Cookie, Bar Accessories,Gifts, Lids, Scoop, Gray",
+          "verified_product_title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container",
           "search_term": "coffee canister for humid climates",
           "url": "https://www.amazon.com/dp/B0DZ2MMFMJ?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0H4G9TKQC"
+          "stock_checked_at": 1795237976,
+          "parent_asin": "B0DZ2MMFMJ",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-coffee-canister-1a804dc1169a.html",
@@ -1112,7 +1152,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1134,14 +1174,15 @@
       "items": [
         {
           "name": "Cutting Board",
-          "asin": "B0885WX1YM",
+          "asin": "B0GYMS143S",
           "asin_verified": true,
-          "verified_product_title": "Color Coded Cutting Boards Set of 4 with Holder, BPA-Free | Preventing Cross-Contamination of Different Food Types, Dishwasher Safe",
-          "parent_asin": "B08JK89PSJ",
+          "verified_product_title": "4 Piece Checkerboard Wood Cutting Boards Set 12.6x9 Inch with Holder Label",
+          "parent_asin": "B0GYMS143S",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
+          "stock_checked_at": 1795238261,
           "search_term": "cutting board for families of four",
-          "url": "https://www.amazon.com/dp/B0885WX1YM?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0GYMS143S?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "review-cutting-board-c5a541e5d9b9.html",
@@ -1151,7 +1192,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1173,12 +1214,13 @@
           "name": "Deadbolt",
           "asin": "B0FLVSTPJC",
           "asin_verified": true,
-          "verified_product_title": "MOSECYOU Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield | Block the Access to Keyhole/Thumb Turn, Disable Deadbolt Lock, Temporary Protector Lock, All-Metal Construction",
+          "verified_product_title": "Deadbolt Security Guard with Keys, Deadbolt Lockout Device/Shield",
           "parent_asin": "B0FLVSTPJC",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "stock_checked_at": 1795238022,
           "search_term": "deadbolt for key losing households",
-          "url": "https://www.amazon.com/dp/B0FLVSTPJC?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0FLVSTPJC?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-deadbolt-cf3066990956.html",
@@ -1188,7 +1230,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1214,8 +1256,9 @@
           "search_term": "decorative bowl for dried flowers",
           "url": "https://www.amazon.com/dp/B092XFK5MG?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
-          "parent_asin": "B0BB682J53"
+          "stock_checked_at": 1795237885,
+          "parent_asin": "B092XFK5MG",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-decorative-bowl-1370bfcfc215.html",
@@ -1223,7 +1266,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1250,8 +1293,8 @@
           "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable B-black",
           "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
           "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1794911837,
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795237827,
           "parent_asin": "B07QV16HKB"
         }
       ],
@@ -1260,7 +1303,7 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
@@ -1282,14 +1325,15 @@
       "items": [
         {
           "name": "G4Free 20L Foldable Daypack",
-          "asin": "B0GKLHR7XR",
+          "asin": "B07QV16HKB",
           "asin_verified": true,
-          "verified_product_title": "G4Free 20L Packable Hiking Backpack for Women Men with Phone Pocket | Small Lightweight Foldable Water Resistant Daypack for Travel Camping Outdoor, Beige+Green",
+          "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable Backpack for Men Women",
           "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
-          "url": "https://www.amazon.com/dp/B0GKLHR7XR?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B07QV16HKB?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
-          "parent_asin": "B0GKLWCLQT"
+          "stock_checked_at": 1795238173,
+          "parent_asin": "B07QV16HKB",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-foldable-daypack-d32205113585.html",
@@ -1297,7 +1341,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1321,12 +1365,13 @@
           "name": "Instant Pot",
           "asin": "B00FLYWNYQ",
           "asin_verified": true,
-          "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel | Slow cooks, makes rice and yogurt, steams, sautés, warms and sterilizes, with an app featuring 800+ recipes.",
-          "parent_asin": "B0GXKV5FHP",
+          "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel",
+          "parent_asin": "B00FLYWNYQ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795237779,
           "search_term": "instant pot for families of four",
-          "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-instant-pot-f01d4702e01a.html",
@@ -1336,7 +1381,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1356,14 +1401,15 @@
       "items": [
         {
           "name": "Jump Rope",
-          "asin": "B09DF9NWC7",
+          "asin": "B0F8NKXD5L",
           "asin_verified": true,
-          "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men and Kids, Adjustable Foam Handles Steel Jump Ropes for Fitness",
-          "parent_asin": "B0B49D14SZ",
+          "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope, adjustable jump rope, suitable for women, men, and children, suitable for home gyms, sports and fitness equipment, and slim figures",
+          "parent_asin": "B0F8NKXD5L",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "stock_checked_at": 1795238327,
           "search_term": "jump rope for home gyms",
-          "url": "https://www.amazon.com/dp/B09DF9NWC7?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0F8NKXD5L?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-jump-rope-20b3dab586de.html",
@@ -1373,7 +1419,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1396,11 +1442,12 @@
           "asin": "B0D5J1DN95",
           "asin_verified": true,
           "verified_product_title": "Kazai. Key Holder 'Toke' | Minimalist Key Hook Design from Berlin | Modern Key Holder Wall Mount with Wooden Shelf | Key Rack for Wall as Entryway Organizer | Walnut",
-          "parent_asin": "B0DPM936C3",
+          "parent_asin": "B0D5J1DN95",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795237950,
           "search_term": "key holder for small entryways",
-          "url": "https://www.amazon.com/dp/B0D5J1DN95?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0D5J1DN95?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-key-holder-e9a5f7ebbeac.html",
@@ -1410,7 +1457,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1430,14 +1477,15 @@
       "items": [
         {
           "name": "LED Strip Lights",
-          "asin": "B0991Q94KP",
+          "asin": "B0H45ZH6CG",
           "asin_verified": true,
-          "verified_product_title": "Govee 16.4ft RGBIC LED Strip Lights, LED Lights for Bedroom, APP Control | DIY Multiple Colors on One Line, Color Changing Lights for Home Decor, Bluetooth Strip Lights with APP Control",
-          "parent_asin": "B0H3THBW13",
+          "verified_product_title": "ALITOVE LED Light Strip 24V 100FT 4000K White COB LED Strip Light with Remote Dimmable Flexible LED Tape Lights Hight Density for Closet Ceiling Study Hallway Indoor DIY Lighting(2 Rolls of 50FT)",
+          "parent_asin": "B0H45ZH6CG",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "stock_checked_at": 1795238352,
           "search_term": "led strip lights for dark hallways",
-          "url": "https://www.amazon.com/dp/B0991Q94KP?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0H45ZH6CG?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "review-led-strip-lights-fc0eb6a6b8e8.html",
@@ -1447,7 +1495,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1470,11 +1518,12 @@
           "asin": "B001E6BW6K",
           "asin_verified": true,
           "verified_product_title": "Ampad Gold Fibre Classic, Wirebound Planner Pad, Size 8-1/2 x 11-3/4, Red Cover, Legal Ruling , 70 Sheets per Pad (20-811),White",
-          "parent_asin": "B0HPL4YK17",
+          "parent_asin": "B001E6BW6K",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795237770,
           "search_term": "legal pad for bullet journalers",
-          "url": "https://www.amazon.com/dp/B001E6BW6K?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B001E6BW6K?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-legal-pad-5d14e73c2bc2.html",
@@ -1484,7 +1533,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1506,12 +1555,13 @@
           "name": "Lens Pen",
           "asin": "B007G5NNOW",
           "asin_verified": true,
-          "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black | Retractable Dust Removal Brush, Non-Liquid Cleaning Element, 12mm Round Cleaning Tip, 11cm Long",
-          "parent_asin": "B0B86K1RRK",
+          "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black",
+          "parent_asin": "B007G5NNOW",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
+          "stock_checked_at": 1795237779,
           "search_term": "lens pen for dusty locations",
-          "url": "https://www.amazon.com/dp/B007G5NNOW?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B007G5NNOW?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-lens-pen-5707e568617a.html",
@@ -1521,7 +1571,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1542,24 +1592,24 @@
         {
           "name": "LEVOIT Core 300-P Air Purifier",
           "asin": "B07RSZSYNC",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "Levoit Core 300-P Air Purifier Replacement Filter, Genuine Air Filters | AHAM VERIFIDE, Supports HEPA Sleep Mode, Activated Carbon, Removes Smoke Odor, Allergens, Pet Hair, Core 300-RF, 1 Pack",
           "search_term": "LEVOIT Core 300-P Air Purifier",
-          "url": "https://www.amazon.com/dp/B07RSZSYNC?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
+          "url": "",
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B0D83K6TQZ"
         }
       ],
       "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
+      "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": true,
-      "product_review_required": false
+      "product_review_required": true
     },
     {
       "slug": "review-litter-scoop-a162ab1d8392",
@@ -1580,12 +1630,13 @@
           "name": "Litter Scoop",
           "asin": "B09P3PRM5P",
           "asin_verified": true,
-          "verified_product_title": "WePet Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small | Deep Shovel, Long Handle, Durable Heavy-Duty Metal Scooper, Efficient Kitty Poop Waste Sifting, Rust-Resistant, Easy to Clean",
+          "verified_product_title": "Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small",
           "search_term": "litter scoop for multi cat homes",
           "url": "https://www.amazon.com/dp/B09P3PRM5P?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
-          "parent_asin": "B0HNCQ4YZX"
+          "stock_checked_at": 1795237892,
+          "parent_asin": "B09P3PRM5P",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-litter-scoop-a162ab1d8392.html",
@@ -1593,7 +1644,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1615,14 +1666,15 @@
       "items": [
         {
           "name": "Mattress Protector",
-          "asin": "B07HC2WHS1",
+          "asin": "B0CP49PJRH",
           "asin_verified": true,
-          "verified_product_title": "PlushDeluxe Bamboo Waterproof Mattress Protector, Queen Size, Ultra Soft | Breathable, Noiseless, Hypoallergenic, Washable, 60x80\" Up to 18\" Deep, Viscose Derived from Bamboo Mattress Cover, White",
+          "verified_product_title": "Queen Mattress Pad for Back & Hip Pain Relief, Pillow Top Cooling Bed Topper Quilted Fitted, Hotel Quality Deep Pocket Soft Queen Mattress Protector Cover Washable (60x80 inch, Grey)",
           "search_term": "mattress protector for back sleepers",
-          "url": "https://www.amazon.com/dp/B07HC2WHS1?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0CP49PJRH?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
-          "parent_asin": "B06XVVJ4BG"
+          "stock_checked_at": 1795238199,
+          "parent_asin": "B0CP49PJRH",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "review-mattress-protector-7baedfdfd6e4.html",
@@ -1630,7 +1682,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1657,9 +1709,10 @@
           "verified_product_title": "Money Belt- Travel Security Money Belt with Secret Compartment, Anti-Theft Nylon Hidden Money Pouch with Zinc Alloy Buckle for Dad Boyfriend Men, Business Travel Daily",
           "parent_asin": "B0D5YBXMGJ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
+          "stock_checked_at": 1795237950,
           "search_term": "money belt for business trips",
-          "url": "https://www.amazon.com/dp/B0D5YBXMGJ?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0D5YBXMGJ?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-money-belt-50c248696d72.html",
@@ -1669,7 +1722,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1691,12 +1744,13 @@
           "name": "Mortar and Pestle",
           "asin": "B0D9CP3BPS",
           "asin_verified": true,
-          "verified_product_title": "Howise Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
+          "verified_product_title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
           "search_term": "mortar and pestle for spice grinding",
           "url": "https://www.amazon.com/dp/B0D9CP3BPS?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
-          "parent_asin": "B0D9CP3BPS"
+          "stock_checked_at": 1795237961,
+          "parent_asin": "B0D9CP3BPS",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-mortar-and-pestle-3fbfd223937b.html",
@@ -1704,7 +1758,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1726,14 +1780,15 @@
       "items": [
         {
           "name": "Nail Drill",
-          "asin": "B0CKYJ63SG",
+          "asin": "B0C2BS5WCJ",
           "asin_verified": true,
-          "verified_product_title": "COSLUS C40 Electric Nail Drill Professional, Precise Speed Dial, Purple | Nail File Machine for Acrylic Gel Dip Powder Removal, Compact Manicure Tools, Beginner-friendly Polishing Set, Home",
-          "parent_asin": "B0F58Z632T",
+          "verified_product_title": "20000RPM Electric Nail Drill Compact Portable Efile Professional Manicure Pedicure Nail File Drill Kit for Acrylic, Gel Nails and Home Salon Use",
+          "parent_asin": "B0C2BS5WCJ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795238264,
           "search_term": "nail drill for travellers",
-          "url": "https://www.amazon.com/dp/B0CKYJ63SG?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0C2BS5WCJ?tag=hotr0e-20",
+          "stock_source": "serpapi"
         }
       ],
       "html_file": "review-nail-drill-46cf2ffabf79.html",
@@ -1743,7 +1798,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -1765,12 +1820,13 @@
           "name": "Ninja Creami NC301",
           "asin": "B08QXB9BH5",
           "asin_verified": true,
-          "verified_product_title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker, Ice Cream, Gelato and more, NC301 | Ninja CREAMi transforms frozen bases into ice cream, sorbet and milkshakes at a button touch, from healthy to indulgent.",
+          "verified_product_title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker,  Ice Cream, Gelato and more, NC301",
           "search_term": "Ninja Creami NC301",
           "url": "https://www.amazon.com/dp/B08QXB9BH5?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
-          "parent_asin": "B0H8MGLTX6"
+          "stock_checked_at": 1795237875,
+          "parent_asin": "B08QXB9BH5",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-ninja-creami-nc301-afd5d45b40e8.html",
@@ -1778,7 +1834,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1802,12 +1858,13 @@
           "name": "Plant Pots",
           "asin": "B0BHSX8PYZ",
           "asin_verified": true,
-          "verified_product_title": "Quarut 3 Pack 10 inch Plant Pots with Drainage Holes & Saucer | Whiskey Barrel Planters,Plastic Decor Flower Pots Imitation Wine Barrel Design, for Indoor Outdoor Garden Home Plants-Brown",
+          "verified_product_title": "3 Pack 10 inch Plant Pots with Drainage Holes & Saucer",
           "search_term": "plant pots for low light rooms",
           "url": "https://www.amazon.com/dp/B0BHSX8PYZ?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
-          "parent_asin": "B0HKZQ238J"
+          "stock_checked_at": 1795237912,
+          "parent_asin": "B0BHSX8PYZ",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-plant-pots-ecc22dbb4c63.html",
@@ -1815,7 +1872,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1837,14 +1894,15 @@
       "items": [
         {
           "name": "MNN Portable Monitor",
-          "asin": "B0B9NNWXVP",
+          "asin": "B0C5MT537Z",
           "asin_verified": true,
-          "verified_product_title": "MNN 15.6\" 1080P Portable Monitor IPS USB-C HDMI Gaming Screen for Laptop | 15.6\" FHD IPS HDR, USB-C one-cable, PC/Mac/Phone/Switch, Smart Case,Laptop , low blue, work&game",
+          "verified_product_title": "MNN 15.6\" 4K Portable Monitor, UHD IPS, USB-C HDMI, with Smart Cover Stand",
           "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-          "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0C5MT537Z?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
-          "parent_asin": "B0HMH45HJS"
+          "stock_checked_at": 1795238209,
+          "parent_asin": "B0C5MT537Z",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-portable-monitor-ec1fcecd2d09.html",
@@ -1852,7 +1910,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1874,14 +1932,15 @@
       "items": [
         {
           "name": "Land Guard Raised Garden Bed",
-          "asin": "B0GJ44LX9V",
+          "asin": "B0GQRTC4RL",
           "asin_verified": true,
-          "verified_product_title": "Land Guard 2 Pack 8×4×2ft Galvanized Raised Garden Bed Kit, Galvanized Planter Raised Garden Boxes Outdoor, Large Metal Raised Garden Beds for Vegetables (Silver)",
+          "verified_product_title": "Land Guard 2 Pack 4×2×1ft Galvanized Raised Garden Bed Outdoor, Heavy Duty Bottomless Metal Raised Planter Box for Vegetables, Flowers, Herbs, Backyard Patio Gardening, Silver",
           "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-          "url": "https://www.amazon.com/dp/B0GJ44LX9V?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0GQRTC4RL?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
-          "parent_asin": "B0HK7L1RYN"
+          "stock_checked_at": 1795238227,
+          "parent_asin": "B0GQRTC4RL",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-raised-garden-bed-d615608d706c.html",
@@ -1889,7 +1948,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1917,8 +1976,9 @@
           "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
           "url": "https://www.amazon.com/dp/B01AVDVHTI?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
-          "parent_asin": "B09MJKJYLQ"
+          "stock_checked_at": 1795237786,
+          "parent_asin": "B01AVDVHTI",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-resistance-bands-820d61a673d2.html",
@@ -1926,7 +1986,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1950,12 +2010,13 @@
           "name": "Fit Simplify Resistance Bands",
           "asin": "B07WV7F7VC",
           "asin_verified": true,
-          "verified_product_title": "Fit Simplify Exercise Resistance Loop Bands, Set of 5",
+          "verified_product_title": "Fit Simplify Resistance Loop Exercise Fitness Bands with Instruction Guide and Carry Bag, Set of 5",
           "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
           "url": "https://www.amazon.com/dp/B07WV7F7VC?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
-          "parent_asin": "B08PY2W6JT"
+          "stock_checked_at": 1795237833,
+          "parent_asin": "B07WV7F7VC",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-resistance-bands-9d916e3d97f8.html",
@@ -1963,7 +2024,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -1988,11 +2049,12 @@
           "asin": "B0BSHBTV4V",
           "asin_verified": true,
           "verified_product_title": "DREO 16 Inch 20dB Quiet Smart Fans for Bedroom, DC Room Fan with Remote, 120°+120° Oscillating Fan, 6 Modes, 9 Speeds, 12H Timer,Works Alexa/Google/WiFi/Voice Control, Silver, Oversize (DR-HAF004S)",
-          "parent_asin": "B0D7Q9N4QL",
+          "parent_asin": "B0BSHBTV4V",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795237921,
           "search_term": "smart fan for energy savers",
-          "url": "https://www.amazon.com/dp/B0BSHBTV4V?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0BSHBTV4V?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-smart-fan-fe34301450a1.html",
@@ -2002,7 +2064,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -2023,23 +2085,23 @@
         {
           "name": "Stainless Steel Pan",
           "asin": "B0FR426HPZ",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "EWFEN 12 Inch Tri-Ply Stainless Steel Frying Pan, Compatible with All Cooktops Up to 600℉, Large Frying Pan with lids, Induction-Ready Skillet, Dishwasher and Oven Safe, Even Heat, 12\" Skillet + Lid",
           "parent_asin": "B0HJCCRVHM",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911836,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "search_term": "stainless steel pan for induction cooktops",
-          "url": "https://www.amazon.com/dp/B0FR426HPZ?tag=hotr0e-20"
+          "url": ""
         }
       ],
       "html_file": "review-stainless-steel-pan-b931ccabf8fe.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
+      "product_links_verified": false,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "review_required": true,
+      "product_review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -2059,14 +2121,15 @@
       "items": [
         {
           "name": "Stand Mixer",
-          "asin": "B0758BQPY8",
+          "asin": "B0D3PLPSBG",
           "asin_verified": true,
-          "verified_product_title": "Hamilton Beach 4 Qt Electric Stand Mixer With 7 Speeds, Easy-Carry Handle | Planetary Mixing For Full Bowl Coverage | Splash Guard | 300 Watts | Whisk, Flat Beater, Dough Hook | Mixing Guide | Black",
-          "parent_asin": "B0CYHK66QD",
+          "verified_product_title": "Stand Mixer, 8.5QT+ 6QT Two Stainless Steel Bowls Electric Food Mixer Black",
+          "parent_asin": "B0D3PLPSBG",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
+          "stock_checked_at": 1795238516,
           "search_term": "stand mixer for families of four",
-          "url": "https://www.amazon.com/dp/B0758BQPY8?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0D3PLPSBG?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-stand-mixer-39880e6a4e89.html",
@@ -2076,7 +2139,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -2102,8 +2165,9 @@
           "search_term": "stud finder for diy beginners",
           "url": "https://www.amazon.com/dp/B0HQCDLJP9?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
-          "parent_asin": "B0HQCDLJP9"
+          "stock_checked_at": 1795238071,
+          "parent_asin": "B0HQCDLJP9",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-stud-finder-cf86b7128d04.html",
@@ -2111,7 +2175,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -2135,12 +2199,13 @@
           "name": "Stud Finder",
           "asin": "B0GZHZJP9K",
           "asin_verified": true,
-          "verified_product_title": "Cyber Tools Stud Finder Multi-Mode Wall Scanner, High-Accuracy Sensor | Rechargeable Stud Finder with Wood & Metal Modes, Digital Display, Lightweight, For Drywall, Plaster, Shear Wall",
+          "verified_product_title": "Stud Finder Multi-Mode Wall Scanner, High-Accuracy Sensor",
           "search_term": "stud finder for diy beginners",
           "url": "https://www.amazon.com/dp/B0GZHZJP9K?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
-          "parent_asin": "B0GZHZJP9K"
+          "stock_checked_at": 1795238059,
+          "parent_asin": "B0GZHZJP9K",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-stud-finder-f856f07ac669.html",
@@ -2148,7 +2213,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -2170,14 +2235,15 @@
       "items": [
         {
           "name": "TV",
-          "asin": "B0F13SYF7Y",
+          "asin": "B0F9Z3H6YG",
           "asin_verified": true,
-          "verified_product_title": "JARHETUN TV Stand with LED Lights for 55 Inch TV, Entertainment Center with 3-Tier Open Shelves, TV Console Table for Living Room, Bedroom, Black",
-          "parent_asin": "B0F8QS5WGB",
+          "verified_product_title": "INSIGNIA 24” Class F20 Series LED HD Smart Fire TV, Voice Remote with Alexa, Free & Live TV",
+          "parent_asin": "B0F9Z3H6YG",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
+          "stock_checked_at": 1795238541,
           "search_term": "tv for small desks",
-          "url": "https://www.amazon.com/dp/B0F13SYF7Y?tag=hotr0e-20"
+          "url": "https://www.amazon.com/dp/B0F9Z3H6YG?tag=hotr0e-20",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-tv-be4c016034ee.html",
@@ -2187,7 +2253,7 @@
       "editorial_review_required": false,
       "review_required": false,
       "product_review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400
     },
     {
@@ -2209,12 +2275,13 @@
           "name": "Ring Battery Doorbell 2K",
           "asin": "B0FHJ7TKZM",
           "asin_verified": true,
-          "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray | Retinal wide-angle video, Up to 6x enhanced zoom, Two-way talk, Built-in battery",
+          "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray",
           "search_term": "Ring Battery Doorbell 2K 2nd Generation",
           "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0GTYB16NH"
+          "stock_checked_at": 1795237999,
+          "parent_asin": "B0FHJ7TKZM",
+          "stock_source": "apify"
         }
       ],
       "html_file": "review-video-doorbell-1b56e37dfa94.html",
@@ -2222,7 +2289,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -2246,12 +2313,13 @@
           "name": "LEVOIT Core 300-P Air Purifier",
           "asin": "B0CTJF48C1",
           "asin_verified": true,
-          "verified_product_title": "Core 300 Replacement Filter for LEVOIT Core 300-P Core 300S-P Air Purifier | Compatible with LEVOIT Core 300 Core 300-P Core 300S Core 300S-P Air Purifier, Core 300-RF, 2 Pack",
+          "verified_product_title": "Core 300 Replacement Filter for LEVOIT Core 300-P Core 300S-P Air Purifier",
           "search_term": "LEVOIT Core 300-P Air Purifier",
           "url": "https://www.amazon.com/dp/B0CTJF48C1?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
-          "parent_asin": "B0HQCN5PSD"
+          "stock_checked_at": 1795237936,
+          "parent_asin": "B0CTJF48C1",
+          "stock_source": "apify"
         }
       ],
       "html_file": "seed-air-purifier-buying-guide.html",
@@ -2259,7 +2327,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -2286,8 +2354,8 @@
           "verified_product_title": "Anker 737 Power Bank (PowerCore 24K), 24,000mAh 3-Port Portable Charger with 140W Output, Smart Digital Display",
           "search_term": "Anker 737 Power Bank 24K PowerCore 24K",
           "url": "",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B09VPHVT2Z"
         }
       ],
@@ -2296,7 +2364,7 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
@@ -2320,56 +2388,61 @@
           "name": "Trekking Poles",
           "asin": "B01L2HYPNW",
           "asin_verified": true,
-          "verified_product_title": "Cascade Mountain Tech Trekking Poles, Shaft Material: Aircraft- grade 6061 Aluminum with Adjustable Locks Expandable to 54\" (Set of 2), Cork Grip, Orange, Extended Grip Material: EVA",
+          "verified_product_title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
           "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
           "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911828,
-          "parent_asin": "B0CGDXBZ5N"
+          "stock_checked_at": 1795237792,
+          "parent_asin": "B01L2HYPNW",
+          "stock_source": "apify"
         },
         {
           "name": "Sleeping Bag",
           "asin": "B0DK99H94M",
           "asin_verified": true,
-          "verified_product_title": "Ultralight Sleeping Bag, Warm Weather Portable Compact Sleeping Bags for Adults, Waterproof, Lightweight, Comfort with Compression Sack for 3 Season Camping, Backpacking, Hiking, Traveling",
+          "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
           "search_term": "Ultralight Warm Weather Sleeping Bag",
           "url": "https://www.amazon.com/dp/B0DK99H94M?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
-          "parent_asin": "B0DTHGRP1B"
+          "stock_checked_at": 1795237969,
+          "parent_asin": "B0DK99H94M",
+          "stock_source": "apify"
         },
         {
           "name": "Compass",
-          "asin": "B07CK8B3R3",
+          "asin": "B0FXDN76LR",
           "asin_verified": true,
-          "verified_product_title": "Orienteering Compass Advanced Scout for Hiking Camping Navigation Green | Map Reading Tool.Kids & Professionals Use.Outdoor Survival.Gift Idea. Survival & Camping",
+          "verified_product_title": "Navigation Compass & Whistle Kit - Essential Gear for Orienteering, Camping, Training, Exploration & Youth Outdoor Education",
           "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
-          "url": "https://www.amazon.com/dp/B07CK8B3R3?tag=hotr0e-20",
+          "url": "https://www.amazon.com/dp/B0FXDN76LR?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911829,
-          "parent_asin": "B09MHX11Q1"
+          "stock_checked_at": 1795238372,
+          "parent_asin": "B0FXDN76LR",
+          "stock_source": "apify"
         },
         {
           "name": "Gym Bag",
           "asin": "B0C5SPSRNG",
           "asin_verified": true,
-          "verified_product_title": "Hoedia Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black | String Bag with Shoes Compartment and Wet Proof Pocket, Adjustable Wider Shoulder Strap, For Soccer, Basketball",
+          "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
           "search_term": "Sports Drawstring Backpack Swim Gym Bag",
           "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911832,
-          "parent_asin": "B0DQ81HY2P"
+          "stock_checked_at": 1795237929,
+          "parent_asin": "B0C5SPSRNG",
+          "stock_source": "apify"
         },
         {
           "name": "Hammock Underquilt",
           "asin": "B08936QVJD",
           "asin_verified": true,
-          "verified_product_title": "OneTigris Hideout Hammock Underquilt, Thermal Hammock Quilt for Camping | Quick Setup, Full Length, Ultralight, Warm 4 Season Under Quilt for Hammock Camping Hiking Backpacking Travel",
+          "verified_product_title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
           "search_term": "OneTigris Hideout Hammock Underquilt",
           "url": "https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911830,
-          "parent_asin": "B089383ZK7"
+          "stock_checked_at": 1795237875,
+          "parent_asin": "B08936QVJD",
+          "stock_source": "apify"
         }
       ],
       "html_file": "seed-best-home-fitness-gear.html",
@@ -2377,7 +2450,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
@@ -2401,12 +2474,13 @@
           "name": "Breville Bambino Espresso Machine",
           "asin": "B0B1JPPG2L",
           "asin_verified": true,
-          "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel | Make café-quality espresso, lattes and cappuccinos at home with this compact, manual coffee maker | Beginner-friendly",
+          "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
           "search_term": "Breville BES450BSS Bambino Espresso Machine",
           "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911831,
-          "parent_asin": "B0CXYCMB86"
+          "stock_checked_at": 1795237903,
+          "parent_asin": "B0B1JPPG2L",
+          "stock_source": "apify"
         },
         {
           "name": "Maestri House Pour Over Coffee Maker",
@@ -2416,7 +2490,7 @@
           "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
           "url": "",
           "availability_type": "OUT_OF_STOCK",
-          "stock_checked_at": 1794911832,
+          "stock_checked_at": 1795237921,
           "parent_asin": "B0BZP1PRNK"
         }
       ],
@@ -2425,7 +2499,7 @@
       "draft": false,
       "product_links_verified": false,
       "review_required": true,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
@@ -2448,35 +2522,36 @@
         {
           "name": "Roborock Q5 Pro Robot Vacuum",
           "asin": "B0F334DN9J",
-          "asin_verified": true,
+          "asin_verified": false,
           "verified_product_title": "Roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
           "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-          "url": "https://www.amazon.com/dp/B0F334DN9J?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911835,
+          "url": "",
+          "availability_type": "UNKNOWN",
+          "stock_checked_at": 1795238071,
           "parent_asin": "B0HRKKNNQC"
         },
         {
           "name": "Shark PowerDetect Stick Vacuum",
           "asin": "B0DBVW1RFW",
           "asin_verified": true,
-          "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
+          "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251",
           "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
           "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911834,
-          "parent_asin": "B0HLBX3JSY"
+          "stock_checked_at": 1795238441,
+          "parent_asin": "B0DBVW1RFW",
+          "stock_source": "apify"
         }
       ],
       "html_file": "seed-robot-vs-stick-vacuum.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1794911837,
+      "product_links_verified": false,
+      "review_required": true,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
-      "product_review_required": false
+      "product_review_required": true
     },
     {
       "slug": "seed-standing-desk-guide",
@@ -2501,8 +2576,9 @@
           "search_term": "Pamray 40 Inch L Shaped Computer Desk with Reversible Side Storage Shelves",
           "url": "https://www.amazon.com/dp/B0GKRTGRRK?tag=hotr0e-20",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1794911837,
-          "parent_asin": "B0FM41F6G2"
+          "stock_checked_at": 1795238054,
+          "parent_asin": "B0GKRTGRRK",
+          "stock_source": "apify"
         }
       ],
       "html_file": "seed-standing-desk-guide.html",
@@ -2510,7 +2586,7 @@
       "draft": false,
       "product_links_verified": true,
       "review_required": false,
-      "products_audited_at": 1794911837,
+      "products_audited_at": 1795238071,
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false

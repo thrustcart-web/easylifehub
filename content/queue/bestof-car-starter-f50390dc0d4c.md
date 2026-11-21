@@ -45,6 +45,6 @@ Match your priorities to the product features, double‑check fit and compatibil
 
 - Car Sun Shade: https://www.amazon.com/dp/B07Q72HJ65?tag=hotr0e-20
 - Car Wax: https://www.amazon.com/dp/B07XYPS3PS?tag=hotr0e-20
-- Dashboard Mat: https://www.amazon.com/dp/B0GYD4XYVV?tag=hotr0e-20
+- Dashboard Mat: https://www.amazon.com/dp/B0GQLNKVYN?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

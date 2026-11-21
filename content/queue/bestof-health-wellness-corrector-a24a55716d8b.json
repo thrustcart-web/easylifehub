@@ -15,36 +15,39 @@
   "items": [
     {
       "name": "Walking Cane",
-      "asin": "B0CCG17HGN",
+      "asin": "B0CYSY6MDR",
       "asin_verified": true,
-      "verified_product_title": "Medline Aluminum Offset Walking Cane, Adjustable Height, 300 lb Capacity | Height Adjustable, Sturdy Aluminum for Reliability, Comfortable Foam Handle with Strap, Rubber Pads for Stability, Black",
-      "parent_asin": "B0GFBKD2WG",
+      "verified_product_title": "REHAND Walking Cane for Men & Women - Foldable, Adjustable, Lightweight, Self Standing Pivot Walking Cane, Soft Handle Grip, with Travel Bag, Walking Sticks for Seniors & Adults",
+      "parent_asin": "B0CYSY6MDR",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911832,
+      "stock_checked_at": 1795238279,
       "search_term": "walking cane for rehab users",
-      "url": "https://www.amazon.com/dp/B0CCG17HGN?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0CYSY6MDR?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Blood Pressure Monitor",
-      "asin": "B01C5QS1T8",
+      "asin": "B0CHXY8WQW",
       "asin_verified": true,
-      "verified_product_title": "iHealth Track Smart Upper Arm Blood Pressure Monitor with Wide-Range Cuff | Bluetooth BP monitor for standard to large adult arms, compatible with iOS and Android",
-      "parent_asin": "B0H636XX71",
+      "verified_product_title": "Oklar Wrist Blood Pressure Monitor, FDA Cleared Rechargeable BP Machine",
+      "parent_asin": "B0CHXY8WQW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911828,
+      "stock_checked_at": 1795238290,
       "search_term": "blood pressure monitor for seniors",
-      "url": "https://www.amazon.com/dp/B01C5QS1T8?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0CHXY8WQW?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Posture Corrector",
       "asin": "B07VST9VYH",
       "asin_verified": true,
-      "verified_product_title": "Schiara Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
+      "verified_product_title": "Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
       "parent_asin": "B07VST9VYH",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
+      "stock_checked_at": 1795237833,
       "search_term": "posture corrector for desk workers",
-      "url": "https://www.amazon.com/dp/B07VST9VYH?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B07VST9VYH?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-health-wellness-corrector-a24a55716d8b.html",
@@ -54,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

@@ -17,23 +17,25 @@
       "name": "Blender",
       "asin": "B0855B5Z6F",
       "asin_verified": true,
-      "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701 | 1400 peak-watt motor, 3 Auto-iQ presets, smoothies, frozen drinks & ice cream. Total Crushing. Dishwasher safe.",
-      "parent_asin": "B0HQ7LZ2F1",
+      "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
+      "parent_asin": "B0855B5Z6F",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
+      "stock_checked_at": 1795237841,
       "search_term": "Blender",
-      "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Personal Blender",
       "asin": "B012T634SM",
       "asin_verified": true,
-      "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101 | 250-watt base blends smoothies, shakes & frozen drinks. Includes (3) To-Go Cups (1) Travel Lid. Dishwasher safe.",
-      "parent_asin": "B0FSS4B8DM",
+      "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Silver, MBR-1101",
+      "parent_asin": "B012T634SM",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911828,
+      "stock_checked_at": 1795237786,
       "search_term": "Personal Blender",
-      "url": "https://www.amazon.com/dp/B012T634SM?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B012T634SM?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
@@ -43,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

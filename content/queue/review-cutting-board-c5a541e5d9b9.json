@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "Cutting Board",
-      "asin": "B0885WX1YM",
+      "asin": "B0GYMS143S",
       "asin_verified": true,
-      "verified_product_title": "Color Coded Cutting Boards Set of 4 with Holder, BPA-Free | Preventing Cross-Contamination of Different Food Types, Dishwasher Safe",
-      "parent_asin": "B08JK89PSJ",
+      "verified_product_title": "4 Piece Checkerboard Wood Cutting Boards Set 12.6x9 Inch with Holder Label",
+      "parent_asin": "B0GYMS143S",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
+      "stock_checked_at": 1795238261,
       "search_term": "cutting board for families of four",
-      "url": "https://www.amazon.com/dp/B0885WX1YM?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0GYMS143S?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-cutting-board-c5a541e5d9b9.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

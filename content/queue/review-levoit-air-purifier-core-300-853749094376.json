@@ -16,22 +16,22 @@
     {
       "name": "LEVOIT Core 300-P Air Purifier",
       "asin": "B07RSZSYNC",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Levoit Core 300-P Air Purifier Replacement Filter, Genuine Air Filters | AHAM VERIFIDE, Supports HEPA Sleep Mode, Activated Carbon, Removes Smoke Odor, Allergens, Pet Hair, Core 300-RF, 1 Pack",
       "search_term": "LEVOIT Core 300-P Air Purifier",
-      "url": "https://www.amazon.com/dp/B07RSZSYNC?tag=hotr0e-20",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911829,
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795238071,
       "parent_asin": "B0D83K6TQZ"
     }
   ],
   "html_file": "review-levoit-air-purifier-core-300-853749094376.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
+  "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": true,
-  "product_review_required": false
+  "product_review_required": true
 }

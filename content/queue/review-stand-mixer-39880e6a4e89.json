@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "Stand Mixer",
-      "asin": "B0758BQPY8",
+      "asin": "B0D3PLPSBG",
       "asin_verified": true,
-      "verified_product_title": "Hamilton Beach 4 Qt Electric Stand Mixer With 7 Speeds, Easy-Carry Handle | Planetary Mixing For Full Bowl Coverage | Splash Guard | 300 Watts | Whisk, Flat Beater, Dough Hook | Mixing Guide | Black",
-      "parent_asin": "B0CYHK66QD",
+      "verified_product_title": "Stand Mixer, 8.5QT+ 6QT Two Stainless Steel Bowls Electric Food Mixer Black",
+      "parent_asin": "B0D3PLPSBG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911829,
+      "stock_checked_at": 1795238516,
       "search_term": "stand mixer for families of four",
-      "url": "https://www.amazon.com/dp/B0758BQPY8?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0D3PLPSBG?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-stand-mixer-39880e6a4e89.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "Rugshop Traditional Medallion Runner Rug",
-      "asin": "B0F1V9PNB6",
+      "asin": "B0HGPRSSGT",
       "asin_verified": true,
-      "verified_product_title": "Rugshop Oriental Medallion Non-Slip Washable Runner Rug Green 2' x 10' | Traditional, Rectangular, Size 2' x 10', Living Room, Bedroom, Dining Room, Home Office, Kitchen, Entryway, Hallway, Nursery",
+      "verified_product_title": "Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown",
       "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
-      "url": "https://www.amazon.com/dp/B0F1V9PNB6?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911835,
-      "parent_asin": "B0H8Z8T5TD"
+      "stock_checked_at": 1795238092,
+      "parent_asin": "B0HGPRSSGT",
+      "stock_source": "serpapi"
     },
     {
       "name": "Trademoon 5x7 Jute and Cotton Area Rug",
@@ -31,8 +32,8 @@
       "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
       "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
       "url": "",
-      "availability_type": "LEADTIME",
-      "stock_checked_at": 1794911836,
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795238071,
       "parent_asin": "B0FMS4F469"
     }
   ],
@@ -41,7 +42,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

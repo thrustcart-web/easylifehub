@@ -20,9 +20,10 @@
       "verified_product_title": "Money Belt- Travel Security Money Belt with Secret Compartment, Anti-Theft Nylon Hidden Money Pouch with Zinc Alloy Buckle for Dad Boyfriend Men, Business Travel Daily",
       "parent_asin": "B0D5YBXMGJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911834,
+      "stock_checked_at": 1795237950,
       "search_term": "money belt for business trips",
-      "url": "https://www.amazon.com/dp/B0D5YBXMGJ?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0D5YBXMGJ?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-money-belt-50c248696d72.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

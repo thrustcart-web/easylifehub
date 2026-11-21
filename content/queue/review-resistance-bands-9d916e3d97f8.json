@@ -17,12 +17,13 @@
       "name": "Fit Simplify Resistance Bands",
       "asin": "B07WV7F7VC",
       "asin_verified": true,
-      "verified_product_title": "Fit Simplify Exercise Resistance Loop Bands, Set of 5",
+      "verified_product_title": "Fit Simplify Resistance Loop Exercise Fitness Bands with Instruction Guide and Carry Bag, Set of 5",
       "search_term": "Fit Simplify Resistance Loop Exercise Bands Set of 5",
       "url": "https://www.amazon.com/dp/B07WV7F7VC?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
-      "parent_asin": "B08PY2W6JT"
+      "stock_checked_at": 1795237833,
+      "parent_asin": "B07WV7F7VC",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-resistance-bands-9d916e3d97f8.html",
@@ -30,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

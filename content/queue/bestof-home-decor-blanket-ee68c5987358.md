@@ -45,6 +45,6 @@ Verify the specifications on the current manufacturer page, match them to your r
 
 - Storage Baskets: https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20
 - Curtain Rods: https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20
-- Table Lamp: https://www.amazon.com/dp/B0CVVH3HNJ?tag=hotr0e-20
+- Table Lamp: https://www.amazon.com/dp/B0FS1JXJZJ?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "G4Free 20L Foldable Daypack",
-      "asin": "B0GKLHR7XR",
+      "asin": "B07QV16HKB",
       "asin_verified": true,
-      "verified_product_title": "G4Free 20L Packable Hiking Backpack for Women Men with Phone Pocket | Small Lightweight Foldable Water Resistant Daypack for Travel Camping Outdoor, Beige+Green",
+      "verified_product_title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable Backpack for Men Women",
       "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
-      "url": "https://www.amazon.com/dp/B0GKLHR7XR?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B07QV16HKB?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911836,
-      "parent_asin": "B0GKLWCLQT"
+      "stock_checked_at": 1795238173,
+      "parent_asin": "B07QV16HKB",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-foldable-daypack-d32205113585.html",
@@ -30,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "LED Strip Lights",
-      "asin": "B0991Q94KP",
+      "asin": "B0H45ZH6CG",
       "asin_verified": true,
-      "verified_product_title": "Govee 16.4ft RGBIC LED Strip Lights, LED Lights for Bedroom, APP Control | DIY Multiple Colors on One Line, Color Changing Lights for Home Decor, Bluetooth Strip Lights with APP Control",
-      "parent_asin": "B0H3THBW13",
+      "verified_product_title": "ALITOVE LED Light Strip 24V 100FT 4000K White COB LED Strip Light with Remote Dimmable Flexible LED Tape Lights Hight Density for Closet Ceiling Study Hallway Indoor DIY Lighting(2 Rolls of 50FT)",
+      "parent_asin": "B0H45ZH6CG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911831,
+      "stock_checked_at": 1795238352,
       "search_term": "led strip lights for dark hallways",
-      "url": "https://www.amazon.com/dp/B0991Q94KP?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0H45ZH6CG?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-led-strip-lights-fc0eb6a6b8e8.html",
@@ -32,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

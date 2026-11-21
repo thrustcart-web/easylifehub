@@ -17,12 +17,13 @@
       "name": "Ring Battery Doorbell 2K",
       "asin": "B0FHJ7TKZM",
       "asin_verified": true,
-      "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray | Retinal wide-angle video, Up to 6x enhanced zoom, Two-way talk, Built-in battery",
+      "verified_product_title": "Ring Battery Doorbell 2K (newest model), Speckled Gray",
       "search_term": "Ring Battery Doorbell 2K 2nd Generation",
       "url": "https://www.amazon.com/dp/B0FHJ7TKZM?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911835,
-      "parent_asin": "B0GTYB16NH"
+      "stock_checked_at": 1795237999,
+      "parent_asin": "B0FHJ7TKZM",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-video-doorbell-1b56e37dfa94.html",
@@ -30,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

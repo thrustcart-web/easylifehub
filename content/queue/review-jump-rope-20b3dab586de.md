@@ -49,6 +49,6 @@ Before committing, check the current manufacturer listing for exact length, adju
 
 ### Product Links
 
-- Jump Rope: https://www.amazon.com/dp/B09DF9NWC7?tag=hotr0e-20
+- Jump Rope: https://www.amazon.com/dp/B0F8NKXD5L?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

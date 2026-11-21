@@ -16,33 +16,34 @@
     {
       "name": "Roborock Q5 Pro Robot Vacuum",
       "asin": "B0F334DN9J",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
       "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
-      "url": "https://www.amazon.com/dp/B0F334DN9J?tag=hotr0e-20",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911835,
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795238071,
       "parent_asin": "B0HRKKNNQC"
     },
     {
       "name": "Shark PowerDetect Stick Vacuum",
       "asin": "B0DBVW1RFW",
       "asin_verified": true,
-      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251 | Auto-Empty System, Powerful Suction, HEPA Filtration, Carpet & Hard Floor, Portable for Pet Hair, Dark Gray",
+      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251",
       "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
       "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911834,
-      "parent_asin": "B0HLBX3JSY"
+      "stock_checked_at": 1795238441,
+      "parent_asin": "B0DBVW1RFW",
+      "stock_source": "apify"
     }
   ],
   "html_file": "seed-robot-vs-stick-vacuum.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false,
-  "products_audited_at": 1794911837,
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": false
+  "product_review_required": true
 }

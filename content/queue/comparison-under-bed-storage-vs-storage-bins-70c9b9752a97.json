@@ -17,23 +17,25 @@
       "name": "Under Bed Storage",
       "asin": "B09Q38H2J4",
       "asin_verified": true,
-      "verified_product_title": "Budding Joy 95L Under Bed Storage Containers, 4 Pack Closet Organizers Grey | Foldable underbed storage bins for linen sheets, blanket, clothing, comforter, sweaters, pillows, wrapping paper",
-      "parent_asin": "B0H8R8F7BW",
+      "verified_product_title": "Budding Joy 95L Under Bed Storage Containers, 4 Pack Closet Organizers Grey",
+      "parent_asin": "B09Q38H2J4",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911831,
+      "stock_checked_at": 1795237892,
       "search_term": "Under Bed Storage",
-      "url": "https://www.amazon.com/dp/B09Q38H2J4?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B09Q38H2J4?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Storage Bins",
       "asin": "B0H3KSXC25",
       "asin_verified": true,
-      "verified_product_title": "CLMSTE 6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
-      "parent_asin": "B0HF7MYNFZ",
+      "verified_product_title": "6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
+      "parent_asin": "B0H3KSXC25",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911837,
+      "stock_checked_at": 1795238067,
       "search_term": "Storage Bins",
-      "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97.html",
@@ -43,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400
 }

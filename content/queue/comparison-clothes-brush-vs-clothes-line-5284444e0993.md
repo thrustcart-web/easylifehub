@@ -43,7 +43,7 @@ Always review the current manufacturer listings to verify specific measurements,
 
 ### Product Links
 
-- Clothes Brush: https://www.amazon.com/dp/B00QQW5ISA?tag=hotr0e-20
+- Clothes Brush: https://www.amazon.com/dp/B0037AMY6S?tag=hotr0e-20
 - Clothes Line: https://www.amazon.com/dp/B0DQJ61TZJ?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

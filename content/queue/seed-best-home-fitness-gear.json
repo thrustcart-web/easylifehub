@@ -17,56 +17,61 @@
       "name": "Trekking Poles",
       "asin": "B01L2HYPNW",
       "asin_verified": true,
-      "verified_product_title": "Cascade Mountain Tech Trekking Poles, Shaft Material: Aircraft- grade 6061 Aluminum with Adjustable Locks Expandable to 54\" (Set of 2), Cork Grip, Orange, Extended Grip Material: EVA",
+      "verified_product_title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
       "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
       "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911828,
-      "parent_asin": "B0CGDXBZ5N"
+      "stock_checked_at": 1795237792,
+      "parent_asin": "B01L2HYPNW",
+      "stock_source": "apify"
     },
     {
       "name": "Sleeping Bag",
       "asin": "B0DK99H94M",
       "asin_verified": true,
-      "verified_product_title": "Ultralight Sleeping Bag, Warm Weather Portable Compact Sleeping Bags for Adults, Waterproof, Lightweight, Comfort with Compression Sack for 3 Season Camping, Backpacking, Hiking, Traveling",
+      "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
       "search_term": "Ultralight Warm Weather Sleeping Bag",
       "url": "https://www.amazon.com/dp/B0DK99H94M?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911835,
-      "parent_asin": "B0DTHGRP1B"
+      "stock_checked_at": 1795237969,
+      "parent_asin": "B0DK99H94M",
+      "stock_source": "apify"
     },
     {
       "name": "Compass",
-      "asin": "B07CK8B3R3",
+      "asin": "B0FXDN76LR",
       "asin_verified": true,
-      "verified_product_title": "Orienteering Compass Advanced Scout for Hiking Camping Navigation Green | Map Reading Tool.Kids & Professionals Use.Outdoor Survival.Gift Idea. Survival & Camping",
+      "verified_product_title": "Navigation Compass & Whistle Kit - Essential Gear for Orienteering, Camping, Training, Exploration & Youth Outdoor Education",
       "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
-      "url": "https://www.amazon.com/dp/B07CK8B3R3?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0FXDN76LR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911829,
-      "parent_asin": "B09MHX11Q1"
+      "stock_checked_at": 1795238372,
+      "parent_asin": "B0FXDN76LR",
+      "stock_source": "apify"
     },
     {
       "name": "Gym Bag",
       "asin": "B0C5SPSRNG",
       "asin_verified": true,
-      "verified_product_title": "Hoedia Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black | String Bag with Shoes Compartment and Wet Proof Pocket, Adjustable Wider Shoulder Strap, For Soccer, Basketball",
+      "verified_product_title": "Sports Drawstring Backpack - Swim Gym Bag for Women and Men, Black",
       "search_term": "Sports Drawstring Backpack Swim Gym Bag",
       "url": "https://www.amazon.com/dp/B0C5SPSRNG?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911832,
-      "parent_asin": "B0DQ81HY2P"
+      "stock_checked_at": 1795237929,
+      "parent_asin": "B0C5SPSRNG",
+      "stock_source": "apify"
     },
     {
       "name": "Hammock Underquilt",
       "asin": "B08936QVJD",
       "asin_verified": true,
-      "verified_product_title": "OneTigris Hideout Hammock Underquilt, Thermal Hammock Quilt for Camping | Quick Setup, Full Length, Ultralight, Warm 4 Season Under Quilt for Hammock Camping Hiking Backpacking Travel",
+      "verified_product_title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
       "search_term": "OneTigris Hideout Hammock Underquilt",
       "url": "https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1794911830,
-      "parent_asin": "B089383ZK7"
+      "stock_checked_at": 1795237875,
+      "parent_asin": "B08936QVJD",
+      "stock_source": "apify"
     }
   ],
   "html_file": "seed-best-home-fitness-gear.html",
@@ -74,7 +79,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1794911837,
+  "products_audited_at": 1795238071,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false
