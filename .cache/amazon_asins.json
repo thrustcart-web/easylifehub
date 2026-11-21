@@ -54,12 +54,13 @@
     "verified_at": "2026-11-15T10:37:26Z"
   },
   "wireless earbuds": {
-    "asin": "B09FT58QQP",
-    "parent_asin": "B0H8PFKTQF",
-    "title": "TOZO A1 Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones | IPX5 Waterproof,2 Mics for AI Calls,Immersive Premium Sound Bass Headset with Charging Case,32 EQ via App Black",
+    "asin": "B0D635YLCT",
+    "parent_asin": "B0D635YLCT",
+    "title": "kurdene Wireless Earbuds Bluetooth 5.3 Light Weight in Ear Headphones",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794782233,
-    "verified_at": "2026-11-15T22:37:21Z"
+    "stock_checked_at": 1795243910,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T06:51:50Z"
   },
   "surge protector": {
     "asin": "B0GYZ9K5Q1",
@@ -294,14 +295,22 @@
     "verified_at": "2026-11-21T05:15:33Z"
   },
   "lint remover": {
-    "asin": "B01NAQD0KD",
-    "title": "BEAUTURAL Fabric Shaver and Lint Remover, Portable Sweater Defuzzer",
-    "verified_at": "2026-11-06T04:08:52Z"
+    "asin": "B0CJRM936N",
+    "parent_asin": "B0CJRM936N",
+    "title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244058,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T06:54:18Z"
   },
   "drying rack": {
-    "asin": "B07F2GB8Z7",
-    "title": "STORAGE MANIAC Sweater Drying Rack, Mesh Clothes Drying Rack, Stackable Laundry Drying Rack, Lay Flat Dryer for Delicates, Portable Dry Rack for Indoor or Outdoor, White, 4-Pack",
-    "verified_at": "2026-11-06T04:08:54Z"
+    "asin": "B001AWZM3C",
+    "parent_asin": "B001AWZM3C",
+    "title": "Household Essentials 5175 Collapsible Expandable Metal Clothes Drying Rack, Antique Bronze, STORAGE",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244167,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:56:07Z"
   },
   "spray mop": {
     "asin": "B0FGD54HRY",
@@ -1419,5 +1428,68 @@
     "stock_checked_at": 1795238348,
     "stock_source": "serpapi",
     "verified_at": "2026-11-21T05:19:08Z"
+  },
+  "record cleaning kit": {
+    "asin": "B0DYNYZCQ5",
+    "parent_asin": "B0DYNYZCQ5",
+    "title": "AKOZLIN 6 in 1 Vinyl Record Cleaning Kit, LP Cleaning Kit, Record Brush",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795243884,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:51:24Z"
+  },
+  "bluetooth speaker": {
+    "asin": "B0DQX1ZKS3",
+    "parent_asin": "B0DQX1ZKS3",
+    "title": "LENRUE Small Portable Bluetooth Speaker with Lights, TWS Stereo Surround Sound, Type C Powered, Bluetooth 5.3, AUX TF Card Input, Wireless for Outdoor Home, Coolest Gifts",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795243899,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T06:51:39Z"
+  },
+  "dash cam": {
+    "asin": "B0GJSJWR4F",
+    "parent_asin": "B0GJSJWR4F",
+    "title": "Dash Cam, 4K+2K Full HD Dash Cam Front and Rear, Dash Camera for Cars with Built-in 5GWiFi, 3.0” IPS Screen Dashcam, with 64GB Card, Night Vision, Loop Recording, G-Sensor, Parking Mode, Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795243902,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:51:42Z"
+  },
+  "pet hair remover": {
+    "asin": "B01DF316EC",
+    "parent_asin": "B01DF316EC",
+    "title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244060,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:54:20Z"
+  },
+  "car seat": {
+    "asin": "B0H5BM7MZT",
+    "parent_asin": "B0H5BM7MZT",
+    "title": "360 Rotating Car Seat Cushion, Swivel Memory Foam Seat Cover with Non-Slip & Breathable Design, Soft Twist pad for Car Home (Black)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244072,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:54:32Z"
+  },
+  "high chair": {
+    "asin": "B00IOGIM9S",
+    "parent_asin": "B00IOGIM9S",
+    "title": "Inglesina Fast Table Baby High Chair, Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244151,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:55:51Z"
+  },
+  "baby bottle": {
+    "asin": "B0036ZLLI6",
+    "parent_asin": "B0036ZLLI6",
+    "title": "Blue Fillable Baby Bottle Favor - 5\" (2 Ct.) - Adorable & Versatile Event Keepsakes - Perfect for Baby Showers, Gender Reveals, and Special Occasions",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795244153,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T06:55:53Z"
   }
 }

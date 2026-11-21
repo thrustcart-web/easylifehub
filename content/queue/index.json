@@ -3,191 +3,6 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-car-starter-f50390dc0d4c",
-      "title": "Which Car Accessories for Long Drives Is Right for You? 3 Compared",
-      "meta_description": "Compare a car sun shade, ceramic spray wax, and dashboard mat to see which accessory best enhances comfort, paint protection, and organization on long drives.",
-      "template": "bestof",
-      "niche": "car",
-      "keyword": "Car",
-      "labels": [
-        "Reviews",
-        "Car"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 539,
-      "items": [
-        {
-          "name": "Car Sun Shade",
-          "asin": "B07Q72HJ65",
-          "asin_verified": true,
-          "verified_product_title": "Car Window Shade for Side Windows, 2 Pack Sun Shade Retractable for Car Blocks Heat and UV Rays Glare Protection Roller Sunshade Visor for Baby, Kids, Pets, Passengers",
-          "parent_asin": "B07Q72HJ65",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795237818,
-          "search_term": "car sun shade for long drives",
-          "url": "https://www.amazon.com/dp/B07Q72HJ65?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Car Wax",
-          "asin": "B07XYPS3PS",
-          "asin_verified": false,
-          "verified_product_title": "Turtle Wax Hybrid Solutions Ceramic Spray Wax Coating, 16 oz (Pack of 1) | High Shine Car Wax, Offers Durable Paint Protection, Extreme Water Beading Action, Safe for Glass, Wheels, Trim & More",
-          "parent_asin": "B0F99PQ5XJ",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1795238071,
-          "search_term": "car wax for hot climates",
-          "url": ""
-        },
-        {
-          "name": "Dashboard Mat",
-          "asin": "B0GQLNKVYN",
-          "asin_verified": true,
-          "verified_product_title": "Car Dashboard Non-Slip Mat, 10.55\" x 5.82\" Sticky Pads (Basketball)",
-          "parent_asin": "B0GQLNKVYN",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795238348,
-          "search_term": "dashboard mat for rideshare drivers",
-          "url": "https://www.amazon.com/dp/B0GQLNKVYN?tag=hotr0e-20",
-          "stock_source": "serpapi"
-        }
-      ],
-      "html_file": "bestof-car-starter-f50390dc0d4c.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": false,
-      "editorial_review_required": false,
-      "review_required": true,
-      "product_review_required": true,
-      "products_audited_at": 1795238071,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-fitness-rack-cc087069939d",
-      "title": "Best Home Fitness Gear: 3 Picks Compared Honestly",
-      "meta_description": "A plain comparison of an ab roller, power rack, and foldable travel yoga mat, covering verified listing features, setup, and what to check before buying.",
-      "template": "bestof",
-      "niche": "fitness",
-      "keyword": "Fitness",
-      "labels": [
-        "Reviews",
-        "Fitness"
-      ],
-      "source": "ai:openrouter",
-      "provider": "openrouter",
-      "words": 703,
-      "items": [
-        {
-          "name": "Ab Roller",
-          "asin": "B09W9HV6MN",
-          "asin_verified": true,
-          "verified_product_title": "Vinsguir Ab Roller Wheel for Home Gym Core Strength Workout",
-          "parent_asin": "B09W9HV6MN",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795237903,
-          "search_term": "ab roller for travellers",
-          "url": "https://www.amazon.com/dp/B09W9HV6MN?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Power Rack",
-          "asin": "B0HN2BBK86",
-          "asin_verified": true,
-          "verified_product_title": "Power Rack, Multi-Function Power Cage Squat Rack with Dual Pulley System",
-          "parent_asin": "B0HN2BBK86",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795238067,
-          "search_term": "power rack for home gyms",
-          "url": "https://www.amazon.com/dp/B0HN2BBK86?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Travel Yoga Mat",
-          "asin": "B0092L64M6",
-          "asin_verified": true,
-          "verified_product_title": "Manduka | eKO Superlite Travel Yoga Mat",
-          "parent_asin": "B0092L64M6",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795238302,
-          "search_term": "travel yoga mat for hot yoga",
-          "url": "https://www.amazon.com/dp/B0092L64M6?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "bestof-fitness-rack-cc087069939d.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795238071,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-health-wellness-corrector-a24a55716d8b",
-      "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
-      "meta_description": "Selecting wellness items requires clear specifications. Read our detailed guide on walking canes, blood pressure monitors, and posture correctors.",
-      "template": "bestof",
-      "niche": "health & wellness",
-      "keyword": "Health & Wellness",
-      "labels": [
-        "Reviews",
-        "Health & Wellness"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 668,
-      "items": [
-        {
-          "name": "Walking Cane",
-          "asin": "B0CYSY6MDR",
-          "asin_verified": true,
-          "verified_product_title": "REHAND Walking Cane for Men & Women - Foldable, Adjustable, Lightweight, Self Standing Pivot Walking Cane, Soft Handle Grip, with Travel Bag, Walking Sticks for Seniors & Adults",
-          "parent_asin": "B0CYSY6MDR",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795238279,
-          "search_term": "walking cane for rehab users",
-          "url": "https://www.amazon.com/dp/B0CYSY6MDR?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Blood Pressure Monitor",
-          "asin": "B0CHXY8WQW",
-          "asin_verified": true,
-          "verified_product_title": "Oklar Wrist Blood Pressure Monitor, FDA Cleared Rechargeable BP Machine",
-          "parent_asin": "B0CHXY8WQW",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795238290,
-          "search_term": "blood pressure monitor for seniors",
-          "url": "https://www.amazon.com/dp/B0CHXY8WQW?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Posture Corrector",
-          "asin": "B07VST9VYH",
-          "asin_verified": true,
-          "verified_product_title": "Posture Corrector for Men and Women, Comfortable Upper and Back Brace, Adjustable Back Support for Back, Shoulder and Neck",
-          "parent_asin": "B07VST9VYH",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795237833,
-          "search_term": "posture corrector for desk workers",
-          "url": "https://www.amazon.com/dp/B07VST9VYH?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "bestof-health-wellness-corrector-a24a55716d8b.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795238071,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
       "slug": "bestof-health-wellness-shaker-f4601d9ad5dd",
       "title": "Best Health & Wellness for Gym Goers: 3 Options We Would Actually Buy",
       "meta_description": "Discover three health‑wellness tools for gym-goers—a protein shaker, knee brace, and vitamin dispenser—to help you pick the right fit for workouts.",
@@ -685,6 +500,51 @@
       "stock_check_max_age_seconds": 86400
     },
     {
+      "slug": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
+      "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
+      "meta_description": "Compare a rechargeable fabric shaver with 3 speeds to an OXO battery‑run pet hair brush, covering power, cleaning method, portability, and home size.",
+      "template": "comparison",
+      "niche": "home cleaning",
+      "keyword": "Lint Remover vs Pet Hair Remover",
+      "labels": [
+        "Reviews",
+        "Home Cleaning"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 646,
+      "items": [
+        {
+          "name": "Lint Remover",
+          "asin": "B0CJRM936N",
+          "asin_verified": true,
+          "verified_product_title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
+          "parent_asin": "B0CJRM936N",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795244058,
+          "search_term": "Lint Remover",
+          "url": "https://www.amazon.com/dp/B0CJRM936N?tag=hotr0e-20"
+        },
+        {
+          "name": "Pet Hair Remover",
+          "asin": "B01DF316EC",
+          "asin_verified": true,
+          "verified_product_title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
+          "parent_asin": "B01DF316EC",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795244060,
+          "search_term": "Pet Hair Remover",
+          "url": "https://www.amazon.com/dp/B01DF316EC?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "comparison-mattress-topper-vs-cooling-mattress-topper-d313663b6319",
       "title": "Mattress Topper or Cooling Mattress Topper? The Honest Comparison",
       "meta_description": "Compare a standard mattress topper with a cooling version, looking at material, breathability, fit, sleeper type, setup and ownership to guide your choice.",
@@ -1118,6 +978,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-car-seat-647b74f77791",
+      "title": "Car Seat for Apartment Living: Which Specs Actually Change Anything",
+      "meta_description": "Choosing a car seat for apartment living requires checking swivel dimensions, harness fit, and portability. Here is what to evaluate before buying.",
+      "template": "review",
+      "niche": "baby & kids",
+      "keyword": "car seat for apartment living",
+      "labels": [
+        "Reviews",
+        "Baby & Kids"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 665,
+      "items": [
+        {
+          "name": "Car Seat",
+          "asin": "B0H5BM7MZT",
+          "asin_verified": true,
+          "verified_product_title": "360 Rotating Car Seat Cushion, Swivel Memory Foam Seat Cover with Non-Slip & Breathable Design, Soft Twist pad for Car Home (Black)",
+          "parent_asin": "B0H5BM7MZT",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795244072,
+          "search_term": "car seat for apartment living",
+          "url": "https://www.amazon.com/dp/B0H5BM7MZT?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-car-seat-647b74f77791.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-coffee-canister-1a804dc1169a",
@@ -1952,6 +1846,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-record-cleaning-kit-e5552477cc41",
+      "title": "Record Cleaning Kit for Beginners: An Honest Buying Guide",
+      "meta_description": "Discover if the AKOZLIN 6‑in‑1 vinyl record cleaning kit meets beginner needs, what it includes, how to use it, and maintenance tips for lasting performance.",
+      "template": "review",
+      "niche": "audio",
+      "keyword": "record cleaning kit for beginners",
+      "labels": [
+        "Reviews",
+        "Audio"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 620,
+      "items": [
+        {
+          "name": "Record Cleaning Kit",
+          "asin": "B0DYNYZCQ5",
+          "asin_verified": true,
+          "verified_product_title": "AKOZLIN 6 in 1 Vinyl Record Cleaning Kit, LP Cleaning Kit, Record Brush",
+          "parent_asin": "B0DYNYZCQ5",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795243884,
+          "search_term": "record cleaning kit for beginners",
+          "url": "https://www.amazon.com/dp/B0DYNYZCQ5?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-record-cleaning-kit-e5552477cc41.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-resistance-bands-820d61a673d2",

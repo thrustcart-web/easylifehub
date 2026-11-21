@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
+  "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
+  "meta_description": "Compare a rechargeable fabric shaver with 3 speeds to an OXO battery‑run pet hair brush, covering power, cleaning method, portability, and home size.",
+  "template": "comparison",
+  "niche": "home cleaning",
+  "keyword": "Lint Remover vs Pet Hair Remover",
+  "labels": [
+    "Reviews",
+    "Home Cleaning"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 646,
+  "items": [
+    {
+      "name": "Lint Remover",
+      "asin": "B0CJRM936N",
+      "asin_verified": true,
+      "verified_product_title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
+      "parent_asin": "B0CJRM936N",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795244058,
+      "search_term": "Lint Remover",
+      "url": "https://www.amazon.com/dp/B0CJRM936N?tag=hotr0e-20"
+    },
+    {
+      "name": "Pet Hair Remover",
+      "asin": "B01DF316EC",
+      "asin_verified": true,
+      "verified_product_title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
+      "parent_asin": "B01DF316EC",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795244060,
+      "search_term": "Pet Hair Remover",
+      "url": "https://www.amazon.com/dp/B01DF316EC?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

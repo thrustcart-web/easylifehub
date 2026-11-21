@@ -656,6 +656,33 @@
       "ts": "2026-11-17T10:15:16Z",
       "source": "ai:groq",
       "words": 539
+    },
+    {
+      "slug": "review-record-cleaning-kit-e5552477cc41",
+      "title": "Record Cleaning Kit for Beginners: An Honest Buying Guide",
+      "template": "review",
+      "keyword": "record cleaning kit for beginners",
+      "ts": "2026-11-21T06:51:28Z",
+      "source": "ai:groq",
+      "words": 620
+    },
+    {
+      "slug": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
+      "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
+      "template": "comparison",
+      "keyword": "Lint Remover vs Pet Hair Remover",
+      "ts": "2026-11-21T06:54:31Z",
+      "source": "ai:groq",
+      "words": 646
+    },
+    {
+      "slug": "review-car-seat-647b74f77791",
+      "title": "Car Seat for Apartment Living: Which Specs Actually Change Anything",
+      "template": "review",
+      "keyword": "car seat for apartment living",
+      "ts": "2026-11-21T06:55:49Z",
+      "source": "ai:gemini",
+      "words": 665
     }
   ],
   "published": [],
@@ -732,7 +759,10 @@
     "review-instant-pot-f01d4702e01a",
     "bestof-home-decor-blanket-ee68c5987358",
     "review-legal-pad-5d14e73c2bc2",
-    "bestof-car-starter-f50390dc0d4c"
+    "bestof-car-starter-f50390dc0d4c",
+    "review-record-cleaning-kit-e5552477cc41",
+    "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
+    "review-car-seat-647b74f77791"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -1047,7 +1077,16 @@
     "Car Wax": "2026-11-17",
     "car wax for hot climates": "2026-11-17",
     "Dashboard Mat": "2026-11-17",
-    "dashboard mat for rideshare drivers": "2026-11-17"
+    "dashboard mat for rideshare drivers": "2026-11-17",
+    "record cleaning kit": "2026-11-21",
+    "Record Cleaning Kit": "2026-11-21",
+    "record cleaning kit for beginners": "2026-11-21",
+    "lint remover|pet hair remover": "2026-11-21",
+    "Lint Remover": "2026-11-21",
+    "Pet Hair Remover": "2026-11-21",
+    "car seat": "2026-11-21",
+    "Car Seat": "2026-11-21",
+    "car seat for apartment living": "2026-11-21"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1208,7 +1247,13 @@
     "Is {A} {P} Worth It? A Buyer's Assessment",
     "{A} or {B}? The Honest Comparison",
     "Best {F}{AUD}: {N} Picks Compared by Real Criteria",
-    "{P} Under {BUD}: Honest Expectations"
+    "{P} Under {BUD}: Honest Expectations",
+    "{P} for {AUD}: An Honest Buying Guide",
+    "The {N} {F} Worth Your Money (and {N2} to Avoid)",
+    "{A} vs {B}: Deciding Between Two Good Options",
+    "{P} for {AUD}: Which Specs Actually Change Anything",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "Choosing {A} {P}: Six Things That Actually Matter"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1217,7 +1262,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 73,
+    "total_generated": 76,
     "total_published": 0
   },
   "blogger_titles": [
