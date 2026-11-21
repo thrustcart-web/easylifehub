@@ -20,7 +20,7 @@
       "verified_product_title": "Stand Mixer, 8.5QT+ 6QT Two Stainless Steel Bowls Electric Food Mixer Black",
       "parent_asin": "B0D3PLPSBG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795238516,
+      "stock_checked_at": 1795256169,
       "search_term": "stand mixer for families of four",
       "url": "https://www.amazon.com/dp/B0D3PLPSBG?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795238071,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400
 }

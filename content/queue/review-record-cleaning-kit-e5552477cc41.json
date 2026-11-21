@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "Record Cleaning Kit",
-      "asin": "B0DYNYZCQ5",
+      "asin": "B08DG3GT9F",
       "asin_verified": true,
-      "verified_product_title": "AKOZLIN 6 in 1 Vinyl Record Cleaning Kit, LP Cleaning Kit, Record Brush",
-      "parent_asin": "B0DYNYZCQ5",
+      "verified_product_title": "EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel",
+      "parent_asin": "B08DG3GT9F",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795243884,
+      "stock_checked_at": 1795256660,
       "search_term": "record cleaning kit for beginners",
-      "url": "https://www.amazon.com/dp/B0DYNYZCQ5?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B08DG3GT9F?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-record-cleaning-kit-e5552477cc41.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795256299,
+  "stock_check_max_age_seconds": 86400
 }

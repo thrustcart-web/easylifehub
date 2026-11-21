@@ -21,29 +21,30 @@
       "search_term": "Clothes Brush",
       "url": "https://www.amazon.com/dp/B0037AMY6S?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795238076,
+      "stock_checked_at": 1795256016,
       "parent_asin": "B0037AMY6S",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     },
     {
       "name": "Clothes Line",
       "asin": "B0DQJ61TZJ",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
       "search_term": "Clothes Line",
-      "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1795238071,
-      "parent_asin": "B0DQJ9B83X"
+      "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=hotr0e-20",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795256205,
+      "parent_asin": "B0DQJ61TZJ",
+      "stock_source": "apify"
     }
   ],
   "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
-  "review_required": true,
-  "products_audited_at": 1795238071,
+  "product_links_verified": true,
+  "review_required": false,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": true
+  "product_review_required": false
 }

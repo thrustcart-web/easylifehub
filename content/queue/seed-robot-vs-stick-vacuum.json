@@ -20,20 +20,20 @@
       "verified_product_title": "Roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction | Upgraded from Q5 Pro, Dual Anti-Tangle System, LiDAR Navigation, Multi-Level Mapping, Self-Charging Robotic Vacuum, Black",
       "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
       "url": "",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1795238071,
-      "parent_asin": "B0HRKKNNQC"
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1795256221,
+      "parent_asin": "B0F334DN9J"
     },
     {
       "name": "Shark PowerDetect Stick Vacuum",
-      "asin": "B0DBVW1RFW",
+      "asin": "B0DPGHRMLY",
       "asin_verified": true,
-      "verified_product_title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251",
+      "verified_product_title": "IP3251 IP3252 IP3124 HEPA Filter Replacement Compatible with Shark IP3251 Cordless PowerDetect Clean Empty Lightweight Stick Vacuum and Shark IP3251C PowerDetect Auto Empty System Dock (2 Pack)",
       "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
-      "url": "https://www.amazon.com/dp/B0DBVW1RFW?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DPGHRMLY?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795238441,
-      "parent_asin": "B0DBVW1RFW",
+      "stock_checked_at": 1795256575,
+      "parent_asin": "B0DPGHRMLY",
       "stock_source": "apify"
     }
   ],
@@ -42,7 +42,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795238071,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

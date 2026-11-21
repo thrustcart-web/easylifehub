@@ -20,7 +20,7 @@
       "verified_product_title": "LensPen NLP-1 Camera Lens Cleaning Pen, Black",
       "parent_asin": "B007G5NNOW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795237779,
+      "stock_checked_at": 1795256021,
       "search_term": "lens pen for dusty locations",
       "url": "https://www.amazon.com/dp/B007G5NNOW?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795238071,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400
 }

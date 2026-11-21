@@ -20,7 +20,7 @@
       "verified_product_title": "Gymreapers Lifting Wrist Straps for Weightlifting, Bodybuilding, Powerlifting, Strength Training, & Deadlifts - Padded Neoprene with 18\" Cotton",
       "parent_asin": "B0CK2MTXXK",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795237936,
+      "stock_checked_at": 1795256162,
       "search_term": "Lifting Straps",
       "url": "https://www.amazon.com/dp/B0CK2MTXXK?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,7 +32,7 @@
       "verified_product_title": "ATERCEL Workout Gloves for Men and Women, Exercise Gloves for Weight Lifting, Cycling, Gym, Training, Breathable and Snug fit",
       "parent_asin": "B07KQP1X5T",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795237818,
+      "stock_checked_at": 1795256052,
       "search_term": "Weight Lifting Gloves",
       "url": "https://www.amazon.com/dp/B07KQP1X5T?tag=hotr0e-20",
       "stock_source": "apify"
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795238071,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400
 }

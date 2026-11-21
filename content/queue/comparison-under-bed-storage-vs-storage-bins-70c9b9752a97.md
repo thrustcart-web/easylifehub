@@ -43,7 +43,7 @@ Verify your vertical clearance under furniture and your available shelf dimensio
 
 ### Product Links
 
-- Under Bed Storage: https://www.amazon.com/dp/B09Q38H2J4?tag=hotr0e-20
-- Storage Bins: https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20
+- Under Bed Storage: https://www.amazon.com/dp/B01H2NVSG2?tag=hotr0e-20
+- Storage Bins: https://www.amazon.com/dp/B002VK792O?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

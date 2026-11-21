@@ -43,6 +43,6 @@ Before purchasing, confirm the current listing’s component list, fluid specifi
 
 ### Product Links
 
-- Record Cleaning Kit: https://www.amazon.com/dp/B0DYNYZCQ5?tag=hotr0e-20
+- Record Cleaning Kit: https://www.amazon.com/dp/B08DG3GT9F?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

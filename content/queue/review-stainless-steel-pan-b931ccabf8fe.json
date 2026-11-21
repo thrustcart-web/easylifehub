@@ -15,23 +15,24 @@
   "items": [
     {
       "name": "Stainless Steel Pan",
-      "asin": "B0FR426HPZ",
-      "asin_verified": false,
-      "verified_product_title": "EWFEN 12 Inch Tri-Ply Stainless Steel Frying Pan, Compatible with All Cooktops Up to 600℉, Large Frying Pan with lids, Induction-Ready Skillet, Dishwasher and Oven Safe, Even Heat, 12\" Skillet + Lid",
-      "parent_asin": "B0HJCCRVHM",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1795238071,
+      "asin": "B0FVW82JFG",
+      "asin_verified": true,
+      "verified_product_title": "VocVoi Stainless Steel Pan, 12 Inch with Lid Stainless Steel Frying Pan",
+      "parent_asin": "B0FVW82JFG",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795256649,
       "search_term": "stainless steel pan for induction cooktops",
-      "url": ""
+      "url": "https://www.amazon.com/dp/B0FVW82JFG?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-stainless-steel-pan-b931ccabf8fe.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
+  "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": true,
-  "product_review_required": true,
-  "products_audited_at": 1795238071,
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400
 }

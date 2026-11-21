@@ -43,6 +43,6 @@ Before buying, verify the included mounting hardware, confirm the shelf’s weig
 
 ### Product Links
 
-- Key Holder: https://www.amazon.com/dp/B0D5J1DN95?tag=hotr0e-20
+- Key Holder: https://www.amazon.com/dp/B0FMSBSRYR?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

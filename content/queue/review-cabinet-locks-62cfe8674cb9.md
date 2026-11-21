@@ -43,6 +43,6 @@ By measuring mounting distances, cleaning target surfaces thoroughly, and adheri
 
 ### Product Links
 
-- Cabinet Locks: https://www.amazon.com/dp/B0FVCZBDQ1?tag=hotr0e-20
+- Cabinet Locks: https://www.amazon.com/dp/B09Z7Y4M79?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

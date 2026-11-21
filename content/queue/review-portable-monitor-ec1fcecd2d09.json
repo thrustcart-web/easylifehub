@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "MNN Portable Monitor",
-      "asin": "B0C5MT537Z",
+      "asin": "B0B9NNWXVP",
       "asin_verified": true,
-      "verified_product_title": "MNN 15.6\" 4K Portable Monitor, UHD IPS, USB-C HDMI, with Smart Cover Stand",
+      "verified_product_title": "MNN 15.6\" 1080P Portable Monitor IPS USB-C HDMI Gaming Screen for Laptop",
       "search_term": "MNN 15.6 FHD 60Hz Portable Monitor",
-      "url": "https://www.amazon.com/dp/B0C5MT537Z?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0B9NNWXVP?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795238209,
-      "parent_asin": "B0C5MT537Z",
+      "stock_checked_at": 1795256432,
+      "parent_asin": "B0B9NNWXVP",
       "stock_source": "apify"
     }
   ],
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795238071,
+  "products_audited_at": 1795256299,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false
