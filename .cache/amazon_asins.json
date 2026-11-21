@@ -173,13 +173,13 @@
     "verified_at": "2026-11-21T10:18:21Z"
   },
   "clothes line": {
-    "asin": "B0DQJ61TZJ",
-    "parent_asin": "B0DQJ61TZJ",
-    "title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
+    "asin": "B0H2Z3VKYH",
+    "parent_asin": "B0H2Z3VKYH",
+    "title": "Retractable Clothesline Outdoor & Indoor, 15.7 ft Heavy Duty Anti-Sag Wall Mounted Stainless Steel Clothes Drying Line, 40 lb Load Capacity Laundry Line, Easy Install for Bathroom, Balcony & Apartment",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795256205,
-    "stock_source": "apify",
-    "verified_at": "2026-11-21T10:18:21Z"
+    "stock_checked_at": 1795287240,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T18:54:00Z"
   },
   "litter scoop": {
     "asin": "B09P3PRM5P",
@@ -843,13 +843,13 @@
     "verified_at": "2026-11-13T02:15:03Z"
   },
   "blender": {
-    "asin": "B0855B5Z6F",
-    "parent_asin": "B0855B5Z6F",
-    "title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
+    "asin": "B0BMGSZMW9",
+    "parent_asin": "B0BMGSZMW9",
+    "title": "Ninja Professional Plus DUO Blender, 1400WP, Auto-iQ, 72oz, Black, BN751",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795256463,
+    "stock_checked_at": 1795287396,
     "stock_source": "apify",
-    "verified_at": "2026-11-21T10:21:03Z"
+    "verified_at": "2026-11-21T18:56:36Z"
   },
   "personal blender": {
     "asin": "B0GZJ28GWJ",
@@ -878,12 +878,13 @@
     "verified_at": "2026-11-21T10:21:11Z"
   },
   "tweezers": {
-    "asin": "B0BNNGC3Q2",
-    "parent_asin": "B0HBMR5BQ6",
-    "title": "kaverme 3PCS Precision Tweezers Set, Upgraded Anti-Static Stainless Steel | Tweezers for Electronics, Soldering, Laboratory Work, Jewelry-Making, Model, Craft",
+    "asin": "B09WZ748K1",
+    "parent_asin": "B09WZ748K1",
+    "title": "Lune+Aster Slant Tweezer - Stainless steel slant tweezer for at-home brow touch ups and other grooming needs.",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794578942,
-    "verified_at": "2026-11-13T14:09:02Z"
+    "stock_checked_at": 1795287093,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T18:51:33Z"
   },
   "cable management kit": {
     "asin": "B0B687J37D",
@@ -1498,5 +1499,59 @@
     "stock_checked_at": 1795244153,
     "stock_source": "serpapi",
     "verified_at": "2026-11-21T06:55:53Z"
+  },
+  "drip irrigation kit": {
+    "asin": "B0GLNL6CXQ",
+    "parent_asin": "B0GLNL6CXQ",
+    "title": "100FT Drip Irrigation System Kit, Quick Connect Garden Watering System, Easy Install Drip Irrigation Kit with 1/2\" & 1/4\" Tubing, Adjustable Emitters for Garden, Raised Beds, Greenhouse",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287088,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T18:51:28Z"
+  },
+  "derma roller": {
+    "asin": "B00JDI2ER2",
+    "parent_asin": "B00JDI2ER2",
+    "title": "Dermaroller Home Care Microneedle Roller - 0.2mm Stainless Steel Derma Roller for Skin Care Exfoliation, Improved Texture, and Radiance on Face, Neck, and Décolleté",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287097,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T18:51:37Z"
+  },
+  "led face mask": {
+    "asin": "B0DHRW819R",
+    "parent_asin": "B0DHRW819R",
+    "title": "CurrentBody Red Light Therapy LED Face Mask: Series 2",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287100,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-21T18:51:40Z"
+  },
+  "paper shredder": {
+    "asin": "B0DQTNZCWN",
+    "parent_asin": "B0DQTNZCWN",
+    "title": "Bonsaii 6-Sheet Cross Cut Paper Shredder for Home, 3.4 Gal Bin",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287135,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T18:52:15Z"
+  },
+  "steam iron": {
+    "asin": "B0D9PZDF73",
+    "parent_asin": "B0D9PZDF73",
+    "title": "BEAUTURAL Mini Travel Steam Iron for Clothes with Dual Voltage, White",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287269,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T18:54:29Z"
+  },
+  "tablet": {
+    "asin": "B0FGYCJ7NJ",
+    "parent_asin": "B0FGYCJ7NJ",
+    "title": "Lenovo Idea Tab - College Tablet - 11″ 2.5K IPS Touchscreen Display - 90Hz - MediaTek Dimensity 6300-4 GB Memory - 128 GB Storage - Integrated Arm Mali-G57 MC2 - Tab Pen and Folio Case",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795287289,
+    "stock_source": "apify",
+    "verified_at": "2026-11-21T18:54:49Z"
   }
 }

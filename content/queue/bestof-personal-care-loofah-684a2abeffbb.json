@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-personal-care-loofah-684a2abeffbb",
+  "title": "Personal Care Shortlist: 3 Options, Trade-Offs Included",
+  "meta_description": "Explore a curated shortlist of tweezers, a derma roller, and an LED face mask, with trade‑offs and tips to help you choose the right personal‑care tool.",
+  "template": "bestof",
+  "niche": "personal care",
+  "keyword": "Personal Care",
+  "labels": [
+    "Reviews",
+    "Personal Care"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 641,
+  "items": [
+    {
+      "name": "Tweezers",
+      "asin": "B09WZ748K1",
+      "asin_verified": true,
+      "verified_product_title": "Lune+Aster Slant Tweezer - Stainless steel slant tweezer for at-home brow touch ups and other grooming needs.",
+      "parent_asin": "B09WZ748K1",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795287093,
+      "search_term": "tweezers for home grooming",
+      "url": "https://www.amazon.com/dp/B09WZ748K1?tag=hotr0e-20"
+    },
+    {
+      "name": "Derma Roller",
+      "asin": "B00JDI2ER2",
+      "asin_verified": true,
+      "verified_product_title": "Dermaroller Home Care Microneedle Roller - 0.2mm Stainless Steel Derma Roller for Skin Care Exfoliation, Improved Texture, and Radiance on Face, Neck, and Décolleté",
+      "parent_asin": "B00JDI2ER2",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795287097,
+      "search_term": "derma roller for mature skin",
+      "url": "https://www.amazon.com/dp/B00JDI2ER2?tag=hotr0e-20"
+    },
+    {
+      "name": "LED Face Mask",
+      "asin": "B0DHRW819R",
+      "asin_verified": true,
+      "verified_product_title": "CurrentBody Red Light Therapy LED Face Mask: Series 2",
+      "parent_asin": "B0DHRW819R",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795287100,
+      "search_term": "led face mask for mature skin",
+      "url": "https://www.amazon.com/dp/B0DHRW819R?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-personal-care-loofah-684a2abeffbb.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

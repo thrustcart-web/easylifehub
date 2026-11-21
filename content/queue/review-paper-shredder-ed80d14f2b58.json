@@ -1,0 +1,34 @@
+{
+  "slug": "review-paper-shredder-ed80d14f2b58",
+  "title": "Paper Shredder Explained: What You Are Really Paying For",
+  "meta_description": "Learn what features matter in a paper shredder, focusing on sheet capacity, cut type, bin volume, and noise level for home or small business use.",
+  "template": "review",
+  "niche": "office & school supplies",
+  "keyword": "paper shredder for small businesses",
+  "labels": [
+    "Reviews",
+    "Office & School Supplies"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 610,
+  "items": [
+    {
+      "name": "Paper Shredder",
+      "asin": "B0DQTNZCWN",
+      "asin_verified": true,
+      "verified_product_title": "Bonsaii 6-Sheet Cross Cut Paper Shredder for Home, 3.4 Gal Bin",
+      "parent_asin": "B0DQTNZCWN",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795287135,
+      "search_term": "paper shredder for small businesses",
+      "url": "https://www.amazon.com/dp/B0DQTNZCWN?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-paper-shredder-ed80d14f2b58.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
