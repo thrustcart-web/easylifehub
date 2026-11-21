@@ -20,7 +20,7 @@
       "verified_product_title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
       "parent_asin": "B07T5SY43L",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256069,
+      "stock_checked_at": 1795299263,
       "search_term": "dual monitor arm",
       "url": "https://www.amazon.com/dp/B07T5SY43L?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

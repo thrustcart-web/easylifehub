@@ -43,7 +43,7 @@ By focusing on factual attributes like fabric type and physical weight, you can 
 
 ### Product Links
 
-- Cotton Sheets: https://www.amazon.com/dp/B0DTP1K3K9?tag=hotr0e-20
+- Cotton Sheets: https://www.amazon.com/dp/B073GWMZX8?tag=hotr0e-20
 - Weighted Blanket: https://www.amazon.com/dp/B07MP2R8X5?tag=hotr0e-20
 - Duvet: https://www.amazon.com/dp/B0HFN3GNBJ?tag=hotr0e-20
 

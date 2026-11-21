@@ -20,7 +20,7 @@
       "verified_product_title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
       "parent_asin": "B0FNBV7NG7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256244,
+      "stock_checked_at": 1795299503,
       "search_term": "screwdriver set for home repairs",
       "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,7 +32,7 @@
       "verified_product_title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
       "parent_asin": "B0GR9NLSQZ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256274,
+      "stock_checked_at": 1795299521,
       "search_term": "tool set for diy beginners",
       "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=hotr0e-20",
       "stock_source": "apify"
@@ -44,7 +44,7 @@
       "verified_product_title": "Jig Saw Corded: Electric Jigsaw Tool, Power Jig Saws for Woodworking with 8pcs Blades, Wood Cutter Hand Tool with 6 Variable Speed, 3000 SPM, ±45° Bevel Cutting, Tool-Free Blade Change",
       "parent_asin": "B0H5V6KWF5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256476,
+      "stock_checked_at": 1795299698,
       "search_term": "jigsaw for curved cuts",
       "url": "https://www.amazon.com/dp/B0H5V6KWF5?tag=hotr0e-20",
       "stock_source": "serpapi"
@@ -57,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

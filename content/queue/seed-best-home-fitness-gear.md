@@ -52,7 +52,7 @@ Balancing weight, durability, and intended use remains the most effective strate
 - Trekking Poles: https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20
 - Sleeping Bag: https://www.amazon.com/dp/B0DK99H94M?tag=hotr0e-20
 - Compass: https://www.amazon.com/dp/B0FXDN76LR?tag=hotr0e-20
-- Gym Bag: https://www.amazon.com/dp/B0FJ2GRXNF?tag=hotr0e-20
+- Gym Bag: https://www.amazon.com/dp/B0HF83HJM1?tag=hotr0e-20
 - Hammock Underquilt: https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

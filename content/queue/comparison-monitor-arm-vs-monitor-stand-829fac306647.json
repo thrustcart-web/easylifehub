@@ -21,7 +21,7 @@
       "search_term": "VIVO STAND-V001O Single Monitor Arm",
       "url": "",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256036,
+      "stock_checked_at": 1795299256,
       "parent_asin": "B01NH0HTM5"
     },
     {
@@ -31,8 +31,8 @@
       "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
       "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
       "url": "",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256192,
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795299544,
       "parent_asin": "B0DB8F7GDN"
     }
   ],
@@ -41,7 +41,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

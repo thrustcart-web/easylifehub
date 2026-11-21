@@ -21,21 +21,21 @@
       "search_term": "Aleene's Fabric Fusion Glue 4 oz",
       "url": "https://www.amazon.com/dp/B00KD6ZHD6?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256021,
+      "stock_checked_at": 1795299219,
       "parent_asin": "B00KD6ZHD6",
       "stock_source": "apify"
     },
     {
       "name": "Fabric Scissors",
-      "asin": "B082LY2W2G",
+      "asin": "B097K54MDH",
       "asin_verified": true,
-      "verified_product_title": "Fabric Scissors, Heavy Duty 8 inch Sewing Scissors for Leather Tailor,Tailoring Shears for Home Office Craft Black",
+      "verified_product_title": "Sharp Blade Fabric Scissors 8 Inch, Heavy Duty Sewing Scissors (Black)",
       "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
-      "url": "https://www.amazon.com/dp/B082LY2W2G?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B097K54MDH?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256076,
-      "parent_asin": "B082LY2W2G",
-      "stock_source": "apify"
+      "stock_checked_at": 1795299830,
+      "parent_asin": "B097K54MDH",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

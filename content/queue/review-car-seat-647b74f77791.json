@@ -20,7 +20,7 @@
       "verified_product_title": "360 Rotating Car Seat Cushion, Swivel Memory Foam Seat Cover with Non-Slip & Breathable Design, Soft Twist pad for Car Home (Black)",
       "parent_asin": "B0H5BM7MZT",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256291,
+      "stock_checked_at": 1795299539,
       "search_term": "car seat for apartment living",
       "url": "https://www.amazon.com/dp/B0H5BM7MZT?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

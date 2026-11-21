@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Deadbolt",
-      "asin": "B07MQX72WN",
+      "asin": "B0GY3KYH2P",
       "asin_verified": true,
-      "verified_product_title": "Double keyed Deadbolt Lock - Keyed on Both Sides, 2-Way Adjustable Cylinder Deadbolt (Privacy/Passage), Satin Stainless Steel (Silver, Single Cylinder) (Silver, Double Side)",
-      "parent_asin": "B07MQX72WN",
+      "verified_product_title": "2 Pack Keyed Single Cylinder Deadbolt Lock for Interior Door Silver",
+      "parent_asin": "B0GY3KYH2P",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256520,
+      "stock_checked_at": 1795299704,
       "search_term": "deadbolt for key losing households",
-      "url": "https://www.amazon.com/dp/B07MQX72WN?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0GY3KYH2P?tag=hotr0e-20",
       "stock_source": "serpapi"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

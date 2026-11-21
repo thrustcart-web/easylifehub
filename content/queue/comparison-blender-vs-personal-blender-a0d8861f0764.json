@@ -20,7 +20,7 @@
       "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
       "parent_asin": "B0855B5Z6F",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256463,
+      "stock_checked_at": 1795299268,
       "search_term": "Blender",
       "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,10 +32,10 @@
       "verified_product_title": "nutribullet® Turbo Personal Blender, 1000 Watt, Gunmetal, NB50400",
       "parent_asin": "B0GZJ28GWJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256469,
+      "stock_checked_at": 1795299527,
       "search_term": "Personal Blender",
       "url": "https://www.amazon.com/dp/B0GZJ28GWJ?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     }
   ],
   "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

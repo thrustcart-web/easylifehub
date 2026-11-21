@@ -21,7 +21,7 @@
       "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
       "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256291,
+      "stock_checked_at": 1795299544,
       "parent_asin": "B0HGPRSSGT",
       "stock_source": "apify"
     },
@@ -32,8 +32,8 @@
       "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
       "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
       "url": "",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256236,
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795299544,
       "parent_asin": "B0FMRZRWWX"
     }
   ],
@@ -42,7 +42,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

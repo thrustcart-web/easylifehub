@@ -20,7 +20,7 @@
       "verified_product_title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
       "parent_asin": "B0CJRM936N",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256133,
+      "stock_checked_at": 1795299372,
       "search_term": "Lint Remover",
       "url": "https://www.amazon.com/dp/B0CJRM936N?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,7 +32,7 @@
       "verified_product_title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
       "parent_asin": "B01DF316EC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256027,
+      "stock_checked_at": 1795299239,
       "search_term": "Pet Hair Remover",
       "url": "https://www.amazon.com/dp/B01DF316EC?tag=hotr0e-20",
       "stock_source": "apify"
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

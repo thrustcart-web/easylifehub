@@ -21,7 +21,7 @@
       "search_term": "stud finder for diy beginners",
       "url": "https://www.amazon.com/dp/B0HQCDLJP9?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256299,
+      "stock_checked_at": 1795299544,
       "parent_asin": "B0HQCDLJP9",
       "stock_source": "apify"
     }
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

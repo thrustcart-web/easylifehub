@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Jump Rope",
-      "asin": "B0F8NKXD5L",
+      "asin": "B0GXLHWTC2",
       "asin_verified": true,
-      "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope, adjustable jump rope, suitable for women, men, and children, suitable for home gyms, sports and fitness equipment, and slim figures",
-      "parent_asin": "B0F8NKXD5L",
+      "verified_product_title": "Skipping Rope for Adults, Adjustable Jump Rope for Men, Women, Speed Jump Rope with 360° Swivel Ball Bearings, Tangle-Free Exercise Rope for Cardio, Fitness, Boxing, Home & Gym Workouts",
+      "parent_asin": "B0GXLHWTC2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256229,
+      "stock_checked_at": 1795299719,
       "search_term": "jump rope for home gyms",
-      "url": "https://www.amazon.com/dp/B0F8NKXD5L?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0GXLHWTC2?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }

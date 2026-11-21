@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Cotton Sheets",
-      "asin": "B0DTP1K3K9",
+      "asin": "B073GWMZX8",
       "asin_verified": true,
-      "verified_product_title": "LANE LINEN Queen Sheet Set 100% Organic Cotton Cooling Soft - Glacier Grey",
+      "verified_product_title": "Woolrich Cotton Sheet Set Cottage Charms Print, 100% Cotton Flannel Sheets Warm & Fuzzy Bedding Set Queen Size Sheets, Fitted Pocket Fits Up to 14\" Mattress, Queen Blue Winter Frost, 4 Piece",
       "search_term": "cotton sheets for cold climates",
-      "url": "https://www.amazon.com/dp/B0DTP1K3K9?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B073GWMZX8?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256205,
-      "parent_asin": "B0DTP1K3K9",
-      "stock_source": "apify"
+      "stock_checked_at": 1795299547,
+      "parent_asin": "B073GWMZX8",
+      "stock_source": "serpapi"
     },
     {
       "name": "Weighted Blanket",
@@ -33,7 +33,7 @@
       "search_term": "weighted blanket for anxious sleepers",
       "url": "https://www.amazon.com/dp/B07MP2R8X5?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256052,
+      "stock_checked_at": 1795299256,
       "parent_asin": "B07MP2R8X5",
       "stock_source": "apify"
     },
@@ -45,9 +45,9 @@
       "search_term": "duvet for hot sleepers",
       "url": "https://www.amazon.com/dp/B0HFN3GNBJ?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256301,
+      "stock_checked_at": 1795299539,
       "parent_asin": "B0HFN3GNBJ",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
@@ -55,7 +55,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

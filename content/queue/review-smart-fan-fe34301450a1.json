@@ -20,10 +20,10 @@
       "verified_product_title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
       "parent_asin": "B01N4TZOHE",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795256471,
+      "stock_checked_at": 1795299245,
       "search_term": "smart fan for energy savers",
       "url": "https://www.amazon.com/dp/B01N4TZOHE?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-smart-fan-fe34301450a1.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795256299,
+  "products_audited_at": 1795299544,
   "stock_check_max_age_seconds": 86400
 }
