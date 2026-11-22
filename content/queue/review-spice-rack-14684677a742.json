@@ -1,0 +1,34 @@
+{
+  "slug": "review-spice-rack-14684677a742",
+  "title": "Spice Rack Review: What I Would Check Before Buying",
+  "meta_description": "Review of the KES 16‑inch aluminum spice rack, covering design, wall‑mount setup, stackability, and upkeep to help bulk shoppers verify factors before buying.",
+  "template": "review",
+  "niche": "food & pantry",
+  "keyword": "spice rack for bulk shoppers",
+  "labels": [
+    "Reviews",
+    "Food & Pantry"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 581,
+  "items": [
+    {
+      "name": "Spice Rack",
+      "asin": "B07WZS5P7Q",
+      "asin_verified": true,
+      "verified_product_title": "KES Spice Rack Organizer Kitchen Spice Rack Seasoning Organizer 16 Inch Aluminum Spice Holder Wall Mount Anodized Black 2 Pack, KSR401S40-BK-P2",
+      "parent_asin": "B07WZS5P7Q",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795344684,
+      "search_term": "spice rack for bulk shoppers",
+      "url": "https://www.amazon.com/dp/B07WZS5P7Q?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-spice-rack-14684677a742.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

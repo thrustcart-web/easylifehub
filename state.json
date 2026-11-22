@@ -710,6 +710,42 @@
       "ts": "2026-11-21T18:53:57Z",
       "source": "ai:gemini",
       "words": 610
+    },
+    {
+      "slug": "review-spice-rack-14684677a742",
+      "title": "Spice Rack Review: What I Would Check Before Buying",
+      "template": "review",
+      "keyword": "spice rack for bulk shoppers",
+      "ts": "2026-11-22T10:51:32Z",
+      "source": "ai:groq",
+      "words": 581
+    },
+    {
+      "slug": "bestof-car-mount-0d13e1db177c",
+      "title": "Best Car Accessories for Suv Owners: 3 Picks Compared by Real Criteria",
+      "template": "bestof",
+      "keyword": "Car",
+      "ts": "2026-11-22T10:51:52Z",
+      "source": "ai:groq",
+      "words": 739
+    },
+    {
+      "slug": "bestof-personal-care-massager-7022a0353351",
+      "title": "3 Personal Care Picks Reviewed Against the Criteria That Matter",
+      "template": "bestof",
+      "keyword": "Personal Care",
+      "ts": "2026-11-22T10:54:39Z",
+      "source": "ai:gemini",
+      "words": 668
+    },
+    {
+      "slug": "review-air-fryer-58220932fc1a",
+      "title": "Choosing An Air Fryer for Meal Preppers: Trade-Offs Included",
+      "template": "review",
+      "keyword": "air fryer for meal preppers",
+      "ts": "2026-11-22T10:55:14Z",
+      "source": "ai:openrouter",
+      "words": 748
     }
   ],
   "published": [],
@@ -792,7 +828,11 @@
     "review-car-seat-647b74f77791",
     "review-drip-irrigation-kit-46846b19bbd3",
     "bestof-personal-care-loofah-684a2abeffbb",
-    "review-paper-shredder-ed80d14f2b58"
+    "review-paper-shredder-ed80d14f2b58",
+    "review-spice-rack-14684677a742",
+    "bestof-car-mount-0d13e1db177c",
+    "bestof-personal-care-massager-7022a0353351",
+    "review-air-fryer-58220932fc1a"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -1128,7 +1168,27 @@
     "led face mask for mature skin": "2026-11-21",
     "paper shredder": "2026-11-21",
     "Paper Shredder": "2026-11-21",
-    "paper shredder for small businesses": "2026-11-21"
+    "paper shredder for small businesses": "2026-11-21",
+    "spice rack": "2026-11-22",
+    "Spice Rack": "2026-11-22",
+    "spice rack for bulk shoppers": "2026-11-22",
+    "car:obd2 scanner|seat cushion|seat gap organizer": "2026-11-22",
+    "Seat Gap Organizer": "2026-11-22",
+    "seat gap organizer for suv owners": "2026-11-22",
+    "OBD2 Scanner": "2026-11-22",
+    "obd2 scanner for new drivers": "2026-11-22",
+    "Seat Cushion": "2026-11-22",
+    "seat cushion for hot climates": "2026-11-22",
+    "personal care:curling wand|electric toothbrush|nose hair trimmer": "2026-11-22",
+    "Nose Hair Trimmer": "2026-11-22",
+    "nose hair trimmer for daily shavers": "2026-11-22",
+    "Curling Wand": "2026-11-22",
+    "curling wand for fine hair": "2026-11-22",
+    "Electric Toothbrush": "2026-11-22",
+    "electric toothbrush for beginners": "2026-11-22",
+    "air fryer": "2026-11-22",
+    "Air Fryer": "2026-11-22",
+    "air fryer for meal preppers": "2026-11-22"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1301,7 +1361,13 @@
     "{P} Explained: What You Are Really Paying For",
     "Which {F} Should You Buy? {N} Candidates Compared",
     "Is {A} {P} Worth It? A Buyer's Assessment",
-    "{A} vs {B}: Which One Should You Actually Buy?"
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "{P} Review: What I Would Check Before Buying",
+    "Best {F}{AUD}: {N} Picks Compared by Real Criteria",
+    "{P}: An Honest Look at the Trade-Offs",
+    "Choosing Between {A} and {B}: A Practical Comparison",
+    "{N} {F} Picks Reviewed Against the Criteria That Matter",
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1310,7 +1376,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 79,
+    "total_generated": 83,
     "total_published": 0
   },
   "blogger_titles": [

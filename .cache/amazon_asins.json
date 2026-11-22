@@ -929,12 +929,13 @@
     "verified_at": "2026-11-21T10:21:35Z"
   },
   "obd2 scanner": {
-    "asin": "B0H4ZK3G8Z",
-    "parent_asin": "B0HRFGLHWC",
-    "title": "OBD2 Bluetooth Scanner ENG AT ABS SRS 4 System Code Reader No Subscription | Car Diagnostic Tools For IOS And Android Lifetime Free App Vehicle code Analysis And AI Repair Suggestions Vehicles 1996+",
+    "asin": "B0GL9RL3XS",
+    "parent_asin": "B0GL9RL3XS",
+    "title": "BlueDriver OBD2 Scanner Bluetooth, No Subscription, ABS SRS TPMS",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794579071,
-    "verified_at": "2026-11-13T14:11:11Z"
+    "stock_checked_at": 1795344707,
+    "stock_source": "apify",
+    "verified_at": "2026-11-22T10:51:47Z"
   },
   "screwdriver set": {
     "asin": "B0FNBV7NG7",
@@ -1553,5 +1554,77 @@
     "stock_checked_at": 1795287289,
     "stock_source": "apify",
     "verified_at": "2026-11-21T18:54:49Z"
+  },
+  "spice rack": {
+    "asin": "B07WZS5P7Q",
+    "parent_asin": "B07WZS5P7Q",
+    "title": "KES Spice Rack Organizer Kitchen Spice Rack Seasoning Organizer 16 Inch Aluminum Spice Holder Wall Mount Anodized Black 2 Pack, KSR401S40-BK-P2",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344684,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-22T10:51:24Z"
+  },
+  "seat gap organizer": {
+    "asin": "B0H716NZ56",
+    "parent_asin": "B0H716NZ56",
+    "title": "Car Seat Gap Filler Organizer, Dual Compartments, Black, 2 Pack",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344694,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-22T10:51:34Z"
+  },
+  "seat cushion": {
+    "asin": "B0GSVGPNH7",
+    "parent_asin": "B0GSVGPNH7",
+    "title": "Cooling Gel Enhanced Memory Foam Seat Cushion, Desk Chair Seat Cushion, Office Chair Cushions, Foldable Portable, Back Sciatica Coccyx Tailbone Pain Relief, Driving Car Airplane Wheelchair Bleachers",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344708,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-22T10:51:48Z"
+  },
+  "vacuum storage bags": {
+    "asin": "B0973DGD8P",
+    "parent_asin": "B0973DGD8P",
+    "title": "Vacuum Storage Bags with Hand Pump, Vacuum Seal Space Saver Bags,20 Combo",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344741,
+    "stock_source": "apify",
+    "verified_at": "2026-11-22T10:52:21Z"
+  },
+  "nose hair trimmer": {
+    "asin": "B098NSHBQK",
+    "parent_asin": "B098NSHBQK",
+    "title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women,Battery-Operated Trimmer with IPX7 Waterproof,Dual Edge Blades for Easy Cleansing Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344772,
+    "stock_source": "apify",
+    "verified_at": "2026-11-22T10:52:52Z"
+  },
+  "curling wand": {
+    "asin": "B0946QHYMQ",
+    "parent_asin": "B0946QHYMQ",
+    "title": "ELLA BELLA® Curling Iron 1 Inch, Professional Ceramic Wand, All Hair Types",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344794,
+    "stock_source": "apify",
+    "verified_at": "2026-11-22T10:53:14Z"
+  },
+  "electric toothbrush": {
+    "asin": "B072YVWBXH",
+    "parent_asin": "B072YVWBXH",
+    "title": "Aquasonic Black Series Ultra Whitening Toothbrush – ADA Accepted Electric Toothbrush- 8 Brush Heads & Travel Case – 40,000 VPM Electric Motor & Wireless Charging - 4 Modes w Smart Timer",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344806,
+    "stock_source": "apify",
+    "verified_at": "2026-11-22T10:53:26Z"
+  },
+  "air fryer": {
+    "asin": "B0H425VZT3",
+    "parent_asin": "B0H425VZT3",
+    "title": "The Essential Air Fryer Cookbook for Beginners: Fast, Simple, Delicious & Crispy Air Fryer Recipes for Busy Lives – Save Time & Make Every Family Meal a Hit",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795344879,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-22T10:54:39Z"
   }
 }

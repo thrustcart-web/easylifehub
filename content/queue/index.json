@@ -3,71 +3,65 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-home-decor-blanket-ee68c5987358",
-      "title": "3 Home Decor Picks Reviewed Against the Criteria That Matter",
-      "meta_description": "Three home decor picks—storage basket, curtain rod, and table lamp—assessed for capacity, durability, and lighting to match homes, cold rooms, and dark hallways.",
+      "slug": "bestof-car-mount-0d13e1db177c",
+      "title": "Best Car Accessories for Suv Owners: 3 Picks Compared by Real Criteria",
+      "meta_description": "Compare a seat gap organizer, OBD2 scanner, and cooling gel seat cushion for SUV owners. Learn verified features, setup tips, and ownership considerations.",
       "template": "bestof",
-      "niche": "home decor",
-      "keyword": "Home Decor",
+      "niche": "car",
+      "keyword": "Car",
       "labels": [
         "Reviews",
-        "Home Decor"
+        "Car"
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 650,
+      "words": 739,
       "items": [
         {
-          "name": "Storage Baskets",
-          "asin": "B0CF586TH4",
+          "name": "Seat Gap Organizer",
+          "asin": "B0H716NZ56",
           "asin_verified": true,
-          "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
-          "parent_asin": "B0CF586TH4",
+          "verified_product_title": "Car Seat Gap Filler Organizer, Dual Compartments, Black, 2 Pack",
+          "parent_asin": "B0H716NZ56",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342583,
-          "search_term": "storage baskets for family homes",
-          "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344694,
+          "search_term": "seat gap organizer for suv owners",
+          "url": "https://www.amazon.com/dp/B0H716NZ56?tag=hotr0e-20"
         },
         {
-          "name": "Curtain Rods",
-          "asin": "B0F6LM95F2",
+          "name": "OBD2 Scanner",
+          "asin": "B0GL9RL3XS",
           "asin_verified": true,
-          "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
-          "parent_asin": "B0F6LM95F2",
+          "verified_product_title": "BlueDriver OBD2 Scanner Bluetooth, No Subscription, ABS SRS TPMS",
+          "parent_asin": "B0GL9RL3XS",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795343007,
-          "search_term": "curtain rods for cold rooms",
-          "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344707,
+          "search_term": "obd2 scanner for new drivers",
+          "url": "https://www.amazon.com/dp/B0GL9RL3XS?tag=hotr0e-20"
         },
         {
-          "name": "Table Lamp",
-          "asin": "B0FS1JXJZJ",
+          "name": "Seat Cushion",
+          "asin": "B0GSVGPNH7",
           "asin_verified": true,
-          "verified_product_title": "28\" Modern Table Lamps Set of 2 for Living Room Bedroom, USB Ports",
-          "parent_asin": "B0FS1JXJZJ",
+          "verified_product_title": "Cooling Gel Enhanced Memory Foam Seat Cushion, Desk Chair Seat Cushion, Office Chair Cushions, Foldable Portable, Back Sciatica Coccyx Tailbone Pain Relief, Driving Car Airplane Wheelchair Bleachers",
+          "parent_asin": "B0GSVGPNH7",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342676,
-          "search_term": "table lamp for dark hallways",
-          "url": "https://www.amazon.com/dp/B0FS1JXJZJ?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344708,
+          "search_term": "seat cushion for hot climates",
+          "url": "https://www.amazon.com/dp/B0GSVGPNH7?tag=hotr0e-20"
         }
       ],
-      "html_file": "bestof-home-decor-blanket-ee68c5987358.html",
+      "html_file": "bestof-car-mount-0d13e1db177c.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795342788,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
-      "slug": "bestof-personal-care-loofah-684a2abeffbb",
-      "title": "Personal Care Shortlist: 3 Options, Trade-Offs Included",
-      "meta_description": "Explore a curated shortlist of tweezers, a derma roller, and an LED face mask, with trade‑offs and tips to help you choose the right personal‑care tool.",
+      "slug": "bestof-personal-care-massager-7022a0353351",
+      "title": "3 Personal Care Picks Reviewed Against the Criteria That Matter",
+      "meta_description": "Evaluate 3 essential personal care items including a battery-operated trimmer, a 1-inch ceramic curling iron, and an ADA accepted electric toothbrush.",
       "template": "bestof",
       "niche": "personal care",
       "keyword": "Personal Care",
@@ -75,56 +69,50 @@
         "Reviews",
         "Personal Care"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 641,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 668,
       "items": [
         {
-          "name": "Tweezers",
-          "asin": "B09WZ748K1",
+          "name": "Nose Hair Trimmer",
+          "asin": "B098NSHBQK",
           "asin_verified": true,
-          "verified_product_title": "Lune+Aster Slant Tweezer - Stainless steel slant tweezer for at-home brow touch ups and other grooming needs.",
-          "parent_asin": "B09WZ748K1",
+          "verified_product_title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women,Battery-Operated Trimmer with IPX7 Waterproof,Dual Edge Blades for Easy Cleansing Black",
+          "parent_asin": "B098NSHBQK",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342563,
-          "search_term": "tweezers for home grooming",
-          "url": "https://www.amazon.com/dp/B09WZ748K1?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344772,
+          "search_term": "nose hair trimmer for daily shavers",
+          "url": "https://www.amazon.com/dp/B098NSHBQK?tag=hotr0e-20"
         },
         {
-          "name": "Derma Roller",
-          "asin": "B00JDI2ER2",
+          "name": "Curling Wand",
+          "asin": "B0946QHYMQ",
           "asin_verified": true,
-          "verified_product_title": "Dermaroller Home Care Microneedle Roller - 0.2mm Stainless Steel Derma Roller for Skin Care Exfoliation, Improved Texture, and Radiance on Face, Neck, and Décolleté",
-          "parent_asin": "B00JDI2ER2",
+          "verified_product_title": "ELLA BELLA® Curling Iron 1 Inch, Professional Ceramic Wand, All Hair Types",
+          "parent_asin": "B0946QHYMQ",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342422,
-          "search_term": "derma roller for mature skin",
-          "url": "https://www.amazon.com/dp/B00JDI2ER2?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344794,
+          "search_term": "curling wand for fine hair",
+          "url": "https://www.amazon.com/dp/B0946QHYMQ?tag=hotr0e-20"
         },
         {
-          "name": "LED Face Mask",
-          "asin": "B0DHRW819R",
+          "name": "Electric Toothbrush",
+          "asin": "B072YVWBXH",
           "asin_verified": true,
-          "verified_product_title": "CurrentBody Red Light Therapy LED Face Mask: Series 2",
-          "parent_asin": "B0DHRW819R",
+          "verified_product_title": "Aquasonic Black Series Ultra Whitening Toothbrush – ADA Accepted Electric Toothbrush- 8 Brush Heads & Travel Case – 40,000 VPM Electric Motor & Wireless Charging - 4 Modes w Smart Timer",
+          "parent_asin": "B072YVWBXH",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342606,
-          "search_term": "led face mask for mature skin",
-          "url": "https://www.amazon.com/dp/B0DHRW819R?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795344806,
+          "search_term": "electric toothbrush for beginners",
+          "url": "https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20"
         }
       ],
-      "html_file": "bestof-personal-care-loofah-684a2abeffbb.html",
+      "html_file": "bestof-personal-care-massager-7022a0353351.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795342788,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
       "slug": "bestof-sleep-sunrise-e91fbb0b229d",
@@ -299,106 +287,6 @@
       "product_review_required": false,
       "products_audited_at": 1795342788,
       "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "comparison-clothes-brush-vs-clothes-line-5284444e0993",
-      "title": "Clothes Brush vs Clothes Line: Deciding Between Two Good Options",
-      "meta_description": "Compare Clothes Brush and Clothes Line to determine which laundry tool fits your routine. Review verified facts, features, and practical use factors.",
-      "template": "comparison",
-      "niche": "laundry & storage",
-      "keyword": "Clothes Brush vs Clothes Line",
-      "labels": [
-        "Reviews",
-        "Laundry & Storage"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 617,
-      "items": [
-        {
-          "name": "Clothes Brush",
-          "asin": "B0037AMY6S",
-          "asin_verified": true,
-          "verified_product_title": "KENT CR8 Clothes Brush, 100% Natural Black Boar Bristle Lint Remover for Cashmere, Wool, and Silk for Keeping Fabrics Free from Fibres, Fluff and Pet Hair. Luxury Three Veneered Woods. Made in England",
-          "search_term": "Clothes Brush",
-          "url": "https://www.amazon.com/dp/B0037AMY6S?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342416,
-          "parent_asin": "B0037AMY6S",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Clothes Line",
-          "asin": "B0DQJ61TZJ",
-          "asin_verified": true,
-          "verified_product_title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
-          "search_term": "Clothes Line",
-          "url": "https://www.amazon.com/dp/B0DQJ61TZJ?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342624,
-          "parent_asin": "B0DQJ61TZJ",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-clothes-brush-vs-clothes-line-5284444e0993.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1795342788,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
-    },
-    {
-      "slug": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7",
-      "title": "Choosing Between Electrostatic Duster and Duster with Extension: A Practical Comparison",
-      "meta_description": "Compare the Kitchen + Home Rainbow Static Duster and Tiumso Microfiber Feather Duster kit to choose the right cleaning tool for your home.",
-      "template": "comparison",
-      "niche": "home cleaning",
-      "keyword": "Electrostatic Duster vs Duster with Extension",
-      "labels": [
-        "Reviews",
-        "Home Cleaning"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 615,
-      "items": [
-        {
-          "name": "Electrostatic Duster",
-          "asin": "B01MEDIIBL",
-          "asin_verified": true,
-          "verified_product_title": "Kitchen + Home Large 27\" Inch Static Duster with Bonus 35\" Inch Extension Pole - Electrostatic Feather Duster attracts dust Like a Magnet! - Assorted Colors Will Ship",
-          "search_term": "Electrostatic Duster",
-          "url": "https://www.amazon.com/dp/B01MEDIIBL?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342446,
-          "parent_asin": "B01MEDIIBL",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Duster with Extension",
-          "asin": "B0F1Y2QZSR",
-          "asin_verified": true,
-          "verified_product_title": "LAANPOLE 26FT High Reach Duster Cleaning Kit with Extension Pole, High Ceiling Fan Cleaner Duster Tool for Fan Blades, Window Washing Kit with Microfiber Feather Duster & Window Squeegee",
-          "search_term": "Duster with Extension",
-          "url": "https://www.amazon.com/dp/B0F1Y2QZSR?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795342795,
-          "parent_asin": "B0F1Y2QZSR",
-          "stock_source": "serpapi"
-        }
-      ],
-      "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1795342788,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
     },
     {
       "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
@@ -772,6 +660,40 @@
       "product_review_required": false,
       "products_audited_at": 1795342788,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-air-fryer-58220932fc1a",
+      "title": "Choosing An Air Fryer for Meal Preppers: Trade-Offs Included",
+      "meta_description": "Choosing an air fryer for meal preppers means checking basket capacity, dishwasher-safe parts and repeatable controls, plus what the verified book covers.",
+      "template": "review",
+      "niche": "kitchen",
+      "keyword": "air fryer for meal preppers",
+      "labels": [
+        "Reviews",
+        "Kitchen"
+      ],
+      "source": "ai:openrouter",
+      "provider": "openrouter",
+      "words": 748,
+      "items": [
+        {
+          "name": "Air Fryer",
+          "asin": "B0H425VZT3",
+          "asin_verified": true,
+          "verified_product_title": "The Essential Air Fryer Cookbook for Beginners: Fast, Simple, Delicious & Crispy Air Fryer Recipes for Busy Lives – Save Time & Make Every Family Meal a Hit",
+          "parent_asin": "B0H425VZT3",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795344879,
+          "search_term": "air fryer for meal preppers",
+          "url": "https://www.amazon.com/dp/B0H425VZT3?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-air-fryer-58220932fc1a.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
@@ -1987,6 +1909,40 @@
       "product_review_required": false,
       "products_audited_at": 1795342788,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-spice-rack-14684677a742",
+      "title": "Spice Rack Review: What I Would Check Before Buying",
+      "meta_description": "Review of the KES 16‑inch aluminum spice rack, covering design, wall‑mount setup, stackability, and upkeep to help bulk shoppers verify factors before buying.",
+      "template": "review",
+      "niche": "food & pantry",
+      "keyword": "spice rack for bulk shoppers",
+      "labels": [
+        "Reviews",
+        "Food & Pantry"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 581,
+      "items": [
+        {
+          "name": "Spice Rack",
+          "asin": "B07WZS5P7Q",
+          "asin_verified": true,
+          "verified_product_title": "KES Spice Rack Organizer Kitchen Spice Rack Seasoning Organizer 16 Inch Aluminum Spice Holder Wall Mount Anodized Black 2 Pack, KSR401S40-BK-P2",
+          "parent_asin": "B07WZS5P7Q",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795344684,
+          "search_term": "spice rack for bulk shoppers",
+          "url": "https://www.amazon.com/dp/B07WZS5P7Q?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-spice-rack-14684677a742.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-stainless-steel-pan-b931ccabf8fe",

@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-personal-care-massager-7022a0353351",
+  "title": "3 Personal Care Picks Reviewed Against the Criteria That Matter",
+  "meta_description": "Evaluate 3 essential personal care items including a battery-operated trimmer, a 1-inch ceramic curling iron, and an ADA accepted electric toothbrush.",
+  "template": "bestof",
+  "niche": "personal care",
+  "keyword": "Personal Care",
+  "labels": [
+    "Reviews",
+    "Personal Care"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 668,
+  "items": [
+    {
+      "name": "Nose Hair Trimmer",
+      "asin": "B098NSHBQK",
+      "asin_verified": true,
+      "verified_product_title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women,Battery-Operated Trimmer with IPX7 Waterproof,Dual Edge Blades for Easy Cleansing Black",
+      "parent_asin": "B098NSHBQK",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795344772,
+      "search_term": "nose hair trimmer for daily shavers",
+      "url": "https://www.amazon.com/dp/B098NSHBQK?tag=hotr0e-20"
+    },
+    {
+      "name": "Curling Wand",
+      "asin": "B0946QHYMQ",
+      "asin_verified": true,
+      "verified_product_title": "ELLA BELLA® Curling Iron 1 Inch, Professional Ceramic Wand, All Hair Types",
+      "parent_asin": "B0946QHYMQ",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795344794,
+      "search_term": "curling wand for fine hair",
+      "url": "https://www.amazon.com/dp/B0946QHYMQ?tag=hotr0e-20"
+    },
+    {
+      "name": "Electric Toothbrush",
+      "asin": "B072YVWBXH",
+      "asin_verified": true,
+      "verified_product_title": "Aquasonic Black Series Ultra Whitening Toothbrush – ADA Accepted Electric Toothbrush- 8 Brush Heads & Travel Case – 40,000 VPM Electric Motor & Wireless Charging - 4 Modes w Smart Timer",
+      "parent_asin": "B072YVWBXH",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795344806,
+      "search_term": "electric toothbrush for beginners",
+      "url": "https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-personal-care-massager-7022a0353351.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

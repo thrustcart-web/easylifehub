@@ -1,0 +1,34 @@
+{
+  "slug": "review-air-fryer-58220932fc1a",
+  "title": "Choosing An Air Fryer for Meal Preppers: Trade-Offs Included",
+  "meta_description": "Choosing an air fryer for meal preppers means checking basket capacity, dishwasher-safe parts and repeatable controls, plus what the verified book covers.",
+  "template": "review",
+  "niche": "kitchen",
+  "keyword": "air fryer for meal preppers",
+  "labels": [
+    "Reviews",
+    "Kitchen"
+  ],
+  "source": "ai:openrouter",
+  "provider": "openrouter",
+  "words": 748,
+  "items": [
+    {
+      "name": "Air Fryer",
+      "asin": "B0H425VZT3",
+      "asin_verified": true,
+      "verified_product_title": "The Essential Air Fryer Cookbook for Beginners: Fast, Simple, Delicious & Crispy Air Fryer Recipes for Busy Lives – Save Time & Make Every Family Meal a Hit",
+      "parent_asin": "B0H425VZT3",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795344879,
+      "search_term": "air fryer for meal preppers",
+      "url": "https://www.amazon.com/dp/B0H425VZT3?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-air-fryer-58220932fc1a.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
