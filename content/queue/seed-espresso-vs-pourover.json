@@ -15,25 +15,25 @@
   "items": [
     {
       "name": "Breville Bambino Espresso Machine",
-      "asin": "B09252QJ3V",
+      "asin": "B0B1JPPG2L",
       "asin_verified": true,
-      "verified_product_title": "Breville RM-BES500BSS1BUS1 Bambino Plus Espresso Machine, Brushed Stainless Steel (Certified Remanufactured)",
+      "verified_product_title": "Breville BES450BSS Bambino Espresso Machine, Brushed Stainless Steel",
       "search_term": "Breville BES450BSS Bambino Espresso Machine",
-      "url": "https://www.amazon.com/dp/B09252QJ3V?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0B1JPPG2L?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299284,
-      "parent_asin": "B09252QJ3V",
+      "stock_checked_at": 1795343116,
+      "parent_asin": "B0B1JPPG2L",
       "stock_source": "apify"
     },
     {
       "name": "Maestri House Pour Over Coffee Maker",
       "asin": "B0F3TRMSSP",
-      "asin_verified": false,
+      "asin_verified": true,
       "verified_product_title": "Bee House Pour Over Coffee Dripper - Ceramic Coffee Maker with Elegant Peek Hole, Drip Cone Brewer Coffee Gifts, Brewing Accessories - Jeans Blue, Standard Size",
       "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
-      "url": "",
+      "url": "https://www.amazon.com/dp/B0F3TRMSSP?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299408,
+      "stock_checked_at": 1795343119,
       "parent_asin": "B0F3TRMSSP",
       "stock_source": "serpapi"
     }
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

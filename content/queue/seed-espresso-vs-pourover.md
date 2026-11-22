@@ -43,7 +43,7 @@ Consult current manufacturer listings to verify included accessories and exact d
 
 ### Product Links
 
-- Breville Bambino Espresso Machine: https://www.amazon.com/dp/B09252QJ3V?tag=hotr0e-20
+- Breville Bambino Espresso Machine: https://www.amazon.com/dp/B0B1JPPG2L?tag=hotr0e-20
 - Maestri House Pour Over Coffee Maker: https://www.amazon.com/dp/B0BZP1PRNK?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

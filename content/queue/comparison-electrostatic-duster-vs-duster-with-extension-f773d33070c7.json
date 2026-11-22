@@ -21,21 +21,21 @@
       "search_term": "Electrostatic Duster",
       "url": "https://www.amazon.com/dp/B01MEDIIBL?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299549,
+      "stock_checked_at": 1795342446,
       "parent_asin": "B01MEDIIBL",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     },
     {
       "name": "Duster with Extension",
-      "asin": "B0B6G147W6",
+      "asin": "B0F1Y2QZSR",
       "asin_verified": true,
-      "verified_product_title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
+      "verified_product_title": "LAANPOLE 26FT High Reach Duster Cleaning Kit with Extension Pole, High Ceiling Fan Cleaner Duster Tool for Fan Blades, Window Washing Kit with Microfiber Feather Duster & Window Squeegee",
       "search_term": "Duster with Extension",
-      "url": "https://www.amazon.com/dp/B0B6G147W6?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0F1Y2QZSR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299315,
-      "parent_asin": "B0B6G147W6",
-      "stock_source": "apify"
+      "stock_checked_at": 1795342795,
+      "parent_asin": "B0F1Y2QZSR",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "comparison-electrostatic-duster-vs-duster-with-extension-f773d33070c7.html",
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

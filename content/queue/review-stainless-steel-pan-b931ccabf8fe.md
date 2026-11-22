@@ -43,6 +43,6 @@ Matching pan dimensions and base flatness with your induction cooktop surface en
 
 ### Product Links
 
-- Stainless Steel Pan: https://www.amazon.com/dp/B0FVW82JFG?tag=hotr0e-20
+- Stainless Steel Pan: https://www.amazon.com/dp/B0FL2H4P94?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

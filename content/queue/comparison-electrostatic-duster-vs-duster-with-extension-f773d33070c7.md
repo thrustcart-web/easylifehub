@@ -50,6 +50,6 @@ Extension pole kits provide the necessary length for high ceilings and overhead 
 ### Product Links
 
 - Electrostatic Duster: https://www.amazon.com/dp/B01MEDIIBL?tag=hotr0e-20
-- Duster with Extension: https://www.amazon.com/dp/B0B6G147W6?tag=hotr0e-20
+- Duster with Extension: https://www.amazon.com/dp/B0F1Y2QZSR?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

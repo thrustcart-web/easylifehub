@@ -15,26 +15,26 @@
   "items": [
     {
       "name": "Blender",
-      "asin": "B0855B5Z6F",
+      "asin": "B00OW16ZR0",
       "asin_verified": true,
-      "verified_product_title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
-      "parent_asin": "B0855B5Z6F",
+      "verified_product_title": "BLACK+DECKER Countertop Blender with 6-Cup Glass Jar, 10-Speed Settings, Black, BL2010BG",
+      "parent_asin": "B00OW16ZR0",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299268,
+      "stock_checked_at": 1795342956,
       "search_term": "Blender",
-      "url": "https://www.amazon.com/dp/B0855B5Z6F?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B00OW16ZR0?tag=hotr0e-20",
       "stock_source": "apify"
     },
     {
       "name": "Personal Blender",
-      "asin": "B0GZJ28GWJ",
+      "asin": "B0BPDG1331",
       "asin_verified": true,
-      "verified_product_title": "nutribullet® Turbo Personal Blender, 1000 Watt, Gunmetal, NB50400",
-      "parent_asin": "B0GZJ28GWJ",
+      "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Black, MBR-1101AK",
+      "parent_asin": "B0BPDG1331",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299527,
+      "stock_checked_at": 1795342970,
       "search_term": "Personal Blender",
-      "url": "https://www.amazon.com/dp/B0GZJ28GWJ?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0BPDG1331?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

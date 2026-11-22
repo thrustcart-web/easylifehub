@@ -20,7 +20,7 @@
       "verified_product_title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
       "parent_asin": "B0CF586TH4",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299341,
+      "stock_checked_at": 1795342583,
       "search_term": "storage baskets for family homes",
       "url": "https://www.amazon.com/dp/B0CF586TH4?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,7 +32,7 @@
       "verified_product_title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
       "parent_asin": "B0F6LM95F2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299408,
+      "stock_checked_at": 1795343007,
       "search_term": "curtain rods for cold rooms",
       "url": "https://www.amazon.com/dp/B0F6LM95F2?tag=hotr0e-20",
       "stock_source": "apify"
@@ -44,7 +44,7 @@
       "verified_product_title": "28\" Modern Table Lamps Set of 2 for Living Room Bedroom, USB Ports",
       "parent_asin": "B0FS1JXJZJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299509,
+      "stock_checked_at": 1795342676,
       "search_term": "table lamp for dark hallways",
       "url": "https://www.amazon.com/dp/B0FS1JXJZJ?tag=hotr0e-20",
       "stock_source": "apify"
@@ -57,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

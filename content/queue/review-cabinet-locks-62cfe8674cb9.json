@@ -20,7 +20,7 @@
       "verified_product_title": "[6-Pack] Upgraded Invisible Baby Proofing Cabinet Latch Locks - No Drill Child Safety Drawer Latches - Adhesive Childproof Lock for Cabinets - Highly Secure Toddler & Infant Safety No Tools Required",
       "parent_asin": "B09Z7Y4M79",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299299,
+      "stock_checked_at": 1795342563,
       "search_term": "cabinet locks for renters",
       "url": "https://www.amazon.com/dp/B09Z7Y4M79?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

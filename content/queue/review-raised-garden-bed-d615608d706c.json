@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Land Guard Raised Garden Bed",
-      "asin": "B0DX1LX9KX",
+      "asin": "B0D7M6H1N5",
       "asin_verified": true,
-      "verified_product_title": "Land Guard 12×4×1ft Galvanized Raised Garden Bed Kit for Vegetables 2 Pack, Galvanized Super Large Metal Planter Raised Garden Boxes Outdoor",
+      "verified_product_title": "Land Guard 8ft Galvanized Raised Garden Bed Kit, Raised Garden Boxes Outdoor, Oval Metal Raised Garden Beds for Vegetables, Silver,108 Gallon Capacity(with 10 Connecting rods)",
       "search_term": "Land Guard 4x2 Galvanized Raised Garden Bed Kit",
-      "url": "https://www.amazon.com/dp/B0DX1LX9KX?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0D7M6H1N5?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299678,
-      "parent_asin": "B0DX1LX9KX",
+      "stock_checked_at": 1795342882,
+      "parent_asin": "B0D7M6H1N5",
       "stock_source": "apify"
     }
   ],
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

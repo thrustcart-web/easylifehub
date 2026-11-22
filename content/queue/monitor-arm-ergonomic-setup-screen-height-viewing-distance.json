@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Monitor Arm",
-      "asin": "B0FQM6QB48",
+      "asin": "B07T3KCQ94",
       "asin_verified": true,
-      "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
-      "parent_asin": "B0FQM6QB48",
+      "verified_product_title": "HUANUO FlowLift™ Single Monitor Mount, 13 to 32 Inch Monitor Arm, Adjustable Monitor Stand, Vesa Mount with Clamp and Grommet Base - Fits 4.4 to 19.8lbs LCD Computer Monitors",
+      "parent_asin": "B07T3KCQ94",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299509,
+      "stock_checked_at": 1795342991,
       "search_term": "monitor arm",
-      "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B07T3KCQ94?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

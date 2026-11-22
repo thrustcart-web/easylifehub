@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Car Seat",
-      "asin": "B0H5BM7MZT",
+      "asin": "B0FZ8R67R2",
       "asin_verified": true,
-      "verified_product_title": "360 Rotating Car Seat Cushion, Swivel Memory Foam Seat Cover with Non-Slip & Breathable Design, Soft Twist pad for Car Home (Black)",
-      "parent_asin": "B0H5BM7MZT",
+      "verified_product_title": "OBS Style Car Racing Seats Reclinable Low Back Bucket Seats w Sliders 1Pair",
+      "parent_asin": "B0FZ8R67R2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299539,
+      "stock_checked_at": 1795343071,
       "search_term": "car seat for apartment living",
-      "url": "https://www.amazon.com/dp/B0H5BM7MZT?tag=hotr0e-20",
-      "stock_source": "apify"
+      "url": "https://www.amazon.com/dp/B0FZ8R67R2?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-car-seat-647b74f77791.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

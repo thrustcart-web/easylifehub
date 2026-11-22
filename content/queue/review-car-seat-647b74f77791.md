@@ -43,6 +43,6 @@ Before committing to a specific design, measure your vehicle cabin width, review
 
 ### Product Links
 
-- Car Seat: https://www.amazon.com/dp/B0H5BM7MZT?tag=hotr0e-20
+- Car Seat: https://www.amazon.com/dp/B0FZ8R67R2?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

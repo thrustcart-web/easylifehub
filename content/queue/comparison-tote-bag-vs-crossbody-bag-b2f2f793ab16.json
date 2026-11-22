@@ -17,11 +17,11 @@
       "name": "Tote Bag",
       "asin": "B0FKH85DPY",
       "asin_verified": true,
-      "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
+      "verified_product_title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Work Tote Travel Purse",
       "search_term": "Tote Bag",
       "url": "https://www.amazon.com/dp/B0FKH85DPY?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299497,
+      "stock_checked_at": 1795342651,
       "parent_asin": "B0FKH85DPY",
       "stock_source": "apify"
     },
@@ -33,7 +33,7 @@
       "search_term": "Crossbody Bag",
       "url": "https://www.amazon.com/dp/B0BWH7GP46?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299568,
+      "stock_checked_at": 1795342570,
       "parent_asin": "B0BWH7GP46",
       "stock_source": "apify"
     }
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

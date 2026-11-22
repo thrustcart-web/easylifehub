@@ -20,10 +20,10 @@
       "verified_product_title": "100FT Drip Irrigation System Kit, Quick Connect Garden Watering System, Easy Install Drip Irrigation Kit with 1/2\" & 1/4\" Tubing, Adjustable Emitters for Garden, Raised Beds, Greenhouse",
       "parent_asin": "B0GLNL6CXQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299852,
+      "stock_checked_at": 1795342683,
       "search_term": "drip irrigation kit for beginners",
       "url": "https://www.amazon.com/dp/B0GLNL6CXQ?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-drip-irrigation-kit-46846b19bbd3.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

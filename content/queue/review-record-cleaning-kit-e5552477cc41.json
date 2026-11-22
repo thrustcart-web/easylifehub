@@ -20,7 +20,7 @@
       "verified_product_title": "EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel",
       "parent_asin": "B08DG3GT9F",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299750,
+      "stock_checked_at": 1795342524,
       "search_term": "record cleaning kit for beginners",
       "url": "https://www.amazon.com/dp/B08DG3GT9F?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }

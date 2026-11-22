@@ -1,395 +1,395 @@
 {
-  "checked_at": 1795299544,
+  "checked_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "articles_checked": 59,
   "queue_duplicate_articles_removed": 0,
   "removed_duplicate_slugs": [],
-  "blogger_titles_reserved": 65,
+  "blogger_titles_reserved": 67,
   "external_products": {},
   "external_asins": [],
   "stock_by_asin": {
-    "B002VK792O": {
-      "title": "Akro-Mils 30250 AkroBins Plastic Storage Bins, 15\"x16\"x7\", Black, 6-Pack",
-      "parent_asin": "B002VK792O",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299210,
-      "stock_source": "apify"
-    },
     "B0037AMY6S": {
       "title": "KENT CR8 Clothes Brush, 100% Natural Black Boar Bristle Lint Remover for Cashmere, Wool, and Silk for Keeping Fabrics Free from Fibres, Fluff and Pet Hair. Luxury Three Veneered Woods. Made in England",
       "parent_asin": "B0037AMY6S",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299210,
+      "stock_checked_at": 1795342416,
+      "stock_source": "apify"
+    },
+    "B002VK792O": {
+      "title": "Akro-Mils 30250 AkroBins Plastic Storage Bins, 15\"x16\"x7\", Black, 6-Pack",
+      "parent_asin": "B002VK792O",
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1795342416,
       "stock_source": "apify"
     },
     "B00JDI2ER2": {
       "title": "Dermaroller Home Care Microneedle Roller - 0.2mm Stainless Steel Derma Roller for Skin Care Exfoliation, Improved Texture, and Radiance on Face, Neck, and Décolleté",
       "parent_asin": "B00JDI2ER2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299219,
-      "stock_source": "apify"
-    },
-    "B00KD6ZHD6": {
-      "title": "Aleene's Quick Dry Fabric Fusion, Fast-Drying Permanent Fabric Glue, Stong Bond Dries Soft and Clear in Minutes, 4 fl oz",
-      "parent_asin": "B00KD6ZHD6",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299219,
-      "stock_source": "apify"
-    },
-    "B01DF316EC": {
-      "title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
-      "parent_asin": "B01DF316EC",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299239,
+      "stock_checked_at": 1795342422,
       "stock_source": "apify"
     },
     "B01AVDVHTI": {
       "title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
       "parent_asin": "B01AVDVHTI",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299239,
+      "stock_checked_at": 1795342422,
+      "stock_source": "apify"
+    },
+    "B01DF316EC": {
+      "title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
+      "parent_asin": "B01DF316EC",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342437,
       "stock_source": "apify"
     },
     "B01L2HYPNW": {
       "title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
       "parent_asin": "B01L2HYPNW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299245,
+      "stock_checked_at": 1795342437,
       "stock_source": "apify"
     },
-    "B01N4TZOHE": {
-      "title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
-      "parent_asin": "B01N4TZOHE",
+    "B01MEDIIBL": {
+      "title": "Kitchen + Home Large 27\" Inch Static Duster with Bonus 35\" Inch Extension Pole - Electrostatic Feather Duster attracts dust Like a Magnet! - Assorted Colors Will Ship",
+      "parent_asin": "B01MEDIIBL",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299245,
+      "stock_checked_at": 1795342446,
       "stock_source": "apify"
     },
     "B01NH0HTM5": {
       "title": "VIVO AeroPoise™ Single Monitor Stand, for 17\" to 32\" Screens up to 19.8 lbs",
       "parent_asin": "B01NH0HTM5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299256,
+      "stock_checked_at": 1795342446,
+      "stock_source": "apify"
+    },
+    "B073GWMZX8": {
+      "title": "Woolrich Cotton Sheet Set Cottage Charms Print, 100% Cotton Flannel Sheets Warm & Fuzzy Bedding Set Queen Size Sheets, Fitted Pocket Fits Up to 14\" Mattress, Queen Blue Winter Frost, 4 Piece",
+      "parent_asin": "B073GWMZX8",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342508,
       "stock_source": "apify"
     },
     "B07MP2R8X5": {
       "title": "Weighted Blanket for Adults with Removable Cover, 12 lb, 48x72 in, Grey",
       "parent_asin": "B07MP2R8X5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299256,
-      "stock_source": "apify"
-    },
-    "B07QV16HKB": {
-      "title": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable Backpack for Men Women",
-      "parent_asin": "B07QV16HKB",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299263,
+      "stock_checked_at": 1795342508,
       "stock_source": "apify"
     },
     "B07T5SY43L": {
       "title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
       "parent_asin": "B07T5SY43L",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299263,
+      "stock_checked_at": 1795342517,
       "stock_source": "apify"
     },
-    "B0855B5Z6F": {
-      "title": "Ninja Professional Plus Blender, Auto-iQ, 1400W, 72oz Pitcher, BN701",
-      "parent_asin": "B0855B5Z6F",
+    "B07RSZSYNC": {
+      "title": "Levoit Core 300-P Air Purifier Replacement Filter, Genuine Air Filters",
+      "parent_asin": "B07RSZSYNC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299268,
+      "stock_checked_at": 1795342517,
       "stock_source": "apify"
     },
-    "B07WV7F7VC": {
-      "title": "Fit Simplify Resistance Loop Exercise Fitness Bands with Instruction Guide and Carry Bag, Set of 5",
-      "parent_asin": "B07WV7F7VC",
+    "B08DG3GT9F": {
+      "title": "EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel",
+      "parent_asin": "B08DG3GT9F",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299268,
+      "stock_checked_at": 1795342524,
       "stock_source": "apify"
     },
     "B08936QVJD": {
       "title": "OneTigris Hideout Hammock Underquilt, Lightweight 4 Season Hammock Gear for Camping, Hiking, Backpacking, Travel, Beach, Backyard, Patio, Portable",
       "parent_asin": "B08936QVJD",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299279,
-      "stock_source": "apify"
-    },
-    "B08QXB9BH5": {
-      "title": "Ninja® CREAMi® 7-in-1 Ice Cream Maker,  Ice Cream, Gelato and more, NC301",
-      "parent_asin": "B08QXB9BH5",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299279,
-      "stock_source": "apify"
-    },
-    "B09252QJ3V": {
-      "title": "Breville RM-BES500BSS1BUS1 Bambino Plus Espresso Machine, Brushed Stainless Steel (Certified Remanufactured)",
-      "parent_asin": "B09252QJ3V",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299284,
+      "stock_checked_at": 1795342524,
       "stock_source": "apify"
     },
     "B08Y8L9VCF": {
       "title": "Instant Pot Bible: Copycat Recipes: 175 Original Ways to Remake Your Favorite Restaurant Recipes in Your Instant Pot",
       "parent_asin": "B08Y8L9VCF",
       "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1795299284,
+      "stock_checked_at": 1795342534,
+      "stock_source": "apify"
+    },
+    "B08ZHCP3VF": {
+      "title": "6pcs 3.5inch Woven Wicker Rattan Balls Decorative Ball Twig Orbs Green Orbs Vase Bowl Filler for Tabletop Decor (Beige White)",
+      "parent_asin": "B08ZHCP3VF",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342534,
+      "stock_source": "apify"
+    },
+    "B09252QJ3V": {
+      "title": "Breville RM-BES500BSS1BUS1 Bambino Plus Espresso Machine, Brushed Stainless Steel (Certified Remanufactured)",
+      "parent_asin": "B09252QJ3V",
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1795342548,
       "stock_source": "apify"
     },
     "B099Z2Q93Z": {
       "title": "FIILINES Dash Cover for 1995-2005 Chevy/Chevrolet Cavalier, Dashboard Mat Exact Fit for Cavalier Interior Accessories Dashboard Pad Carpet Dash Mat Sunshade Non-Slip Polyester Protector No Glare Black",
       "parent_asin": "B099Z2Q93Z",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299292,
+      "stock_checked_at": 1795342548,
       "stock_source": "apify"
     },
     "B09P3PRM5P": {
       "title": "Cat Litter Scoop, Aluminum Alloy Sifter, Matte, Blue, Small",
       "parent_asin": "B09P3PRM5P",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299292,
+      "stock_checked_at": 1795342556,
       "stock_source": "apify"
     },
-    "B09WZ748K1": {
-      "title": "Lune+Aster Slant Tweezer - Stainless steel slant tweezer for at-home brow touch ups and other grooming needs.",
-      "parent_asin": "B09WZ748K1",
+    "B09N96NNVD": {
+      "title": "39OZ Coffee Canister, Coffee Container Airtight for Ground and Bean",
+      "parent_asin": "B09N96NNVD",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299299,
+      "stock_checked_at": 1795342556,
       "stock_source": "apify"
     },
     "B09Z7Y4M79": {
       "title": "[6-Pack] Upgraded Invisible Baby Proofing Cabinet Latch Locks - No Drill Child Safety Drawer Latches - Adhesive Childproof Lock for Cabinets - Highly Secure Toddler & Infant Safety No Tools Required",
       "parent_asin": "B09Z7Y4M79",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299299,
+      "stock_checked_at": 1795342563,
       "stock_source": "apify"
     },
-    "B0B6G147W6": {
-      "title": "Tiumso Microfiber Feather Duster 5-in-1 Kit, Dusters for Cleaning, Duster with Extension Pole 100 Inches, Cobweb Duster, Microfiber Dusters for High Ceilings and Fans, Blinds, Cars and Furniture",
-      "parent_asin": "B0B6G147W6",
+    "B09WZ748K1": {
+      "title": "Lune+Aster Slant Tweezer - Stainless steel slant tweezer for at-home brow touch ups and other grooming needs.",
+      "parent_asin": "B09WZ748K1",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299315,
+      "stock_checked_at": 1795342563,
+      "stock_source": "apify"
+    },
+    "B0BWH7GP46": {
+      "title": "Simptech Mini Crossbody Sling Bag - Water-Resistant Dual Pocket Chest Pack - Lightweight Fanny Pack for Running, Travel & Everyday Workout",
+      "parent_asin": "B0BWH7GP46",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342570,
       "stock_source": "apify"
     },
     "B0BHSX8PYZ": {
       "title": "3 Pack 10 inch Plant Pots with Drainage Holes & Saucer",
       "parent_asin": "B0BHSX8PYZ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299315,
-      "stock_source": "apify"
-    },
-    "B0CF586TH4": {
-      "title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
-      "parent_asin": "B0CF586TH4",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299341,
+      "stock_checked_at": 1795342570,
       "stock_source": "apify"
     },
     "B0C2BS5WCJ": {
       "title": "20000RPM Electric Nail Drill Compact Portable Efile Professional Manicure Pedicure Nail File Drill Kit for Acrylic, Gel Nails and Home Salon Use",
       "parent_asin": "B0C2BS5WCJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299341,
+      "stock_checked_at": 1795342583,
+      "stock_source": "apify"
+    },
+    "B0CF586TH4": {
+      "title": "OIAHOMY 75L Large Blanket Basket Woven Cotton Rope Storage Basket Brown",
+      "parent_asin": "B0CF586TH4",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342583,
       "stock_source": "apify"
     },
     "B0CTJF48C1": {
       "title": "Core 300 Replacement Filter for LEVOIT Core 300-P Core 300S-P Air Purifier",
       "parent_asin": "B0CTJF48C1",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299372,
-      "stock_source": "apify"
-    },
-    "B0CJRM936N": {
-      "title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
-      "parent_asin": "B0CJRM936N",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299372,
-      "stock_source": "apify"
-    },
-    "B0D9CP3BPS": {
-      "title": "Mortar and Pestle Set, Pill Grinding Bowl,Pill Crusher and Spice Stone Grinder, 2.5 Inch, 1/2 Cup, Grinding is Efficient and Labor-Saving",
-      "parent_asin": "B0D9CP3BPS",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299380,
+      "stock_checked_at": 1795342591,
       "stock_source": "apify"
     },
     "B0D5YBXMGJ": {
       "title": "Money Belt- Travel Security Money Belt with Secret Compartment, Anti-Theft Nylon Hidden Money Pouch with Zinc Alloy Buckle for Dad Boyfriend Men, Business Travel Daily",
       "parent_asin": "B0D5YBXMGJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299380,
+      "stock_checked_at": 1795342591,
       "stock_source": "apify"
     },
-    "B0DK99H94M": {
-      "title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
-      "parent_asin": "B0DK99H94M",
+    "B0DBVW1RFW": {
+      "title": "Shark PowerDetect Clean & Empty Cordless Stick Vacuum, IP3251",
+      "parent_asin": "B0DBVW1RFW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299389,
+      "stock_checked_at": 1795342598,
+      "stock_source": "apify"
+    },
+    "B0DB8F7GDN": {
+      "title": "Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
+      "parent_asin": "B0DB8F7GDN",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342598,
       "stock_source": "apify"
     },
     "B0DHRW819R": {
       "title": "CurrentBody Red Light Therapy LED Face Mask: Series 2",
       "parent_asin": "B0DHRW819R",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299389,
+      "stock_checked_at": 1795342606,
+      "stock_source": "apify"
+    },
+    "B0DK99H94M": {
+      "title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
+      "parent_asin": "B0DK99H94M",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342606,
       "stock_source": "apify"
     },
     "B0DQJ61TZJ": {
       "title": "SMART&CASUAL 100 ft 1/4\" Polyester Rope (Comparable to Nylon Rope) Poly Strong Utility Cord for Clothes Line Flag Pole Camping Crafting (White)",
       "parent_asin": "B0DQJ61TZJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299395,
-      "stock_source": "apify"
-    },
-    "B0DNG93XN6": {
-      "title": "VIVO Ultrawide Monitor and TV Desk Mount, Up to 55\" Screens, Holds 44 lbs",
-      "parent_asin": "B0DNG93XN6",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299395,
-      "stock_source": "apify"
-    },
-    "B0F334DN9J": {
-      "title": "Roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction",
-      "parent_asin": "B0F334DN9J",
-      "availability_type": "OUT_OF_STOCK",
-      "stock_checked_at": 1795299402,
+      "stock_checked_at": 1795342624,
       "stock_source": "apify"
     },
     "B0DQTNZCWN": {
       "title": "Bonsaii 6-Sheet Cross Cut Paper Shredder for Home, 3.4 Gal Bin",
       "parent_asin": "B0DQTNZCWN",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299402,
+      "stock_checked_at": 1795342624,
       "stock_source": "apify"
     },
     "B0F3TRMSSP": {
       "title": "ZERO JAPAN - Bee House Pour Over Coffee Dripper - Ceramic Coffee Maker with Elegant Peek Hole, Drip Cone Brewer Coffee Gifts, Brewing Accessories - Jeans Blue, Standard Size",
       "parent_asin": "B0F3TRMSSP",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299408,
+      "stock_checked_at": 1795342643,
       "stock_source": "apify"
     },
-    "B0F6LM95F2": {
-      "title": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, Black Extra Long Window Treatment Rods, Modern Design, Easy Installation",
-      "parent_asin": "B0F6LM95F2",
+    "B0F334DN9J": {
+      "title": "Roborock Q7 L5 Robot Vacuum and Mop Combo, 8,000Pa Suction",
+      "parent_asin": "B0F334DN9J",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299408,
+      "stock_checked_at": 1795342643,
       "stock_source": "apify"
     },
     "B0FHJ7TKZM": {
       "title": "Ring Battery Doorbell 2K (newest model), Speckled Gray",
       "parent_asin": "B0FHJ7TKZM",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299497,
+      "stock_checked_at": 1795342651,
       "stock_source": "apify"
     },
     "B0FKH85DPY": {
-      "title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Laptop Work Tote Purse",
+      "title": "Bagstellar Corduroy Tote Bag for Women, 17 Pockets Work Tote Travel Purse",
       "parent_asin": "B0FKH85DPY",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299497,
-      "stock_source": "apify"
-    },
-    "B0FMSBSRYR": {
-      "title": "Key Holder Wall Mount, Solid Wood Key Holder for Wall with 4 Brass Hooks & Hidden Magnets, 15° Incline Hooks & Grooved Design to Prevent Slipping, Vintage Brown Key Hanger",
-      "parent_asin": "B0FMSBSRYR",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299503,
+      "stock_checked_at": 1795342651,
       "stock_source": "apify"
     },
     "B0FNBV7NG7": {
       "title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
       "parent_asin": "B0FNBV7NG7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299503,
+      "stock_checked_at": 1795342660,
+      "stock_source": "apify"
+    },
+    "B0FMSBSRYR": {
+      "title": "Key Holder Wall Mount, Solid Wood Key Holder for Wall with 4 Brass Hooks & Hidden Magnets, 15° Incline Hooks & Grooved Design to Prevent Slipping, Vintage Brown Key Hanger",
+      "parent_asin": "B0FMSBSRYR",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342660,
       "stock_source": "apify"
     },
     "B0FS1JXJZJ": {
       "title": "28\" Modern Table Lamps Set of 2 for Living Room Bedroom, USB Ports",
       "parent_asin": "B0FS1JXJZJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299509,
-      "stock_source": "apify"
-    },
-    "B0FQM6QB48": {
-      "title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
-      "parent_asin": "B0FQM6QB48",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299509,
+      "stock_checked_at": 1795342676,
       "stock_source": "apify"
     },
     "B0FXDN76LR": {
       "title": "Navigation Compass & Whistle Kit - Essential Gear for Orienteering, Camping, Training, Exploration & Youth Outdoor Education",
       "parent_asin": "B0FXDN76LR",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299515,
+      "stock_checked_at": 1795342676,
       "stock_source": "apify"
     },
-    "B0GKRTGRRK": {
-      "title": "Pamray 47 Inch Reversible L Shaped Gaming Desk Corner Computer Desk with Storage Bag Home Office Table for Writing Study Black",
-      "parent_asin": "B0GKRTGRRK",
+    "B0GLNL6CXQ": {
+      "title": "100FT Drip Irrigation System Kit, Quick Connect Garden Watering System, Easy Install Drip Irrigation Kit with 1/2\" & 1/4\" Tubing, Adjustable Emitters for Garden, Raised Beds, Greenhouse",
+      "parent_asin": "B0GLNL6CXQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299515,
+      "stock_checked_at": 1795342683,
       "stock_source": "apify"
     },
     "B0GR9NLSQZ": {
       "title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
       "parent_asin": "B0GR9NLSQZ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299521,
+      "stock_checked_at": 1795342683,
       "stock_source": "apify"
     },
-    "B0GYMS143S": {
-      "title": "4 Piece Checkerboard Wood Cutting Boards Set 12.6x9 Inch with Holder Label",
-      "parent_asin": "B0GYMS143S",
+    "B0GXLHWTC2": {
+      "title": "Skipping Rope for Adults, Adjustable Jump Rope for Men, Women, Speed Jump Rope with 360° Swivel Ball Bearings, Tangle-Free Exercise Rope for Cardio, Fitness, Boxing, Home & Gym Workouts",
+      "parent_asin": "B0GXLHWTC2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299521,
+      "stock_checked_at": 1795342690,
+      "stock_source": "apify"
+    },
+    "B0GY3KYH2P": {
+      "title": "2 Pack Keyed Single Cylinder Deadbolt Lock for Interior Door Silver",
+      "parent_asin": "B0GY3KYH2P",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342690,
       "stock_source": "apify"
     },
     "B0GZJ28GWJ": {
       "title": "nutribullet® Turbo Personal Blender, 1000 Watt, Gunmetal, NB50400",
       "parent_asin": "B0GZJ28GWJ",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299527,
+      "availability_type": "OUT_OF_STOCK",
+      "stock_checked_at": 1795342707,
       "stock_source": "apify"
     },
     "B0GZHZJP9K": {
       "title": "Stud Finder Multi-Mode Wall Scanner, High-Accuracy Sensor",
       "parent_asin": "B0GZHZJP9K",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299527,
+      "stock_checked_at": 1795342707,
+      "stock_source": "apify"
+    },
+    "B0H5V6KWF5": {
+      "title": "Jig Saw Corded: Electric Jigsaw Tool, Power Jig Saws for Woodworking with 8pcs Blades, Wood Cutter Hand Tool with 6 Variable Speed, 3000 SPM, ±45° Bevel Cutting, Tool-Free Blade Change",
+      "parent_asin": "B0H5V6KWF5",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342714,
+      "stock_source": "apify"
+    },
+    "B0H7HFCZJW": {
+      "title": "Kitchen in the box Stand Mixer 8.5 QT, 900 Watt Heavy Dough Mixer Black",
+      "parent_asin": "B0H7HFCZJW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342714,
+      "stock_source": "apify"
+    },
+    "B0H9Y8VWDR": {
+      "title": "Professional Lens Cleaning Pen with Soft Brush and Extra Tips, 3-in-1",
+      "parent_asin": "B0H9Y8VWDR",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342781,
       "stock_source": "apify"
     },
     "B0HFN3GNBJ": {
       "title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
       "parent_asin": "B0HFN3GNBJ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299539,
-      "stock_source": "apify"
-    },
-    "B0H5BM7MZT": {
-      "title": "360 Rotating Car Seat Cushion, Swivel Memory Foam Seat Cover with Non-Slip & Breathable Design, Soft Twist pad for Car Home (Black)",
-      "parent_asin": "B0H5BM7MZT",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299539,
-      "stock_source": "apify"
-    },
-    "B0HGPRSSGT": {
-      "title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown",
-      "parent_asin": "B0HGPRSSGT",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299544,
+      "stock_checked_at": 1795342781,
       "stock_source": "apify"
     },
     "B0HQCDLJP9": {
       "title": "Stud Finder for Beginners: How to Find Wall Studs, Fix False Readings, and Mount Items with Confidence",
       "parent_asin": "B0HQCDLJP9",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299544,
+      "stock_checked_at": 1795342788,
+      "stock_source": "apify"
+    },
+    "B0HGPRSSGT": {
+      "title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown",
+      "parent_asin": "B0HGPRSSGT",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795342788,
       "stock_source": "apify"
     }
   },
-  "unique_queue_asins": 80,
-  "unresolved_items": 12,
-  "replacements": 20,
-  "kept_existing_in_stock": 50,
-  "duplicate_or_out_of_stock_encountered": 32
+  "unique_queue_asins": 81,
+  "unresolved_items": 9,
+  "replacements": 27,
+  "kept_existing_in_stock": 46,
+  "duplicate_or_out_of_stock_encountered": 36
 }

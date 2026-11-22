@@ -21,9 +21,9 @@
       "search_term": "cotton sheets for cold climates",
       "url": "https://www.amazon.com/dp/B073GWMZX8?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299547,
+      "stock_checked_at": 1795342508,
       "parent_asin": "B073GWMZX8",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     },
     {
       "name": "Weighted Blanket",
@@ -33,7 +33,7 @@
       "search_term": "weighted blanket for anxious sleepers",
       "url": "https://www.amazon.com/dp/B07MP2R8X5?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299256,
+      "stock_checked_at": 1795342508,
       "parent_asin": "B07MP2R8X5",
       "stock_source": "apify"
     },
@@ -45,7 +45,7 @@
       "search_term": "duvet for hot sleepers",
       "url": "https://www.amazon.com/dp/B0HFN3GNBJ?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795299539,
+      "stock_checked_at": 1795342781,
       "parent_asin": "B0HFN3GNBJ",
       "stock_source": "apify"
     }
@@ -55,7 +55,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795299544,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -15,24 +15,24 @@
   "items": [
     {
       "name": "Stainless Steel Pan",
-      "asin": "B0FVW82JFG",
-      "asin_verified": false,
-      "verified_product_title": "VocVoi Stainless Steel Pan, 12 Inch with Lid Stainless Steel Frying Pan",
-      "parent_asin": "B0FVW82JFG",
-      "availability_type": "UNKNOWN",
-      "stock_checked_at": 1795299544,
+      "asin": "B0FL2H4P94",
+      "asin_verified": true,
+      "verified_product_title": "Stainless Steel Frying Pan, 8 Inch Frying Pan Cookware, Healthy Stainless Steel Skillet, Works on Induction, Ceramic and Gas Cooktops, PFOA Free, Dishwasher Safe, Stay-Cool Handle",
+      "parent_asin": "B0FL2H4P94",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795343202,
       "search_term": "stainless steel pan for induction cooktops",
-      "url": "",
-      "stock_source": "apify"
+      "url": "https://www.amazon.com/dp/B0FL2H4P94?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-stainless-steel-pan-b931ccabf8fe.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": false,
+  "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": true,
-  "product_review_required": true,
-  "products_audited_at": 1795299544,
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795342788,
   "stock_check_max_age_seconds": 86400
 }
