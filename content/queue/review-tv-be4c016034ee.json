@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "TV",
-      "asin": "B0FV57SCBF",
+      "asin": "B0F9Z3H6YG",
       "asin_verified": true,
-      "verified_product_title": "Roku 24-Inch Select Series Smart TV 2026 - 720p HD TV - RokuTV",
-      "parent_asin": "B0FV57SCBF",
+      "verified_product_title": "INSIGNIA 24” Class F20 Series LED HD Smart Fire TV, Voice Remote with Alexa, Free & Live TV",
+      "parent_asin": "B0F9Z3H6YG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795343088,
+      "stock_checked_at": 1795386087,
       "search_term": "tv for small desks",
-      "url": "https://www.amazon.com/dp/B0FV57SCBF?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0F9Z3H6YG?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

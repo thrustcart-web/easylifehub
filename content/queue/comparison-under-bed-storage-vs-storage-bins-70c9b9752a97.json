@@ -20,21 +20,21 @@
       "verified_product_title": "IRIS USA 40 Qt. Under Bed Storage Bin with Lids, Gray/Clear",
       "parent_asin": "B01H2NVSG2",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342993,
+      "stock_checked_at": 1795385653,
       "search_term": "Under Bed Storage",
       "url": "https://www.amazon.com/dp/B01H2NVSG2?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     },
     {
       "name": "Storage Bins",
-      "asin": "B002VK792O",
+      "asin": "B0H3KSXC25",
       "asin_verified": true,
-      "verified_product_title": "Akro-Mils 30250 AkroBins Plastic Storage Bins, 15\"x16\"x7\", Black, 6-Pack",
-      "parent_asin": "B002VK792O",
+      "verified_product_title": "6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
+      "parent_asin": "B0H3KSXC25",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342995,
+      "stock_checked_at": 1795386031,
       "search_term": "Storage Bins",
-      "url": "https://www.amazon.com/dp/B002VK792O?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20",
       "stock_source": "serpapi"
     }
   ],
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

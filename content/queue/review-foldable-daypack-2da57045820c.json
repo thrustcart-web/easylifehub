@@ -21,7 +21,7 @@
       "search_term": "G4Free 20L Lightweight Packable Backpack Travel Hiking Daypack Foldable",
       "url": "https://www.amazon.com/dp/B0DDXNWMQC?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342896,
+      "stock_checked_at": 1795385836,
       "parent_asin": "B0DDXNWMQC",
       "stock_source": "apify"
     }
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -21,7 +21,7 @@
       "search_term": "Ninja Creami NC301",
       "url": "",
       "availability_type": "UNKNOWN",
-      "stock_checked_at": 1795342788,
+      "stock_checked_at": 1795385955,
       "parent_asin": "B08QXB9BH5",
       "stock_source": "apify"
     }
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

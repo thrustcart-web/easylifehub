@@ -20,10 +20,10 @@
       "verified_product_title": "Kitchen in the box Stand Mixer 8.5 QT, 900 Watt Heavy Dough Mixer Black",
       "parent_asin": "B0H7HFCZJW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342714,
+      "stock_checked_at": 1795386057,
       "search_term": "stand mixer for families of four",
       "url": "https://www.amazon.com/dp/B0H7HFCZJW?tag=hotr0e-20",
-      "stock_source": "apify"
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-stand-mixer-39880e6a4e89.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Paper Shredder",
-      "asin": "B0DQTNZCWN",
+      "asin": "B0FW493N2S",
       "asin_verified": true,
-      "verified_product_title": "Bonsaii 6-Sheet Cross Cut Paper Shredder for Home, 3.4 Gal Bin",
-      "parent_asin": "B0DQTNZCWN",
+      "verified_product_title": "Bonsaii 240-Sheet Auto Feed Micro Cut Heavy Duty Paper Shredder for Office",
+      "parent_asin": "B0FW493N2S",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342624,
+      "stock_checked_at": 1795386091,
       "search_term": "paper shredder for small businesses",
-      "url": "https://www.amazon.com/dp/B0DQTNZCWN?tag=hotr0e-20",
-      "stock_source": "apify"
+      "url": "https://www.amazon.com/dp/B0FW493N2S?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-paper-shredder-ed80d14f2b58.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

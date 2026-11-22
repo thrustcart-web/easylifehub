@@ -20,21 +20,21 @@
       "verified_product_title": "BLACK+DECKER Countertop Blender with 6-Cup Glass Jar, 10-Speed Settings, Black, BL2010BG",
       "parent_asin": "B00OW16ZR0",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342956,
+      "stock_checked_at": 1795385638,
       "search_term": "Blender",
       "url": "https://www.amazon.com/dp/B00OW16ZR0?tag=hotr0e-20",
       "stock_source": "apify"
     },
     {
       "name": "Personal Blender",
-      "asin": "B0BPDG1331",
+      "asin": "B0CDW6J1W8",
       "asin_verified": true,
-      "verified_product_title": "magic bullet® Personal Blender, 22 oz Cup, 250 Watt, Black, MBR-1101AK",
-      "parent_asin": "B0BPDG1331",
+      "verified_product_title": "KOIOS Smoothie Blender Kitchen, 900W Personal Blenders with 3 To-Go Cups",
+      "parent_asin": "B0CDW6J1W8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342970,
+      "stock_checked_at": 1795386013,
       "search_term": "Personal Blender",
-      "url": "https://www.amazon.com/dp/B0BPDG1331?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0CDW6J1W8?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

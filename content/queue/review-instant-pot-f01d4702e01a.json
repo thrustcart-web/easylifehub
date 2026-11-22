@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Instant Pot",
-      "asin": "B08Y8L9VCF",
+      "asin": "B0CHL9G36H",
       "asin_verified": true,
-      "verified_product_title": "Instant Pot Bible: Copycat Recipes: 175 Original Ways to Remake Your Favorite Restaurant Recipes in Your Instant Pot",
-      "parent_asin": "B08Y8L9VCF",
+      "verified_product_title": "InstantPot Duo Crisp Ultimate 6.5Qt 13-in-1 Pressure Cooker Air Fryer Wifi",
+      "parent_asin": "B0CHL9G36H",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795343009,
+      "stock_checked_at": 1795386055,
       "search_term": "instant pot for families of four",
-      "url": "https://www.amazon.com/dp/B08Y8L9VCF?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0CHL9G36H?tag=hotr0e-20",
       "stock_source": "serpapi"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

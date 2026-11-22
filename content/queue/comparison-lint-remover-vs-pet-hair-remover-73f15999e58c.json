@@ -20,21 +20,21 @@
       "verified_product_title": "Conair Fabric Shaver and Lint Remover, Battery-Operated Portable Clothes Shaver with 3 Settings, Fuzz Remover for Sweaters, Clothing and Furniture, Large 2-Inch Shaving Head, White",
       "parent_asin": "B008I25368",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795343064,
+      "stock_checked_at": 1795385638,
       "search_term": "Lint Remover",
       "url": "https://www.amazon.com/dp/B008I25368?tag=hotr0e-20",
       "stock_source": "apify"
     },
     {
       "name": "Pet Hair Remover",
-      "asin": "B01DF316EC",
+      "asin": "B0C2FMZMHP",
       "asin_verified": true,
-      "verified_product_title": "OXO Good Grips Furlifter Pet Garment Brush Hair Remover for Clothing",
-      "parent_asin": "B01DF316EC",
+      "verified_product_title": "ChomChom Roller Pet Hair Remover – Original Size Reusable Lint Roller for Cat & Dog Hair on Furniture, Couch, Carpet, Car, Rugs & Bedding – Portable, Eco-Friendly (Black)",
+      "parent_asin": "B0C2FMZMHP",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342437,
+      "stock_checked_at": 1795386068,
       "search_term": "Pet Hair Remover",
-      "url": "https://www.amazon.com/dp/B01DF316EC?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0C2FMZMHP?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

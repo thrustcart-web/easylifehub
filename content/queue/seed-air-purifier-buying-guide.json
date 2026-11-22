@@ -16,12 +16,12 @@
     {
       "name": "LEVOIT Core 300-P Air Purifier",
       "asin": "B0CTJF48C1",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "Core 300 Replacement Filter for LEVOIT Core 300-P Core 300S-P Air Purifier",
       "search_term": "LEVOIT Core 300-P Air Purifier",
-      "url": "https://www.amazon.com/dp/B0CTJF48C1?tag=hotr0e-20",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342591,
+      "url": "",
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795385955,
       "parent_asin": "B0CTJF48C1",
       "stock_source": "apify"
     }
@@ -29,10 +29,10 @@
   "html_file": "seed-air-purifier-buying-guide.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
-  "review_required": false,
-  "products_audited_at": 1795342788,
+  "product_links_verified": false,
+  "review_required": true,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
-  "product_review_required": false
+  "product_review_required": true
 }

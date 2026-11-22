@@ -43,8 +43,8 @@ Always check exact specifications, included accessories, and battery requirement
 
 ### Product Links
 
-- Nose Hair Trimmer: https://www.amazon.com/dp/B098NSHBQK?tag=hotr0e-20
-- Curling Wand: https://www.amazon.com/dp/B0946QHYMQ?tag=hotr0e-20
+- Nose Hair Trimmer: https://www.amazon.com/dp/B0BFQG8MSR?tag=hotr0e-20
+- Curling Wand: https://www.amazon.com/dp/B09RRW33WF?tag=hotr0e-20
 - Electric Toothbrush: https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

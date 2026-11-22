@@ -21,7 +21,7 @@
       "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
       "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342437,
+      "stock_checked_at": 1795385659,
       "parent_asin": "B01L2HYPNW",
       "stock_source": "apify"
     },
@@ -33,7 +33,7 @@
       "search_term": "Ultralight Warm Weather Sleeping Bag",
       "url": "https://www.amazon.com/dp/B0DK99H94M?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342606,
+      "stock_checked_at": 1795385842,
       "parent_asin": "B0DK99H94M",
       "stock_source": "apify"
     },
@@ -45,7 +45,7 @@
       "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
       "url": "https://www.amazon.com/dp/B0FXDN76LR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342676,
+      "stock_checked_at": 1795386128,
       "parent_asin": "B0FXDN76LR",
       "stock_source": "apify"
     },
@@ -53,13 +53,13 @@
       "name": "Gym Bag",
       "asin": "B09QKXMNRR",
       "asin_verified": true,
-      "verified_product_title": "Drawstring Backpack Sports Gym Bag Water Resistant String Bag Cinch Sackpack with Side Zipper Pocket for Shopping Sport Yoga -black",
+      "verified_product_title": "HOLYLUCK Drawstring Backpack Sports Gym Bag Water Resistant String Bag Cinch Sackpack with Side Zipper Pocket for Shopping Sport Yoga -black",
       "search_term": "Sports Drawstring Backpack Swim Gym Bag",
       "url": "https://www.amazon.com/dp/B09QKXMNRR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795343105,
+      "stock_checked_at": 1795385782,
       "parent_asin": "B09QKXMNRR",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     },
     {
       "name": "Hammock Underquilt",
@@ -69,7 +69,7 @@
       "search_term": "OneTigris Hideout Hammock Underquilt",
       "url": "https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795342524,
+      "stock_checked_at": 1795385720,
       "parent_asin": "B08936QVJD",
       "stock_source": "apify"
     }
@@ -79,7 +79,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

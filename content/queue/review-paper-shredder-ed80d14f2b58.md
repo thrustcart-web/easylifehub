@@ -43,6 +43,6 @@ Before buying, check your space dimensions, expected document thickness, and ele
 
 ### Product Links
 
-- Paper Shredder: https://www.amazon.com/dp/B0DQTNZCWN?tag=hotr0e-20
+- Paper Shredder: https://www.amazon.com/dp/B0FW493N2S?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

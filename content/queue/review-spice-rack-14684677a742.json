@@ -20,9 +20,10 @@
       "verified_product_title": "KES Spice Rack Organizer Kitchen Spice Rack Seasoning Organizer 16 Inch Aluminum Spice Holder Wall Mount Anodized Black 2 Pack, KSR401S40-BK-P2",
       "parent_asin": "B07WZS5P7Q",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344684,
+      "stock_checked_at": 1795386228,
       "search_term": "spice rack for bulk shoppers",
-      "url": "https://www.amazon.com/dp/B07WZS5P7Q?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B07WZS5P7Q?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-spice-rack-14684677a742.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795385955,
+  "stock_check_max_age_seconds": 86400
 }

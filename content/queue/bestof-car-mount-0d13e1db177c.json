@@ -20,9 +20,10 @@
       "verified_product_title": "Car Seat Gap Filler Organizer, Dual Compartments, Black, 2 Pack",
       "parent_asin": "B0H716NZ56",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344694,
+      "stock_checked_at": 1795385941,
       "search_term": "seat gap organizer for suv owners",
-      "url": "https://www.amazon.com/dp/B0H716NZ56?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0H716NZ56?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "OBD2 Scanner",
@@ -31,9 +32,10 @@
       "verified_product_title": "BlueDriver OBD2 Scanner Bluetooth, No Subscription, ABS SRS TPMS",
       "parent_asin": "B0GL9RL3XS",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344707,
+      "stock_checked_at": 1795385889,
       "search_term": "obd2 scanner for new drivers",
-      "url": "https://www.amazon.com/dp/B0GL9RL3XS?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0GL9RL3XS?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Seat Cushion",
@@ -42,9 +44,10 @@
       "verified_product_title": "Cooling Gel Enhanced Memory Foam Seat Cushion, Desk Chair Seat Cushion, Office Chair Cushions, Foldable Portable, Back Sciatica Coccyx Tailbone Pain Relief, Driving Car Airplane Wheelchair Bleachers",
       "parent_asin": "B0GSVGPNH7",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344708,
+      "stock_checked_at": 1795385902,
       "search_term": "seat cushion for hot climates",
-      "url": "https://www.amazon.com/dp/B0GSVGPNH7?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0GSVGPNH7?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-car-mount-0d13e1db177c.html",
@@ -52,5 +55,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795385955,
+  "stock_check_max_age_seconds": 86400
 }

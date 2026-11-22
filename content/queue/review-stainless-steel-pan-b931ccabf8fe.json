@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Stainless Steel Pan",
-      "asin": "B0FL2H4P94",
+      "asin": "B0F9W5CSZC",
       "asin_verified": true,
-      "verified_product_title": "Stainless Steel Frying Pan, 8 Inch Frying Pan Cookware, Healthy Stainless Steel Skillet, Works on Induction, Ceramic and Gas Cooktops, PFOA Free, Dishwasher Safe, Stay-Cool Handle",
-      "parent_asin": "B0FL2H4P94",
+      "verified_product_title": "CAROTE 10\" Tri-Ply Stainless Steel Frying Pan, Non-Toxic Egg Pan Omelet Pan, Oven Safe, Induction, Ceramic and Gas Cooktops Compatible, Polished Silver",
+      "parent_asin": "B0F9W5CSZC",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795343202,
+      "stock_checked_at": 1795386225,
       "search_term": "stainless steel pan for induction cooktops",
-      "url": "https://www.amazon.com/dp/B0FL2H4P94?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0F9W5CSZC?tag=hotr0e-20",
       "stock_source": "serpapi"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795342788,
+  "products_audited_at": 1795385955,
   "stock_check_max_age_seconds": 86400
 }

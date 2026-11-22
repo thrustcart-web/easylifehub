@@ -15,25 +15,27 @@
   "items": [
     {
       "name": "Nose Hair Trimmer",
-      "asin": "B098NSHBQK",
+      "asin": "B0BFQG8MSR",
       "asin_verified": true,
-      "verified_product_title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women,Battery-Operated Trimmer with IPX7 Waterproof,Dual Edge Blades for Easy Cleansing Black",
-      "parent_asin": "B098NSHBQK",
+      "verified_product_title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women, Battery-Operated Trimmer with IPX7 Waterproof, Dual Edge Blades for Easy Cleansing Pink",
+      "parent_asin": "B0BFQG8MSR",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344772,
+      "stock_checked_at": 1795386243,
       "search_term": "nose hair trimmer for daily shavers",
-      "url": "https://www.amazon.com/dp/B098NSHBQK?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0BFQG8MSR?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Curling Wand",
-      "asin": "B0946QHYMQ",
+      "asin": "B09RRW33WF",
       "asin_verified": true,
-      "verified_product_title": "ELLA BELLA® Curling Iron 1 Inch, Professional Ceramic Wand, All Hair Types",
-      "parent_asin": "B0946QHYMQ",
+      "verified_product_title": "Remington Shine Therapy Argan Oil & Keratin Infused ½-1 Inch Tapered Curling Wand for Natural Curls, Includes Heat Glove",
+      "parent_asin": "B09RRW33WF",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344794,
+      "stock_checked_at": 1795386253,
       "search_term": "curling wand for fine hair",
-      "url": "https://www.amazon.com/dp/B0946QHYMQ?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B09RRW33WF?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Electric Toothbrush",
@@ -42,9 +44,10 @@
       "verified_product_title": "Aquasonic Black Series Ultra Whitening Toothbrush – ADA Accepted Electric Toothbrush- 8 Brush Heads & Travel Case – 40,000 VPM Electric Motor & Wireless Charging - 4 Modes w Smart Timer",
       "parent_asin": "B072YVWBXH",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795344806,
+      "stock_checked_at": 1795385705,
       "search_term": "electric toothbrush for beginners",
-      "url": "https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-personal-care-massager-7022a0353351.html",
@@ -52,5 +55,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795385955,
+  "stock_check_max_age_seconds": 86400
 }
