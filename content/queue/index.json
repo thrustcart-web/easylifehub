@@ -177,56 +177,6 @@
       "stock_check_max_age_seconds": 86400
     },
     {
-      "slug": "comparison-fabric-glue-vs-fabric-scissors-002e06973243",
-      "title": "Fabric Glue vs Fabric Scissors: Deciding Between Two Good Options",
-      "meta_description": "Compare Aleene's Fabric Fusion Glue and heavy-duty fabric scissors to determine which tool fits your clothing, denim, and sewing projects best.",
-      "template": "comparison",
-      "niche": "crafts & hobbies",
-      "keyword": "Fabric Glue vs Fabric Scissors",
-      "labels": [
-        "Reviews",
-        "Crafts & Hobbies"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 721,
-      "items": [
-        {
-          "name": "Aleene's Fabric Glue",
-          "asin": "B00KD6ZHD6",
-          "asin_verified": true,
-          "verified_product_title": "Aleene's Quick Dry Fabric Fusion, Fast-Drying Permanent Fabric Glue, Stong Bond Dries Soft and Clear in Minutes, 4 fl oz",
-          "search_term": "Aleene's Fabric Fusion Glue 4 oz",
-          "url": "https://www.amazon.com/dp/B00KD6ZHD6?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795428827,
-          "parent_asin": "B00KD6ZHD6",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Fabric Scissors",
-          "asin": "B0DHGLVXLZ",
-          "asin_verified": true,
-          "verified_product_title": "Fabric Scissors Professional, 8\" Heavy Duty Sewing Scissor for Fabric Cutting, Tailor Sharp Sewing Shears for Cutting Leather craft Home Office Students Artists Dressmakers",
-          "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
-          "url": "https://www.amazon.com/dp/B0DHGLVXLZ?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795429335,
-          "parent_asin": "B0DHGLVXLZ",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-fabric-glue-vs-fabric-scissors-002e06973243.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1795429062,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
-    },
-    {
       "slug": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
       "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
       "meta_description": "Compare a rechargeable fabric shaver with 3 speeds to an OXO battery‑run pet hair brush, covering power, cleaning method, portability, and home size.",
@@ -323,55 +273,6 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
-    },
-    {
-      "slug": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07",
-      "title": "Smart Fan or Smart Plant Sensor? The Honest Comparison",
-      "meta_description": "Compare a DREO smart pedestal fan with a RAINPOINT smart plant sensor, covering features, setup, compatibility, and who each device best serves in the home.",
-      "template": "comparison",
-      "niche": "smart home",
-      "keyword": "Smart Fan vs Smart Plant Sensor",
-      "labels": [
-        "Reviews",
-        "Smart Home"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 598,
-      "items": [
-        {
-          "name": "Smart Fan",
-          "asin": "B0DSC14RH5",
-          "asin_verified": true,
-          "verified_product_title": "DREO Smart Pedestal Fan for Bedroom, 120°+120° Omni-Directional Oscillating",
-          "parent_asin": "B0DSC14RH5",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795428994,
-          "search_term": "Smart Fan",
-          "url": "https://www.amazon.com/dp/B0DSC14RH5?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Smart Plant Sensor",
-          "asin": "B0H5B65YX7",
-          "asin_verified": false,
-          "verified_product_title": "RAINPOINT 2027 New Version Bluetooth Soil Moisture Meter & Air Temp Sensor, 2-in-1 Smart Plant Monitor with App Control, Compatible with WiFi Hub TWG009 & Water Timer ITV102B（Not Included",
-          "parent_asin": "B0H5B65YX7",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1795429062,
-          "search_term": "Smart Plant Sensor",
-          "url": ""
-        }
-      ],
-      "html_file": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": false,
-      "editorial_review_required": false,
-      "review_required": true,
-      "product_review_required": true,
-      "products_audited_at": 1795429062,
-      "stock_check_max_age_seconds": 86400
     },
     {
       "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
@@ -611,6 +512,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": true
+    },
+    {
+      "slug": "review-burn-gel-5c3458c258d6",
+      "title": "Does Expiry Dates Matter in A Burn Gel? An Honest Look",
+      "meta_description": "Learn why expiration dates matter for burn gel stability, how nano silver formulas work, and what families should verify when choosing first-aid supplies.",
+      "template": "review",
+      "niche": "security & safety",
+      "keyword": "burn gel for families",
+      "labels": [
+        "Reviews",
+        "Security & Safety"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 644,
+      "items": [
+        {
+          "name": "Burn Gel",
+          "asin": "B07964SRBL",
+          "asin_verified": true,
+          "verified_product_title": "Be Smart SILVEX Wound Gel Nano Silver First Aid Topical Solution for Cuts & Burns",
+          "parent_asin": "B07964SRBL",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795445548,
+          "search_term": "burn gel for families",
+          "url": "https://www.amazon.com/dp/B07964SRBL?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-burn-gel-5c3458c258d6.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-cabinet-locks-62cfe8674cb9",
@@ -1789,6 +1724,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-seed-starting-tray-68c52545763d",
+      "title": "Before You Buy A Seed Starting Tray for Seed Starting: Read This",
+      "meta_description": "Learn the essential criteria for a seed starting tray—drainage, reusability, cell count, setup, and care—so you can grow healthy indoor seedlings confidently.",
+      "template": "review",
+      "niche": "garden",
+      "keyword": "seed starting tray",
+      "labels": [
+        "Reviews",
+        "Garden"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 502,
+      "items": [
+        {
+          "name": "Seed Starting Tray",
+          "asin": "B09S7YL4QV",
+          "asin_verified": true,
+          "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings",
+          "parent_asin": "B09S7YL4QV",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795445710,
+          "search_term": "seed starting tray",
+          "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-seed-starting-tray-68c52545763d.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-slow-feeder-bowl-87dbdc1c3f34",

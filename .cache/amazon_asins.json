@@ -984,11 +984,12 @@
   },
   "seed starting tray": {
     "asin": "B09S7YL4QV",
-    "parent_asin": "B0D4R5CP5S",
-    "title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings | Flexible silicone cells pop out seedlings for easy transplanting. Ideal for starting vegetable, flower and herb seeds indoor.",
+    "parent_asin": "B09S7YL4QV",
+    "title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794868635,
-    "verified_at": "2026-11-16T22:37:25Z"
+    "stock_checked_at": 1795445710,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:55:10Z"
   },
   "compost bin": {
     "asin": "B08346W5S6",
@@ -1716,5 +1717,50 @@
     "stock_checked_at": 1795429412,
     "stock_source": "apify",
     "verified_at": "2026-11-23T10:23:32Z"
+  },
+  "santoku knife": {
+    "asin": "B08LXB5GQF",
+    "parent_asin": "B08LXB5GQF",
+    "title": "KYOCERA Revolution 2-Pc Ceramic Knife Set: 5.5” Santoku & 4.5” Utility",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795445522,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:52:02Z"
+  },
+  "pressure cooker": {
+    "asin": "B0FJ9DY1RV",
+    "parent_asin": "B0FJ9DY1RV",
+    "title": "Ninja® HyperHeat™ 9-in-1 Pressure Cooker, 6.5-qt, Stone Purple, PC201SP",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795445532,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:52:12Z"
+  },
+  "burn gel": {
+    "asin": "B07964SRBL",
+    "parent_asin": "B07964SRBL",
+    "title": "Be Smart SILVEX Wound Gel Nano Silver First Aid Topical Solution for Cuts & Burns",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795445548,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:52:28Z"
+  },
+  "spiral notebook": {
+    "asin": "B0CT4HX4T9",
+    "parent_asin": "B0CT4HX4T9",
+    "title": "Taja Lined Spiral Notebook for Work, 5.7\"x7.9\" Spiral Journal College Ruled",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795445680,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:54:40Z"
+  },
+  "pencil case": {
+    "asin": "B07KXM6LGS",
+    "parent_asin": "B07KXM6LGS",
+    "title": "Upgraded Hard Pencil Case Box for Adults,Durable Pen Carrying Case with Zipper-Black",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795445699,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T14:54:59Z"
   }
 }

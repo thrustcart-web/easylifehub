@@ -800,6 +800,24 @@
       "ts": "2026-11-23T02:57:49Z",
       "source": "ai:groq",
       "words": 632
+    },
+    {
+      "slug": "review-burn-gel-5c3458c258d6",
+      "title": "Does Expiry Dates Matter in A Burn Gel? An Honest Look",
+      "template": "review",
+      "keyword": "burn gel for families",
+      "ts": "2026-11-23T14:54:06Z",
+      "source": "ai:gemini",
+      "words": 644
+    },
+    {
+      "slug": "review-seed-starting-tray-68c52545763d",
+      "title": "Before You Buy A Seed Starting Tray for Seed Starting: Read This",
+      "template": "review",
+      "keyword": "seed starting tray",
+      "ts": "2026-11-23T14:55:20Z",
+      "source": "ai:groq",
+      "words": 502
     }
   ],
   "published": [],
@@ -892,7 +910,9 @@
     "review-hub-bridge-7e88aa8f9f4b",
     "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07",
     "bestof-crafts-hobbies-knife-9fb096ceae4d",
-    "review-air-purifier-68385dd28453"
+    "review-air-purifier-68385dd28453",
+    "review-burn-gel-5c3458c258d6",
+    "review-seed-starting-tray-68c52545763d"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -1100,8 +1120,8 @@
     "Nail Drill": "2026-11-14",
     "nail drill for travellers": "2026-11-14",
     "garden:compost bin|plant grow light|seed starting tray": "2026-11-14",
-    "Seed Starting Tray": "2026-11-14",
-    "seed starting tray": "2026-11-14",
+    "Seed Starting Tray": "2026-11-23",
+    "seed starting tray": "2026-11-23",
     "compost bin for beginners": "2026-11-14",
     "Plant Grow Light": "2026-11-14",
     "plant grow light for low maintenance gardens": "2026-11-14",
@@ -1273,7 +1293,10 @@
     "cutting mat for left handed cutters": "2026-11-23",
     "air purifier": "2026-11-23",
     "Air Purifier": "2026-11-23",
-    "air purifier for allergy sufferers": "2026-11-23"
+    "air purifier for allergy sufferers": "2026-11-23",
+    "burn gel": "2026-11-23",
+    "Burn Gel": "2026-11-23",
+    "burn gel for families": "2026-11-23"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1458,7 +1481,13 @@
     "{A} {P} Review: What I Would Check Before Buying",
     "{A} or {B}? The Honest Comparison",
     "Best {F}{AUD}: {N} Options We Would Actually Buy",
-    "Is {A} {P} Worth It? A Buyer's Assessment"
+    "Is {A} {P} Worth It? A Buyer's Assessment",
+    "Is {A} {P} Worth It for {AUD}? The Honest Answer",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "Does {FEAT} Matter in {A} {P}? An Honest Look",
+    "Choosing Between {A} and {B}: A Practical Comparison",
+    "Best {F}: {N} Picks Compared Honestly",
+    "Before You Buy {A} {P} for {AUD}: Read This"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1467,7 +1496,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 89,
+    "total_generated": 91,
     "total_published": 0
   },
   "blogger_titles": [

@@ -1,0 +1,34 @@
+{
+  "slug": "review-burn-gel-5c3458c258d6",
+  "title": "Does Expiry Dates Matter in A Burn Gel? An Honest Look",
+  "meta_description": "Learn why expiration dates matter for burn gel stability, how nano silver formulas work, and what families should verify when choosing first-aid supplies.",
+  "template": "review",
+  "niche": "security & safety",
+  "keyword": "burn gel for families",
+  "labels": [
+    "Reviews",
+    "Security & Safety"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 644,
+  "items": [
+    {
+      "name": "Burn Gel",
+      "asin": "B07964SRBL",
+      "asin_verified": true,
+      "verified_product_title": "Be Smart SILVEX Wound Gel Nano Silver First Aid Topical Solution for Cuts & Burns",
+      "parent_asin": "B07964SRBL",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795445548,
+      "search_term": "burn gel for families",
+      "url": "https://www.amazon.com/dp/B07964SRBL?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-burn-gel-5c3458c258d6.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

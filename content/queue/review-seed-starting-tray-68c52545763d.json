@@ -1,0 +1,34 @@
+{
+  "slug": "review-seed-starting-tray-68c52545763d",
+  "title": "Before You Buy A Seed Starting Tray for Seed Starting: Read This",
+  "meta_description": "Learn the essential criteria for a seed starting tray—drainage, reusability, cell count, setup, and care—so you can grow healthy indoor seedlings confidently.",
+  "template": "review",
+  "niche": "garden",
+  "keyword": "seed starting tray",
+  "labels": [
+    "Reviews",
+    "Garden"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 502,
+  "items": [
+    {
+      "name": "Seed Starting Tray",
+      "asin": "B09S7YL4QV",
+      "asin_verified": true,
+      "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings",
+      "parent_asin": "B09S7YL4QV",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795445710,
+      "search_term": "seed starting tray",
+      "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-seed-starting-tray-68c52545763d.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}
