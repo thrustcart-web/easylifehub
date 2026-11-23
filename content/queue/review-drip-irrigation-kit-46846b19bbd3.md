@@ -49,6 +49,6 @@ Before purchase, confirm the number of emitters, the compatibility of the quickâ
 
 ### Product Links
 
-- Drip Irrigation Kit: https://www.amazon.com/dp/B0GLNL6CXQ?tag=hotr0e-20
+- Drip Irrigation Kit: https://www.amazon.com/dp/B0GKYHVDNQ?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

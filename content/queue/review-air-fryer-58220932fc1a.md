@@ -49,6 +49,6 @@ Choose for the routine rather than the category. If the fryer fits your counter,
 
 ### Product Links
 
-- Air Fryer: https://www.amazon.com/dp/1529981077?tag=hotr0e-20
+- Air Fryer: https://www.amazon.com/dp/B0CSZ7WBYW?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

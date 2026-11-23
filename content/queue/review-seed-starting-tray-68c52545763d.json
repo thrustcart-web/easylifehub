@@ -15,14 +15,15 @@
   "items": [
     {
       "name": "Seed Starting Tray",
-      "asin": "B09S7YL4QV",
+      "asin": "B08GP6B5RL",
       "asin_verified": true,
-      "verified_product_title": "Burpee SuperSeed 36-Cell Reusable Seed Starting Tray for Indoor Seedlings",
-      "parent_asin": "B09S7YL4QV",
+      "verified_product_title": "Gardzen 30 Pack 6-Cell Seed Starting Tray for Seedlings, Plant Starter Trays with Drainage Holes for Seed Germination, 5.4x3.7 inches, Black",
+      "parent_asin": "B08GP6B5RL",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795445710,
+      "stock_checked_at": 1795472624,
       "search_term": "seed starting tray",
-      "url": "https://www.amazon.com/dp/B09S7YL4QV?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B08GP6B5RL?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-seed-starting-tray-68c52545763d.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795472266,
+  "stock_check_max_age_seconds": 86400
 }

@@ -20,21 +20,21 @@
       "verified_product_title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
       "parent_asin": "B0CJRM936N",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429214,
+      "stock_checked_at": 1795472153,
       "search_term": "Lint Remover",
       "url": "https://www.amazon.com/dp/B0CJRM936N?tag=hotr0e-20",
       "stock_source": "apify"
     },
     {
       "name": "Pet Hair Remover",
-      "asin": "B0C2FMZMHP",
+      "asin": "B00BAGTNAQ",
       "asin_verified": true,
-      "verified_product_title": "ChomChom Roller Pet Hair Remover – Original Size Reusable Lint Roller for Cat & Dog Hair on Furniture, Couch, Carpet, Car, Rugs & Bedding – Portable, Eco-Friendly (Black)",
-      "parent_asin": "B0C2FMZMHP",
+      "verified_product_title": "ChomChom Roller Pet Hair Remover – Original Size Reusable Lint Roller for Cat & Dog Hair on Furniture, Couch, Carpet, Car, Rugs & Bedding – Portable, Eco-Friendly (White)",
+      "parent_asin": "B00BAGTNAQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428960,
+      "stock_checked_at": 1795472460,
       "search_term": "Pet Hair Remover",
-      "url": "https://www.amazon.com/dp/B0C2FMZMHP?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B00BAGTNAQ?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

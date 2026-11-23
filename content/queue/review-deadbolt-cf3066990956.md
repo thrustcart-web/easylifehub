@@ -51,6 +51,6 @@ Before purchasing, confirm the product’s code capacity, verify that the suppli
 
 ### Product Links
 
-- Deadbolt: https://www.amazon.com/dp/B008YB69L6?tag=hotr0e-20
+- Deadbolt: https://www.amazon.com/dp/B004L1W56G?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

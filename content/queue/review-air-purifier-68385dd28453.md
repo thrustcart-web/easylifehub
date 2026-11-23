@@ -49,6 +49,6 @@ A thorough review of the verified features and practical considerations outlined
 
 ### Product Links
 
-- Air Purifier: https://www.amazon.com/dp/B0BGPF71Q6?tag=hotr0e-20
+- Air Purifier: https://www.amazon.com/dp/B09GTRVJQM?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

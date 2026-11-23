@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Soldering Iron",
-      "asin": "B087767KNW",
+      "asin": "B09DY7CCW5",
       "asin_verified": true,
-      "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
-      "parent_asin": "B087767KNW",
+      "verified_product_title": "60W Adjustable Temperature Soldering Iron Kit - 9-in-1 With 5 Tips, Solder Wire Stand for Soldering and Repair",
+      "parent_asin": "B09DY7CCW5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428886,
+      "stock_checked_at": 1795472514,
       "search_term": "soldering iron for electronics hobbies",
-      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B09DY7CCW5?tag=hotr0e-20",
       "stock_source": "apify"
     },
     {
@@ -32,7 +32,7 @@
       "verified_product_title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
       "parent_asin": "B07Z93LQDB",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429394,
+      "stock_checked_at": 1795472069,
       "search_term": "acrylic paint set for large canvases",
       "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20",
       "stock_source": "apify"
@@ -44,7 +44,7 @@
       "verified_product_title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
       "parent_asin": "B00GSFSFF8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428827,
+      "stock_checked_at": 1795472026,
       "search_term": "cutting mat for left handed cutters",
       "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20",
       "stock_source": "apify"
@@ -57,6 +57,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

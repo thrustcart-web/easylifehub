@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Litter Scoop",
-      "asin": "B07T3GPKDY",
+      "asin": "B0CCXFRBLL",
       "asin_verified": true,
-      "verified_product_title": "Amazon Basics Durable Cat Litter Scoop with Holder, Hangs on Litter Box, Efficient Scooper",
+      "verified_product_title": "Cat Litter Scoop - Metal Litter Scooper with Holder",
       "search_term": "litter scoop for multi cat homes",
-      "url": "https://www.amazon.com/dp/B07T3GPKDY?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0CCXFRBLL?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429121,
-      "parent_asin": "B07T3GPKDY",
-      "stock_source": "serpapi"
+      "stock_checked_at": 1795472310,
+      "parent_asin": "B0CCXFRBLL",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-litter-scoop-a162ab1d8392.html",
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

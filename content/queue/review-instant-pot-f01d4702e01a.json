@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Instant Pot",
-      "asin": "B0CHL9G36H",
+      "asin": "B00FLYWNYQ",
       "asin_verified": true,
-      "verified_product_title": "InstantPot Duo Crisp Ultimate 6.5Qt 13-in-1 Pressure Cooker Air Fryer Wifi",
-      "parent_asin": "B0CHL9G36H",
+      "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel",
+      "parent_asin": "B00FLYWNYQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428968,
+      "stock_checked_at": 1795472410,
       "search_term": "instant pot for families of four",
-      "url": "https://www.amazon.com/dp/B0CHL9G36H?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

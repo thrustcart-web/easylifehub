@@ -55,6 +55,6 @@ Confirm the pen’s condition before each shoot, and it should serve as a reliab
 
 ### Product Links
 
-- Lens Pen: https://www.amazon.com/dp/B0H9Y8VWDR?tag=hotr0e-20
+- Lens Pen: https://www.amazon.com/dp/B001HN5H4S?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

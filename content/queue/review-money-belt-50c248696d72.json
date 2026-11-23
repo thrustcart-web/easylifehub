@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Money Belt",
-      "asin": "B0GTBBKHD1",
+      "asin": "B00WBMQ89C",
       "asin_verified": true,
-      "verified_product_title": "Money Belt Security Belt Built-in Hidden Pocket for Business Trip Jogging Outdoor Working Length 120cm -Black",
-      "parent_asin": "B0GTBBKHD1",
+      "verified_product_title": "VENTURE 4TH Travel Money Belt, RFID Blocking Passport Holder - Black",
+      "parent_asin": "B00WBMQ89C",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429195,
+      "stock_checked_at": 1795472453,
       "search_term": "money belt for business trips",
-      "url": "https://www.amazon.com/dp/B0GTBBKHD1?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "url": "https://www.amazon.com/dp/B00WBMQ89C?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-money-belt-50c248696d72.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Drip Irrigation Kit",
-      "asin": "B0GLNL6CXQ",
+      "asin": "B0GKYHVDNQ",
       "asin_verified": true,
-      "verified_product_title": "100FT Drip Irrigation System Kit, Quick Connect Garden Watering System, Easy Install Drip Irrigation Kit with 1/2\" & 1/4\" Tubing, Adjustable Emitters for Garden, Raised Beds, Greenhouse",
-      "parent_asin": "B0GLNL6CXQ",
+      "verified_product_title": "RAINPOINT Easy-Setup Solar Drip Irrigation System Outdoor & Indoor, Automatic Plant Waterer Device Kit Beginner-Friendly Garden Raised Bed Grow Tent Water 10-15 Plants",
+      "parent_asin": "B0GKYHVDNQ",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429034,
+      "stock_checked_at": 1795472470,
       "search_term": "drip irrigation kit for beginners",
-      "url": "https://www.amazon.com/dp/B0GLNL6CXQ?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0GKYHVDNQ?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

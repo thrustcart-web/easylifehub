@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Air Purifier",
-      "asin": "B0BGPF71Q6",
+      "asin": "B09GTRVJQM",
       "asin_verified": true,
-      "verified_product_title": "LEVOIT Smart Air Purifier for Home Large Room up to 1875 Ft² Vital 200S-P | For Quiet Bedroom at 27dB, AHAM VERIFIDE, Air Quality Monitor, HEPA Sleep Mode for Allergies, Pet Hair and dander, White",
-      "parent_asin": "B0BGPF71Q6",
+      "verified_product_title": "Levoit Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers",
+      "parent_asin": "B09GTRVJQM",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429412,
+      "stock_checked_at": 1795472523,
       "search_term": "air purifier for allergy sufferers",
-      "url": "https://www.amazon.com/dp/B0BGPF71Q6?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B09GTRVJQM?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

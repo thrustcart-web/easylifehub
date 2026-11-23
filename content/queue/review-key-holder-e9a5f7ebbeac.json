@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Key Holder",
-      "asin": "B0CKZ6C4YN",
+      "asin": "B09ZRQKGQ3",
       "asin_verified": true,
-      "verified_product_title": "Key Holder Wall Mount, Wooden Mail and Key Organizer, Brown",
-      "parent_asin": "B0CKZ6C4YN",
+      "verified_product_title": "Lwenki Key Holder for Wall, Decorative Key and Mail Holder with Shelf Has Large Key Hooks for Bags, Coats – Paulownia Wood Key Hanger with Mounting Hardware (9.8”W x 6.7”H x 4.2”D) (Brown)",
+      "parent_asin": "B09ZRQKGQ3",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428974,
+      "stock_checked_at": 1795472400,
       "search_term": "key holder for small entryways",
-      "url": "https://www.amazon.com/dp/B0CKZ6C4YN?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B09ZRQKGQ3?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

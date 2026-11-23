@@ -49,7 +49,7 @@ Before purchasing, confirm voltage compatibility, brush quality, and mat orienta
 
 ### Product Links
 
-- Soldering Iron: https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20
+- Soldering Iron: https://www.amazon.com/dp/B09DY7CCW5?tag=hotr0e-20
 - Acrylic Paint Set: https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20
 - Cutting Mat: https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20
 

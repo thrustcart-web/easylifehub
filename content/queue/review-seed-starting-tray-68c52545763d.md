@@ -49,6 +49,6 @@ Verify the tray’s material, confirm the drainage design, and ensure it fits yo
 
 ### Product Links
 
-- Seed Starting Tray: https://www.amazon.com/dp/B09S7YL4QV?tag=hotr0e-20
+- Seed Starting Tray: https://www.amazon.com/dp/B08GP6B5RL?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

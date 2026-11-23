@@ -20,7 +20,7 @@
       "verified_product_title": "BLACK+DECKER Countertop Blender with 6-Cup Glass Jar, 10-Speed Settings, Black, BL2010BG",
       "parent_asin": "B00OW16ZR0",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428841,
+      "stock_checked_at": 1795472026,
       "search_term": "Blender",
       "url": "https://www.amazon.com/dp/B00OW16ZR0?tag=hotr0e-20",
       "stock_source": "apify"
@@ -32,7 +32,7 @@
       "verified_product_title": "KOIOS Smoothie Blender Kitchen, 900W Personal Blenders with 3 To-Go Cups",
       "parent_asin": "B0CDW6J1W8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429166,
+      "stock_checked_at": 1795472153,
       "search_term": "Personal Blender",
       "url": "https://www.amazon.com/dp/B0CDW6J1W8?tag=hotr0e-20",
       "stock_source": "apify"
@@ -45,6 +45,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

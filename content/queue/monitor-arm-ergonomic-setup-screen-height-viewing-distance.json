@@ -20,7 +20,7 @@
       "verified_product_title": "MSI MAG MT101G - Gas Spring Single Monitor Stand Arm, Supports 17-32\" and 22 lbs, VESA Compatible, Adjustable Gas Spring Mount, Clamp & Grommet, Quick Release Plate – Black",
       "parent_asin": "B0GP91FL59",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795429179,
+      "stock_checked_at": 1795472244,
       "search_term": "monitor arm",
       "url": "https://www.amazon.com/dp/B0GP91FL59?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400
 }

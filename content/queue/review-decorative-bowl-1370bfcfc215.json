@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Decorative Bowl",
-      "asin": "B08ZHCP3VF",
+      "asin": "B0DVC6M36R",
       "asin_verified": true,
-      "verified_product_title": "6pcs 3.5inch Woven Wicker Rattan Balls Decorative Ball Twig Orbs Green Orbs Vase Bowl Filler for Tabletop Decor (Beige White)",
+      "verified_product_title": "Decorative Bowl MANGO WOOD Decorative Bowls for Home Decor - Organic Modern Home Decor Bowl Key Bowl, Candy Bowl, Smudge Bowl (10\" X 10\" X 2.5'')",
       "search_term": "decorative bowl for dried flowers",
-      "url": "https://www.amazon.com/dp/B08ZHCP3VF?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DVC6M36R?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795428919,
-      "parent_asin": "B08ZHCP3VF",
+      "stock_checked_at": 1795472325,
+      "parent_asin": "B0DVC6M36R",
       "stock_source": "apify"
     }
   ],
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795429062,
+  "products_audited_at": 1795472266,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false
