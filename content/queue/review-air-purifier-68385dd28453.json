@@ -1,0 +1,34 @@
+{
+  "slug": "review-air-purifier-68385dd28453",
+  "title": "Is An Air Purifier Worth It? A Buyer's Assessment",
+  "meta_description": "Explore if an air purifier adds value for allergy sufferers and home office users, covering filtration, design, noise, setup, and maintenance without guesswork or hype.",
+  "template": "review",
+  "niche": "home office",
+  "keyword": "air purifier for allergy sufferers",
+  "labels": [
+    "Reviews",
+    "Home Office"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 632,
+  "items": [
+    {
+      "name": "Air Purifier",
+      "asin": "B07VVK39F7",
+      "asin_verified": true,
+      "verified_product_title": "Levoit Air Purifier for Home Pets Hair Allergens in Bedroom Quiet Purifiers",
+      "parent_asin": "B07VVK39F7",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402665,
+      "search_term": "air purifier for allergy sufferers",
+      "url": "https://www.amazon.com/dp/B07VVK39F7?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-air-purifier-68385dd28453.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

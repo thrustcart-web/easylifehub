@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-tools-tool-745e50aa0a93",
+  "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
+  "meta_description": "Select the right tools for custom workshop projects with our guide covering circular saw guides, heat guns, and impact drivers for precise task performance.",
+  "template": "bestof",
+  "niche": "tools",
+  "keyword": "Tools",
+  "labels": [
+    "Reviews",
+    "Tools"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 667,
+  "items": [
+    {
+      "name": "Circular Saw",
+      "asin": "B07CGRV226",
+      "asin_verified": true,
+      "verified_product_title": "Bora QuickCut Circular Saw Guide with Angle Assist, 16in",
+      "parent_asin": "B07CGRV226",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402406,
+      "search_term": "circular saw for curved cuts",
+      "url": "https://www.amazon.com/dp/B07CGRV226?tag=hotr0e-20"
+    },
+    {
+      "name": "Heat Gun",
+      "asin": "B078S5QMFG",
+      "asin_verified": true,
+      "verified_product_title": "SEEKONE 1800W Heat Gun Variable Temp 122℉-1202℉ for Crafts, Shrink Wrap",
+      "parent_asin": "B078S5QMFG",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402418,
+      "search_term": "heat gun for diy beginners",
+      "url": "https://www.amazon.com/dp/B078S5QMFG?tag=hotr0e-20"
+    },
+    {
+      "name": "Impact Driver",
+      "asin": "B0BQCWH5KF",
+      "asin_verified": true,
+      "verified_product_title": "DEWALT 20V MAX XR Impact Driver, 1/4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B)",
+      "parent_asin": "B0BQCWH5KF",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402421,
+      "search_term": "impact driver for weekend projects",
+      "url": "https://www.amazon.com/dp/B0BQCWH5KF?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-tools-tool-745e50aa0a93.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

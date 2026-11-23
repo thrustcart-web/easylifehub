@@ -869,13 +869,13 @@
     "verified_at": "2026-11-16T22:37:25Z"
   },
   "smart fan": {
-    "asin": "B01N4TZOHE",
-    "parent_asin": "B01N4TZOHE",
-    "title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
+    "asin": "B0DSC14RH5",
+    "parent_asin": "B0DSC14RH5",
+    "title": "DREO Smart Pedestal Fan for Bedroom, 120°+120° Omni-Directional Oscillating",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795386014,
-    "stock_source": "serpapi",
-    "verified_at": "2026-11-22T22:20:14Z"
+    "stock_checked_at": 1795402577,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:56:17Z"
   },
   "tweezers": {
     "asin": "B09WZ748K1",
@@ -1626,5 +1626,95 @@
     "stock_checked_at": 1795386255,
     "stock_source": "serpapi",
     "verified_at": "2026-11-22T22:24:15Z"
+  },
+  "slow feeder bowl": {
+    "asin": "B0H74TG1JX",
+    "parent_asin": "B0H74TG1JX",
+    "title": "Elevated Slow Feeder Dog Bowl, 6.1” Dog Food and Water Bowl Set with Stand",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402282,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-23T02:51:22Z"
+  },
+  "circular saw": {
+    "asin": "B07CGRV226",
+    "parent_asin": "B07CGRV226",
+    "title": "Bora QuickCut Circular Saw Guide with Angle Assist, 16in",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402406,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-23T02:53:26Z"
+  },
+  "heat gun": {
+    "asin": "B078S5QMFG",
+    "parent_asin": "B078S5QMFG",
+    "title": "SEEKONE 1800W Heat Gun Variable Temp 122℉-1202℉ for Crafts, Shrink Wrap",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402418,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:53:38Z"
+  },
+  "impact driver": {
+    "asin": "B0BQCWH5KF",
+    "parent_asin": "B0BQCWH5KF",
+    "title": "DEWALT 20V MAX XR Impact Driver, 1/4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B)",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402421,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-23T02:53:41Z"
+  },
+  "hub bridge": {
+    "asin": "B0GYRQ5SG1",
+    "parent_asin": "B0GYRQ5SG1",
+    "title": "Smart Bridge Hub compatible with Alexa, Google Home, Tuya App, Home Automation Controller for Motorized Blinds Shades",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402555,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:55:55Z"
+  },
+  "smart plant sensor": {
+    "asin": "B0H5B65YX7",
+    "parent_asin": "B0H5B65YX7",
+    "title": "RAINPOINT 2027 New Version Bluetooth Soil Moisture Meter & Air Temp Sensor, 2-in-1 Smart Plant Monitor with App Control, Compatible with WiFi Hub TWG009 & Water Timer ITV102B（Not Included",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402579,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-23T02:56:19Z"
+  },
+  "soldering iron": {
+    "asin": "B087767KNW",
+    "parent_asin": "B087767KNW",
+    "title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402606,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:56:46Z"
+  },
+  "acrylic paint set": {
+    "asin": "B07Z93LQDB",
+    "parent_asin": "B07Z93LQDB",
+    "title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402619,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:56:59Z"
+  },
+  "cutting mat": {
+    "asin": "B00GSFSFF8",
+    "parent_asin": "B00GSFSFF8",
+    "title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402621,
+    "stock_source": "serpapi",
+    "verified_at": "2026-11-23T02:57:01Z"
+  },
+  "air purifier": {
+    "asin": "B07VVK39F7",
+    "parent_asin": "B07VVK39F7",
+    "title": "Levoit Air Purifier for Home Pets Hair Allergens in Bedroom Quiet Purifiers",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795402665,
+    "stock_source": "apify",
+    "verified_at": "2026-11-23T02:57:45Z"
   }
 }

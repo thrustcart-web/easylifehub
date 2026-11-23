@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-crafts-hobbies-knife-9fb096ceae4d",
+  "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+  "meta_description": "Compare a 60W soldering iron, a 36‑color acrylic paint set for canvases, and a self‑healing cutting mat for left‑handed users to see which fits your hobby.",
+  "template": "bestof",
+  "niche": "crafts & hobbies",
+  "keyword": "Crafts & Hobbies",
+  "labels": [
+    "Reviews",
+    "Crafts & Hobbies"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 766,
+  "items": [
+    {
+      "name": "Soldering Iron",
+      "asin": "B087767KNW",
+      "asin_verified": true,
+      "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+      "parent_asin": "B087767KNW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402606,
+      "search_term": "soldering iron for electronics hobbies",
+      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
+    },
+    {
+      "name": "Acrylic Paint Set",
+      "asin": "B07Z93LQDB",
+      "asin_verified": true,
+      "verified_product_title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
+      "parent_asin": "B07Z93LQDB",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402619,
+      "search_term": "acrylic paint set for large canvases",
+      "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20"
+    },
+    {
+      "name": "Cutting Mat",
+      "asin": "B00GSFSFF8",
+      "asin_verified": true,
+      "verified_product_title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
+      "parent_asin": "B00GSFSFF8",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795402621,
+      "search_term": "cutting mat for left handed cutters",
+      "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-crafts-hobbies-knife-9fb096ceae4d.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

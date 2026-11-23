@@ -746,6 +746,60 @@
       "ts": "2026-11-22T10:55:14Z",
       "source": "ai:openrouter",
       "words": 748
+    },
+    {
+      "slug": "review-slow-feeder-bowl-87dbdc1c3f34",
+      "title": "Slow Feeder Bowl for Apartments: Judging Noise Level Honestly",
+      "template": "review",
+      "keyword": "slow feeder bowl for apartments",
+      "ts": "2026-11-23T02:53:20Z",
+      "source": "ai:gemini",
+      "words": 739
+    },
+    {
+      "slug": "bestof-tools-tool-745e50aa0a93",
+      "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
+      "template": "bestof",
+      "keyword": "Tools",
+      "ts": "2026-11-23T02:55:45Z",
+      "source": "ai:gemini",
+      "words": 667
+    },
+    {
+      "slug": "review-hub-bridge-7e88aa8f9f4b",
+      "title": "A Hub Bridge Review: What I Would Check Before Buying",
+      "template": "review",
+      "keyword": "hub bridge for multi room audio",
+      "ts": "2026-11-23T02:56:01Z",
+      "source": "ai:groq",
+      "words": 723
+    },
+    {
+      "slug": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07",
+      "title": "Smart Fan or Smart Plant Sensor? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "Smart Fan vs Smart Plant Sensor",
+      "ts": "2026-11-23T02:56:29Z",
+      "source": "ai:groq",
+      "words": 598
+    },
+    {
+      "slug": "bestof-crafts-hobbies-knife-9fb096ceae4d",
+      "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+      "template": "bestof",
+      "keyword": "Crafts & Hobbies",
+      "ts": "2026-11-23T02:57:12Z",
+      "source": "ai:groq",
+      "words": 766
+    },
+    {
+      "slug": "review-air-purifier-68385dd28453",
+      "title": "Is An Air Purifier Worth It? A Buyer's Assessment",
+      "template": "review",
+      "keyword": "air purifier for allergy sufferers",
+      "ts": "2026-11-23T02:57:49Z",
+      "source": "ai:groq",
+      "words": 632
     }
   ],
   "published": [],
@@ -832,7 +886,13 @@
     "review-spice-rack-14684677a742",
     "bestof-car-mount-0d13e1db177c",
     "bestof-personal-care-massager-7022a0353351",
-    "review-air-fryer-58220932fc1a"
+    "review-air-fryer-58220932fc1a",
+    "review-slow-feeder-bowl-87dbdc1c3f34",
+    "bestof-tools-tool-745e50aa0a93",
+    "review-hub-bridge-7e88aa8f9f4b",
+    "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07",
+    "bestof-crafts-hobbies-knife-9fb096ceae4d",
+    "review-air-purifier-68385dd28453"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -1014,7 +1074,7 @@
     "Wireless Charger": "2026-11-16",
     "wireless charger for frequent travellers": "2026-11-16",
     "smart fan": "2026-11-13",
-    "Smart Fan": "2026-11-13",
+    "Smart Fan": "2026-11-23",
     "smart fan for energy savers": "2026-11-13",
     "home office:cable management kit|noise cancelling headphones|wrist rest": "2026-11-13",
     "Cable Management Kit": "2026-11-13",
@@ -1188,7 +1248,32 @@
     "electric toothbrush for beginners": "2026-11-22",
     "air fryer": "2026-11-22",
     "Air Fryer": "2026-11-22",
-    "air fryer for meal preppers": "2026-11-22"
+    "air fryer for meal preppers": "2026-11-22",
+    "slow feeder bowl": "2026-11-23",
+    "Slow Feeder Bowl": "2026-11-23",
+    "slow feeder bowl for apartments": "2026-11-23",
+    "tools:circular saw|heat gun|impact driver": "2026-11-23",
+    "Circular Saw": "2026-11-23",
+    "circular saw for curved cuts": "2026-11-23",
+    "Heat Gun": "2026-11-23",
+    "heat gun for diy beginners": "2026-11-23",
+    "Impact Driver": "2026-11-23",
+    "impact driver for weekend projects": "2026-11-23",
+    "hub bridge": "2026-11-23",
+    "Hub Bridge": "2026-11-23",
+    "hub bridge for multi room audio": "2026-11-23",
+    "smart fan|smart plant sensor": "2026-11-23",
+    "Smart Plant Sensor": "2026-11-23",
+    "crafts & hobbies:acrylic paint set|cutting mat|soldering iron": "2026-11-23",
+    "Soldering Iron": "2026-11-23",
+    "soldering iron for electronics hobbies": "2026-11-23",
+    "Acrylic Paint Set": "2026-11-23",
+    "acrylic paint set for large canvases": "2026-11-23",
+    "Cutting Mat": "2026-11-23",
+    "cutting mat for left handed cutters": "2026-11-23",
+    "air purifier": "2026-11-23",
+    "Air Purifier": "2026-11-23",
+    "air purifier for allergy sufferers": "2026-11-23"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1367,7 +1452,13 @@
     "{P}: An Honest Look at the Trade-Offs",
     "Choosing Between {A} and {B}: A Practical Comparison",
     "{N} {F} Picks Reviewed Against the Criteria That Matter",
-    "Choosing {A} {P} for {AUD}: Trade-Offs Included"
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included",
+    "{P} for {AUD}: Judging {FEAT} Honestly",
+    "Best {F}{AUD}: {N} Picks, Ranked by What Matters",
+    "{A} {P} Review: What I Would Check Before Buying",
+    "{A} or {B}? The Honest Comparison",
+    "Best {F}{AUD}: {N} Options We Would Actually Buy",
+    "Is {A} {P} Worth It? A Buyer's Assessment"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1376,7 +1467,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 83,
+    "total_generated": 89,
     "total_published": 0
   },
   "blogger_titles": [

@@ -3,195 +3,65 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-car-mount-0d13e1db177c",
-      "title": "Best Car Accessories for Suv Owners: 3 Picks Compared by Real Criteria",
-      "meta_description": "Compare a seat gap organizer, OBD2 scanner, and cooling gel seat cushion for SUV owners. Learn verified features, setup tips, and ownership considerations.",
+      "slug": "bestof-crafts-hobbies-knife-9fb096ceae4d",
+      "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+      "meta_description": "Compare a 60W soldering iron, a 36‑color acrylic paint set for canvases, and a self‑healing cutting mat for left‑handed users to see which fits your hobby.",
       "template": "bestof",
-      "niche": "car",
-      "keyword": "Car",
+      "niche": "crafts & hobbies",
+      "keyword": "Crafts & Hobbies",
       "labels": [
         "Reviews",
-        "Car"
+        "Crafts & Hobbies"
       ],
       "source": "ai:groq",
       "provider": "groq",
-      "words": 739,
+      "words": 766,
       "items": [
         {
-          "name": "Seat Gap Organizer",
-          "asin": "B0H716NZ56",
+          "name": "Soldering Iron",
+          "asin": "B087767KNW",
           "asin_verified": true,
-          "verified_product_title": "Car Seat Gap Filler Organizer, Dual Compartments, Black, 2 Pack",
-          "parent_asin": "B0H716NZ56",
+          "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+          "parent_asin": "B087767KNW",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385941,
-          "search_term": "seat gap organizer for suv owners",
-          "url": "https://www.amazon.com/dp/B0H716NZ56?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402606,
+          "search_term": "soldering iron for electronics hobbies",
+          "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
         },
         {
-          "name": "OBD2 Scanner",
-          "asin": "B0GL9RL3XS",
+          "name": "Acrylic Paint Set",
+          "asin": "B07Z93LQDB",
           "asin_verified": true,
-          "verified_product_title": "BlueDriver OBD2 Scanner Bluetooth, No Subscription, ABS SRS TPMS",
-          "parent_asin": "B0GL9RL3XS",
+          "verified_product_title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
+          "parent_asin": "B07Z93LQDB",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385889,
-          "search_term": "obd2 scanner for new drivers",
-          "url": "https://www.amazon.com/dp/B0GL9RL3XS?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402619,
+          "search_term": "acrylic paint set for large canvases",
+          "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20"
         },
         {
-          "name": "Seat Cushion",
-          "asin": "B0GSVGPNH7",
+          "name": "Cutting Mat",
+          "asin": "B00GSFSFF8",
           "asin_verified": true,
-          "verified_product_title": "Cooling Gel Enhanced Memory Foam Seat Cushion, Desk Chair Seat Cushion, Office Chair Cushions, Foldable Portable, Back Sciatica Coccyx Tailbone Pain Relief, Driving Car Airplane Wheelchair Bleachers",
-          "parent_asin": "B0GSVGPNH7",
+          "verified_product_title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
+          "parent_asin": "B00GSFSFF8",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385902,
-          "search_term": "seat cushion for hot climates",
-          "url": "https://www.amazon.com/dp/B0GSVGPNH7?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402621,
+          "search_term": "cutting mat for left handed cutters",
+          "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20"
         }
       ],
-      "html_file": "bestof-car-mount-0d13e1db177c.html",
+      "html_file": "bestof-crafts-hobbies-knife-9fb096ceae4d.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
-      "slug": "bestof-personal-care-massager-7022a0353351",
-      "title": "3 Personal Care Picks Reviewed Against the Criteria That Matter",
-      "meta_description": "Evaluate 3 essential personal care items including a battery-operated trimmer, a 1-inch ceramic curling iron, and an ADA accepted electric toothbrush.",
-      "template": "bestof",
-      "niche": "personal care",
-      "keyword": "Personal Care",
-      "labels": [
-        "Reviews",
-        "Personal Care"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 668,
-      "items": [
-        {
-          "name": "Nose Hair Trimmer",
-          "asin": "B0BFQG8MSR",
-          "asin_verified": true,
-          "verified_product_title": "Ear and Nose Hair Trimmer Clipper - 2026 Professional Painless Eyebrow & Facial Hair Trimmer for Men Women, Battery-Operated Trimmer with IPX7 Waterproof, Dual Edge Blades for Easy Cleansing Pink",
-          "parent_asin": "B0BFQG8MSR",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795386243,
-          "search_term": "nose hair trimmer for daily shavers",
-          "url": "https://www.amazon.com/dp/B0BFQG8MSR?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Curling Wand",
-          "asin": "B09RRW33WF",
-          "asin_verified": true,
-          "verified_product_title": "Remington Shine Therapy Argan Oil & Keratin Infused ½-1 Inch Tapered Curling Wand for Natural Curls, Includes Heat Glove",
-          "parent_asin": "B09RRW33WF",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795386253,
-          "search_term": "curling wand for fine hair",
-          "url": "https://www.amazon.com/dp/B09RRW33WF?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Electric Toothbrush",
-          "asin": "B072YVWBXH",
-          "asin_verified": true,
-          "verified_product_title": "Aquasonic Black Series Ultra Whitening Toothbrush – ADA Accepted Electric Toothbrush- 8 Brush Heads & Travel Case – 40,000 VPM Electric Motor & Wireless Charging - 4 Modes w Smart Timer",
-          "parent_asin": "B072YVWBXH",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385705,
-          "search_term": "electric toothbrush for beginners",
-          "url": "https://www.amazon.com/dp/B072YVWBXH?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "bestof-personal-care-massager-7022a0353351.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-sleep-sunrise-e91fbb0b229d",
-      "title": "Sleep Gear Buying Guide: 3 Picks Ranked by Real Criteria",
-      "meta_description": "Explore our evidence-based sleep gear buying guide featuring cotton sheets, a weighted blanket, and a cooling duvet insert. Compare real specifications now.",
-      "template": "bestof",
-      "niche": "sleep",
-      "keyword": "Sleep",
-      "labels": [
-        "Reviews",
-        "Sleep"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 615,
-      "items": [
-        {
-          "name": "Cotton Sheets",
-          "asin": "B073GWMZX8",
-          "asin_verified": true,
-          "verified_product_title": "Woolrich Cotton Sheet Set Cottage Charms Print, 100% Cotton Flannel Sheets Warm & Fuzzy Bedding Set Queen Size Sheets, Fitted Pocket Fits Up to 14\" Mattress, Queen Blue Winter Frost, 4 Piece",
-          "search_term": "cotton sheets for cold climates",
-          "url": "https://www.amazon.com/dp/B073GWMZX8?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385965,
-          "parent_asin": "B073GWMZX8",
-          "stock_source": "serpapi"
-        },
-        {
-          "name": "Weighted Blanket",
-          "asin": "B07MP2R8X5",
-          "asin_verified": true,
-          "verified_product_title": "Weighted Blanket for Adults with Removable Cover, 12 lb, 48x72 in, Grey",
-          "search_term": "weighted blanket for anxious sleepers",
-          "url": "https://www.amazon.com/dp/B07MP2R8X5?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385705,
-          "parent_asin": "B07MP2R8X5",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Duvet",
-          "asin": "B0HFN3GNBJ",
-          "asin_verified": true,
-          "verified_product_title": "Cooling Comforter Duvet Insert Queen Size, Hypoallergenic 100% Viscose Derived from Bamboo Shell & Fill - All Season Quilted Down Alternative - Breathable Comforter for Hot Sleepers - White 88\"x88\"",
-          "search_term": "duvet for hot sleepers",
-          "url": "https://www.amazon.com/dp/B0HFN3GNBJ?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385967,
-          "parent_asin": "B0HFN3GNBJ",
-          "stock_source": "serpapi"
-        }
-      ],
-      "html_file": "bestof-sleep-sunrise-e91fbb0b229d.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
-    },
-    {
-      "slug": "bestof-tools-wrench-50c42e618342",
-      "title": "Power Tools Roundup: 3 Picks With the Trade-Offs Stated",
-      "meta_description": "Compare a magnetic screwdriver set, a 94-piece tool kit, and a corded jigsaw. This guide outlines verified features and setup details for your next project.",
+      "slug": "bestof-tools-tool-745e50aa0a93",
+      "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
+      "meta_description": "Select the right tools for custom workshop projects with our guide covering circular saw guides, heat guns, and impact drivers for precise task performance.",
       "template": "bestof",
       "niche": "tools",
       "keyword": "Tools",
@@ -199,56 +69,50 @@
         "Reviews",
         "Tools"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 710,
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 667,
       "items": [
         {
-          "name": "Screwdriver Set",
-          "asin": "B0FNBV7NG7",
+          "name": "Circular Saw",
+          "asin": "B07CGRV226",
           "asin_verified": true,
-          "verified_product_title": "Magnetic Screwdriver Set with Case, All-in-One Repair Tool Kit for Everyday Home Fixes, Furniture Assembly & Electronics Repair, Precision Screwdrivers, Bits & Flexible Shaft",
-          "parent_asin": "B0FNBV7NG7",
+          "verified_product_title": "Bora QuickCut Circular Saw Guide with Angle Assist, 16in",
+          "parent_asin": "B07CGRV226",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385881,
-          "search_term": "screwdriver set for home repairs",
-          "url": "https://www.amazon.com/dp/B0FNBV7NG7?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402406,
+          "search_term": "circular saw for curved cuts",
+          "url": "https://www.amazon.com/dp/B07CGRV226?tag=hotr0e-20"
         },
         {
-          "name": "Tool Set",
-          "asin": "B0GR9NLSQZ",
+          "name": "Heat Gun",
+          "asin": "B078S5QMFG",
           "asin_verified": true,
-          "verified_product_title": "DEKOPRO 94 Piece Tool Set Household DIY Tool Kit for Men with Storage Toolbox, Small Basic Hand Tool Box Set for Home Repair, DIY, Apartment, Office, Orange",
-          "parent_asin": "B0GR9NLSQZ",
+          "verified_product_title": "SEEKONE 1800W Heat Gun Variable Temp 122℉-1202℉ for Crafts, Shrink Wrap",
+          "parent_asin": "B078S5QMFG",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385902,
-          "search_term": "tool set for diy beginners",
-          "url": "https://www.amazon.com/dp/B0GR9NLSQZ?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402418,
+          "search_term": "heat gun for diy beginners",
+          "url": "https://www.amazon.com/dp/B078S5QMFG?tag=hotr0e-20"
         },
         {
-          "name": "Jigsaw",
-          "asin": "B0H5V6KWF5",
+          "name": "Impact Driver",
+          "asin": "B0BQCWH5KF",
           "asin_verified": true,
-          "verified_product_title": "Jig Saw Corded: Electric Jigsaw Tool, Power Jig Saws for Woodworking with 8pcs Blades, Wood Cutter Hand Tool with 6 Variable Speed, 3000 SPM, ±45° Bevel Cutting, Tool-Free Blade Change",
-          "parent_asin": "B0H5V6KWF5",
+          "verified_product_title": "DEWALT 20V MAX XR Impact Driver, 1/4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B)",
+          "parent_asin": "B0BQCWH5KF",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385941,
-          "search_term": "jigsaw for curved cuts",
-          "url": "https://www.amazon.com/dp/B0H5V6KWF5?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402421,
+          "search_term": "impact driver for weekend projects",
+          "url": "https://www.amazon.com/dp/B0BQCWH5KF?tag=hotr0e-20"
         }
       ],
-      "html_file": "bestof-tools-wrench-50c42e618342.html",
+      "html_file": "bestof-tools-tool-745e50aa0a93.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
       "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
@@ -449,53 +313,49 @@
       "product_review_required": true
     },
     {
-      "slug": "comparison-runner-rug-vs-area-rug-d04329b0c6d2",
-      "title": "Runner Rug vs Area Rug: Choosing the Right Shape for Your Space",
-      "meta_description": "Compare the Rugshop Traditional Medallion Runner Rug and Trademoon Jute and Cotton Area Rug to find the right floor covering shape for your home layout.",
+      "slug": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07",
+      "title": "Smart Fan or Smart Plant Sensor? The Honest Comparison",
+      "meta_description": "Compare a DREO smart pedestal fan with a RAINPOINT smart plant sensor, covering features, setup, compatibility, and who each device best serves in the home.",
       "template": "comparison",
-      "niche": "home decor",
-      "keyword": "Runner Rug vs Area Rug",
+      "niche": "smart home",
+      "keyword": "Smart Fan vs Smart Plant Sensor",
       "labels": [
         "Reviews",
-        "Home Decor"
+        "Smart Home"
       ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 722,
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 598,
       "items": [
         {
-          "name": "Rugshop Traditional Medallion Runner Rug",
-          "asin": "B0HGPRSSGT",
+          "name": "Smart Fan",
+          "asin": "B0DSC14RH5",
           "asin_verified": true,
-          "verified_product_title": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug, 2'x10' Brown",
-          "search_term": "Rugshop Traditional Medallion Washable Non-Slip Runner Rug 2x10",
-          "url": "https://www.amazon.com/dp/B0HGPRSSGT?tag=hotr0e-20",
+          "verified_product_title": "DREO Smart Pedestal Fan for Bedroom, 120°+120° Omni-Directional Oscillating",
+          "parent_asin": "B0DSC14RH5",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385950,
-          "parent_asin": "B0HGPRSSGT",
-          "stock_source": "apify"
+          "stock_checked_at": 1795402577,
+          "search_term": "Smart Fan",
+          "url": "https://www.amazon.com/dp/B0DSC14RH5?tag=hotr0e-20"
         },
         {
-          "name": "Trademoon 5x7 Jute and Cotton Area Rug",
-          "asin": "B0FMRZRWWX",
-          "asin_verified": false,
-          "verified_product_title": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug, Natural Hand-Braided Jute Area Rug | Reversible & Durable | Boho Farmhouse Style Rug for Living Room, Dining Room, and Bedroom",
-          "search_term": "Trademoon 5x7 Ft Oval Blue Shade Multi Cotton Area Rug",
-          "url": "",
+          "name": "Smart Plant Sensor",
+          "asin": "B0H5B65YX7",
+          "asin_verified": true,
+          "verified_product_title": "RAINPOINT 2027 New Version Bluetooth Soil Moisture Meter & Air Temp Sensor, 2-in-1 Smart Plant Monitor with App Control, Compatible with WiFi Hub TWG009 & Water Timer ITV102B（Not Included",
+          "parent_asin": "B0H5B65YX7",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385874,
-          "parent_asin": "B0FMRZRWWX"
+          "stock_checked_at": 1795402579,
+          "search_term": "Smart Plant Sensor",
+          "url": "https://www.amazon.com/dp/B0H5B65YX7?tag=hotr0e-20"
         }
       ],
-      "html_file": "comparison-runner-rug-vs-area-rug-d04329b0c6d2.html",
+      "html_file": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07.html",
       "layout_version": 4,
       "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400,
+      "product_links_verified": true,
       "editorial_review_required": false,
-      "product_review_required": true
+      "review_required": false
     },
     {
       "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
@@ -546,56 +406,6 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
-    },
-    {
-      "slug": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97",
-      "title": "Under Bed Storage or Storage Bins? The Honest Comparison",
-      "meta_description": "Compare under bed storage against heavy-duty storage bins. Learn how dimensions, capacity, materials, and placement dictate the ideal household organizer.",
-      "template": "comparison",
-      "niche": "laundry & storage",
-      "keyword": "Under Bed Storage vs Storage Bins",
-      "labels": [
-        "Reviews",
-        "Laundry & Storage"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 713,
-      "items": [
-        {
-          "name": "Under Bed Storage",
-          "asin": "B01H2NVSG2",
-          "asin_verified": true,
-          "verified_product_title": "IRIS USA 40 Qt. Under Bed Storage Bin with Lids, Gray/Clear",
-          "parent_asin": "B01H2NVSG2",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795385653,
-          "search_term": "Under Bed Storage",
-          "url": "https://www.amazon.com/dp/B01H2NVSG2?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Storage Bins",
-          "asin": "B0H3KSXC25",
-          "asin_verified": true,
-          "verified_product_title": "6 Pack 27 Gallon Heavy Duty Storage Bins with Snap Lids, Durable Plastic Storage Totes with Stackable Black Containers & Yellow Latching Covers for Home Garage Moving Organization",
-          "parent_asin": "B0H3KSXC25",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795386031,
-          "search_term": "Storage Bins",
-          "url": "https://www.amazon.com/dp/B0H3KSXC25?tag=hotr0e-20",
-          "stock_source": "serpapi"
-        }
-      ],
-      "html_file": "comparison-under-bed-storage-vs-storage-bins-70c9b9752a97.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795385955,
-      "stock_check_max_age_seconds": 86400
     },
     {
       "slug": "dual-monitor-arm-guide-load-vesa-alignment-desk-space",
@@ -710,6 +520,40 @@
       "product_review_required": false,
       "products_audited_at": 1795385955,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-air-purifier-68385dd28453",
+      "title": "Is An Air Purifier Worth It? A Buyer's Assessment",
+      "meta_description": "Explore if an air purifier adds value for allergy sufferers and home office users, covering filtration, design, noise, setup, and maintenance without guesswork or hype.",
+      "template": "review",
+      "niche": "home office",
+      "keyword": "air purifier for allergy sufferers",
+      "labels": [
+        "Reviews",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 632,
+      "items": [
+        {
+          "name": "Air Purifier",
+          "asin": "B07VVK39F7",
+          "asin_verified": true,
+          "verified_product_title": "Levoit Air Purifier for Home Pets Hair Allergens in Bedroom Quiet Purifiers",
+          "parent_asin": "B07VVK39F7",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795402665,
+          "search_term": "air purifier for allergy sufferers",
+          "url": "https://www.amazon.com/dp/B07VVK39F7?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-air-purifier-68385dd28453.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-anker-737-power-bank-24k-b79629541495",
@@ -1127,6 +971,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-hub-bridge-7e88aa8f9f4b",
+      "title": "A Hub Bridge Review: What I Would Check Before Buying",
+      "meta_description": "Review of the Hub Bridge smart hub, covering compatibility, privacy controls, design, setup, maintenance, and steps for multi‑room audio and motorized blind owners.",
+      "template": "review",
+      "niche": "smart home",
+      "keyword": "hub bridge for multi room audio",
+      "labels": [
+        "Reviews",
+        "Smart Home"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 723,
+      "items": [
+        {
+          "name": "Hub Bridge",
+          "asin": "B0GYRQ5SG1",
+          "asin_verified": true,
+          "verified_product_title": "Smart Bridge Hub compatible with Alexa, Google Home, Tuya App, Home Automation Controller for Motorized Blinds Shades",
+          "parent_asin": "B0GYRQ5SG1",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795402555,
+          "search_term": "hub bridge for multi room audio",
+          "url": "https://www.amazon.com/dp/B0GYRQ5SG1?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-hub-bridge-7e88aa8f9f4b.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-instant-pot-f01d4702e01a",
@@ -1887,6 +1765,40 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "review-slow-feeder-bowl-87dbdc1c3f34",
+      "title": "Slow Feeder Bowl for Apartments: Judging Noise Level Honestly",
+      "meta_description": "Evaluate noise levels and elevated design features of the 6.1 inch slow feeder bowl set with stand to determine if it fits your apartment feeding routine.",
+      "template": "review",
+      "niche": "pets",
+      "keyword": "slow feeder bowl for apartments",
+      "labels": [
+        "Reviews",
+        "Pets"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 739,
+      "items": [
+        {
+          "name": "Slow Feeder Bowl",
+          "asin": "B0H74TG1JX",
+          "asin_verified": true,
+          "verified_product_title": "Elevated Slow Feeder Dog Bowl, 6.1” Dog Food and Water Bowl Set with Stand",
+          "parent_asin": "B0H74TG1JX",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795402282,
+          "search_term": "slow feeder bowl for apartments",
+          "url": "https://www.amazon.com/dp/B0H74TG1JX?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-slow-feeder-bowl-87dbdc1c3f34.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-smart-fan-fe34301450a1",
