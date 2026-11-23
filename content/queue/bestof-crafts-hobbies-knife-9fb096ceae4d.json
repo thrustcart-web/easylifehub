@@ -20,9 +20,10 @@
       "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
       "parent_asin": "B087767KNW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402606,
+      "stock_checked_at": 1795428886,
       "search_term": "soldering iron for electronics hobbies",
-      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Acrylic Paint Set",
@@ -31,9 +32,10 @@
       "verified_product_title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
       "parent_asin": "B07Z93LQDB",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402619,
+      "stock_checked_at": 1795429394,
       "search_term": "acrylic paint set for large canvases",
-      "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Cutting Mat",
@@ -42,9 +44,10 @@
       "verified_product_title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
       "parent_asin": "B00GSFSFF8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402621,
+      "stock_checked_at": 1795428827,
       "search_term": "cutting mat for left handed cutters",
-      "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-crafts-hobbies-knife-9fb096ceae4d.html",
@@ -52,5 +55,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795429062,
+  "stock_check_max_age_seconds": 86400
 }

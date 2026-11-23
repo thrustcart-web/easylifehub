@@ -20,9 +20,10 @@
       "verified_product_title": "Smart Bridge Hub compatible with Alexa, Google Home, Tuya App, Home Automation Controller for Motorized Blinds Shades",
       "parent_asin": "B0GYRQ5SG1",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402555,
+      "stock_checked_at": 1795429374,
       "search_term": "hub bridge for multi room audio",
-      "url": "https://www.amazon.com/dp/B0GYRQ5SG1?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0GYRQ5SG1?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-hub-bridge-7e88aa8f9f4b.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795429062,
+  "stock_check_max_age_seconds": 86400
 }

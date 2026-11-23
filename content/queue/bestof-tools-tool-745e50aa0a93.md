@@ -43,8 +43,8 @@ Verify all physical specifications, battery platform requirements, and workspace
 
 ### Product Links
 
-- Circular Saw: https://www.amazon.com/dp/B07CGRV226?tag=hotr0e-20
-- Heat Gun: https://www.amazon.com/dp/B078S5QMFG?tag=hotr0e-20
+- Circular Saw: https://www.amazon.com/dp/B0GWCXW55N?tag=hotr0e-20
+- Heat Gun: https://www.amazon.com/dp/B086WH19WH?tag=hotr0e-20
 - Impact Driver: https://www.amazon.com/dp/B0BQCWH5KF?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

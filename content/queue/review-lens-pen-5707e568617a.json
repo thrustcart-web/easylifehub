@@ -20,7 +20,7 @@
       "verified_product_title": "Professional Lens Cleaning Pen with Soft Brush and Extra Tips, 3-in-1",
       "parent_asin": "B0H9Y8VWDR",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385950,
+      "stock_checked_at": 1795429062,
       "search_term": "lens pen for dusty locations",
       "url": "https://www.amazon.com/dp/B0H9Y8VWDR?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795385955,
+  "products_audited_at": 1795429062,
   "stock_check_max_age_seconds": 86400
 }

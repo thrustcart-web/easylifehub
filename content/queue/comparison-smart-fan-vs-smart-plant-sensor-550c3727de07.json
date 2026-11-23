@@ -20,26 +20,30 @@
       "verified_product_title": "DREO Smart Pedestal Fan for Bedroom, 120°+120° Omni-Directional Oscillating",
       "parent_asin": "B0DSC14RH5",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402577,
+      "stock_checked_at": 1795428994,
       "search_term": "Smart Fan",
-      "url": "https://www.amazon.com/dp/B0DSC14RH5?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0DSC14RH5?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Smart Plant Sensor",
       "asin": "B0H5B65YX7",
-      "asin_verified": true,
+      "asin_verified": false,
       "verified_product_title": "RAINPOINT 2027 New Version Bluetooth Soil Moisture Meter & Air Temp Sensor, 2-in-1 Smart Plant Monitor with App Control, Compatible with WiFi Hub TWG009 & Water Timer ITV102B（Not Included",
       "parent_asin": "B0H5B65YX7",
-      "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795402579,
+      "availability_type": "UNKNOWN",
+      "stock_checked_at": 1795429062,
       "search_term": "Smart Plant Sensor",
-      "url": "https://www.amazon.com/dp/B0H5B65YX7?tag=hotr0e-20"
+      "url": ""
     }
   ],
   "html_file": "comparison-smart-fan-vs-smart-plant-sensor-550c3727de07.html",
   "layout_version": 4,
   "draft": false,
-  "product_links_verified": true,
+  "product_links_verified": false,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": true,
+  "product_review_required": true,
+  "products_audited_at": 1795429062,
+  "stock_check_max_age_seconds": 86400
 }

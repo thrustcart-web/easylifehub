@@ -20,10 +20,10 @@
       "verified_product_title": "Meal Prep Air Fryer: Super Healthy Meals in Minutes",
       "parent_asin": "1529981077",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795386255,
+      "stock_checked_at": 1795428810,
       "search_term": "air fryer for meal preppers",
       "url": "https://www.amazon.com/dp/1529981077?tag=hotr0e-20",
-      "stock_source": "serpapi"
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-air-fryer-58220932fc1a.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795385955,
+  "products_audited_at": 1795429062,
   "stock_check_max_age_seconds": 86400
 }

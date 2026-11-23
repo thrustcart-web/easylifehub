@@ -21,32 +21,32 @@
       "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
       "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385659,
+      "stock_checked_at": 1795428841,
       "parent_asin": "B01L2HYPNW",
       "stock_source": "apify"
     },
     {
       "name": "Sleeping Bag",
-      "asin": "B0DK99H94M",
+      "asin": "B0DK6VHTL4",
       "asin_verified": true,
-      "verified_product_title": "Ultralight Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking",
+      "verified_product_title": "Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking-83 L x 30\" W Fits Adults",
       "search_term": "Ultralight Warm Weather Sleeping Bag",
-      "url": "https://www.amazon.com/dp/B0DK99H94M?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DK6VHTL4?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385842,
-      "parent_asin": "B0DK99H94M",
+      "stock_checked_at": 1795429278,
+      "parent_asin": "B0DK6VHTL4",
       "stock_source": "apify"
     },
     {
       "name": "Compass",
-      "asin": "B0FXDN76LR",
+      "asin": "B07FXH2CPT",
       "asin_verified": true,
-      "verified_product_title": "Navigation Compass & Whistle Kit - Essential Gear for Orienteering, Camping, Training, Exploration & Youth Outdoor Education",
+      "verified_product_title": "Orienteering Compass - Hiking Backpacking Compass | Advanced Scout Compass Camping and Navigation | Boy Scout Compass Kids - Children Compasses for Map Reading - Baseplate Compass Survival",
       "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
-      "url": "https://www.amazon.com/dp/B0FXDN76LR?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B07FXH2CPT?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795386128,
-      "parent_asin": "B0FXDN76LR",
+      "stock_checked_at": 1795429291,
+      "parent_asin": "B07FXH2CPT",
       "stock_source": "apify"
     },
     {
@@ -57,7 +57,7 @@
       "search_term": "Sports Drawstring Backpack Swim Gym Bag",
       "url": "https://www.amazon.com/dp/B09QKXMNRR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385782,
+      "stock_checked_at": 1795428937,
       "parent_asin": "B09QKXMNRR",
       "stock_source": "apify"
     },
@@ -69,7 +69,7 @@
       "search_term": "OneTigris Hideout Hammock Underquilt",
       "url": "https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385720,
+      "stock_checked_at": 1795428886,
       "parent_asin": "B08936QVJD",
       "stock_source": "apify"
     }
@@ -79,7 +79,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795385955,
+  "products_audited_at": 1795429062,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

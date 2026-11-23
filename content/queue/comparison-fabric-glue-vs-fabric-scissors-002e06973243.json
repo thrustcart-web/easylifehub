@@ -21,20 +21,20 @@
       "search_term": "Aleene's Fabric Fusion Glue 4 oz",
       "url": "https://www.amazon.com/dp/B00KD6ZHD6?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795386223,
+      "stock_checked_at": 1795428827,
       "parent_asin": "B00KD6ZHD6",
       "stock_source": "apify"
     },
     {
       "name": "Fabric Scissors",
-      "asin": "B097K54MDH",
+      "asin": "B0DHGLVXLZ",
       "asin_verified": true,
-      "verified_product_title": "Sharp Blade Fabric Scissors 8 Inch, Heavy Duty Sewing Scissors (Black)",
+      "verified_product_title": "Fabric Scissors Professional, 8\" Heavy Duty Sewing Scissor for Fabric Cutting, Tailor Sharp Sewing Shears for Cutting Leather craft Home Office Students Artists Dressmakers",
       "search_term": "Fabric Scissors Heavy Duty 8 inch Sewing Scissors",
-      "url": "https://www.amazon.com/dp/B097K54MDH?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DHGLVXLZ?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385776,
-      "parent_asin": "B097K54MDH",
+      "stock_checked_at": 1795429335,
+      "parent_asin": "B0DHGLVXLZ",
       "stock_source": "apify"
     }
   ],
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795385955,
+  "products_audited_at": 1795429062,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -15,15 +15,15 @@
   "items": [
     {
       "name": "Deadbolt",
-      "asin": "B0GY3KYH2P",
+      "asin": "B008YB69L6",
       "asin_verified": true,
-      "verified_product_title": "2 Pack Keyed Single Cylinder Deadbolt Lock for Interior Door Silver",
-      "parent_asin": "B0GY3KYH2P",
+      "verified_product_title": "Kwikset 816 Key Control Deadbolt Lock, Round Satin Nickel Exterior Keyed Front Entry Door, Pick Resistant SmartKey Rekey Security, Single Cylinder Dead Bolt, with Microban Protection",
+      "parent_asin": "B008YB69L6",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795385909,
+      "stock_checked_at": 1795429182,
       "search_term": "deadbolt for key losing households",
-      "url": "https://www.amazon.com/dp/B0GY3KYH2P?tag=hotr0e-20",
-      "stock_source": "apify"
+      "url": "https://www.amazon.com/dp/B008YB69L6?tag=hotr0e-20",
+      "stock_source": "serpapi"
     }
   ],
   "html_file": "review-deadbolt-cf3066990956.html",
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795385955,
+  "products_audited_at": 1795429062,
   "stock_check_max_age_seconds": 86400
 }
