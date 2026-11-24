@@ -43,6 +43,6 @@ Checking package seals, ingredient listings, and manufacturer storage guidelines
 
 ### Product Links
 
-- Burn Gel: https://www.amazon.com/dp/B07964SRBL?tag=hotr0e-20
+- Burn Gel: https://www.amazon.com/dp/B0DFRYM7FP?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

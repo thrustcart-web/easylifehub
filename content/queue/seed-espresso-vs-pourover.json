@@ -21,7 +21,7 @@
       "search_term": "Breville BES450BSS Bambino Espresso Machine",
       "url": "https://www.amazon.com/dp/B08ZK13CJN?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472097,
+      "stock_checked_at": 1795515353,
       "parent_asin": "B08ZK13CJN",
       "stock_source": "apify"
     },
@@ -33,7 +33,7 @@
       "search_term": "Maestri House Pour Over Coffee Maker Magnetic Coffee Dripper",
       "url": "",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472191,
+      "stock_checked_at": 1795515454,
       "parent_asin": "B0F3TRMSSP",
       "stock_source": "serpapi"
     }
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

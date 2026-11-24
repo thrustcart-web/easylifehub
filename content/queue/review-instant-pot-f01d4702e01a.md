@@ -49,6 +49,6 @@ Ultimately, the value of this appliance lies in its ability to handle a wide var
 
 ### Product Links
 
-- Instant Pot: https://www.amazon.com/dp/B00FLYWNYQ?tag=hotr0e-20
+- Instant Pot: https://www.amazon.com/dp/B08R6KMBQT?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

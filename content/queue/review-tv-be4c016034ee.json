@@ -20,7 +20,7 @@
       "verified_product_title": "INSIGNIA 24” Class F20 Series LED HD Smart Fire TV, Voice Remote with Alexa, Free & Live TV",
       "parent_asin": "B0F9Z3H6YG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472228,
+      "stock_checked_at": 1795515718,
       "search_term": "tv for small desks",
       "url": "https://www.amazon.com/dp/B0F9Z3H6YG?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

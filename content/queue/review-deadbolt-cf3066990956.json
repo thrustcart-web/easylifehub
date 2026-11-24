@@ -20,7 +20,7 @@
       "verified_product_title": "Schlage B81 622 Deadbolt with Standard Trim, Non-Keyed One Sided Deadbolt, Highest Residential Security, Matte Black",
       "parent_asin": "B004L1W56G",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472382,
+      "stock_checked_at": 1795515215,
       "search_term": "deadbolt for key losing households",
       "url": "https://www.amazon.com/dp/B004L1W56G?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

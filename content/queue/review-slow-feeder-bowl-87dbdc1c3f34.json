@@ -20,7 +20,7 @@
       "verified_product_title": "Elevated Slow Feeder Dog Bowl, 6.1” Dog Food and Water Bowl Set with Stand",
       "parent_asin": "B0H74TG1JX",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472260,
+      "stock_checked_at": 1795515505,
       "search_term": "slow feeder bowl for apartments",
       "url": "https://www.amazon.com/dp/B0H74TG1JX?tag=hotr0e-20",
       "stock_source": "apify"
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

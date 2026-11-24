@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Instant Pot",
-      "asin": "B00FLYWNYQ",
+      "asin": "B08R6KMBQT",
       "asin_verified": true,
-      "verified_product_title": "Instant Pot Duo 6 Qt 7-in-1 Electric Pressure Cooker, Stainless Steel",
-      "parent_asin": "B00FLYWNYQ",
+      "verified_product_title": "Instant Pot Vortex Plus Mini 4 Qt 6-in-1 Air Fryer, Stainless Steel",
+      "parent_asin": "B08R6KMBQT",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472410,
+      "stock_checked_at": 1795515671,
       "search_term": "instant pot for families of four",
-      "url": "https://www.amazon.com/dp/B00FLYWNYQ?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B08R6KMBQT?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

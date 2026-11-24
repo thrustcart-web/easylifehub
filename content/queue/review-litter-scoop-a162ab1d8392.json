@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Litter Scoop",
-      "asin": "B0CCXFRBLL",
+      "asin": "B0DGXS5SKL",
       "asin_verified": true,
-      "verified_product_title": "Cat Litter Scoop - Metal Litter Scooper with Holder",
+      "verified_product_title": "Cat Litter Scoop - Stainless Steel Metal Cat Litter Scoop-Kitty Metal Scooper-Sturdy Mesh Scooper - Mesh Shovel-Easy to Clean - Suitable for Cat Litter Box - Light Black",
       "search_term": "litter scoop for multi cat homes",
-      "url": "https://www.amazon.com/dp/B0CCXFRBLL?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DGXS5SKL?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472310,
-      "parent_asin": "B0CCXFRBLL",
+      "stock_checked_at": 1795515579,
+      "parent_asin": "B0DGXS5SKL",
       "stock_source": "apify"
     }
   ],
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

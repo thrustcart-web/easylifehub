@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "LED Strip Lights",
-      "asin": "B09V366BDY",
+      "asin": "B0GZNM5WBW",
       "asin_verified": true,
-      "verified_product_title": "KSIPZE 100ft Led Strip Lights RGB Music Sync Color Changing Led Lights with Smart App Control Remote Led Lights for Bedroom Room Lighting Flexible Home Décor",
-      "parent_asin": "B09V366BDY",
+      "verified_product_title": "Smart Plug-in Dual Motion Sensor COB LED Strip Light for Under Bed, Under Cabinet, Hallway, Closet, 19.6ft APP Control, 3000K Warm White",
+      "parent_asin": "B0GZNM5WBW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472421,
+      "stock_checked_at": 1795515681,
       "search_term": "led strip lights for dark hallways",
-      "url": "https://www.amazon.com/dp/B09V366BDY?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0GZNM5WBW?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

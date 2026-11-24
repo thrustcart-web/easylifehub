@@ -49,6 +49,6 @@ By confirming these factors, you can decide whether the rack integrates smoothly
 
 ### Product Links
 
-- Spice Rack: https://www.amazon.com/dp/B07WZS5P7Q?tag=hotr0e-20
+- Spice Rack: https://www.amazon.com/dp/B0F1SZ8Z1G?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

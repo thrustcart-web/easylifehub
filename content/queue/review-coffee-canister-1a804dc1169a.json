@@ -21,7 +21,7 @@
       "search_term": "coffee canister for humid climates",
       "url": "https://www.amazon.com/dp/B09N96NNVD?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472103,
+      "stock_checked_at": 1795515366,
       "parent_asin": "B09N96NNVD",
       "stock_source": "apify"
     }
@@ -31,7 +31,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

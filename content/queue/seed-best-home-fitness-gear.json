@@ -21,7 +21,7 @@
       "search_term": "Cascade Mountain Tech Lightweight Aircraft Grade Aluminum Trekking Poles",
       "url": "https://www.amazon.com/dp/B01L2HYPNW?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472033,
+      "stock_checked_at": 1795515767,
       "parent_asin": "B01L2HYPNW",
       "stock_source": "apify"
     },
@@ -33,7 +33,7 @@
       "search_term": "Ultralight Warm Weather Sleeping Bag",
       "url": "https://www.amazon.com/dp/B0DK6VHTL4?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472185,
+      "stock_checked_at": 1795515447,
       "parent_asin": "B0DK6VHTL4",
       "stock_source": "apify"
     },
@@ -45,7 +45,7 @@
       "search_term": "Orienteering Compass Advanced Scout Compass for Hiking Camping Backpacking",
       "url": "https://www.amazon.com/dp/B07FXH2CPT?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472044,
+      "stock_checked_at": 1795515237,
       "parent_asin": "B07FXH2CPT",
       "stock_source": "apify"
     },
@@ -57,7 +57,7 @@
       "search_term": "Sports Drawstring Backpack Swim Gym Bag",
       "url": "https://www.amazon.com/dp/B09QKXMNRR?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472103,
+      "stock_checked_at": 1795515372,
       "parent_asin": "B09QKXMNRR",
       "stock_source": "apify"
     },
@@ -69,7 +69,7 @@
       "search_term": "OneTigris Hideout Hammock Underquilt",
       "url": "https://www.amazon.com/dp/B08936QVJD?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472076,
+      "stock_checked_at": 1795515777,
       "parent_asin": "B08936QVJD",
       "stock_source": "apify"
     }
@@ -79,7 +79,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Legal Pad",
-      "asin": "B001E6BW6K",
+      "asin": "B0FR8Q9PSG",
       "asin_verified": true,
-      "verified_product_title": "Ampad Gold Fibre Classic, Wirebound Planner Pad, Size 8-1/2 x 11-3/4, Red Cover, Legal Ruling , 70 Sheets per Pad (20-811),White",
-      "parent_asin": "B001E6BW6K",
+      "verified_product_title": "3 Pack Legal Pads，8.5\" x 11\"Note Pad，Wide Ruled Pad，30 Sheets Per（White）",
+      "parent_asin": "B0FR8Q9PSG",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472020,
+      "stock_checked_at": 1795515693,
       "search_term": "legal pad for bullet journalers",
-      "url": "https://www.amazon.com/dp/B001E6BW6K?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0FR8Q9PSG?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

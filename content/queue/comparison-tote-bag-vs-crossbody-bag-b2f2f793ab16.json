@@ -15,26 +15,26 @@
   "items": [
     {
       "name": "Tote Bag",
-      "asin": "B0HCMXZVJN",
+      "asin": "B0F2FQM7XP",
       "asin_verified": true,
-      "verified_product_title": "BAGSMART Tote Bag for Women, Puffer Travel Tote 2-PC Work Tote Nurse Bag",
+      "verified_product_title": "KALIDI PVC Tote Bag Women’s Kraft Paper Work Handbags Purses with Top Handle",
       "search_term": "Tote Bag",
-      "url": "https://www.amazon.com/dp/B0HCMXZVJN?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0F2FQM7XP?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472292,
-      "parent_asin": "B0HCMXZVJN",
+      "stock_checked_at": 1795515523,
+      "parent_asin": "B0F2FQM7XP",
       "stock_source": "apify"
     },
     {
       "name": "Crossbody Bag",
-      "asin": "B0BWH7GP46",
+      "asin": "B0C3LRC59F",
       "asin_verified": true,
-      "verified_product_title": "Simptech Mini Crossbody Sling Bag - Water-Resistant Dual Pocket Chest Pack - Lightweight Fanny Pack for Running, Travel & Everyday Workout",
+      "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
       "search_term": "Crossbody Bag",
-      "url": "https://www.amazon.com/dp/B0BWH7GP46?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472143,
-      "parent_asin": "B0BWH7GP46",
+      "stock_checked_at": 1795515536,
+      "parent_asin": "B0C3LRC59F",
       "stock_source": "apify"
     }
   ],
@@ -43,7 +43,7 @@
   "draft": false,
   "product_links_verified": true,
   "review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": false

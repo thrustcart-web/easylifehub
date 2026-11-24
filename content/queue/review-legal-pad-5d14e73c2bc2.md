@@ -49,6 +49,6 @@ Assess your primary writing tool and storage habits to finalize your choice. Foc
 
 ### Product Links
 
-- Legal Pad: https://www.amazon.com/dp/B001E6BW6K?tag=hotr0e-20
+- Legal Pad: https://www.amazon.com/dp/B0FR8Q9PSG?tag=hotr0e-20
 
 Disclosure: This article contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.

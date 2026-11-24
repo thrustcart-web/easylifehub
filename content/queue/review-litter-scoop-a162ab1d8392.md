@@ -43,6 +43,6 @@ Take time to verify slot spacing and handle dimensions before finalizing your ch
 
 ### Product Links
 
-- Litter Scoop: https://www.amazon.com/dp/B0CCXFRBLL?tag=hotr0e-20
+- Litter Scoop: https://www.amazon.com/dp/B0DGXS5SKL?tag=hotr0e-20
 
 Disclosure: This post contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only recommend products we would genuinely consider buying.

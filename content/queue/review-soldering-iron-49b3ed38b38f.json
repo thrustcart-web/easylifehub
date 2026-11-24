@@ -20,9 +20,10 @@
       "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
       "parent_asin": "B087767KNW",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795488706,
+      "stock_checked_at": 1795515346,
       "search_term": "soldering iron for t shirt makers",
-      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-soldering-iron-49b3ed38b38f.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795515513,
+  "stock_check_max_age_seconds": 86400
 }

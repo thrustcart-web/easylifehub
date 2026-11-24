@@ -20,9 +20,10 @@
       "verified_product_title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling Running",
       "parent_asin": "B071DQSZB8",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795488820,
+      "stock_checked_at": 1795515231,
       "search_term": "hydration bladder for backpacking",
-      "url": "https://www.amazon.com/dp/B071DQSZB8?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B071DQSZB8?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "review-hydration-bladder-fb12374e1465.html",
@@ -30,5 +31,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795515513,
+  "stock_check_max_age_seconds": 86400
 }

@@ -21,7 +21,7 @@
       "search_term": "Roborock Q5 Pro Robot Vacuum and Mop Combo",
       "url": "",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472191,
+      "stock_checked_at": 1795515454,
       "parent_asin": "B0F334DN9J"
     },
     {
@@ -32,7 +32,7 @@
       "search_term": "Shark PowerDetect Clean and Empty Cordless Stick Vacuum IP3251",
       "url": "https://www.amazon.com/dp/B0GTC5R424?tag=hotr0e-20",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472244,
+      "stock_checked_at": 1795515489,
       "parent_asin": "B0GTC5R424",
       "stock_source": "apify"
     }
@@ -42,7 +42,7 @@
   "draft": false,
   "product_links_verified": false,
   "review_required": true,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400,
   "editorial_review_required": false,
   "product_review_required": true

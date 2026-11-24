@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Monitor Arm",
-      "asin": "B0GP91FL59",
+      "asin": "B0FQM6QB48",
       "asin_verified": true,
-      "verified_product_title": "MSI MAG MT101G - Gas Spring Single Monitor Stand Arm, Supports 17-32\" and 22 lbs, VESA Compatible, Adjustable Gas Spring Mount, Clamp & Grommet, Quick Release Plate – Black",
-      "parent_asin": "B0GP91FL59",
+      "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
+      "parent_asin": "B0FQM6QB48",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472244,
+      "stock_checked_at": 1795515657,
       "search_term": "monitor arm",
-      "url": "https://www.amazon.com/dp/B0GP91FL59?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }

@@ -20,9 +20,10 @@
       "verified_product_title": "Shuttle Art Acrylic Paint Set, 16 x12ml Tubes Artist Quality Non Toxic Rich Pigments Colors Great for Kids Adults Professional Painting on Canvas Wood Clay Fabric Ceramic Crafts",
       "parent_asin": "B073BFF65P",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795488876,
+      "stock_checked_at": 1795515237,
       "search_term": "acrylic paint set for large canvases",
-      "url": "https://www.amazon.com/dp/B073BFF65P?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B073BFF65P?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Yarn",
@@ -31,9 +32,10 @@
       "verified_product_title": "60g Red Yarn for Crocheting and Knitting;66m (72yds) Cotton Yarn for Beginners with Easy-to-See Stitches;Worsted-Weight Medium #4;Cotton-Nylon Blend Yarn for Beginners Crochet Kit Making",
       "parent_asin": "B0BVV8MTX9",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795488883,
+      "stock_checked_at": 1795515406,
       "search_term": "yarn for beginners",
-      "url": "https://www.amazon.com/dp/B0BVV8MTX9?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0BVV8MTX9?tag=hotr0e-20",
+      "stock_source": "apify"
     },
     {
       "name": "Cutting Mat",
@@ -42,9 +44,10 @@
       "verified_product_title": "Fiskars 18\" x 24\" Self Healing Cutting Mat for Sewing, Lilac Mountain Haze",
       "parent_asin": "B0CP2XN8N3",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795488919,
+      "stock_checked_at": 1795515413,
       "search_term": "cutting mat for quilting",
-      "url": "https://www.amazon.com/dp/B0CP2XN8N3?tag=hotr0e-20"
+      "url": "https://www.amazon.com/dp/B0CP2XN8N3?tag=hotr0e-20",
+      "stock_source": "apify"
     }
   ],
   "html_file": "bestof-crafts-hobbies-sewing-machine-28149286cef3.html",
@@ -52,5 +55,8 @@
   "draft": false,
   "product_links_verified": true,
   "editorial_review_required": false,
-  "review_required": false
+  "review_required": false,
+  "product_review_required": false,
+  "products_audited_at": 1795515513,
+  "stock_check_max_age_seconds": 86400
 }

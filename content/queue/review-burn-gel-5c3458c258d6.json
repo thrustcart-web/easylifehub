@@ -15,14 +15,14 @@
   "items": [
     {
       "name": "Burn Gel",
-      "asin": "B07964SRBL",
+      "asin": "B0DFRYM7FP",
       "asin_verified": true,
-      "verified_product_title": "Be Smart SILVEX Wound Gel Nano Silver First Aid Topical Solution for Cuts & Burns",
-      "parent_asin": "B07964SRBL",
+      "verified_product_title": "SILVEX Burn Gel Nano Silver First Aid Topical for 1st & 2nd Degree Burns",
+      "parent_asin": "B0DFRYM7FP",
       "availability_type": "IN_STOCK",
-      "stock_checked_at": 1795472044,
+      "stock_checked_at": 1795515748,
       "search_term": "burn gel for families",
-      "url": "https://www.amazon.com/dp/B07964SRBL?tag=hotr0e-20",
+      "url": "https://www.amazon.com/dp/B0DFRYM7FP?tag=hotr0e-20",
       "stock_source": "apify"
     }
   ],
@@ -33,6 +33,6 @@
   "editorial_review_required": false,
   "review_required": false,
   "product_review_required": false,
-  "products_audited_at": 1795472266,
+  "products_audited_at": 1795515513,
   "stock_check_max_age_seconds": 86400
 }
