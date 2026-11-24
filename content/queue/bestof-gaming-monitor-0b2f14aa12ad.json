@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-gaming-monitor-0b2f14aa12ad",
+  "title": "Which Gaming Should You Buy? 3 Candidates Compared",
+  "meta_description": "Compare three essential gaming accessories: a Switch controller charging dock, a 4K USB capture card, and a 5-fan quiet laptop cooling pad stand.",
+  "template": "bestof",
+  "niche": "gaming",
+  "keyword": "Gaming",
+  "labels": [
+    "Reviews",
+    "Gaming"
+  ],
+  "source": "ai:gemini",
+  "provider": "gemini",
+  "words": 626,
+  "items": [
+    {
+      "name": "Controller Charging Dock",
+      "asin": "B07KYHBVYH",
+      "asin_verified": true,
+      "verified_product_title": "FASTSNAIL Switch Controller Charging Dock for Nintendo Switch for JoyCons",
+      "parent_asin": "B07KYHBVYH",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546359,
+      "search_term": "controller charging dock for hot rooms",
+      "url": "https://www.amazon.com/dp/B07KYHBVYH?tag=hotr0e-20"
+    },
+    {
+      "name": "Capture Card",
+      "asin": "B08Z3XDYQ7",
+      "asin_verified": true,
+      "verified_product_title": "Video Capture Card, 4K USB3.0 HDMI to USB C, 1080P 60FPS & 2K 30FPS",
+      "parent_asin": "B08Z3XDYQ7",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546370,
+      "search_term": "capture card for beginners",
+      "url": "https://www.amazon.com/dp/B08Z3XDYQ7?tag=hotr0e-20"
+    },
+    {
+      "name": "Laptop Cooling Pad",
+      "asin": "B01469DJLM",
+      "asin_verified": true,
+      "verified_product_title": "Kootek Laptop Cooling Pad Cooler Stand with 5 Quiet Fans for 12\"-17\" Laptop",
+      "parent_asin": "B01469DJLM",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546379,
+      "search_term": "laptop cooling pad for long sessions",
+      "url": "https://www.amazon.com/dp/B01469DJLM?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-gaming-monitor-0b2f14aa12ad.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

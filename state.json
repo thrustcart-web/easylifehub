@@ -863,6 +863,60 @@
       "ts": "2026-11-24T02:57:19Z",
       "source": "ai:groq",
       "words": 885
+    },
+    {
+      "slug": "review-monitor-riser-99e6ade35248",
+      "title": "Monitor Riser for Home Offices: Five Things Listings Skip",
+      "template": "review",
+      "keyword": "monitor riser for home offices",
+      "ts": "2026-11-24T18:52:22Z",
+      "source": "ai:gemini",
+      "words": 646
+    },
+    {
+      "slug": "bestof-gaming-monitor-0b2f14aa12ad",
+      "title": "Which Gaming Should You Buy? 3 Candidates Compared",
+      "template": "bestof",
+      "keyword": "Gaming",
+      "ts": "2026-11-24T18:54:04Z",
+      "source": "ai:gemini",
+      "words": 626
+    },
+    {
+      "slug": "review-moka-pot-2973dd7ad9a9",
+      "title": "Moka Pot with Temperature Stability: Does It Matter or Is It Marketing?",
+      "template": "review",
+      "keyword": "moka pot for beginners",
+      "ts": "2026-11-24T18:54:17Z",
+      "source": "ai:groq",
+      "words": 647
+    },
+    {
+      "slug": "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d",
+      "title": "Red Light Panel or Light Therapy Lamp? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "Red Light Panel vs Light Therapy Lamp",
+      "ts": "2026-11-24T18:54:54Z",
+      "source": "ai:groq",
+      "words": 635
+    },
+    {
+      "slug": "bestof-travel-lock-26e00aa295a2",
+      "title": "The 3 Travel Gear Worth Your Money (and 2 to Avoid)",
+      "template": "bestof",
+      "keyword": "Travel",
+      "ts": "2026-11-24T18:55:41Z",
+      "source": "ai:groq",
+      "words": 657
+    },
+    {
+      "slug": "review-plant-cages-1d5ea3b57ef8",
+      "title": "Plant Cages Review: Who It Is For and Who Should Skip It",
+      "template": "review",
+      "keyword": "plant cages for raised beds",
+      "ts": "2026-11-24T18:56:12Z",
+      "source": "ai:groq",
+      "words": 596
     }
   ],
   "published": [],
@@ -962,7 +1016,13 @@
     "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
     "review-hydration-bladder-fb12374e1465",
     "bestof-crafts-hobbies-sewing-machine-28149286cef3",
-    "review-paint-brush-set-8ac3cfa92ba1"
+    "review-paint-brush-set-8ac3cfa92ba1",
+    "review-monitor-riser-99e6ade35248",
+    "bestof-gaming-monitor-0b2f14aa12ad",
+    "review-moka-pot-2973dd7ad9a9",
+    "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d",
+    "bestof-travel-lock-26e00aa295a2",
+    "review-plant-cages-1d5ea3b57ef8"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -1360,7 +1420,33 @@
     "cutting mat for quilting": "2026-11-24",
     "paint brush set": "2026-11-24",
     "Paint Brush Set": "2026-11-24",
-    "paint brush set for large canvases": "2026-11-24"
+    "paint brush set for large canvases": "2026-11-24",
+    "monitor riser": "2026-11-24",
+    "Monitor Riser": "2026-11-24",
+    "monitor riser for home offices": "2026-11-24",
+    "gaming:capture card|controller charging dock|laptop cooling pad": "2026-11-24",
+    "Controller Charging Dock": "2026-11-24",
+    "controller charging dock for hot rooms": "2026-11-24",
+    "Capture Card": "2026-11-24",
+    "capture card for beginners": "2026-11-24",
+    "Laptop Cooling Pad": "2026-11-24",
+    "laptop cooling pad for long sessions": "2026-11-24",
+    "moka pot": "2026-11-24",
+    "Moka Pot": "2026-11-24",
+    "moka pot for beginners": "2026-11-24",
+    "red light panel|light therapy lamp": "2026-11-24",
+    "Red Light Panel": "2026-11-24",
+    "Light Therapy Lamp": "2026-11-24",
+    "travel:carry on luggage|eye mask|rfid blocking wallet": "2026-11-24",
+    "Rfid Blocking Wallet": "2026-11-24",
+    "rfid blocking wallet for hostel stays": "2026-11-24",
+    "Carry on Luggage": "2026-11-24",
+    "carry on luggage for long haul flights": "2026-11-24",
+    "Eye Mask": "2026-11-24",
+    "eye mask for long drives": "2026-11-24",
+    "plant cages": "2026-11-24",
+    "Plant Cages": "2026-11-24",
+    "plant cages for raised beds": "2026-11-24"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1557,7 +1643,13 @@
     "{A} or {B}? The Honest Comparison",
     "Choosing {A} {P} for {AUD}: Trade-Offs Included",
     "{F}: {N} Candidates Judged on the Same Criteria",
-    "{P}: Judging {FEAT} Against Real Use"
+    "{P}: Judging {FEAT} Against Real Use",
+    "{P} for {AUD}: Five Things Listings Skip",
+    "Which {F} Should You Buy? {N} Candidates Compared",
+    "{P} with {FEAT}: Does It Matter or Is It Marketing?",
+    "{A} or {B}? The Honest Comparison",
+    "The {N} {F} Worth Your Money (and {N2} to Avoid)",
+    "{P} Review: Who It Is For and Who Should Skip It"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1566,7 +1658,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 96,
+    "total_generated": 102,
     "total_published": 0
   },
   "blogger_titles": [

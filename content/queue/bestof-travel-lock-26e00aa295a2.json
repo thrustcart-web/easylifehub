@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-travel-lock-26e00aa295a2",
+  "title": "The 3 Travel Gear Worth Your Money (and 2 to Avoid)",
+  "meta_description": "Discover essentials—RFID‑blocking wallet, sturdy 20‑inch carry‑on, breathable eye mask—and tips for avoiding less‑useful gear on hostels, flights, road trips.",
+  "template": "bestof",
+  "niche": "travel",
+  "keyword": "Travel",
+  "labels": [
+    "Reviews",
+    "Travel"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 657,
+  "items": [
+    {
+      "name": "Rfid Blocking Wallet",
+      "asin": "B01D1XRUJG",
+      "asin_verified": true,
+      "verified_product_title": "Travelon Rfid Blocking Undergarment Waist Pouch Travel Wallet",
+      "parent_asin": "B01D1XRUJG",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546504,
+      "search_term": "rfid blocking wallet for hostel stays",
+      "url": "https://www.amazon.com/dp/B01D1XRUJG?tag=hotr0e-20"
+    },
+    {
+      "name": "Carry on Luggage",
+      "asin": "B0FJKNLNF6",
+      "asin_verified": true,
+      "verified_product_title": "LIGHT FLIGHT 20 Inch Carry On Luggage 22x14x9 Airline Approved, Royal Blue",
+      "parent_asin": "B0FJKNLNF6",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546518,
+      "search_term": "carry on luggage for long haul flights",
+      "url": "https://www.amazon.com/dp/B0FJKNLNF6?tag=hotr0e-20"
+    },
+    {
+      "name": "Eye Mask",
+      "asin": "B09CZ68WV3",
+      "asin_verified": true,
+      "verified_product_title": "MyHalos Sleep Mask for Men and Women, 3D Blackout Eye Masks for Sleep",
+      "parent_asin": "B09CZ68WV3",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546529,
+      "search_term": "eye mask for long drives",
+      "url": "https://www.amazon.com/dp/B09CZ68WV3?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-travel-lock-26e00aa295a2.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

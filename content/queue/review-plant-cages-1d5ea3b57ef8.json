@@ -1,0 +1,34 @@
+{
+  "slug": "review-plant-cages-1d5ea3b57ef8",
+  "title": "Plant Cages Review: Who It Is For and Who Should Skip It",
+  "meta_description": "Review of the 2‑piece pop‑up plant cage for raised beds, covering design, setup, durability, maintenance, and fit to help you decide if it suits your garden.",
+  "template": "review",
+  "niche": "garden",
+  "keyword": "plant cages for raised beds",
+  "labels": [
+    "Reviews",
+    "Garden"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 596,
+  "items": [
+    {
+      "name": "Plant Cages",
+      "asin": "B0GW4YB5Q1",
+      "asin_verified": true,
+      "verified_product_title": "2PCS Raised Garden Bed Cover, Pop Up Plant Protector Crop Cage",
+      "parent_asin": "B0GW4YB5Q1",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546565,
+      "search_term": "plant cages for raised beds",
+      "url": "https://www.amazon.com/dp/B0GW4YB5Q1?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-plant-cages-1d5ea3b57ef8.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

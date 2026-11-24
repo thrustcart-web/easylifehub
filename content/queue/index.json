@@ -3,242 +3,161 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-crafts-hobbies-sewing-machine-28149286cef3",
-      "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
-      "meta_description": "Acrylic paint, beginner yarn and a quilting cutting mat judged on the same criteria: what each listing confirms, what to verify and who each suits.",
+      "slug": "bestof-gaming-monitor-0b2f14aa12ad",
+      "title": "Which Gaming Should You Buy? 3 Candidates Compared",
+      "meta_description": "Compare three essential gaming accessories: a Switch controller charging dock, a 4K USB capture card, and a 5-fan quiet laptop cooling pad stand.",
       "template": "bestof",
-      "niche": "crafts & hobbies",
-      "keyword": "Crafts & Hobbies",
+      "niche": "gaming",
+      "keyword": "Gaming",
       "labels": [
         "Reviews",
-        "Crafts & Hobbies"
-      ],
-      "source": "ai:openrouter",
-      "provider": "openrouter",
-      "words": 1202,
-      "items": [
-        {
-          "name": "Acrylic Paint Set",
-          "asin": "B073BFF65P",
-          "asin_verified": true,
-          "verified_product_title": "Shuttle Art Acrylic Paint Set, 16 x12ml Tubes Artist Quality Non Toxic Rich Pigments Colors Great for Kids Adults Professional Painting on Canvas Wood Clay Fabric Ceramic Crafts",
-          "parent_asin": "B073BFF65P",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515237,
-          "search_term": "acrylic paint set for large canvases",
-          "url": "https://www.amazon.com/dp/B073BFF65P?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Yarn",
-          "asin": "B0BVV8MTX9",
-          "asin_verified": true,
-          "verified_product_title": "60g Red Yarn for Crocheting and Knitting;66m (72yds) Cotton Yarn for Beginners with Easy-to-See Stitches;Worsted-Weight Medium #4;Cotton-Nylon Blend Yarn for Beginners Crochet Kit Making",
-          "parent_asin": "B0BVV8MTX9",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515406,
-          "search_term": "yarn for beginners",
-          "url": "https://www.amazon.com/dp/B0BVV8MTX9?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Cutting Mat",
-          "asin": "B0CP2XN8N3",
-          "asin_verified": true,
-          "verified_product_title": "Fiskars 18\" x 24\" Self Healing Cutting Mat for Sewing, Lilac Mountain Haze",
-          "parent_asin": "B0CP2XN8N3",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515413,
-          "search_term": "cutting mat for quilting",
-          "url": "https://www.amazon.com/dp/B0CP2XN8N3?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "bestof-crafts-hobbies-sewing-machine-28149286cef3.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
-      "title": "Tote Bag or Crossbody Bag? The Honest Comparison",
-      "meta_description": "Compare tote and crossbody bags on strap adjustability, capacity, daily use, style compatibility, and upkeep to decide which fits your lifestyle best.",
-      "template": "comparison",
-      "niche": "fashion & accessories",
-      "keyword": "Tote Bag vs Crossbody Bag",
-      "labels": [
-        "Reviews",
-        "Fashion & Accessories"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 736,
-      "items": [
-        {
-          "name": "Tote Bag",
-          "asin": "B0F2FQM7XP",
-          "asin_verified": true,
-          "verified_product_title": "KALIDI PVC Tote Bag Women’s Kraft Paper Work Handbags Purses with Top Handle",
-          "search_term": "Tote Bag",
-          "url": "https://www.amazon.com/dp/B0F2FQM7XP?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515523,
-          "parent_asin": "B0F2FQM7XP",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Crossbody Bag",
-          "asin": "B0C3LRC59F",
-          "asin_verified": true,
-          "verified_product_title": "Small Sling Backpack Crossbody Bags for Women Men, Small Sling Bag Cross Body Bag Fanny Packs Crossbody Purses - Black",
-          "search_term": "Crossbody Bag",
-          "url": "https://www.amazon.com/dp/B0C3LRC59F?tag=hotr0e-20",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515536,
-          "parent_asin": "B0C3LRC59F",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": false
-    },
-    {
-      "slug": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
-      "title": "USB C Hub or USB Charger? The Honest Comparison",
-      "meta_description": "Compare Anker’s 5‑in‑1 USB‑C Hub and Zolo 50W USB‑C Charger. Learn which fits your connectivity or power needs, compatibility checks, and ownership tips.",
-      "template": "comparison",
-      "niche": "electronics",
-      "keyword": "USB C Hub vs USB Charger",
-      "labels": [
-        "Reviews",
-        "Electronics"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 526,
-      "items": [
-        {
-          "name": "USB C Hub",
-          "asin": "B0BQLLB61B",
-          "asin_verified": true,
-          "verified_product_title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display",
-          "parent_asin": "B0BQLLB61B",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515406,
-          "search_term": "USB C Hub",
-          "url": "https://www.amazon.com/dp/B0BQLLB61B?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "USB Charger",
-          "asin": "B0GSZLLR39",
-          "asin_verified": true,
-          "verified_product_title": "Anker Zolo USB C Charger Block, 50W Max Output Type C Charger Fast Charging",
-          "parent_asin": "B0GSZLLR39",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515489,
-          "search_term": "USB Charger",
-          "url": "https://www.amazon.com/dp/B0GSZLLR39?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "dual-monitor-arm-guide-load-vesa-alignment-desk-space",
-      "title": "Dual Monitor Arm Guide: Screen Fit, Weight Capacity, Alignment, and Desk Space",
-      "meta_description": "Learn how to select the right dual monitor arm by evaluating weight capacity, VESA compatibility, desk clearance, screen alignment, and layout options.",
-      "template": "review",
-      "niche": "home office",
-      "keyword": "dual monitor arm buying guide",
-      "labels": [
-        "Reviews",
-        "Home Office"
+        "Gaming"
       ],
       "source": "ai:gemini",
       "provider": "gemini",
-      "words": 1597,
+      "words": 626,
       "items": [
         {
-          "name": "Dual Monitor Arm",
-          "asin": "B07T5SY43L",
+          "name": "Controller Charging Dock",
+          "asin": "B07KYHBVYH",
           "asin_verified": true,
-          "verified_product_title": "HUANUO FlowLift™ Dual Monitor Stand, Fully Adjustable Gaming Monitor Desk Mount for 13–32″ Computer Screens, Full Motion VESA 75x75/100x100 with C-Clamp & Grommet Base, Each Arm Holds 4.4 to 19.8 lbs",
-          "parent_asin": "B07T5SY43L",
+          "verified_product_title": "FASTSNAIL Switch Controller Charging Dock for Nintendo Switch for JoyCons",
+          "parent_asin": "B07KYHBVYH",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515303,
-          "search_term": "dual monitor arm",
-          "url": "https://www.amazon.com/dp/B07T5SY43L?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795546359,
+          "search_term": "controller charging dock for hot rooms",
+          "url": "https://www.amazon.com/dp/B07KYHBVYH?tag=hotr0e-20"
+        },
+        {
+          "name": "Capture Card",
+          "asin": "B08Z3XDYQ7",
+          "asin_verified": true,
+          "verified_product_title": "Video Capture Card, 4K USB3.0 HDMI to USB C, 1080P 60FPS & 2K 30FPS",
+          "parent_asin": "B08Z3XDYQ7",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546370,
+          "search_term": "capture card for beginners",
+          "url": "https://www.amazon.com/dp/B08Z3XDYQ7?tag=hotr0e-20"
+        },
+        {
+          "name": "Laptop Cooling Pad",
+          "asin": "B01469DJLM",
+          "asin_verified": true,
+          "verified_product_title": "Kootek Laptop Cooling Pad Cooler Stand with 5 Quiet Fans for 12\"-17\" Laptop",
+          "parent_asin": "B01469DJLM",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546379,
+          "search_term": "laptop cooling pad for long sessions",
+          "url": "https://www.amazon.com/dp/B01469DJLM?tag=hotr0e-20"
         }
       ],
-      "html_file": "dual-monitor-arm-guide-load-vesa-alignment-desk-space.html",
+      "html_file": "bestof-gaming-monitor-0b2f14aa12ad.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
     },
     {
-      "slug": "monitor-arm-ergonomic-setup-screen-height-viewing-distance",
-      "title": "How to Set Up a Monitor Arm: Screen Height, Viewing Distance, and Desk Position",
-      "meta_description": "Learn how to set up a monitor arm correctly by adjusting screen height, viewing distance, tilt, and cable routing for an ergonomic home office desk setup.",
-      "template": "review",
-      "niche": "home office",
-      "keyword": "how to set up a monitor arm",
+      "slug": "bestof-travel-lock-26e00aa295a2",
+      "title": "The 3 Travel Gear Worth Your Money (and 2 to Avoid)",
+      "meta_description": "Discover essentials—RFID‑blocking wallet, sturdy 20‑inch carry‑on, breathable eye mask—and tips for avoiding less‑useful gear on hostels, flights, road trips.",
+      "template": "bestof",
+      "niche": "travel",
+      "keyword": "Travel",
       "labels": [
         "Reviews",
-        "Home Office"
+        "Travel"
       ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 1322,
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 657,
       "items": [
         {
-          "name": "Monitor Arm",
-          "asin": "B0FQM6QB48",
+          "name": "Rfid Blocking Wallet",
+          "asin": "B01D1XRUJG",
           "asin_verified": true,
-          "verified_product_title": "ErGear Single Monitor Arm, Fully Adjustable Monitor Mount for 13–34 Inch Screens, Fast Install Computer Monitor Stand with Tool-Free VESA Mount, Cable Management, Holds 4.84 to 19.8 lbs",
-          "parent_asin": "B0FQM6QB48",
+          "verified_product_title": "Travelon Rfid Blocking Undergarment Waist Pouch Travel Wallet",
+          "parent_asin": "B01D1XRUJG",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515657,
-          "search_term": "monitor arm",
-          "url": "https://www.amazon.com/dp/B0FQM6QB48?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795546504,
+          "search_term": "rfid blocking wallet for hostel stays",
+          "url": "https://www.amazon.com/dp/B01D1XRUJG?tag=hotr0e-20"
+        },
+        {
+          "name": "Carry on Luggage",
+          "asin": "B0FJKNLNF6",
+          "asin_verified": true,
+          "verified_product_title": "LIGHT FLIGHT 20 Inch Carry On Luggage 22x14x9 Airline Approved, Royal Blue",
+          "parent_asin": "B0FJKNLNF6",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546518,
+          "search_term": "carry on luggage for long haul flights",
+          "url": "https://www.amazon.com/dp/B0FJKNLNF6?tag=hotr0e-20"
+        },
+        {
+          "name": "Eye Mask",
+          "asin": "B09CZ68WV3",
+          "asin_verified": true,
+          "verified_product_title": "MyHalos Sleep Mask for Men and Women, 3D Blackout Eye Masks for Sleep",
+          "parent_asin": "B09CZ68WV3",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546529,
+          "search_term": "eye mask for long drives",
+          "url": "https://www.amazon.com/dp/B09CZ68WV3?tag=hotr0e-20"
         }
       ],
-      "html_file": "monitor-arm-ergonomic-setup-screen-height-viewing-distance.html",
+      "html_file": "bestof-travel-lock-26e00aa295a2.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400
+      "review_required": false
+    },
+    {
+      "slug": "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d",
+      "title": "Red Light Panel or Light Therapy Lamp? The Honest Comparison",
+      "meta_description": "Compare a red light therapy panel with a white lamp to decide between tissue recovery and mood‑boosting benefits, covering spectrum, intensity, design, and use.",
+      "template": "comparison",
+      "niche": "health & wellness",
+      "keyword": "Red Light Panel vs Light Therapy Lamp",
+      "labels": [
+        "Reviews",
+        "Health & Wellness"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 635,
+      "items": [
+        {
+          "name": "Red Light Panel",
+          "asin": "B07T81R1DX",
+          "asin_verified": true,
+          "verified_product_title": "Hooga Red Light Therapy Panel for Body & Face, HG300 – 660nm Red & 850nm Near Infrared, 60 LEDs, Adjustable Stand & Timer",
+          "parent_asin": "B07T81R1DX",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546467,
+          "search_term": "Red Light Panel",
+          "url": "https://www.amazon.com/dp/B07T81R1DX?tag=hotr0e-20"
+        },
+        {
+          "name": "Light Therapy Lamp",
+          "asin": "B08BCLLYN5",
+          "asin_verified": true,
+          "verified_product_title": "Verilux HappyLight Lumi Plus - Light Therapy Lamp with 10,000 Lux, UV-Free, LED Bright White Light with Adjustable Brightness, Countdown Timer, & Detachable Stand - Boost Mood, Sleep, and Focus",
+          "parent_asin": "B08BCLLYN5",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546486,
+          "search_term": "Light Therapy Lamp",
+          "url": "https://www.amazon.com/dp/B08BCLLYN5?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-air-fryer-58220932fc1a",
@@ -382,44 +301,6 @@
         }
       ],
       "html_file": "review-burn-gel-5c3458c258d6.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795515513,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "review-cabinet-locks-62cfe8674cb9",
-      "title": "Cabinet Locks with Width Range: Does It Matter or Is It Marketing?",
-      "meta_description": "Discover if adjustable width range matters for adhesive child safety latches. Learn setup tips, renter compatibility, and fit checks for Infinno cabinet locks.",
-      "template": "review",
-      "niche": "baby & kids",
-      "keyword": "cabinet locks for renters",
-      "labels": [
-        "Reviews",
-        "Baby & Kids"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 675,
-      "items": [
-        {
-          "name": "Cabinet Locks",
-          "asin": "B0HDJ496DX",
-          "asin_verified": true,
-          "verified_product_title": "Magnetic Cabinet Locks Baby Proofing: 𝟐𝟒 𝐏𝐚𝐜𝐤𝐬 & 𝟐 𝐊𝐞𝐲𝐬",
-          "parent_asin": "B0HDJ496DX",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795515513,
-          "search_term": "cabinet locks for renters",
-          "url": "https://www.amazon.com/dp/B0HDJ496DX?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "review-cabinet-locks-62cfe8674cb9.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
@@ -1190,6 +1071,40 @@
       "product_review_required": false
     },
     {
+      "slug": "review-moka-pot-2973dd7ad9a9",
+      "title": "Moka Pot with Temperature Stability: Does It Matter or Is It Marketing?",
+      "meta_description": "Learn if temperature stability in the Primula Classic Moka Pot truly improves coffee extraction, what to verify, and how design, use, and care affect beginners.",
+      "template": "review",
+      "niche": "coffee & espresso",
+      "keyword": "moka pot for beginners",
+      "labels": [
+        "Reviews",
+        "Coffee & Espresso"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 647,
+      "items": [
+        {
+          "name": "Moka Pot",
+          "asin": "B001J1L59E",
+          "asin_verified": true,
+          "verified_product_title": "Primula Classic Stovetop Espresso and Coffee Maker, Moka Pot for Italian and Cuban Café Brewing, Greca Coffee Maker, Cafeteras, 6 Espresso Cups, Silver",
+          "parent_asin": "B001J1L59E",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546452,
+          "search_term": "moka pot for beginners",
+          "url": "https://www.amazon.com/dp/B001J1L59E?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-moka-pot-2973dd7ad9a9.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-money-belt-50c248696d72",
       "title": "Money Belt for Business Trips: An Honest Buying Guide",
       "meta_description": "Discover what to look for in a money belt for business travel, including security features, TSA acceptance, comfort, and how to verify fit and durability before buying.",
@@ -1226,6 +1141,40 @@
       "product_review_required": false,
       "products_audited_at": 1795515513,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-monitor-riser-99e6ade35248",
+      "title": "Monitor Riser for Home Offices: Five Things Listings Skip",
+      "meta_description": "Choosing a monitor riser for your home office requires checking desk footprint, structural support, and storage. Learn what product listings often omit.",
+      "template": "review",
+      "niche": "office & school supplies",
+      "keyword": "monitor riser for home offices",
+      "labels": [
+        "Reviews",
+        "Office & School Supplies"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 646,
+      "items": [
+        {
+          "name": "Monitor Riser",
+          "asin": "B0HHQJQ78T",
+          "asin_verified": true,
+          "verified_product_title": "17 Inch Adjustable Wood Computer Monitor Stand Riser, Office Desk Organizer and Accessories for Monitor, Laptop, PC, Printer, Office Desk Accessories Workspace Organizer for Home Office Supplies, Brown",
+          "parent_asin": "B0HHQJQ78T",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546292,
+          "search_term": "monitor riser for home offices",
+          "url": "https://www.amazon.com/dp/B0HHQJQ78T?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-monitor-riser-99e6ade35248.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-mortar-and-pestle-3fbfd223937b",
@@ -1416,6 +1365,40 @@
       "product_review_required": false,
       "products_audited_at": 1795515513,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-plant-cages-1d5ea3b57ef8",
+      "title": "Plant Cages Review: Who It Is For and Who Should Skip It",
+      "meta_description": "Review of the 2‑piece pop‑up plant cage for raised beds, covering design, setup, durability, maintenance, and fit to help you decide if it suits your garden.",
+      "template": "review",
+      "niche": "garden",
+      "keyword": "plant cages for raised beds",
+      "labels": [
+        "Reviews",
+        "Garden"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 596,
+      "items": [
+        {
+          "name": "Plant Cages",
+          "asin": "B0GW4YB5Q1",
+          "asin_verified": true,
+          "verified_product_title": "2PCS Raised Garden Bed Cover, Pop Up Plant Protector Crop Cage",
+          "parent_asin": "B0GW4YB5Q1",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795546565,
+          "search_term": "plant cages for raised beds",
+          "url": "https://www.amazon.com/dp/B0GW4YB5Q1?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-plant-cages-1d5ea3b57ef8.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-plant-pots-ecc22dbb4c63",

@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d",
+  "title": "Red Light Panel or Light Therapy Lamp? The Honest Comparison",
+  "meta_description": "Compare a red light therapy panel with a white lamp to decide between tissue recovery and mood‑boosting benefits, covering spectrum, intensity, design, and use.",
+  "template": "comparison",
+  "niche": "health & wellness",
+  "keyword": "Red Light Panel vs Light Therapy Lamp",
+  "labels": [
+    "Reviews",
+    "Health & Wellness"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 635,
+  "items": [
+    {
+      "name": "Red Light Panel",
+      "asin": "B07T81R1DX",
+      "asin_verified": true,
+      "verified_product_title": "Hooga Red Light Therapy Panel for Body & Face, HG300 – 660nm Red & 850nm Near Infrared, 60 LEDs, Adjustable Stand & Timer",
+      "parent_asin": "B07T81R1DX",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546467,
+      "search_term": "Red Light Panel",
+      "url": "https://www.amazon.com/dp/B07T81R1DX?tag=hotr0e-20"
+    },
+    {
+      "name": "Light Therapy Lamp",
+      "asin": "B08BCLLYN5",
+      "asin_verified": true,
+      "verified_product_title": "Verilux HappyLight Lumi Plus - Light Therapy Lamp with 10,000 Lux, UV-Free, LED Bright White Light with Adjustable Brightness, Countdown Timer, & Detachable Stand - Boost Mood, Sleep, and Focus",
+      "parent_asin": "B08BCLLYN5",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546486,
+      "search_term": "Light Therapy Lamp",
+      "url": "https://www.amazon.com/dp/B08BCLLYN5?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "comparison-red-light-panel-vs-light-therapy-lamp-8788a20ff21d.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

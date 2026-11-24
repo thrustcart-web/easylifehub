@@ -1,0 +1,34 @@
+{
+  "slug": "review-moka-pot-2973dd7ad9a9",
+  "title": "Moka Pot with Temperature Stability: Does It Matter or Is It Marketing?",
+  "meta_description": "Learn if temperature stability in the Primula Classic Moka Pot truly improves coffee extraction, what to verify, and how design, use, and care affect beginners.",
+  "template": "review",
+  "niche": "coffee & espresso",
+  "keyword": "moka pot for beginners",
+  "labels": [
+    "Reviews",
+    "Coffee & Espresso"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 647,
+  "items": [
+    {
+      "name": "Moka Pot",
+      "asin": "B001J1L59E",
+      "asin_verified": true,
+      "verified_product_title": "Primula Classic Stovetop Espresso and Coffee Maker, Moka Pot for Italian and Cuban Café Brewing, Greca Coffee Maker, Cafeteras, 6 Espresso Cups, Silver",
+      "parent_asin": "B001J1L59E",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795546452,
+      "search_term": "moka pot for beginners",
+      "url": "https://www.amazon.com/dp/B001J1L59E?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-moka-pot-2973dd7ad9a9.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

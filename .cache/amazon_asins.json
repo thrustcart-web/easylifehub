@@ -1799,5 +1799,104 @@
     "stock_checked_at": 1795515322,
     "stock_source": "apify",
     "verified_at": "2026-11-24T10:23:23Z"
+  },
+  "monitor riser": {
+    "asin": "B0HHQJQ78T",
+    "parent_asin": "B0HHQJQ78T",
+    "title": "17 Inch Adjustable Wood Computer Monitor Stand Riser, Office Desk Organizer and Accessories for Monitor, Laptop, PC, Printer, Office Desk Accessories Workspace Organizer for Home Office Supplies, Brown",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546292,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:51:32Z"
+  },
+  "controller charging dock": {
+    "asin": "B07KYHBVYH",
+    "parent_asin": "B07KYHBVYH",
+    "title": "FASTSNAIL Switch Controller Charging Dock for Nintendo Switch for JoyCons",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546359,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:52:39Z"
+  },
+  "capture card": {
+    "asin": "B08Z3XDYQ7",
+    "parent_asin": "B08Z3XDYQ7",
+    "title": "Video Capture Card, 4K USB3.0 HDMI to USB C, 1080P 60FPS & 2K 30FPS",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546370,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:52:50Z"
+  },
+  "laptop cooling pad": {
+    "asin": "B01469DJLM",
+    "parent_asin": "B01469DJLM",
+    "title": "Kootek Laptop Cooling Pad Cooler Stand with 5 Quiet Fans for 12\"-17\" Laptop",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546379,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:52:59Z"
+  },
+  "moka pot": {
+    "asin": "B001J1L59E",
+    "parent_asin": "B001J1L59E",
+    "title": "Primula Classic Stovetop Espresso and Coffee Maker, Moka Pot for Italian and Cuban Café Brewing, Greca Coffee Maker, Cafeteras, 6 Espresso Cups, Silver",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546452,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:54:12Z"
+  },
+  "red light panel": {
+    "asin": "B07T81R1DX",
+    "parent_asin": "B07T81R1DX",
+    "title": "Hooga Red Light Therapy Panel for Body & Face, HG300 – 660nm Red & 850nm Near Infrared, 60 LEDs, Adjustable Stand & Timer",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546467,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:54:27Z"
+  },
+  "light therapy lamp": {
+    "asin": "B08BCLLYN5",
+    "parent_asin": "B08BCLLYN5",
+    "title": "Verilux HappyLight Lumi Plus - Light Therapy Lamp with 10,000 Lux, UV-Free, LED Bright White Light with Adjustable Brightness, Countdown Timer, & Detachable Stand - Boost Mood, Sleep, and Focus",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546486,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:54:46Z"
+  },
+  "rfid blocking wallet": {
+    "asin": "B01D1XRUJG",
+    "parent_asin": "B01D1XRUJG",
+    "title": "Travelon Rfid Blocking Undergarment Waist Pouch Travel Wallet",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546504,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:55:04Z"
+  },
+  "carry on luggage": {
+    "asin": "B0FJKNLNF6",
+    "parent_asin": "B0FJKNLNF6",
+    "title": "LIGHT FLIGHT 20 Inch Carry On Luggage 22x14x9 Airline Approved, Royal Blue",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546518,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:55:18Z"
+  },
+  "eye mask": {
+    "asin": "B09CZ68WV3",
+    "parent_asin": "B09CZ68WV3",
+    "title": "MyHalos Sleep Mask for Men and Women, 3D Blackout Eye Masks for Sleep",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546529,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:55:29Z"
+  },
+  "plant cages": {
+    "asin": "B0GW4YB5Q1",
+    "parent_asin": "B0GW4YB5Q1",
+    "title": "2PCS Raised Garden Bed Cover, Pop Up Plant Protector Crop Cage",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795546565,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T18:56:05Z"
   }
 }
