@@ -1,0 +1,34 @@
+{
+  "slug": "review-soldering-iron-49b3ed38b38f",
+  "title": "Soldering Iron Review: What I Would Check Before Buying",
+  "meta_description": "Explore key factors before buying a soldering iron: power, temperature control, tip range, heating speed, ergonomics, and maintenance for craft projects.",
+  "template": "review",
+  "niche": "crafts & hobbies",
+  "keyword": "soldering iron for t shirt makers",
+  "labels": [
+    "Reviews",
+    "Crafts & Hobbies"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 547,
+  "items": [
+    {
+      "name": "Soldering Iron",
+      "asin": "B087767KNW",
+      "asin_verified": true,
+      "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+      "parent_asin": "B087767KNW",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488706,
+      "search_term": "soldering iron for t shirt makers",
+      "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-soldering-iron-49b3ed38b38f.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

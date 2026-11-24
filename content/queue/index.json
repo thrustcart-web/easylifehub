@@ -3,9 +3,9 @@
   "count": 59,
   "posts": [
     {
-      "slug": "bestof-crafts-hobbies-knife-9fb096ceae4d",
-      "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
-      "meta_description": "Compare a 60W soldering iron, a 36‑color acrylic paint set for canvases, and a self‑healing cutting mat for left‑handed users to see which fits your hobby.",
+      "slug": "bestof-crafts-hobbies-sewing-machine-28149286cef3",
+      "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+      "meta_description": "Acrylic paint, beginner yarn and a quilting cutting mat judged on the same criteria: what each listing confirms, what to verify and who each suits.",
       "template": "bestof",
       "niche": "crafts & hobbies",
       "keyword": "Crafts & Hobbies",
@@ -13,266 +13,50 @@
         "Reviews",
         "Crafts & Hobbies"
       ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 766,
+      "source": "ai:openrouter",
+      "provider": "openrouter",
+      "words": 1202,
       "items": [
         {
-          "name": "Soldering Iron",
-          "asin": "B09DY7CCW5",
+          "name": "Acrylic Paint Set",
+          "asin": "B073BFF65P",
           "asin_verified": true,
-          "verified_product_title": "60W Adjustable Temperature Soldering Iron Kit - 9-in-1 With 5 Tips, Solder Wire Stand for Soldering and Repair",
-          "parent_asin": "B09DY7CCW5",
+          "verified_product_title": "Shuttle Art Acrylic Paint Set, 16 x12ml Tubes Artist Quality Non Toxic Rich Pigments Colors Great for Kids Adults Professional Painting on Canvas Wood Clay Fabric Ceramic Crafts",
+          "parent_asin": "B073BFF65P",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472514,
-          "search_term": "soldering iron for electronics hobbies",
-          "url": "https://www.amazon.com/dp/B09DY7CCW5?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795488876,
+          "search_term": "acrylic paint set for large canvases",
+          "url": "https://www.amazon.com/dp/B073BFF65P?tag=hotr0e-20"
         },
         {
-          "name": "Acrylic Paint Set",
-          "asin": "B07Z93LQDB",
+          "name": "Yarn",
+          "asin": "B0BVV8MTX9",
           "asin_verified": true,
-          "verified_product_title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
-          "parent_asin": "B07Z93LQDB",
+          "verified_product_title": "60g Red Yarn for Crocheting and Knitting;66m (72yds) Cotton Yarn for Beginners with Easy-to-See Stitches;Worsted-Weight Medium #4;Cotton-Nylon Blend Yarn for Beginners Crochet Kit Making",
+          "parent_asin": "B0BVV8MTX9",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472069,
-          "search_term": "acrylic paint set for large canvases",
-          "url": "https://www.amazon.com/dp/B07Z93LQDB?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795488883,
+          "search_term": "yarn for beginners",
+          "url": "https://www.amazon.com/dp/B0BVV8MTX9?tag=hotr0e-20"
         },
         {
           "name": "Cutting Mat",
-          "asin": "B00GSFSFF8",
+          "asin": "B0CP2XN8N3",
           "asin_verified": true,
-          "verified_product_title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
-          "parent_asin": "B00GSFSFF8",
+          "verified_product_title": "Fiskars 18\" x 24\" Self Healing Cutting Mat for Sewing, Lilac Mountain Haze",
+          "parent_asin": "B0CP2XN8N3",
           "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472026,
-          "search_term": "cutting mat for left handed cutters",
-          "url": "https://www.amazon.com/dp/B00GSFSFF8?tag=hotr0e-20",
-          "stock_source": "apify"
+          "stock_checked_at": 1795488919,
+          "search_term": "cutting mat for quilting",
+          "url": "https://www.amazon.com/dp/B0CP2XN8N3?tag=hotr0e-20"
         }
       ],
-      "html_file": "bestof-crafts-hobbies-knife-9fb096ceae4d.html",
+      "html_file": "bestof-crafts-hobbies-sewing-machine-28149286cef3.html",
       "layout_version": 4,
       "draft": false,
       "product_links_verified": true,
       "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795472266,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "bestof-tools-tool-745e50aa0a93",
-      "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
-      "meta_description": "Select the right tools for custom workshop projects with our guide covering circular saw guides, heat guns, and impact drivers for precise task performance.",
-      "template": "bestof",
-      "niche": "tools",
-      "keyword": "Tools",
-      "labels": [
-        "Reviews",
-        "Tools"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 667,
-      "items": [
-        {
-          "name": "Circular Saw",
-          "asin": "B0GWCXW55N",
-          "asin_verified": true,
-          "verified_product_title": "GALAX PRO Mini Circular Saw with Laser Guide,  2 pcs 4-1/2\" 24T TCT Blades",
-          "parent_asin": "B0GWCXW55N",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472253,
-          "search_term": "circular saw for curved cuts",
-          "url": "https://www.amazon.com/dp/B0GWCXW55N?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Heat Gun",
-          "asin": "B086WH19WH",
-          "asin_verified": true,
-          "verified_product_title": "SEEKONE Heat Gun 1800W with 1112℉&752℉ 2 Temperature Settings for Crafting",
-          "parent_asin": "B086WH19WH",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472069,
-          "search_term": "heat gun for diy beginners",
-          "url": "https://www.amazon.com/dp/B086WH19WH?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Impact Driver",
-          "asin": "B0BQCWH5KF",
-          "asin_verified": true,
-          "verified_product_title": "DEWALT 20V MAX XR Impact Driver, 1/4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B)",
-          "parent_asin": "B0BQCWH5KF",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472129,
-          "search_term": "impact driver for weekend projects",
-          "url": "https://www.amazon.com/dp/B0BQCWH5KF?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "bestof-tools-tool-745e50aa0a93.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795472266,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "comparison-blender-vs-personal-blender-a0d8861f0764",
-      "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
-      "meta_description": "Compare a 1400W Ninja Professional Plus Blender with a 250W Magic Bullet Personal Blender. See how power, size and cleaning affect the right kitchen fit.",
-      "template": "comparison",
-      "niche": "kitchen",
-      "keyword": "Blender vs Personal Blender",
-      "labels": [
-        "Reviews",
-        "Kitchen"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 597,
-      "items": [
-        {
-          "name": "Blender",
-          "asin": "B00OW16ZR0",
-          "asin_verified": true,
-          "verified_product_title": "BLACK+DECKER Countertop Blender with 6-Cup Glass Jar, 10-Speed Settings, Black, BL2010BG",
-          "parent_asin": "B00OW16ZR0",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472026,
-          "search_term": "Blender",
-          "url": "https://www.amazon.com/dp/B00OW16ZR0?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Personal Blender",
-          "asin": "B0CDW6J1W8",
-          "asin_verified": true,
-          "verified_product_title": "KOIOS Smoothie Blender Kitchen, 900W Personal Blenders with 3 To-Go Cups",
-          "parent_asin": "B0CDW6J1W8",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472153,
-          "search_term": "Personal Blender",
-          "url": "https://www.amazon.com/dp/B0CDW6J1W8?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-blender-vs-personal-blender-a0d8861f0764.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795472266,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c",
-      "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
-      "meta_description": "Compare a rechargeable fabric shaver with 3 speeds to an OXO battery‑run pet hair brush, covering power, cleaning method, portability, and home size.",
-      "template": "comparison",
-      "niche": "home cleaning",
-      "keyword": "Lint Remover vs Pet Hair Remover",
-      "labels": [
-        "Reviews",
-        "Home Cleaning"
-      ],
-      "source": "ai:groq",
-      "provider": "groq",
-      "words": 646,
-      "items": [
-        {
-          "name": "Lint Remover",
-          "asin": "B0CJRM936N",
-          "asin_verified": true,
-          "verified_product_title": "Fabric Shaver, Lint Remover Rechargeable, Electric Portable Sweater Defuzzer with 3 Speeds, 6 Leaf Blades, Digital LED Display to Remove Pilling for Clothes, Furniture, Sweater, Couch, Blanket",
-          "parent_asin": "B0CJRM936N",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472153,
-          "search_term": "Lint Remover",
-          "url": "https://www.amazon.com/dp/B0CJRM936N?tag=hotr0e-20",
-          "stock_source": "apify"
-        },
-        {
-          "name": "Pet Hair Remover",
-          "asin": "B00BAGTNAQ",
-          "asin_verified": true,
-          "verified_product_title": "ChomChom Roller Pet Hair Remover – Original Size Reusable Lint Roller for Cat & Dog Hair on Furniture, Couch, Carpet, Car, Rugs & Bedding – Portable, Eco-Friendly (White)",
-          "parent_asin": "B00BAGTNAQ",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472460,
-          "search_term": "Pet Hair Remover",
-          "url": "https://www.amazon.com/dp/B00BAGTNAQ?tag=hotr0e-20",
-          "stock_source": "apify"
-        }
-      ],
-      "html_file": "comparison-lint-remover-vs-pet-hair-remover-73f15999e58c.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": true,
-      "editorial_review_required": false,
-      "review_required": false,
-      "product_review_required": false,
-      "products_audited_at": 1795472266,
-      "stock_check_max_age_seconds": 86400
-    },
-    {
-      "slug": "comparison-monitor-arm-vs-monitor-stand-829fac306647",
-      "title": "Monitor Arm vs Monitor Stand: Which One Should You Actually Buy?",
-      "meta_description": "Compare the VIVO Monitor Arm and OPNICE Monitor Stand Riser to find out which setup fits your desk, screen size, and workspace storage needs effectively.",
-      "template": "comparison",
-      "niche": "home office",
-      "keyword": "Monitor Arm vs Monitor Stand",
-      "labels": [
-        "Reviews",
-        "Home Office"
-      ],
-      "source": "ai:gemini",
-      "provider": "gemini",
-      "words": 676,
-      "items": [
-        {
-          "name": "VIVO Monitor Arm",
-          "asin": "B01NH0HTM5",
-          "asin_verified": false,
-          "verified_product_title": "VIVO AeroPoise™ Single Monitor Stand, for 17\" to 32\" Screens up to 19.8 lbs | Fully Adjustable Arm, Mechanical Articulating Desk Mount, VESA 75x75 and 100x100, Black, STAND-V001O",
-          "search_term": "VIVO STAND-V001O Single Monitor Arm",
-          "url": "",
-          "availability_type": "UNKNOWN",
-          "stock_checked_at": 1795472266,
-          "parent_asin": "B01NH0HTM5"
-        },
-        {
-          "name": "OPNICE Monitor Stand Riser",
-          "asin": "B0DB8F7GDN",
-          "asin_verified": false,
-          "verified_product_title": "OPNICE Desk Organizer and Accessories, 2-Tier Computer Monitor Stand Riser with Drawer and 2 Pen Holders, Laptop Stand, Office Desk Accessories for Office Supplies, Black",
-          "search_term": "OPNICE 2-Tier Computer Monitor Stand Riser with Drawer",
-          "url": "",
-          "availability_type": "IN_STOCK",
-          "stock_checked_at": 1795472185,
-          "parent_asin": "B0DB8F7GDN"
-        }
-      ],
-      "html_file": "comparison-monitor-arm-vs-monitor-stand-829fac306647.html",
-      "layout_version": 4,
-      "draft": false,
-      "product_links_verified": false,
-      "review_required": true,
-      "products_audited_at": 1795472266,
-      "stock_check_max_age_seconds": 86400,
-      "editorial_review_required": false,
-      "product_review_required": true
+      "review_required": false
     },
     {
       "slug": "comparison-tote-bag-vs-crossbody-bag-b2f2f793ab16",
@@ -323,6 +107,51 @@
       "stock_check_max_age_seconds": 86400,
       "editorial_review_required": false,
       "product_review_required": false
+    },
+    {
+      "slug": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
+      "title": "USB C Hub or USB Charger? The Honest Comparison",
+      "meta_description": "Compare Anker’s 5‑in‑1 USB‑C Hub and Zolo 50W USB‑C Charger. Learn which fits your connectivity or power needs, compatibility checks, and ownership tips.",
+      "template": "comparison",
+      "niche": "electronics",
+      "keyword": "USB C Hub vs USB Charger",
+      "labels": [
+        "Reviews",
+        "Electronics"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 526,
+      "items": [
+        {
+          "name": "USB C Hub",
+          "asin": "B0BQLLB61B",
+          "asin_verified": true,
+          "verified_product_title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display",
+          "parent_asin": "B0BQLLB61B",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795488778,
+          "search_term": "USB C Hub",
+          "url": "https://www.amazon.com/dp/B0BQLLB61B?tag=hotr0e-20"
+        },
+        {
+          "name": "USB Charger",
+          "asin": "B0GSZLLR39",
+          "asin_verified": true,
+          "verified_product_title": "Anker Zolo USB C Charger Block, 50W Max Output Type C Charger Fast Charging",
+          "parent_asin": "B0GSZLLR39",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795488787,
+          "search_term": "USB Charger",
+          "url": "https://www.amazon.com/dp/B0GSZLLR39?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "dual-monitor-arm-guide-load-vesa-alignment-desk-space",
@@ -970,6 +799,40 @@
       "stock_check_max_age_seconds": 86400
     },
     {
+      "slug": "review-hydration-bladder-fb12374e1465",
+      "title": "Choosing A Hydration Bladder for Backpacking: Trade-Offs Included",
+      "meta_description": "Learn how to choose the right hydration bladder for backpacking, covering capacity, leak‑proof design, compatibility, usage, and maintenance without sales hype.",
+      "template": "review",
+      "niche": "outdoor",
+      "keyword": "hydration bladder for backpacking",
+      "labels": [
+        "Reviews",
+        "Outdoor"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 730,
+      "items": [
+        {
+          "name": "Hydration Bladder",
+          "asin": "B071DQSZB8",
+          "asin_verified": true,
+          "verified_product_title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling Running",
+          "parent_asin": "B071DQSZB8",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795488820,
+          "search_term": "hydration bladder for backpacking",
+          "url": "https://www.amazon.com/dp/B071DQSZB8?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-hydration-bladder-fb12374e1465.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-instant-pot-f01d4702e01a",
       "title": "Instant Pot: An Honest Look at the Trade-Offs",
       "meta_description": "This guide examines the Instant Pot Duo 6 Qt 7-in-1. It details its pressure cooking features, stainless steel design, and practical considerations for family meal prep.",
@@ -1464,6 +1327,40 @@
       "product_review_required": false
     },
     {
+      "slug": "review-paint-brush-set-8ac3cfa92ba1",
+      "title": "Paint Brush Set: Judging Surface Priming Against Real Use",
+      "meta_description": "Evaluate if this 12-piece professional artist paint brush set suits large canvases. Check bristle stiffness and ferrule construction for surface priming.",
+      "template": "review",
+      "niche": "crafts & hobbies",
+      "keyword": "paint brush set for large canvases",
+      "labels": [
+        "Reviews",
+        "Crafts & Hobbies"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 885,
+      "items": [
+        {
+          "name": "Paint Brush Set",
+          "asin": "B0868QQ1X6",
+          "asin_verified": true,
+          "verified_product_title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor Brushes",
+          "parent_asin": "B0868QQ1X6",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795489020,
+          "search_term": "paint brush set for large canvases",
+          "url": "https://www.amazon.com/dp/B0868QQ1X6?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-paint-brush-set-8ac3cfa92ba1.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
+    },
+    {
       "slug": "review-paper-shredder-ed80d14f2b58",
       "title": "Paper Shredder Explained: What You Are Really Paying For",
       "meta_description": "Learn what features matter in a paper shredder, focusing on sheet capacity, cut type, bin volume, and noise level for home or small business use.",
@@ -1842,6 +1739,40 @@
       "product_review_required": false,
       "products_audited_at": 1795472266,
       "stock_check_max_age_seconds": 86400
+    },
+    {
+      "slug": "review-soldering-iron-49b3ed38b38f",
+      "title": "Soldering Iron Review: What I Would Check Before Buying",
+      "meta_description": "Explore key factors before buying a soldering iron: power, temperature control, tip range, heating speed, ergonomics, and maintenance for craft projects.",
+      "template": "review",
+      "niche": "crafts & hobbies",
+      "keyword": "soldering iron for t shirt makers",
+      "labels": [
+        "Reviews",
+        "Crafts & Hobbies"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 547,
+      "items": [
+        {
+          "name": "Soldering Iron",
+          "asin": "B087767KNW",
+          "asin_verified": true,
+          "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+          "parent_asin": "B087767KNW",
+          "availability_type": "IN_STOCK",
+          "stock_checked_at": 1795488706,
+          "search_term": "soldering iron for t shirt makers",
+          "url": "https://www.amazon.com/dp/B087767KNW?tag=hotr0e-20"
+        }
+      ],
+      "html_file": "review-soldering-iron-49b3ed38b38f.html",
+      "layout_version": 4,
+      "draft": false,
+      "product_links_verified": true,
+      "editorial_review_required": false,
+      "review_required": false
     },
     {
       "slug": "review-spice-rack-14684677a742",

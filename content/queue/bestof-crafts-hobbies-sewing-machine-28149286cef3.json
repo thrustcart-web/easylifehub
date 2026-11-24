@@ -1,0 +1,56 @@
+{
+  "slug": "bestof-crafts-hobbies-sewing-machine-28149286cef3",
+  "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+  "meta_description": "Acrylic paint, beginner yarn and a quilting cutting mat judged on the same criteria: what each listing confirms, what to verify and who each suits.",
+  "template": "bestof",
+  "niche": "crafts & hobbies",
+  "keyword": "Crafts & Hobbies",
+  "labels": [
+    "Reviews",
+    "Crafts & Hobbies"
+  ],
+  "source": "ai:openrouter",
+  "provider": "openrouter",
+  "words": 1202,
+  "items": [
+    {
+      "name": "Acrylic Paint Set",
+      "asin": "B073BFF65P",
+      "asin_verified": true,
+      "verified_product_title": "Shuttle Art Acrylic Paint Set, 16 x12ml Tubes Artist Quality Non Toxic Rich Pigments Colors Great for Kids Adults Professional Painting on Canvas Wood Clay Fabric Ceramic Crafts",
+      "parent_asin": "B073BFF65P",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488876,
+      "search_term": "acrylic paint set for large canvases",
+      "url": "https://www.amazon.com/dp/B073BFF65P?tag=hotr0e-20"
+    },
+    {
+      "name": "Yarn",
+      "asin": "B0BVV8MTX9",
+      "asin_verified": true,
+      "verified_product_title": "60g Red Yarn for Crocheting and Knitting;66m (72yds) Cotton Yarn for Beginners with Easy-to-See Stitches;Worsted-Weight Medium #4;Cotton-Nylon Blend Yarn for Beginners Crochet Kit Making",
+      "parent_asin": "B0BVV8MTX9",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488883,
+      "search_term": "yarn for beginners",
+      "url": "https://www.amazon.com/dp/B0BVV8MTX9?tag=hotr0e-20"
+    },
+    {
+      "name": "Cutting Mat",
+      "asin": "B0CP2XN8N3",
+      "asin_verified": true,
+      "verified_product_title": "Fiskars 18\" x 24\" Self Healing Cutting Mat for Sewing, Lilac Mountain Haze",
+      "parent_asin": "B0CP2XN8N3",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488919,
+      "search_term": "cutting mat for quilting",
+      "url": "https://www.amazon.com/dp/B0CP2XN8N3?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "bestof-crafts-hobbies-sewing-machine-28149286cef3.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

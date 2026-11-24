@@ -1,0 +1,45 @@
+{
+  "slug": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
+  "title": "USB C Hub or USB Charger? The Honest Comparison",
+  "meta_description": "Compare Anker’s 5‑in‑1 USB‑C Hub and Zolo 50W USB‑C Charger. Learn which fits your connectivity or power needs, compatibility checks, and ownership tips.",
+  "template": "comparison",
+  "niche": "electronics",
+  "keyword": "USB C Hub vs USB Charger",
+  "labels": [
+    "Reviews",
+    "Electronics"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 526,
+  "items": [
+    {
+      "name": "USB C Hub",
+      "asin": "B0BQLLB61B",
+      "asin_verified": true,
+      "verified_product_title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display",
+      "parent_asin": "B0BQLLB61B",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488778,
+      "search_term": "USB C Hub",
+      "url": "https://www.amazon.com/dp/B0BQLLB61B?tag=hotr0e-20"
+    },
+    {
+      "name": "USB Charger",
+      "asin": "B0GSZLLR39",
+      "asin_verified": true,
+      "verified_product_title": "Anker Zolo USB C Charger Block, 50W Max Output Type C Charger Fast Charging",
+      "parent_asin": "B0GSZLLR39",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488787,
+      "search_term": "USB Charger",
+      "url": "https://www.amazon.com/dp/B0GSZLLR39?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

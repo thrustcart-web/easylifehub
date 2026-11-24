@@ -1076,22 +1076,22 @@
     "verified_at": "2026-11-23T22:19:42Z"
   },
   "walking cane": {
-    "asin": "B0CYSY6MDR",
-    "parent_asin": "B0CYSY6MDR",
-    "title": "REHAND Walking Cane for Men & Women - Foldable, Adjustable, Lightweight, Self Standing Pivot Walking Cane, Soft Handle Grip, with Travel Bag, Walking Sticks for Seniors & Adults",
+    "asin": "B06Y2XFDF1",
+    "parent_asin": "B06Y2XFDF1",
+    "title": "Folding Lightweight Walking Stick - Adjustable Aluminum Metal Collapsible Travel Cane with Non-Slip Rubber Base",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795238279,
+    "stock_checked_at": 1795488745,
     "stock_source": "apify",
-    "verified_at": "2026-11-21T05:17:59Z"
+    "verified_at": "2026-11-24T02:52:25Z"
   },
   "blood pressure monitor": {
     "asin": "B0CHXY8WQW",
     "parent_asin": "B0CHXY8WQW",
     "title": "Oklar Wrist Blood Pressure Monitor, FDA Cleared Rechargeable BP Machine",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795238290,
+    "stock_checked_at": 1795488731,
     "stock_source": "apify",
-    "verified_at": "2026-11-21T05:18:10Z"
+    "verified_at": "2026-11-24T02:52:11Z"
   },
   "posture corrector": {
     "asin": "B07VST9VYH",
@@ -1251,11 +1251,12 @@
   },
   "hydration bladder": {
     "asin": "B071DQSZB8",
-    "parent_asin": "B0BXC7Y9LG",
-    "title": "Hydration Bladder, 2L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Hydration Pack Replacement for Camping Cycling Running, Military Green",
+    "parent_asin": "B071DQSZB8",
+    "title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling Running",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1794752036,
-    "verified_at": "2026-11-15T14:13:56Z"
+    "stock_checked_at": 1795488820,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T02:53:40Z"
   },
   "led strip lights": {
     "asin": "B09V366BDY",
@@ -1683,31 +1684,31 @@
     "verified_at": "2026-11-23T02:56:19Z"
   },
   "soldering iron": {
-    "asin": "B09DY7CCW5",
-    "parent_asin": "B09DY7CCW5",
-    "title": "60W Adjustable Temperature Soldering Iron Kit - 9-in-1 With 5 Tips, Solder Wire Stand for Soldering and Repair",
+    "asin": "B087767KNW",
+    "parent_asin": "B087767KNW",
+    "title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795472514,
+    "stock_checked_at": 1795488706,
     "stock_source": "apify",
-    "verified_at": "2026-11-23T22:21:54Z"
+    "verified_at": "2026-11-24T02:51:46Z"
   },
   "acrylic paint set": {
-    "asin": "B07Z93LQDB",
-    "parent_asin": "B07Z93LQDB",
-    "title": "Shuttle Art Acrylic Paint, 36 Colors Acrylic Paint Set with Brushes & Palette, 2oz/60ml Bottles, Rich Pigments Non-toxic for Artists Kids & Adults, Painting on Canvas Rocks Ceramic Wood",
+    "asin": "B073BFF65P",
+    "parent_asin": "B073BFF65P",
+    "title": "Shuttle Art Acrylic Paint Set, 16 x12ml Tubes Artist Quality Non Toxic Rich Pigments Colors Great for Kids Adults Professional Painting on Canvas Wood Clay Fabric Ceramic Crafts",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795472069,
+    "stock_checked_at": 1795488876,
     "stock_source": "apify",
-    "verified_at": "2026-11-23T22:21:54Z"
+    "verified_at": "2026-11-24T02:54:36Z"
   },
   "cutting mat": {
-    "asin": "B00GSFSFF8",
-    "parent_asin": "B00GSFSFF8",
-    "title": "Nakabayashi CTMO-A3P Cutter Mat, Folding Cutting Mat, A3, Pink",
+    "asin": "B0CP2XN8N3",
+    "parent_asin": "B0CP2XN8N3",
+    "title": "Fiskars 18\" x 24\" Self Healing Cutting Mat for Sewing, Lilac Mountain Haze",
     "availability_type": "IN_STOCK",
-    "stock_checked_at": 1795472026,
+    "stock_checked_at": 1795488919,
     "stock_source": "apify",
-    "verified_at": "2026-11-23T22:21:54Z"
+    "verified_at": "2026-11-24T02:55:19Z"
   },
   "air purifier": {
     "asin": "B09GTRVJQM",
@@ -1762,5 +1763,41 @@
     "stock_checked_at": 1795445699,
     "stock_source": "apify",
     "verified_at": "2026-11-23T14:54:59Z"
+  },
+  "usb c hub": {
+    "asin": "B0BQLLB61B",
+    "parent_asin": "B0BQLLB61B",
+    "title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795488778,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T02:52:58Z"
+  },
+  "usb charger": {
+    "asin": "B0GSZLLR39",
+    "parent_asin": "B0GSZLLR39",
+    "title": "Anker Zolo USB C Charger Block, 50W Max Output Type C Charger Fast Charging",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795488787,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T02:53:07Z"
+  },
+  "yarn": {
+    "asin": "B0BVV8MTX9",
+    "parent_asin": "B0BVV8MTX9",
+    "title": "60g Red Yarn for Crocheting and Knitting;66m (72yds) Cotton Yarn for Beginners with Easy-to-See Stitches;Worsted-Weight Medium #4;Cotton-Nylon Blend Yarn for Beginners Crochet Kit Making",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795488883,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T02:54:43Z"
+  },
+  "paint brush set": {
+    "asin": "B0868QQ1X6",
+    "parent_asin": "B0868QQ1X6",
+    "title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor Brushes",
+    "availability_type": "IN_STOCK",
+    "stock_checked_at": 1795489020,
+    "stock_source": "apify",
+    "verified_at": "2026-11-24T02:57:00Z"
   }
 }

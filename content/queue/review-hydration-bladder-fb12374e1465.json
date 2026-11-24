@@ -1,0 +1,34 @@
+{
+  "slug": "review-hydration-bladder-fb12374e1465",
+  "title": "Choosing A Hydration Bladder for Backpacking: Trade-Offs Included",
+  "meta_description": "Learn how to choose the right hydration bladder for backpacking, covering capacity, leak‑proof design, compatibility, usage, and maintenance without sales hype.",
+  "template": "review",
+  "niche": "outdoor",
+  "keyword": "hydration bladder for backpacking",
+  "labels": [
+    "Reviews",
+    "Outdoor"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 730,
+  "items": [
+    {
+      "name": "Hydration Bladder",
+      "asin": "B071DQSZB8",
+      "asin_verified": true,
+      "verified_product_title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling Running",
+      "parent_asin": "B071DQSZB8",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795488820,
+      "search_term": "hydration bladder for backpacking",
+      "url": "https://www.amazon.com/dp/B071DQSZB8?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-hydration-bladder-fb12374e1465.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "review-paint-brush-set-8ac3cfa92ba1",
+  "title": "Paint Brush Set: Judging Surface Priming Against Real Use",
+  "meta_description": "Evaluate if this 12-piece professional artist paint brush set suits large canvases. Check bristle stiffness and ferrule construction for surface priming.",
+  "template": "review",
+  "niche": "crafts & hobbies",
+  "keyword": "paint brush set for large canvases",
+  "labels": [
+    "Reviews",
+    "Crafts & Hobbies"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 885,
+  "items": [
+    {
+      "name": "Paint Brush Set",
+      "asin": "B0868QQ1X6",
+      "asin_verified": true,
+      "verified_product_title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor Brushes",
+      "parent_asin": "B0868QQ1X6",
+      "availability_type": "IN_STOCK",
+      "stock_checked_at": 1795489020,
+      "search_term": "paint brush set for large canvases",
+      "url": "https://www.amazon.com/dp/B0868QQ1X6?tag=hotr0e-20"
+    }
+  ],
+  "html_file": "review-paint-brush-set-8ac3cfa92ba1.html",
+  "layout_version": 4,
+  "draft": false,
+  "product_links_verified": true,
+  "editorial_review_required": false,
+  "review_required": false
+}

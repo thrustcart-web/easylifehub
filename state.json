@@ -818,6 +818,51 @@
       "ts": "2026-11-23T14:55:20Z",
       "source": "ai:groq",
       "words": 502
+    },
+    {
+      "slug": "review-soldering-iron-49b3ed38b38f",
+      "title": "Soldering Iron Review: What I Would Check Before Buying",
+      "template": "review",
+      "keyword": "soldering iron for t shirt makers",
+      "ts": "2026-11-24T02:51:55Z",
+      "source": "ai:groq",
+      "words": 547
+    },
+    {
+      "slug": "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
+      "title": "USB C Hub or USB Charger? The Honest Comparison",
+      "template": "comparison",
+      "keyword": "USB C Hub vs USB Charger",
+      "ts": "2026-11-24T02:53:14Z",
+      "source": "ai:groq",
+      "words": 526
+    },
+    {
+      "slug": "review-hydration-bladder-fb12374e1465",
+      "title": "Choosing A Hydration Bladder for Backpacking: Trade-Offs Included",
+      "template": "review",
+      "keyword": "hydration bladder for backpacking",
+      "ts": "2026-11-24T02:53:44Z",
+      "source": "ai:groq",
+      "words": 730
+    },
+    {
+      "slug": "bestof-crafts-hobbies-sewing-machine-28149286cef3",
+      "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+      "template": "bestof",
+      "keyword": "Crafts & Hobbies",
+      "ts": "2026-11-24T02:55:42Z",
+      "source": "ai:openrouter",
+      "words": 1202
+    },
+    {
+      "slug": "review-paint-brush-set-8ac3cfa92ba1",
+      "title": "Paint Brush Set: Judging Surface Priming Against Real Use",
+      "template": "review",
+      "keyword": "paint brush set for large canvases",
+      "ts": "2026-11-24T02:57:19Z",
+      "source": "ai:groq",
+      "words": 885
     }
   ],
   "published": [],
@@ -912,7 +957,12 @@
     "bestof-crafts-hobbies-knife-9fb096ceae4d",
     "review-air-purifier-68385dd28453",
     "review-burn-gel-5c3458c258d6",
-    "review-seed-starting-tray-68c52545763d"
+    "review-seed-starting-tray-68c52545763d",
+    "review-soldering-iron-49b3ed38b38f",
+    "comparison-usb-c-hub-vs-usb-charger-5776735cd30b",
+    "review-hydration-bladder-fb12374e1465",
+    "bestof-crafts-hobbies-sewing-machine-28149286cef3",
+    "review-paint-brush-set-8ac3cfa92ba1"
   ],
   "keywords_used": {
     "Electronics": "2026-11-04",
@@ -992,7 +1042,7 @@
     "Streaming Camera": "2026-11-04",
     "streaming camera for home offices": "2026-11-04",
     "wireless earbuds for home offices": "2026-11-04",
-    "USB Charger": "2026-11-04",
+    "USB Charger": "2026-11-24",
     "usb charger for home offices": "2026-11-04",
     "E-reader": "2026-11-04",
     "e-reader for students": "2026-11-04",
@@ -1285,18 +1335,32 @@
     "smart fan|smart plant sensor": "2026-11-23",
     "Smart Plant Sensor": "2026-11-23",
     "crafts & hobbies:acrylic paint set|cutting mat|soldering iron": "2026-11-23",
-    "Soldering Iron": "2026-11-23",
+    "Soldering Iron": "2026-11-24",
     "soldering iron for electronics hobbies": "2026-11-23",
-    "Acrylic Paint Set": "2026-11-23",
-    "acrylic paint set for large canvases": "2026-11-23",
-    "Cutting Mat": "2026-11-23",
+    "Acrylic Paint Set": "2026-11-24",
+    "acrylic paint set for large canvases": "2026-11-24",
+    "Cutting Mat": "2026-11-24",
     "cutting mat for left handed cutters": "2026-11-23",
     "air purifier": "2026-11-23",
     "Air Purifier": "2026-11-23",
     "air purifier for allergy sufferers": "2026-11-23",
     "burn gel": "2026-11-23",
     "Burn Gel": "2026-11-23",
-    "burn gel for families": "2026-11-23"
+    "burn gel for families": "2026-11-23",
+    "soldering iron": "2026-11-24",
+    "soldering iron for t shirt makers": "2026-11-24",
+    "usb c hub|usb charger": "2026-11-24",
+    "USB C Hub": "2026-11-24",
+    "hydration bladder": "2026-11-24",
+    "Hydration Bladder": "2026-11-24",
+    "hydration bladder for backpacking": "2026-11-24",
+    "crafts & hobbies:acrylic paint set|cutting mat|yarn": "2026-11-24",
+    "Yarn": "2026-11-24",
+    "yarn for beginners": "2026-11-24",
+    "cutting mat for quilting": "2026-11-24",
+    "paint brush set": "2026-11-24",
+    "Paint Brush Set": "2026-11-24",
+    "paint brush set for large canvases": "2026-11-24"
   },
   "titles_used": [
     "The 4 Everyday Electronics Worth Your Money (and 2 to Avoid)",
@@ -1487,7 +1551,13 @@
     "Does {FEAT} Matter in {A} {P}? An Honest Look",
     "Choosing Between {A} and {B}: A Practical Comparison",
     "Best {F}: {N} Picks Compared Honestly",
-    "Before You Buy {A} {P} for {AUD}: Read This"
+    "Before You Buy {A} {P} for {AUD}: Read This",
+    "{P} Review: What I Would Check Before Buying",
+    "{N} {F} Tested Against the Same Checklist",
+    "{A} or {B}? The Honest Comparison",
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{P}: Judging {FEAT} Against Real Use"
   ],
   "last_publish_ts": null,
   "failures": {
@@ -1496,7 +1566,7 @@
     "last_error": null
   },
   "counters": {
-    "total_generated": 91,
+    "total_generated": 96,
     "total_published": 0
   },
   "blogger_titles": [
