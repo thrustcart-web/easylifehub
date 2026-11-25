@@ -29,6 +29,9 @@ _CREATORS_TOKEN_EXPIRES_AT = 0.0
 STOCK_ALLOWED = {"IN_STOCK", "INSTOCK", "INSTOCKSCARCE"}
 STOCK_MAX_AGE_SECONDS = 24 * 60 * 60
 MAX_RESULTS_PER_SEARCH = 3
+SERPER_ENDPOINT = "https://google.serper.dev/search"
+SERPER_DEFAULT_MAX_SEARCHES_PER_RUN = 6
+_SERPER_SEARCHES_USED = 0
 # API-level billing safeguards for every individual product search.
 # The user's observed Result rate was $0.005/event. This caps a run at three
 # billable results ($0.015) and $0.015 total across every Apify pricing model.
@@ -127,7 +130,7 @@ def _fallback_provider_names(primary: str) -> list[str]:
         configured = (cfg.get("product_discovery") or {}).get("fallback_providers") or []
     except (OSError, json.JSONDecodeError):
         configured = []
-    return [name for name in configured if name == "apify"]
+    return [name for name in configured if name in {"serper", "apify"}]
 
 
 def _is_global_provider_error(exc: Exception) -> bool:
@@ -165,28 +168,41 @@ def _provider_api_key(provider: str) -> str:
     if provider == "serpapi":
         keys = _serpapi_api_keys()
         return keys[0] if keys else ""
+    if provider == "serper":
+        return os.environ.get("SERPER_API_KEY", "").strip()
+    if provider == "apify":
+        return (
+            os.environ.get("TEST_API")
+            or os.environ.get("APIFY_API_TOKEN", "")
+        ).strip()
     if provider == "creators_api":
         client_id = os.environ.get("AMAZON_CREATORS_CLIENT_ID", "").strip()
         client_secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET", "").strip()
         return "configured" if client_id and client_secret else ""
-    return (
-        os.environ.get("TEST_API")
-        or os.environ.get("APIFY_API_TOKEN", "")
-    ).strip()
+    return ""
 
 
 def _provider_secret_name(provider: str) -> str:
     if provider == "serpapi":
         return "SERPAPI_API_KEY"
+    if provider == "serper":
+        return "SERPER_API_KEY"
     if provider == "creators_api":
         return "AMAZON_CREATORS_CLIENT_ID and AMAZON_CREATORS_CLIENT_SECRET"
     return "TEST_API or APIFY_API_TOKEN"
 
 
 def _provider_spending_enabled(provider: str) -> bool:
-    # SerpApi and Apify use separate per-provider spend guards.
+    # Serper is a capped, prepaid search helper only. It does not prove stock;
+    # Apify must be available to verify every ASIN that Serper discovers.
     if provider == "creators_api":
         return False
+    if provider == "serper":
+        apify_token = (
+            os.environ.get("TEST_API") or os.environ.get("APIFY_API_TOKEN", "")
+        ).strip()
+        apify_enabled = os.environ.get("APIFY_SPEND_ENABLED", "false").strip().lower() in {"1", "true", "yes"}
+        return bool(os.environ.get("SERPER_API_KEY", "").strip() and apify_token and apify_enabled)
     variable = "SERPAPI_SPEND_ENABLED" if provider == "serpapi" else "APIFY_SPEND_ENABLED"
     return os.environ.get(variable, "false").strip().lower() in {"1", "true", "yes"}
 
@@ -391,6 +407,117 @@ def _search_amazon_serpapi(product_name: str, api_key: str) -> list[dict]:
             })
     return rows
 
+
+
+
+def _search_amazon_serper_candidates(product_name: str, api_key: str) -> list[dict]:
+    """Discover likely Amazon product pages with Google results; this is NOT stock evidence."""
+    global _SERPER_SEARCHES_USED
+    if not api_key:
+        raise ProductResolutionError("SERPER_API_KEY is missing")
+    try:
+        cap = int(os.environ.get("SERPER_MAX_SEARCHES_PER_RUN", SERPER_DEFAULT_MAX_SEARCHES_PER_RUN))
+    except (TypeError, ValueError):
+        cap = SERPER_DEFAULT_MAX_SEARCHES_PER_RUN
+    cap = max(1, min(cap, 12))
+    if _SERPER_SEARCHES_USED >= cap:
+        raise ProductResolutionError(
+            f"Serper run cap reached ({cap} searches); refusing additional discovery calls"
+        )
+
+    query = f'site:amazon.com "{product_name}"'
+    payload = {"q": query, "num": 10, "gl": "us", "hl": "en"}
+    req = request.Request(
+        SERPER_ENDPOINT,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "X-API-KEY": api_key,
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": "HonestTroveProductResolver/1.0",
+        },
+        method="POST",
+    )
+    _SERPER_SEARCHES_USED += 1
+    try:
+        with request.urlopen(req, timeout=45) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:400]
+        raise ProductResolutionError(f"Serper HTTP {exc.code}: {detail}") from exc
+    except (error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise ProductResolutionError(f"Serper request failed: {exc}") from exc
+
+    if not isinstance(data, dict):
+        raise ProductResolutionError("Serper response was not a JSON object")
+    if data.get("error") or data.get("message"):
+        raise ProductResolutionError(f"Serper error: {str(data.get('error') or data.get('message'))[:300]}")
+    organic = data.get("organic") or []
+    if not isinstance(organic, list):
+        raise ProductResolutionError("Serper organic results were not a list")
+
+    rows = []
+    seen = set()
+    for item in organic:
+        if not isinstance(item, dict):
+            continue
+        title = str(item.get("title") or "").strip()
+        url = str(item.get("link") or "").strip()
+        if not title or not url:
+            continue
+        parsed = parse.urlparse(url)
+        hostname = (parsed.hostname or "").lower()
+        if hostname != "amazon.com" and not hostname.endswith(".amazon.com"):
+            continue
+        asin = _extract_asin({"url": url})
+        if not asin or asin in seen:
+            continue
+        seen.add(asin)
+        rows.append({
+            "title": title,
+            "asin": asin,
+            "parent_asin": asin,
+            "availability_type": "UNKNOWN",
+            "stock_checked_at": 0,
+            "stock_source": "serper_candidate",
+            "url": url,
+        })
+        if len(rows) >= MAX_RESULTS_PER_SEARCH:
+            break
+    return rows
+
+
+def _search_amazon_serper(product_name: str, api_key: str) -> list[dict]:
+    """Use Serper for discovery, then require Apify's Amazon-page stock details."""
+    candidates = _search_amazon_serper_candidates(product_name, api_key)
+    if not candidates:
+        return []
+
+    apify_token = _provider_api_key("apify")
+    if not apify_token:
+        raise ProductResolutionError(
+            "Serper found candidate Amazon pages, but TEST_API/APIFY_API_TOKEN is missing; "
+            "stock cannot be verified"
+        )
+    if not _provider_spending_enabled("apify"):
+        raise ProductResolutionError(
+            "Serper is discovery-only. Enable the existing Apify stock-verification guard "
+            "for this run before accepting any discovered ASIN"
+        )
+
+    details = _apify_get_items_by_asin([row["asin"] for row in candidates], apify_token)
+    verified = []
+    for candidate in candidates:
+        official = details.get(candidate["asin"])
+        if not official:
+            continue
+        row = dict(official)
+        row["discovery_source"] = "serper"
+        row["discovery_url"] = candidate["url"]
+        # stock_source remains "apify": only Apify's Amazon product-page detail
+        # response can satisfy the existing in-stock publication gate.
+        verified.append(row)
+    return verified
 
 
 def _creators_partner_settings() -> tuple[str, str]:
@@ -668,7 +795,7 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
 
 
 def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
-    """Search via SerpApi or Apify; SerpApi keys fail over only for transient service errors."""
+    """Search via SerpApi, Apify, or Serper discovery with mandatory Apify stock verification."""
     if provider == "serpapi":
         keys = _serpapi_api_keys(api_token)
         if not keys:
@@ -696,7 +823,9 @@ def _search_amazon_with_provider(product_name: str, provider: str, api_token: st
         raise ProductResolutionError("SerpApi search failed without a response")
     if provider == "apify":
         return _search_amazon_apify(product_name, api_token)
-    raise ProductResolutionError("Amazon Creators API is disabled; provider must be SerpApi or Apify.")
+    if provider == "serper":
+        return _search_amazon_serper(product_name, api_token)
+    raise ProductResolutionError("Amazon Creators API is disabled; provider must be SerpApi, Apify, or Serper discovery.")
 
 
 def _search_amazon(product_name: str, api_token: str) -> list[dict]:
@@ -1330,6 +1459,17 @@ def audit_queue_products() -> dict:
                     used_asins=used_asins,
                     used_parent_asins=used_parents,
                 )
+                if candidate is None and _provider_spending_enabled("serper") and _provider_api_key("serper"):
+                    try:
+                        serper_rows = _search_amazon_with_provider(query, "serper", _provider_api_key("serper"))
+                        candidate = _apply_candidate(
+                            old_item,
+                            serper_rows,
+                            used_asins=used_asins,
+                            used_parent_asins=used_parents,
+                        )
+                    except ProductResolutionError as serper_exc:
+                        log.warning("Serper discovery / Apify verification failed | %s | %s", query, serper_exc)
                 if candidate is None and _provider_spending_enabled("apify") and _provider_api_key("apify"):
                     try:
                         fallback_rows = _search_amazon_with_provider(query, "apify", _provider_api_key("apify"))
