@@ -22,4 +22,6 @@ jobs:
           cp appsscript/Code.gs /tmp/easylifehub-appsscript.js
           node --check /tmp/easylifehub-appsscript.js
       - name: Run pipeline tests
-        run: python3 tests/test_pipeline.py
+        run: |
+          python3 tests/test_pipeline.py
+          python3 tests/test_daily_product_link_review.py
