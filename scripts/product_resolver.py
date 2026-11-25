@@ -142,9 +142,29 @@ def _is_global_provider_error(exc: Exception) -> bool:
     ))
 
 
+def _serpapi_api_keys(preferred: str = "") -> list[str]:
+    """Return configured SerpApi team keys in priority order, without exposing them."""
+    names = (
+        "SERPAPI_API_KEY",
+        "SERPAPI_API_KEY_2",
+        "SERPAPI_API_KEY_3",
+        "SERPAPI_API_KEY_4",
+    )
+    values = [preferred, *(os.environ.get(name, "") for name in names)]
+    keys: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        key = str(value or "").strip()
+        if key and key not in seen:
+            seen.add(key)
+            keys.append(key)
+    return keys
+
+
 def _provider_api_key(provider: str) -> str:
     if provider == "serpapi":
-        return os.environ.get("SERPAPI_API_KEY", "").strip()
+        keys = _serpapi_api_keys()
+        return keys[0] if keys else ""
     if provider == "creators_api":
         client_id = os.environ.get("AMAZON_CREATORS_CLIENT_ID", "").strip()
         client_secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET", "").strip()
@@ -648,9 +668,32 @@ def _search_amazon_creators_api(product_name: str) -> list[dict]:
 
 
 def _search_amazon_with_provider(product_name: str, provider: str, api_token: str = "") -> list[dict]:
-    """Search via SerpApi first or the separately guarded Apify fallback."""
+    """Search via SerpApi or Apify; SerpApi keys fail over only for transient service errors."""
     if provider == "serpapi":
-        return _search_amazon_serpapi(product_name, api_token)
+        keys = _serpapi_api_keys(api_token)
+        if not keys:
+            raise ProductResolutionError("SERPAPI_API_KEY (or SERPAPI_API_KEY_2/_3/_4) is missing")
+        last_error = None
+        for index, key in enumerate(keys):
+            try:
+                return _search_amazon_serpapi(product_name, key)
+            except ProductResolutionError as exc:
+                last_error = exc
+                # Do not rotate keys for exhausted quota, rate limits, invalid credentials,
+                # forbidden access, or any SerpApi account-level response. Extra keys are
+                # for authorized team-key resilience, not for extending plan allowances.
+                transient = bool(
+                    re.search(r"SerpApi HTTP 5\\d\\d\\b|SerpApi request failed:", str(exc), re.I)
+                )
+                if not transient or index == len(keys) - 1:
+                    raise
+                log.warning(
+                    "SerpApi transient service/network failure; trying next configured team key (%d/%d)",
+                    index + 1, len(keys),
+                )
+        if last_error:
+            raise last_error
+        raise ProductResolutionError("SerpApi search failed without a response")
     if provider == "apify":
         return _search_amazon_apify(product_name, api_token)
     raise ProductResolutionError("Amazon Creators API is disabled; provider must be SerpApi or Apify.")
