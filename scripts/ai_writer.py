@@ -12,13 +12,149 @@ without a human reading it*. That means:
 from __future__ import annotations
 
 import json
+import os
 import random
 import re
+from urllib import error, request
 
 from providers import AIError, available_providers, generate_json
 from util import log
 
 REQUIRED_FIELDS = ("title", "intro", "sections", "audience_fit", "conclusion")
+
+
+TAVILY_SEARCH_URL = "https://api.tavily.com/search"
+TAVILY_HARD_CALLS_PER_RUN = 3
+_TAVILY_CALLS_THIS_RUN = 0
+_TAVILY_MARKETPLACE_DOMAINS = (
+    "amazon.", "desertcart.", "ubuy.", "walmart.", "ebay.", "bestbuy.",
+    "target.", "homedepot.", "lowes.", "newegg.", "aliexpress.", "temu.",
+    "etsy.", "costco.", "wayfair.",
+)
+_TAVILY_AVAILABILITY_RE = re.compile(
+    r"\b(?:in stock|out of stock|currently unavailable|sold out|available now|"
+    r"add to cart|buy now|ready to ship)\b", re.I
+)
+_TAVILY_PRICE_RE = re.compile(r"(?<![\w.])(?:\$|USD\s?)\s?[\d,]+(?:\.\d{1,2})?", re.I)
+_TAVILY_MODEL_RE = re.compile(r"\b(?=[A-Z0-9-]{3,}\b)(?=[A-Z0-9-]*\d)[A-Z0-9-]+\b", re.I)
+
+
+def attach_tavily_research(topic: dict) -> int:
+    """Attach bounded, non-marketplace research notes; never verifies Amazon stock."""
+    global _TAVILY_CALLS_THIS_RUN
+    api_key = os.environ.get("TAVILY_API_KEY", "").strip()
+    if not api_key:
+        return 0
+    if _TAVILY_CALLS_THIS_RUN >= min(
+        TAVILY_HARD_CALLS_PER_RUN,
+        max(0, int(os.environ.get("TAVILY_MAX_RESEARCH_CALLS_PER_RUN", "3"))),
+    ):
+        return 0
+
+    items = topic.get("items") or []
+    identities = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        identity = str(item.get("verified_product_title") or item.get("display_name") or item.get("name") or "").strip()
+        if identity and identity not in identities:
+            identities.append(identity)
+    if not identities:
+        return 0
+
+    query = "manufacturer documentation official specifications setup compatibility manual " + " ; ".join(identities[:4])
+    payload = {
+        "query": query[:900],
+        "search_depth": "basic",
+        "topic": "general",
+        "max_results": 8,
+        "include_answer": False,
+        "include_raw_content": False,
+        "include_images": False,
+        "include_usage": False,
+        "language": "en",
+        "safe_search": False,
+    }
+    req = request.Request(
+        TAVILY_SEARCH_URL,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": "Bearer " + api_key,
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": "HonestTroveArticleResearch/1.0",
+        },
+        method="POST",
+    )
+    _TAVILY_CALLS_THIS_RUN += 1
+    try:
+        with request.urlopen(req, timeout=25) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except error.HTTPError as exc:
+        log.warning("  Tavily research unavailable (HTTP %s); continuing without web notes.", exc.code)
+        return 0
+    except (error.URLError, TimeoutError, json.JSONDecodeError, ValueError) as exc:
+        log.warning("  Tavily research unavailable (%s); continuing without web notes.", type(exc).__name__)
+        return 0
+
+    results = data.get("results") if isinstance(data, dict) else None
+    if not isinstance(results, list):
+        return 0
+
+    notes = []
+    for result in results:
+        if not isinstance(result, dict):
+            continue
+        url = str(result.get("url") or "")
+        host = (request.urlparse(url).hostname or "").lower() if hasattr(request, "urlparse") else ""
+        # urllib.request does not expose urlparse on all Python builds.
+        if not host:
+            from urllib.parse import urlparse
+            host = (urlparse(url).hostname or "").lower()
+        if not host or any(marker in host for marker in _TAVILY_MARKETPLACE_DOMAINS):
+            continue
+
+        title = str(result.get("title") or "").strip()
+        snippet = re.sub(r"\s+", " ", str(result.get("content") or "")).strip()
+        evidence_text = (title + " " + snippet).casefold()
+        matched_identity = ""
+        for identity in identities:
+            if identity.casefold() in evidence_text:
+                matched_identity = identity
+                break
+            model_codes = _TAVILY_MODEL_RE.findall(identity)
+            if any(code.casefold() in evidence_text for code in model_codes):
+                matched_identity = identity
+                break
+        if not matched_identity:
+            continue
+
+        # Omit pricing, inventory, ratings and review/opinion sentences from writing context.
+        sentences = re.split(r"(?<=[.!?])\s+", snippet)
+        safe_sentences = [
+            sentence.strip() for sentence in sentences
+            if sentence.strip()
+            and not _TAVILY_PRICE_RE.search(sentence)
+            and not _TAVILY_AVAILABILITY_RE.search(sentence)
+            and not re.search(r"\b(?:customer|buyer|user)\s+(?:review|rating)|\bstars?\b", sentence, re.I)
+        ]
+        safe_excerpt = " ".join(safe_sentences)[:650]
+        if not safe_excerpt:
+            continue
+        notes.append({
+            "source_domain": host,
+            "matched_product": matched_identity,
+            "facts": safe_excerpt,
+        })
+        if len(notes) >= 4:
+            break
+
+    if notes:
+        topic["tavily_research_notes"] = notes
+        log.info("  Tavily research attached: %d matching non-marketplace source notes.", len(notes))
+    return len(notes)
+
+
 
 BANNED_PHRASES = [
     "in today's fast-paced world",
@@ -193,6 +329,12 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
         fields.append(" | ".join(bits))
 
     planned_title = topic.get("title", "")
+    research_notes = topic.get("tavily_research_notes") or []
+    research_text = "\\n".join(
+        f"- Product: {note.get('matched_product', '')}; source type: manufacturer/reference site; "
+        f"domain: {note.get('source_domain', '')}; supported details: {note.get('facts', '')}"
+        for note in research_notes[:4]
+    ) or "No matching supplemental research was returned. Do not infer missing product-specific facts."
     user = f"""{_template_brief(topic['template'], items, topic)}
 
 REQUIRED TITLE (use verbatim as the "title" value): "{planned_title}"
@@ -203,6 +345,10 @@ TOPIC DATA - this is the evidence currently available. Do not invent beyond it. 
 category-selection principles, but clearly distinguish those principles from facts about the named product.
 If a verified Amazon listing title is supplied, treat its wording as the only confirmed product-specific listing evidence; do not infer materials, dimensions, compatibility, performance, warranty, included accessories, safety, or test results from a name or category. If verified source notes are supplied, rely only on those notes for product-specific claims:
 {chr(10).join(fields)}
+
+SUPPLEMENTAL TAVILY RESEARCH NOTES (third-party context only; never proof of Amazon availability):
+{research_text}
+Use these notes only for the exact matching product/model and only for facts stated explicitly. Do not mention source URLs, prices, stock status, ratings, customer reviews, or unsupported details.
 
 Niche: {topic.get('niche', 'general')}
 
@@ -369,6 +515,7 @@ def validate(article: dict, cfg: dict) -> tuple[bool, list[str]]:
 def write_article(topic: dict, cfg: dict) -> tuple[dict, str]:
     """AI-first writing with one pass through independent providers."""
     ai_cfg = cfg.get("ai", {})
+    attach_tavily_research(topic)
     system, user = build_prompts(topic, cfg)
     active_providers = available_providers(ai_cfg)
     attempts = max(len(active_providers), 1)
