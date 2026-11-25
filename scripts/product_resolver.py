@@ -683,7 +683,7 @@ def _search_amazon_with_provider(product_name: str, provider: str, api_token: st
                 # forbidden access, or any SerpApi account-level response. Extra keys are
                 # for authorized team-key resilience, not for extending plan allowances.
                 transient = bool(
-                    re.search(r"SerpApi HTTP 5\\d\\d\\b|SerpApi request failed:", str(exc), re.I)
+                    re.search(r"SerpApi HTTP 5\d\d\b|SerpApi request failed:", str(exc), re.I)
                 )
                 if not transient or index == len(keys) - 1:
                     raise
