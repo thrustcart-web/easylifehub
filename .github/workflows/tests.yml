@@ -24,6 +24,7 @@ jobs:
       - name: Run pipeline tests
         run: |
           python3 tests/test_pipeline.py
+          python3 tests/test_serpapi_key_failover.py
           python3 tests/test_daily_product_link_review.py
           python3 tests/test_tavily_article_research.py
           python3 tests/test_editorial_generator.py
