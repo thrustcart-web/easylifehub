@@ -138,7 +138,7 @@ def _is_global_provider_error(exc: Exception) -> bool:
     message = str(exc)
     return bool(re.search(
         r"\bHTTP\s+(?:400|401|402|403|429)\b|"
-        r"(?:Apify Actor|SerpApi|Creators API) error:|"
+        r"(?:Apify Actor|SerpApi|Serper|Creators API) error:|"
         r"\b(?:quota exhausted|rate.?limit|monthly usage limit|unauthorized|forbidden)\b",
         message,
         re.I,
@@ -1122,7 +1122,7 @@ def resolve_items(
             raise primary_error
 
         fallback_errors = []
-        for fallback_provider in fallback_providers:
+        for fallback_provider in list(fallback_providers):
             if not unresolved:
                 break
             fallback_key = _provider_api_key(fallback_provider)
@@ -1132,6 +1132,12 @@ def resolve_items(
                 fallback_errors.append(str(exc))
                 log.warning("Amazon fallback search failed | provider=%s | %s", fallback_provider, exc)
                 if _is_global_provider_error(exc):
+                    if fallback_provider == "serper":
+                        # A missing/limited Serper balance should not block the
+                        # independent Apify search fallback. Disable Serper for
+                        # the remaining products in this run after a global error.
+                        fallback_providers = [name for name in fallback_providers if name != "serper"]
+                        continue
                     raise
                 continue
             unresolved = apply_rows(fallback_rows, fallback_provider, unresolved)
