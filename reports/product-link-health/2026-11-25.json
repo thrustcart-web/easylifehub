@@ -1,115 +1,91 @@
 {
   "schema_version": 1,
   "report_date_utc": "2026-11-25",
-  "created_at": "2026-11-25T11:30:38.372305+00:00",
+  "created_at": "2026-11-25T11:32:53.747041+00:00",
   "blog_url": "https://www.honesttrove.com",
   "published_posts_scanned": 82,
   "unique_products_found": 66,
   "queries_requested": 1,
   "queries_completed": 1,
   "external_in_stock_signals": 0,
-  "external_out_of_stock_signals": 1,
+  "external_out_of_stock_signals": 0,
   "amazon_inventory_confirmations": 0,
   "automatic_blogger_changes": 0,
   "quota_or_api_errors": [],
   "results": [
     {
-      "asin": "B001HN5H4S",
-      "product_name": "Lens Pen",
-      "verified_product_title": "Leupold Lens Pen, Matte",
+      "asin": "B004L1W56G",
+      "product_name": "View on Amazon",
+      "verified_product_title": "",
       "posts": [
         {
-          "title": "Lens Pen: Judging Lint Free Wipes Against Real Use",
-          "url": "https://www.honesttrove.com/2026/11/lens-pen-judging-lint-free-wipes.html",
-          "published": "2026-11-18T01:45:33.000-08:00"
+          "title": "MOSECYOU Deadbolt Lockout Device Review: What It Blocks and How It Works",
+          "url": "https://www.honesttrove.com/2026/11/before-you-buy-deadbolt-for-key-losing.html",
+          "published": "2026-11-16T09:43:33.000-08:00"
         }
       ],
-      "external_summary": "SINGLE_EXTERNAL_OUT_OF_STOCK_SIGNAL",
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
       "positive_external_domains": [],
-      "negative_external_domains": [
-        "www.ebay.com"
-      ],
+      "negative_external_domains": [],
       "amazon_inventory_verified": false,
       "automatic_replacement_allowed": false,
       "manual_amazon_confirmation_required": true,
       "tavily_credits_reported": 1,
       "sources": [
         {
-          "domain": "www.ebay.com",
-          "title": "Leupold Lens Pen, Matte",
-          "url": "https://www.ebay.com/itm/227521727018",
+          "domain": "www.repricerexpress.com",
+          "title": "How To Find Out of Stock Products on Amazon",
+          "url": "https://www.repricerexpress.com/how-to-find-out-of-stock-products-on-amazon",
           "published_date": null,
-          "identity_evidence": "ASIN_EXACT",
-          "identity_confirmed": true,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
           "external_stock_signal": "EXTERNAL_OUT_OF_STOCK_SIGNAL",
           "price_over_50_usd_signal": null,
-          "excerpt": "Item reference: B001HN5H4S. Color : Black. Color: Black. Highly durable. Material: Aluminum. The item was actually out of stock"
+          "excerpt": "4. After you pick a category, a new search button will appear in the left column. Near the bottom of the “Show Results For” section, you can click the button for “Include Out of Stock.” 5. Now you can scroll through the results again and see the items that are both in and out of stock. The Amazon out of stock items will not have a price listed with the image. You might find what you are looking for. [...] 4. After yo"
         },
         {
-          "domain": "www.academy.com",
-          "title": "Leupold LensPen",
-          "url": "https://www.academy.com/p/leupold-lenspen",
+          "domain": "www.fulltimefba.com",
+          "title": "How to Find Which Items are Out of Stock on Amazon - Full-Time FBA",
+          "url": "https://www.fulltimefba.com/how-to-find-which-items-are-out-of-stock-on-amazon",
           "published_date": null,
           "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
           "identity_confirmed": false,
-          "external_stock_signal": "EXTERNAL_IN_STOCK_SIGNAL",
-          "price_over_50_usd_signal": true,
-          "excerpt": "In Stock. ShippingIn Stock. Same Day DeliveryEnter Zip code. Find ... Available for purchases of $20 to $2,500.1 Instant decision. No impact to"
-        },
-        {
-          "domain": "sportsmensoutpost.com",
-          "title": "Leupold Lens Cleaning Pen | $15.99",
-          "url": "https://sportsmensoutpost.com/p/leupold-lens-cleaning-pen/48807",
-          "published_date": null,
-          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
-          "identity_confirmed": false,
-          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
-          "price_over_50_usd_signal": false,
-          "excerpt": "Buy the Leupold Lens Cleaning Pen for $15.99. $15.99 Layaway available: about $3.41 down (20%), then 30 days to pay the rest. ships to our shopUsually ready"
-        },
-        {
-          "domain": "www.adorama.com",
-          "title": "Leupold Lens Cleaning Pen, Glossy Black",
-          "url": "https://www.adorama.com/leupold-lens-cleaning-pen-optics-tool-glossy-black/p/ld48807",
-          "published_date": null,
-          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
-          "identity_confirmed": false,
-          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
-          "price_over_50_usd_signal": false,
-          "excerpt": "Keep your optics crystal clear with the Leupold Lens Cleaning Pen. Shop now! $8.32 $15.99 Save: $7.67 (48%) Delivery starting at $3.99Get"
-        },
-        {
-          "domain": "www.sportsmans.com",
-          "title": "Leupold Lens Pen - Black | Sportsman's Warehouse",
-          "url": "https://www.sportsmans.com/hunting-gear-supplies/optics-binoculars-scopes-rangefinders/tripods-mounts-accessories/leupold-lens-pen/p/700952",
-          "published_date": null,
-          "identity_evidence": "PRODUCT_NAME_EXACT",
-          "identity_confirmed": true,
-          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "external_stock_signal": "EXTERNAL_OUT_OF_STOCK_SIGNAL",
           "price_over_50_usd_signal": null,
-          "excerpt": "Leupold Lens Pen -This compact, two-step Lens Pen has a natural hair brush which is fully retractable for protection when not in use."
+          "excerpt": "4. After you pick a category, a new search button will appear on the left column. Near the bottom of the “Availability” section, you can click the button for “Include Out of Stock.” 5. Now you can scroll though the results again and see the items that are both in and out of stock. Remember, the out-of-stock items will not have a price listed with the image. 6. This is what your search results look like on the first p"
         },
         {
-          "domain": "www.leupold.com",
-          "title": "Optic Lens Pen",
-          "url": "https://www.leupold.com/optic-lens-pen",
+          "domain": "www.facebook.com",
+          "title": "Marilyn Meeks on Facebook: \"Has anyone had Amazon when you try to order anything it says out of stock. I been on the phone to Am…\"",
+          "url": "https://www.facebook.com/groups/468443093900364/posts/2277368636341125",
           "published_date": null,
-          "identity_evidence": "PRODUCT_NAME_EXACT",
-          "identity_confirmed": true,
-          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
-          "price_over_50_usd_signal": false,
-          "excerpt": "## Customer Login Sign in or create a Leupold account to manage orders, register gear, and receive the latest news. External customers Sign In Image 3Image 4Image 5 ## GEAR UP. HEAD OUT. 20% OFF USE CODESPRING20 On orders $19.99 and higher. Toggle close Sign In My Cart Home Optic Lens Pen | 8 | | Width (in) | 3.5 | | Height (in) | .8 | | Weight (oz) | .65 | Questions & Answers Image 7 BE RELENTLESS Company [...] Comp"
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "EXTERNAL_OUT_OF_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "- Rena Effinger: This was clear as mud. Can you go back and correct, so we understand what you’re trying to say? - Danny Bersuch: Maybe the item is out of stock. - Lisa Rasor: Try updating your app - Marilyn Meeks: Please do not reply with mean stuff. [...] - Michael Lambert: Amazon does some weird stuff, but this is new to me. So if I understand correctly, no matter what you select it tells you out of stock. I would"
         },
         {
           "domain": "tavily.com",
-          "title": "Leupold + Stevens, Inc.",
-          "url": "https://tavily.com/knowledge/company/5mPooXHKkj7z",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
           "published_date": null,
           "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
           "identity_confirmed": false,
           "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
           "price_over_50_usd_signal": null,
-          "excerpt": "# Leupold + Stevens, Inc. ID: 5mPooXHKkj7z Website: www.leupold.com Headquarters: Beaverton, OR, United States LinkedIn: www.linkedin.com/company/leupold-%26-stevens-inc- · 48,822 followers Industry: Sporting Goods Manufacturing Industry codes: SIC 34, 348, NAICS 33, 332 Company type: Privately Held Founded: 1907 Business model: B2C SaaS: no [...] ## Products and services Business areas: Optical Equipment Manufacturi"
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Products and services Business areas: Warehouse A"
         }
       ]
     }
