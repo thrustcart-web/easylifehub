@@ -141,16 +141,21 @@
     "scrape_product_details": true,
     "available_providers": [
       "serpapi",
-      "apify"
+      "apify",
+      "serper"
     ],
     "provider_selection_variable": "PRODUCT_DISCOVERY_PROVIDER",
-    "fallback_note": "SerpApi is the primary Amazon search source and only accepts results with explicit in-stock text. Apify is the guarded product-detail fallback and is also used for bulk stock audits. Each provider has a separate API secret and spending guard. Amazon Creators API is not used by the active pipeline.",
+    "fallback_note": "SerpApi is the primary Amazon search source and only accepts explicit in-stock text. Serper is an optional Google-search discovery helper capped at six searches per workflow run; it only supplies direct Amazon product-page candidates and never proves availability. Apify must verify every Serper-discovered ASIN from the Amazon product page and remains the guarded stock-verification and bulk-audit source. Amazon Creators API is not used by the active pipeline.",
     "fallback_providers": [
+      "serper",
       "apify"
     ],
     "serpapi_api_env": "SERPAPI_API_KEY",
     "serpapi_spend_guard": "SERPAPI_SPEND_ENABLED",
     "apify_api_env": "TEST_API",
-    "apify_spend_guard": "APIFY_SPEND_ENABLED"
+    "apify_spend_guard": "APIFY_SPEND_ENABLED",
+    "serper_api_env": "SERPER_API_KEY",
+    "serper_role": "Google search discovery only; all ASINs require fresh Apify Amazon product-page stock verification",
+    "serper_max_searches_per_run": 6
   }
 }
