@@ -68,5 +68,75 @@
     "keyword": "laptop and external monitor placement",
     "niche": "electronics",
     "editorial_brief": "Explain how to plan screen roles, keyboard and pointing-device positions, cable access, camera placement, lighting, and breaks. Avoid medical claims or fixed height recommendations."
+  },
+  {
+    "slug": "compact-desk-layout-daily-tasks",
+    "title": "How to Plan a Compact Desk Layout Around Your Daily Tasks",
+    "keyword": "compact desk layout planning",
+    "niche": "home office",
+    "editorial_brief": "Build a practical planning method around actual tasks, reach zones, clear work surface, monitor placement, lighting, movement, and storage. Avoid fixed ergonomic measurements and product recommendations."
+  },
+  {
+    "slug": "home-office-shared-bedroom",
+    "title": "How to Set Up a Home Office in a Shared Bedroom",
+    "keyword": "home office setup in a shared bedroom",
+    "niche": "home office",
+    "editorial_brief": "Discuss visual and physical zoning, privacy, sound, lighting, cable routing, equipment storage, workday boundaries, and resetting the room. Keep suggestions realistic for renters and small spaces."
+  },
+  {
+    "slug": "adjustable-desk-cable-routing",
+    "title": "How to Route Cables Around an Adjustable Desk",
+    "keyword": "cable management for an adjustable desk",
+    "niche": "electronics",
+    "editorial_brief": "Explain slack through the full height range, pinch points, strain relief, power access, cable separation, and retesting after movement. Do not invent electrical-code rules or measurements."
+  },
+  {
+    "slug": "desk-lighting-screen-reflections",
+    "title": "Desk Lighting and Screen Reflections: A Practical Home Office Guide",
+    "keyword": "desk lighting to reduce screen reflections",
+    "niche": "home office",
+    "editorial_brief": "Explain ambient versus task lighting, window position, screen orientation, reflective surfaces, and adjustments across daylight changes. Avoid health claims and fixed numeric lighting standards."
+  },
+  {
+    "slug": "kitchen-counter-prep-zones",
+    "title": "How to Plan Kitchen Counter Zones for Everyday Meal Prep",
+    "keyword": "kitchen counter zones for meal prep",
+    "niche": "kitchen",
+    "editorial_brief": "Describe clean, practical zones for washing, preparation, cooking handoff, and serving. Include workflow, landing space, safe movement, cleaning, and adaptation to different kitchen shapes."
+  },
+  {
+    "slug": "small-kitchen-appliance-counter-space",
+    "title": "How to Keep Small Kitchen Appliances From Blocking Prep Space",
+    "keyword": "organize small kitchen appliances on a counter",
+    "niche": "kitchen",
+    "editorial_brief": "Help readers decide what stays on the counter, what gets stored, how to protect ventilation and access, and how to keep sink and cooking zones clear. No product models or buying recommendations."
+  },
+  {
+    "slug": "compact-entryway-storage-routine",
+    "title": "A Simple Entryway Storage Plan for a Small Home",
+    "keyword": "small home entryway storage plan",
+    "niche": "home",
+    "editorial_brief": "Give a practical approach to separating daily essentials, occasional items, footwear, mail, and return-to-home routines while preserving walkways and door clearance."
+  },
+  {
+    "slug": "small-home-fitness-space",
+    "title": "How to Plan a Small Home Workout Space With Clear Movement Room",
+    "keyword": "small home workout space planning",
+    "niche": "fitness",
+    "editorial_brief": "Discuss movement clearance, floor condition, ventilation, storage, noise, shared-room constraints, and how to check suitability for the activity without inventing safety dimensions or medical advice."
+  },
+  {
+    "slug": "compact-cleaning-storage",
+    "title": "How to Organize Cleaning Supplies in a Compact Home",
+    "keyword": "organize cleaning supplies in a small home",
+    "niche": "home",
+    "editorial_brief": "Offer a storage plan based on frequency, separation, labels, original containers, child and pet access considerations, and safe handling. Do not recommend chemical mixing or specific substances."
+  },
+  {
+    "slug": "small-kitchen-coffee-corner",
+    "title": "How to Arrange a Coffee Corner on a Small Kitchen Counter",
+    "keyword": "small kitchen coffee corner layout",
+    "niche": "kitchen",
+    "editorial_brief": "Cover footprint, workflow, nearby power, heat and water separation, cleaning access, storage, and keeping food-prep areas clear. Avoid product picks and price claims."
   }
 ]
