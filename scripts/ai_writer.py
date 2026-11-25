@@ -16,6 +16,7 @@ import os
 import random
 import re
 from urllib import error, request
+from urllib.parse import urlparse
 
 from providers import AIError, available_providers, generate_json
 from util import log
@@ -106,11 +107,7 @@ def attach_tavily_research(topic: dict) -> int:
         if not isinstance(result, dict):
             continue
         url = str(result.get("url") or "")
-        host = (request.urlparse(url).hostname or "").lower() if hasattr(request, "urlparse") else ""
-        # urllib.request does not expose urlparse on all Python builds.
-        if not host:
-            from urllib.parse import urlparse
-            host = (urlparse(url).hostname or "").lower()
+        host = (urlparse(url).hostname or "").lower()
         if not host or any(marker in host for marker in _TAVILY_MARKETPLACE_DOMAINS):
             continue
 
@@ -330,8 +327,8 @@ def build_prompts(topic: dict, cfg: dict) -> tuple[str, str]:
 
     planned_title = topic.get("title", "")
     research_notes = topic.get("tavily_research_notes") or []
-    research_text = "\\n".join(
-        f"- Product: {note.get('matched_product', '')}; source type: manufacturer/reference site; "
+    research_text = "\n".join(
+        f"- Product: {note.get('matched_product', '')}; source type: external reference; "
         f"domain: {note.get('source_domain', '')}; supported details: {note.get('facts', '')}"
         for note in research_notes[:4]
     ) or "No matching supplemental research was returned. Do not infer missing product-specific facts."
