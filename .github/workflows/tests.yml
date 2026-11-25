@@ -26,3 +26,4 @@ jobs:
           python3 tests/test_pipeline.py
           python3 tests/test_daily_product_link_review.py
           python3 tests/test_tavily_article_research.py
+          python3 tests/test_editorial_generator.py
