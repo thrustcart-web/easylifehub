@@ -1,0 +1,22 @@
+{
+  "generated_slugs": [
+    "monitor-arm-vs-nightstand-workspace",
+    "monitor-arm-vs-music-stand-screen-support"
+  ],
+  "generated": [
+    {
+      "slug": "monitor-arm-vs-nightstand-workspace",
+      "title": "Monitor Arm vs Nightstand: What Makes a Better Small-Space Workstation?",
+      "provider": "groq",
+      "words": 1223,
+      "created_at": "2026-11-25T11:43:22.279215+00:00"
+    },
+    {
+      "slug": "monitor-arm-vs-music-stand-screen-support",
+      "title": "Monitor Arm vs Music Stand: What Makes a Suitable Screen Support?",
+      "provider": "gemini",
+      "words": 998,
+      "created_at": "2026-11-25T11:44:27.676683+00:00"
+    }
+  ]
+}

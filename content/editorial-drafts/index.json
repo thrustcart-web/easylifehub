@@ -1,0 +1,59 @@
+{
+  "type": "editorial-drafts-only",
+  "count": 2,
+  "posts": [
+    {
+      "slug": "monitor-arm-vs-music-stand-screen-support",
+      "title": "Monitor Arm vs Music Stand: What Makes a Suitable Screen Support?",
+      "meta_description": "Discover the structural differences between monitor arms and music stands. Learn about stability, center of gravity, and safe display mounting.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "monitor arm vs music stand",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 998,
+      "items": [],
+      "html_file": "monitor-arm-vs-music-stand-screen-support.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    },
+    {
+      "slug": "monitor-arm-vs-nightstand-workspace",
+      "title": "Monitor Arm vs Nightstand: What Makes a Better Small-Space Workstation?",
+      "meta_description": "Explore the structural and ergonomic differences between monitor arms and nightstands. Learn how to choose the right support for small spaces safely and effectively.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "monitor arm vs nightstand",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 1223,
+      "items": [],
+      "html_file": "monitor-arm-vs-nightstand-workspace.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    }
+  ],
+  "publishing": "disabled: product-free editorial drafts are not sent to the Blogger affiliate publisher"
+}
