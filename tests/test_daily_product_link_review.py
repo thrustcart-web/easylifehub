@@ -54,6 +54,18 @@ class TestDailyProductLinkReview(unittest.TestCase):
         self.assertEqual(products[0]["verified_product_title"], "Northstar Desk Lamp Model NL200")
         self.assertEqual(len(products[0]["posts"]), 2)
 
+    def test_generic_anchor_uses_article_title_when_queue_metadata_is_missing(self):
+        posts = [{
+            "title": "MOSECYOU Deadbolt Lockout Device Review: What It Blocks",
+            "url": "https://www.honesttrove.com/lock.html",
+            "published": "2026-11-16T09:43:33Z",
+            "content": '<a href="https://www.amazon.com/dp/B004L1W56G?tag=hotr0e-20">View on Amazon</a>',
+        }]
+        products = review.build_product_inventory(posts, {"posts": []})
+        self.assertEqual(len(products), 1)
+        self.assertNotEqual(products[0]["product_name"], "View on Amazon")
+        self.assertIn("MOSECYOU Deadbolt Lockout Device", products[0]["product_name"])
+
     def test_third_party_in_stock_is_never_amazon_confirmation(self):
         product = {
             "asin": "B012345678",
