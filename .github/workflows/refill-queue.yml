@@ -57,6 +57,9 @@ jobs:
           TEST_API: ${{ secrets.TEST_API || secrets.APIFY_API_TOKEN }}
           PRODUCT_DISCOVERY_PROVIDER: serpapi
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          SERPAPI_API_KEY_2: ${{ secrets.SERPAPI_API_KEY_2 }}
+          SERPAPI_API_KEY_3: ${{ secrets.SERPAPI_API_KEY_3 }}
+          SERPAPI_API_KEY_4: ${{ secrets.SERPAPI_API_KEY_4 }}
           SERPAPI_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.SERPAPI_SPEND_ENABLED == 'true' && 'true' || 'false' }}
           APIFY_SPEND_ENABLED: ${{ inputs.allow_paid_lookup && vars.APIFY_SPEND_ENABLED == 'true' && 'true' || 'false' }}
         run: |
