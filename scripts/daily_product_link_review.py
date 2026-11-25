@@ -166,9 +166,26 @@ def build_product_inventory(posts: list[dict], index: dict) -> list[dict]:
         }
         for asin, anchor_label in _anchor_asins(post.get("content", "")).items():
             item = items_by_asin.get(asin, {})
+            generic_labels = {"view on amazon", "buy on amazon", "check price on amazon", "shop on amazon", "see on amazon"}
+            useful_anchor_label = anchor_label if _normal_title(anchor_label) not in generic_labels else ""
+            article_title_fallback = re.sub(
+                r"\\b(?:honest review|product review|review|buying guide|what to know before buying)\\b",
+                " ",
+                str(post.get("title") or ""),
+                flags=re.I,
+            )
+            article_title_fallback = re.sub(r"\\s+", " ", article_title_fallback).strip(" :-")
+            product_name = str(
+                item.get("name")
+                or item.get("verified_product_title")
+                or useful_anchor_label
+                or article_title_fallback
+                or post.get("title")
+                or ""
+            )
             record = products.setdefault(asin, {
                 "asin": asin,
-                "product_name": str(item.get("name") or anchor_label or post.get("title") or ""),
+                "product_name": product_name,
                 "verified_product_title": str(item.get("verified_product_title") or ""),
                 "search_term": str(item.get("search_term") or ""),
                 "posts": [],
@@ -306,7 +323,10 @@ def analyse_tavily_results(product: dict, payload: dict) -> dict:
 
 def _search_tavily(product: dict, api_key: str) -> dict:
     identity = str(product.get("verified_product_title") or product.get("product_name") or "").strip()
-    query = f'"{product["asin"]}" "{identity}" (in stock OR out of stock OR available OR sold out)'
+    # Do not query Tavily with generic CTA labels such as "View on Amazon".
+    if _normal_title(identity) in {"view on amazon", "buy on amazon", "check price on amazon", "shop on amazon"}:
+        identity = str(product.get("search_term") or "").strip()
+    query = f'"{product["asin"]}" "{identity}" (manufacturer OR model OR official OR distributor OR retailer availability)'
     payload = {
         "query": query[:900],
         "search_depth": "basic",
