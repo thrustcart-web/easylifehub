@@ -566,7 +566,7 @@ class TestProductResolution(unittest.TestCase):
     def test_config_defaults_to_serpapi_with_apify_fallback(self):
         cfg = fresh_cfg()
         self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["apify"])
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serper", "apify"])
 
     def test_selected_provider_uses_config_when_workflow_override_is_absent(self):
         old = os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
@@ -669,7 +669,7 @@ class TestProductResolution(unittest.TestCase):
         os.environ.pop("PRODUCT_DISCOVERY_PROVIDER", None)
         try:
             self.assertEqual(product_resolver._selected_provider(), "serpapi")
-            self.assertEqual(product_resolver._fallback_provider_names("serpapi"), ["apify"])
+            self.assertEqual(product_resolver._fallback_provider_names("serpapi"), ["serper", "apify"])
             self.assertEqual(product_resolver._fallback_provider_names("apify"), [])
         finally:
             if old is None:
@@ -1486,7 +1486,7 @@ class TestAIPath(unittest.TestCase):
         self.assertEqual(cfg["ai"]["primary"], "groq")
         self.assertEqual(cfg["ai"]["fallbacks"], ["openrouter", "gemini"])
         self.assertEqual(cfg["product_discovery"]["provider"], "serpapi")
-        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["apify"])
+        self.assertEqual(cfg["product_discovery"]["fallback_providers"], ["serper", "apify"])
 
     def test_product_discovery_defaults_to_serpapi(self):
         old = os.environ.get("PRODUCT_DISCOVERY_PROVIDER")
