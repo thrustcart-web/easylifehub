@@ -89,10 +89,15 @@ When a reader must verify a detail, explain what to check in the manufacturer's 
 naming a manufacturer or linking to a site.
 
 The article must answer the exact search intent in the required title. Explain practical trade-offs,
-decision criteria, limitations, and safe checks. Distinguish general guidance from facts that vary by
-model, room, mounting surface, or user. For improvised supports, clearly explain that a household object
-is not automatically designed or rated to hold a monitor; never encourage risky mounting or unstable
-stacking. Avoid unsupported claims and unnecessary warnings.
+decision criteria, limitations, and cautious checks. Distinguish general guidance from facts that vary
+by model, room, mounting surface, or user. Never claim that every item in a category has the same design,
+materials, mounting interface, load rating, or stability. Do not state that a household object is always
+unsafe or always unsuitable; say that its suitability cannot be assumed unless its documentation confirms
+the intended use and load. Do not generalize about common materials or maximum loads without evidence.
+Avoid claims that a setup causes or prevents a medical condition. For screen supports, never encourage
+unsecured displays, improvised elevated mounting, unstable stacking, or bypassing manufacturer limits.
+Use qualified language where designs vary, and turn unknown measurements or ratings into checks rather
+than invented facts.
 
 Write 750-950 words of useful body copy, not filler. The first paragraph must directly answer the central
 question. Use exactly 3 introduction paragraphs, at least 5 substantial main sections with 2-3 paragraphs
@@ -130,13 +135,11 @@ Return the complete JSON object now."""
 
 
 def _generate_article(topic: dict, cfg: dict) -> tuple[dict, str]:
-    ai_cfg = cfg.get("ai", {})
     editorial_cfg = copy.deepcopy(cfg)
     editorial_cfg.setdefault("content", {})["min_words"] = MIN_EDITORIAL_WORDS
     editorial_cfg["content"]["target_words"] = 850
-    editorial_cfg.setdefault("ai", {})["max_output_tokens"] = max(
-        8000, int(ai_cfg.get("max_output_tokens", 6000))
-    )
+    ai_cfg = editorial_cfg.setdefault("ai", {})
+    ai_cfg["max_output_tokens"] = max(8000, int(ai_cfg.get("max_output_tokens", 6000)))
 
     system, user = _prompts(topic)
     providers = available_providers(ai_cfg)
