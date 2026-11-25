@@ -217,6 +217,8 @@ def _identity_evidence(product: dict, result: dict) -> str:
 
 
 def _stock_signal(text: str) -> str:
+    # Normalize negated positive wording before testing the positive pattern.
+    text = re.sub(r"\\bnot\\s+in\\s+stock\\b", "out of stock", str(text or ""), flags=re.I)
     negative = bool(NEGATIVE_STOCK_RE.search(text))
     positive = bool(POSITIVE_STOCK_RE.search(text))
     if negative and positive:
