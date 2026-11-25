@@ -169,12 +169,12 @@ def build_product_inventory(posts: list[dict], index: dict) -> list[dict]:
             generic_labels = {"view on amazon", "buy on amazon", "check price on amazon", "shop on amazon", "see on amazon"}
             useful_anchor_label = anchor_label if _normal_title(anchor_label) not in generic_labels else ""
             article_title_fallback = re.sub(
-                r"\\b(?:honest review|product review|review|buying guide|what to know before buying)\\b",
+                r"\b(?:honest review|product review|review|buying guide|what to know before buying)\b",
                 " ",
                 str(post.get("title") or ""),
                 flags=re.I,
             )
-            article_title_fallback = re.sub(r"\\s+", " ", article_title_fallback).strip(" :-")
+            article_title_fallback = re.sub(r"\s+", " ", article_title_fallback).strip(" :-")
             product_name = str(
                 item.get("name")
                 or item.get("verified_product_title")
