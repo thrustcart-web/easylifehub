@@ -1,0 +1,1217 @@
+{
+  "schema_version": 1,
+  "report_date_utc": "2026-11-26",
+  "created_at": "2026-11-26T04:27:07.242097+00:00",
+  "blog_url": "https://www.honesttrove.com",
+  "published_posts_scanned": 82,
+  "unique_products_found": 66,
+  "queries_requested": 15,
+  "queries_completed": 15,
+  "external_in_stock_signals": 0,
+  "external_out_of_stock_signals": 0,
+  "amazon_inventory_confirmations": 0,
+  "automatic_blogger_changes": 0,
+  "quota_or_api_errors": [],
+  "results": [
+    {
+      "asin": "B0092L64M6",
+      "product_name": "View Travel Yoga Mat on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Home Fitness Gear: 3 Picks Compared Honestly",
+          "url": "https://www.honesttrove.com/2026/11/best-home-fitness-gear-3-picks-compared.html",
+          "published": "2026-11-15T07:45:57.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.alibaba.com",
+          "title": "Eco Friendly Tpe Yoga Mat Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/eco-friendly-tpe-yoga-mat-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Eco Friendly Tpe Yoga Mat Suppliers, Manufacturer, Distributor, Factories, Alibaba # eco friendly tpe yoga mat suppliers. ## Xiamen Sanfan Fitness Co., Ltd. Factory Direct Wholesale New Design Custom Printed Mat Double Side Anti Skid Eco Friendly TPE Yoga Mat. ### Factory Direct Wholesale New Design Custom Printed **Mat** Double Side Anti Skid **Eco** **Friendly** **TPE** **Yoga** **Mat**. Waterproof REACH pas"
+        },
+        {
+          "domain": "exercisepick.com",
+          "title": "Where To Buy B Mat Yoga? - Top Retailer Options - ExercisePick",
+          "url": "https://exercisepick.com/where-to-buy-b-mat-yoga",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Where To Buy B Mat Yoga? - Top Retailer Options - ExercisePick ## Where to Buy B Mat Yoga: Online Retailers and Authorized Dealers. When it comes to purchasing a B Mat Yoga, you have a variety of online retailers to choose from. These retailers offer a wide range of B Mat Yoga products, often with competitive pricing and convenient shipping options. Some popular online retailers that carry B Mat Yoga products "
+        },
+        {
+          "domain": "www.ecocorker.com",
+          "title": "Custom Cork Yoga Mat Manufacturer – EcoCorker OEM/ODM Supplier",
+          "url": "https://www.ecocorker.com/custom-cork-yoga-mat-manufacturer-ecocorker-oem-odm-supplier",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Retail Private Label: A specialty retailer launched two SKUs—3 mm TPE cork yoga mat supplier with low MOQ for travel, and 6 mm premium cork surface yoga mats manufacturer SKU for studio practice—balancing price points and shelf appeal. [...] Sustainable and vegan-friendly. Cork is a renewable cork material harvested without felling trees, and can be paired with natural rubber base or TPE backing to meet vegan-friendl"
+        },
+        {
+          "domain": "www.yanrefitness.com",
+          "title": "Natural Rubber Yoga Mat Manufacturer",
+          "url": "https://www.yanrefitness.com/natural-rubber-yoga-mat-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Natural Rubber Yoga Mat Manufacturer China Gym Equipment Manufacturer for Commercial Gym. # Natural Rubber Yoga Mat Manufacturer. If you have been thinking about being a distributor for a natural rubber yoga mat manufacturer, you’ve come to the right place. We will give you all the information you need and tips on landing the natural rubber yoga mat manufacturer that fits your business needs. You will also fin"
+        },
+        {
+          "domain": "www.yanrefitness.com",
+          "title": "PVC Yoga Mat Factory",
+          "url": "https://www.yanrefitness.com/pvc-yoga-mat-factory",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: PVC Yoga Mat Factory China Gym Equipment Manufacturer for Commercial Gym. # PVC Yoga Mat Factory. Are you planning to partner with a PVC yoga mat factory to supply your business? This FAQ guide will have all the details you need to start your search and get the right PVC yoga mat factory for your business needs. We will give you business model options so you can work closely with a PVC yoga mat factory. We wil"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B00BAGTNAQ",
+      "product_name": "View Pet Hair Remover on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/lint-remover-vs-pet-hair-remover.html",
+          "published": "2026-11-21T03:24:09.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "ChomChom Roller Pet Hair Remover – Original Size Reusable Lint Roller for Cat & Dog Hair on Furniture, Couch, Carpet, Car, Rugs & Bedding – Portable, Eco-Friendly (White) | Amazon price tracker / tracking, Amazon price history charts, Amazo",
+          "url": "https://camelcamelcamel.com/product/B00BAGTNAQ",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "| | | | | | | | | | | | | | | | | | | | | | | --- --- --- --- --- --- --- --- --- --- --- | | Product group | Pet Products || Category | Hair Removal Mitts & Rollers | | Manufacturer | ChomChom Roller || Model | 2323445 | | Locale | US || List price | $24.99 | | EAN | 0641517551892 || UPC | 641517551892 | | SKU | B00BAGTNAQ || Last update scan | 1 day ago | | Last tracked | 1 day ago | ### Your Amazon Price Watches ["
+        },
+        {
+          "domain": "www.drewandjonathan.com",
+          "title": "We Tested the ChomChom Pet Hair Remover Roller—Our Review",
+          "url": "https://www.drewandjonathan.com/shopping/chom-chom-pet-hair-roller-remover-review",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IN THIS ARTICLE how we tested our review the verdict Show more items # We Tested the ChomChom Pet Hair Remover to See If It’s Worth the Hype Can it really tackle a home full of pet hair? By Megan Stein | September 9, 2026 chom chom pet hair remover roller This site contains affiliate links to products. We may receive commission for purchases made through these links. Price at time of publish date may change. [...] Am"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B00GSFSFF8",
+      "product_name": "View Cutting Mat on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+          "url": "https://www.honesttrove.com/2026/11/best-crafts-hobbies-for-electronics.html",
+          "published": "2026-11-23T03:25:52.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B00JDI2ER2",
+      "product_name": "View Derma Roller on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Personal Care Shortlist: 3 Options, Trade-Offs Included",
+          "url": "https://www.honesttrove.com/2026/11/personal-care-shortlist-3-options-trade.html",
+          "published": "2026-11-21T23:23:33.855-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.alibaba.com",
+          "title": "Derma Roller Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/derma-roller-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "## Shenzhen ONULISS Technology Co., Limited 0.25MM FDA Facial Microneedles Derma Roller ### 0.25MM FDA Facial Microneedles Derma Roller NEW Derma Roller Led Therapy System 0.25mm Microneedling Derma Roller 540 ### NEW Derma Roller Led Therapy System 0.25mm Microneedling Derma Roller 540 Private Label 540 Titanium Micro Needle0.25mm Beard Roller Derma Roller ### Private Label 540 Titanium Micro Needle0.25mm Beard Roll"
+        },
+        {
+          "domain": "www.honkaybeauty.com",
+          "title": "Microneedle Derma Roller | Derma Roller Manufacturer",
+          "url": "https://www.honkaybeauty.com/Derma-Roller-c185592",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "Title: Microneedle Derma Roller | Derma Roller Manufacturer Microneedling Roller 6 in 1 Derma Roller Kit 12/300/720/1200 Needles for Distributor Purchase $39.80 *now* *$19.90* unit. Wholesale Derma Roller Skin Care Micro Needle Hair Beard Regrowth $26.60 *now* *$23.30* unit. Syringe Type 540 pins Derma Roller Replaceable Handle Hydra Needle for Hyaluronic Acid Serum $12.90 *now* *$8.90* unit. Matte Black Dermaroller "
+        },
+        {
+          "domain": "sukeauto.com",
+          "title": "Top Wholesale Derma Roller Manufacturer in UK",
+          "url": "https://sukeauto.com/derma-roller-manufacturer-in-uk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Nestled in Manchester’s industrial zones, Manchester MicroNeedle Masters has a rich history spanning two decades. Their commitment to integrating the latest research into their products has set them apart as a pioneering microneedle manufacturer. Their microneedle factory is renowned for its precision and adherence to strict quality standards. However, their emphasis on high-end, specialized products might not cater "
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Medical Grade Derma Roller Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/medical-grade-derma-roller-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Medical Grade Derma Roller Suppliers, Manufacturer, Distributor, Factories, Alibaba Get Quotation Now | Buying Request Hub |. # medical grade derma roller suppliers. ## GTO (Beijing) Science And Technology Co., Ltd. Science And Technology Co., Ltd.\"). Medical grade derma roller system for skin rejuvenation. ## Shenzhen ONULISS Technology Co., Limited. Medical Grade Derma roller FDA Approved, 540 needles dermar"
+        },
+        {
+          "domain": "www.hcpwellness.in",
+          "title": "Derma Roller Manufacturer & Suppliers in India | HCP Wellness",
+          "url": "https://www.hcpwellness.in/derma-roller-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Derma Roller Manufacturer & Suppliers in India | HCP Wellness Premium medical-grade derma roller manufactured by HCP Wellness in India for face and scalp microneedling treatments. # Derma Roller Manufacturer. If you are searching for a trusted Derma Roller Manufacturer in India, you are in the right place. At HCP Wellness, we design, develop, and manufacture premium-quality derma rollers for brands, clinics, s"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "404-Error",
+          "url": "https://www.alibaba.com/zgts-derma-roller-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "EXTERNAL_IN_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "bag Christmas. $9.98 5 pieces Ready to Ship USA Stock 16oz Clear Glass Can Cups 48 Units Case Free Shipping Bulk Wholesale Sublimation Drinking Jars $2 48 pieces Wholesale Casual Men Crossbody Bag Flap Closure Retro Multiple Zipper Pockets Lightweight Shoulder Crossbody Bag for Daily Use $2.91 1 piece Custom Logo Printed Chains EVA Open Closure Waterproof Large Capacity Durable Outdoor Pool Travel Shopping Bag Wholes"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B00OW16ZR0",
+      "product_name": "View Blender on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/blender-vs-personal-blender-deciding.html",
+          "published": "2026-11-13T03:42:40.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "TOP 5 Best Glass Blender For Smoothies 2026",
+          "url": "https://www.youtube.com/watch?v=f-6GSlRv2zQ",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Truths 288 subscribers 2 likes 189 views 3 May 2026 Disclosure : “As an Amazon Affiliate Program I earn from qualifying purchases.” Official Website: . 🛒 1. Amazon: https://www.amazon.com/dp/B00NGV4506?tag=19miracle-20 🛒 2. Amazon: https://www.amazon.com/dp/B00EI7DPI0?tag=19miracle-20 🛒 3. Amazon: https://www.amazon.com/dp/B07RQVL8D5?tag=19miracle-20 🛒 4. Amazon: https://www.amazon.com/dp/B00OW16ZR0?tag=19miracle-20 "
+        },
+        {
+          "domain": "www.gearplant.com",
+          "title": "\"Helium 10 Keyword Research 2026 Heated Apparel Amazon (Wholesale Buyer-Retailer View)\" - heated Clothing Manufacturer",
+          "url": "https://www.gearplant.com/helium-10-keyword-research-2026-heated-apparel-amazon-wholesale-buyer-retailer-view-2",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Cluster 2 (manufacturer) is embedded in title + bullet 1 — the wholesale buyer writes “Manufactured by Vietnam OEM Factory with NNN Agreement” in bullet 1 to signal wholesale-buyer sourcing intent. Cluster 3 (OEM) is embedded in title + bullet 5 — the wholesale buyer writes “Custom OEM Logo Private Label Available for Bulk Orders 500+ Units” in bullet 5 to signal OEM/private-label sourcing intent. [...] the niche is "
+        },
+        {
+          "domain": "www.waredock.com",
+          "title": "Retailer vs Wholesaler vs Distributor vs Reseller – What’s the Difference? - Waredock",
+          "url": "https://www.waredock.com/magazine/retailer-vs-wholesaler-vs-distributor-vs-reseller",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Now let’s tackle the other big question. At first glance, a reseller and a distributor might sound similar – both buy products and then resell them. However, the key difference lies in the relationship with the original manufacturer and the target customer. A distributor typically has a direct link to the manufacturer and often an official capacity (sometimes exclusive) to distribute the product, whereas a reseller i"
+        },
+        {
+          "domain": "www.quora.com",
+          "title": "What are examples of wholesalers? Costco, the distributor is Amazon and the retailer is Walmart. - Quora",
+          "url": "https://www.quora.com/What-are-examples-of-wholesalers-Costco-the-distributor-is-Amazon-and-the-retailer-is-Walmart",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Something went wrong. Wait a moment and try again. Try again Please enable Javascript and refresh the page to continue"
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club Tesla Model S Model 3 Model X Model Y Roadster 2008-2012 Roadster 202X Cybertruck. Discuss Tesla's Model S, Model 3, Model X, Model Y, Cybertruck, Roadster and More. You can install our site as a web app on your iOS device by utilizin"
+        }
+      ]
+    },
+    {
+      "asin": "B00WBMQ89C",
+      "product_name": "Money Belt",
+      "verified_product_title": "VENTURE 4TH Travel Money Belt, RFID Blocking Passport Holder - Black",
+      "posts": [
+        {
+          "title": "Money Belt for Business Trips: An Honest Buying Guide",
+          "url": "https://www.honesttrove.com/2026/11/money-belt-for-business-trips-honest.html",
+          "published": "2026-11-20T21:30:07.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.ebay.com",
+          "title": "VENTURE 4TH Travel Money Belt, RFID Blocking Passport Holder",
+          "url": "https://www.ebay.com/itm/920107568830",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "Black Venture 4th travel money belt with RFID blocking passport holder, front zipper pocket, and visible white logo. 11\" long by Black … $40.06/ea or 4."
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "VENTURE 4TH Travel Money Belt, RFID Blocking Passport Holder",
+          "url": "https://www.walmart.com/ip/Venture-4th-Travel-Money-Belt-Unisex-Wallet-RFID-Blocking-Passport-Holder-Blue/425307478",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "At just 0.2\" thick, this slim hidden money belt for travel stays invisible under a t-shirt or dress shirt – a concealed passport holder,"
+        },
+        {
+          "domain": "store.venture4th.co",
+          "title": "RFID Money Belt – Hidden Travel Waist Wallet – VENTURE 4TH",
+          "url": "https://store.venture4th.co/products/venture4th-rfid-safe-money-belt",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "An RFID-blocking money belt that hides under your clothes. Holds a passport, cash and cards flat against you. Twelve colours, lifetime guarantee."
+        },
+        {
+          "domain": "store.venture4th.co",
+          "title": "Travel Money Belt – RFID, Fits 14-56in Waist – VENTURE 4TH",
+          "url": "https://store.venture4th.co/products/travel-money-belt",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "A flat RFID-blocking travel money belt, 11 × 5.5 inches, with an elasticated 14–56 inch waistband and a breathable mesh back. Eight colours."
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Reviewed: VENTURE 4TH Travel Money Belt - Slim Passport Holder ...",
+          "url": "https://www.youtube.com/watch?v=g_w0tu-o-oE",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "... VENTURE 4TH Travel Money Belt - Slim Passport Holder RFID Blocking Travel Pouch to Protect Cash, Credit Cards and Travel Documents Also"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Venture Corporation Limited",
+          "url": "https://tavily.com/knowledge/company/1uAoinHOJkmc",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Venture Corporation Limited ID: 1uAoinHOJkmc Website: www.venture.com.sg Headquarters: Ang Mo Kio, Singapore LinkedIn: www.linkedin.com/company/venturecorporation · 46,150 followers Industry: Appliances, Electrical, and Electronics Manufacturing Company type: Public Company Business model: B2B SaaS: no Social profiles: www.facebook.com/pages/venture-corporation-limited/152932781431084, www.twitter.com/venturesg, ww"
+        }
+      ]
+    },
+    {
+      "asin": "B01H2NVSG2",
+      "product_name": "View Under Bed Storage on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Under Bed Storage or Storage Bins? The Honest Comparison",
+          "url": "https://www.honesttrove.com/2026/11/under-bed-storage-or-storage-bins.html",
+          "published": "2026-11-16T07:46:03.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B01N4TZOHE",
+      "product_name": "Smart Fan",
+      "verified_product_title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan with Variable Speed Control,White",
+      "posts": [
+        {
+          "title": "Before You Buy A Smart Fan for Energy Savers: Read This",
+          "url": "https://www.honesttrove.com/2026/11/before-you-buy-smart-fan-for-energy.html",
+          "published": "2026-11-13T05:44:55.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.walmart.com",
+          "title": "Vornado 683DC Energy Smart Medium Pedestal Air Circulator Fan ...",
+          "url": "https://www.walmart.com/reviews/product/691548814",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Circulator Fan with Variable Speed Control, White. Great fan for circulating A/C. It is super quiet on lower speeds and has a nice white noise sound on the"
+        },
+        {
+          "domain": "sfeldmanhousewares.com",
+          "title": "Vornado Energy Smart Medium Pedestal Air Circulator Fan – White",
+          "url": "https://sfeldmanhousewares.com/products/vornado-683dc-energy-smart-medium-pedestal-air-circulator-fan-white",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "The Vornado comes with a variable speed control knob to adjust airflow from whisper quiet to a powerful high setting for quick room circulation, multi-"
+        },
+        {
+          "domain": "vornado.com",
+          "title": "683DC Energy Smart Medium Pedestal Air Circulator – Vornado Air",
+          "url": "https://vornado.com/products/683dc-energy-smart-medium-pedestal-air-circulator",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "## 683DC Energy Smart Medium Pedestal Air Circulator $99.99 ### Key Features - Whole Room Circulation - Moves Air Up To 80 Feet - Up To 80% More Energy-Efficient - More Powerful Airflow - Precise Control – Variable Speed - Adjustable Height 32-38″ - 5-Year Warranty ### Product Specifications ### Owner's Guide and Safety Specifications for product 683DC Energy Smart Medium Pedestal Air Circulator Warranty Length (Year"
+        },
+        {
+          "domain": "www.pcrichard.com",
+          "title": "Vornado 683DC Energy Smart 9.06 in. Pedestal Fan with Adjustable Height",
+          "url": "https://www.pcrichard.com/vornado-683dc-energy-smart-9.06-in-pedestal-fan-with-adjustable-height-white/CR1-0275-73.html",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "With the Vornado 683DC Energy Smart pedestal circulator you experience powerful airflow (moves air up to 80 feet), and up to 80 percent energy efficiency"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Vornado Energy Smart™ 683DC Pedestal Air Circulator",
+          "url": "https://www.youtube.com/watch?v=BgCigk6314w",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Share your videos with friends, family, and the world."
+        },
+        {
+          "domain": "www.homedepot.com",
+          "title": "Vornado 683 Pedestal Whole Room Air Circulator Fan, 32 in.",
+          "url": "https://www.homedepot.com/p/Vornado-683-Pedestal-Whole-Room-Air-Circulator-Fan-32-in-38-in-Adjustable-Height-CR1-0226-06/307339969",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Versatile fan with 8 wind speeds, 3 modes, and 3D oscillation, Circulating air up to 85 feet with an adjustable height and 8-hour timer,"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Vornado Air, LLC",
+          "url": "https://tavily.com/knowledge/company/g8pvbRYsb9U5",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Vornado Air, LLC ID: g8pvbRYsb9U5 Website: www.vornado.com Legal name: Vornado Air, LLC. Headquarters: Andover, Kansas, United States LinkedIn: www.linkedin.com/company/vornado · 1,519 followers Industry: Computers and Electronics Manufacturing Industry codes: SIC 36, 363, NAICS 33, 335 Company type: Privately Held Parent company: ThreeSixty Group (thethreesixtygroup.com/) Founded: 1945 Business model: B2C SaaS: no"
+        }
+      ]
+    },
+    {
+      "asin": "B071DQSZB8",
+      "product_name": "Hydration Bladder",
+      "verified_product_title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling Running",
+      "posts": [
+        {
+          "title": "Choosing A Hydration Bladder for Backpacking: Trade-Offs Included",
+          "url": "https://www.honesttrove.com/2026/11/choosing-hydration-bladder-for.html",
+          "published": "2026-11-24T07:23:53.898-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.walmart.com",
+          "title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack ...",
+          "url": "https://www.walmart.com/ip/Hydration-Bladder-1-5-2-3L-Water-Bladder-Hiking-Backpack-BPA-Free-Leak-Proof-Water-Reservoir-Storage-Bag-Water-Pouch-Hydration-Pack-Camping-Cycling-R/20063814479",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack, BPA-Free Leak Proof Water Reservoir Storage Bag, Water Pouch Hydration Pack for Camping Cycling"
+        },
+        {
+          "domain": "www.ebay.com",
+          "title": "Hydration Bladder, 1.5-2-3L Water Bladder for Hiking Backpack ...",
+          "url": "https://www.ebay.com/itm/406780517951",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Blue 1.5–2.3L hydration bladder with soft mouthpiece, leakproof connections, and textured. Blue hydration bladder with black connector, white logo, and red “"
+        },
+        {
+          "domain": "www.lenonlures.com",
+          "title": "Hydration Bladder, 1.5L-2L-3L Water Bladder for Hiking Backpack ...",
+          "url": "https://www.lenonlures.com/products/hydration-bladder-1-5l-2l-3l-water-bladder-for-hiking-backpack-leak-proof-water-reservoir-storage-bag-bpa-free-water-pouch-hydration-pack-for-camping-cycling-running-military-green-1-5-2-3-liter",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "The 2 liter hydration pack bladder comes with a wide and large opening, which makes it really easy to collect, fill and refill. You can reach the inside of"
+        },
+        {
+          "domain": "myprimaryparadise.com",
+          "title": "BPA-Free Hydration Bladder With Straw – 1.5L/3L Water Reservoir ...",
+          "url": "https://myprimaryparadise.com/Straw-1-5L-3L-Water-Reservoir-For-Hiking-Backpacks-Cycling-672229",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "BPA-Free Hydration Bladder With Straw – 1.5L/3L Water Reservoir For Hiking Backpacks, Cycling Packs, Foldable Design, Odor-Free & Leak-Proof ; FREE Returns."
+        },
+        {
+          "domain": "www.wal-mart.com",
+          "title": "2 PCS(2L & 1.5L)Hydration Bladder - Water Bladder Reservoir BPA ...",
+          "url": "https://www.wal-mart.com/ip/2-PCS-2L-1-5L-Hydration-Bladder-Water-Bladder-Reservoir-BPA-Free-Leak-Proof-Backpack-Water-Bag-Insulated-Sleeve-Outdoor-Hiking-Running-Camping-Cyclin/17248704242",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "2 PCS(2L & 1.5L)Hydration Bladder - Water Bladder Reservoir BPA Free Leak Proof, Backpack Water Bag with Insulated Sleeve for Outdoor Hiking Running Camping"
+        },
+        {
+          "domain": "www.rei.com",
+          "title": "Hydration Reservoirs & Water Bladders | REI Co-op",
+          "url": "https://www.rei.com/c/hydration-reservoirs",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "- - Deals (15) - - $0.00 to $9.99 (7) - $10.00 to $19.99 (14) - $20.00 to $49.99 (15) - $50.00 to $99.99 (9) - - 36 to 50 (3) - 51 to 100 (15) - 101 to 150 (4) - - Multisport (30) - Cycling (7) - Hiking (3) - Trail Running (1) - Camping (1) - Backpacking (1) - Supply & Repair (1) - Running (1) - - Crux (7) - Fusion (2) - Hydraulics (9) [...] - - Reservoirs (22) - - ALPS Mountaineering (1) - Bottle Bright (2) - CamelB"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "An Affordable Hydration BackPack for Riders | 3Litres | How to Use",
+          "url": "https://www.youtube.com/watch?v=Vvz8jcRa3e0",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "... 3L-Water-Bag-bottle-Pouch-knapsack-tactical-kamp-malzemeleri-hydration-backpack-camping-camelback-bicycle-mochila/32688526931.html See some"
+        }
+      ]
+    },
+    {
+      "asin": "B073BFF65P",
+      "product_name": "View Acrylic Paint Set on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+          "url": "https://www.honesttrove.com/2026/11/crafts-hobbies-3-candidates-judged-on.html",
+          "published": "2026-11-24T03:24:13.099-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B07KQP1X5T",
+      "product_name": "View Weight Lifting Gloves on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Lifting Straps vs Weight Lifting Gloves: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/lifting-straps-vs-weight-lifting-gloves.html",
+          "published": "2026-11-15T23:46:17.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.fightsense.com",
+          "title": "Best Amazon Womens Weight Lifting Gloves for 2026 - FIGHTSENSE",
+          "url": "https://www.fightsense.com/blog/best-amazon-womens-weight-lifting-gloves",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Amazon Womens Weight Lifting Gloves for 2026 - FIGHTSENSE Best Amazon Womens Weight Lifting Gloves for 2026. When weightlifting, proper gear is absolutely crucial; the Amazon womens weight lifting gloves are the greatest for comfort, safety, and grip. It makes no difference how good you are; the correct gloves will support your wrists, prevent calluses on your hands, and enable you perform better. Right h"
+        },
+        {
+          "domain": "mi-gloves.com",
+          "title": "Weight Lifting Gloves Wholesale",
+          "url": "https://mi-gloves.com/weight-lifting-gloves",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Mi-Gloves manufactures a comprehensive selection of weight lifting gloves designed for commercial gyms, fitness brands, and retail distributors. We produce our training gear in our own facilities, which allows us to maintain strict control over stitching durability, grip materials, and hand protection. Our manufacturing capabilities cover various designs to meet different athlete preferences and training styles. We s"
+        },
+        {
+          "domain": "www.globalsources.com",
+          "title": "Wholesale Weight Lifting Gloves Suppliers, Manufacturers (OEM, ODM & OBM) & Factory List | Global Sources",
+          "url": "https://www.globalsources.com/category/weight-lifting-gloves-manufacturer-supplier_34648",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Wholesale Weight Lifting Gloves Suppliers, Manufacturers (OEM, ODM & OBM) & Factory List | Global Sources Better Online and Trade Show Sourcing Experiences.Scan the QR code to download. Home / Sports & Outdoors / Sporting Goods / Sports & Workout Gloves / Weight lifting gloves /. Free Online Promotion for Suppliers. ## Meet Suppliers for Sports & Fitness Goods at Global Sources Shows. Winnel Import and Export "
+        },
+        {
+          "domain": "3dexport.com",
+          "title": "weight lifting gloves 3D Model in Sports Equipment 92352 | 3DExport",
+          "url": "https://3dexport.com/3d-model-weight-lifting-gloves-92352",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "# weight lifting gloves 3D Model weight lifting gloves 3D Model .c4d .max .obj .3ds .fbx .stl .blend SALE 50% OFF ALL ITEMS 04d:13h:56m:37 $19.00-50% $ 9.50 USD - Request product support by the author <!--THE END--> [...] Yes, we do. If you purchased a product and found some error in the renders or description, we'll try to fix the problem as soon as possible. If we cannot correct the error, we will cancel your order"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "Harbinger Workout Gloves in Weight Lifting Gloves - Walmart.com",
+          "url": "https://www.walmart.com/browse/sports-outdoors/harbinger-workout-gloves/4125_4134_1026285_7482840_6745989_1702377",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "3 sizes Available in additional 3 sizes Price $21.99 Options from $21.99 – $24.99 44 out of 5 Stars. 4 reviews $2199Options from $21.99 – $24.99 Harbinger Unisex Pro Weight Lifting Gloves - Small - Tan Camo 4 out of 5 stars Free shipping, arrives in 3+ days ### Harbinger Women's Pro Wrist Wrap Gloves 3.0 - Carbon - Small, Price $34.99 Options from $24.75 3 sizes Available in additional 3 sizes Price $34.99 Options fr"
+        },
+        {
+          "domain": "www.gympaws.com",
+          "title": "Weight Lifting Gloves For Men | Reviews",
+          "url": "https://www.gympaws.com/weight-lifting-gloves-for-men",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Weight Lifting Gloves For Men | Reviews ## Weight Lifting Gloves For Men. Christopher2015-05-26T17:26:46-07:00. Weight Lifting Gloves For MenWalk into any gym or weight room in the world and you’ll find fitness obsessed men and women who have at least one thing in common, they love to sweat it out! Some of them are cardio queens, others are meathead gym rats, and others are there because it makes them feel goo"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B07Q72HJ65",
+      "product_name": "View Car Sun Shade on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Which Car Accessories for Long Drives Is Right for You? 3 Compared",
+          "url": "https://www.honesttrove.com/2026/11/which-car-accessories-for-long-drives.html",
+          "published": "2026-11-17T03:44:59.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B07T5SY43L",
+      "product_name": "Dual Monitor Arm Guide: Screen Fit, Weight Capacity, Alignment, and Desk Space",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Dual Monitor Arm Guide: Screen Fit, Weight Capacity, Alignment, and Desk Space",
+          "url": "https://www.honesttrove.com/2026/11/dual-monitor-arm-guide-screen-fit.html",
+          "published": "2026-11-15T05:44:25.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.ebay.com",
+          "title": "HUANUO Dual Monitor Arm Desk Mount – Fully Adjustable - eBay",
+          "url": "https://www.ebay.com/itm/326940644188",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Used but fully functional. See full description. Model: Dual Monitor Arm Stand (ASIN B07T5SY43L). Compatibility: Fits most 13\"–32\" monitors (VESA 75x75 &"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "HUANUO Dual Monitor Mount - Review 2024 - YouTube",
+          "url": "https://www.youtube.com/watch?v=Iok_QzVt1B0",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "HUANUO Dual Monitor Mount B07T5SY43L About this item Fit Your Monitors and Desks- Each arm can fit 13 to 30 inches flat/curved monitors with"
+        },
+        {
+          "domain": "docs.rs-online.com",
+          "title": "Desk-Mount Dual Monitor Arm - Full Motion - Articulating - RS Online",
+          "url": "https://docs.rs-online.com/3879/0900766b816dd2c8.pdf",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "mm (3.54 in.) Pan 180° Swivel / Pivot 135° around the support post 360° at the elbow Tilt +90° / -65° Weight Capacity (Per Display) 17.7 lb [8 kg] Physical Characteristics Color Black Enclosure Type Aluminum Product Weight 13.5 lb [6.1 kg] Packaging Information Shipping (Package) Weight 17 lb [7.7 kg] What's in the Box Included in Package 1 - mounting arm 2 - desk clamps (upper bracket) 2 - desk clamps (lower bracket"
+        },
+        {
+          "domain": "www.startech.com",
+          "title": "Monitor Mount | Height Adjustable | Horizontal or Vertical Setup | Tool-less Assembly",
+          "url": "https://www.startech.com/en-us/display-mounting-ergonomics/armdual30",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "EASY INSTALLATION: Premium dual monitor arm with toolless slide & click design makes assembling easy; Pre-assembled desk clamp & pole that is easily secured by hand to the desk. Independent arms for vertically stacked/side by side monitors WIDE RANGE OF MOTION: Ergonomic and full-motion w/ independent toolless 10.7\"/270mm adjustable height; Max height from the desk 28.4\"/721mm; The arms extend from the pole 26.54\"/67"
+        },
+        {
+          "domain": "www.huanuo.com",
+          "title": "Monitor Mounts | Flexible & Stable Ergonomic Solutions – HUANUO",
+          "url": "https://www.huanuo.com/collections/monitor-stand",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "30 reviews Weight Capacity: 22 lbs Max Height: 16.65\" $49.99 HNCM7 placeholder CM25 Dual Monitor Mount up to 32 inches Screens - CM25 Dual Monitor Mount up to 32 inches Screens No reviews $41.99 HNCM25 placeholder ### Heavy-Duty Series DS7 High-Performance Dual Monitor Arm - DS7 High-Performance Dual Monitor Arm 25 reviews Weight Capacity: 26.4 lbs per arm Monitor Size: 13\"-40\" $149.99 HNDS7 placeholder Titan™ - Non "
+        },
+        {
+          "domain": "manuals.plus",
+          "title": "HUANUO Dual Monitor Stand - Each Arm Holds 4.4 to 19.8lbs Black",
+          "url": "https://manuals.plus/asin/B07T5SY43L",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "The HUANUO Dual Monitor Stand (Model HNDS6) is a fully adjustable monitor desk mount designed to optimize your workspace and improve ergonomic comfort."
+        },
+        {
+          "domain": "www.facebook.com",
+          "title": "HUANUO Dual Monitor Mount, Mounts 2 Screens Up to 32 Inch ...",
+          "url": "https://www.facebook.com/groups/878085612384195/posts/3325032761022789",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Adjustable Height & Extension: Effortlessly extend your screens up to 16.81″ and raise them up to 16.54″ above your desk with adjustable tension"
+        }
+      ]
+    },
+    {
+      "asin": "B07VST9VYH",
+      "product_name": "View Posture Corrector on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
+          "url": "https://www.honesttrove.com/2026/11/health-wellness-buying-guide-3-picks.html",
+          "published": "2026-11-15T03:45:17.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "Are You Wasting Money on Posture Correctors?",
+          "url": "https://www.youtube.com/watch?v=xRKFvk2pf90",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Please note that the content may not cover all information regarding the subjects addressed and could become outdated over time. Some exercises or techniques might not be suitable for everyone and could potentially worsen your condition or cause additional problems. Listening to your body is essential—stop immediately if you feel pain or discomfort and seek professional advice. [...] [2:16] fixing your posture. It's "
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B07Z93LQDB",
+      "product_name": "View Acrylic Paint Set on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+          "url": "https://www.honesttrove.com/2026/11/best-crafts-hobbies-for-electronics.html",
+          "published": "2026-11-23T03:25:52.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Heavy Body Acrylic Paint: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/heavy-body-acrylic-paint",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Heavy Body Acrylic Paint: Top 10 Ranked by Real Sales 2026 # Best Selling Heavy Body Acrylic Paint: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular heavy body acrylic paint products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Pink Acrylic Paint: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/pink-acrylic-paint",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Pink Acrylic Paint: Top 10 Ranked by Real Sales 2026 # Best Selling Pink Acrylic Paint: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular pink acrylic paint products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the keyword \"pink acr"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Acrylic Paint Pen: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/acrylic-paint-pen",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Acrylic Paint Pen: Top 10 Ranked by Real Sales 2026 # Best Selling Acrylic Paint Pen: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular acrylic paint pen products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the keyword \"acrylic pai"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Just Art Acrylic Paint Markers: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/just-art-acrylic-paint-markers",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Just Art Acrylic Paint Markers: Top 10 Ranked by Real Sales 2026 # Best Selling Just Art Acrylic Paint Markers: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular just art acrylic paint markers products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the sear"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Acrylic Spray Paint Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/acrylic-spray-paint-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Acrylic Spray Paint Suppliers, Manufacturer, Distributor, Factories, Alibaba # acrylic spray paint suppliers. ## Changsha Firm Bond New Material Co., Ltd. Multi Purpose Plastic Acrylic Aerosol Cheap Bulk Spray Paint. ### Multi Purpose Plastic **Acrylic** Aerosol Cheap Bulk **Spray** **Paint**. Cheap Wholesale Plastic Acrylic Aerosol Spray Gun Paint. ### Cheap Wholesale Plastic **Acrylic** Aerosol **Spray** Gun"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "third_party_stock_is_not_amazon_stock": true,
+    "amazon_pages_crawled_directly": false,
+    "automatic_special_link_replacement": false
+  }
+}

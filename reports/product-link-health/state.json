@@ -1,8 +1,8 @@
 {
-  "cursor": 2,
-  "last_run_utc": "2026-11-25T11:32:53.747041+00:00",
-  "last_report": "2026-11-25.json",
+  "cursor": 17,
+  "last_run_utc": "2026-11-26T04:27:07.242097+00:00",
+  "last_report": "2026-11-26.json",
   "total_products_seen": 66,
-  "last_successful_queries": 1,
+  "last_successful_queries": 15,
   "quota_exhausted": false
 }
