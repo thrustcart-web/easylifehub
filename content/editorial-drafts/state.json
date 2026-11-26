@@ -1,7 +1,9 @@
 {
   "generated_slugs": [
     "monitor-arm-vs-nightstand-workspace",
-    "monitor-arm-vs-music-stand-screen-support"
+    "monitor-arm-vs-music-stand-screen-support",
+    "tripod-vs-monitor-arm-portable-workspace",
+    "measure-desk-before-monitor-setup"
   ],
   "generated": [
     {
@@ -17,6 +19,20 @@
       "provider": "gemini",
       "words": 998,
       "created_at": "2026-11-25T11:44:27.676683+00:00"
+    },
+    {
+      "slug": "tripod-vs-monitor-arm-portable-workspace",
+      "title": "Tripod vs Monitor Arm: Choosing a Screen Support for a Flexible Workspace",
+      "provider": "groq",
+      "words": 858,
+      "created_at": "2026-11-26T06:57:47.345385+00:00"
+    },
+    {
+      "slug": "measure-desk-before-monitor-setup",
+      "title": "How to Measure a Desk Before Changing Your Monitor Setup",
+      "provider": "openrouter",
+      "words": 800,
+      "created_at": "2026-11-26T06:59:22.655092+00:00"
     }
   ]
 }

@@ -1,7 +1,33 @@
 {
   "type": "editorial-drafts-only",
-  "count": 2,
+  "count": 4,
   "posts": [
+    {
+      "slug": "measure-desk-before-monitor-setup",
+      "title": "How to Measure a Desk Before Changing Your Monitor Setup",
+      "meta_description": "Step-by-step guide to measuring desk depth, width, edge clearance, wall space, seating position, cable routes, and movement range before a monitor upgrade.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "how to measure a desk for a monitor setup",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:openrouter",
+      "provider": "openrouter",
+      "words": 800,
+      "items": [],
+      "html_file": "measure-desk-before-monitor-setup.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    },
     {
       "slug": "monitor-arm-vs-music-stand-screen-support",
       "title": "Monitor Arm vs Music Stand: What Makes a Suitable Screen Support?",
@@ -44,6 +70,32 @@
       "words": 1223,
       "items": [],
       "html_file": "monitor-arm-vs-nightstand-workspace.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    },
+    {
+      "slug": "tripod-vs-monitor-arm-portable-workspace",
+      "title": "Tripod vs Monitor Arm: Choosing a Screen Support for a Flexible Workspace",
+      "meta_description": "Compare tripods and monitor arms for a home office, covering footprint, portability, load limits, adjustability, and key documentation checks before deciding.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "tripod vs monitor arm",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 858,
+      "items": [],
+      "html_file": "tripod-vs-monitor-arm-portable-workspace.html",
       "layout_version": 0,
       "content_type": "editorial",
       "editorial_only": true,
