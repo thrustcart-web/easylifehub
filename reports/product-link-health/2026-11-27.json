@@ -1,0 +1,1139 @@
+{
+  "schema_version": 1,
+  "report_date_utc": "2026-11-27",
+  "created_at": "2026-11-27T04:29:12.983131+00:00",
+  "blog_url": "https://www.honesttrove.com",
+  "published_posts_scanned": 82,
+  "unique_products_found": 66,
+  "queries_requested": 15,
+  "queries_completed": 15,
+  "external_in_stock_signals": 0,
+  "external_out_of_stock_signals": 0,
+  "amazon_inventory_confirmations": 0,
+  "automatic_blogger_changes": 0,
+  "quota_or_api_errors": [],
+  "results": [
+    {
+      "asin": "B0868QQ1X6",
+      "product_name": "Paint Brush Set",
+      "verified_product_title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor Brushes",
+      "posts": [
+        {
+          "title": "Paint Brush Set: Judging Surface Priming Against Real Use",
+          "url": "https://www.honesttrove.com/2026/11/paint-brush-set-judging-surface-priming.html",
+          "published": "2026-11-24T09:22:27.537-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.ebay.com",
+          "title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor ...",
+          "url": "https://www.ebay.com/itm/920043812404",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "This 12 piece paint brush set includes essential shapes (flat, round, fan, filbert) for backgrounds, blending, textures, and fine details."
+        },
+        {
+          "domain": "www.ebay.com",
+          "title": "Professional Artist Paint Brush Set of 12 - Acrylic and Watercolor ...",
+          "url": "https://www.ebay.com/itm/407336133525",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "12 artist-quality paint brushes with bronze handles, acrylic and watercolor bristles, and. 12 artist brushes in acrylic and watercolor, round handles, labeled"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "Artist Paint Brush Set (Acrylic Oil Watercolor Tools, Professional), 12 ...",
+          "url": "https://www.walmart.com/ip/Artist-Paint-Brush-Set-Acrylic-Oil-Watercolor-Tools-Professional-12-Professional-Brushes-Handle-Thick-Paints-Artist-Paint-Brushes-12Pcs-Set-Acrylic-M/17521255516",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "12 Professional Brushes. Material: Wood handle + gold tube + nylon hair. Suits for watercolors, acrylics, gouache paintings and oil paintings. Suits for"
+        },
+        {
+          "domain": "drhislabatesmd.com",
+          "title": "Professional Artist Brushes For Watercolor, Acrylic, Gouache & Oil ...",
+          "url": "https://drhislabatesmd.com/Brush-Set-Professional-Artist-Brushes-For-Watercolor-730365",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "12-Piece Round Paint Brush Set – Professional Artist Brushes For Watercolor, Acrylic, Gouache & Oil, Assorted Sizes, Rust-Resistant Ferrules."
+        },
+        {
+          "domain": "www.nicpro.com",
+          "title": "Nicpro 12PCS Acrylic Paint Brushes, Artist Paint Brush Set for Waterco",
+          "url": "https://www.nicpro.com/products/nicpro-12-pcs-acrylic-paint-brushes-adult-art-paint-brush-set-for-watercolor-oil-gouache-face-body-craft-miniatures-painting-paintbrushes",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Sale price$12.99 USD. These paint brushes are ideal for watercolor, oil, acrylic, gouaches, tempera painting, body and face painting. Great gift for your kids,"
+        },
+        {
+          "domain": "art.royalbrush.com",
+          "title": "Art Brushes | Paint Brushes - Royal & Langnickel",
+          "url": "https://art.royalbrush.com/collections/artist-brushes",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Acrylic Brushes Oil Brushes Watercolor Brushes All Media Brushes Brush Sets Specialty Artist Brushes Crafter's Choice™ Brushes Kids' Brushes Classroom/Teacher Brushes SVP4 - 10pc Sable/Camel Variety Short Handle Brush Set ### SVP4 | 10pc Sabline/Camel Variety Short Handle Brush Set ### SVP4 | 10pc Sabline/Camel Variety Short Handle Brush Set SVP5 - 10pc White Bristle Round/Flat Brush Set ### SVP5 | 10pc White Bristle"
+        }
+      ]
+    },
+    {
+      "asin": "B086WH19WH",
+      "product_name": "View Heat Gun on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
+          "url": "https://www.honesttrove.com/2026/11/best-power-tools-for-curved-cuts-3.html",
+          "published": "2026-11-23T05:26:04.458-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "We Tested 7 Best Heat Guns on Amazon in 2026 - YouTube",
+          "url": "https://www.youtube.com/watch?v=MMlqoN7IOH8",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "... availability, and the latest prices before buying. Heat Guns Featured in This Video: 1. Seekone SDL-2816 Heat Gun → https://link.amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B087767KNW",
+      "product_name": "Soldering Iron",
+      "verified_product_title": "Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V",
+      "posts": [
+        {
+          "title": "Soldering Iron Review: What I Would Check Before Buying",
+          "url": "https://www.honesttrove.com/2026/11/soldering-iron-review-what-i-would.html",
+          "published": "2026-11-25T01:26:01.186-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "bestrevie.ws",
+          "title": "Amazon.com: Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V : Tools & Home Improvement",
+          "url": "https://bestrevie.ws/B087767KNW/c99996cf6d37806b8f452d5fc032a87cdeffc578-MDkyMDI2?lid=126031",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Amazon.com: Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 110V : Tools & Home Improvement Select See All Buying Options to shop available offers. Soldering Iron Kit, 60W Soldering Iron with 5pc Interchangeable Tips, 10-in-1 Adjustable Temperature Solder Welding Tools, Fast Heating, Electronic Repair, 1"
+        }
+      ]
+    },
+    {
+      "asin": "B08DG3GT9F",
+      "product_name": "Record Cleaning Kit",
+      "verified_product_title": "EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel",
+      "posts": [
+        {
+          "title": "Record Cleaning Kit for Beginners: An Honest Buying Guide",
+          "url": "https://www.honesttrove.com/2026/11/record-cleaning-kit-for-beginners.html",
+          "published": "2026-11-21T07:23:21.972-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "target.georiot.com",
+          "title": "Amazon.com: EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel : Electronics",
+          "url": "https://target.georiot.com/Proxy.ashx?GR_URL=https%3A%2F%2Famazon.com%2FEVEO-Vinyl-Record-Cleaning-Kit%2Fdp%2FB08DG3GT9F%2Fref%3Dsr_1_5%3Fcrid%3D11D700Q76MQIK%26dib%3DeyJ2IjoiMSJ9.IMzoV4xoxgY_tk_mQPMn_oHrIsB4Kc3wjNiIp4LwOqNutMp05wnEdYPs1fvzVU6ZVI3O4vgJM7WAeUMuMZbYjLr4cNdrX8x5GPj3FNhk-mjb2FJAwnhYXZ4s2RLyOjoOfhiYWxr6UbJV_Qu9mnd43NgnMwpPv0aA_m9JutY_4Y4PD5iR91XyWr1Gap6-XFlL24lkO7uocWtVo4TCsXvZYWsd-IHt3hA2aJ1DzqK008A.bcZrHrDBROhn8fuckEjXDrzcB_wybrkulqiEseATPWc%26dib_tag%3Dse%26keywords%3Dvinyl%2Bcleaner%26qid%3D1752073079%26sprefix%3Dvinyl%2Bcleane%2Caps%2C246%26sr%3D8-5%26tag%3Dhawk-future-20%26ascsubtag%3Dloudersound-gb-9613855890876096437-20",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Amazon.com: EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner & Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster & Turntable Stylus Gel : Electronics EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl Record Cleaner &amp; Vinyl Cleaning Kit with Velvet Brush, Vinyl Cleaner Liquid, Duster &amp; Turntable Stylus Gel. # EVEO Vinyl Record Cleaning Kit - 4-in-1 Premium Vinyl "
+        },
+        {
+          "domain": "tavily.com",
+          "title": "EVEO S.A.",
+          "url": "https://tavily.com/knowledge/company/V2T1dETnIfmK",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# EVEO S.A. ID: V2T1dETnIfmK Website: www.eveo.com.br Legal name: EVEO Enterprise Cloud Headquarters: São Paulo, SP, Brazil LinkedIn: www.linkedin.com/company/eveo-sa · 68,303 followers Industry: Technology, Information and Internet Industry codes: SIC 27, 271, NAICS 51, 519 Company type: Privately Held Founded: 1998 Business model: B2B SaaS: no [...] ## Web traffic - Monthly visits: 32,073 (10.6% change) - Pages per"
+        }
+      ]
+    },
+    {
+      "asin": "B08GP6B5RL",
+      "product_name": "Seed Starting Tray",
+      "verified_product_title": "Gardzen 30 Pack 6-Cell Seed Starting Tray for Seedlings, Plant Starter Trays with Drainage Holes for Seed Germination, 5.4x3.7 inches, Black",
+      "posts": [
+        {
+          "title": "Before You Buy A Seed Starting Tray for Seed Starting: Read This",
+          "url": "https://www.honesttrove.com/2026/11/before-you-buy-seed-starting-tray-for.html",
+          "published": "2026-11-24T01:24:52.130-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": []
+    },
+    {
+      "asin": "B08R6KMBQT",
+      "product_name": "Instant Pot",
+      "verified_product_title": "Instant Pot Vortex Plus Mini 4 Qt 6-in-1 Air Fryer, Stainless Steel",
+      "posts": [
+        {
+          "title": "Instant Pot: An Honest Look at the Trade-Offs",
+          "url": "https://www.honesttrove.com/2026/11/instant-pot-honest-look-at-trade-offs.html",
+          "published": "2026-11-17T07:43:31.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "Instant Pot Vortex Plus Mini 4 Qt 6-in-1 Air Fryer, Stainless Steel | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts\n    |\n    camelcamelcamel.com",
+          "url": "https://camelcamelcamel.com/product/B08R6KMBQT",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Instant Pot Vortex Plus Mini 4 Qt 6-in-1 Air Fryer, Stainless Steel | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com # Instant Pot Vortex Plus Mini 4 Qt 6-in-1 Air Fryer, Stainless Steel | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts. ## Instant Pot Vortex Plus Min"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "Instant Pot Vortex Plus Air Fryer, 4-Quart, Stainless Steel, 6-in-1 Functionality - Walmart.com",
+          "url": "https://www.walmart.com/ip/Instant-Vortex-Plus-4-Quart-Air-Fryer-Single-Basket-Stainless-Steel-New/148292907",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Instant Pot Vortex Plus Air Fryer, 4-Quart, Stainless Steel, 6-in-1 Functionality - Walmart.com | Features | Non-StickInstant Pot® 4Qt Vortex® Plus 6-in-1 Mini Air Fryer, Air Fry, Crisps, Broils, Roasts, Dehydrates, Bakes, Reheats, Stainless Steel, 4 Quarts | Non-StickInstant Vortex Plus 6-Quart Air Fryer, Stainless Steel Single Basket | Removable BasketInstant Pot 6Qt Vortex Slim XL 5-in-1 Compact Air Fryer, "
+        },
+        {
+          "domain": "target.georiot.com",
+          "title": "Amazon.com.br : instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel",
+          "url": "https://target.georiot.com/Proxy.ashx?GR_URL=https%3A%2F%2Famazon.com%2FInstant-Touchscreen-Customizable-Programs-Stainless%2Fdp%2FB08R6KMBQT%3Fref%3Ddlx_deals_dg_dcl_B08R6KMBQT_dt_sl14_28_pi%26pf_rd_r%3D0HVADA34NQD3402QZ3DX%26pf_rd_p%3D5ac04545-c2e2-4358-9acc-0e976288d228%26th%3D1%26tag%3Dftr-techradar-us-20%26ascsubtag%3Dtrd-us-1938483524941220227-20",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Amazon.com.br : instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel # 8 resultados para \"instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel\" Classificar por: Em destaque Preço: Do menor para o maior Preço: Do maior para o menor Méd. ## 8 resultados para \"instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel\". Instant Pot 4QT VORTEX Plus Mini fritadeira de ar 6 em 1, "
+        },
+        {
+          "domain": "target.georiot.com",
+          "title": "Amazon.com.br : instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel",
+          "url": "https://target.georiot.com/Proxy.ashx?GR_URL=https%3A%2F%2Famazon.com%2FInstant-Touchscreen-Customizable-Programs-Stainless%2Fdp%2FB08R6KMBQT%3Ftag%3Dftr-tomsguide-us-20%26ascsubtag%3Dtomsguide-us-5033734483912913012-20",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Amazon.com.br : instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel ## 17 resultados para \"instant pot vortex plus mini 4 qt 6 in 1 air fryer stainless steel\". Instant Pot 4QT VORTEX Plus Mini fritadeira de ar 6 em 1, fritar ao ar, assar, assar, desidratar ou reaquecer, preto, 4 qu... ## Instant Pot 4QT VORTEX Plus Mini fritadeira de ar 6 em 1, fritar ao ar, assar, assar, desidratar ou reaquecer"
+        },
+        {
+          "domain": "pricehistory.app",
+          "title": "Instant Pot VORTEX Plus 6QT XL Air Fryer, 6-in-1 Air Fryer, Stainless Steel - Price History",
+          "url": "https://pricehistory.app/p/instant-pot-6qt-vortex-plus-air-fryer-9TLymFIm",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Instant Pot VORTEX Plus 6QT XL Air Fryer, 6-in-1 Air Fryer, Stainless Steel - Price History 📈 Amazon Price Tracker 📈 Flipkart Price Tracker 🏷️ Price History Deals 🔎 Amazon Deal Finder 📉 Price Drop 📉 Amazon Price Drop 📉 Flipkart Price Drop 📈 Amazon US Price Tracker 💬 Price History Telegram 💬 Price History Whatsapp 🌐 Price History Extension 📈 Price History Android App 📱 Price History iOS App. Instant Pot VORTEX "
+        },
+        {
+          "domain": "www.kroger.com",
+          "title": "Instant Pot® Vortex Plus Stainless Steel Air Fryer, 4 qt - Kroger",
+          "url": "https://www.kroger.com/p/instant-pot-vortex-plus-stainless-steel-air-fryer/0081002858432",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Remember, you can plan ahead with a pickup or delivery order. Availability may be adjusted for the safety of our Customers & Associates. # Instant Pot® Vortex Plus Stainless Steel Air Fryer. ### Item Availability. ## Product Information. * Combining space efficiency and cooking flexibility, Instant Pot's Vortex™ Plus Air Fryer can easily air fry, roast, broil, bake, reheat or dehydrate at the touch of a button. The V"
+        },
+        {
+          "domain": "www.williams-sonoma.com",
+          "title": "Instant Pot 6-Qt. Stainless-Steel Vortex Plus Air Fryer | Williams Sonoma",
+          "url": "https://www.williams-sonoma.com/products/instant-pot-ss-vortex-plus-airfryer?bvstate=pg%3A2%2Fct%3Ar",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Instant Pot Stainless-Steel Vortex Plus Air Fryer, 6-qt. * Using only a few drops of oil, the Instant Pot Vortex Plus Air Fryer creates crispy chicken wings, French fries, calamari and more, with the same robust taste and delectable crunch as those from a traditional fryer, but with healthier results. Within 30 days, you may return most items for a refund of the merchandise value. Final sale items ending in .97 can"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Instant Pot Brands",
+          "url": "https://tavily.com/knowledge/company/KxJe0NzCBULF",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Instant Pot Brands ID: KxJe0NzCBULF Website: www.instantpot.com Headquarters: Chicago, Illinois, United States LinkedIn: www.linkedin.com/company/instantpotbrands · 10,932 followers Industry: Appliances, Electrical, and Electronics Manufacturing Industry codes: SIC 36, 3639, NAICS 33, 332 Company type: Privately Held Parent company: Corelle Brands LLC (corellebrands.com) Founded: 2009 Business model: B2C SaaS: no ["
+        }
+      ]
+    },
+    {
+      "asin": "B09DY7CCW5",
+      "product_name": "View Soldering Iron on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Crafts & Hobbies for Electronics Hobbies: 3 Options We Would Actually Buy",
+          "url": "https://www.honesttrove.com/2026/11/best-crafts-hobbies-for-electronics.html",
+          "published": "2026-11-23T03:25:52.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "Generic Amazon soldering iron kit review || (Soldering Iron Kit with ON/OFF Switch, Rarlight 60W)",
+          "url": "https://www.youtube.com/watch?v=cUW1-URtIGY",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Tags: soldering, iron, solder, soldering iron, electronics soldering, electronics soldering iron, generic, amazon solder, amazon soldering iron, kit, soldering kit, soldering iron review, amazon soldering iron review, iron review, solder review, electronics soldering iron review, [...] [15:59] really really good and reliable one I don't really trust this cuz this is like this is like double the weight of this [16:07]"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B09GTRVJQM",
+      "product_name": "Air Purifier",
+      "verified_product_title": "Levoit Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers",
+      "posts": [
+        {
+          "title": "Is An Air Purifier Worth It? A Buyer's Assessment",
+          "url": "https://www.honesttrove.com/2026/11/is-air-purifier-worth-it-buyers.html",
+          "published": "2026-11-23T07:24:10.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.newegg.com",
+          "title": "Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers - Newegg.com",
+          "url": "https://www.newegg.com/levoit-core-mini-p/p/0NW-020G-003H7",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers - Newegg.com 3. Heating, Cooling & Air Quality. Main image of Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers. Alt view image 2 of 7 - Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers. # Air Purifiers for Bedroom Home Pets Dorm Room, Small Air Purifiers. Be the first to review this product... Air purifiers w"
+        },
+        {
+          "domain": "expertbeacon.com",
+          "title": "Best Air Purifiers for Dorm Room (2026) | Expertbeacon Essen | Expertbeacon Essentials",
+          "url": "https://expertbeacon.com/essentials/top/air-purifiers/best-air-purifiers-for-dorm-room",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Air Purifiers for Dorm Room (2026) | Expertbeacon Essen | Expertbeacon Essentials Top 4 recommended products for \"Best Air Purifiers for Dorm Room\". LEVOIT Air Purifiers for Bedroom Home Dorm, AHAM Verified, 3-in-1 Filter Cleaner With Aroma Pad, Filters Smoke, Allergens, Pet Dander, Odor, Dust, Office, Desktop, Core Mini-P, White. Afloia Air Purifiers for Home Bedroom Large Room Up to 1076 Ft², 3-Stage Fi"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Levoit Indonesia",
+          "url": "https://tavily.com/knowledge/company/l8H5I1iKRYDI",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Levoit Indonesia ID: l8H5I1iKRYDI Website: www.levoit.id Headquarters: Jakarta Utara, DKI Jakarta, Indonesia LinkedIn: www.linkedin.com/company/levoitindonesia · 513 followers Industry: Retail Appliances, Electrical, and Electronic Equipment Company type: Privately Held Business model: B2C SaaS: no Social profiles: www.facebook.com/levoit.indonesia, www.instagram.com/levoit_indonesia Description: Levoit is a compan"
+        }
+      ]
+    },
+    {
+      "asin": "B09W9HV6MN",
+      "product_name": "View Ab Roller on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Home Fitness Gear: 3 Picks Compared Honestly",
+          "url": "https://www.honesttrove.com/2026/11/best-home-fitness-gear-3-picks-compared.html",
+          "published": "2026-11-15T07:45:57.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "TOP 5 Best Ab Roller Wheels for Home Gym 2026",
+          "url": "https://www.youtube.com/watch?v=aJmIppR9wxI",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Reveal 4470 subscribers 95 views 23 Sep 2025 Disclosure : \"As an Amazon Affiliate Program I earn from qualifying purchases.\" 🛒 1. Amazon: https://www.amazon.com/Vinsguir-Workout-Exercise-Equipment-Abdominal/dp/B07RKW5H68?tag=unboxrevealgear-20 🛒 2. Amazon: https://www.amazon.com/Vinsguir-Roller-Wheel-Equipment-Accessories/dp/B09W9HV6MN?tag=unboxrevealgear-20 🛒 3. Amazon: https://www.amazon.com/U-S-Jaclean-Core-Fitnes"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Ab Roller Machine Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/ab-roller-machine-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Ab Roller Machine Suppliers, Manufacturer, Distributor, Factories, Alibaba # ab roller machine suppliers. ### Affordable C3 wrought iron **machine** embossing **roller**. Superb C3 wrought iron machine roller pipe bending machine. ### Superb C3 wrought iron **machine** **roller** pipe bending **machine**. ## Wuhan Evergreen Electronic Technology Co., Ltd. Revoflex Xtreme AB Wheel Roller Abdominal Muscle Traine"
+        },
+        {
+          "domain": "gofitstrength.com",
+          "title": "AB Roller Manufacturer & Factory - Gofitstrength",
+          "url": "https://gofitstrength.com/de/produktkategorie/ab-roller-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: AB Roller Manufacturer & Factory - Gofitstrength # Wholesale AB Rollers | Best Ab Wheel Supplier & Manufacturer. Gofitstrength is your trusted AB roller supplier, offering a wide range of high-quality ab wheels designed to meet the demands of fitness enthusiasts and professionals alike. Our AB rollers are perfect for enhancing core strength, improving balance and increasing stability. We provide AB rollers tha"
+        },
+        {
+          "domain": "rollerski.ca",
+          "title": "Skike roller skis - Canada's official distributor & retailer",
+          "url": "https://rollerski.ca",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Skike roller skis - Canada's official distributor & retailer * Canada's official distributor & retailer of Skike and SRB rollerskis. ## Canada's distributor & retailer of rough road and traditionnal rollerskis. * Use it with your running shoes or even your rubberboots in the rain. * Rollerski poles are quintessential, we have several models. * Discover the Passion of Cross-Country Skiing and Rollerskiing with "
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] We are authorized in-house stockists of the very products we work with, and work directly with the manufacturer and US distributor to provide availability and stellar service to both our retailer and wholesale clients. We offer fulfillment and will-call services and are headquarted in the San Francisco Bay Area, and serve all 50 states + int"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B09WZ748K1",
+      "product_name": "View Tweezers on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Personal Care Shortlist: 3 Options, Trade-Offs Included",
+          "url": "https://www.honesttrove.com/2026/11/personal-care-shortlist-3-options-trade.html",
+          "published": "2026-11-21T23:23:33.855-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tweezerworld.com",
+          "title": "Watchmaking & Jewelry Tweezers Manufacturer | TWEEZER WORLD® - TWEEZER WORLD",
+          "url": "https://tweezerworld.com/pages/precision-watch-service-tweezers-professional-workshops",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "EXTERNAL_IN_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "00 items Choosing a selection results in a full page refresh. Someone recently bought a Thanks for subscribing! This email has been registered! ## Shop the look ## Choose Options ##### Edit Option ##### Back In Stock Notification ##### Compare | Product | SKU | Description | Collection | Availability | Product Type | Other Details | --- --- --- ##### Terms & Conditions ## Choose Options this is just a warning Login S"
+        },
+        {
+          "domain": "javela.eu",
+          "title": "Rubis Switzerland Classic Slant Tweezer | Official Distributor",
+          "url": "https://javela.eu/shop/rubis-switzerland/classic-slant-tweezers",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Rubis Switzerland Classic Slant Tweezer | Official Distributor Skip to navigation Skip to content. Free delivery in Europe **over 125€**. Rubis Switzerland Tweezers | Swissforce Skincare Shop. #### Browse. #### Want to chat? Call us toll free +1 789 2000. #### Social. * Rubis Classic stainless-steel tweezers, full length view with slanted tips. * Close-up of the slanted tips of Rubis Classic stainless-steel tw"
+        },
+        {
+          "domain": "www.gearplant.com",
+          "title": "\"Helium 10 Keyword Research 2026 Heated Apparel Amazon (Wholesale Buyer-Retailer View)\" - heated Clothing Manufacturer",
+          "url": "https://www.gearplant.com/helium-10-keyword-research-2026-heated-apparel-amazon-wholesale-buyer-retailer-view-2",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Cluster 2 (manufacturer) is embedded in title + bullet 1 — the wholesale buyer writes “Manufactured by Vietnam OEM Factory with NNN Agreement” in bullet 1 to signal wholesale-buyer sourcing intent. Cluster 3 (OEM) is embedded in title + bullet 5 — the wholesale buyer writes “Custom OEM Logo Private Label Available for Bulk Orders 500+ Units” in bullet 5 to signal OEM/private-label sourcing intent. [...] inventory at "
+        },
+        {
+          "domain": "www.quora.com",
+          "title": "What are examples of wholesalers? Costco, the distributor is Amazon and the retailer is Walmart. - Quora",
+          "url": "https://www.quora.com/What-are-examples-of-wholesalers-Costco-the-distributor-is-Amazon-and-the-retailer-is-Walmart",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Something went wrong. Wait a moment and try again. Try again Please enable Javascript and refresh the page to continue"
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] Below is a list of all of our in-stock sets catered for the Model 3, Model Y, Model S. For fitment consultation, product inquiries, and general questions regarding order status/availability, please reach out via PM or email/call directly. www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com "
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B09ZRQKGQ3",
+      "product_name": "Key Holder",
+      "verified_product_title": "Lwenki Key Holder for Wall, Decorative Key and Mail Holder with Shelf Has Large Key Hooks for Bags, Coats – Paulownia Wood Key Hanger with Mounting Hardware (9.8”W x 6.7”H x 4.2”D) (Brown)",
+      "posts": [
+        {
+          "title": "Is A Key Holder Worth It for Small Entryways? The Honest Answer",
+          "url": "https://www.honesttrove.com/2026/11/is-key-holder-worth-it-for-small.html",
+          "published": "2026-11-17T01:46:03.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.xydc.com",
+          "title": "B09ZRQKGQ3 Lwenki Key Holder for Wall, Decorative Key and ...",
+          "url": "https://www.xydc.com/opendata/asin-research/US/B09ZRQKGQ3",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "... (9.8”W x 6.7”H x 4.2”D) (Brown)B09ZRQKGQ3 商品详情›. 近7天流量. 56,291. 较前7天变化. +5.91%. 自然/ 广告关键词数量. 284. /. 0. 近30天订单量: 1,000+. 流量概况."
+        }
+      ]
+    },
+    {
+      "asin": "B0BQCWH5KF",
+      "product_name": "View Impact Driver on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Power Tools for Curved Cuts: 3 Picks, Ranked by What Matters",
+          "url": "https://www.honesttrove.com/2026/11/best-power-tools-for-curved-cuts-3.html",
+          "published": "2026-11-23T05:26:04.458-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "DEWALT 20V MAX XR Impact Driver, 1/4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B) | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon pric",
+          "url": "https://camelcamelcamel.com/product/B0BQCWH5KF",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Check out our Amazon price tracking browser extension, The Camelizer! ## DEWALT 20V MAX XR Impact Driver, 1/ 4 Inch High Torque Brushless 3 Speed Premium Cordless with LED Light, Extended Runtime, Tool Only (DCF845B). **ASIN**: B0BQCWH5KF **UPC**: 885911893145 **EAN**: 088591189314 **PRODUCT GROUP**: Tools **CATEGORY**: Tools & Home Improvement **MANUFACTURER**: DEWALT **MODEL**: DCF845B. ### Amazon Price History. Th"
+        },
+        {
+          "domain": "www.quora.com",
+          "title": "What are examples of wholesalers? Costco, the distributor is Amazon and the retailer is Walmart. - Quora",
+          "url": "https://www.quora.com/What-are-examples-of-wholesalers-Costco-the-distributor-is-Amazon-and-the-retailer-is-Walmart",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Something went wrong. Wait a moment and try again. Try again Please enable Javascript and refresh the page to continue"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "www.brandalignment.com",
+          "title": "Distributor vs Wholesaler vs Retailer: Supply Chain Layers",
+          "url": "https://www.brandalignment.com/distributor-vs-wholesaler-vs-retailer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "If you’re seeing 10+ sellers on your Amazon listing, wholesalers may be part of the equation. Understanding wholesale vs direct-to-consumer models can help clarify how inventory flows into the market. ## What Is a Retailer? A retailer sells product directly to the end consumer. Retailers can be: Brick-and-mortar stores Big box chains Online marketplaces Independent eCommerce stores Examples include: [...] In the worl"
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] We are authorized in-house stockists of the very products we work with, and work directly with the manufacturer and US distributor to provide availability and stellar service to both our retailer and wholesale clients. We offer fulfillment and will-call services and are headquarted in the San Francisco Bay Area, and serve all 50 states + int"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0BQLLB61B",
+      "product_name": "View USB C Hub on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "USB C Hub or USB Charger? The Honest Comparison",
+          "url": "https://www.honesttrove.com/2026/11/usb-c-hub-or-usb-charger-honest.html",
+          "published": "2026-11-24T05:23:10.018-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display",
+          "url": "https://camelcamelcamel.com/product/B0BQLLB61B",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, B0BQLLB61B, New Price as of Nov 19, 2026 (Nov 19, 2026) $34.99. Avg: $399.64 View at"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Hub Usb C: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/hub-usb-c",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Hub Usb C: Top 10 Ranked by Real Sales 2026 # Best Selling Hub Usb C: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular hub usb c products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the keyword \"hub usb c.\" Whether you're searchin"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Usb C Hub: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/usb-c-hub",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Usb C Hub: Top 10 Ranked by Real Sales 2026 # Best Selling Usb C Hub: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular usb c hub products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the keyword \"usb c hub.\" Whether you're searchin"
+        },
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling Usb C Charging Hub: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/usb-c-charging-hub",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling Usb C Charging Hub: Top 10 Ranked by Real Sales 2026 # Best Selling Usb C Charging Hub: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular usb c charging hub products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing opportunities within the search results for the keyword \"usb c ch"
+        },
+        {
+          "domain": "bigbangprice.com",
+          "title": "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, 1 x Powered USB-C 5Gbps & 2×Powered USB-A 3.0 5Gbps Data Ports for MacBook Pro, MacBook Air, Dell and More (B0BQLLB61B | BigBangPrice | Amazon Price Tracker & History Charts - B",
+          "url": "https://bigbangprice.com/product/B0BQLLB61B",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, 1 x Powered USB-C 5Gbps & 2×Powered USB-A 3.0 5Gbps Data Ports for MacBook Pro, MacBook Air, Dell and More (B0BQLLB61B | BigBangPrice | Amazon Price Tracker & History Charts - BigBangPrice ## Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, 1 x Powered USB-C 5Gbps & 2×Powered USB-A 3.0 5Gbps Data Ports for MacBook Pro, MacBook Air, De"
+        },
+        {
+          "domain": "www.pricehound.com.au",
+          "title": "Dell P2725HE 27\" FHD IPS 100Hz 5ms USB Type-C Business Monitor 90W USB-C + Hub - Best Price from 1 retailer",
+          "url": "https://www.pricehound.com.au/product/dell-p2725he-27-fhd-ips-100hz-5ms-usb-type-c-business-monitor-90w-usb-c-hub",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "Saved in this browser for MVP. Choose below-price or percentage-drop triggers. Current: $415 $ Share: Also check on Amazon Prices updated 18 June 2026⚠ May be outdated Category : Computers Available at : 1 retailer | Retailer | Cost | Est. Delivery | Free Threshold | --- --- | Shipping costs are estimates. Verify at checkout. eBay AUPolicy Varies 30-day return window Return policies vary. Check the retailer's website"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0BVV8MTX9",
+      "product_name": "View Yarn on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+          "url": "https://www.honesttrove.com/2026/11/crafts-hobbies-3-candidates-judged-on.html",
+          "published": "2026-11-24T03:24:13.099-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "charmkeygroup.m.manufacturer.globalsources.com",
+          "title": "China Cotton Yarn Offered by China Manufacturer - Shanghai Charmkey Group",
+          "url": "https://charmkeygroup.m.manufacturer.globalsources.com/showroom_6008840343191/hilo-de-algod%C3%B3n_263331-1.htm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: China Cotton Yarn Offered by China Manufacturer - Shanghai Charmkey Group Agent, Buying Office, Consultant, Distributor, Exporter, Manufacturer, Online Seller, Retailer, Trading Company, Wholesaler. Asia, Australasia, Central/South America, Eastern Europe, Mid East/Africa, North America, Western Europe. Supplier Homepage / Products / Cotton Yarn /. # Cotton Yarn. Selected Products (0/20) Clear All. Copyright ©"
+        },
+        {
+          "domain": "www.gearplant.com",
+          "title": "\"Helium 10 Keyword Research 2026 Heated Apparel Amazon (Wholesale Buyer-Retailer View)\" - heated Clothing Manufacturer",
+          "url": "https://www.gearplant.com/helium-10-keyword-research-2026-heated-apparel-amazon-wholesale-buyer-retailer-view-2",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Cluster 7 (tech differentiator — graphene) is embedded in the title + A+ Content module 3 (cross-section). The cross-section SVG visualizes the graphene yarn layer and the lamination parameter, providing a tech-differentiator signal beyond keyword density. Cluster 8 (spec/feature — 7.4V 11-zone) is embedded in bullet 1 + bullet 5 + backend. The wholesale buyer writes the voltage + capacity + heating-zone combination "
+        },
+        {
+          "domain": "www.quora.com",
+          "title": "What are examples of wholesalers? Costco, the distributor is Amazon and the retailer is Walmart. - Quora",
+          "url": "https://www.quora.com/What-are-examples-of-wholesalers-Costco-the-distributor-is-Amazon-and-the-retailer-is-Walmart",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Something went wrong. Wait a moment and try again. Try again Please enable Javascript and refresh the page to continue"
+        },
+        {
+          "domain": "www.waredock.com",
+          "title": "Retailer vs Wholesaler vs Distributor vs Reseller – What’s the Difference? - Waredock",
+          "url": "https://www.waredock.com/magazine/retailer-vs-wholesaler-vs-distributor-vs-reseller",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Now let’s tackle the other big question. At first glance, a reseller and a distributor might sound similar – both buy products and then resell them. However, the key difference lies in the relationship with the original manufacturer and the target customer. A distributor typically has a direct link to the manufacturer and often an official capacity (sometimes exclusive) to distribute the product, whereas a reseller i"
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "To view all Tesla Model 3 + Model Y applications and wheelsets: Click Here To view our #systemspec TE37 Ultra M-Spec 19x9.5 +28 5x114.3 Master Threadlist + wheelsets: [...] Click Here - Master ThreadlistClick Here - Blog + Full GalleryClick Here - WheelsetsTo view our #systemspec TE37 Ultra M-Spec 20x9.5 +22 / 20x10.5 +30 / 5x114.3 wheelsets:Click Here - Master ThreadlistClick Here - Blog + Full GalleryClick Here - W"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0C4HKXGQJ",
+      "product_name": "Jump Rope",
+      "verified_product_title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men, and Kids, Adjustable Steel Jump Rope with Foam Handles for Home Gym Exercise Fitness Workout Equipment & Slim Body",
+      "posts": [
+        {
+          "title": "Jump Rope Review: Who It Is For and Who Should Skip It",
+          "url": "https://www.honesttrove.com/2026/11/jump-rope-review-who-it-is-for-and-who.html",
+          "published": "2026-11-16T23:44:18.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "m.shein.com",
+          "title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable With ...",
+          "url": "https://m.shein.com/us/Jump-Rope-Tangle-Free-Rapid-Speed-Jumping-Rope-Cable-With-Ball-Bearings-For-Women-Men-Kids-Adjustable-Steel-Jump-Rope-With-Foam-Handles-For-Home-Gym-Exercise-Fitness-Workout-Equipment-Slim-Body-p-467133306.html",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "Tangle-Free Rapid Speed Jumping Rope Cable With Ball Bearings For Women, Men. Adjustable Steel Jump Rope With Foam Handles. Price: $2.40 Original Price: $4.10"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "Jump Rope Tangle-Free Rapid Speed Jumping Rope Cable with ...",
+          "url": "https://www.walmart.com/ip/Jump-Rope-Tangle-Free-Rapid-Speed-Jumping-Rope-Cable-Ball-Bearings-Women-Men-Kids-Adjustable-Steel-Jump-Rope-Foam-Handles-Home-Gym-Exercise-Fitness-W/20319601350",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "Adjustable Steel Jump Rope with Foam Handles. Current price is USDNow $11.69$1169. This jump rope is made of steel wires that are coated with strong PVC"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with ...",
+          "url": "https://www.walmart.com/ip/Jump-Rope-Tangle-Free-Rapid-Speed-Jumping-Rope-Cable-Ball-Bearings-Women-Men-Kids-Adjustable-Steel-Jump-Rope-Foam-Handles-Home-Gym-Exercise-Fitness-W/20814907155",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men, and Kids, Adjustable Steel Jump Rope with Foam Handles … is Made of Steel Wires"
+        },
+        {
+          "domain": "fitzones.net",
+          "title": "Jump Rope, Tangle-Free Rapid Speed Jumping ... - Fitness Zone",
+          "url": "https://fitzones.net/product/jump-rope-tangle-free-rapid-speed-jumping-rope-cable-with-ball-bearings-for-women-men-and-kids-adjustable-steel-jump-rope-workout-with-foam-handles-for-fitness-home-exercise-slim-body",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "It supports fast jumps while protecting you from any potential tangles, satisfying your needs for safety and convenience at the same time. Ergonomic Foam"
+        },
+        {
+          "domain": "www.gosupps.com",
+          "title": "Loocio Tangle-Free Speed Jump Rope Black - GoSupps.com",
+          "url": "https://www.gosupps.com/jump-rope-tangle-free-rapid-speed-jumping-rope-cable-with-ball-bearings-for-women-men-and-kids-adjustable-steel-jump-rope-workout-with-foam-handles-for-fitness-home-exercise-slim-body-black.html",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Lightweight, portable jump rope with ergonomic foam handles and high-quality ball bearings for smooth, tangle-free fitness workouts and weight loss."
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "DEGOL Skipping Rope with Ball Bearings Rapid Speed ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=wSsKDw9XLxA",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Get it on Amazon: https://amzn.to/3xtaLAj * commissioned link This is Skipping Rope with Ball Bearings. Let's open the box."
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Top Speed Jump Ropes Compared — Which One Is Right for You? | Elite Jumps",
+          "url": "https://www.youtube.com/watch?v=nL3PtXVMlao&vl=en",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "to notice it's a lot smaller. And the reason is as people progress in their speed jumping double unders. They want something that uh weighs less in their hands. So this only weighs an ounce. Still an incredible spin. It's made of aluminum stainless steel ball bearings, but it doesn't have as much weight in the handle, so your hands won't get fatigued when you're doing longer sets. And then what sets this rope apart f"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "third_party_stock_is_not_amazon_stock": true,
+    "amazon_pages_crawled_directly": false,
+    "automatic_special_link_replacement": false
+  }
+}
