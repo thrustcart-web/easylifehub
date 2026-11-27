@@ -1667,7 +1667,13 @@
     "{A} or {B}? The Honest Comparison",
     "{P} Review: Who It Is For and Who Should Skip It",
     "Which {F} Should You Buy? {N} Candidates Compared",
-    "Choosing {A} {P} for {AUD}: Trade-Offs Included"
+    "Choosing {A} {P} for {AUD}: Trade-Offs Included",
+    "Before You Buy {A} {P}: The Honest Version",
+    "{F}: {N} Candidates Judged on the Same Criteria",
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "{A} {P} Review: What I Would Check Before Buying",
+    "Best {F}: {N} Picks Compared Honestly",
+    "Best {P} for {AUD}: What Actually Matters"
   ],
   "last_publish_ts": null,
   "failures": {
