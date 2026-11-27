@@ -3,7 +3,9 @@
     "monitor-arm-vs-nightstand-workspace",
     "monitor-arm-vs-music-stand-screen-support",
     "tripod-vs-monitor-arm-portable-workspace",
-    "measure-desk-before-monitor-setup"
+    "measure-desk-before-monitor-setup",
+    "reduce-screen-glare-home-office",
+    "cable-management-monitor-arm-guide"
   ],
   "generated": [
     {
@@ -33,6 +35,20 @@
       "provider": "openrouter",
       "words": 800,
       "created_at": "2026-11-26T06:59:22.655092+00:00"
+    },
+    {
+      "slug": "reduce-screen-glare-home-office",
+      "title": "How to Reduce Screen Glare in a Home Office Without Guesswork",
+      "provider": "groq",
+      "words": 984,
+      "created_at": "2026-11-27T06:59:21.717361+00:00"
+    },
+    {
+      "slug": "cable-management-monitor-arm-guide",
+      "title": "Cable Management Around a Monitor Arm: A Practical Planning Guide",
+      "provider": "openrouter",
+      "words": 1076,
+      "created_at": "2026-11-27T06:59:42.296984+00:00"
     }
   ]
 }

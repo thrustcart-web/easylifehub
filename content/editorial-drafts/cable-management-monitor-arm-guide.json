@@ -1,0 +1,26 @@
+{
+  "slug": "cable-management-monitor-arm-guide",
+  "title": "Cable Management Around a Monitor Arm: A Practical Planning Guide",
+  "meta_description": "Plan cable slack, strain relief, and pinch-point clearance around a monitor arm, plus what to verify in documentation before relying on a routing setup.",
+  "template": "editorial",
+  "niche": "electronics",
+  "keyword": "cable management around a monitor arm",
+  "labels": [
+    "Guides",
+    "Electronics"
+  ],
+  "source": "ai:openrouter",
+  "provider": "openrouter",
+  "words": 1076,
+  "items": [],
+  "html_file": "cable-management-monitor-arm-guide.html",
+  "layout_version": 0,
+  "content_type": "editorial",
+  "editorial_only": true,
+  "product_links_verified": false,
+  "stock_verification_required": false,
+  "review_required": true,
+  "editorial_review_required": true,
+  "draft": true,
+  "publishable": false
+}

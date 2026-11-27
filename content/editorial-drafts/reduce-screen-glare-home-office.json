@@ -1,0 +1,26 @@
+{
+  "slug": "reduce-screen-glare-home-office",
+  "title": "How to Reduce Screen Glare in a Home Office Without Guesswork",
+  "meta_description": "Step‑by‑step guide to find and remove monitor glare in a home office: adjust screen angle, control window light, shape room lighting, and re‑check the day.",
+  "template": "editorial",
+  "niche": "home office",
+  "keyword": "reduce monitor glare in a home office",
+  "labels": [
+    "Guides",
+    "Home Office"
+  ],
+  "source": "ai:groq",
+  "provider": "groq",
+  "words": 984,
+  "items": [],
+  "html_file": "reduce-screen-glare-home-office.html",
+  "layout_version": 0,
+  "content_type": "editorial",
+  "editorial_only": true,
+  "product_links_verified": false,
+  "stock_verification_required": false,
+  "review_required": true,
+  "editorial_review_required": true,
+  "draft": true,
+  "publishable": false
+}
