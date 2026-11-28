@@ -5,7 +5,9 @@
     "tripod-vs-monitor-arm-portable-workspace",
     "measure-desk-before-monitor-setup",
     "reduce-screen-glare-home-office",
-    "cable-management-monitor-arm-guide"
+    "cable-management-monitor-arm-guide",
+    "check-desk-stability-monitor-support",
+    "two-monitors-small-desk-layout"
   ],
   "generated": [
     {
@@ -49,6 +51,20 @@
       "provider": "openrouter",
       "words": 1076,
       "created_at": "2026-11-27T06:59:42.296984+00:00"
+    },
+    {
+      "slug": "check-desk-stability-monitor-support",
+      "title": "How to Check Desk Stability Before Adding a Monitor Support",
+      "provider": "gemini",
+      "words": 1120,
+      "created_at": "2026-11-28T06:55:52.961497+00:00"
+    },
+    {
+      "slug": "two-monitors-small-desk-layout",
+      "title": "How to Arrange Two Monitors on a Small Desk Without Wasting Space",
+      "provider": "groq",
+      "words": 801,
+      "created_at": "2026-11-28T06:55:57.829633+00:00"
     }
   ]
 }

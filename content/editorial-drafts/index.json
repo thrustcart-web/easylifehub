@@ -1,6 +1,6 @@
 {
   "type": "editorial-drafts-only",
-  "count": 6,
+  "count": 8,
   "posts": [
     {
       "slug": "cable-management-monitor-arm-guide",
@@ -18,6 +18,32 @@
       "words": 1076,
       "items": [],
       "html_file": "cable-management-monitor-arm-guide.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    },
+    {
+      "slug": "check-desk-stability-monitor-support",
+      "title": "How to Check Desk Stability Before Adding a Monitor Support",
+      "meta_description": "Evaluating desk stability before adding a monitor support requires inspecting surface materials, frame joints, edge clearances, and load limits.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "desk stability before adding a monitor support",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:gemini",
+      "provider": "gemini",
+      "words": 1120,
+      "items": [],
+      "html_file": "check-desk-stability-monitor-support.html",
       "layout_version": 0,
       "content_type": "editorial",
       "editorial_only": true,
@@ -148,6 +174,32 @@
       "words": 858,
       "items": [],
       "html_file": "tripod-vs-monitor-arm-portable-workspace.html",
+      "layout_version": 0,
+      "content_type": "editorial",
+      "editorial_only": true,
+      "product_links_verified": false,
+      "stock_verification_required": false,
+      "review_required": true,
+      "editorial_review_required": true,
+      "draft": true,
+      "publishable": false
+    },
+    {
+      "slug": "two-monitors-small-desk-layout",
+      "title": "How to Arrange Two Monitors on a Small Desk Without Wasting Space",
+      "meta_description": "Learn practical ways to position two monitors on a cramped desk, balancing view angles, cable routing, lighting, and workflow without sacrificing space.",
+      "template": "editorial",
+      "niche": "home office",
+      "keyword": "two monitor setup on a small desk",
+      "labels": [
+        "Guides",
+        "Home Office"
+      ],
+      "source": "ai:groq",
+      "provider": "groq",
+      "words": 801,
+      "items": [],
+      "html_file": "two-monitors-small-desk-layout.html",
       "layout_version": 0,
       "content_type": "editorial",
       "editorial_only": true,
