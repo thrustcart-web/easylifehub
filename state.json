@@ -1673,7 +1673,13 @@
     "{A} vs {B}: Which One Should You Actually Buy?",
     "{A} {P} Review: What I Would Check Before Buying",
     "Best {F}: {N} Picks Compared Honestly",
-    "Best {P} for {AUD}: What Actually Matters"
+    "Best {P} for {AUD}: What Actually Matters",
+    "Does {FEAT} Matter in {A} {P}? An Honest Look",
+    "{F} Shortlist: {N} Options, Trade-Offs Included",
+    "{P} for {AUD}: Five Things Listings Skip",
+    "Best {F}{AUD}: {N} Picks, Ranked by What Matters",
+    "{A} vs {B}: Which One Should You Actually Buy?",
+    "Before You Buy {A} {P} for {AUD}: Read This"
   ],
   "last_publish_ts": null,
   "failures": {
