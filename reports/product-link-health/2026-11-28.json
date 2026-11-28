@@ -1,0 +1,1206 @@
+{
+  "schema_version": 1,
+  "report_date_utc": "2026-11-28",
+  "created_at": "2026-11-28T04:21:57.340554+00:00",
+  "blog_url": "https://www.honesttrove.com",
+  "published_posts_scanned": 82,
+  "unique_products_found": 66,
+  "queries_requested": 15,
+  "queries_completed": 15,
+  "external_in_stock_signals": 0,
+  "external_out_of_stock_signals": 0,
+  "amazon_inventory_confirmations": 0,
+  "automatic_blogger_changes": 0,
+  "quota_or_api_errors": [],
+  "results": [
+    {
+      "asin": "B0CDW6J1W8",
+      "product_name": "View Personal Blender on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Blender vs Personal Blender: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/blender-vs-personal-blender-deciding.html",
+          "published": "2026-11-13T03:42:40.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "KOIOS 850W Blender on Amazon - Is It Worth It?",
+          "url": "https://www.youtube.com/watch?v=aK1guaJCitc",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "KOIOS Personal Portable Blender for Smoothies,Shakes and Juices Review. Ameripino · 2.5K views ; KOIOS 850W Smoothie Bullet Blender for Shakes and"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "natlawreview.com",
+          "title": "B Futurist appointed as official distributor for Lador Rotterdam",
+          "url": "https://natlawreview.com/press-releases/b-futurist-appointed-official-distributor-lador-rotterdam-netherlands",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "ROTTERDAM, SOUTH HOLLAND, NETHERLANDS, February 12, 2026 /EINPresswire.com/ -- B Futurist, a global brand partner based in Rotterdam, has signed an official distribution agreement with La'dor, a Korean haircare manufacturer established in 2008. The partnership supports B Futurist’s continued expansion into Korean personal care categories through structured distribution across European markets. [...] La'dor develops a"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "To view all Tesla Model 3 + Model Y applications and wheelsets: Click Here To view our #systemspec TE37 Ultra M-Spec 19x9.5 +28 5x114.3 Master Threadlist + wheelsets: [...] IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] We are authorized in-house stockists of the very products we work with, and work directly with the manufacturer and US distributor to provide availability and stellar ser"
+        }
+      ]
+    },
+    {
+      "asin": "B0CF586TH4",
+      "product_name": "View Storage Baskets on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "3 Home Decor Picks Reviewed Against the Criteria That Matter",
+          "url": "https://www.honesttrove.com/2026/11/3-home-decor-picks-reviewed-against.html",
+          "published": "2026-11-17T05:42:37.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.youtube.com",
+          "title": "🧺 The Storage Basket I Didn’t Know I Needed! HUGE 65L Capacity | Full Review & Demo",
+          "url": "https://www.youtube.com/watch?v=qKELoO0a5Rw",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "I also love that it can be used for so much more than laundry! Use it as a blanket basket in the living room, toy bin in a nursery, towel basket in the bathroom, pillow storage in the bedroom, or even for a dorm, RV, or small space. The collapsible design makes it easy to fold flat when you’re not using it, and the neutral white and brown woven design looks great with a variety of home décor. 🛒 BUY IT ON AMAZON: 🛍️ M"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CHXY8WQW",
+      "product_name": "View Blood Pressure Monitor on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
+          "url": "https://www.honesttrove.com/2026/11/health-wellness-buying-guide-3-picks.html",
+          "published": "2026-11-15T03:45:17.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CJRM936N",
+      "product_name": "View Lint Remover on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Lint Remover vs Pet Hair Remover: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/lint-remover-vs-pet-hair-remover.html",
+          "published": "2026-11-21T03:24:09.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.alibaba.com",
+          "title": "Lint Remover Machine Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/lint-remover-machine-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Total Revenue: US$2.5 Million - US$5 Million Top 3 Markets: South Asia 20% , Southeast Asia 15% , Africa 15% 85.4% Response Rate Country/Region: China Main Products: Face Brush,Hair Trimmer,Head Massage,Shoe Cleaner,Callus Remover Total Revenue: US$1 Million - US$2.5 Million Top 3 Markets: North America 10.0% , South America 10.0% , Eastern Asia 10.0% Tags: 82.1% Response Rate [...] | | | | --- | | We found ... Suppl"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Electric Lint Remover Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/electric-lint-remover-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Electric Lint Remover Suppliers, Manufacturer, Distributor, Factories, Alibaba Suppliers who can match your search. Suppliers › Home & Garden › Household Cleaning Tools & Accessories › Lint Remover ›. # electric lint remover suppliers. US$10 Million - US$50 Million. Western Europe 51.0% , Eastern Europe 10.0% , South America 10.0%. Western Europe 30.0% , North America 20.0% , Northern Europe 20.0%. Hair Dryer,"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CK2MTXXK",
+      "product_name": "View Lifting Straps on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Lifting Straps vs Weight Lifting Gloves: Deciding Between Two Good Options",
+          "url": "https://www.honesttrove.com/2026/11/lifting-straps-vs-weight-lifting-gloves.html",
+          "published": "2026-11-15T23:46:17.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "Wrist Wraps + Lifting Straps Bundle (2 Pairs) for Weightlifting, Cross ...",
+          "url": "https://camelcamelcamel.com/product/B00MZN3AWU",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "This is our record of Amazon price changes for Wrist Wraps + Lifting Straps Bundle (2 Pairs) for Weightlifting, Cross Training, Workout, Gym, Powerlifting,"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CP2XN8N3",
+      "product_name": "View Cutting Mat on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Crafts & Hobbies: 3 Candidates Judged on the Same Criteria",
+          "url": "https://www.honesttrove.com/2026/11/crafts-hobbies-3-candidates-judged-on.html",
+          "published": "2026-11-24T03:24:13.099-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.beastassociate.com",
+          "title": "HOZO Nano Cutting Mat For Ultrasonic Cutter, 30cm X 22cm Self-Healing",
+          "url": "https://www.beastassociate.com/p/3S7FT/hozo-nano-cutting-mat-for-ultrasonic-cutter-30cm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "### Worth Knowing Check the size/specification table on Amazon before ordering Read the most recent reviews — products get revised over time Confirm the return policy for your region at checkout View on Amazon Affiliate Link: We earn a small commission when you buy through this link — at no extra cost to you. Note: Product prices and availability are subject to change. Final prices are determined by the retailer at c"
+        },
+        {
+          "domain": "mastermet.eu",
+          "title": "Cutting tools | Mastermet - Distributor and Manufacturer",
+          "url": "https://mastermet.eu?lang=en",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "EXTERNAL_IN_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "#### STOCK Official STOCK distributor. Wide range of monolithic cutting tools in stock. #### Vargus Vargus Official Distributor. Market leading grooving and threading tools. #### OSG Official OSG distributor. Threading support based on many years of experience. ## Certified business partner ### secure your production with us ## Mastermet - cutting tools ### We supply tools from the entire machining area [...] #### M."
+        },
+        {
+          "domain": "www.quora.com",
+          "title": "What are examples of wholesalers? Costco, the distributor is Amazon and the retailer is Walmart. - Quora",
+          "url": "https://www.quora.com/What-are-examples-of-wholesalers-Costco-the-distributor-is-Amazon-and-the-retailer-is-Walmart",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Something went wrong. Wait a moment and try again. Try again Please enable Javascript and refresh the page to continue"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "smartspecscheck.co.uk",
+          "title": "RayNeo iO availability by country",
+          "url": "https://smartspecscheck.co.uk/availability/rayneo-io",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Dated status for every market we track. A status only changes when a manufacturer or retailer page says so; rumours go in the notes, never in the status. Subscribe to the RSS feed to be told when anything here moves. Prescription support and sources for this model · Check my prescription ## Status by country [...] ## Retailers, prices and prescription fitting \"Fits Rx\" means the retailer glazes or supplies prescripti"
+        },
+        {
+          "domain": "www.vowin.com",
+          "title": "Oem Metal Laser Cutting Factory General Milling Distributor for Retailer | Vowin Rapid Prototyping",
+          "url": "https://www.vowin.com/vowin-rapid-prototyping-oem-metal-laser-cutting-factory-distributor-for-retailer.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Suitable for new product development and modification. In the field of rapid prototyping, because the various rapid prototyping processes form differently, the materials used are also different. The product size is accurate. Suggested Videos {{item.nickname ? (item.nickname.slice(0, 2) + '\\\\\\\\\\') : item.source === 1 ? 'mall buyer' : '--'}} {{item.comment\\_time}} Review in the {{item.country}} {{itemAttr.params\\_key}}"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] Below is a list of all of our in-stock sets catered for the Model 3, Model Y, Model S. For fitment consultation, product inquiries, and general questions regarding order status/availability, please reach out via PM or email/call directly. www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com "
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CSZ7WBYW",
+      "product_name": "Air Fryer",
+      "verified_product_title": "Ninja Air Fryer Pro, 5 Qt, 4-in-1, Grey, AF141",
+      "posts": [
+        {
+          "title": "Choosing An Air Fryer for Meal Preppers: Trade-Offs Included",
+          "url": "https://www.honesttrove.com/2026/11/choosing-air-fryer-for-meal-preppers.html",
+          "published": "2026-11-22T23:25:32.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "Ninja Air Fryer Pro, 5 Qt, 4-in-1, Grey, AF141 | Amazon price tracker / tracking, Amazon price history charts, Amazon price watches, Amazon price drop alerts | camelcamelcamel.com",
+          "url": "https://camelcamelcamel.com/product/B0CSZ7WBYW",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "| | | ---| | Product group | Kit | | Category | Air F | | Manufacturer | Ni | | Model | AF | | Locale | U | | List price | $12 | | EAN | 062235 | | UPC | 622356 | | SKU | B0CSZ | | Last update scan | 4 hours ago | | Last tracked | 2 days ago | Walmart Price as of Nov 23, 2026 07:07 AM $0.01 (0%) cheaper than Amazon! Amazon Price as of Nov 22, 2026 06:04 AM ### Your Amazon Price Watches We'll notify you when the price"
+        },
+        {
+          "domain": "supplyleader.com",
+          "title": "Wholesale Ninja Air Fryer Pro, 5 Qt, 4-in-1, Grey, AF141 | Supply Leader — Wholesale Supply",
+          "url": "https://supplyleader.com/product/Ninja-Air-Fryer-Pro-5-Qt-4-in-1-Grey-AF141/B0CSZ7WBYW",
+          "published_date": null,
+          "identity_evidence": "ASIN_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Open a Wholesale Account to access a product weakness analysis along with an actionable improvement plan. Open Wholesale Account Item details PARENT ASIN UPC 622356635042 ASIN B0CSZ7WBYW Model AF141 Color Black Brand Ninja Weight 4.69 kg Customer reviews 4.7 8,831 total customer ratings 5-star 86% 4-star 8% 3-star 2% 2-star 1% 1-star 3% Top positive review LAN Guy Love It! Fast and Easy to Clean! Charlie Whyte Food T"
+        },
+        {
+          "domain": "www.target.com",
+          "title": "Ninja Pro 4-in-1 Air Fryer Gray: 5-Quart, 1750W, Dishwasher-Safe Parts, Metal & Plastic : Target",
+          "url": "https://www.target.com/p/ninja-air-fryer-pro-4-in-1-af141/-/A-90569368",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "skip to main contentskip to footer Sponsored Skip images Ninja Pro 4-in-1 Air Fryer, 1 of 11 Ninja Pro 4-in-1 Air Fryer, 2 of 11 Ninja Pro 4-in-1 Air Fryer, 3 of 11 Ninja Pro 4-in-1 Air Fryer, 4 of 11 Ninja Pro 4-in-1 Air Fryer, 5 of 11 Explore Gift Ideas Shop all Ninja # Ninja Pro 4-in-1 Air Fryer Gray: 5-Quart, 1750W, Dishwasher-Safe Parts, Metal & Plastic 70 Questions Rarely returned Eligible for registries and wi"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "NEW! Ninja AF141 Max XL 4-in-1 5QT Air Fryer REVIEW",
+          "url": "https://www.youtube.com/watch?v=S7XSQPuUgj4",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "top of this heating element that's what cooks the food Round back the cord is a two-prong it's 30 inches long hot air is going to blow out here so you got to keep about 5 in you can't put this right up against the wall it's very simple to operate it's got a power switch you're going to turn it on we can adjust the temperature up to 400° we can adjust the time and you simply just hit the start button and it's got a pa"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Ninja Air Fryer Pro Review: 5lbs of Wings? Really??",
+          "url": "https://www.youtube.com/watch?v=T5ACebdPjmI",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "# Ninja Air Fryer Pro Review: 5lbs of Wings? Really?? ➡️ BUY THE AVERAGE KITCHEN SILICONE KITCHEN TONGS! ➡️ BUY THE NINJA AIR FRYER PRO 4-in-1 USA: Canada: UK: ➡️ CHECK OUT OUR MERCH! Our review of the Ninja Air Fryer Pro 4-in-1. ➡️ MARC'S DALSTRONG KNIFE USA: Canada: UK: ➡️ MARC'S MEAT THERMOMETER USA: Canada: UK: ➡️ SUBSCRIBE HERE FOR MORE VIDEOS! ➡️BUY THE NINJA AIR FRYER PRO 4-in-1! USA: CANADA: [...] $119 Americ"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Ninja 🥷🏽 نينجا",
+          "url": "https://tavily.com/knowledge/company/60PQppoC6dNe",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Ninja 🥷🏽 نينجا ID: 60PQppoC6dNe Website: www.ananinja.com Legal name: Advanced Information Technology LLC Headquarters: Riyadh, Saudi Arabia LinkedIn: www.linkedin.com/company/ninja-app · 251,533 followers Industry: Internet Marketplace Platforms Company type: Privately Held Founded: 2022 Business model: B2C SaaS: no Social profiles: www.facebook.com/ninjaappksa, www.twitter.com/ninjaappksa, www.crunchbase.com/orga"
+        }
+      ]
+    },
+    {
+      "asin": "B0CXPWMSX6",
+      "product_name": "View Protein Shaker on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Best Health & Wellness for Gym Goers: 3 Options We Would Actually Buy",
+          "url": "https://www.honesttrove.com/2026/11/best-health-wellness-for-gym-goers-3.html",
+          "published": "2026-11-16T05:44:01.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "camelcamelcamel.com",
+          "title": "PROCHAIN Insulated Stainless Steel Protein Shaker Bottle, 20oz Metal ...",
+          "url": "https://camelcamelcamel.com/product/B0GFYBZKXP",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "View at Amazon · PROCHAIN Insulated Stainless Steel Protein Shaker Bottle, 20oz Metal Mixer (B0GFYP2W2J) Amazon Price. PROCHAIN Insulated Stainless Steel"
+        },
+        {
+          "domain": "www.shakesphere.com",
+          "title": "Best Protein Shaker Bottles & Shaker Cups | ShakeSphere USA",
+          "url": "https://www.shakesphere.com",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "1.3l ## Mixer Jug Compatible with Fits Blender E-Lid. Holding enough for over one third of your recommended daily allowance. Silicone base and gripper handle to ensure maximum grip and stability. Shop the Collection 700mls / 24.6 Fl Oz ## Tumbler View Protein Shaker A premium matte capsule shaker with a clear window to track your mix. No clumps, no leaks, no odor — engineered for seamless daily use. Shop the Collecti"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0CYSY6MDR",
+      "product_name": "View Walking Cane on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Health & Wellness Buying Guide: 3 Picks Ranked by Real Criteria",
+          "url": "https://www.honesttrove.com/2026/11/health-wellness-buying-guide-3-picks.html",
+          "published": "2026-11-15T03:45:17.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "readywalkercane.net",
+          "title": "Ready Walker Cane (Official Retailer) 2026",
+          "url": "https://readywalkercane.net/product/ready-walker-cane",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Ready Walker Cane (Official Retailer) 2026 ## **About Ready Walker Cane**. Ready Walker Cane is an all-in-one smart mobility aid crafted for seniors, adults recovering from injury, and anyone seeking extra support while walking. Engineered with a strong, lightweight aluminum frame, Ready Walker Cane combines the stability of a quad base, ergonomic dual handles, and modern safety features—like a built-in LED li"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Cane Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/cane-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Cane Suppliers, Manufacturer, Distributor, Factories, Alibaba ## Ningbo High-Tech Bluesky Manufactory & Trading Co., Ltd. Adjustable and Lightweight Aluminum Cane, Single Point Walking Stick with Wooden Handle, Wrist Strap and Rubber Tip. ### Adjustable and Lightweight Aluminum **Cane**, Single Point Walking Stick with Wooden Handle, Wrist Strap and Rubber Tip. Self Standing Two Handles Adjustable Crutcher Fol"
+        },
+        {
+          "domain": "medicaex.com",
+          "title": "Cane Walking stick manufacturer - All medical device manufacturer",
+          "url": "https://medicaex.com/suppliers/cane-walking-stick-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Cane Walking stick manufacturer - All medical device manufacturer Cane Walking Stick supplier Homecare enterprise logo. # Homecare enterprise co.,ltd. Face-ShieldHomecare-Enterprise-Co.-Ltd. Cane Walking Stick supplier Homecare enterprise logo. Cane Walking Stick supplier Homecare enterprise logo. Cane Walking Stick supplier Homecare enterprise logo. Cane Walking Stick supplier Homecare enterprise logo. Cane W"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Cane Professional Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/cane-professional-manufacturers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Cane Professional Suppliers, Manufacturer, Distributor, Factories, Alibaba ## Wuyi Careman Trade Co., Ltd. Smart cane outdoor self stand walking stick, sit to stand cane professional. ### Smart **cane** outdoor self stand walking stick, sit to stand **cane** **professional**. ## Suzhou Hualun Medical Appliance Co., Ltd. Professional manufacturer supply cane with built-in LED light Foldable walking stick for ol"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Malacca Cane Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/malacca-cane-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Malacca Cane Suppliers, Manufacturer, Distributor, Factories, Alibaba Suppliers who can match your search. Get Quotation Now | Buying Request Hub |. # malacca cane suppliers. ## WIN MASTER INDUSTRIES. ### **Malacca** **Cane** Walking Sticks. ## CHARR INDUSTRIES. Drum Major Mace Pole Stick - Malacca Cane Maces. Big Crown Mace Poles, Drum Major Mace Poles, Ceremonial Mace Poles, Walking Sticks and Malacca Cane M"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "teslamotorsclub.com",
+          "title": "Vendor - System Motorsports - Authorized Master Distributor + Retailer for Rays Engineering / Volk Racing / Advan / BBS / Work / SSR - Official Product Thread | Tesla Motors Club",
+          "url": "https://teslamotorsclub.com/tmc/threads/system-motorsports-authorized-master-distributor-retailer-for-rays-engineering-volk-racing-advan-bbs-work-ssr-official-product-thread.267888",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "IMG_3250 2.JPG IMG_1921 2.JPG IMG_3890.JPG IMG_1898 2.JPG IMG_4039.JPG [...] Below is a list of all of our in-stock sets catered for the Model 3, Model Y, Model S. For fitment consultation, product inquiries, and general questions regarding order status/availability, please reach out via PM or email/call directly. www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com www.systemmotorsports.com "
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0D3D5LKG9",
+      "product_name": "View Mattress Topper on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Mattress Topper or Cooling Mattress Topper? The Honest Comparison",
+          "url": "https://www.honesttrove.com/2026/11/mattress-topper-or-cooling-mattress.html",
+          "published": "2026-11-14T03:45:41.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.asinsight.com",
+          "title": "Best Selling 3 Inch Memory Foam Mattress Topper Queen: Top 10 Ranked by Real Sales 2026",
+          "url": "https://www.asinsight.com/report/US/3-inch-memory-foam-mattress-topper-queen",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Selling 3 Inch Memory Foam Mattress Topper Queen: Top 10 Ranked by Real Sales 2026 # Best Selling 3 Inch Memory Foam Mattress Topper Queen: See Top Product Rankings by Sales Volume & Market Trends. Looking for the most popular 3 inch memory foam mattress topper queen products in the market? Our report leverages real Amazon monthly sales data to identify the best-performing products and the fastest-growing"
+        },
+        {
+          "domain": "insidebedroom.com",
+          "title": "Best Mattress Topper Reviews 2026: Our Top 11 Mattress Toppers",
+          "url": "https://insidebedroom.com/best-mattress-topper-reviews",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Best Mattress Topper Reviews 2026: Our Top 11 Mattress Toppers # Best Mattress Topper Reviews 2026: Our Top 11 Mattress Toppers. **Transparency Disclosure:** We may receive a fee from the seller for any purchases made through links on this website or from other sites accessed via this website. Our top 11 mattress toppers have been chosen for a number of reasons. You can find these after our mattress topper rev"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Mattress Topper Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/mattress-topper-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Top 3 Markets: North America 35.0% , Eastern Asia 10.0% , Western Europe 10.0% Tags: 86.4% Response Rate Country/Region: China Main Products: Bed Linen,Bath Linen,Fabric Total Revenue: Above US$100 Million Top 3 Markets: Domestic Market 55.0% , North America 17.0% , Southeast Asia 10.0% Tags: 85.0% Response Rate Country/Region: China Main Products: Memory Foam Mattress,Memory Foam Pillow,Memory Foam Cushion,Baby and "
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "The Memory Foam Mattress Topper Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/the-memory-foam-mattress-topper-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "On Alibaba.com | Wholesale Premium Quality Natural Latex Foam Pillow Manufacturing From Thailand Perfect Pillows For Allergenic Sufferers [...] Wholesale Hot Selling Fashion Sale Premium Quality 100% Natural Latex Foam Mattress Topper Manufacturing From Thailand | Wholesale Cheap Price Any Size Quilted Mattress Pad Mattress Latex Foam Mattress And Bed Mattress Made In Thailand | The Best High Quality Natural Latex Me"
+        },
+        {
+          "domain": "www.exporthub.com",
+          "title": "Cooling Mattress Topper Manufacturers - Cooling Mattress Topper Suppliers | ExportHub",
+          "url": "https://www.exporthub.com/cooling-mattress-topper-manufacturers",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Cooling Mattress Topper Manufacturers - Cooling Mattress Topper Suppliers | ExportHub Information has been saved successfully. # Source From Global Cooling Mattress Topper Manufacturers and Suppliers. NONSLIP 3d spacer mesh cooling mattress topper Manufacturer. 3D Polyester Mesh Fabric Mattress 10mm. Polyester 3d Spacer Mesh Fabric Making Cooling Mattress Cushion Pillow. 3D Mesh Fabric Polyester Mattress. 3d M"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0D9QLMQB4",
+      "product_name": "Nail Drill",
+      "verified_product_title": "Portable Electric Nail Drill, 35000 RPM Professional Electric Nail File, Cordless Nail Drill with Bits & Base (White & Pink)",
+      "posts": [
+        {
+          "title": "Nail Drill for Travellers: Five Things Listings Skip",
+          "url": "https://www.honesttrove.com/2026/11/nail-drill-for-travellers-five-things.html",
+          "published": "2026-11-14T09:44:41.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.ebay.com",
+          "title": "Portable Electric Nail Drill, 35000 RPM Professional White & Pink",
+          "url": "https://www.ebay.com/itm/147622140442",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "This acrylic nail drill kit includes 7 nail drill bits and 66 sanding bands, catering to various purposes such as grinding, carving, cutting, polishing,"
+        },
+        {
+          "domain": "www.walmart.com",
+          "title": "NAILGIRLS 35000RPM Rechargeable Nail Drill Electric ... - Walmart",
+          "url": "https://www.walmart.com/ip/NAILGIRLS-35000RPM-Rechargeable-Nail-Drill-Electric-Nail-File-Portable-Electric-Nail-Drill-Machine-White/1604222231",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "NAILGIRLS Professional Nail Drills have 35000 RPM High-efficiency & High Torque. They're Rechargeable, Cordless and Portable Nail Drill. NAILGIRLS Electric Nail"
+        },
+        {
+          "domain": "www.newegg.com",
+          "title": "Professional Nail Drill 35000 RPM,Portable Cordless Efile with Bits ...",
+          "url": "https://www.newegg.com/p/0CS-01GJ-000R6",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Professional Nail Drill 35000 RPM,Portable Cordless Efile with Bits Kit for Acrylic Nails Gel Polishing Removing,Rechargeable Electric Nail File Machine for"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Electric Nail Drill Cordless, 35000RPM Portable Electric ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=FdbSh_APkts",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Click to view current price ➡️ https://amzn.to/4r2v1nO Electric Nail Drill Cordless, 35000RPM Portable Electric Nail File with LCD Display"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "35000 RPM Nail Drill, Portable Electric Nail File Machine for Acrylic ...",
+          "url": "https://www.youtube.com/watch?v=AbOg_Csqwrw",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Thanks for watching, subscribe & share! ▻ Amazon USA Shop Link: https://amzn.to/3AZyVox ▻ International Shop Link:"
+        },
+        {
+          "domain": "www.aliexpress.com",
+          "title": "High Quality Electric Nail Drill Machine 35000 RPM ... - AliExpress",
+          "url": "https://www.aliexpress.com/item/1005006860855914.html",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "35000 RPM Electric File. Magnetic absorption for nail drill bits *** NO noise, no vibration or heat Multifunction"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "9-Speed Portable Nail File for Salon Results at Home - YouTube",
+          "url": "https://www.youtube.com/watch?v=lCxwL2I1FOQ",
+          "published_date": null,
+          "identity_evidence": "PRODUCT_NAME_EXACT",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Check the Latest Price Here: https://amzn.to/3JfWnp4 Today, I'm unboxing and testing the Ccigedy 9-Speed Cordless Electric Nail Drill — a"
+        }
+      ]
+    },
+    {
+      "asin": "B0DFRYM7FP",
+      "product_name": "Burn Gel",
+      "verified_product_title": "SILVEX Burn Gel Nano Silver First Aid Topical for 1st & 2nd Degree Burns",
+      "posts": [
+        {
+          "title": "Does Expiry Dates Matter in A Burn Gel? An Honest Look",
+          "url": "https://www.honesttrove.com/2026/11/does-expiry-dates-matter-in-burn-gel.html",
+          "published": "2026-11-23T23:24:58.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.gosupps.com",
+          "title": "Be Smart Get Prepared SILVEX Wound Gel with Nano Silver 0.5 Fl Oz - Pack of 1 | Buy Now with Express International Delivery | GoSupps.com",
+          "url": "https://www.gosupps.com/be-smart-get-prepared-silvex-wound-gel-nano-silver-0-5-fl-oz-0-5-fl-oz-pack-of-1.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "EXTERNAL_IN_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: Be Smart Get Prepared SILVEX Wound Gel with Nano Silver 0.5 Fl Oz - Pack of 1 | Buy Now with Express International Delivery | GoSupps.com Be Smart Get Prepared SILVEX Wound Gel with Nano Silver 0.5 Fl Oz - Pack of 1 - Buy Online on GoSupps.com\"). Be Smart Get Prepared SILVEX Wound Gel with Nano Silver 0.5 Fl Oz - Pack of 1 - Buy Online on GoSupps.com. Be Smart Get Prepared SILVEX Wound Gel with Nano Silver 0.5"
+        },
+        {
+          "domain": "www.firstaidplusmore.com",
+          "title": "SILVEX® Wound Gel - 0.5 oz - First Aid Plus More",
+          "url": "https://www.firstaidplusmore.com/product/silvex-wound-gel-0-5-oz-3",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "Title: SILVEX® Wound Gel - 0.5 oz - First Aid Plus More Free shipping on orders above $100. The One Stop E-Shop. of Be Smart Get Prepared®. SILVEX® Wound Gel - 0.5 oz. SILVEX® Wound Gel - 0.5 oz - Image 2. Product Code: 03-COM-21094 Categories: Home & Family, Nano Silver Tag: best sellers ss. ## Description. SILVEX® Wound Gel offers superior protection and healing powers against wounds, infections, and other injuries"
+        },
+        {
+          "domain": "www.firstaidplusmore.com",
+          "title": "Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel) - First Aid Plus More",
+          "url": "https://www.firstaidplusmore.com/product/nano-silver-combo-2-in-1-immuno-boost-silvex-wound-gel",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "Title: Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel) - First Aid Plus More Free shipping on orders above $100. Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel). Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel) - Image 2. Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel) - Image 3. Nano Silver Combo 2-in-1 (Immuno Boost & SILVEX® Wound Gel) - Image 4. Nano Silver Combo 2-i"
+        },
+        {
+          "domain": "silvexwoundgel.com",
+          "title": "SILVEX Wound gel Official Website",
+          "url": "https://silvexwoundgel.com/index.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Title: SILVEX Wound gel Official Website # SILVEX - Heal Clean, Heal Safe. SILVEX delivers advanced wound washing solutions powered by nano-silver technology. Our eco-friendly washes, gels, and sprays clean wounds, prevent infections, and promote healing for cuts, burns, and more. Safe for all ages, our non-toxic products ensure gentle care. Shop SILVEX for effective, sustainable wound care that protects your family’"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Silvex",
+          "url": "https://tavily.com/knowledge/company/mVsMbD7IKNfL",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Silvex ID: mVsMbD7IKNfL Website: www.silvex.pt Legal name: Silvex – Industria de Plásticos e Papéis, S.A. Headquarters: Benavente, Spain LinkedIn: www.linkedin.com/company/silvex · 9,669 followers Industry: Plastics Manufacturing Industry codes: SIC 20, 209, NAICS 31, 311 Company type: Privately Held Founded: 1968 Business model: B2B SaaS: no [...] Description: Silvex is a company that manufactures plastic bags and"
+        }
+      ]
+    },
+    {
+      "asin": "B0DHRW819R",
+      "product_name": "View LED Face Mask on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "Personal Care Shortlist: 3 Options, Trade-Offs Included",
+          "url": "https://www.honesttrove.com/2026/11/personal-care-shortlist-3-options-trade.html",
+          "published": "2026-11-21T23:23:33.855-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.sunsred.com",
+          "title": "Sunsred Led Face Mask Manufacturer Led Face Mask Manufacturer Factory | Sunsred",
+          "url": "https://www.sunsred.com/p-sunsred-led-face-mask-manufacturer-led-face-mask-manufacturer-factory.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Shenzhen Sunsred Technology Co.,Ltd WhatsApp: +86 15820465032 Address: No22 Building, Hongyuan Technology Park, Shijing Road, Fucheng street, Longhua district, Shenzhen city, Guangdong province, China Copyright © 2026 sunsred.com﻿ | Sitemap |Privacy Policy [...] • Sunsred employs senior experts to provide technical guidance for the R&D and production of products, so as to improve product quality and open up a more wi"
+        },
+        {
+          "domain": "www.alibaba.com",
+          "title": "Led Face Mask Suppliers, Manufacturer, Distributor, Factories, Alibaba",
+          "url": "https://www.alibaba.com/led-face-mask-suppliers.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Hot sale salon home use 7 colors LED light therapy led face mask/led facial mask skin whitening/skin tightening beauty machine ### Hot sale salon home use 7 colors LED light therapy led face mask/led facial mask skin whitening/skin tightening beauty machine ## Zhengzhou Gree Well Import & Export Co., Ltd. Facial Light Therapy Face Led Mask ### Facial Light Therapy Face Led Mask ## Shenzhen Infein Technology Co., Ltd."
+        },
+        {
+          "domain": "beautyfish.com",
+          "title": "LED Face Mask Manufacturer | Private Label | Beautyfish",
+          "url": "https://beautyfish.com/led-face-mask-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "| Sample & production timing | Submit the model, market, customization and quantity. Sample availability, charges and production lead time are confirmed by our team for that scope. | | Documents & approval | Request a model-matched specification, packing list and available reports. Approve the sample, artwork and acceptance requirements before production. | [...] | Package | Mask, controller, USB-C cable, storage pou"
+        },
+        {
+          "domain": "electronics.alibaba.com",
+          "title": "How to Choose an LED Face Mask Manufacturer",
+          "url": "https://electronics.alibaba.com/supplier/led-face-mask-manufacturer?page=2",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": true,
+          "excerpt": "The LED face mask market is projected to reach approximately $303.60 million by 2026, driven by a strong shift toward professional-grade \"beauty-tech\" at home. I have identified several leading manufacturers in China that specialize in FDA-certified and medical-grade silicone masks, offering robust OEM/ODM services for the global market. The attached report provides a detailed synthesis of 2026 market trends, consume"
+        },
+        {
+          "domain": "www.fittopfactory.com",
+          "title": "LED Mask Manufacturer | LED Mask Factory - FITTOP",
+          "url": "https://www.fittopfactory.com/led-mask-manufacturer",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "FITTOP Health Technology specialize in producing high-quality LED masks for the beauty and wellness industries across the U.S. and Europe. we have partnered with numerous international brands, offering over 500 products. We provide 11 functionalities, 16 beauty technologies, 9 materials, and 15 crafts to tailor products to our customers’ needs. Starting from concept definition to design and bulk production,With advan"
+        },
+        {
+          "domain": "www.led-mask.com",
+          "title": "LED Face Mask Manufacturer | OEM Factory & Private Label",
+          "url": "https://www.led-mask.com",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Visible red wavelength for surface-level skin applications — our highest-volume platform. View platform → Near infrared LED face mask with detachable controller 810 / 850NM ### Near Infrared Face Mask Deeper-penetrating NIR wavelength for combination protocols.Flexible silicone LED face mask, front view WEARABLE ### Silicone LED Face Mask Flexible, contoured wear format for at-home and spa use.Professional LED face m"
+        },
+        {
+          "domain": "www.shivcorporation.co.in",
+          "title": "Face Mask Manufacturer, Service Provider, Distributor, Supplier, Trading Company, Wholesaler, Retailer, Dealer, Fabricator & Producer, Face Mask India",
+          "url": "https://www.shivcorporation.co.in/face-mask.html",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Back to top SHIV CORPORATION GST : 24AHKPP5757C1Z8 [...] +918045477849 SHIV CORPORATION GST : 24AHKPP5757C1Z8 | | | --- | | | | | | | Contact Information FF-128, Satyam Complex, Opp. Zenith Tins, Ramakaka Road, Vadodara - 391740, Gujarat, India Phone :08045477849 Mr. Dilipkumar Shanabhai Patel (Proprietor) Mobile :08045477849 Send Inquiry;) send inqSend Inquiry;) Quick Links Home Page Company Profile Our Products Con"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        }
+      ]
+    },
+    {
+      "asin": "B0F6LM95F2",
+      "product_name": "View Curtain Rods on Amazon",
+      "verified_product_title": "",
+      "posts": [
+        {
+          "title": "3 Home Decor Picks Reviewed Against the Criteria That Matter",
+          "url": "https://www.honesttrove.com/2026/11/3-home-decor-picks-reviewed-against.html",
+          "published": "2026-11-17T05:42:37.000-08:00"
+        }
+      ],
+      "external_summary": "NO_MATCHING_EXTERNAL_SOURCE",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.facebook.com",
+          "title": "Yafex 32-144 inch adjustable curtain rod for windows - Facebook",
+          "url": "https://www.facebook.com/61590614650059/posts/amazon-finds-you-need-to-see-%EF%B8%8F-yafex-curtain-rods-32-144-inch-heavy-duty-1-inch-/122148639483353821",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": false,
+          "excerpt": "YaFex Curtain Rods 32-144 Inch, Heavy Duty 1 Inch Adjustable Curtain Rod for Windows, ranging from $20 to $47,"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon",
+          "url": "https://tavily.com/knowledge/company/K3Dv448R4Obk",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon ID: K3Dv448R4Obk Website: www.amazon.com Legal name: Amazon.com, Inc. Headquarters: Seattle, Washington, United States LinkedIn: www.linkedin.com/company/amazon · 37,360,829 followers Industry: Software Development Company type: Public Company Business model: B2B, B2C SaaS: yes Social profiles: www.facebook.com/amazon, www.twitter.com/amazon, www.twitter.com/amazonnews, www.crunchbase.com/organization/amazon"
+        },
+        {
+          "domain": "tavily.com",
+          "title": "Amazon Fulfillment Technologies & Robotics",
+          "url": "https://tavily.com/knowledge/company/f2YvaDaDFHfm",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# Amazon Fulfillment Technologies & Robotics ID: f2YvaDaDFHfm Website: www.amazon.jobs Headquarters: North Reading, MA, United States LinkedIn: www.linkedin.com/company/amazon-fulfillment-technologies-robotics · 181,829 followers Industry: Software Development Industry codes: SIC 73, 738, NAICS 54, 541 Company type: Public Company Business model: B2B SaaS: no [...] ## Technology - Detected: 253 - ssh · last seen 2026"
+        }
+      ]
+    },
+    {
+      "asin": "B0F9Z3H6YG",
+      "product_name": "TV",
+      "verified_product_title": "INSIGNIA 24” Class F20 Series LED HD Smart Fire TV, Voice Remote with Alexa, Free & Live TV",
+      "posts": [
+        {
+          "title": "Does Input Lag Matter in A TV? An Honest Look",
+          "url": "https://www.honesttrove.com/2026/11/does-input-lag-matter-in-tv-honest-look.html",
+          "published": "2026-11-21T09:22:47.000-08:00"
+        }
+      ],
+      "external_summary": "IDENTITY_FOUND_NO_STOCK_SIGNAL",
+      "positive_external_domains": [],
+      "negative_external_domains": [],
+      "amazon_inventory_verified": false,
+      "automatic_replacement_allowed": false,
+      "manual_amazon_confirmation_required": true,
+      "tavily_credits_reported": 1,
+      "sources": [
+        {
+          "domain": "www.bestbuy.com",
+          "title": "Insignia™ 24\" Class F20 Series LED HD (720p) Smart Fire TV",
+          "url": "https://www.bestbuy.com/product/insignia-24-class-f20-series-led-hd-720p-smart-fire-tv/J2FPJKSF4R",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Alexa voice control. The Alexa Voice Remote lets you easily control your entertainment, search across apps, switch inputs, and more using just your voice."
+        },
+        {
+          "domain": "www.ebay.com",
+          "title": "INSIGNIA 24 Class F20 Series LED HD Smart Fire TV, Voice ... - eBay",
+          "url": "https://www.ebay.com/itm/298725146848",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "This 24-inch HD smart TV brings Fire TV streaming functionality to your home with access to thousands of channels and over 1.5 million movies and TV episodes."
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "INSIGNIA 24 inch Class F20 Series Smart HD 720p Fire TV - YouTube",
+          "url": "https://www.youtube.com/watch?v=_Olx85QY-Iw",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "... Alexa voice remote support on compatible models Find the INSIGNIA 24-Inch Fire TV on Amazon: https://amzn.to/4AWYsfN Affiliate Disclosure"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "INSIGNIA 24\" HD Fire TV Rapid Review",
+          "url": "https://www.youtube.com/watch?v=BuE0O_fS4jk",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Buy on Amazon: YouTube Review: • INSIGNIA 24 inch F20 Fire TV Review | Your... INSIGNIA 24-inch Class F20 Series Smart HD 720p Fire TV with Alexa Voice Remote (NS-24F201NA23, 2022 Model) 00:00 - Intro 00:26 - Hardware/Ports 01:06 - Menu 02:15 - UFO Tests 02:51 - Screen mirroring 03:31 - Web Browsing 04:10 - Speaker Test 04:41 - Input Lag 05:07 - Gaming #insignia #CommissionsEarned #TV 🔴 FOLLOW US ON AMAZON 🎵 STREAM O"
+        },
+        {
+          "domain": "www.justanswer.com",
+          "title": "I have the Insignia 24 inch class F20 series LED hd sMART FIRE Tv ...",
+          "url": "https://www.justanswer.com/tv-repair/qgg8u-insignia-24-inch-class-f20-series-led-hd-smart.html",
+          "published_date": null,
+          "identity_evidence": "MODEL_TOKEN_MATCH",
+          "identity_confirmed": true,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "Customer: I have the Insignia 24 inch class F20 series LED HD Smart Fire TV. I want to add Fox News. The screen is telling me I need a subscription."
+        },
+        {
+          "domain": "tavily.com",
+          "title": "INSIGNIA Shoes | Apparel",
+          "url": "https://tavily.com/knowledge/company/kk3BcP5AcmRw",
+          "published_date": null,
+          "identity_evidence": "NO_EXACT_IDENTITY_EVIDENCE",
+          "identity_confirmed": false,
+          "external_stock_signal": "NO_EXPLICIT_STOCK_SIGNAL",
+          "price_over_50_usd_signal": null,
+          "excerpt": "# INSIGNIA Shoes | Apparel ID: kk3BcP5AcmRw Website: www.insignia.com.pk Legal name: Blue Insignia Ltd Headquarters: Lahore, Punjab, Pakistan LinkedIn: www.linkedin.com/company/insignia-shoes-apparel · 27,159 followers Industry: Retail Industry codes: SIC 51, 513, NAICS 44, 448 Company type: Self-Owned Founded: 2011 Business model: B2C SaaS: no [...] ## Technology - Detected: 6 - microsoft · last seen 2026-09-20 - fa"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "third_party_stock_is_not_amazon_stock": true,
+    "amazon_pages_crawled_directly": false,
+    "automatic_special_link_replacement": false
+  }
+}
